@@ -1,0 +1,26 @@
+WEBVTT
+
+NOTE
+WebVTT caption file. The format is deliberately simple: a timestamp range,
+then the text spoken during it. Captions must convey meaningful sound, not
+only speech - which is why the last cue below describes the applause.
+
+1
+00:00:00.000 --> 00:00:03.500
+Welcome to Riverside Community Centre.
+
+2
+00:00:03.500 --> 00:00:08.000
+We have been part of this neighbourhood since 1974.
+
+3
+00:00:08.000 --> 00:00:13.200
+Everyone is welcome here, whatever your background or income.
+
+4
+00:00:13.200 --> 00:00:17.000
+Come and see us. The front entrance is step-free.
+
+5
+00:00:17.000 --> 00:00:19.500
+[applause]

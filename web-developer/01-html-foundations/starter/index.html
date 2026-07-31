@@ -2,18 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- ^ Character encoding. Leave this first. -->
 
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ^ Lets the page scale correctly on phones and tablets. -->
 
-  <title>HTML Foundations - XR Camp starter</title>
+  <!-- TODO 1: Add a <meta name="description"> with one or two sentences
+       describing your site. Search engines and link previews use it. -->
+
+
+  <!-- TODO 2: Replace the title below with your own. Put the most specific
+       information first - it is read aloud first by screen readers, and it is
+       what appears in the browser tab and in bookmarks. -->
+  <title>My community page</title>
 </head>
-<body>
-  <main>
-    <!-- Add your main heading below. -->
 
-    <!-- Add your project content below. -->
+<body>
+
+  <!-- TODO 3: Add a "Skip to main content" link here, pointing at #main.
+
+       It must be the FIRST thing inside <body> so that a keyboard user reaches
+       it before the navigation. Without it, they must tab through every
+       navigation link before they can start reading. -->
+
+
+  <header>
+    <!-- TODO 4: Add exactly one <h1> naming your site or organisation,
+         followed by a short introductory <p>. Only one <h1> per page. -->
+
+  </header>
+
+  <nav aria-label="Main">
+    <!-- TODO 5: Build your navigation as a <ul> of links, one <li> per link.
+
+         A list, not loose <a> elements - a screen reader then announces how
+         many navigation items there are. Each href points at a section id
+         further down (for example href="#about"). -->
+
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <!-- ^ Your skip link targets this. Leave the id and tabindex in place. -->
+
+    <!-- TODO 6: Create four <section> elements. Give each one an id matching
+         its navigation link, and an <h2> heading.
+
+         Suggested sections: About, Opening hours, Programmes, Visit/Contact.
+         Use your own subject if you prefer - a personal site, a club, a local
+         organisation, or a cause you care about. -->
+
+
+    <!-- TODO 7: In your About section, add at least two paragraphs and one
+         <img>.
+
+         The alt attribute must describe the image's PURPOSE, not every visible
+         detail. Ask: if this image did not load, what one sentence would let
+         the reader carry on? Do not start with "Image of". -->
+
+
+    <!-- TODO 8: In your Opening hours section, build a <table>.
+
+         Include a <caption>, a <thead> with <th scope="col">, and a <tbody>
+         using <th scope="row"> for the first cell of each row. Those scope
+         attributes are what let a screen reader announce a cell together with
+         its headers. -->
+
+
+    <!-- TODO 9: In your Programmes section, use all three list types:
+           <ul> where order does not matter
+           <ol> for steps that happen in sequence
+         Then add a <video controls> or <audio controls> element with a
+         <track kind="captions"> and fallback content between the tags. -->
+
+
+    <!-- TODO 10: In your Visit section, use a <dl> for contact details, with
+         a <dt> for each label and a <dd> for each value.
+
+         Include at least one link whose text makes sense read on its own,
+         out of context. "Click here" does not qualify. -->
 
   </main>
+
+  <footer>
+    <!-- TODO 11: Add a footer. Include a "Back to top" link and a <p> with
+         <small> for any small print. Try adding a <time datetime="..."> for
+         the date you last updated the page. -->
+
+  </footer>
+
 </body>
 </html>

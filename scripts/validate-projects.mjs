@@ -137,7 +137,12 @@ async function main() {
   if (process.argv.includes('--write-catalog')) {
     await writeFile(
       join(ROOT, 'catalog.json'),
-      JSON.stringify({ repository: 'xrcamp-projects', schemaVersion: 1, projects: catalog }, null, 2) + '\n',
+      JSON.stringify({
+        repository: 'xrcamp-projects',
+        schemaVersion: 1,
+        courses: COURSES.map((id, phase) => ({ id, phase })),
+        projects: catalog,
+      }, null, 2) + '\n',
       'utf8',
     );
     console.log('catalog.json rewritten');

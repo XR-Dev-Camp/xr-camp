@@ -1,14 +1,319 @@
 <!DOCTYPE html>
+<!--
+  Riverside Community Centre - XR Camp reference solution
+  Course 1.1: HTML Foundations
+
+  This page has NO CSS. That is deliberate.
+
+  You have not learned CSS yet (that is Course 1.3). Everything you see here is
+  the browser's default styling applied to well-structured HTML. It is plain,
+  and it is completely usable: readable, navigable by keyboard, and understood
+  by screen readers.
+
+  That is the lesson. Structure comes first. CSS decorates a page that already
+  works; it cannot rescue one that does not.
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- ^ Declares the character encoding, and it goes first for a reason: the
+       browser must find it within the first 1024 bytes of the document. Even
+       comments count towards that budget, which is why this explanation sits
+       below the tag rather than above it. Without the declaration, characters
+       like é or 中 may render as unreadable symbols. -->
+
+
+  <!-- Tells mobile browsers to use the real device width instead of pretending
+       to be a 980px desktop and zooming out. Without this the page is
+       unreadable on a phone. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Foundations - XR Camp reference solution</title>
+
+  <!-- Search engines and link previews use this. One or two sentences. -->
+  <meta name="description" content="Opening hours, programmes, and contact details for Riverside Community Centre.">
+
+  <!-- The title appears in the browser tab, in bookmarks, in search results,
+       and is the first thing a screen reader announces on page load. Put the
+       most specific information first. -->
+  <title>Riverside Community Centre - opening hours and programmes</title>
 </head>
+
 <body>
-  <main>
-    <h1>HTML Foundations</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+
+  <!--
+    Skip link: the first thing a keyboard user reaches.
+
+    Without it, someone navigating by keyboard must tab through every
+    navigation link on every page before reaching the content. This targets
+    id="main" below. Try it: load the page and press Tab once.
+  -->
+  <a href="#main">Skip to main content</a>
+
+  <!--
+    LANDMARKS
+
+    <header>, <nav>, <main>, and <footer> are landmarks. Screen reader users
+    jump between them directly, the way a sighted reader's eye jumps to a
+    heading. A page built only from <div> elements has no landmarks at all,
+    and offers no way to navigate.
+  -->
+  <header>
+    <!-- Exactly one <h1> per page: what this page is. -->
+    <h1>Riverside Community Centre</h1>
+    <p>A shared space for everyone in the Riverside neighbourhood.</p>
+  </header>
+
+  <nav aria-label="Main">
+    <!--
+      Navigation is a LIST of links, not a row of loose <a> elements. A screen
+      reader announces "list, 4 items", so the user knows how much navigation
+      there is before committing to it.
+
+      aria-label distinguishes this landmark from the footer navigation below.
+      When a page has two landmarks of the same type, each needs a name.
+    -->
+    <ul>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#hours">Opening hours</a></li>
+      <li><a href="#programmes">Programmes</a></li>
+      <li><a href="#visit">Visit and contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- The skip link lands here. tabindex="-1" lets the element receive
+       programmatic focus without adding it to the tab order. -->
+  <main id="main" tabindex="-1">
+
+    <section id="about" aria-labelledby="about-heading">
+      <!--
+        Heading levels describe DOCUMENT STRUCTURE, not text size. This is an
+        <h2> because it sits one level below the <h1>, not because of how big
+        it looks. Never skip a level to get smaller text - that is CSS's job.
+      -->
+      <h2 id="about-heading">About us</h2>
+
+      <p>
+        Riverside Community Centre has served the neighbourhood since 1974. We
+        run free and low-cost activities for all ages, and our building is open
+        to community groups who need a place to meet.
+      </p>
+
+      <p>
+        Everyone is welcome here, regardless of background, income, or ability.
+        If a barrier stops you taking part, please
+        <a href="#visit">get in touch</a> and we will do what we can.
+      </p>
+
+      <!--
+        IMAGES AND ALTERNATIVE TEXT
+
+        Alt text describes the image's PURPOSE in context, not every visible
+        detail. Ask yourself: if this image failed to load, what one sentence
+        would let the reader carry on without losing anything?
+
+        Do not begin with "Image of" - screen readers already announce that it
+        is an image.
+
+        The width and height attributes let the browser reserve space before
+        the image arrives, so text does not jump around as the page loads.
+      -->
+      <img src="../assets/centre-exterior.jpg"
+           alt="The centre's front entrance, with a step-free ramp beside the main doors."
+           width="800" height="450">
+    </section>
+
+    <section id="hours" aria-labelledby="hours-heading">
+      <h2 id="hours-heading">Opening hours</h2>
+
+      <!--
+        TABLES
+
+        A table is for genuinely tabular data - values that relate across two
+        dimensions. This qualifies: each day has an opening time and a closing
+        time.
+
+        Do not use tables for page layout. That is what CSS Grid is for, and
+        layout tables make a page nonsensical to a screen reader.
+
+        <caption> names the table. <th scope="col"> and <th scope="row"> tell
+        assistive technology which header describes which cell, so a screen
+        reader can announce "Saturday, Closes, 4pm" rather than a bare "4pm".
+      -->
+      <table>
+        <caption>Opening hours during term time</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Opens</th>
+            <th scope="col">Closes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Monday to Thursday</th>
+            <td>9am</td>
+            <td>9pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td>9am</td>
+            <td>6pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturday</th>
+            <td>10am</td>
+            <td>4pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Sunday</th>
+            <td>Closed</td>
+            <td>Closed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Hours change during school holidays. Check our
+        <a href="#visit">contact details</a> before travelling.
+      </p>
+    </section>
+
+    <section id="programmes" aria-labelledby="programmes-heading">
+      <h2 id="programmes-heading">Programmes</h2>
+
+      <!--
+        LISTS
+
+        <ul> for items whose order does not matter.
+        <ol> when the order is meaningful (steps, rankings).
+        <dl> for term-and-definition pairs.
+
+        Choosing the right list type is not pedantry: a screen reader announces
+        the item count and position, which tells the user how much lies ahead.
+      -->
+      <h3>For children and young people</h3>
+      <ul>
+        <li>Homework club, weekdays after school</li>
+        <li>Youth group, Friday evenings</li>
+        <li>Holiday activity scheme</li>
+      </ul>
+
+      <h3>For adults</h3>
+      <ul>
+        <li>English conversation practice</li>
+        <li>Job search and CV support</li>
+        <li>Digital skills drop-in</li>
+      </ul>
+
+      <h3>How to join a programme</h3>
+      <!-- Ordered list: these steps happen in sequence. -->
+      <ol>
+        <li>Check the opening hours above.</li>
+        <li>Call or email us, or come to reception.</li>
+        <li>Complete a short registration form on your first visit.</li>
+      </ol>
+
+      <!--
+        AUDIO AND VIDEO
+
+        The controls attribute gives keyboard-accessible native playback
+        controls. Never build custom controls before you understand what the
+        native ones already give you for free.
+
+        The <track> element supplies captions. Captions are not optional: they
+        serve deaf and hard-of-hearing viewers, anyone in a noisy or a silent
+        environment, and anyone watching in their second language.
+
+        Content between the tags is FALLBACK, shown only if the browser cannot
+        play the media. Always provide another route to the information.
+      -->
+      <h3>Welcome video</h3>
+      <video controls width="640" poster="../assets/video-poster.jpg">
+        <source src="../assets/welcome.mp4" type="video/mp4">
+        <track kind="captions"
+               src="../assets/welcome-captions.vtt"
+               srclang="en"
+               label="English"
+               default>
+        <p>
+          Your browser cannot play this video.
+          <a href="../assets/welcome.mp4">Download the welcome video (MP4)</a>
+          or read the <a href="#about">written introduction above</a>.
+        </p>
+      </video>
+    </section>
+
+    <section id="visit" aria-labelledby="visit-heading">
+      <h2 id="visit-heading">Visit and contact</h2>
+
+      <!--
+        A description list pairs terms with their details. This carries more
+        meaning than a paragraph of comma-separated values, and screen readers
+        announce the relationship between each term and its value.
+      -->
+      <dl>
+        <dt>Address</dt>
+        <dd>14 Mill Lane, Riverside</dd>
+
+        <dt>Telephone</dt>
+        <!-- A tel: link lets someone on a phone dial by tapping. -->
+        <dd><a href="tel:+441234567890">01234 567890</a></dd>
+
+        <dt>Email</dt>
+        <dd><a href="mailto:hello@riverside.example">hello@riverside.example</a></dd>
+
+        <dt>Access</dt>
+        <dd>
+          Step-free entrance, accessible toilet, and a hearing loop at
+          reception. Assistance dogs are welcome.
+        </dd>
+      </dl>
+
+      <!--
+        LINK TEXT
+
+        Link text must make sense read on its own. Screen reader users can call
+        up a list of every link on the page, stripped of its surrounding text -
+        and "click here" or "read more" are useless in that list.
+
+        Note how the link below names its own destination.
+
+        rel="noopener" is a security measure to apply whenever you open a link
+        in a new tab.
+      -->
+      <p>
+        Our building is managed by the borough council. You can read the
+        <a href="https://example.gov.uk/community-buildings"
+           target="_blank"
+           rel="noopener">
+          borough council's community buildings policy (opens in a new tab)</a>.
+      </p>
+    </section>
+
   </main>
+
+  <footer>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#main">Back to top</a></li>
+        <li><a href="https://example.gov.uk/accessibility">Accessibility statement</a></li>
+      </ul>
+    </nav>
+
+    <!--
+      <small> carries meaning: it marks side comments and legal small print. It
+      is not simply "make this text smaller". If size is all you want, that is
+      CSS.
+
+      <time> gives machines an unambiguous date in the datetime attribute,
+      while humans read the friendlier text between the tags.
+    -->
+    <p>
+      <small>
+        Riverside Community Centre is a registered charity.
+        Page last reviewed on <time datetime="2026-07-30">30 July 2026</time>.
+      </small>
+    </p>
+  </footer>
+
 </body>
 </html>

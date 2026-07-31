@@ -5,13 +5,13 @@
   "phase": 1,
   "title": {
     "en": "HTML Foundations",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Fundamentos de HTML",
+    "zh-Hans": "HTML 基础"
   },
   "summary": {
     "en": "Build an accessible personal or community information website.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea un sitio web accesible de información personal o comunitaria.",
+    "zh-Hans": "构建一个无障碍的个人或社区信息网站。"
   },
   "estimatedMinutes": 720,
   "difficulty": "beginner",
@@ -28,6 +28,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "image-alt",
+    "table-headers",
+    "skip-link",
+    "link-name",
+    "media-captions"
   ]
 }

@@ -4,51 +4,35 @@
   "courses": [
     {
       "id": "preface",
-      "phase": 0,
-      "title": "Welcome to the Future",
-      "defaultDifficulty": "foundation"
+      "phase": 0
     },
     {
       "id": "web-developer",
-      "phase": 1,
-      "title": "Become a Web Developer",
-      "defaultDifficulty": "beginner"
+      "phase": 1
     },
     {
       "id": "frontend-engineer",
-      "phase": 2,
-      "title": "Become a Frontend Engineer",
-      "defaultDifficulty": "intermediate"
+      "phase": 2
     },
     {
       "id": "web3d-developer",
-      "phase": 3,
-      "title": "Become a Web3D Developer",
-      "defaultDifficulty": "intermediate"
+      "phase": 3
     },
     {
       "id": "immersive-developer",
-      "phase": 4,
-      "title": "Become an Immersive Developer",
-      "defaultDifficulty": "advanced"
+      "phase": 4
     },
     {
       "id": "full-stack-spatial",
-      "phase": 5,
-      "title": "Become a Full-Stack Spatial Developer",
-      "defaultDifficulty": "advanced"
+      "phase": 5
     },
     {
       "id": "professional-developer",
-      "phase": 6,
-      "title": "Become a Professional Developer",
-      "defaultDifficulty": "professional"
+      "phase": 6
     },
     {
       "id": "capstone",
-      "phase": 7,
-      "title": "Professional Capstone",
-      "defaultDifficulty": "capstone"
+      "phase": 7
     }
   ],
   "projects": [
@@ -222,8 +206,8 @@
       "phase": 1,
       "title": {
         "en": "HTML Foundations",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Fundamentos de HTML",
+        "zh-Hans": "HTML 基础"
       },
       "estimatedMinutes": 720,
       "difficulty": "beginner",
