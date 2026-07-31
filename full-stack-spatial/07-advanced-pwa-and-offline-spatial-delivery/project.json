@@ -1,0 +1,33 @@
+{
+  "id": "fss-07-advanced-pwa-and-offline-spatial-delivery",
+  "courseId": "full-stack-spatial",
+  "lessonId": "advanced-pwa-and-offline-spatial-delivery-07",
+  "phase": 5,
+  "title": {
+    "en": "Advanced PWA and Offline Spatial Delivery",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Make a spatial application installable and functional with intermittent connectivity.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 600,
+  "difficulty": "advanced",
+  "technologies": [
+    "PWA"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

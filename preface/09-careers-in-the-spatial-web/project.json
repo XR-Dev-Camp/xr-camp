@@ -1,0 +1,33 @@
+{
+  "id": "pre-09-careers-in-the-spatial-web",
+  "courseId": "preface",
+  "lessonId": "careers-in-the-spatial-web-09",
+  "phase": 0,
+  "title": {
+    "en": "Careers in the Spatial Web",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create a personal career pathway and skills map.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 240,
+  "difficulty": "foundation",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

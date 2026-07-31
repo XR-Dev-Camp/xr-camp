@@ -1,0 +1,33 @@
+{
+  "id": "pre-07-organizations-building-the-future",
+  "courseId": "preface",
+  "lessonId": "organizations-building-the-future-07",
+  "phase": 0,
+  "title": {
+    "en": "Organizations Building the Future",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create an interactive ecosystem map connecting standards organizations to technologies.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 360,
+  "difficulty": "foundation",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

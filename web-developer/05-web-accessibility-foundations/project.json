@@ -1,0 +1,33 @@
+{
+  "id": "web-05-web-accessibility-foundations",
+  "courseId": "web-developer",
+  "lessonId": "web-accessibility-foundations-05",
+  "phase": 1,
+  "title": {
+    "en": "Web Accessibility Foundations",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Audit and repair an inaccessible website.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 600,
+  "difficulty": "beginner",
+  "technologies": [
+    "ARIA"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

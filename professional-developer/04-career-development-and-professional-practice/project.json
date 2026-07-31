@@ -1,0 +1,33 @@
+{
+  "id": "pro-04-career-development-and-professional-practice",
+  "courseId": "professional-developer",
+  "lessonId": "career-development-and-professional-practice-04",
+  "phase": 6,
+  "title": {
+    "en": "Career Development and Professional Practice",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create a professional career package and public case study.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "professional",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

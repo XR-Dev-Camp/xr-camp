@@ -1,0 +1,34 @@
+{
+  "id": "fss-01-backend-and-api-foundations",
+  "courseId": "full-stack-spatial",
+  "lessonId": "backend-and-api-foundations-01",
+  "phase": 5,
+  "title": {
+    "en": "Backend and API Foundations",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build an API-backed application that saves spatial content or settings.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "advanced",
+  "technologies": [
+    "JavaScript",
+    "Node.js"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

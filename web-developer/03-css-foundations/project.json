@@ -1,0 +1,33 @@
+{
+  "id": "web-03-css-foundations",
+  "courseId": "web-developer",
+  "lessonId": "css-foundations-03",
+  "phase": 1,
+  "title": {
+    "en": "CSS Foundations",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create a reusable visual system for the HTML project.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "beginner",
+  "technologies": [
+    "CSS"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

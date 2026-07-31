@@ -1,0 +1,33 @@
+{
+  "id": "pro-02-internationalization-and-localization",
+  "courseId": "professional-developer",
+  "lessonId": "internationalization-and-localization-02",
+  "phase": 6,
+  "title": {
+    "en": "Internationalization and Localization",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Release an application in English, Spanish, and Simplified Chinese.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 600,
+  "difficulty": "professional",
+  "technologies": [
+    "i18n"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

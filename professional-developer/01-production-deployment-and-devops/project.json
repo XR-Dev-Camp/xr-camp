@@ -1,0 +1,33 @@
+{
+  "id": "pro-01-production-deployment-and-devops",
+  "courseId": "professional-developer",
+  "lessonId": "production-deployment-and-devops-01",
+  "phase": 6,
+  "title": {
+    "en": "Production Deployment and DevOps",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create and document a production release pipeline.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "professional",
+  "technologies": [
+    "CI/CD"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

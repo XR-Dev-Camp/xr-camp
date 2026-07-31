@@ -1,0 +1,33 @@
+{
+  "id": "w3d-03-advanced-a-frame-and-interaction",
+  "courseId": "web3d-developer",
+  "lessonId": "advanced-a-frame-and-interaction-03",
+  "phase": 3,
+  "title": {
+    "en": "Advanced A-Frame and Interaction",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build an interactive virtual museum, cultural exhibit, or learning experience.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "intermediate",
+  "technologies": [
+    "A-Frame"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

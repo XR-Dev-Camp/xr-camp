@@ -1,0 +1,33 @@
+{
+  "id": "w3d-05-threejs-interaction-assets-and-animation",
+  "courseId": "web3d-developer",
+  "lessonId": "threejs-interaction-assets-and-animation-05",
+  "phase": 3,
+  "title": {
+    "en": "Three.js Interaction, Assets, and Animation",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build an interactive product viewer, story environment, or model explorer.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 960,
+  "difficulty": "intermediate",
+  "technologies": [
+    "Three.js"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

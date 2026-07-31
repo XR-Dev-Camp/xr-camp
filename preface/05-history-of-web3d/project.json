@@ -1,0 +1,33 @@
+{
+  "id": "pre-05-history-of-web3d",
+  "courseId": "preface",
+  "lessonId": "history-of-web3d-05",
+  "phase": 0,
+  "title": {
+    "en": "History of Web3D",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create a Web3D technology comparison lab containing small examples and a standards timeline.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 360,
+  "difficulty": "foundation",
+  "technologies": [
+    "X3D/X3DOM"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

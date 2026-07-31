@@ -1,0 +1,33 @@
+{
+  "id": "fe-07-git-collaboration-and-open-source",
+  "courseId": "frontend-engineer",
+  "lessonId": "git-collaboration-and-open-source-07",
+  "phase": 2,
+  "title": {
+    "en": "Git Collaboration and Open Source",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Complete a contribution through an issue and pull request.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 540,
+  "difficulty": "intermediate",
+  "technologies": [
+    "Git"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

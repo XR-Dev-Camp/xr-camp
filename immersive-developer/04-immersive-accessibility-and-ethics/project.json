@@ -1,0 +1,34 @@
+{
+  "id": "imm-04-immersive-accessibility-and-ethics",
+  "courseId": "immersive-developer",
+  "lessonId": "immersive-accessibility-and-ethics-04",
+  "phase": 4,
+  "title": {
+    "en": "Immersive Accessibility and Ethics",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Complete an accessibility and ethics redesign of an immersive experience.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "advanced",
+  "technologies": [
+    "WebXR",
+    "ARIA"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

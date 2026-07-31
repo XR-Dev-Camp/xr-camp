@@ -1,0 +1,33 @@
+{
+  "id": "w3d-01-web3d-fundamentals",
+  "courseId": "web3d-developer",
+  "lessonId": "web3d-fundamentals-01",
+  "phase": 3,
+  "title": {
+    "en": "Web3D Fundamentals",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create a technology comparison laboratory with compact examples and written analysis.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "intermediate",
+  "technologies": [
+    "X3D/X3DOM"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

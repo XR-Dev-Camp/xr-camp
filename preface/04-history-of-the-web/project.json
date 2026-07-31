@@ -1,0 +1,33 @@
+{
+  "id": "pre-04-history-of-the-web",
+  "courseId": "preface",
+  "lessonId": "history-of-the-web-04",
+  "phase": 0,
+  "title": {
+    "en": "History of the Web",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build and publish a responsive timeline of major web milestones.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 300,
+  "difficulty": "foundation",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

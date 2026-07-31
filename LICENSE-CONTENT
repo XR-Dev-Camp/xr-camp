@@ -1,0 +1,54 @@
+XR Camp — Curriculum and Documentation License
+===============================================
+
+Copyright (c) XR Camp
+
+All curriculum, documentation, written tutorials, diagrams, slides,
+transcripts, field guides, checklists, and other instructional content in
+this repository is licensed under:
+
+    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+    (CC BY-NC-SA 4.0)
+
+You are free to:
+
+  Share  — copy and redistribute the material in any medium or format
+  Adapt  — remix, transform, and build upon the material
+
+Under the following terms:
+
+  Attribution   — You must give appropriate credit, provide a link to the
+                  license, and indicate if changes were made.
+  NonCommercial — You may not use the material for commercial purposes.
+  ShareAlike    — If you remix, transform, or build upon the material, you
+                  must distribute your contributions under the same license
+                  as the original.
+
+Full legal text:
+  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+Human-readable summary:
+  https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+-------------------------------------------------------------------------------
+SCOPE
+-------------------------------------------------------------------------------
+
+This license applies to instructional CONTENT only.
+
+Source code in this repository — including everything under any `starter/`
+or `completed/` directory, and all HTML, CSS, JavaScript, and configuration
+files — is licensed separately under LICENSE-CODE.
+
+Creative Commons does not recommend its licenses for software. This
+separation is deliberate. See LICENSE-CODE.
+
+For commercial, institutional, or accredited teaching use, see
+COMMERCIAL_USE.md.
+
+-------------------------------------------------------------------------------
+ACTION REQUIRED BEFORE PUBLICATION
+-------------------------------------------------------------------------------
+
+Replace the copyright line above with the exact legal entity name that will
+hold the copyright, and confirm the year convention with counsel.

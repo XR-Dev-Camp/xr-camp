@@ -1,0 +1,33 @@
+{
+  "id": "pro-05-instructor-and-mentor-preparation",
+  "courseId": "professional-developer",
+  "lessonId": "instructor-and-mentor-preparation-05",
+  "phase": 6,
+  "title": {
+    "en": "Instructor and Mentor Preparation",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Produce and submit a short teaching lesson or mentor plan.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 480,
+  "difficulty": "professional",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

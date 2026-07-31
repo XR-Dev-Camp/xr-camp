@@ -1,0 +1,33 @@
+{
+  "id": "fe-09-production-frontend-application",
+  "courseId": "frontend-engineer",
+  "lessonId": "production-frontend-application-09",
+  "phase": 2,
+  "title": {
+    "en": "Phase 2 Capstone - Production Frontend Application",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Release a maintainable, installable, multilingual-ready frontend application.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 1080,
+  "difficulty": "intermediate",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

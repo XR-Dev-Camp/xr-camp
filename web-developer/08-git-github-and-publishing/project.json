@@ -1,0 +1,33 @@
+{
+  "id": "web-08-git-github-and-publishing",
+  "courseId": "web-developer",
+  "lessonId": "git-github-and-publishing-08",
+  "phase": 1,
+  "title": {
+    "en": "Git, GitHub, and Publishing",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Publish the Phase 1 portfolio and project collection.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 540,
+  "difficulty": "beginner",
+  "technologies": [
+    "Git"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

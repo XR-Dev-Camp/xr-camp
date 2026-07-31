@@ -1,0 +1,33 @@
+{
+  "id": "cap-05-testing-launch-and-presentation",
+  "courseId": "capstone",
+  "lessonId": "testing-launch-and-presentation-05",
+  "phase": 7,
+  "title": {
+    "en": "Testing, Launch, and Presentation",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Release the capstone, public repository, case study, and presentation.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "capstone",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

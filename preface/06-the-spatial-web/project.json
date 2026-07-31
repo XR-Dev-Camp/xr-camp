@@ -1,0 +1,33 @@
+{
+  "id": "pre-06-the-spatial-web",
+  "courseId": "preface",
+  "lessonId": "the-spatial-web-06",
+  "phase": 0,
+  "title": {
+    "en": "The Spatial Web",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Compare and document a 2D interface, interactive 3D application, and immersive experience.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 300,
+  "difficulty": "foundation",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

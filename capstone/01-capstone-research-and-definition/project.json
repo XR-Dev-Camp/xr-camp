@@ -1,0 +1,33 @@
+{
+  "id": "cap-01-capstone-research-and-definition",
+  "courseId": "capstone",
+  "lessonId": "capstone-research-and-definition-01",
+  "phase": 7,
+  "title": {
+    "en": "Capstone Research and Definition",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Produce an approved capstone brief.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 480,
+  "difficulty": "capstone",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

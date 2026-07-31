@@ -1,0 +1,33 @@
+{
+  "id": "fe-01-modern-javascript",
+  "courseId": "frontend-engineer",
+  "lessonId": "modern-javascript-01",
+  "phase": 2,
+  "title": {
+    "en": "Modern JavaScript",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build a modular data-driven web application.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "intermediate",
+  "technologies": [
+    "JavaScript"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "fe-06-progressive-web-applications",
+  "courseId": "frontend-engineer",
+  "lessonId": "progressive-web-applications-06",
+  "phase": 2,
+  "title": {
+    "en": "Progressive Web Applications",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Turn a previous application into an installable offline-capable PWA.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "intermediate",
+  "technologies": [
+    "PWA"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "fe-02-the-document-object-model-and-dynamic-interfaces",
+  "courseId": "frontend-engineer",
+  "lessonId": "the-document-object-model-and-dynamic-interfaces-02",
+  "phase": 2,
+  "title": {
+    "en": "The Document Object Model and Dynamic Interfaces",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create an accessible interactive learning dashboard.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 600,
+  "difficulty": "intermediate",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

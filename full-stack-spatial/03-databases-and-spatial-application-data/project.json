@@ -1,0 +1,33 @@
+{
+  "id": "fss-03-databases-and-spatial-application-data",
+  "courseId": "full-stack-spatial",
+  "lessonId": "databases-and-spatial-application-data-03",
+  "phase": 5,
+  "title": {
+    "en": "Databases and Spatial Application Data",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Save and load user-created scenes or annotations.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "advanced",
+  "technologies": [
+    "Node.js"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

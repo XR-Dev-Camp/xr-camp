@@ -1,0 +1,33 @@
+{
+  "id": "cap-03-capstone-prototype",
+  "courseId": "capstone",
+  "lessonId": "capstone-prototype-03",
+  "phase": 7,
+  "title": {
+    "en": "Capstone Prototype",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Deliver a tested prototype and design review.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "capstone",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

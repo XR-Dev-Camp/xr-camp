@@ -1,0 +1,33 @@
+{
+  "id": "web-02-accessible-forms-and-user-input",
+  "courseId": "web-developer",
+  "lessonId": "accessible-forms-and-user-input-02",
+  "phase": 1,
+  "title": {
+    "en": "Accessible Forms and User Input",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build an accessible registration and feedback form.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 420,
+  "difficulty": "beginner",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

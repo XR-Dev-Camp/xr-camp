@@ -1,0 +1,33 @@
+{
+  "id": "fss-04-real-time-and-multi-user-applications",
+  "courseId": "full-stack-spatial",
+  "lessonId": "real-time-and-multi-user-applications-04",
+  "phase": 5,
+  "title": {
+    "en": "Real-Time and Multi-User Applications",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build a small collaborative 3D world.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 1020,
+  "difficulty": "advanced",
+  "technologies": [
+    "Node.js"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

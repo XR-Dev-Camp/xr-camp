@@ -1,0 +1,33 @@
+{
+  "id": "web-04-responsive-web-design",
+  "courseId": "web-developer",
+  "lessonId": "responsive-web-design-04",
+  "phase": 1,
+  "title": {
+    "en": "Responsive Web Design",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build a responsive travel, cultural, community, or service website.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "beginner",
+  "technologies": [
+    "CSS"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

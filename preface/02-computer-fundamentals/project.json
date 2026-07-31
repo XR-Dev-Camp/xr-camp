@@ -1,0 +1,33 @@
+{
+  "id": "pre-02-computer-fundamentals",
+  "courseId": "preface",
+  "lessonId": "computer-fundamentals-02",
+  "phase": 0,
+  "title": {
+    "en": "Computer Fundamentals",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create a complete XR Camp learning folder and safely configure a browser and development workspace.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 360,
+  "difficulty": "foundation",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": false,
+  "starterPath": null,
+  "completedPath": null,
+  "demoPath": null,
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

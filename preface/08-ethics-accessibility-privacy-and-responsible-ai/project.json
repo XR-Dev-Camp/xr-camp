@@ -1,0 +1,34 @@
+{
+  "id": "pre-08-ethics-accessibility-privacy-and-responsible-ai",
+  "courseId": "preface",
+  "lessonId": "ethics-accessibility-privacy-and-responsible-ai-08",
+  "phase": 0,
+  "title": {
+    "en": "Ethics, Accessibility, Privacy, and Responsible AI",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Audit a digital experience and publish a personal ethical development pledge.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 420,
+  "difficulty": "foundation",
+  "technologies": [
+    "ARIA",
+    "AI Tooling"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

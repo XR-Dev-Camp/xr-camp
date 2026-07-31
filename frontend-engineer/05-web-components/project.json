@@ -1,0 +1,33 @@
+{
+  "id": "fe-05-web-components",
+  "courseId": "frontend-engineer",
+  "lessonId": "web-components-05",
+  "phase": 2,
+  "title": {
+    "en": "Web Components",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build a reusable XR Camp lesson card or project viewer component.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 600,
+  "difficulty": "intermediate",
+  "technologies": [
+    "Web Components"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

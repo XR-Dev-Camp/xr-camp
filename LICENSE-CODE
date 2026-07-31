@@ -1,0 +1,112 @@
+XR Camp — Example Code License
+===============================
+
+STATUS: DECISION REQUIRED — NOT YET LEGALLY EFFECTIVE
+-------------------------------------------------------------------------------
+
+This file is a placeholder. Do not publish this repository publicly until a
+license has been selected and reviewed by counsel for the XR Camp legal
+entity. Until then, no grant of rights is made and all rights are reserved.
+
+Why this is not filled in automatically: license selection is a legal
+decision with lasting consequences for contributors, learners, institutions,
+and downstream reuse. It should be made deliberately, not inherited from a
+scaffold.
+
+-------------------------------------------------------------------------------
+PROBLEM STATEMENT
+-------------------------------------------------------------------------------
+
+Curriculum content is licensed CC BY-NC-SA 4.0 (see LICENSE-CONTENT). Applying
+a Creative Commons license to source code as well would be a mistake: Creative
+Commons itself recommends against using its licenses for software, because
+they do not address source-versus-object code, patent grants, or warranty
+disclaimers.
+
+The example code therefore needs its own license.
+
+-------------------------------------------------------------------------------
+CONSTRAINTS
+-------------------------------------------------------------------------------
+
+  1. Learners must be able to fork, modify, publish, and showcase their work
+     — including in a portfolio shown to prospective employers.
+  2. XR Camp wishes to restrict commercial resale of the curriculum and its
+     example projects by third parties.
+  3. The license must be software-appropriate.
+  4. It must be comprehensible to beginners, who will encounter it early.
+  5. It must not create friction for accredited or nonprofit teaching use.
+
+Constraints 1 and 2 are in tension. That tension is the decision.
+
+-------------------------------------------------------------------------------
+ALTERNATIVES CONSIDERED
+-------------------------------------------------------------------------------
+
+  A. MIT / Apache-2.0 (permissive)
+     + Maximum learner freedom; zero friction; universally understood; the
+       norm for educational example code.
+     + Apache-2.0 adds an explicit patent grant.
+     - Permits commercial resale of the example code. Does not satisfy
+       constraint 2.
+
+  B. PolyForm Noncommercial 1.0.0
+     + Purpose-built, software-specific noncommercial license.
+     + Plain-language and readable.
+     + Aligns with the CC BY-NC-SA posture of the content.
+     - Not an OSI-approved open source license. "Noncommercial" is inherently
+       ambiguous at the edges. May complicate a learner's portfolio use and
+       deter some contributors.
+
+  C. Split licensing — permissive code, noncommercial content
+     + Learner code freedom is total; the commercial value XR Camp actually
+       needs to protect is the curriculum, videos, and lesson narrative, not
+       the boilerplate of an accessible HTML page.
+     + Removes contributor friction entirely.
+     - Third parties could repackage example projects, though without the
+       instructional content that gives them value.
+
+  D. Dual licensing (noncommercial by default, commercial license on request)
+     + Preserves both freedom and revenue optionality.
+     - Highest administrative burden; requires a CLA from contributors.
+
+-------------------------------------------------------------------------------
+RECOMMENDATION
+-------------------------------------------------------------------------------
+
+Option C — Apache-2.0 for code, CC BY-NC-SA 4.0 for content.
+
+Rationale: the example code is deliberately simple, pedagogical boilerplate.
+Its standalone commercial value is low, while the cost of restricting it is
+high and falls directly on learners — the people the program exists to serve.
+The genuinely valuable and defensible assets are the curriculum, instructor
+videos, assessments, and lesson narrative, all of which are already covered by
+LICENSE-CONTENT and none of which are public. Apache-2.0 additionally supplies
+a patent grant and a clear contribution clause, which matters as outside
+contributors arrive.
+
+If leadership concludes that example projects must also be protected from
+commercial reuse, adopt Option B (PolyForm Noncommercial 1.0.0) instead, and
+accept the portfolio-use ambiguity — documenting an explicit carve-out in
+COMMERCIAL_USE.md permitting learners to display and republish their own
+coursework.
+
+-------------------------------------------------------------------------------
+RISKS AND MIGRATION
+-------------------------------------------------------------------------------
+
+Relicensing after outside contributions have been accepted requires the
+consent of every contributor. Decide before the first external pull request
+is merged, or adopt a CLA now to preserve the ability to change course later.
+
+-------------------------------------------------------------------------------
+NEXT STEP
+-------------------------------------------------------------------------------
+
+Choose an option, have counsel review it, then replace the entire contents of
+this file with the verbatim license text and update:
+
+  - README.md (licensing section)
+  - COMMERCIAL_USE.md
+  - CONTRIBUTING.md (contribution terms)
+  - the LICENSE file in every project directory

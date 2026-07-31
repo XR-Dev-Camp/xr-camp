@@ -1,0 +1,33 @@
+{
+  "id": "pre-01-welcome-to-xr-camp",
+  "courseId": "preface",
+  "lessonId": "welcome-to-xr-camp-01",
+  "phase": 0,
+  "title": {
+    "en": "Welcome to XR Camp",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create a learner profile, choose goals, and complete a personal learning plan.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 120,
+  "difficulty": "foundation",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": false,
+  "starterPath": null,
+  "completedPath": null,
+  "demoPath": null,
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

@@ -1,0 +1,1103 @@
+{
+  "repository": "xrcamp-projects",
+  "schemaVersion": 1,
+  "courses": [
+    {
+      "id": "preface",
+      "phase": 0,
+      "title": "Welcome to the Future",
+      "defaultDifficulty": "foundation"
+    },
+    {
+      "id": "web-developer",
+      "phase": 1,
+      "title": "Become a Web Developer",
+      "defaultDifficulty": "beginner"
+    },
+    {
+      "id": "frontend-engineer",
+      "phase": 2,
+      "title": "Become a Frontend Engineer",
+      "defaultDifficulty": "intermediate"
+    },
+    {
+      "id": "web3d-developer",
+      "phase": 3,
+      "title": "Become a Web3D Developer",
+      "defaultDifficulty": "intermediate"
+    },
+    {
+      "id": "immersive-developer",
+      "phase": 4,
+      "title": "Become an Immersive Developer",
+      "defaultDifficulty": "advanced"
+    },
+    {
+      "id": "full-stack-spatial",
+      "phase": 5,
+      "title": "Become a Full-Stack Spatial Developer",
+      "defaultDifficulty": "advanced"
+    },
+    {
+      "id": "professional-developer",
+      "phase": 6,
+      "title": "Become a Professional Developer",
+      "defaultDifficulty": "professional"
+    },
+    {
+      "id": "capstone",
+      "phase": 7,
+      "title": "Professional Capstone",
+      "defaultDifficulty": "capstone"
+    }
+  ],
+  "projects": [
+    {
+      "id": "pre-01-welcome-to-xr-camp",
+      "courseId": "preface",
+      "lessonId": "welcome-to-xr-camp-01",
+      "phase": 0,
+      "title": {
+        "en": "Welcome to XR Camp",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 120,
+      "difficulty": "foundation",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": false,
+      "path": "preface/01-welcome-to-xr-camp"
+    },
+    {
+      "id": "pre-02-computer-fundamentals",
+      "courseId": "preface",
+      "lessonId": "computer-fundamentals-02",
+      "phase": 0,
+      "title": {
+        "en": "Computer Fundamentals",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 360,
+      "difficulty": "foundation",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": false,
+      "path": "preface/02-computer-fundamentals"
+    },
+    {
+      "id": "pre-03-the-internet-and-the-web",
+      "courseId": "preface",
+      "lessonId": "the-internet-and-the-web-03",
+      "phase": 0,
+      "title": {
+        "en": "The Internet and the Web",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 300,
+      "difficulty": "foundation",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "preface/03-the-internet-and-the-web"
+    },
+    {
+      "id": "pre-04-history-of-the-web",
+      "courseId": "preface",
+      "lessonId": "history-of-the-web-04",
+      "phase": 0,
+      "title": {
+        "en": "History of the Web",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 300,
+      "difficulty": "foundation",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "preface/04-history-of-the-web"
+    },
+    {
+      "id": "pre-05-history-of-web3d",
+      "courseId": "preface",
+      "lessonId": "history-of-web3d-05",
+      "phase": 0,
+      "title": {
+        "en": "History of Web3D",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 360,
+      "difficulty": "foundation",
+      "technologies": [
+        "X3D/X3DOM"
+      ],
+      "hasCode": true,
+      "path": "preface/05-history-of-web3d"
+    },
+    {
+      "id": "pre-06-the-spatial-web",
+      "courseId": "preface",
+      "lessonId": "the-spatial-web-06",
+      "phase": 0,
+      "title": {
+        "en": "The Spatial Web",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 300,
+      "difficulty": "foundation",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "preface/06-the-spatial-web"
+    },
+    {
+      "id": "pre-07-organizations-building-the-future",
+      "courseId": "preface",
+      "lessonId": "organizations-building-the-future-07",
+      "phase": 0,
+      "title": {
+        "en": "Organizations Building the Future",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 360,
+      "difficulty": "foundation",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "preface/07-organizations-building-the-future"
+    },
+    {
+      "id": "pre-08-ethics-accessibility-privacy-and-responsible-ai",
+      "courseId": "preface",
+      "lessonId": "ethics-accessibility-privacy-and-responsible-ai-08",
+      "phase": 0,
+      "title": {
+        "en": "Ethics, Accessibility, Privacy, and Responsible AI",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 420,
+      "difficulty": "foundation",
+      "technologies": [
+        "ARIA",
+        "AI Tooling"
+      ],
+      "hasCode": true,
+      "path": "preface/08-ethics-accessibility-privacy-and-responsible-ai"
+    },
+    {
+      "id": "pre-09-careers-in-the-spatial-web",
+      "courseId": "preface",
+      "lessonId": "careers-in-the-spatial-web-09",
+      "phase": 0,
+      "title": {
+        "en": "Careers in the Spatial Web",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 240,
+      "difficulty": "foundation",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "preface/09-careers-in-the-spatial-web"
+    },
+    {
+      "id": "web-01-html-foundations",
+      "courseId": "web-developer",
+      "lessonId": "html-foundations-01",
+      "phase": 1,
+      "title": {
+        "en": "HTML Foundations",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "beginner",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "web-developer/01-html-foundations"
+    },
+    {
+      "id": "web-02-accessible-forms-and-user-input",
+      "courseId": "web-developer",
+      "lessonId": "accessible-forms-and-user-input-02",
+      "phase": 1,
+      "title": {
+        "en": "Accessible Forms and User Input",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 420,
+      "difficulty": "beginner",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "web-developer/02-accessible-forms-and-user-input"
+    },
+    {
+      "id": "web-03-css-foundations",
+      "courseId": "web-developer",
+      "lessonId": "css-foundations-03",
+      "phase": 1,
+      "title": {
+        "en": "CSS Foundations",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "beginner",
+      "technologies": [
+        "CSS"
+      ],
+      "hasCode": true,
+      "path": "web-developer/03-css-foundations"
+    },
+    {
+      "id": "web-04-responsive-web-design",
+      "courseId": "web-developer",
+      "lessonId": "responsive-web-design-04",
+      "phase": 1,
+      "title": {
+        "en": "Responsive Web Design",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "beginner",
+      "technologies": [
+        "CSS"
+      ],
+      "hasCode": true,
+      "path": "web-developer/04-responsive-web-design"
+    },
+    {
+      "id": "web-05-web-accessibility-foundations",
+      "courseId": "web-developer",
+      "lessonId": "web-accessibility-foundations-05",
+      "phase": 1,
+      "title": {
+        "en": "Web Accessibility Foundations",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "beginner",
+      "technologies": [
+        "ARIA"
+      ],
+      "hasCode": true,
+      "path": "web-developer/05-web-accessibility-foundations"
+    },
+    {
+      "id": "web-06-javascript-foundations",
+      "courseId": "web-developer",
+      "lessonId": "javascript-foundations-06",
+      "phase": 1,
+      "title": {
+        "en": "JavaScript Foundations",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 960,
+      "difficulty": "beginner",
+      "technologies": [
+        "JavaScript"
+      ],
+      "hasCode": true,
+      "path": "web-developer/06-javascript-foundations"
+    },
+    {
+      "id": "web-07-developer-tools-debugging-and-testing",
+      "courseId": "web-developer",
+      "lessonId": "developer-tools-debugging-and-testing-07",
+      "phase": 1,
+      "title": {
+        "en": "Developer Tools, Debugging, and Testing",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 540,
+      "difficulty": "beginner",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "web-developer/07-developer-tools-debugging-and-testing"
+    },
+    {
+      "id": "web-08-git-github-and-publishing",
+      "courseId": "web-developer",
+      "lessonId": "git-github-and-publishing-08",
+      "phase": 1,
+      "title": {
+        "en": "Git, GitHub, and Publishing",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 540,
+      "difficulty": "beginner",
+      "technologies": [
+        "Git"
+      ],
+      "hasCode": true,
+      "path": "web-developer/08-git-github-and-publishing"
+    },
+    {
+      "id": "web-09-web-developer-portfolio",
+      "courseId": "web-developer",
+      "lessonId": "web-developer-portfolio-09",
+      "phase": 1,
+      "title": {
+        "en": "Phase 1 Capstone - Web Developer Portfolio",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 900,
+      "difficulty": "beginner",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "web-developer/09-web-developer-portfolio"
+    },
+    {
+      "id": "fe-01-modern-javascript",
+      "courseId": "frontend-engineer",
+      "lessonId": "modern-javascript-01",
+      "phase": 2,
+      "title": {
+        "en": "Modern JavaScript",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "intermediate",
+      "technologies": [
+        "JavaScript"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/01-modern-javascript"
+    },
+    {
+      "id": "fe-02-the-document-object-model-and-dynamic-interfaces",
+      "courseId": "frontend-engineer",
+      "lessonId": "the-document-object-model-and-dynamic-interfaces-02",
+      "phase": 2,
+      "title": {
+        "en": "The Document Object Model and Dynamic Interfaces",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "intermediate",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/02-the-document-object-model-and-dynamic-interfaces"
+    },
+    {
+      "id": "fe-03-application-architecture-and-maintainable-code",
+      "courseId": "frontend-engineer",
+      "lessonId": "application-architecture-and-maintainable-code-03",
+      "phase": 2,
+      "title": {
+        "en": "Application Architecture and Maintainable Code",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "intermediate",
+      "technologies": [
+        "JavaScript"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/03-application-architecture-and-maintainable-code"
+    },
+    {
+      "id": "fe-04-apis-json-and-asynchronous-applications",
+      "courseId": "frontend-engineer",
+      "lessonId": "apis-json-and-asynchronous-applications-04",
+      "phase": 2,
+      "title": {
+        "en": "APIs, JSON, and Asynchronous Applications",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "intermediate",
+      "technologies": [
+        "JavaScript"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/04-apis-json-and-asynchronous-applications"
+    },
+    {
+      "id": "fe-05-web-components",
+      "courseId": "frontend-engineer",
+      "lessonId": "web-components-05",
+      "phase": 2,
+      "title": {
+        "en": "Web Components",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "intermediate",
+      "technologies": [
+        "Web Components"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/05-web-components"
+    },
+    {
+      "id": "fe-06-progressive-web-applications",
+      "courseId": "frontend-engineer",
+      "lessonId": "progressive-web-applications-06",
+      "phase": 2,
+      "title": {
+        "en": "Progressive Web Applications",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "intermediate",
+      "technologies": [
+        "PWA"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/06-progressive-web-applications"
+    },
+    {
+      "id": "fe-07-git-collaboration-and-open-source",
+      "courseId": "frontend-engineer",
+      "lessonId": "git-collaboration-and-open-source-07",
+      "phase": 2,
+      "title": {
+        "en": "Git Collaboration and Open Source",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 540,
+      "difficulty": "intermediate",
+      "technologies": [
+        "Git"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/07-git-collaboration-and-open-source"
+    },
+    {
+      "id": "fe-08-ai-as-a-development-assistant",
+      "courseId": "frontend-engineer",
+      "lessonId": "ai-as-a-development-assistant-08",
+      "phase": 2,
+      "title": {
+        "en": "AI as a Development Assistant",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "intermediate",
+      "technologies": [
+        "AI Tooling"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/08-ai-as-a-development-assistant"
+    },
+    {
+      "id": "fe-09-production-frontend-application",
+      "courseId": "frontend-engineer",
+      "lessonId": "production-frontend-application-09",
+      "phase": 2,
+      "title": {
+        "en": "Phase 2 Capstone - Production Frontend Application",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 1080,
+      "difficulty": "intermediate",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "frontend-engineer/09-production-frontend-application"
+    },
+    {
+      "id": "w3d-01-web3d-fundamentals",
+      "courseId": "web3d-developer",
+      "lessonId": "web3d-fundamentals-01",
+      "phase": 3,
+      "title": {
+        "en": "Web3D Fundamentals",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "intermediate",
+      "technologies": [
+        "X3D/X3DOM"
+      ],
+      "hasCode": true,
+      "path": "web3d-developer/01-web3d-fundamentals"
+    },
+    {
+      "id": "w3d-02-a-frame-foundations",
+      "courseId": "web3d-developer",
+      "lessonId": "a-frame-foundations-02",
+      "phase": 3,
+      "title": {
+        "en": "A-Frame Foundations",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "intermediate",
+      "technologies": [
+        "A-Frame"
+      ],
+      "hasCode": true,
+      "path": "web3d-developer/02-a-frame-foundations"
+    },
+    {
+      "id": "w3d-03-advanced-a-frame-and-interaction",
+      "courseId": "web3d-developer",
+      "lessonId": "advanced-a-frame-and-interaction-03",
+      "phase": 3,
+      "title": {
+        "en": "Advanced A-Frame and Interaction",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "intermediate",
+      "technologies": [
+        "A-Frame"
+      ],
+      "hasCode": true,
+      "path": "web3d-developer/03-advanced-a-frame-and-interaction"
+    },
+    {
+      "id": "w3d-04-threejs-foundations",
+      "courseId": "web3d-developer",
+      "lessonId": "threejs-foundations-04",
+      "phase": 3,
+      "title": {
+        "en": "Three.js Foundations",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "intermediate",
+      "technologies": [
+        "Three.js"
+      ],
+      "hasCode": true,
+      "path": "web3d-developer/04-threejs-foundations"
+    },
+    {
+      "id": "w3d-05-threejs-interaction-assets-and-animation",
+      "courseId": "web3d-developer",
+      "lessonId": "threejs-interaction-assets-and-animation-05",
+      "phase": 3,
+      "title": {
+        "en": "Three.js Interaction, Assets, and Animation",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 960,
+      "difficulty": "intermediate",
+      "technologies": [
+        "Three.js"
+      ],
+      "hasCode": true,
+      "path": "web3d-developer/05-threejs-interaction-assets-and-animation"
+    },
+    {
+      "id": "w3d-06-performance-engineering-for-web3d",
+      "courseId": "web3d-developer",
+      "lessonId": "performance-engineering-for-web3d-06",
+      "phase": 3,
+      "title": {
+        "en": "Performance Engineering for Web3D",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "intermediate",
+      "technologies": [
+        "X3D/X3DOM"
+      ],
+      "hasCode": true,
+      "path": "web3d-developer/06-performance-engineering-for-web3d"
+    },
+    {
+      "id": "w3d-07-interactive-web3d-experience",
+      "courseId": "web3d-developer",
+      "lessonId": "interactive-web3d-experience-07",
+      "phase": 3,
+      "title": {
+        "en": "Phase 3 Capstone - Interactive Web3D Experience",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 1200,
+      "difficulty": "intermediate",
+      "technologies": [
+        "X3D/X3DOM"
+      ],
+      "hasCode": true,
+      "path": "web3d-developer/07-interactive-web3d-experience"
+    },
+    {
+      "id": "imm-01-webxr-foundations",
+      "courseId": "immersive-developer",
+      "lessonId": "webxr-foundations-01",
+      "phase": 4,
+      "title": {
+        "en": "WebXR Foundations",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "advanced",
+      "technologies": [
+        "WebXR"
+      ],
+      "hasCode": true,
+      "path": "immersive-developer/01-webxr-foundations"
+    },
+    {
+      "id": "imm-02-xr-input-and-interaction",
+      "courseId": "immersive-developer",
+      "lessonId": "xr-input-and-interaction-02",
+      "phase": 4,
+      "title": {
+        "en": "XR Input and Interaction",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "advanced",
+      "technologies": [
+        "WebXR"
+      ],
+      "hasCode": true,
+      "path": "immersive-developer/02-xr-input-and-interaction"
+    },
+    {
+      "id": "imm-03-spatial-ux-design",
+      "courseId": "immersive-developer",
+      "lessonId": "spatial-ux-design-03",
+      "phase": 4,
+      "title": {
+        "en": "Spatial UX Design",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "advanced",
+      "technologies": [
+        "WebXR"
+      ],
+      "hasCode": true,
+      "path": "immersive-developer/03-spatial-ux-design"
+    },
+    {
+      "id": "imm-04-immersive-accessibility-and-ethics",
+      "courseId": "immersive-developer",
+      "lessonId": "immersive-accessibility-and-ethics-04",
+      "phase": 4,
+      "title": {
+        "en": "Immersive Accessibility and Ethics",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "advanced",
+      "technologies": [
+        "WebXR",
+        "ARIA"
+      ],
+      "hasCode": true,
+      "path": "immersive-developer/04-immersive-accessibility-and-ethics"
+    },
+    {
+      "id": "imm-05-spatial-audio-media-and-presence",
+      "courseId": "immersive-developer",
+      "lessonId": "spatial-audio-media-and-presence-05",
+      "phase": 4,
+      "title": {
+        "en": "Spatial Audio, Media, and Presence",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "advanced",
+      "technologies": [
+        "WebXR"
+      ],
+      "hasCode": true,
+      "path": "immersive-developer/05-spatial-audio-media-and-presence"
+    },
+    {
+      "id": "imm-06-immersive-web-experience",
+      "courseId": "immersive-developer",
+      "lessonId": "immersive-web-experience-06",
+      "phase": 4,
+      "title": {
+        "en": "Phase 4 Capstone - Immersive Web Experience",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 1320,
+      "difficulty": "advanced",
+      "technologies": [
+        "WebXR"
+      ],
+      "hasCode": true,
+      "path": "immersive-developer/06-immersive-web-experience"
+    },
+    {
+      "id": "fss-01-backend-and-api-foundations",
+      "courseId": "full-stack-spatial",
+      "lessonId": "backend-and-api-foundations-01",
+      "phase": 5,
+      "title": {
+        "en": "Backend and API Foundations",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "advanced",
+      "technologies": [
+        "JavaScript",
+        "Node.js"
+      ],
+      "hasCode": true,
+      "path": "full-stack-spatial/01-backend-and-api-foundations"
+    },
+    {
+      "id": "fss-02-authentication-and-user-accounts",
+      "courseId": "full-stack-spatial",
+      "lessonId": "authentication-and-user-accounts-02",
+      "phase": 5,
+      "title": {
+        "en": "Authentication and User Accounts",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "advanced",
+      "technologies": [
+        "Node.js"
+      ],
+      "hasCode": true,
+      "path": "full-stack-spatial/02-authentication-and-user-accounts"
+    },
+    {
+      "id": "fss-03-databases-and-spatial-application-data",
+      "courseId": "full-stack-spatial",
+      "lessonId": "databases-and-spatial-application-data-03",
+      "phase": 5,
+      "title": {
+        "en": "Databases and Spatial Application Data",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "advanced",
+      "technologies": [
+        "Node.js"
+      ],
+      "hasCode": true,
+      "path": "full-stack-spatial/03-databases-and-spatial-application-data"
+    },
+    {
+      "id": "fss-04-real-time-and-multi-user-applications",
+      "courseId": "full-stack-spatial",
+      "lessonId": "real-time-and-multi-user-applications-04",
+      "phase": 5,
+      "title": {
+        "en": "Real-Time and Multi-User Applications",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 1020,
+      "difficulty": "advanced",
+      "technologies": [
+        "Node.js"
+      ],
+      "hasCode": true,
+      "path": "full-stack-spatial/04-real-time-and-multi-user-applications"
+    },
+    {
+      "id": "fss-05-security-and-privacy-for-spatial-applications",
+      "courseId": "full-stack-spatial",
+      "lessonId": "security-and-privacy-for-spatial-applications-05",
+      "phase": 5,
+      "title": {
+        "en": "Security and Privacy for Spatial Applications",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "advanced",
+      "technologies": [
+        "Node.js"
+      ],
+      "hasCode": true,
+      "path": "full-stack-spatial/05-security-and-privacy-for-spatial-applications"
+    },
+    {
+      "id": "fss-06-ai-for-spatial-computing",
+      "courseId": "full-stack-spatial",
+      "lessonId": "ai-for-spatial-computing-06",
+      "phase": 5,
+      "title": {
+        "en": "AI for Spatial Computing",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 840,
+      "difficulty": "advanced",
+      "technologies": [
+        "AI Tooling"
+      ],
+      "hasCode": true,
+      "path": "full-stack-spatial/06-ai-for-spatial-computing"
+    },
+    {
+      "id": "fss-07-advanced-pwa-and-offline-spatial-delivery",
+      "courseId": "full-stack-spatial",
+      "lessonId": "advanced-pwa-and-offline-spatial-delivery-07",
+      "phase": 5,
+      "title": {
+        "en": "Advanced PWA and Offline Spatial Delivery",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "advanced",
+      "technologies": [
+        "PWA"
+      ],
+      "hasCode": true,
+      "path": "full-stack-spatial/07-advanced-pwa-and-offline-spatial-delivery"
+    },
+    {
+      "id": "fss-08-full-stack-spatial-application",
+      "courseId": "full-stack-spatial",
+      "lessonId": "full-stack-spatial-application-08",
+      "phase": 5,
+      "title": {
+        "en": "Phase 5 Capstone - Full-Stack Spatial Application",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 1500,
+      "difficulty": "advanced",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "full-stack-spatial/08-full-stack-spatial-application"
+    },
+    {
+      "id": "pro-01-production-deployment-and-devops",
+      "courseId": "professional-developer",
+      "lessonId": "production-deployment-and-devops-01",
+      "phase": 6,
+      "title": {
+        "en": "Production Deployment and DevOps",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "professional",
+      "technologies": [
+        "CI/CD"
+      ],
+      "hasCode": true,
+      "path": "professional-developer/01-production-deployment-and-devops"
+    },
+    {
+      "id": "pro-02-internationalization-and-localization",
+      "courseId": "professional-developer",
+      "lessonId": "internationalization-and-localization-02",
+      "phase": 6,
+      "title": {
+        "en": "Internationalization and Localization",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "professional",
+      "technologies": [
+        "i18n"
+      ],
+      "hasCode": true,
+      "path": "professional-developer/02-internationalization-and-localization"
+    },
+    {
+      "id": "pro-03-open-source-standards-and-technical-leadership",
+      "courseId": "professional-developer",
+      "lessonId": "open-source-standards-and-technical-leadership-03",
+      "phase": 6,
+      "title": {
+        "en": "Open Source, Standards, and Technical Leadership",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "professional",
+      "technologies": [
+        "Git"
+      ],
+      "hasCode": true,
+      "path": "professional-developer/03-open-source-standards-and-technical-leadership"
+    },
+    {
+      "id": "pro-04-career-development-and-professional-practice",
+      "courseId": "professional-developer",
+      "lessonId": "career-development-and-professional-practice-04",
+      "phase": 6,
+      "title": {
+        "en": "Career Development and Professional Practice",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "professional",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "professional-developer/04-career-development-and-professional-practice"
+    },
+    {
+      "id": "pro-05-instructor-and-mentor-preparation",
+      "courseId": "professional-developer",
+      "lessonId": "instructor-and-mentor-preparation-05",
+      "phase": 6,
+      "title": {
+        "en": "Instructor and Mentor Preparation",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 480,
+      "difficulty": "professional",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "professional-developer/05-instructor-and-mentor-preparation"
+    },
+    {
+      "id": "cap-01-capstone-research-and-definition",
+      "courseId": "capstone",
+      "lessonId": "capstone-research-and-definition-01",
+      "phase": 7,
+      "title": {
+        "en": "Capstone Research and Definition",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 480,
+      "difficulty": "capstone",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "capstone/01-capstone-research-and-definition"
+    },
+    {
+      "id": "cap-02-experience-and-system-design",
+      "courseId": "capstone",
+      "lessonId": "experience-and-system-design-02",
+      "phase": 7,
+      "title": {
+        "en": "Experience and System Design",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 600,
+      "difficulty": "capstone",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "capstone/02-experience-and-system-design"
+    },
+    {
+      "id": "cap-03-capstone-prototype",
+      "courseId": "capstone",
+      "lessonId": "capstone-prototype-03",
+      "phase": 7,
+      "title": {
+        "en": "Capstone Prototype",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "capstone",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "capstone/03-capstone-prototype"
+    },
+    {
+      "id": "cap-04-capstone-production",
+      "courseId": "capstone",
+      "lessonId": "capstone-production-04",
+      "phase": 7,
+      "title": {
+        "en": "Capstone Production",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 1680,
+      "difficulty": "capstone",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "capstone/04-capstone-production"
+    },
+    {
+      "id": "cap-05-testing-launch-and-presentation",
+      "courseId": "capstone",
+      "lessonId": "testing-launch-and-presentation-05",
+      "phase": 7,
+      "title": {
+        "en": "Testing, Launch, and Presentation",
+        "es-419": "",
+        "zh-Hans": ""
+      },
+      "estimatedMinutes": 720,
+      "difficulty": "capstone",
+      "technologies": [
+        "HTML"
+      ],
+      "hasCode": true,
+      "path": "capstone/05-testing-launch-and-presentation"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "cap-02-experience-and-system-design",
+  "courseId": "capstone",
+  "lessonId": "experience-and-system-design-02",
+  "phase": 7,
+  "title": {
+    "en": "Experience and System Design",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Produce the full product and technical design.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 600,
+  "difficulty": "capstone",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

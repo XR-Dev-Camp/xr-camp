@@ -1,0 +1,33 @@
+{
+  "id": "w3d-04-threejs-foundations",
+  "courseId": "web3d-developer",
+  "lessonId": "threejs-foundations-04",
+  "phase": 3,
+  "title": {
+    "en": "Three.js Foundations",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build a clean and optimized Three.js starter application.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "intermediate",
+  "technologies": [
+    "Three.js"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

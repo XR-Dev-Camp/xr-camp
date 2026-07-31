@@ -1,0 +1,33 @@
+{
+  "id": "imm-03-spatial-ux-design",
+  "courseId": "immersive-developer",
+  "lessonId": "spatial-ux-design-03",
+  "phase": 4,
+  "title": {
+    "en": "Spatial UX Design",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Redesign a conventional interface as a usable spatial experience.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "advanced",
+  "technologies": [
+    "WebXR"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

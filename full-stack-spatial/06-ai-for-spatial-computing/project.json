@@ -1,0 +1,33 @@
+{
+  "id": "fss-06-ai-for-spatial-computing",
+  "courseId": "full-stack-spatial",
+  "lessonId": "ai-for-spatial-computing-06",
+  "phase": 5,
+  "title": {
+    "en": "AI for Spatial Computing",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build an AI-assisted spatial tool while documenting human review and safeguards.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "advanced",
+  "technologies": [
+    "AI Tooling"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

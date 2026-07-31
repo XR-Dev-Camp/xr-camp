@@ -1,0 +1,33 @@
+{
+  "id": "imm-02-xr-input-and-interaction",
+  "courseId": "immersive-developer",
+  "lessonId": "xr-input-and-interaction-02",
+  "phase": 4,
+  "title": {
+    "en": "XR Input and Interaction",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build an XR interaction laboratory.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "advanced",
+  "technologies": [
+    "WebXR"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

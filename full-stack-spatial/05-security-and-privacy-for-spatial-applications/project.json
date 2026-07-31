@@ -1,0 +1,33 @@
+{
+  "id": "fss-05-security-and-privacy-for-spatial-applications",
+  "courseId": "full-stack-spatial",
+  "lessonId": "security-and-privacy-for-spatial-applications-05",
+  "phase": 5,
+  "title": {
+    "en": "Security and Privacy for Spatial Applications",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Complete a security and privacy review and remediation sprint.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "advanced",
+  "technologies": [
+    "Node.js"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

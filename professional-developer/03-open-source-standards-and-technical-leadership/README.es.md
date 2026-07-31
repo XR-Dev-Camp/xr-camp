@@ -1,0 +1,88 @@
+# Open Source, Standards, and Technical Leadership
+
+**Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
+
+> <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
+
+**Curso:** `professional-developer` · **Lección:** `open-source-standards-and-technical-leadership-03` · **Tiempo estimado:** 720 minutos
+
+---
+
+> Publish an open-source contribution and standards participation plan.
+
+## Objetivos de aprendizaje
+
+_Contenido pendiente de redacción._
+
+## Requisitos previos
+
+_Contenido pendiente de redacción._
+
+## Herramientas necesarias
+
+_Contenido pendiente de redacción._
+
+## Lo que vas a construir
+
+_Contenido pendiente de redacción._
+
+## Guía de carpetas
+
+```text
+03-open-source-standards-and-technical-leadership/
+├── README.md
+├── starter/        # begin here
+├── completed/      # reference solution
+├── challenges/     # foundation · creative · explorer
+├── tests/          # self-review checklist
+├── assets/
+└── screenshots/
+```
+
+## Configuración
+
+_Contenido pendiente de redacción._
+
+## Recorrido paso a paso
+
+_Contenido pendiente de redacción._
+
+## Explicación del código clave
+
+_Contenido pendiente de redacción._
+
+## Requisitos de accesibilidad
+
+_Contenido pendiente de redacción._
+
+## Consideraciones de rendimiento
+
+_Contenido pendiente de redacción._
+
+## Errores comunes
+
+_Contenido pendiente de redacción._
+
+## Solución de problemas
+
+_Contenido pendiente de redacción._
+
+## Retos adicionales
+
+_Contenido pendiente de redacción._
+
+## Cómo entregar tu trabajo
+
+_Contenido pendiente de redacción._
+
+## Lecturas adicionales
+
+_Contenido pendiente de redacción._
+
+## Licencia
+
+Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
+
+---
+
+[Abrir esta lección en xrcamp.dev](https://xrcamp.dev/lessons/open-source-standards-and-technical-leadership-03)

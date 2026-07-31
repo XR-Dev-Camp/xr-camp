@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+build/
+.cache/
+
+# Environment and secrets - never commit these
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# Learner data must never appear in this repository
+learners/
+progress/
+submissions/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

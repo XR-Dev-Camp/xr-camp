@@ -1,0 +1,33 @@
+{
+  "id": "fss-08-full-stack-spatial-application",
+  "courseId": "full-stack-spatial",
+  "lessonId": "full-stack-spatial-application-08",
+  "phase": 5,
+  "title": {
+    "en": "Phase 5 Capstone - Full-Stack Spatial Application",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Release a production-style full-stack spatial application.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 1500,
+  "difficulty": "advanced",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

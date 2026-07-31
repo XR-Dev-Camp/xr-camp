@@ -1,0 +1,33 @@
+{
+  "id": "w3d-07-interactive-web3d-experience",
+  "courseId": "web3d-developer",
+  "lessonId": "interactive-web3d-experience-07",
+  "phase": 3,
+  "title": {
+    "en": "Phase 3 Capstone - Interactive Web3D Experience",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Publish a polished Web3D experience using A-Frame or Three.js.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 1200,
+  "difficulty": "intermediate",
+  "technologies": [
+    "X3D/X3DOM"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

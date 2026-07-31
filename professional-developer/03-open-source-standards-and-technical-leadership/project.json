@@ -1,0 +1,33 @@
+{
+  "id": "pro-03-open-source-standards-and-technical-leadership",
+  "courseId": "professional-developer",
+  "lessonId": "open-source-standards-and-technical-leadership-03",
+  "phase": 6,
+  "title": {
+    "en": "Open Source, Standards, and Technical Leadership",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Publish an open-source contribution and standards participation plan.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 720,
+  "difficulty": "professional",
+  "technologies": [
+    "Git"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

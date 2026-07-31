@@ -1,0 +1,33 @@
+{
+  "id": "web-06-javascript-foundations",
+  "courseId": "web-developer",
+  "lessonId": "javascript-foundations-06",
+  "phase": 1,
+  "title": {
+    "en": "JavaScript Foundations",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build an interactive dashboard or information explorer.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 960,
+  "difficulty": "beginner",
+  "technologies": [
+    "JavaScript"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

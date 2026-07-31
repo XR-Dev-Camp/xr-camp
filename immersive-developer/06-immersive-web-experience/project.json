@@ -1,0 +1,33 @@
+{
+  "id": "imm-06-immersive-web-experience",
+  "courseId": "immersive-developer",
+  "lessonId": "immersive-web-experience-06",
+  "phase": 4,
+  "title": {
+    "en": "Phase 4 Capstone - Immersive Web Experience",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Publish a complete XR experience usable with and without a headset.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 1320,
+  "difficulty": "advanced",
+  "technologies": [
+    "WebXR"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

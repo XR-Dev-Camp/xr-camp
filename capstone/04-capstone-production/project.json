@@ -1,0 +1,33 @@
+{
+  "id": "cap-04-capstone-production",
+  "courseId": "capstone",
+  "lessonId": "capstone-production-04",
+  "phase": 7,
+  "title": {
+    "en": "Capstone Production",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Build the production application.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 1680,
+  "difficulty": "capstone",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

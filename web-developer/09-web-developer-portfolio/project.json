@@ -1,0 +1,33 @@
+{
+  "id": "web-09-web-developer-portfolio",
+  "courseId": "web-developer",
+  "lessonId": "web-developer-portfolio-09",
+  "phase": 1,
+  "title": {
+    "en": "Phase 1 Capstone - Web Developer Portfolio",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Publish a professional, accessible, responsive portfolio containing multiple completed web projects.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 900,
+  "difficulty": "beginner",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

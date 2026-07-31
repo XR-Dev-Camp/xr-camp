@@ -1,0 +1,33 @@
+{
+  "id": "imm-01-webxr-foundations",
+  "courseId": "immersive-developer",
+  "lessonId": "webxr-foundations-01",
+  "phase": 4,
+  "title": {
+    "en": "WebXR Foundations",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create a WebXR-capable experience with desktop and mobile fallbacks.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 840,
+  "difficulty": "advanced",
+  "technologies": [
+    "WebXR"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

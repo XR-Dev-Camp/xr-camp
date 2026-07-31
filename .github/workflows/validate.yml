@@ -1,0 +1,70 @@
+name: Validate
+
+# Enforces the structural contract with the xrcamp.dev platform, and guards the
+# public/private boundary. Both failures are invisible in ordinary code review,
+# which is why they are mechanical.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structure:
+    name: Project structure and lesson IDs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate every project.json
+        run: node scripts/validate-projects.mjs
+
+  secrets:
+    name: Secret and private-data scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scan history for credentials
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  links:
+    name: Link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check markdown links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --accept 200,206,429 '**/*.md'
+          fail: true
+
+  accessibility:
+    name: Accessibility audit of reference solutions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install pa11y
+        run: npm install --no-save pa11y@8
+      - name: Audit every completed/index.html
+        # A reference solution is what learners copy. An inaccessible one
+        # teaches inaccessibility at scale, so this gate is non-negotiable.
+        run: |
+          status=0
+          for f in $(find . -path '*/completed/index.html' | sort); do
+            echo "--- $f"
+            npx pa11y --standard WCAG2AA --reporter cli "file://$PWD/${f#./}" || status=1
+          done
+          exit $status

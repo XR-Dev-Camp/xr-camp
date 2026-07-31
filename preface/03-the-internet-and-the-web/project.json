@@ -1,0 +1,33 @@
+{
+  "id": "pre-03-the-internet-and-the-web",
+  "courseId": "preface",
+  "lessonId": "the-internet-and-the-web-03",
+  "phase": 0,
+  "title": {
+    "en": "The Internet and the Web",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create an interactive diagram explaining what happens when a user visits a website.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 300,
+  "difficulty": "foundation",
+  "technologies": [
+    "HTML"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

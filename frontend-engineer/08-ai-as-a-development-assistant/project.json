@@ -1,0 +1,33 @@
+{
+  "id": "fe-08-ai-as-a-development-assistant",
+  "courseId": "frontend-engineer",
+  "lessonId": "ai-as-a-development-assistant-08",
+  "phase": 2,
+  "title": {
+    "en": "AI as a Development Assistant",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Complete and document an AI-assisted code review without surrendering understanding.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 600,
+  "difficulty": "intermediate",
+  "technologies": [
+    "AI Tooling"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

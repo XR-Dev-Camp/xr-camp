@@ -1,0 +1,33 @@
+{
+  "id": "imm-05-spatial-audio-media-and-presence",
+  "courseId": "immersive-developer",
+  "lessonId": "spatial-audio-media-and-presence-05",
+  "phase": 4,
+  "title": {
+    "en": "Spatial Audio, Media, and Presence",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "summary": {
+    "en": "Create an immersive media or storytelling scene.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
+  "estimatedMinutes": 600,
+  "difficulty": "advanced",
+  "technologies": [
+    "WebXR"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}
