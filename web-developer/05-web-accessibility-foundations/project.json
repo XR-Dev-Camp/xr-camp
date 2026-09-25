@@ -6,13 +6,13 @@
   "phase": 1,
   "title": {
     "en": "Web Accessibility Foundations",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Fundamentos de accesibilidad web",
+    "zh-Hans": "网页无障碍基础"
   },
   "summary": {
     "en": "Audit and repair an inaccessible website.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Audita y repara un sitio web inaccesible.",
+    "zh-Hans": "审查并修复一个不无障碍的网站。"
   },
   "estimatedMinutes": 600,
   "schedule": {
@@ -31,8 +31,8 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Audit a 3D scene: add a text description, a keyboard route, and a reduced-motion switch.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Audita una escena 3D: agrega una descripción en texto, un camino con el teclado y un interruptor para reducir el movimiento.",
+    "zh-Hans": "审查一个 3D 场景：添加文字描述、键盘操作路径和减少动态效果的开关。"
   },
   "accessibilityChecks": [
     "document-language",

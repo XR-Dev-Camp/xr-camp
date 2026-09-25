@@ -280,8 +280,8 @@
       "phase": 1,
       "title": {
         "en": "Accessible Forms and User Input",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Formularios accesibles y entrada de datos",
+        "zh-Hans": "无障碍表单与用户输入"
       },
       "estimatedMinutes": 420,
       "schedule": {
@@ -303,8 +303,8 @@
       "phase": 1,
       "title": {
         "en": "CSS Foundations",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Fundamentos de CSS",
+        "zh-Hans": "CSS 基础"
       },
       "estimatedMinutes": 840,
       "schedule": {
@@ -327,8 +327,8 @@
       "phase": 1,
       "title": {
         "en": "Responsive Web Design",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Diseño web adaptable",
+        "zh-Hans": "响应式网页设计"
       },
       "estimatedMinutes": 840,
       "schedule": {
@@ -351,8 +351,8 @@
       "phase": 1,
       "title": {
         "en": "Web Accessibility Foundations",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Fundamentos de accesibilidad web",
+        "zh-Hans": "网页无障碍基础"
       },
       "estimatedMinutes": 600,
       "schedule": {
@@ -376,8 +376,8 @@
       "phase": 1,
       "title": {
         "en": "JavaScript Foundations",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Fundamentos de JavaScript",
+        "zh-Hans": "JavaScript 基础"
       },
       "estimatedMinutes": 960,
       "schedule": {
@@ -401,8 +401,8 @@
       "phase": 1,
       "title": {
         "en": "Developer Tools, Debugging, and Testing",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Herramientas para desarrolladores, depuración y pruebas",
+        "zh-Hans": "开发者工具、调试与测试"
       },
       "estimatedMinutes": 540,
       "schedule": {
@@ -426,8 +426,8 @@
       "phase": 1,
       "title": {
         "en": "Git, GitHub, and Publishing",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Git, GitHub y publicación",
+        "zh-Hans": "Git、GitHub 与发布"
       },
       "estimatedMinutes": 540,
       "schedule": {
@@ -450,8 +450,8 @@
       "phase": 1,
       "title": {
         "en": "Phase 1 Capstone - Web Developer Portfolio",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Proyecto final de la Fase 1 - Portafolio de desarrolladora web",
+        "zh-Hans": "第一阶段结业项目 - Web 开发者作品集"
       },
       "estimatedMinutes": 900,
       "schedule": {

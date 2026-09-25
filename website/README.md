@@ -31,6 +31,7 @@ and WebXR. No framework, no build tools beyond Node.
 | `build.mjs` | Writes the pages, reading lesson counts and times from the repository's `catalog.json` |
 | `assets/site.css` | Styles |
 | `assets/scene.js` | The 3D and WebXR layer |
+| `assets/menu.js` | Closes the language menu with Escape or a click outside it |
 | `index.html`, `es-419/index.html`, `zh-hans/index.html` | The built pages: publish these with `assets/` |
 | `archive/index-2025.html` | The previous homepage, kept for reference |
 

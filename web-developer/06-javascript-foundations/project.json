@@ -6,13 +6,13 @@
   "phase": 1,
   "title": {
     "en": "JavaScript Foundations",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Fundamentos de JavaScript",
+    "zh-Hans": "JavaScript 基础"
   },
   "summary": {
     "en": "Build an interactive dashboard or information explorer.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Construye un panel interactivo o un explorador de información.",
+    "zh-Hans": "构建一个交互式仪表板或信息浏览器。"
   },
   "estimatedMinutes": 960,
   "schedule": {
@@ -31,8 +31,8 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Write your first 3D event: click (or press Enter on) an object to change its colour and announce the change to screen readers.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Escribe tu primer evento 3D: haz clic en un objeto (o presiona Enter sobre él) para cambiar su color y anunciar el cambio a los lectores de pantalla.",
+    "zh-Hans": "编写你的第一个 3D 事件：点击一个物体（或在它上面按 Enter）来改变它的颜色，并把这一变化朗读给屏幕阅读器用户。"
   },
   "accessibilityChecks": [
     "document-language",

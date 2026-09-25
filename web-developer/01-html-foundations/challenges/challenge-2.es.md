@@ -25,4 +25,4 @@ Construir algo que te importa también cambia el cuidado con el que trabajas. Es
 - [ ] `lang` coincide correctamente con el idioma en el que realmente escribiste.
 - [ ] Cada imagen tiene un texto alternativo adecuado a tu contexto, no al del ejemplo.
 - [ ] La página sigue validándose sin errores.
-- [ ] Estarías dispuesta o dispuesto a mostrar esta página a la comunidad que describe.
+- [ ] Estarías dispuesta a mostrar esta página a la comunidad que describe.

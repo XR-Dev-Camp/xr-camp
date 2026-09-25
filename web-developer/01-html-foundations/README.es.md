@@ -17,20 +17,20 @@ Al terminar este proyecto serás capaz de:
 3. Usar puntos de referencia semánticos (`<header>`, `<nav>`, `<main>`, `<footer>`) para que la tecnología de asistencia pueda recorrer tu página.
 4. Escribir texto alternativo que transmita el propósito de una imagen en lugar de describir su apariencia.
 5. Marcar datos verdaderamente tabulares con encabezados y ámbitos que los lectores de pantalla puedan interpretar.
-6. Insertar vídeo o audio con subtítulos y una alternativa para los navegadores que no puedan reproducirlo.
+6. Insertar video o audio con subtítulos y una alternativa para los navegadores que no puedan reproducirlo.
 7. Escribir textos de enlace que tengan sentido leídos fuera de contexto.
 8. Validar tu HTML y leer los resultados del validador.
 
 ## Requisitos previos
 
-- **Curso 0.2 — Fundamentos de informática.** Sabes crear carpetas, guardar archivos y volver a encontrarlos.
+- **Curso 0.2 — Fundamentos de computación.** Sabes crear carpetas, guardar archivos y volver a encontrarlos.
 - **Curso 0.3 — Internet y la web.** Sabes qué solicita un navegador y qué devuelve un servidor.
 
 No se presupone experiencia previa en programación. Si nunca has escrito una línea de código, estás en el lugar correcto y en el punto correcto.
 
 ## Herramientas necesarias
 
-| Herramienta | Para qué sirve | Coste |
+| Herramienta | Para qué sirve | Costo |
 | --- | --- | --- |
 | Un navegador moderno (Firefox, Chrome, Edge o Safari) | Ver e inspeccionar tu página | Gratis |
 | Un editor de texto — VS Code, o el que trae tu sistema | Escribir HTML | Gratis |
@@ -42,7 +42,7 @@ No necesitas instalar nada más allá de un editor de texto. No hace falta un se
 
 Un sitio web informativo completo, con varias secciones, para una organización comunitaria real o imaginaria: un centro de barrio, un club, una biblioteca, un grupo de apoyo mutuo, una asociación escolar. También puedes hacer un sitio personal sobre ti. Elige un tema que de verdad te importe; vas a mirarlo durante diez horas.
 
-La solución de referencia en [`completed/`](completed/) es la página de un centro comunitario con una sección de presentación, una tabla de horarios, una lista de programas, un vídeo incrustado y datos de contacto.
+La solución de referencia en [`completed/`](completed/) es la página de un centro comunitario con una sección de presentación, una tabla de horarios, una lista de programas, un video incrustado y datos de contacto.
 
 **Tu página no tendrá estilos.** Se verá simple. Ese es precisamente el objetivo de este proyecto — véase [Explicación del código clave](#explicación-del-código-clave).
 
@@ -90,7 +90,7 @@ Este proyecto son unas 16 sesiones de 45 minutos. Con cuatro sesiones por semana
 | 6 | Paso 6: imágenes y texto alternativo | Una imagen con texto alternativo que has leído en voz alta |
 | 7 | Paso 7: la tabla | Una tabla que un lector de pantalla puede explicar |
 | 8 | Paso 8: listas | Programas o servicios como listas de verdad |
-| 9 | Paso 8: multimedia y subtítulos | Un vídeo o audio con subtítulos |
+| 9 | Paso 8: multimedia y subtítulos | Un video o audio con subtítulos |
 | 10 | Pasos 9–10: datos de contacto y pie de página | Una página completa, de principio a fin |
 | 11 | Paso 11: valida | Cero errores en el validador |
 | 12 | Lee **Explicación del código clave** y **Requisitos de accesibilidad** | Notas en tu diario de aprendizaje |
@@ -101,7 +101,7 @@ Este proyecto son unas 16 sesiones de 45 minutos. Con cuatro sesiones por semana
 
 ### Paso 1 — Describe la página (TODO 1–2)
 
-Añade un `<meta name="description">` y escribe un `<title>` de verdad.
+Agrega un `<meta name="description">` y escribe un `<title>` de verdad.
 
 Recarga. La pestaña del navegador muestra ahora tu título. Es lo primero que anuncia un lector de pantalla y el texto que muestra un buscador. Merece más reflexión de la que suele recibir.
 
@@ -111,9 +111,9 @@ Recarga. La pestaña del navegador muestra ahora tu título. Es lo primero que a
 <a href="#main">Saltar al contenido principal</a>
 ```
 
-Colócalo inmediatamente después de `<body>`. Recarga la página y pulsa **Tab** una vez. El enlace recibe el foco.
+Colócalo inmediatamente después de `<body>`. Recarga la página y presiona **Tab** una vez. El enlace recibe el foco.
 
-Existe porque, de lo contrario, quien navega con teclado tendría que pasar por todos los enlaces de navegación de cada página antes de llegar al contenido. Estás incorporando la accesibilidad desde el primer elemento en lugar de añadirla después, que es justo el hábito que todo este programa intenta darte.
+Existe porque, de lo contrario, quien navega con teclado tendría que pasar por todos los enlaces de navegación de cada página antes de llegar al contenido. Estás incorporando la accesibilidad desde el primer elemento en lugar de agregarla después, que es justo el hábito que todo este programa intenta darte.
 
 ### Paso 3 — Cabecera y encabezado (TODO 4)
 
@@ -141,7 +141,7 @@ Ahora prueba tu navegación: haz clic en un enlace. El navegador salta a esa sec
 
 ### Paso 6 — Texto e imagen (TODO 7)
 
-Escribe primero los párrafos y después añade la imagen.
+Escribe primero los párrafos y después agrega la imagen.
 
 El texto alternativo es lo más difícil de este proyecto. Prueba esto: tapa la imagen con la mano y lee en voz alta tu texto alternativo. ¿Has perdido algo? Entonces es demasiado corto. ¿Estás recitando detalles que nadie necesita? Demasiado largo.
 
@@ -171,13 +171,13 @@ Los atributos `scope` son los que hacen el trabajo. Permiten que un lector de pa
 
 ### Paso 8 — Listas y multimedia (TODO 9)
 
-Usa `<ul>` cuando el orden no importe y `<ol>` cuando sí. Después añade vídeo o audio con `controls`, un `<track kind="captions">` y contenido alternativo entre las etiquetas.
+Usa `<ul>` cuando el orden no importe y `<ol>` cuando sí. Después agrega video o audio con `controls`, un `<track kind="captions">` y contenido alternativo entre las etiquetas.
 
-Necesitarás archivos multimedia. Consulta [`assets/README.md`](assets/README.md): puedes grabar diez segundos con el móvil o usar el enfoque de marcador de posición que allí se describe.
+Necesitarás archivos multimedia. Consulta [`assets/README.md`](assets/README.md): puedes grabar diez segundos con el celular o usar el enfoque de marcador de posición que allí se describe.
 
 ### Paso 9 — Datos de contacto (TODO 10)
 
-Un `<dl>` empareja cada etiqueta con su valor. Usa enlaces `tel:` y `mailto:` para que desde un móvil se pueda llamar con un toque.
+Un `<dl>` empareja cada etiqueta con su valor. Usa enlaces `tel:` y `mailto:` para que desde un celular se pueda llamar con un toque.
 
 ### Paso 10 — Pie de página (TODO 11)
 
@@ -224,16 +224,16 @@ Tu entrega debe cumplir todo lo siguiente. Se comprueba en [`tests/checklist.md`
 | Texto de enlace con sentido propio | 2.4.4 | Se puede listar cada enlace despojado de su contexto. |
 | Las tablas usan `<caption>` y `scope` | 1.3.1 | Asocia cada celda con sus encabezados. |
 | Los medios llevan subtítulos | 1.2.2 | Personas sordas o con pérdida auditiva; entornos ruidosos y silenciosos. |
-| Todo alcanzable con el teclado | 2.1.1 | Muchas personas nunca tocan un ratón. |
+| Todo alcanzable con el teclado | 2.1.1 | Muchas personas nunca tocan un mouse. |
 
-**Pruébalo tú.** Aparta el ratón y recorre toda la página con **Tab**, **Mayús+Tab** e **Intro**. Si tú no puedes llegar a algo, tampoco podrá buena parte de tu público. Después prueba un lector de pantalla: NVDA (Windows, gratuito), VoiceOver (macOS e iOS, incorporado) o TalkBack (Android, incorporado). Diez minutos escuchando tu propia página enseñan más que cualquier artículo.
+**Pruébalo tú.** Aparta el mouse y recorre toda la página con **Tab**, **Shift+Tab** y **Enter**. Si tú no puedes llegar a algo, tampoco podrá buena parte de tu público. Después prueba un lector de pantalla: NVDA (Windows, gratuito), VoiceOver (macOS e iOS, incorporado) o TalkBack (Android, incorporado). Diez minutos escuchando tu propia página enseñan más que cualquier artículo.
 
 ## Consideraciones de rendimiento
 
 Aquí no hay JavaScript ni CSS, así que tu página ya es rápida. Dos hábitos que conviene adquirir desde ahora:
 
 1. **Pon `width` y `height` en las imágenes.** El navegador reserva el espacio antes de que llegue la imagen, así el texto no da saltos mientras se carga. Esos saltos se llaman desplazamiento de diseño y son una de las quejas más frecuentes sobre los sitios web actuales.
-2. **Redimensiona las imágenes antes de subirlas.** Una foto recién salida del móvil puede pesar 4 MB. Mostrada a 800 px de ancho necesita quizá 150 KB. Con una conexión móvil de pago por datos, la diferencia es dinero real para quien te lee.
+2. **Redimensiona las imágenes antes de subirlas.** Una foto recién salida del celular puede pesar 4 MB. Mostrada a 800 px de ancho necesita quizá 150 KB. Con un plan de datos móviles que se paga por uso, la diferencia es dinero real para quien te lee.
 
 ## Errores comunes
 
@@ -256,7 +256,7 @@ Aquí no hay JavaScript ni CSS, así que tu página ya es rápida. Dos hábitos 
 
 **Mis enlaces internos no hacen nada.** El `href="#about"` debe coincidir exactamente con un `id="about"`. Distingue mayúsculas de minúsculas, y el `id` no lleva `#`.
 
-**Mi vídeo no se reproduce.** Los navegadores admiten formatos distintos; MP4 con H.264 es el más seguro. Si aparece el texto alternativo, es que falta el archivo o la ruta es incorrecta.
+**Mi video no se reproduce.** Los navegadores admiten formatos distintos; MP4 con H.264 es el más seguro. Si aparece el texto alternativo, es que falta el archivo o la ruta es incorrecta.
 
 **El validador da errores que no entiendo.** Corrige el primero y vuelve a validar. Una sola etiqueta sin cerrar suele producir una cascada de diez errores que desaparecen todos juntos.
 
@@ -265,7 +265,7 @@ Aquí no hay JavaScript ni CSS, así que tu página ya es rápida. Dos hábitos 
 En **Bienvenida a XR Camp** construiste un mundo 3D en tu primera hora. Ahora ponlo dentro de tu página.
 
 1. Copia el `index.html` de ese mundo en una carpeta llamada `world/`, junto al `index.html` de este proyecto.
-2. Añádelo dentro de una de tus secciones:
+2. Agrégalo dentro de una de tus secciones:
 
 ```html
 <figure>
@@ -282,9 +282,9 @@ El `title` del `<iframe>` es lo que anuncia un lector de pantalla, igual que el 
 
 Tres extensiones opcionales, en [`challenges/`](challenges/):
 
-1. **[Fundamento](challenges/challenge-1.es.md)** — añade una segunda página y enlaza ambas.
+1. **[Fundamento](challenges/challenge-1.es.md)** — agrega una segunda página y enlaza ambas.
 2. **[Creativo](challenges/challenge-2.es.md)** — haz la página realmente tuya: tu comunidad, tu idioma, tus imágenes.
-3. **[Explorador](challenges/challenge-3.es.md)** — añade datos estructurados y una declaración de accesibilidad.
+3. **[Explorador](challenges/challenge-3.es.md)** — agrega datos estructurados y una declaración de accesibilidad.
 
 ## Cómo entregar tu trabajo
 
@@ -292,7 +292,7 @@ Tres extensiones opcionales, en [`challenges/`](challenges/):
 2. Valida en [validator.w3.org](https://validator.w3.org/) con cero errores.
 3. Recorre toda la página usando solo el teclado.
 4. Publícala. Aprenderás cómo en el **Curso 1.8 — Git, GitHub y publicación**; si ya sabes, GitHub Pages funciona bien.
-5. Añade el enlace a tu portafolio. Cuando abra la comunidad de XR Camp, compártelo también allí.
+5. Agrega el enlace a tu portafolio. Cuando abra la comunidad de XR Camp, compártelo también allí.
 6. Escribe una breve reflexión en tu diario de aprendizaje: ¿qué te sorprendió del texto alternativo?
 
 ## Lecturas adicionales
@@ -304,15 +304,15 @@ Tres extensiones opcionales, en [`challenges/`](challenges/):
 
 ## Mujeres que conviene conocer
 
-**Léonie Watson** es una ingeniera de accesibilidad británica y usuaria de lector de pantalla, cofundadora de la consultora de accesibilidad TetraLogical. Watson ha participado en grupos de trabajo del W3C que dan forma a los estándares de la plataforma web que usas en este mismo proyecto, y lleva mucho tiempo defendiendo que la accesibilidad se construya desde el nivel de la especificación en lugar de añadirse después.
+**Léonie Watson** es una ingeniera de accesibilidad británica y usuaria de lector de pantalla, cofundadora de la consultora de accesibilidad TetraLogical. Watson ha participado en grupos de trabajo del W3C que dan forma a los estándares de la plataforma web que usas en este mismo proyecto, y lleva mucho tiempo defendiendo que la accesibilidad se construya desde el nivel de la especificación en lugar de agregarse después.
 
 La conexión con esta lección es directa: los puntos de referencia, los encabezados y el texto alternativo que has escrito hoy son útiles precisamente porque personas como Watson lucharon para que existieran en los estándares y se implementaran correctamente en los navegadores.
 
 > **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de esta sección deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección.
 
-## Estándares destacados
+## Estándar destacado
 
-Este proyecto se apoya por completo en dos estándares abiertos: el [HTML Living Standard](https://html.spec.whatwg.org/multipage/) (WHATWG) y las [WCAG 2.2](https://www.w3.org/TR/WCAG22/) (W3C). Ambos son públicos, de lectura gratuita y abiertos a comentarios de cualquiera, incluida tú o incluido tú. Nada de lo que has escrito hoy depende del producto de ninguna empresa.
+Este proyecto se apoya por completo en dos estándares abiertos: el [HTML Living Standard](https://html.spec.whatwg.org/multipage/) (WHATWG) y las [WCAG 2.2](https://www.w3.org/TR/WCAG22/) (W3C). Ambos son públicos, de lectura gratuita y abiertos a comentarios de cualquiera, incluida tú. Nada de lo que has escrito hoy depende del producto de ninguna empresa.
 
 ## Licencia
 

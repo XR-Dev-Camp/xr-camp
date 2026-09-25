@@ -2,13 +2,13 @@
 
 **Opcional y avanzado.** Aproximadamente dos horas.
 
-Añade datos estructurados legibles por máquinas y una declaración de accesibilidad.
+Agrega datos estructurados legibles por máquinas y una declaración de accesibilidad.
 
 ## Tarea
 
 ### Parte A — Datos estructurados
 
-Los buscadores y las herramientas de asistencia entienden mejor tu página si la describes en un formato pensado para máquinas. Añade un bloque `<script type="application/ld+json">` en tu `<head>` usando el vocabulario de [schema.org](https://schema.org/): `Organization` o `LocalBusiness` encajan bien en una página comunitaria.
+Los buscadores y las herramientas de asistencia entienden mejor tu página si la describes en un formato pensado para máquinas. Agrega un bloque `<script type="application/ld+json">` en tu `<head>` usando el vocabulario de [schema.org](https://schema.org/): `Organization` o `LocalBusiness` encajan bien en una página comunitaria.
 
 Incluye el nombre, la dirección, el teléfono y el horario. Compruébalo con el [Schema Markup Validator](https://validator.schema.org/).
 
@@ -16,7 +16,7 @@ Fíjate en lo que estás haciendo: declarar los mismos datos dos veces, una para
 
 ### Parte B — Declaración de accesibilidad
 
-Añade `accessibility.html` describiendo, con honestidad:
+Agrega `accessibility.html` describiendo, con honestidad:
 
 - Qué hiciste para que la página fuera accesible.
 - Cómo la probaste y con qué herramientas.

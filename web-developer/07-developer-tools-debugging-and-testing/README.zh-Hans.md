@@ -1,91 +1,265 @@
-# Developer Tools, Debugging, and Testing
+# 开发者工具、调试与测试
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
-
-> <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
 **课程:** `web-developer` · **课时:** `developer-tools-debugging-and-testing-07` · **时长:** 约 9 小时 · 12 次学习，每次 45 分钟 · 每周 4 次，约 3 周
 
 ---
 
-> Complete a guided debugging and accessibility challenge.
+> 完成一项有引导的调试与无障碍挑战。
+
+---
 
 ## 学习目标
 
-_内容待撰写。_
+完成本项目后，你将能够：
+
+1. 使用浏览器的开发者工具：元素与样式、控制台、网络、设备模式和调试器。
+2. 找出某个样式为什么没有生效，并修复它。
+3. 读懂 JavaScript 错误，找到出错的那一行，并修复它的原因。
+4. 用断点暂停脚本，并逐行执行。
+5. 用自动化工具和你自己的测试来发现无障碍问题。
+6. 用检查清单系统地进行测试。
+7. 写出一份别人能据此行动的缺陷报告。
 
 ## 先决条件
 
-_内容待撰写。_
+- **课程 1.6 — JavaScript 基础。** 你已经构建了项目浏览器。
+- **课程 1.5 — 网页无障碍基础。** 你知道怎样审查一个页面。
 
 ## 所需工具
 
-_内容待撰写。_
+| 工具 | 用途 | 费用 |
+| --- | --- | --- |
+| 带开发者工具的 Chrome、Edge 或 Firefox | 每一步都要用 | 免费 |
+| [axe DevTools](https://www.deque.com/axe/devtools/) 或 [WAVE](https://wave.webaim.org/extension/) | 自动化无障碍检查 | 有免费版本 |
+| 一个屏幕阅读器（NVDA、VoiceOver 或 TalkBack） | 听页面 | 免费 |
+| 本地服务器，例如 VS Code 的 Live Server（推荐） | 网络面板在 `http://` 下效果最好 | 免费 |
 
 ## 你将构建什么
 
-_内容待撰写。_
+这次故意不做新东西：你要**修复**一样东西。起始文件是课程 1.6 中的项目浏览器，在它的 HTML、CSS、JavaScript 和无障碍方面埋下了**十个缺陷**。下面的指南会告诉你**症状**，就像用户报告问题时那样描述，但不会告诉你原因。你的任务是找出并修复每一个缺陷，并在 `bug-reports.md` 中为每个缺陷写一份报告。
+
+[`completed/`](completed/) 中的参考解决方案是修复好的项目浏览器，以及 Ana 写的十份缺陷报告。
 
 ## 文件夹说明
 
 ```text
 07-developer-tools-debugging-and-testing/
-├── README.md
-├── starter/        # begin here
-├── completed/      # reference solution
-├── challenges/     # foundation · creative · explorer
-├── tests/          # self-review checklist
+├── README.md            # This guide
+├── README.es.md         # Spanish
+├── README.zh-Hans.md    # Simplified Chinese
+├── project.json         # Lesson metadata
+├── starter/
+│   ├── index.html, explorer.js, styles.css   # The explorer, with 10 bugs
+│   ├── bug-reports.md   # A template for your reports
+│   └── 3d-moment.html   # A broken 3D scene
+├── completed/
+│   ├── index.html, explorer.js, styles.css   # Fixed
+│   ├── bug-reports.md   # Ana's reports
+│   └── 3d-moment.html   # The fixed scene
+├── challenges/          # Three optional extensions
+├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
 ```
 
 ## 环境配置
 
-_内容待撰写。_
+1. 把本课的 `starter` 文件夹复制到你的 `xr-camp` 文件夹中，命名为 `debugging`。
+2. 如果可以，用本地服务器打开它（在 VS Code 中，用 Live Server 扩展点击 **Go Live**）；或者直接打开 `index.html`。
+3. 打开开发者工具：按 **F12**，或者右键点击页面并选择 **Inspect**（检查）。在 Mac 上：按 **⌘ + Option + I**。
+
+## 症状
+
+一位访客向活动中心发来了这些投诉。每一条都是真实存在的问题，有些问题还不止一个原因。
+
+1. 「这个页面看起来像一份纯文本文件。颜色都去哪儿了？」
+2. 「一个项目都没有显示。」
+3. 「我点击『Who is it for?』（面向谁？）这个标签时，光标却跳到了搜索框。」
+4. 「项目卡片好像都没有名字。」
+5. 「在手机上，我必须横向滚动才能看到筛选条件。」
+6. 「我保存一个项目后，它的按钮没有变化。」
+7. 「『Free only』（仅限免费）这个框会自己勾上，而且我输入『lunch』时，什么都没出来。」
+8. 「计数说一共有 7 个项目，但实际上有 8 个。」
+9. 「我的屏幕阅读器说『按钮』，但没说这个按钮是做什么的。」
+10. 「结果变化时，我的屏幕阅读器没有告诉我。」
 
 ## 分步讲解
 
-_内容待撰写。_
+### 规划你的学习时间
+
+| 次数 | 学习内容 | 完成成果 |
+| --- | --- | --- |
+| 1 | 环境配置；第 1 步：开发者工具导览 | 你能打开每一个面板 |
+| 2 | 第 2 步：网络面板 | 修复症状 1 |
+| 3 | 第 3 步：控制台 | 修复第一个 JavaScript 错误 |
+| 4 | 第 3 步（续） | 项目显示出来了 |
+| 5 | 第 4 步：元素与样式 | 修复症状 3、4 和 6 |
+| 6 | 第 5 步：设备模式 | 修复症状 5 |
+| 7 | 第 6 步：断点 | 修复症状 7 |
+| 8 | 第 6 步（续）：单步执行并观察值 | 修复症状 8 |
+| 9 | 第 7 步：无障碍工具和屏幕阅读器 | 修复症状 9 和 10 |
+| 10 | 第 8 步：用检查清单测试，并完成缺陷报告 | 十份报告 |
+| 11 | **3D 时刻** | 一个调试好的 3D 场景 |
+| 12 | [`tests/checklist.md`](tests/checklist.md)、一项挑战，以及**提交作业** | 一个能正常工作的项目浏览器 |
+
+### 第 1 步：开发者工具导览
+
+| 面板 | 它显示什么 | 什么时候用 |
+| --- | --- | --- |
+| **Elements**（元素；Firefox：**Inspector**，查看器） | 浏览器所看到的页面 HTML，实时更新 | 有东西不见了、位置不对，或者属性不对 |
+| **Styles**（样式；在 Elements 面板内；Firefox：**Rules**，规则） | 所选元素上的每一条 CSS 规则，包括被划掉的、没有生效的规则 | 某个样式没有生效 |
+| **Console**（控制台） | 错误、警告，以及你的 `console.log` 消息 | 任何与 JavaScript 有关的问题 |
+| **Network**（网络） | 页面请求的每一个文件，以及它是否成功到达 | 有东西没有加载 |
+| **Sources**（源代码；Firefox：**Debugger**，调试器） | 你的脚本，以及断点 | 代码在运行，却做错了事 |
+| **Device mode**（设备模式） | 任意屏幕尺寸下的页面 | 手机上的布局问题 |
+| **Performance**（性能） | 浏览器把时间花在了什么上面 | 页面很慢 |
+
+### 第 2 步：网络面板（症状 1）
+
+打开 **Network**，然后刷新页面。每一行都是一个文件。看 **Status**（状态）这一列：**200** 表示正常；**404** 表示「找不到」。样式表出现 404，就意味着页面没有任何样式。
+
+把页面请求的文件名和磁盘上的文件名逐个字母地对照。
+
+### 第 3 步：控制台（症状 2）
+
+打开 **Console** 并刷新页面。红色的消息是错误，右边会显示文件名和行号。点击它就能跳到那一行。
+
+`Cannot read properties of null` 几乎总是意味着 `querySelector` **什么也没找到**：这个选择器没有匹配任何元素。把它和 HTML 对照一下。修复一个错误，刷新，看看会不会出现另一个：错误常常一个藏在另一个后面。
+
+### 第 4 步：元素与样式（症状 3、4 和 6）
+
+右键点击出问题的地方，选择 **Inspect**。元素面板会跳到那个元素。
+
+- **症状 3：** 标签通过 `for` 和 `id` 与控件关联。看看它附近那些控件的 `id`。有没有哪个 `id` 用了两次？一个 `id` 在页面上必须是唯一的。
+- **症状 4：** 选中一张卡片的标题。在样式面板中，找到设置它的 `color` 的那条规则。颜色是什么？背景又是什么？
+- **症状 6：** 选中一个已保存的按钮。带有**黄色警告图标**或被划掉的属性，要么无效，要么被覆盖了。把鼠标悬停在图标上，看看原因。
+
+你可以直接在面板里编辑样式来测试修复方法，但这些改动在刷新后就会消失：要把修复复制到你的文件中。
+
+### 第 5 步：设备模式（症状 5）
+
+在打开开发者工具的情况下，打开设备模式（按 **Ctrl + Shift + M**，在 Mac 上按 **⌘ + Shift + M**；在 Firefox 中是 **Responsive Design Mode**（响应式设计模式），在 Mac 上按 **⌘ + Option + M**），并选择 390 像素宽。有东西伸出了右边。选中它，在样式面板中寻找固定的 `width`。
+
+### 第 6 步：断点（症状 7 和 8）
+
+有些缺陷不会产生任何错误：代码在运行，却做错了事。对于这类缺陷，要让代码**暂停**：
+
+1. 打开 **Sources**（Firefox：**Debugger**），然后打开 `explorer.js`。
+2. 点击 `matches` 函数开头那一行的行号。会出现一个蓝色标记：这就是**断点**。
+3. 在搜索框中输入「lunch」。页面会停在你的断点处。
+4. 把鼠标悬停在任何变量上查看它的值，或者查看 **Scope**（作用域）面板。
+5. 按 **Step over**（单步跳过；弯曲的箭头，或按 **F10**），一次运行一行，观察值的变化。
+
+在逐行执行那几行 `if` 时，观察 `freeCheckbox.checked`。它变了吗？读取一个值，应该会改变它吗？
+
+对于症状 8，用 `console.log` 往往更快：在写入计数之前输出 `programmes.length`，再和显示的消息对比。
+
+### 第 7 步：无障碍工具和屏幕阅读器（症状 9 和 10）
+
+运行 axe DevTools 或 WAVE。它们会立刻发现剩下两个问题中的一个。另一个需要人来发现：打开屏幕阅读器，在搜索框中输入内容，然后听。应该有什么内容被朗读出来吗？把显示计数的段落和课程 1.6 中的项目浏览器对比一下。
+
+### 第 8 步：用检查清单测试，并写报告
+
+所有问题都修复之后，用 [`tests/checklist.md`](tests/checklist.md) 测试整个项目浏览器：每一项功能、每一种输入方式、每一种宽度。检查清单能帮你发现你忘了尝试的东西。
+
+然后完成 `bug-reports.md`。一份好的缺陷报告，能让从没见过这个问题的人在一分钟内重现它：
+
+- 一个说明哪里出错的**标题**；
+- 编了号的**重现步骤**；
+- **预期**结果和**实际**结果；
+- **设备和浏览器**；
+- 你发现了什么，以及你是怎样修复的。
+
+「它不能用」不是缺陷报告。「在 Android 上的 Chrome 中，页面加载时『Free only』就已经勾上了，输入『lunch』没有任何结果」才是。
 
 ## 关键代码解析
 
-_内容待撰写。_
+**`=` 和 `===`。** `=` 是**赋值**：它会改变一个值。`===` 是**比较**：它问两个值是否相等。`if (freeCheckbox.checked = true)` 每次都会改变复选框。有些团队会使用代码检查工具（linter），它正是用来对这类问题发出警告的。
 
-## 无障碍要求
+**唯一的 `id`。** 很多东西都依赖它们：标签、`aria-describedby`、`querySelector`、页内链接。两个元素使用同一个 `id`，会让所有这些都失效，而且往往悄无声息。
 
-_内容待撰写。_
-
-## 性能注意事项
-
-_内容待撰写。_
-
-## 常见错误
-
-_内容待撰写。_
-
-## 故障排查
-
-_内容待撰写。_
+**无障碍名称。** 按钮的名称来自它的文字。搜索框中的 ✕ 放在 `<span aria-hidden="true">` 里面，所以屏幕阅读器会忽略它，于是这个按钮完全没有文字。它需要 `aria-label="Clear search"`。
 
 ## 3D 时刻
 
-<!-- TODO: translate -->
+打开 [`starter/3d-moment.html`](starter/3d-moment.html)。这个灯笼花园本应在夜空下有三盏灯笼。它坏在三个地方：天空的颜色不对，少了一盏灯笼，而且一分钟后页面会变得越来越慢。
 
-_Content to be authored._
+1. 按 **Ctrl + Alt + I**（在 Mac 上按 **Control + Option + I**）打开 **A-Frame Inspector**（A-Frame 检查器）。在左边的场景图中逐个点击每盏灯笼，读一读它的 `position`。还记得课程 0.1 吗：在摄像机前方的物体，第三个数字（远近）是负数。
+2. 选中天空。它的颜色是有效的颜色代码吗？
+3. 关闭检查器，打开 **Performance** 面板（或者从开发者工具的 **⋮ → More tools**（更多工具）菜单中打开 Chrome 的 **Performance monitor**，性能监视器），观察一分钟。有样东西在不断增长。找到造成它的那段脚本。
+
+与 [`completed/3d-moment.html`](completed/3d-moment.html) 对比，那里的每一处修复都在注释中做了解释。像第三个这样的性能缺陷，是真实 3D 项目中最常见的问题；你会在课程 3.6 中正式学习它们。
+
+## 无障碍要求
+
+修复好的项目浏览器必须满足课程 1.6 中的所有要求，包括：
+
+| 要求 | WCAG 2.2 | 原因 |
+| --- | --- | --- |
+| 每个按钮都有无障碍名称 | 4.1.2 | 要说「Clear search」（清除搜索），而不只是「按钮」。 |
+| 每个标签恰好指向一个控件 | 1.3.1、3.3.2 | `id` 必须唯一。 |
+| 文字对比度至少为 4.5:1 | 1.4.3 | 标题必须看得见。 |
+| 在 320 像素宽时不需要横向滚动 | 1.4.10 | 内容在手机上会重新排布。 |
+| 结果的变化会被朗读 | 4.1.3 | 状态消息能传达给屏幕阅读器用户。 |
+
+## 性能注意事项
+
+网络面板还会显示每个文件有多大，以及加载用了多长时间。看看你的项目浏览器：HTML、CSS 和 JavaScript 加起来只有几 KB。再看看 3D 时刻：A-Frame 是最大的文件。性能面板则讲述了剩下的故事：不断增长的工作量，比如那些萤火虫，迟早会让任何设备都变慢。
+
+## 常见错误
+
+| 错误做法 | 会发生什么 | 正确做法 |
+| --- | --- | --- |
+| 只在样式面板中修复样式 | 刷新后修复就消失了 | 把它复制到你的文件中 |
+| 一次修复好几处 | 你不知道是哪个改动起了作用 | 一次修一处，然后刷新并测试 |
+| 忽略警告 | 小问题一直藏着 | 黄色的警告也要读 |
+| 只相信自动化工具 | 一半的缺陷留了下来 | 用键盘和屏幕阅读器测试 |
+| 含糊的缺陷报告 | 没有人能重现 | 写明步骤、预期、实际和设备 |
+
+## 故障排查
+
+**网络面板是空的。** 它只在打开时才记录：先打开它，再刷新页面。
+
+**断点从来不暂停。** 那一行代码从来没有运行过。检查应该触发它的事件是否真的发生了，或者把断点放在更前面。
+
+**A-Frame Inspector 的快捷键没有反应。** 先点击一下场景，然后再按快捷键。
 
 ## 拓展挑战
 
-_内容待撰写。_
+三个可选拓展，位于 [`challenges/`](challenges/)：
+
+1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 自己埋下五个缺陷，然后和同伴交换。
+2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 用你自己的语言解释一个缺陷，以及你是怎样找到它的。
+3. **[探索](challenges/challenge-3.zh-Hans.md)** —— 用性能面板分析一个真实的网站。
 
 ## 提交作业
 
-_内容待撰写。_
+1. 完成 [`tests/checklist.md`](tests/checklist.md) 中的每一项。
+2. 给修复好的项目浏览器截一张图，要打开控制台并且没有任何消息；再给一个停在某一行上的断点截一张图。
+3. 把截图和你的 `bug-reports.md` 保存在学习日志和作品集中。XR Camp 社区开放后，也在那里分享。
+4. 在学习日志中回答：哪个缺陷花了你最长的时间才找到？最后是哪个工具找到了它？
 
 ## 延伸阅读
 
-_内容待撰写。_
+- [Chrome DevTools 文档](https://developer.chrome.com/docs/devtools)（英文）
+- [Firefox DevTools 用户文档](https://firefox-source-docs.mozilla.org/devtools-user/)（英文）
+- [MDN —— 哪里出错了？JavaScript 故障排查](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong)（英文）
+- [A-Frame —— 可视化检查器和开发工具](https://aframe.io/docs/1.8.0/introduction/visual-inspector-and-dev-tools.html)（英文）
+
+## 值得认识的女性
+
+**Marian Villa** 是哥伦比亚麦德林的一位开发者和社区建设者。2016 年，她联合创办了 **PionerasDev**，这是一个哥伦比亚的非营利社区，教女性编程，主要是 JavaScript。她曾是 UI/UX 方向的 Google 开发者专家，现在是 Web 技术方向的 Google 开发者专家。
+
+像 PionerasDev 这样的社区，正是许多开发者学会本课这项技能的地方：不是写出永远不会出错的代码，而是在代码出错时冷静地找出原因，并互相帮助。
+
+> **编辑说明 —— 发布前须核实。** 「值得认识的女性」栏目中的生平陈述必须与原始资料核对，并在可行时于本课上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+
+## 标准聚焦
+
+各个浏览器运行同一套共享测试，来确保它们的行为一致：这就是 **Web Platform Tests**（网络平台测试），一个公开的网页标准测试集，由各浏览器厂商共同编写和运行。当某个浏览器没有通过其中一项测试时，那也是一份缺陷报告，而且任何人都可以在 wpt.fyi 上查看结果。
 
 ## 许可协议
 
-Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
-
+代码：[`LICENSE-CODE`](../../LICENSE-CODE) · 内容：[`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)

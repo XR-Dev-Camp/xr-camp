@@ -2,7 +2,7 @@
 
 **Obligatorio.** Aproximadamente 45 minutos.
 
-Añade una segunda página y enlaza ambas entre sí.
+Agrega una segunda página y enlaza ambas entre sí.
 
 ## Tarea
 
@@ -10,11 +10,11 @@ Añade una segunda página y enlaza ambas entre sí.
 2. Dale la misma estructura: `lang`, `charset`, `viewport`, `title`, enlace de salto, header, nav, main y footer.
 3. Traslada el detalle de uno de los programas a la nueva página y amplíalo a dos o tres párrafos.
 4. Enlaza desde `index.html` hacia `programmes.html`, y de vuelta.
-5. Añade la nueva página a la navegación en **ambas** páginas.
+5. Agrega la nueva página a la navegación en **ambas** páginas.
 
 ## Por qué esto importa
 
-Casi todos los sitios web reales tienen más de una página. En cuanto añades la segunda, aparece un problema que nunca surge con una sola: la navegación debe mantenerse coherente y cada página necesita su propio `<head>` completo. Todavía no hay atajo: hay que copiarlo. Cursos posteriores te enseñarán a dejar de copiar.
+Casi todos los sitios web reales tienen más de una página. En cuanto agregas la segunda, aparece un problema que nunca surge con una sola: la navegación debe mantenerse coherente y cada página necesita su propio `<head>` completo. Todavía no hay atajo: hay que copiarlo. Cursos posteriores te enseñarán a dejar de copiar.
 
 ## Se completa cuando
 

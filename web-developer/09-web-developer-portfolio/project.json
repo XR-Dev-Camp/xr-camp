@@ -6,13 +6,13 @@
   "phase": 1,
   "title": {
     "en": "Phase 1 Capstone - Web Developer Portfolio",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Proyecto final de la Fase 1 - Portafolio de desarrolladora web",
+    "zh-Hans": "第一阶段结业项目 - Web 开发者作品集"
   },
   "summary": {
     "en": "Publish a professional, accessible, responsive portfolio containing multiple completed web projects.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Publica un portafolio profesional, accesible y adaptable con varios proyectos web terminados.",
+    "zh-Hans": "发布一个专业、无障碍、响应式的作品集，其中包含多个已完成的网页项目。"
   },
   "estimatedMinutes": 900,
   "schedule": {
@@ -32,8 +32,8 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Add a small interactive 3D gallery of your projects to your portfolio, with a plain 2D list as the fallback.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Agrega a tu portafolio una pequeña galería 3D interactiva de tus proyectos, con una lista 2D simple como alternativa.",
+    "zh-Hans": "在你的作品集中加入一个展示你的项目的小型交互式 3D 展厅，并用一份普通的 2D 列表作为后备方案。"
   },
   "accessibilityChecks": [
     "document-language",

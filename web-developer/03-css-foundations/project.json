@@ -6,13 +6,13 @@
   "phase": 1,
   "title": {
     "en": "CSS Foundations",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Fundamentos de CSS",
+    "zh-Hans": "CSS 基础"
   },
   "summary": {
     "en": "Create a reusable visual system for the HTML project.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea un sistema visual reutilizable para el proyecto de HTML.",
+    "zh-Hans": "为 HTML 项目创建一套可复用的视觉系统。"
   },
   "estimatedMinutes": 840,
   "schedule": {
@@ -30,8 +30,8 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Frame a 3D scene inside your page and use your CSS custom properties so the scene and the page share one colour system.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Enmarca una escena 3D dentro de tu página y usa tus propiedades personalizadas de CSS para que la escena y la página compartan un mismo sistema de colores.",
+    "zh-Hans": "把一个 3D 场景嵌入你的页面，并使用你的 CSS 自定义属性，让场景和页面共用一套颜色系统。"
   },
   "accessibilityChecks": [
     "document-language",

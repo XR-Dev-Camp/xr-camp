@@ -307,7 +307,7 @@ Write every problem in a table, as in Course 1.5:
 
 | # | Problem | WCAG 2.2 | Who it affects | Fix |
 | --- | --- | --- | --- | --- |
-| 1 | Two cards both have a link called "Demo" | 2.4.4 | Screen-reader users listing links | Say which project each link opens |
+| 1 | Two cards both have a link called "Demo" | 2.4.4 (and 2.4.9) | Screen-reader users listing links | Say which project each link opens |
 
 Then fix everything, one row at a time. Keep the table: a short version belongs in your "How I built this site" section.
 
@@ -415,7 +415,7 @@ The gallery is on its own page, so the A-Frame library downloads only for people
 | Every page has a language and a descriptive title | 3.1.1, 2.4.2 | Screen readers use the right voice; tabs and search results make sense. |
 | Headings, lists, and landmarks are real HTML | 1.3.1 | People can move by headings and hear "list, 4 items". |
 | Informative images have meaningful alt; repeated or decorative ones have `alt=""` | 1.1.1 | Screen-reader users get the information, without noise. |
-| Every link says where it goes | 2.4.4 | "Visit the Riverside website", never "Demo" four times. |
+| Every link says where it goes | 2.4.4, 2.4.9 | "Visit the Riverside website", never "Demo" four times. Level A allows the card around a link to explain it; level AAA (2.4.9) asks for link text that makes sense on its own, which is kinder to everyone. |
 | Text contrast at least 4.5:1; focus outline and borders at least 3:1 | 1.4.3, 1.4.11 | Readable in sunlight and with low vision. |
 | No sideways scrolling at 320 pixels wide | 1.4.10 | People who zoom to 400% get a 320-pixel page. |
 | Everything works with the keyboard, with visible focus | 2.1.1, 2.4.7 | Including the filter and the 3D gallery. |

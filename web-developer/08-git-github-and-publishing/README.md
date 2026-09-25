@@ -267,7 +267,7 @@ From now on, **every commit to `main` updates your site** automatically, within 
 Three things to know about GitHub Pages:
 
 - **It is public.** Treat everything on your published site as visible to anyone in the world.
-- **It is for static sites**: HTML, CSS, JavaScript, images, and 3D models. It cannot store what people type into your join form. The form still opens its "thanks" page, but nothing is saved, and because the form uses `method="get"`, whatever was typed appears in the thanks page's address. When you test it online, use made-up details. GitHub's rules also forbid Pages sites that handle sensitive information such as passwords or credit card numbers.
+- **It is for static sites**: HTML, CSS, JavaScript, images, and 3D models. It cannot store what people type into your join form. The form still opens its "thanks" page, but nothing is saved, and because the form uses `method="get"`, whatever was typed appears in the thanks page's address. When you test it online, use made-up details. GitHub also says Pages sites should not be used for sensitive transactions, such as sending passwords or credit card numbers.
 - **It has limits**, generous for a portfolio: a published site can be up to 1 GB.
 
 A repository named exactly `your-username.github.io` becomes a site at `https://your-username.github.io/`, with no folder name. Each account can have one. Keep that name free for now: you may want it for your portfolio.
@@ -312,7 +312,7 @@ XR Camp does exactly this. Its repository has two licence files: [`LICENSE-CODE`
 | Part | Means |
 | --- | --- |
 | **BY** | Credit the author. |
-| **NC** | Non-commercial: no selling it. |
+| **NC** | Non-commercial: no using it to make money. |
 | **SA** | Share alike: if you change it and share it, use the same licence. |
 
 For your repository, the model in [`completed/`](completed/) uses the MIT Licence for code, and keeps all rights to the words and pictures. Choose what you are comfortable with. Your projects grew from XR Camp's starter files, so credit XR Camp, and read `LICENSE-CODE` to see what it allows.
@@ -412,7 +412,7 @@ Your whole collection is probably a few megabytes, most of it images; a page of 
 
 **The page loads, but without styles or pictures.** A path or capital letter in a `href` or `src` does not match the real file. Open the browser's developer tools, look in the **Console** for the missing file's name, and compare it letter by letter.
 
-**My change is not on my site.** Did you commit, and, in GitHub Desktop, push? Pages takes a few minutes to update. Then reload without the cache: **Ctrl + Shift + R** (on a Mac, **⌘ + Shift + R**). On a phone, close the tab and open the address again.
+**My change is not on my site.** Did you commit, and, in GitHub Desktop, push? Pages takes a few minutes to update. Then reload without the cache: **Ctrl + Shift + R** (on a Mac, **⌘ + Shift + R**; in Safari, **⌘ + Option + R**). On a phone, close the tab and open the address again.
 
 **GitHub Desktop will not push: it says there are newer commits.** Someone, probably you in the browser, committed to GitHub since your last pull. Choose **Fetch origin**, then **Pull origin**, then **Push origin**.
 

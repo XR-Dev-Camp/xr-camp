@@ -6,13 +6,13 @@
   "phase": 1,
   "title": {
     "en": "Git, GitHub, and Publishing",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Git, GitHub y publicación",
+    "zh-Hans": "Git、GitHub 与发布"
   },
   "summary": {
     "en": "Publish the Phase 1 portfolio and project collection.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Publica el portafolio y la colección de proyectos de la Fase 1.",
+    "zh-Hans": "发布第一阶段的作品集和项目合集。"
   },
   "estimatedMinutes": 540,
   "schedule": {
@@ -30,8 +30,8 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Publish your 3D world to GitHub Pages and open it on your own phone.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Publica tu mundo 3D en GitHub Pages y ábrelo en tu propio celular.",
+    "zh-Hans": "把你的 3D 世界发布到 GitHub Pages，并在你自己的手机上打开它。"
   },
   "accessibilityChecks": [
     "document-language",

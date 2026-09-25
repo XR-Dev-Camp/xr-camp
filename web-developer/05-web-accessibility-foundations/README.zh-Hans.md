@@ -1,91 +1,267 @@
-# Web Accessibility Foundations
+# 网页无障碍基础
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
-
-> <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
 **课程:** `web-developer` · **课时:** `web-accessibility-foundations-05` · **时长:** 约 10 小时 · 14 次学习，每次 45 分钟 · 每周 4 次，约 4 周
 
 ---
 
-> Audit and repair an inaccessible website.
+> 审查并修复一个不无障碍的网站。
+
+---
 
 ## 学习目标
 
-_内容待撰写。_
+完成本项目后，你将能够：
+
+1. 使用键盘、屏幕阅读器、页面缩放和自动化工具审查一个网页。
+2. 解释你发现的每个问题：它是什么、影响到谁，以及它没有达到哪一条 WCAG 2.2 成功标准。
+3. 修复结构、图片、链接、表单、颜色、焦点和动效方面的问题。
+4. 使用屏幕阅读器，按标题、链接、地标和表单字段浏览页面。
+5. 说明自动化工具能发现什么、不能发现什么。
+6. 写出一份能帮助别人真正动手修复的审查报告。
 
 ## 先决条件
 
-_内容待撰写。_
+- **课程 0.8 — 伦理、无障碍、隐私与负责任的 AI。** 你知道 POUR 原则和审查（audit）的概念。
+- **课程 1.1–1.4。** 你已经构建过无障碍的结构、表单、样式和自适应布局。
 
 ## 所需工具
 
-_内容待撰写。_
+| 工具 | 用途 | 费用 |
+| --- | --- | --- |
+| 你的键盘 | 最重要的测试 | 免费 |
+| 一个屏幕阅读器：[NVDA](https://www.nvaccess.org/)（Windows）、VoiceOver（macOS 和 iPhone，系统自带）或 TalkBack（Android，系统自带） | 听页面 | 免费 |
+| [axe DevTools](https://www.deque.com/axe/devtools/) 或 [WAVE](https://wave.webaim.org/extension/) 浏览器扩展 | 自动化检查 | 有免费版本 |
+| [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)（对比度检查器） | 颜色对比度 | 免费 |
 
 ## 你将构建什么
 
-_内容待撰写。_
+两样东西：
+
+1. **一个修复好的页面。** 起始文件是 Riverside 的**活动页面**，它被故意做成至少有十五个无障碍问题。你要找出每一个问题，并把它修好。
+2. **一份审查报告** `audit.html`：一张表格，列出每个问题、它没有达到的 WCAG 标准、它影响到谁，以及你是怎样修复的。
+
+参考解决方案在 [`completed/`](completed/) 中：修复好的页面和 Ana 的审查报告。
 
 ## 文件夹说明
 
 ```text
 05-web-accessibility-foundations/
-├── README.md
-├── starter/        # begin here
-├── completed/      # reference solution
-├── challenges/     # foundation · creative · explorer
-├── tests/          # self-review checklist
+├── README.md            # This guide
+├── README.es.md         # Spanish
+├── README.zh-Hans.md    # Simplified Chinese
+├── project.json         # Lesson metadata
+├── starter/
+│   ├── index.html       # The inaccessible events page: audit and fix it
+│   ├── centre-960.jpg, divider.svg
+│   └── 3d-moment.html   # An inaccessible 3D scene, for the 3D moment
+├── completed/
+│   ├── index.html       # The repaired page
+│   ├── audit.html       # Ana's audit report
+│   └── 3d-moment.html   # The repaired 3D scene
+├── challenges/          # Three optional extensions
+├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
 ```
 
 ## 环境配置
 
-_内容待撰写。_
+1. 把本课的 `starter` 文件夹复制到你的 `xr-camp` 文件夹中，并重命名为 `accessibility-audit`。
+2. 复制一份 `index.html`，命名为 `original.html`，并且永远不要修改它：最后你要拿它来对比。
+3. 新建一个空的 `audit.html`，放一个标题和一张记录发现的表格（结构可以照搬课程 0.8 中的报告）。
+4. 安装 axe DevTools 或 WAVE，并把屏幕阅读器打开一次，确认它能正常工作。
 
 ## 分步讲解
 
-_内容待撰写。_
+### 规划你的学习时间
+
+| 次数 | 学习内容 | 完成成果 |
+| --- | --- | --- |
+| 1 | 环境配置；阅读**这是为谁而做** | 准备好你的审查文件夹 |
+| 2 | 第 1 步：键盘测试 | 键盘测试的发现 |
+| 3 | 第 2 步：学会使用你的屏幕阅读器 | 你能按标题和链接移动 |
+| 4 | 第 2 步：屏幕阅读器测试 | 屏幕阅读器测试的发现 |
+| 5 | 第 3 步：缩放、颜色和动效 | 视觉方面的发现 |
+| 6 | 第 4 步：自动化工具 | 工具的发现，以及它们漏掉了什么 |
+| 7 | 第 5 步：撰写报告 | 一张完整的审查表格 |
+| 8 | 第 6 步：修复结构：语言、标题（title）、各级标题、地标 | 一个提纲清晰的页面 |
+| 9 | 第 6 步：修复图片、链接和颜色 | 有意义的替代文本和链接 |
+| 10 | 第 6 步：修复表格和表单 | 读得懂的表格和用得了的表单 |
+| 11 | 第 6 步：修复焦点、动效和对比度 | 一个能用、能读的页面 |
+| 12 | 第 7 步：再测一次，并与 `original.html` 对比 | 每一项发现都已修复 |
+| 13 | **3D 时刻** | 一个审查并修复过的 3D 场景 |
+| 14 | [`tests/checklist.md`](tests/checklist.md)、一项挑战，以及**提交作业** | 一个修复好的页面和一份报告 |
+
+### 这是为谁而做
+
+全世界大约每六个人中就有一人有明显的残障，还有更多人会遇到暂时的或情境性的限制：手臂骨折、强烈的阳光、嘈杂的房间、缓慢的网络。无障碍审查会一遍又一遍地问同一个问题：**谁用不了它？为什么？**
+
+课程 0.8 中的 WCAG 四项原则，把答案组织了起来：**可感知**、**可操作**、**可理解**和**健壮**。
+
+### 第 1 步：键盘测试
+
+把鼠标放到一边。在 `index.html` 上：
+
+1. 从页面顶部开始按 **Tab**。有跳转链接吗？你能不能随时**看到**焦点在哪里？
+2. 所有能点击的东西，你都能**到达**吗？能用 **Enter** 或**空格键**（**Space**）操作它吗？
+3. 焦点是不是按照从上到下的**合理顺序**移动？
+
+把每个问题都记下来，并写明它出现在哪里。
+
+### 第 2 步：屏幕阅读器测试
+
+先学会你的屏幕阅读器的基本命令：
+
+| 操作 | NVDA（Windows） | VoiceOver（Mac） | TalkBack（Android） |
+| --- | --- | --- | --- |
+| 打开或关闭 | **Ctrl + Alt + N** 启动，**Insert + Q** 退出 | **⌘ + F5** | 设置 → 无障碍 → TalkBack |
+| 朗读下一项 | **↓** | **Control + Option + →** | 向右滑动 |
+| 下一个标题 | **H** | **Control + Option + ⌘ + H** | 在阅读控制中选择「标题」，然后向下滑动 |
+| 列出所有标题或链接 | **Insert + F7** | **Control + Option + U**（转子） | 阅读控制 |
+| 激活 | **Enter** | **Control + Option + Space** | 双击 |
+
+然后听一听这个页面。问问自己：有页面标题和主标题吗？我能按标题移动吗？每张图片是不是都说出了有用的信息，或者在它只是装饰时什么也不说？每个链接单独读起来都有意义吗？每个表单字段都说明了它是什么吗？
+
+第一次使用屏幕阅读器时，你会觉得它很陌生，语速也很快。在它的设置中把语速调慢，保持耐心：你的许多用户每天就是这样阅读每一个页面的。
+
+### 第 3 步：缩放、颜色和动效
+
+1. **放大到 200%**，然后放大到 400%。有没有内容被截断或重叠？
+2. 用对比度检查器**检查每一种文字颜色**：普通文字需要达到 4.5:1。
+3. **有没有信息只靠颜色来传达？** 想象这个页面变成黑白的。
+4. **有没有东西持续移动**超过五秒？你能暂停它吗？当你在系统设置中打开「减少动态效果」时，它会停下来吗？
+
+### 第 4 步：自动化工具
+
+在页面上运行 axe DevTools 或 WAVE。它们能快速、可靠地发现一部分问题，比如缺少替代文本、缺少标签、对比度过低，以及没有设置页面语言。你构建的每个页面都值得用它们检查一遍。
+
+但要注意它们**不能**发现什么：替代文本是否**有意义**，链接文字是否说得通，颜色是否是唯一的线索，焦点顺序是否**合理**。自动化工具只能发现一部分无障碍问题，剩下的需要人来发现。
+
+### 第 5 步：撰写报告
+
+每个问题写一行：
+
+| # | 问题 | WCAG 2.2 | 影响到谁 | 修复方法 |
+| --- | --- | --- | --- | --- |
+| 5 | 照片没有替代文本 | 1.1.1 | 盲人和低视力人士 | 写出真正重要内容的替代文本：坡道 |
+
+描述它对**人**的影响，而不只是写出规则。写着「未通过 1.1.1」的报告是正确的；写着「盲人访客无法知道这里有无台阶入口」的报告，才会有人去修。
+
+在 [WCAG 2.2 概览](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)（英文）和 W3C 的「Understanding」（理解）页面中查找每一条标准。这些页面用浅显的语言解释了每一条标准。
+
+### 第 6 步：修复所有问题
+
+按照报告中的顺序，一次修复一项发现。像参考解决方案那样，在 HTML 注释中给每一处修复编号，与你的报告对应。这里几乎所有的做法，你在课程 1.1 到 1.4 中都已经学过。
+
+有两处修复可能是新的：
+
+- **移动的内容：** 对于滚动横幅，最简单的修复就是让它静止。如果移动确实必不可少，就加一个暂停按钮，并尊重 `prefers-reduced-motion`。
+- **正数的 `tabindex`：** 把它删掉。`tabindex="0"`（按自然顺序可以到达）和 `tabindex="-1"`（只能通过脚本到达）是有用的；任何大于零的数字都会打乱所有人的顺序。
+
+### 第 7 步：再测一次
+
+在修复好的页面上重复第 1 到第 4 步。然后打开屏幕阅读器，把 `original.html` 和修复好的 `index.html` 并排打开。亲耳听到其中的区别，是理解你做了什么的最好方法。
 
 ## 关键代码解析
 
-_内容待撰写。_
+**`alt=""`。** 空的 alt 告诉屏幕阅读器这张图片是装饰性的，于是它们会跳过它。完全不写 `alt` 则不同：许多屏幕阅读器会转而朗读文件名。
 
-## 无障碍要求
+**`role="status"`。** 一个实时区域，和 `aria-live="polite"` 一样：感谢信息出现时会被朗读出来，而不会移动焦点。
 
-_内容待撰写。_
+**`<th scope="row">`。** 每一行的第一个单元格也是表头，所以屏幕阅读器会说「Community lunch, Places, Full」（社区午餐，名额，已满）。
 
-## 性能注意事项
-
-_内容待撰写。_
-
-## 常见错误
-
-_内容待撰写。_
-
-## 故障排查
-
-_内容待撰写。_
+**ARIA 第一条规则：** 如果有原生 HTML 元素能完成这项工作，就用它。`<button>` 永远比 `<span role="button" tabindex="0">` 更好，因为它本来就能配合键盘和各种辅助技术使用。
 
 ## 3D 时刻
 
-<!-- TODO: translate -->
+打开 [`starter/3d-moment.html`](starter/3d-moment.html)，像审查活动页面那样审查它。这是一个永远旋转的 3D 标志，没有任何描述，而且只有用鼠标点击时才会改变颜色。找出至少三个问题。然后与 [`completed/3d-moment.html`](completed/3d-moment.html) 对比，在那里：
 
-_Content to be authored._
+1. 一段**文字描述**说明场景中有什么，并在场景变化时更新；
+2. 一个真正的**按钮**（**Change the colour**，改变颜色）能做到和点击立方体一样的事，所以键盘也能到达它；
+3. 旋转变得**更慢**，可以**暂停**（**Pause animation**，暂停动画），并且对要求减少动态效果的人，一开始就处于暂停状态。
+
+自动化工具完全看不到 3D 场景的内部，所以每一次 3D 审查都是人工审查。在第 3 和第 4 阶段，你还会再次用到这份检查清单：[`docs/en/xr-accessibility.md`](../../docs/en/xr-accessibility.md)。
+
+## 无障碍要求
+
+你修复好的页面必须通过 [`tests/checklist.md`](tests/checklist.md) 中的每一项，包括以下 WCAG 2.2 成功标准：
+
+| 要求 | WCAG 2.2 |
+| --- | --- |
+| 图片有合适的替代文本 | 1.1.1 |
+| 结构写在 HTML 中：标题、表格、标签、地标 | 1.3.1 |
+| 颜色不是唯一的区分方式 | 1.4.1 |
+| 文字对比度至少为 4.5:1 | 1.4.3 |
+| 一切都能用键盘操作 | 2.1.1 |
+| 移动的内容可以暂停 | 2.2.2 |
+| 跳转链接可以绕过重复的内容 | 2.4.1 |
+| 页面有描述性的标题 | 2.4.2 |
+| 焦点顺序合理 | 2.4.3 |
+| 链接的用途清楚 | 2.4.4 |
+| 焦点可见 | 2.4.7 |
+| 设置了页面语言 | 3.1.1 |
+| 表单字段有标签 | 3.3.2 |
+| 控件公开自己的名称和角色 | 4.1.2 |
+
+## 性能注意事项
+
+无障碍修复对性能来说几乎没有代价：真正的 HTML 元素比附加了脚本的 `div` 更轻；去掉无休止的动画，还能在每台设备上节省电量和处理能力。
+
+## 常见错误
+
+| 错误做法 | 会发生什么 | 正确做法 |
+| --- | --- | --- |
+| 相信自动化工具的分数 | 许多问题没有被发现 | 始终用键盘和屏幕阅读器测试 |
+| `alt="image"` 或使用文件名 | 只是噪音，不是信息 | 说出重要的内容，或者用 `alt=""` |
+| 给 `div` 按钮加 ARIA 来修复它 | 脆弱，而且仍然不完整 | 使用真正的 `<button>` |
+| 修了外观却没修代码 | 「Full」（已满）用红色加粗：仍然只靠颜色 | 用文字说出来 |
+| 报告中只写规则编号 | 没有人明白它的影响 | 说明谁受到影响，以及怎样受影响 |
+
+## 故障排查
+
+**屏幕阅读器一直说个不停。** 按 **Ctrl** 可以让 NVDA 或 VoiceOver 停止朗读。在它的设置中把语速调慢。
+
+**VoiceOver 的键盘命令没有反应。** 检查 VoiceOver 是否已打开（**⌘ + F5**），并在按其他键的同时按住 **Control + Option**。
+
+**自动化工具说页面没问题，但其实有问题。** 这正是本课要教的。相信你的键盘和你的耳朵。
 
 ## 拓展挑战
 
-_内容待撰写。_
+三个可选拓展，位于 [`challenges/`](challenges/)：
+
+1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 录制一段只用键盘浏览修复好的页面的视频。
+2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 为一段关于你的社区的短视频加上字幕和文字稿。
+3. **[探索](challenges/challenge-3.zh-Hans.md)** —— 为你的网站写一份无障碍声明。
 
 ## 提交作业
 
-_内容待撰写。_
+1. 完成 [`tests/checklist.md`](tests/checklist.md) 中的每一项。
+2. 给你的审查表格截一张图，再给自动化工具对修复好的页面的检查结果截一张图。
+3. 把它们保存在你的学习日志和作品集中：审查报告是一件很有分量的作品集作品。XR Camp 社区开放后，也在那里分享。
+4. 在学习日志中回答：用屏幕阅读器听页面时，什么让你感到意外？
 
 ## 延伸阅读
 
-_内容待撰写。_
+- [W3C —— 简易检查：网页无障碍的初步评估](https://www.w3.org/WAI/test-evaluate/preliminary/)（英文）
+- [W3C —— WCAG 2 概览](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)（英文）
+- [WebAIM —— 使用 NVDA 评估网页无障碍](https://webaim.org/articles/nvda/)（英文）
+- [WebAIM —— 使用 VoiceOver 评估网页无障碍](https://webaim.org/articles/voiceover/)（英文）
+- [W3C —— 网页用户的故事](https://www.w3.org/WAI/people-use-web/user-stories/)（英文）
+
+## 值得认识的女性
+
+**Shaomei Wu** 曾是 Facebook 和 Instagram 的研究科学家。在那里，她是一项研究的第一作者，这项研究设计并推出了 Facebook 的自动替代文本：为使用屏幕阅读器的盲人自动生成的照片描述。后来，她创办并领导 **AImpower.org**，这是一家美国非营利组织，与口吃人士等边缘化群体一起构建技术。
+
+自动替代文本正是本课所讲的那种帮助，同时也提醒我们它的局限：机器可以说「两个人在户外微笑」，但只有了解背景的人，才能写出「活动中心的无台阶入口」。
+
+> **编辑说明 —— 发布前须核实。** 「值得认识的女性」栏目中的生平陈述必须与原始资料核对，并在可行时于本课上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+
+## 标准聚焦
+
+WCAG 2.2 以**成功标准**的形式组织，分为 A、AA 和 AAA 三个等级。大多数法律和政策要求达到 **AA 级**，这也是 XR Camp 的目标。W3C 还发布了 **WAI-ARIA**，也就是你用过的 `aria-describedby` 和 `aria-pressed` 这类属性，以及如何用好它们的指南。
 
 ## 许可协议
 
-Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
-
+代码：[`LICENSE-CODE`](../../LICENSE-CODE) · 内容：[`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)

@@ -6,13 +6,13 @@
   "phase": 1,
   "title": {
     "en": "Responsive Web Design",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Diseño web adaptable",
+    "zh-Hans": "响应式网页设计"
   },
   "summary": {
     "en": "Build a responsive travel, cultural, community, or service website.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea un sitio web adaptable de viajes, cultura, comunidad o servicios.",
+    "zh-Hans": "构建一个响应式的旅行、文化、社区或服务网站。"
   },
   "estimatedMinutes": 840,
   "schedule": {
@@ -30,8 +30,8 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Make a 3D scene fill the screen on a phone and sit beside the text on a wide screen, using Grid and aspect-ratio.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Haz que una escena 3D ocupe toda la pantalla en un celular y se ubique junto al texto en una pantalla ancha, usando Grid y aspect-ratio.",
+    "zh-Hans": "使用 Grid 和 aspect-ratio，让 3D 场景在手机上占满屏幕，在宽屏上位于文字旁边。"
   },
   "accessibilityChecks": [
     "document-language",

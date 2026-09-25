@@ -6,13 +6,13 @@
   "phase": 1,
   "title": {
     "en": "Developer Tools, Debugging, and Testing",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Herramientas para desarrolladores, depuración y pruebas",
+    "zh-Hans": "开发者工具、调试与测试"
   },
   "summary": {
     "en": "Complete a guided debugging and accessibility challenge.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Completa un reto guiado de depuración y accesibilidad.",
+    "zh-Hans": "完成一项有引导的调试与无障碍挑战。"
   },
   "estimatedMinutes": 540,
   "schedule": {
@@ -31,8 +31,8 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Fix a deliberately broken 3D scene using the A-Frame Inspector and the browser Performance panel.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Corrige una escena 3D rota a propósito usando el A-Frame Inspector y el panel Performance del navegador.",
+    "zh-Hans": "使用 A-Frame Inspector 和浏览器的性能面板，修复一个故意弄坏的 3D 场景。"
   },
   "accessibilityChecks": [
     "document-language",

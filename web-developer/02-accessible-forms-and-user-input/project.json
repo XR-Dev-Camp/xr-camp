@@ -6,13 +6,13 @@
   "phase": 1,
   "title": {
     "en": "Accessible Forms and User Input",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Formularios accesibles y entrada de datos",
+    "zh-Hans": "无障碍表单与用户输入"
   },
   "summary": {
     "en": "Build an accessible registration and feedback form.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea un formulario accesible de inscripción y de comentarios.",
+    "zh-Hans": "构建一个无障碍的报名与反馈表单。"
   },
   "estimatedMinutes": 420,
   "schedule": {
@@ -29,8 +29,8 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "A ready-made 3D shape sits beside your form: your colour, size, and shape inputs change it live.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Junto a tu formulario hay una figura 3D ya lista: tus campos de color, tamaño y forma la cambian en vivo.",
+    "zh-Hans": "一个现成的 3D 形状就在你的表单旁边：你的颜色、大小和形状输入会实时改变它。"
   },
   "accessibilityChecks": [
     "document-language",

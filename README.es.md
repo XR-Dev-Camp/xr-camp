@@ -53,14 +53,14 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | # | Lección | Tiempo | Estado |
 | --- | --- | --- | --- |
 | 1 | [Fundamentos de HTML](web-developer/01-html-foundations/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
-| 2 | [Accessible Forms and User Input](web-developer/02-accessible-forms-and-user-input/README.es.md) | 7 h · 10 sesiones | ✅ Lista |
-| 3 | [CSS Foundations](web-developer/03-css-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
-| 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
-| 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
-| 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.es.md) | 16 h · 22 sesiones | ✅ Lista |
-| 7 | [Developer Tools, Debugging, and Testing](web-developer/07-developer-tools-debugging-and-testing/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
-| 8 | [Git, GitHub, and Publishing](web-developer/08-git-github-and-publishing/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
-| 9 | [Phase 1 Capstone - Web Developer Portfolio](web-developer/09-web-developer-portfolio/README.es.md) | 15 h · 20 sesiones | ✅ Lista |
+| 2 | [Formularios accesibles y entrada de datos](web-developer/02-accessible-forms-and-user-input/README.es.md) | 7 h · 10 sesiones | ✅ Lista |
+| 3 | [Fundamentos de CSS](web-developer/03-css-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
+| 4 | [Diseño web adaptable](web-developer/04-responsive-web-design/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
+| 5 | [Fundamentos de accesibilidad web](web-developer/05-web-accessibility-foundations/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
+| 6 | [Fundamentos de JavaScript](web-developer/06-javascript-foundations/README.es.md) | 16 h · 22 sesiones | ✅ Lista |
+| 7 | [Herramientas para desarrolladores, depuración y pruebas](web-developer/07-developer-tools-debugging-and-testing/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
+| 8 | [Git, GitHub y publicación](web-developer/08-git-github-and-publishing/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
+| 9 | [Proyecto final de la Fase 1 - Portafolio de desarrolladora web](web-developer/09-web-developer-portfolio/README.es.md) | 15 h · 20 sesiones | ✅ Lista |
 
 ### Fase 2 · Conviértete en ingeniera frontend
 
