@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An AI assistant's explanation of a three.js scene, for you to check against the three.js documentation.">
+  <title>3D moment: check an AI's explanation - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- three.js, pinned to the version in versions.json. -->
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>Check an AI's explanation of a 3D scene</h1>
+    <p>Below is a small three.js scene, and an AI assistant's explanation of its code. Some claims are right, and some are wrong. Check every one against the official documentation at <a href="https://threejs.org/docs/">threejs.org/docs</a>, before you look at <code>completed/3d-moment.html</code>.</p>
+
+    <p><button type="button" id="pause" aria-pressed="false">Pause animation</button></p>
+    <p id="scene-description">A purple torus knot, a tube tied in a knot like a pretzel, floats in the middle of a pale background. Light comes from the upper right, so that side is brighter. It turns slowly around its vertical axis.</p>
+    <canvas id="scene" class="scene" role="img" aria-label="3D scene: a torus knot" aria-describedby="scene-description"></canvas>
+
+    <h2>The code</h2>
+    <pre><code>const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+scene.add(new THREE.AmbientLight('#ffffff', 0.6));
+
+const sun = new THREE.DirectionalLight('#ffffff', 2.5);
+sun.position.set(3, 4, 5);
+
+const knot = new THREE.Mesh(
+  new THREE.TorusKnotGeometry(1, 0.32, 128, 16),
+  new THREE.MeshStandardMaterial({ color: '#5b2a86', roughness: 0.35 }),
+);
+
+const TURN_SPEED = THREE.MathUtils.degToRad(30);   // per second
+knot.rotation.y += TURN_SPEED * seconds;
+
+renderer.setAnimationLoop(paused ? null : frame);</code></pre>
+
+    <h2>The AI's explanation</h2>
+    <div class="made-up">
+      <p><strong>A made-up example.</strong> XR Camp wrote this "AI explanation" for practice, with mistakes on purpose, the kind real assistants make. It is not the output of any real product.</p>
+    </div>
+
+    <!-- TODO 14: check every claim below against threejs.org/docs.
+         For each one, replace "Your verdict: not checked yet." with:
+           - a verdict: <span class="verdict accepted">Correct</span>
+             or <span class="verdict rejected">Wrong</span>
+           - one or two sentences in your own words: what the docs say,
+             and the correction if it was wrong
+           - a link to the docs page you used.
+         Where you can, test the claim too: change the code, reload, and
+         see what happens. Then change it back.
+         Last, ask your own assistant to explain the same code, log it in
+         ai-log.md, and check its answer the same way. -->
+    <ol class="claims">
+      <li>
+        <p class="ai-says">"<code>PerspectiveCamera(50, 1, 0.1, 100)</code>: 50 is the vertical field of view, in degrees. 0.1 and 100 are the nearest and farthest distances the camera draws."</p>
+        <p class="check">Your verdict: not checked yet.</p>
+      </li>
+      <li>
+        <p class="ai-says">"<code>AmbientLight</code> lights every object equally, from no particular direction, so it cannot cast shadows."</p>
+        <p class="check">Your verdict: not checked yet.</p>
+      </li>
+      <li>
+        <p class="ai-says">"<code>DirectionalLight</code> works like a light bulb at (3, 4, 5): its light spreads out in all directions from there, so objects closer to it are brighter."</p>
+        <p class="check">Your verdict: not checked yet.</p>
+      </li>
+      <li>
+        <p class="ai-says">"<code>TorusKnotGeometry(1, 0.32, 128, 16)</code>: 1 is the radius of the knot, 0.32 the radius of the tube. 128 and 16 are numbers of segments: more makes it smoother, and more work to draw."</p>
+        <p class="check">Your verdict: not checked yet.</p>
+      </li>
+      <li>
+        <p class="ai-says">"<code>MeshStandardMaterial</code> needs light to be seen. To make the scene cheaper, switch to <code>MeshBasicMaterial</code>: it is shaded by the same lights, but faster."</p>
+        <p class="check">Your verdict: not checked yet.</p>
+      </li>
+      <li>
+        <p class="ai-says">"You do not need <code>degToRad</code>. Rotations in three.js are in degrees, like A-Frame's <code>rotation</code> attribute, so <code>knot.rotation.y += 30 * seconds</code> does the same thing."</p>
+        <p class="check">Your verdict: not checked yet.</p>
+      </li>
+      <li>
+        <p class="ai-says">"Passing <code>null</code> to <code>setAnimationLoop</code> stops the loop. three.js recommends <code>setAnimationLoop</code> instead of calling <code>requestAnimationFrame</code> yourself."</p>
+        <p class="check">Your verdict: not checked yet.</p>
+      </li>
+    </ol>
+
+    <h2>What I learned</h2>
+    <!-- TODO 14, continued: in two or three sentences, what surprised you?
+         How long did checking take? -->
+    <p>Not written yet.</p>
+
+    <p><a href="index.html">Back to my AI-assisted review</a></p>
+  </main>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    const canvas = document.querySelector('#scene');
+    const pauseButton = document.querySelector('#pause');
+    const description = document.querySelector('#scene-description');
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    // Sharp on high-density screens, but never more than twice the pixels.
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color('#fdfcf8');
+
+    const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+    camera.position.z = 5;
+
+    // A soft light everywhere, and one from the upper right, so the knot
+    // has a bright side and a darker side and its shape is easy to read.
+    scene.add(new THREE.AmbientLight('#ffffff', 0.6));
+    const sun = new THREE.DirectionalLight('#ffffff', 2.5);
+    sun.position.set(3, 4, 5);
+    scene.add(sun);
+
+    const knot = new THREE.Mesh(
+      new THREE.TorusKnotGeometry(1, 0.32, 128, 16),
+      new THREE.MeshStandardMaterial({ color: '#5b2a86', roughness: 0.35 }),
+    );
+    scene.add(knot);
+
+    // three.js rotations are in radians, so say "30 degrees" through degToRad.
+    const TURN_SPEED = THREE.MathUtils.degToRad(30);   // per second
+    let lastTime = null;
+
+    // Called once per frame. Turning by speed × seconds, not a fixed step,
+    // keeps the speed the same on 60 Hz and 120 Hz screens.
+    function frame(time) {
+      const seconds = lastTime === null ? 0 : (time - lastTime) / 1000;
+      lastTime = time;
+      knot.rotation.y += TURN_SPEED * seconds;
+      renderer.render(scene, camera);
+    }
+
+    // Keep the drawing the size of the canvas, and redraw once (a paused
+    // scene has no loop to do it).
+    function resize() {
+      const { clientWidth: width, clientHeight: height } = canvas;
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.render(scene, camera);
+    }
+
+    // One place decides whether anything moves.
+    function setPaused(paused) {
+      lastTime = null;   // so the knot does not jump after a long pause
+      renderer.setAnimationLoop(paused ? null : frame);
+      pauseButton.setAttribute('aria-pressed', String(paused));
+      description.textContent = 'A purple torus knot, a tube tied in a knot like a pretzel, '
+        + 'floats in the middle of a pale background. Light comes from the upper right, '
+        + 'so that side is brighter. '
+        + (paused ? 'It is still.' : 'It turns slowly around its vertical axis.');
+    }
+
+    new ResizeObserver(resize).observe(canvas);
+    pauseButton.addEventListener('click', () => {
+      setPaused(pauseButton.getAttribute('aria-pressed') !== 'true');
+    });
+
+    // Start still if the learner asked their device to reduce motion.
+    setPaused(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  </script>
+</body>
+</html>

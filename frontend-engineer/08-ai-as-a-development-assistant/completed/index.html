@@ -3,12 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI as a Development Assistant - XR Camp reference solution</title>
+  <meta name="description" content="Ana's AI-assisted review of her XR Camp session planner: what she asked, what the assistant said, and what she checked.">
+  <title>My AI-assisted review - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header><p>My XR Camp</p></header>
+
   <main>
-    <h1>AI as a Development Assistant</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>My AI-assisted review</h1>
+    <p>By Ana. I asked an AI assistant to explain and review two files of my <a href="planner/index.html">session planner</a>: <code>store.js</code> and <code>main.js</code>, 165 lines. I checked every answer against the documentation, or with a test, before I gave it a verdict.</p>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <!-- The counts are in words, so the verdict never depends on colour. -->
+      <ul class="counts" role="list">
+        <li><span class="verdict accepted">Accepted</span> 2 items</li>
+        <li><span class="verdict changed">Changed</span> 2 items</li>
+        <li><span class="verdict rejected">Rejected</span> 3 items</li>
+      </ul>
+
+      <!-- A data table may scroll sideways inside this box on a narrow
+           screen; the page never does. tabindex="0" lets keyboard users
+           focus the box and scroll it; the name says what it holds. -->
+      <div class="table-scroll" role="region" aria-labelledby="summary-caption" tabindex="0">
+        <table>
+          <caption id="summary-caption">Review items and verdicts</caption>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">What I asked</th>
+              <th scope="col">Verdict</th>
+              <th scope="col">How I checked</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><a href="#item-1">1</a></th>
+              <td>How <code>||</code> sorts by day, then time</td>
+              <td><span class="verdict accepted">Accepted</span></td>
+              <td>Prediction, Console, MDN</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#item-2">2</a></th>
+              <td>What <code>subscribe</code> returns</td>
+              <td><span class="verdict accepted">Accepted</span></td>
+              <td>Console test</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#item-3">3</a></th>
+              <td>Bugs in <code>store.js</code>: a crash on an unknown id</td>
+              <td><span class="verdict rejected">Rejected</span></td>
+              <td>MDN, reading the code, two tabs</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#item-4">4</a></th>
+              <td>An XSS risk in <code>announce</code></td>
+              <td><span class="verdict rejected">Rejected</span></td>
+              <td>A test with a harmful topic, MDN</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#item-5">5</a></th>
+              <td>Use <code>toSorted</code></td>
+              <td><span class="verdict rejected">Rejected</span></td>
+              <td>MDN and Baseline</td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#item-6">6</a></th>
+              <td>Checks for 59 and 60 minutes</td>
+              <td><span class="verdict changed">Changed</span></td>
+              <td>Prediction, <code>check.html</code></td>
+            </tr>
+            <tr>
+              <th scope="row"><a href="#item-7">7</a></th>
+              <td>Is the form accessible?</td>
+              <td><span class="verdict changed">Changed</span></td>
+              <td>Keyboard, NVDA, MDN</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="items-heading">
+      <h2 id="items-heading">The review, item by item</h2>
+
+      <article class="item panel" id="item-1" aria-labelledby="item-1-heading">
+        <h3 id="item-1-heading">1. How <code>||</code> sorts by day, then time</h3>
+        <dl>
+          <dt>What I asked</dt>
+          <dd>Explain the line with <code>||</code> in <code>bySchedule</code>, step by step, with an example. Do not rewrite the code.</dd>
+          <dt>What it said</dt>
+          <dd><p class="ai-says">If the days are different, the subtraction is not zero, so <code>||</code> returns it and the times are never compared. If the days are the same, it is <code>0</code>, which counts as false, so <code>||</code> returns the time comparison instead.</p></dd>
+          <dt>What I checked</dt>
+          <dd>I predicted a positive number for Monday 19:00 against Monday 09:00. The Console gave <code>1</code>, and <code>check.html</code> agrees.</dd>
+          <dt>Source</dt>
+          <dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">MDN: Logical OR</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare">MDN: localeCompare()</a></dd>
+          <dt>Verdict</dt>
+          <dd><span class="verdict accepted">Accepted</span></dd>
+          <dt>What I learned</dt>
+          <dd><code>||</code> returns one of its values, not just <code>true</code> or <code>false</code>.</dd>
+        </dl>
+      </article>
+
+      <article class="item panel" id="item-2" aria-labelledby="item-2-heading">
+        <h3 id="item-2-heading">2. What <code>subscribe</code> returns</h3>
+        <dl>
+          <dt>What I asked</dt>
+          <dd>What does <code>subscribe</code> return, and why would anyone want it?</dd>
+          <dt>What it said</dt>
+          <dd><p class="ai-says">A function that removes the listener again, for code that no longer needs updates.</p></dd>
+          <dt>What I checked</dt>
+          <dd>I subscribed a test listener from the Console with <code>await import('./js/store.js')</code>. It logged each new session. After <code>stop()</code>, it logged nothing, as I predicted.</dd>
+          <dt>Source</dt>
+          <dd>My Console test; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete">MDN: Set.prototype.delete()</a></dd>
+          <dt>Verdict</dt>
+          <dd><span class="verdict accepted">Accepted</span></dd>
+          <dt>What I learned</dt>
+          <dd>The planner never calls it, because the page lasts as long as the planner. It is ready for the day part of the page can close.</dd>
+        </dl>
+      </article>
+
+      <article class="item panel" id="item-3" aria-labelledby="item-3-heading">
+        <h3 id="item-3-heading">3. "<code>toggleSession</code> crashes on an unknown id"</h3>
+        <dl>
+          <dt>What I asked</dt>
+          <dd>Review <code>store.js</code>: possible bugs, security problems, and unclear code, each with how confident you are.</dd>
+          <dt>What it said</dt>
+          <dd><p class="ai-says">High confidence: if the id does not exist, <code>find</code> returns <code>undefined</code> and <code>session.done</code> throws a <code>TypeError</code>. Add a check.</p></dd>
+          <dt>What I checked</dt>
+          <dd>True in general. But every id comes from a list item drawn from the store a moment before, and I could not make it happen, even with two tabs open.</dd>
+          <dt>Source</dt>
+          <dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">MDN: Array.prototype.find()</a>; reading <code>main.js</code> and <code>session-item.js</code></dd>
+          <dt>Verdict</dt>
+          <dd><span class="verdict rejected">Rejected</span>, for this code</dd>
+          <dt>What I learned</dt>
+          <dd>A finding can be true and still not matter here. My two-tab test found something else: two open tabs save over each other's changes. I noted it for later.</dd>
+        </dl>
+      </article>
+
+      <article class="item panel" id="item-4" aria-labelledby="item-4-heading">
+        <h3 id="item-4-heading">4. "XSS in <code>announce</code>"</h3>
+        <dl>
+          <dt>What I asked</dt>
+          <dd>Is there any risk of cross-site scripting (XSS) in <code>main.js</code>?</dd>
+          <dt>What it said</dt>
+          <dd><p class="ai-says">Yes: <code>announce</code> puts the topic into the page with a template literal, so a topic like <code>&lt;img src=x onerror=alert(1)&gt;</code> would run.</p></dd>
+          <dt>What I checked</dt>
+          <dd><code>announce</code> sets <code>textContent</code>. I added a session with that exact topic: no alert, and the text appeared exactly as typed.</dd>
+          <dt>Source</dt>
+          <dd><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">MDN: Node.textContent</a></dd>
+          <dt>Verdict</dt>
+          <dd><span class="verdict rejected">Rejected</span></dd>
+          <dt>What I learned</dt>
+          <dd>A template literal only builds a string. The danger is where the string goes: <code>innerHTML</code> reads it as HTML, <code>textContent</code> never does.</dd>
+        </dl>
+      </article>
+
+      <article class="item panel" id="item-5" aria-labelledby="item-5-heading">
+        <h3 id="item-5-heading">5. "Use <code>toSorted</code>"</h3>
+        <dl>
+          <dt>What I asked</dt>
+          <dd>The same review of <code>store.js</code>.</dd>
+          <dt>What it said</dt>
+          <dd><p class="ai-says"><code>getSessions</code> can be shorter: <code>return sessions.toSorted(bySchedule);</code></p></dd>
+          <dt>What I checked</dt>
+          <dd>It is real, and Baseline since July 2023. But older phones and browsers can run the planner and still not have it, and <code>[...sessions].sort(bySchedule)</code> does the same job everywhere.</dd>
+          <dt>Source</dt>
+          <dd><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted">MDN: Array.prototype.toSorted()</a></dd>
+          <dt>Verdict</dt>
+          <dd><span class="verdict rejected">Rejected</span>, for now</dd>
+          <dt>What I learned</dt>
+          <dd>Ask "does it exist?", and then "since when, and where?"</dd>
+        </dl>
+      </article>
+
+      <article class="item panel" id="item-6" aria-labelledby="item-6-heading">
+        <h3 id="item-6-heading">6. Checks for 59 and 60 minutes</h3>
+        <dl>
+          <dt>What I asked</dt>
+          <dd>Write two checks for <code>describeMinutes</code>, for 59 and 60 minutes, in the style of <code>check.html</code>.</dd>
+          <dt>What it said</dt>
+          <dd><p class="ai-says"><code>check('exactly 1 hour', describeMinutes(60), '1 hour 0 minutes');</code>, and a correct one for 59.</p></dd>
+          <dt>What I checked</dt>
+          <dd>From reading the function, I predicted <code>'1 hour'</code>. <code>check.html</code> said FAIL. I fixed the expected value, and <a href="planner/check.html">both checks pass</a>.</dd>
+          <dt>Source</dt>
+          <dd><code>planner/js/utils.js</code> and <code>planner/check.html</code></dd>
+          <dt>Verdict</dt>
+          <dd><span class="verdict changed">Changed</span></dd>
+          <dt>What I learned</dt>
+          <dd>A test is only as right as its expected value.</dd>
+        </dl>
+      </article>
+
+      <article class="item panel" id="item-7" aria-labelledby="item-7-heading">
+        <h3 id="item-7-heading">7. Is the form accessible?</h3>
+        <dl>
+          <dt>What I asked</dt>
+          <dd>What does a screen-reader user hear when they submit an empty topic?</dd>
+          <dt>What it said</dt>
+          <dd><p class="ai-says">The form looks accessible. To be sure the error is read, add <code>aria-live="assertive"</code> to the error message.</p></dd>
+          <dt>What I checked</dt>
+          <dd>Keyboard only: everything worked. With NVDA and Firefox: pressing <strong>Enter</strong> inside the empty topic box read nothing new, because focus was already there. The error message is hidden until it has text, and MDN says a live region should exist before its content changes.</dd>
+          <dt>Source</dt>
+          <dd><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions">MDN: ARIA live regions</a>, <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html">WCAG 2.2: Understanding 4.1.3 Status Messages</a></dd>
+          <dt>Verdict</dt>
+          <dd><span class="verdict changed">Changed</span>: I kept the finding, not the fix. <code>main.js</code> now also sends the message to the planner's one status region, and NVDA reads it.</dd>
+          <dt>What I learned</dt>
+          <dd>The assistant read my code; it could not hear it.</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section aria-labelledby="language-heading">
+      <h2 id="language-heading">The same question in Spanish</h2>
+      <p>I asked item 1 again in Spanish. It was still correct: <q lang="es">Si los días son distintos, la resta no es cero, así que <code>||</code> devuelve ese número.</q> It was shorter, gave no example until I asked, and mixed Spanish and English words for the same idea. I understood it faster in Spanish; the English answer was more complete.</p>
+    </section>
+
+    <section aria-labelledby="practice-heading">
+      <h2 id="practice-heading">Practice: invented APIs</h2>
+      <p>A made-up "AI answer", written by XR Camp for practice, made four claims about the planner. I checked each on MDN and in the Console.</p>
+      <ul>
+        <li><strong>Wrong:</strong> <code>getItem</code> returns <code>undefined</code> for a missing key. It returns <code>null</code> (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem">MDN: getItem()</a>).</li>
+        <li><strong>Invented:</strong> <code>sort(compareFn, { copy: true })</code>. <code>sort</code> has no options, sorts in place, and ignores the extra argument without an error (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">MDN: sort()</a>).</li>
+        <li><strong>Invented:</strong> <code>element.focusNext()</code>. No such method exists (<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus">MDN: focus()</a>).</li>
+        <li><strong>Correct:</strong> <code>crypto.randomUUID()</code> only works in secure contexts (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID">MDN: randomUUID()</a>).</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="learned-heading">
+      <h2 id="learned-heading">What I learned</h2>
+      <p>The assistant was best at explaining, and worst at knowing my code. The wrong claims sounded exactly as sure as the true ones, and I would have believed at least three of them without checking. I will keep using it the same way: small questions, explanations first, and a source for every claim.</p>
+      <p>Every use is in my AI-use log (<code>ai-log.md</code>), and the full review is in <code>review.md</code>.</p>
+    </section>
+
+    <p><a href="planner/index.html">The planner, after my changes</a> · <a href="3d-moment.html">3D moment: checking an AI's explanation of a three.js scene</a></p>
   </main>
 </body>
 </html>

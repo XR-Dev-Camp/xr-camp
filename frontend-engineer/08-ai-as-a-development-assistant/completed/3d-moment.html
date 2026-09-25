@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An AI assistant's explanation of a three.js scene, with every claim checked against the three.js documentation.">
+  <title>3D moment: checking an AI's explanation - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- three.js, pinned to the version in versions.json. -->
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>Checking an AI's explanation of a 3D scene</h1>
+    <p>Below is a small three.js scene, and an "AI explanation" of its code. Ana checked every claim against the official three.js documentation. Three of the seven claims were wrong. Then she asked her own assistant about the same code, and checked its answer the same way.</p>
+
+    <p><button type="button" id="pause" aria-pressed="false">Pause animation</button></p>
+    <p id="scene-description">A purple torus knot, a tube tied in a knot like a pretzel, floats in the middle of a pale background. Light comes from the upper right, so that side is brighter. It turns slowly around its vertical axis.</p>
+    <canvas id="scene" class="scene" role="img" aria-label="3D scene: a torus knot" aria-describedby="scene-description"></canvas>
+
+    <h2>The code</h2>
+    <pre><code>const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+scene.add(new THREE.AmbientLight('#ffffff', 0.6));
+
+const sun = new THREE.DirectionalLight('#ffffff', 2.5);
+sun.position.set(3, 4, 5);
+
+const knot = new THREE.Mesh(
+  new THREE.TorusKnotGeometry(1, 0.32, 128, 16),
+  new THREE.MeshStandardMaterial({ color: '#5b2a86', roughness: 0.35 }),
+);
+
+const TURN_SPEED = THREE.MathUtils.degToRad(30);   // per second
+knot.rotation.y += TURN_SPEED * seconds;
+
+renderer.setAnimationLoop(paused ? null : frame);</code></pre>
+
+    <h2>The AI's explanation, checked</h2>
+    <div class="made-up">
+      <p><strong>A made-up example.</strong> XR Camp wrote this "AI explanation" for practice, with mistakes on purpose, the kind real assistants make. It is not the output of any real product.</p>
+    </div>
+
+    <ol class="claims">
+      <li>
+        <p class="ai-says">"<code>PerspectiveCamera(50, 1, 0.1, 100)</code>: 50 is the vertical field of view, in degrees. 0.1 and 100 are the nearest and farthest distances the camera draws."</p>
+        <p class="check"><span class="verdict accepted">Correct</span> The docs say <code>fov</code> is "the vertical field of view, from bottom to top of view, in degrees", and the last two are the near and far planes. Source: <a href="https://threejs.org/docs/#PerspectiveCamera">three.js docs: PerspectiveCamera</a>.</p>
+      </li>
+      <li>
+        <p class="ai-says">"<code>AmbientLight</code> lights every object equally, from no particular direction, so it cannot cast shadows."</p>
+        <p class="check"><span class="verdict accepted">Correct</span> The docs: it "globally illuminates all objects in the scene equally", and cannot cast shadows "as it does not have a direction". Source: <a href="https://threejs.org/docs/#AmbientLight">three.js docs: AmbientLight</a>.</p>
+      </li>
+      <li>
+        <p class="ai-says">"<code>DirectionalLight</code> works like a light bulb at (3, 4, 5): its light spreads out in all directions from there, so objects closer to it are brighter."</p>
+        <p class="check"><span class="verdict rejected">Wrong</span> A directional light behaves "as though it is infinitely far away", and its rays "are all parallel", pointing from its position to its <code>target</code> (the centre of the scene, unless you move it). Distance makes no difference. The light bulb is a different class, <code>PointLight</code>. Sources: <a href="https://threejs.org/docs/#DirectionalLight">three.js docs: DirectionalLight</a>, <a href="https://threejs.org/docs/#PointLight">PointLight</a>.</p>
+      </li>
+      <li>
+        <p class="ai-says">"<code>TorusKnotGeometry(1, 0.32, 128, 16)</code>: 1 is the radius of the knot, 0.32 the radius of the tube. 128 and 16 are numbers of segments: more makes it smoother, and more work to draw."</p>
+        <p class="check"><span class="verdict accepted">Correct</span> Radius, tube, tubular segments, and radial segments, in that order. The two numbers left out, <code>p</code> and <code>q</code>, keep their defaults (2 and 3), which set how the knot winds. Source: <a href="https://threejs.org/docs/#TorusKnotGeometry">three.js docs: TorusKnotGeometry</a>.</p>
+      </li>
+      <li>
+        <p class="ai-says">"<code>MeshStandardMaterial</code> needs light to be seen. To make the scene cheaper, switch to <code>MeshBasicMaterial</code>: it is shaded by the same lights, but faster."</p>
+        <p class="check"><span class="verdict rejected">Wrong</span> The docs say <code>MeshBasicMaterial</code> "is not affected by lights". Ana tried it: the knot became one flat purple shape, with no bright side and no shadow side, so you can no longer see that it is a knot. Sources: <a href="https://threejs.org/docs/#MeshBasicMaterial">three.js docs: MeshBasicMaterial</a>, <a href="https://threejs.org/docs/#MeshStandardMaterial">MeshStandardMaterial</a>.</p>
+      </li>
+      <li>
+        <p class="ai-says">"You do not need <code>degToRad</code>. Rotations in three.js are in degrees, like A-Frame's <code>rotation</code> attribute, so <code>knot.rotation.y += 30 * seconds</code> does the same thing."</p>
+        <p class="check"><span class="verdict rejected">Wrong</span> <code>rotation</code> is "the object's local rotation as Euler angles, in radians". A-Frame's <code>rotation</code> attribute is in degrees, but A-Frame converts it for three.js. Thirty radians a second is almost five turns a second: a fast spin that could make someone feel unwell. <code>degToRad(30)</code> is the right way to say "30 degrees". Sources: <a href="https://threejs.org/docs/#Object3D">three.js docs: Object3D</a>, <a href="https://threejs.org/docs/#MathUtils">MathUtils</a>, <a href="https://aframe.io/docs/1.8.0/components/rotation.html">A-Frame docs: rotation</a>.</p>
+      </li>
+      <li>
+        <p class="ai-says">"Passing <code>null</code> to <code>setAnimationLoop</code> stops the loop. three.js recommends <code>setAnimationLoop</code> instead of calling <code>requestAnimationFrame</code> yourself."</p>
+        <p class="check"><span class="verdict accepted">Correct</span> Both are in the docs for <code>setAnimationLoop</code>. That is how the Pause button on this page works. Source: <a href="https://threejs.org/docs/#WebGLRenderer">three.js docs: WebGLRenderer</a>.</p>
+      </li>
+    </ol>
+
+    <h2>What Ana learned</h2>
+    <p>The wrong claims sounded just as confident as the right ones. Two of them mixed up things that are true somewhere else: a point light does spread out like a bulb, and A-Frame does use degrees. Checking took about twenty minutes, and the docs answered every question.</p>
+
+    <p><a href="index.html">Back to my AI-assisted review</a></p>
+  </main>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    const canvas = document.querySelector('#scene');
+    const pauseButton = document.querySelector('#pause');
+    const description = document.querySelector('#scene-description');
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    // Sharp on high-density screens, but never more than twice the pixels.
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color('#fdfcf8');
+
+    const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+    camera.position.z = 5;
+
+    // A soft light everywhere, and one from the upper right, so the knot
+    // has a bright side and a darker side and its shape is easy to read.
+    scene.add(new THREE.AmbientLight('#ffffff', 0.6));
+    const sun = new THREE.DirectionalLight('#ffffff', 2.5);
+    sun.position.set(3, 4, 5);
+    scene.add(sun);
+
+    const knot = new THREE.Mesh(
+      new THREE.TorusKnotGeometry(1, 0.32, 128, 16),
+      new THREE.MeshStandardMaterial({ color: '#5b2a86', roughness: 0.35 }),
+    );
+    scene.add(knot);
+
+    // three.js rotations are in radians, so say "30 degrees" through degToRad.
+    const TURN_SPEED = THREE.MathUtils.degToRad(30);   // per second
+    let lastTime = null;
+
+    // Called once per frame. Turning by speed × seconds, not a fixed step,
+    // keeps the speed the same on 60 Hz and 120 Hz screens.
+    function frame(time) {
+      const seconds = lastTime === null ? 0 : (time - lastTime) / 1000;
+      lastTime = time;
+      knot.rotation.y += TURN_SPEED * seconds;
+      renderer.render(scene, camera);
+    }
+
+    // Keep the drawing the size of the canvas, and redraw once (a paused
+    // scene has no loop to do it).
+    function resize() {
+      const { clientWidth: width, clientHeight: height } = canvas;
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.render(scene, camera);
+    }
+
+    // One place decides whether anything moves.
+    function setPaused(paused) {
+      lastTime = null;   // so the knot does not jump after a long pause
+      renderer.setAnimationLoop(paused ? null : frame);
+      pauseButton.setAttribute('aria-pressed', String(paused));
+      description.textContent = 'A purple torus knot, a tube tied in a knot like a pretzel, '
+        + 'floats in the middle of a pale background. Light comes from the upper right, '
+        + 'so that side is brighter. '
+        + (paused ? 'It is still.' : 'It turns slowly around its vertical axis.');
+    }
+
+    new ResizeObserver(resize).observe(canvas);
+    pauseButton.addEventListener('click', () => {
+      setPaused(pauseButton.getAttribute('aria-pressed') !== 'true');
+    });
+
+    // Start still if the learner asked their device to reduce motion.
+    setPaused(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  </script>
+</body>
+</html>

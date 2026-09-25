@@ -1,0 +1,147 @@
+/* My XR Camp: the stylesheet for the learning dashboard (Phase 2).
+   The same tokens as the Riverside site from Phase 1. */
+
+:root {
+  --color-text: #1b1b1f;
+  --color-muted: #4a4a55;
+  --color-primary: #5b2a86;
+  --color-primary-dark: #3f1d5e;
+  --color-focus: #d62f6b;
+  --color-bg: #fdfcf8;
+  --color-surface: #ffffff;
+  --color-band: #efe9f7;
+  --color-ready: #1d6b4f;      /* 6.4:1 on white */
+  --color-line: #c9c4d4;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --radius: 0.5rem;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+header, main { max-width: 56rem; margin: 0 auto; padding: var(--space-3); }
+header { max-width: none; background: var(--color-band); border-bottom: 4px solid var(--color-primary); }
+header p { max-width: 56rem; margin: 0 auto; font-weight: 700; color: var(--color-primary-dark); }
+
+h1, h2 { color: var(--color-primary-dark); line-height: 1.2; }
+h1 { font-size: clamp(1.8rem, 1.3rem + 2vw, 2.4rem); }
+
+a { color: var(--color-primary); }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+
+.phase { margin: var(--space-4) 0; padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+.phase h2 { margin-top: 0; font-size: 1.35rem; }
+.phase ol { margin: 0; padding-left: 1.5rem; }
+
+.lesson { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); align-items: baseline; padding: var(--space-2) 0; border-bottom: 1px solid var(--color-line); }
+.lesson:last-child { border-bottom: none; }
+.lesson-title { flex: 1 1 14rem; font-weight: 600; }
+.lesson-time { color: var(--color-muted); font-size: 0.95rem; }
+
+/* Status in words, with a border: never colour alone. */
+.badge { padding: 0 var(--space-2); border: 2px solid; border-radius: var(--radius); font-size: 0.85rem; font-weight: 700; }
+.badge.ready { color: var(--color-ready); }
+.badge.coming-soon { color: var(--color-muted); }
+
+.error { padding: var(--space-3); border: 2px solid var(--color-focus); border-radius: var(--radius); background: var(--color-surface); }
+
+button { font: inherit; padding: var(--space-2) var(--space-3); color: #fff; background: var(--color-primary); border: 2px solid var(--color-primary); border-radius: var(--radius); cursor: pointer; }
+input[type="checkbox"] { width: 1.25rem; height: 1.25rem; vertical-align: -0.2rem; accent-color: var(--color-primary); }
+
+
+/* The learning dashboard (Course 2.2) ------------------------------------- */
+
+/* Hidden visually, still read by screen readers. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.cards-row { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.panel { padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+.panel h2 { margin-top: 0; font-size: 1.2rem; }
+
+.progress { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin: var(--space-2) 0; }
+progress { width: min(100%, 16rem); height: 0.9rem; accent-color: var(--color-primary); }
+.progress-text { font-weight: 600; }
+
+.lessons { list-style: none; padding: 0; margin: 0; }
+.lesson label { flex: 1 1 14rem; }
+.lesson input[type="checkbox"] { margin-right: var(--space-2); }
+
+.goal { display: flex; gap: var(--space-3); align-items: center; justify-content: space-between; padding: var(--space-2) 0; border-bottom: 1px solid var(--color-line); }
+.remove { background: var(--color-surface); color: var(--color-primary-dark); }
+#goal-form { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: end; }
+#goal-form input { font: inherit; padding: var(--space-2); border: 2px solid #8a8398; border-radius: var(--radius); min-width: min(100%, 18rem); }
+
+
+/* The session planner (Course 2.3) ---------------------------------------- */
+
+.planner-form { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: start; }
+/* Line the button up with the fields, below the one-line labels. */
+.planner-form p:last-child { margin-top: 1.6em; }
+.planner-form p { margin: 0; }
+.planner-form select, .planner-form input { font: inherit; padding: var(--space-2); border: 2px solid #8a8398; border-radius: var(--radius); background: var(--color-surface); }
+.planner-form input[type="text"] { min-width: min(100%, 18rem); }
+.field-error { color: #a4133c; font-weight: 600; }
+[aria-invalid="true"] { border-color: #a4133c !important; }
+
+.sessions { list-style: none; padding: 0; margin: 0; }
+.session { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-3); align-items: center; padding: var(--space-2) 0; border-bottom: 1px solid var(--color-line); }
+.session:last-child { border-bottom: none; }
+.session-text { flex: 1 1 16rem; }
+.session .delete { background: var(--color-surface); color: var(--color-primary-dark); }
+.empty { color: var(--color-muted); font-style: italic; }
+.goal-reached { color: var(--color-ready); font-weight: 700; }
+[hidden] { display: none !important; }
+
+
+/* The AI-assisted review (Course 2.8) ------------------------------------- */
+
+/* Verdicts: always a word and a border, never colour alone (WCAG 1.4.1). */
+.verdict { display: inline-block; padding: 0 var(--space-2); border: 2px solid; border-radius: var(--radius); font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
+.verdict.accepted { color: var(--color-ready); }
+.verdict.changed { color: #7a4100; }   /* 8.1:1 on white */
+.verdict.rejected { color: #a4133c; }  /* 7.7:1 on white */
+
+.counts { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-3); list-style: none; padding: 0; margin: var(--space-3) 0; }
+
+/* A data table may scroll sideways inside its own box on a narrow screen
+   (the WCAG 1.4.10 exception for tables); the page itself never does. The box
+   can take focus, so keyboard users can scroll it too (WCAG 2.1.1). */
+.table-scroll { overflow-x: auto; margin: var(--space-3) 0; border: 1px solid var(--color-line); border-radius: var(--radius); background: var(--color-surface); }
+table { width: 100%; min-width: 34rem; border-collapse: collapse; }
+caption { padding: var(--space-2) var(--space-3); text-align: left; font-weight: 700; color: var(--color-primary-dark); }
+th, td { padding: var(--space-2) var(--space-3); text-align: left; vertical-align: top; border-top: 1px solid var(--color-line); }
+thead th { background: var(--color-band); }
+
+/* One review item: what I asked, what it said, what I checked, and so on. */
+.item { margin: var(--space-4) 0; }
+.item h3 { margin-bottom: var(--space-2); color: var(--color-primary-dark); }
+.item dl { margin: 0; }
+.item dt { font-weight: 700; margin-top: var(--space-2); }
+.item dd { margin: 0 0 0 var(--space-3); }
+
+/* Words from an AI assistant are quoted, and labelled as such. */
+.ai-says { margin: var(--space-2) 0; padding: var(--space-2) var(--space-3); border-left: 4px solid var(--color-line); background: var(--color-bg); }
+.made-up { padding: var(--space-3); border: 2px dashed var(--color-muted); border-radius: var(--radius); background: var(--color-surface); }
+
+code { font-size: 0.95em; overflow-wrap: anywhere; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+
+/* The 3D moment. */
+.scene { display: block; width: 100%; height: 20rem; border-radius: var(--radius); background: var(--color-bg); }
+.claims > li { margin-bottom: var(--space-3); }
+.claims .check { margin: var(--space-2) 0 0; }

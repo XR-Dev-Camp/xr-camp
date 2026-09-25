@@ -2,7 +2,7 @@
   "id": "fe-08-ai-as-a-development-assistant",
   "courseId": "frontend-engineer",
   "lessonId": "ai-as-a-development-assistant-08",
-  "status": "draft",
+  "status": "review",
   "phase": 2,
   "title": {
     "en": "AI as a Development Assistant",
@@ -21,7 +21,11 @@
   },
   "difficulty": "intermediate",
   "technologies": [
-    "AI Tooling"
+    "AI Tooling",
+    "Code Review",
+    "JavaScript",
+    "HTML",
+    "Three.js"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -38,6 +42,13 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "keyboard-operable",
+    "status-messages",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

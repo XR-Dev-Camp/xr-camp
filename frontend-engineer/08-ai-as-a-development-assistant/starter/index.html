@@ -2,18 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>AI as a Development Assistant - XR Camp starter</title>
+  <meta name="description" content="My AI-assisted review of my XR Camp session planner.">
+  <title>My AI-assisted review - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header><p>My XR Camp</p></header>
+
   <main>
-    <!-- Add your main heading below. -->
+    <h1>My AI-assisted review</h1>
+    <!-- Say who you are, which files you reviewed (and how many lines), and
+         how you checked the answers. Copy it from the Scope in review.md. -->
+    <p>By ... I asked an AI assistant to explain and review part of my <a href="planner/index.html">session planner</a>.</p>
 
-    <!-- Add your project content below. -->
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
 
+      <!-- TODO 11: count your verdicts, and fill in the table: one row per
+           review item, in order.
+           - The item number is a row header (<th scope="row">), linking to
+             its section below: <a href="#item-1">1</a>.
+           - Verdicts are words in a badge:
+               <span class="verdict accepted">Accepted</span>
+               <span class="verdict changed">Changed</span>
+               <span class="verdict rejected">Rejected</span>
+           - "How I checked" is short: "Prediction, Console, MDN". -->
+      <ul class="counts" role="list">
+        <li><span class="verdict accepted">Accepted</span> 0 items</li>
+        <li><span class="verdict changed">Changed</span> 0 items</li>
+        <li><span class="verdict rejected">Rejected</span> 0 items</li>
+      </ul>
+
+      <!-- On a narrow screen the table scrolls inside this box, never the
+           page. tabindex="0" lets keyboard users focus and scroll it. -->
+      <div class="table-scroll" role="region" aria-labelledby="summary-caption" tabindex="0">
+        <table>
+          <caption id="summary-caption">Review items and verdicts</caption>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">What I asked</th>
+              <th scope="col">Verdict</th>
+              <th scope="col">How I checked</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><a href="#item-1">1</a></th>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="items-heading">
+      <h2 id="items-heading">The review, item by item</h2>
+
+      <!-- TODO 12: one <article> per review item, copied from review.md and
+           shortened where you can. Keep the six parts in this order. Put the
+           assistant's words in <p class="ai-says">, and mark any words in
+           another language: <q lang="es">…</q> or <q lang="zh-Hans">…</q>.
+           Then fill in the two sections after this one. -->
+      <article class="item panel" id="item-1" aria-labelledby="item-1-heading">
+        <h3 id="item-1-heading">1. ...</h3>
+        <dl>
+          <dt>What I asked</dt>
+          <dd>...</dd>
+          <dt>What it said</dt>
+          <dd><p class="ai-says">...</p></dd>
+          <dt>What I checked</dt>
+          <dd>...</dd>
+          <dt>Source</dt>
+          <dd>...</dd>
+          <dt>Verdict</dt>
+          <dd>...</dd>
+          <dt>What I learned</dt>
+          <dd>...</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section aria-labelledby="language-heading">
+      <h2 id="language-heading">The same question in another language</h2>
+      <p>...</p>
+    </section>
+
+    <section aria-labelledby="learned-heading">
+      <h2 id="learned-heading">What I learned</h2>
+      <p>...</p>
+      <p>Every use is in my AI-use log (<code>ai-log.md</code>), and the full review is in <code>review.md</code>.</p>
+    </section>
+
+    <p><a href="planner/index.html">The planner</a> · <a href="3d-moment.html">3D moment: check an AI's explanation of a three.js scene</a></p>
   </main>
 </body>
 </html>
