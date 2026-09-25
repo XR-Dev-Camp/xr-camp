@@ -79,7 +79,7 @@ Every visit to a website is a conversation between two computers:
 
 ### Addresses, names, and numbers
 
-Every computer on the internet has a numeric **IP address**, like `93.184.215.14`. People remember names better than numbers, so we use **domain names** like `example.org`, which you can rent from a company called a registrar.
+Every computer on the internet has a numeric **IP address**, like `203.0.113.25`. People remember names better than numbers, so we use **domain names** like `example.org`. You can rent a domain name of your own from a company called a registrar.
 
 The **Domain Name System (DNS)** is the internet's address book: it turns names into numbers. Your browser asks a DNS resolver, usually run by your internet provider, "what is the number for `example.org`?", and remembers the answer for a while.
 
@@ -134,14 +134,14 @@ Then press **Next step** and **Previous step** to read your diagram the way a vi
 
 | Requirement | WCAG 2.2 | Why |
 | --- | --- | --- |
-| Works without JavaScript | 4.1.2 | Every visitor gets the full content. |
+| Works without JavaScript | Good practice (not a WCAG rule) | Every visitor gets the full content. |
 | Focus moves to the new step | 2.4.3 | Keyboard and screen-reader users are taken to what changed. |
 | Colours are not the only way to tell the URL parts apart | 1.4.1 | Each part is also named in the list below it. |
-| Disabled buttons are clearly disabled | 1.4.3 | They look different, and are marked `disabled`. |
+| Disabled buttons are clearly disabled | 4.1.2 | They look different, and are marked `disabled`, so screen readers say so. |
 
 ## Performance considerations
 
-The page has no images and one tiny script: it loads in a single request, then just the HTML. Count your own page's requests in Challenge 3, then compare with a big news site.
+The page has no images, and its CSS and script are inside the HTML file, so it loads in a single request: just the HTML. Count your own page's requests in Challenge 3, then compare with a big news site.
 
 ## Common mistakes
 

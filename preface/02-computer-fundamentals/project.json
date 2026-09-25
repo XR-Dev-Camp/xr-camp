@@ -6,13 +6,13 @@
   "phase": 0,
   "title": {
     "en": "Computer Fundamentals",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Fundamentos de computación",
+    "zh-Hans": "计算机基础"
   },
   "summary": {
     "en": "Create a complete XR Camp learning folder and safely configure a browser and development workspace.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea una carpeta de aprendizaje completa para XR Camp y configura de forma segura un navegador y un espacio de trabajo para desarrollar.",
+    "zh-Hans": "建立一个完整的 XR Camp 学习文件夹，并安全地设置好浏览器和开发工作环境。"
   },
   "estimatedMinutes": 360,
   "schedule": {

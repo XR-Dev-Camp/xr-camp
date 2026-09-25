@@ -68,8 +68,8 @@
       "phase": 0,
       "title": {
         "en": "Computer Fundamentals",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Fundamentos de computación",
+        "zh-Hans": "计算机基础"
       },
       "estimatedMinutes": 360,
       "schedule": {
@@ -91,8 +91,8 @@
       "phase": 0,
       "title": {
         "en": "The Internet and the Web",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Internet y la web",
+        "zh-Hans": "互联网与万维网"
       },
       "estimatedMinutes": 300,
       "schedule": {
@@ -163,8 +163,8 @@
       "phase": 0,
       "title": {
         "en": "The Spatial Web",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "La web espacial",
+        "zh-Hans": "空间网络"
       },
       "estimatedMinutes": 300,
       "schedule": {
@@ -187,8 +187,8 @@
       "phase": 0,
       "title": {
         "en": "Organizations Building the Future",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Organizaciones que construyen el futuro",
+        "zh-Hans": "构建未来的组织"
       },
       "estimatedMinutes": 360,
       "schedule": {
@@ -210,8 +210,8 @@
       "phase": 0,
       "title": {
         "en": "Ethics, Accessibility, Privacy, and Responsible AI",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Ética, accesibilidad, privacidad e IA responsable",
+        "zh-Hans": "伦理、无障碍、隐私与负责任的 AI"
       },
       "estimatedMinutes": 420,
       "schedule": {
@@ -234,8 +234,8 @@
       "phase": 0,
       "title": {
         "en": "Careers in the Spatial Web",
-        "es-419": "",
-        "zh-Hans": ""
+        "es-419": "Carreras en la web espacial",
+        "zh-Hans": "空间网络中的职业"
       },
       "estimatedMinutes": 240,
       "schedule": {
@@ -323,7 +323,7 @@
       "id": "web-04-responsive-web-design",
       "courseId": "web-developer",
       "lessonId": "responsive-web-design-04",
-      "status": "draft",
+      "status": "review",
       "phase": 1,
       "title": {
         "en": "Responsive Web Design",
@@ -337,6 +337,7 @@
       },
       "difficulty": "beginner",
       "technologies": [
+        "HTML",
         "CSS"
       ],
       "hasCode": true,
@@ -346,7 +347,7 @@
       "id": "web-05-web-accessibility-foundations",
       "courseId": "web-developer",
       "lessonId": "web-accessibility-foundations-05",
-      "status": "draft",
+      "status": "review",
       "phase": 1,
       "title": {
         "en": "Web Accessibility Foundations",
@@ -360,6 +361,8 @@
       },
       "difficulty": "beginner",
       "technologies": [
+        "HTML",
+        "CSS",
         "ARIA"
       ],
       "hasCode": true,

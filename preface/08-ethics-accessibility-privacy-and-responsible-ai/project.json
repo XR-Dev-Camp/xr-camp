@@ -6,13 +6,13 @@
   "phase": 0,
   "title": {
     "en": "Ethics, Accessibility, Privacy, and Responsible AI",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Ética, accesibilidad, privacidad e IA responsable",
+    "zh-Hans": "伦理、无障碍、隐私与负责任的 AI"
   },
   "summary": {
     "en": "Audit a digital experience and publish a personal ethical development pledge.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Audita una experiencia digital y publica tu compromiso personal de desarrollo ético.",
+    "zh-Hans": "审查一项数字体验，并发布一份你个人的伦理开发承诺。"
   },
   "estimatedMinutes": 420,
   "schedule": {

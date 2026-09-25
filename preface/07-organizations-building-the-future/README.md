@@ -140,7 +140,7 @@ Then set its `data-tags` so the filters find it: `open` for open source and ethi
 
 | Requirement | WCAG 2.2 | Why |
 | --- | --- | --- |
-| Works without JavaScript | 4.1.2 | Every visitor sees every organisation. |
+| Works without JavaScript | Good practice (not a WCAG rule) | Every visitor sees every organisation. |
 | Filter state is exposed with `aria-pressed` | 4.1.2 | Screen readers say which filter is on. |
 | Filter results are announced | 4.1.3 | Status messages reach everyone. |
 | Selected filters differ by more than colour | 1.4.1 | The selected button is filled in, not only recoloured. |
@@ -187,7 +187,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 ## Women to Know
 
-**Xiaoqian Wu (吴小倩)** joined W3C in 2013 and has been the site manager of W3C China since 2018, as well as W3C's Director of China Member Relations. She is the W3C team contact for the Web Applications and Web Editing working groups, for the MiniApps working group, and for the Chinese Web Interest Group.
+**Xiaoqian Wu (吴小倩)** joined W3C in 2013 and has been the site manager of W3C China since 2018, as well as W3C's Director of China Member Relations. She is the W3C team contact for the Web Applications and Web Editing working groups and for the Chinese Web Interest Group, and was team contact for the MiniApps Working Group until it closed in 2026.
 
 That last group matters for learners: web standards must work for every language and writing system, and people like Wu make sure Chinese-language needs are part of the conversation from the start.
 

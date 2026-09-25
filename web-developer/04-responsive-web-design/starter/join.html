@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join a programme at Riverside Community Centre, or tell us how we are doing.">
+  <title>Join a programme - Riverside Community Centre</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p><a href="index.html">Riverside Community Centre</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="join.html" aria-current="page">Join a programme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Join a programme</h1>
+    <p>Fill in this form and we will contact you within two working days. Fields marked <strong>(required)</strong> must be filled in; everything else is optional.</p>
+
+    <form action="thanks.html" method="get">
+
+      <fieldset>
+        <legend>About you</legend>
+
+        <p>
+          <label for="name">Full name (required)</label><br>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </p>
+
+        <p>
+          <label for="email">Email address (required)</label><br>
+          <span id="email-hint">We only use it to confirm your place.</span><br>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint">
+        </p>
+
+        <p>
+          <label for="phone">Phone number</label><br>
+          <span id="phone-hint">Only if you would like a text reminder before each session.</span><br>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-hint">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which programme would you like to join? (required)</legend>
+        <p><input id="p-homework" name="programme" type="radio" value="homework" required> <label for="p-homework">Homework club</label></p>
+        <p><input id="p-youth" name="programme" type="radio" value="youth"> <label for="p-youth">Youth group</label></p>
+        <p><input id="p-english" name="programme" type="radio" value="english"> <label for="p-english">English conversation practice</label></p>
+        <p><input id="p-jobs" name="programme" type="radio" value="jobs"> <label for="p-jobs">Job search and CV support</label></p>
+        <p><input id="p-digital" name="programme" type="radio" value="digital"> <label for="p-digital">Digital skills drop-in</label></p>
+      </fieldset>
+
+      <p>
+        <label for="day">Which day suits you best?</label><br>
+        <select id="day" name="day">
+          <option value="">No preference</option>
+          <option value="mon">Monday</option>
+          <option value="tue">Tuesday</option>
+          <option value="wed">Wednesday</option>
+          <option value="thu">Thursday</option>
+          <option value="fri">Friday</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="needs">Is there anything we can do to make your visit easier?</label><br>
+        <span id="needs-hint">For example, step-free access, a quiet space, or a Spanish-speaking volunteer. Only share what you are comfortable sharing.</span><br>
+        <textarea id="needs" name="needs" rows="4" cols="40" aria-describedby="needs-hint"></textarea>
+      </p>
+
+      <p>
+        <input id="newsletter" name="newsletter" type="checkbox" value="yes">
+        <label for="newsletter">Send me the monthly newsletter by email</label>
+      </p>
+
+      <details>
+        <summary>How we use your information</summary>
+        <p>We use your name, email, and phone number only to arrange your place and remind you about sessions. We keep them for one year after your last visit, then delete them. Only centre staff can see them, and we never share them with anyone else. To see or delete your information, email <a href="mailto:hello@example.org">hello@example.org</a>.</p>
+      </details>
+
+      <p><button type="submit">Send my registration</button></p>
+    </form>
+
+    <h2 id="feedback-heading">Tell us how we are doing</h2>
+    <form action="thanks.html" method="get" aria-labelledby="feedback-heading">
+      <fieldset>
+        <legend>How was your last visit?</legend>
+        <p><input id="r5" name="rating" type="radio" value="5"> <label for="r5">Excellent</label></p>
+        <p><input id="r4" name="rating" type="radio" value="4"> <label for="r4">Good</label></p>
+        <p><input id="r3" name="rating" type="radio" value="3"> <label for="r3">OK</label></p>
+        <p><input id="r2" name="rating" type="radio" value="2"> <label for="r2">Poor</label></p>
+        <p><input id="r1" name="rating" type="radio" value="1"> <label for="r1">Very poor</label></p>
+      </fieldset>
+
+      <p>
+        <label for="comments">What could we do better?</label><br>
+        <span id="comments-hint">Up to 500 characters. You do not need to give your name.</span><br>
+        <textarea id="comments" name="comments" rows="5" cols="40" maxlength="500" aria-describedby="comments-hint"></textarea>
+      </p>
+
+      <p><button type="submit">Send feedback</button></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>Riverside Community Centre. <a href="#main">Back to top</a></p>
+  </footer>
+</body>
+</html>

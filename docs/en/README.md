@@ -9,3 +9,4 @@ Repository policies:
 - [Attribution](../ATTRIBUTION.md) and [third-party notices](../THIRD_PARTY_NOTICES.md)
 - [Commercial and institutional use](../COMMERCIAL_USE.md)
 - [Contributing](../../.github/CONTRIBUTING.md), [code of conduct](../../.github/CODE_OF_CONDUCT.md), and [security](../../.github/SECURITY.md)
+- [Translation review checklist](translation-review.md): what native-speaker reviewers should check

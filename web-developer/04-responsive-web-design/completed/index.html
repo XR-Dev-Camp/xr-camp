@@ -1,14 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- The Riverside site from Courses 1.1 to 1.3, now responsive: one page for every screen. -->
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Responsive Web Design - XR Camp reference solution</title>
+
+  <meta name="description" content="Opening hours, programmes, and contact details for Riverside Community Centre.">
+
+  <title>Riverside Community Centre - opening hours and programmes</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <main>
-    <h1>Responsive Web Design</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <h1>Riverside Community Centre</h1>
+    <p>A shared space for everyone in the Riverside neighbourhood.</p>
+  </header>
+
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#hours">Opening hours</a></li>
+      <li><a href="#programmes">Programmes</a></li>
+      <li><a href="#visit">Visit and contact</a></li>
+        <li><a href="join.html">Join a programme</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" tabindex="-1">
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About us</h2>
+
+      <p>
+        Riverside Community Centre has served the neighbourhood since 1974. We
+        run free and low-cost activities for all ages, and our building is open
+        to community groups who need a place to meet.
+      </p>
+
+      <p>
+        Everyone is welcome here, regardless of background, income, or ability.
+        If a barrier stops you taking part, please
+        <a href="#visit">get in touch</a> and we will do what we can.
+      </p>
+
+      <!-- srcset lists the same image at three widths; sizes tells the browser how
+           wide it will be shown. The browser downloads only the one it needs. -->
+      <img src="centre-960.jpg"
+           srcset="centre-480.jpg 480w, centre-960.jpg 960w, centre-1440.jpg 1440w"
+           sizes="(min-width: 48rem) 28rem, 100vw"
+           alt="The centre's front entrance, with a step-free ramp beside the main doors."
+           width="800" height="450">
+    </section>
+
+    <section id="hours" aria-labelledby="hours-heading">
+      <h2 id="hours-heading">Opening hours</h2>
+
+      <!-- On a narrow screen a wide table can scroll sideways inside this box,
+           instead of making the whole page scroll. tabindex="0" lets keyboard
+           users reach it and scroll with the arrow keys. -->
+      <div class="table-wrap" role="region" aria-labelledby="hours-caption" tabindex="0">
+      <table>
+        <caption id="hours-caption">Opening hours during term time</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Opens</th>
+            <th scope="col">Closes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Monday to Thursday</th>
+            <td>9am</td>
+            <td>9pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td>9am</td>
+            <td>6pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturday</th>
+            <td>10am</td>
+            <td>4pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Sunday</th>
+            <td>Closed</td>
+            <td>Closed</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>
+        Hours change during school holidays. Check our
+        <a href="#visit">contact details</a> before travelling.
+      </p>
+    </section>
+
+    <section id="programmes" aria-labelledby="programmes-heading">
+      <h2 id="programmes-heading">Programmes</h2>
+
+      <!-- Each programme is a card in a list: a grid lays them out in as many
+           columns as fit, from one on a phone to three on a wide screen. -->
+      <ul class="cards">
+        <li class="card">
+          <h3>Homework club</h3>
+          <p>Weekdays after school.</p>
+          <p class="tag">Children and young people</p>
+        </li>
+        <li class="card">
+          <h3>Youth group</h3>
+          <p>Friday evenings.</p>
+          <p class="tag">Children and young people</p>
+        </li>
+        <li class="card">
+          <h3>Holiday activity scheme</h3>
+          <p>During school holidays.</p>
+          <p class="tag">Children and young people</p>
+        </li>
+        <li class="card">
+          <h3>English conversation practice</h3>
+          <p>Tuesday and Thursday mornings.</p>
+          <p class="tag">Adults</p>
+        </li>
+        <li class="card">
+          <h3>Job search and CV support</h3>
+          <p>Wednesday afternoons.</p>
+          <p class="tag">Adults</p>
+        </li>
+        <li class="card">
+          <h3>Digital skills drop-in</h3>
+          <p>Monday evenings.</p>
+          <p class="tag">Adults</p>
+        </li>
+      </ul>
+
+      <h3>How to join a programme</h3>
+      <ol>
+        <li>Check the opening hours above.</li>
+        <li>Call or email us, or come to reception.</li>
+        <li>Complete a short registration form on your first visit.</li>
+      </ol>
+
+      <h3>Welcome video</h3>
+      <video controls width="640">
+        <source src="../../01-html-foundations/assets/welcome.mp4" type="video/mp4">
+        <track kind="captions"
+               src="../../01-html-foundations/assets/welcome-captions.vtt"
+               srclang="en"
+               label="English"
+               default>
+        <p>
+          Your browser cannot play this video.
+          <a href="../../01-html-foundations/assets/welcome.mp4">Download the welcome video (MP4)</a>
+          or read the <a href="#about">written introduction above</a>.
+        </p>
+      </video>
+    </section>
+
+    <section id="visit" aria-labelledby="visit-heading">
+      <h2 id="visit-heading">Visit and contact</h2>
+
+      <dl>
+        <dt>Address</dt>
+        <dd>14 Mill Lane, Riverside</dd>
+
+        <dt>Telephone</dt>
+        <dd><a href="tel:+441234567890">01234 567890</a></dd>
+
+        <dt>Email</dt>
+        <dd><a href="mailto:hello@riverside.example">hello@riverside.example</a></dd>
+
+        <dt>Access</dt>
+        <dd>
+          Step-free entrance, accessible toilet, and a hearing loop at
+          reception. Assistance dogs are welcome.
+        </dd>
+      </dl>
+
+      <p>
+        Our building is managed by the borough council. You can read the
+        <a href="https://example.gov.uk/community-buildings"
+           target="_blank"
+           rel="noopener">
+          borough council's community buildings policy (opens in a new tab)</a>.
+      </p>
+    </section>
+
   </main>
+
+  <footer>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#main">Back to top</a></li>
+        <li><a href="https://example.gov.uk/accessibility">Accessibility statement</a></li>
+      </ul>
+    </nav>
+
+    <p>
+      <small>
+        Riverside Community Centre is a registered charity.
+        Page last reviewed on <time datetime="2026-07-30">30 July 2026</time>.
+      </small>
+    </p>
+  </footer>
+
 </body>
 </html>

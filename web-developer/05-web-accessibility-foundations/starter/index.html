@@ -1,19 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Web Accessibility Foundations - XR Camp starter</title>
+  <title>Page</title>
+  <!--
+    WARNING FOR LEARNERS: this page is deliberately inaccessible.
+    It has at least fourteen accessibility problems, planted on purpose for
+    Course 1.5. Your job is to find them, write them down, and fix them.
+  -->
+  <style>
+    body { max-width: 50rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #1b1b1f; background: #fdfcf8; }
+    .title { font-size: 2.2rem; font-weight: 700; color: #3f1d5e; }
+    .subtitle { font-size: 1.5rem; font-weight: 700; color: #3f1d5e; margin-top: 2rem; }
+    .small { color: #b7b3bd; font-size: 0.85rem; }
+    .full { color: #c2372b; }
+    .ticker { overflow: hidden; white-space: nowrap; background: #5b2a86; color: #fff; padding: 0.5rem; }
+    .ticker span { display: inline-block; padding-left: 100%; animation: scroll 12s linear infinite; }
+    @keyframes scroll { to { transform: translateX(-100%); } }
+    .button { display: inline-block; padding: 0.5rem 1rem; background: #5b2a86; color: #fff; cursor: pointer; }
+    a:focus, .button:focus, input:focus { outline: none; }
+    table { border-collapse: collapse; }
+    td { border: 1px solid #c9c4d4; padding: 0.4rem 0.6rem; }
+    img { max-width: 100%; height: auto; }
+  </style>
 </head>
 <body>
-  <main>
-    <!-- Add your main heading below. -->
+  <div class="ticker"><span>New! Free coding workshops for women every Saturday. Places are limited!</span></div>
 
-    <!-- Add your project content below. -->
+  <div class="title">Riverside events</div>
+  <p>What's on at Riverside Community Centre this month.</p>
 
-  </main>
+  <img src="centre-960.jpg" width="800" height="450">
+  <p><img src="divider.svg" alt="decoration" width="600" height="20"></p>
+
+  <div class="subtitle">This month</div>
+  <p>Events in <span class="full">red</span> are full.</p>
+  <table>
+    <tr><td>Event</td><td>Day</td><td>Time</td></tr>
+    <tr><td>Coding for beginners</td><td>Saturday</td><td>10am</td></tr>
+    <tr><td class="full">Community lunch</td><td>Sunday</td><td>1pm</td></tr>
+    <tr><td>Homework club open day</td><td>Wednesday</td><td>4pm</td></tr>
+    <tr><td class="full">Craft fair</td><td>Saturday</td><td>11am</td></tr>
+  </table>
+
+  <div class="subtitle">Register</div>
+  <p>To register for the coding workshop, <a href="#">click here</a>.</p>
+  <p>Or leave your email and we will contact you:</p>
+  <p><input type="email" placeholder="Email" tabindex="3"> <span class="button" onclick="alert('Thank you!')">Send</span></p>
+
+  <p class="small">Places are given in the order we receive them. Please arrive ten minutes early.</p>
 </body>
 </html>

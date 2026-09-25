@@ -22,7 +22,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | Phase | You will build | Time | Lessons ready |
 | --- | --- | --- | --- |
 | [0 · Welcome to the Future](preface/README.md) | Your first 3D world, a timeline of the web, and a lab comparing three ways to build in 3D. | 64 sessions · about 4 months | 9 of 9 |
-| [1 · Become a Web Developer](web-developer/README.md) | Accessible, responsive websites, published for anyone in the world to visit. | 144 sessions · about 8 months | 3 of 9 |
+| [1 · Become a Web Developer](web-developer/README.md) | Accessible, responsive websites, published for anyone in the world to visit. | 144 sessions · about 8 months | 5 of 9 |
 | [2 · Become a Frontend Engineer](frontend-engineer/README.md) | Web apps that install on a phone, work offline, and use live data. | 145 sessions · about 8 months | 0 of 9 |
 | [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions · about 8 months | 0 of 7 |
 | [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions · about 6 months | 0 of 6 |
@@ -55,8 +55,8 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | 1 | [HTML Foundations](web-developer/01-html-foundations/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 2 | [Accessible Forms and User Input](web-developer/02-accessible-forms-and-user-input/README.md) | 7 h · 10 sessions | ✅ Ready |
 | 3 | [CSS Foundations](web-developer/03-css-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
-| 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.md) | 14 h · 19 sessions | 🚧 Coming soon |
-| 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
+| 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.md) | 14 h · 19 sessions | ✅ Ready |
+| 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.md) | 10 h · 14 sessions | ✅ Ready |
 | 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.md) | 16 h · 22 sessions | 🚧 Coming soon |
 | 7 | [Developer Tools, Debugging, and Testing](web-developer/07-developer-tools-debugging-and-testing/README.md) | 9 h · 12 sessions | 🚧 Coming soon |
 | 8 | [Git, GitHub, and Publishing](web-developer/08-git-github-and-publishing/README.md) | 9 h · 12 sessions | 🚧 Coming soon |

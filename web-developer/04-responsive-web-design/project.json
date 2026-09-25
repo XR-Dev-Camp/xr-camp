@@ -2,7 +2,7 @@
   "id": "web-04-responsive-web-design",
   "courseId": "web-developer",
   "lessonId": "responsive-web-design-04",
-  "status": "draft",
+  "status": "review",
   "phase": 1,
   "title": {
     "en": "Responsive Web Design",
@@ -21,6 +21,7 @@
   },
   "difficulty": "beginner",
   "technologies": [
+    "HTML",
     "CSS"
   ],
   "hasCode": true,
@@ -38,6 +39,9 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "reflow",
+    "target-size",
+    "orientation"
   ]
 }

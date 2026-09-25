@@ -169,7 +169,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 ## Women to Know
 
-**Mariana Costa Checa** is a Peruvian social entrepreneur who, in 2014, co-founded **Laboratoria**, an organisation born in Lima that trains women who face barriers to technology careers, many from low-income backgrounds, as web developers and UX designers across Latin America.
+**Mariana Costa Checa** is a Peruvian social entrepreneur who, in 2014, co-founded **Laboratoria**, an organisation born in Lima that helps women who face barriers to technology careers, many from low-income backgrounds, get jobs in technology across Latin America. It began by training them as web developers and UX designers.
 
 Laboratoria started from the same idea as XR Camp: talent is everywhere, but opportunity is not. Thousands of women have changed careers through it, many of them starting exactly where you are now.
 
@@ -177,7 +177,7 @@ Laboratoria started from the same idea as XR Camp: talent is everywhere, but opp
 
 ## Standards spotlight
 
-Web standards create careers as well as technologies. Because HTML, CSS, JavaScript, and WebXR work the same everywhere, the skills you learn at XR Camp are not tied to one company or one country: they transfer to any job, anywhere the web works.
+Web standards create careers as well as technologies. Because HTML, CSS, and JavaScript are open standards that work the same in every modern browser, and WebXR is built the same way, the skills you learn at XR Camp are not tied to one company or one country: they transfer to any job, anywhere the web works.
 
 ## License
 

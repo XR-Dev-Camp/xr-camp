@@ -2,18 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>JavaScript Foundations - XR Camp starter</title>
+  <meta name="description" content="Search and filter Riverside Community Centre's programmes, and save the ones you like.">
+  <title>Programme explorer - Riverside Community Centre</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- defer: run the script after the page's HTML has been read, so every
+       element it looks for already exists. -->
+  <script src="explorer.js" defer></script>
 </head>
 <body>
-  <main>
-    <!-- Add your main heading below. -->
+  <a href="#main">Skip to main content</a>
 
-    <!-- Add your project content below. -->
+  <header>
+    <p><a href="../../04-responsive-web-design/completed/index.html">Riverside Community Centre</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="../../04-responsive-web-design/completed/index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Programme explorer</a></li>
+        <li><a href="../../04-responsive-web-design/completed/join.html">Join a programme</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main id="main">
+    <h1>Programme explorer</h1>
+    <p>Find a programme that suits you. Results update as you type or choose.</p>
+
+    <form id="filters" class="filters" role="search" aria-label="Filter programmes">
+      <p>
+        <label for="search">Search</label><br>
+        <input id="search" type="search" autocomplete="off">
+      </p>
+      <p>
+        <label for="audience">Who is it for?</label><br>
+        <select id="audience">
+          <option value="all">Everyone and all ages</option>
+          <option value="children">Children and young people</option>
+          <option value="adults">Adults</option>
+          <option value="everyone">Whole community</option>
+        </select>
+      </p>
+      <p>
+        <input id="free-only" type="checkbox">
+        <label for="free-only">Free programmes only</label>
+      </p>
+    </form>
+
+    <!-- A live region: when its text changes, screen readers announce it. -->
+    <p id="count" role="status"></p>
+
+    <h2>Programmes</h2>
+    <noscript><p>The explorer needs JavaScript. You can see every programme on our <a href="../../04-responsive-web-design/completed/index.html#programmes">home page</a>.</p></noscript>
+    <ul id="results" class="cards"></ul>
+
+    <h2>My saved programmes</h2>
+    <p>Saved in this browser only. Nothing is sent to us.</p>
+    <ul id="saved"></ul>
   </main>
+
+  <footer>
+    <p>Riverside Community Centre. <a href="#main">Back to top</a></p>
+  </footer>
 </body>
 </html>

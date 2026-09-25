@@ -2,23 +2,22 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Layout
+- [ ] At 320 pixels wide, no page scrolls sideways (except inside the table box).
+- [ ] At 390, 768, and 1280 pixels, every page looks intentional.
+- [ ] The navigation uses flexbox and wraps, and every link is at least 44 pixels tall.
+- [ ] The programmes are a list of cards in a CSS grid.
+- [ ] On wide screens, the About text and picture sit side by side.
+
+## Images and tables
+- [ ] The picture uses `srcset` and `sizes`, and the Network tab shows a smaller file on a phone.
+- [ ] The opening-hours table is in a scrollable box you can reach with Tab.
 
 ## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+- [ ] At 200% zoom and at your device's biggest text size, nothing is cut off.
+- [ ] The site works in portrait and landscape.
+- [ ] The HTML order is the same as the visual order.
+- [ ] Focus is still clearly visible everywhere.
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+## Testing
+- [ ] You tested on at least one real phone.

@@ -1,0 +1,399 @@
+/*
+  Riverside Community Centre: visual system
+  ------------------------------------------
+  One stylesheet for every page of the site. It is organised from the most
+  general rules to the most specific:
+
+    1. Design tokens     colours, type sizes, and spacing, named once
+    2. Base              the whole page: box model, body, text
+    3. Typography        headings, paragraphs, links, lists
+    4. Layout            the width of the page and its main areas
+    5. Components        skip link, header, navigation, images, tables, forms
+    6. States            hover, focus, and current page
+    7. Responsive        Course 1.4: flexbox, grid, fluid type, container queries
+
+  Mobile first: every rule above works on a phone. Section 7 adds layout for
+  larger screens, and never takes anything away from smaller ones.
+
+  Every colour pair used for text was checked for WCAG 2.2 contrast.
+*/
+
+
+/* 1. Design tokens ------------------------------------------------------- */
+
+:root {
+  /* Colour. Contrast on the page background (--color-bg):
+     text 16.7:1, muted 8.5:1, primary 9.7:1, accent 6.3:1, focus 4.6:1. */
+  --color-text: #1b1b1f;
+  --color-muted: #4a4a55;
+  --color-primary: #5b2a86;
+  --color-primary-dark: #3f1d5e;
+  --color-accent: #b0245a;
+  --color-focus: #d62f6b;
+  --color-bg: #fdfcf8;
+  --color-surface: #ffffff;
+  --color-band: #efe9f7;
+  --color-border: #8a8398;   /* 3.6:1 on white: enough for form field edges */
+  --color-line: #c9c4d4;     /* decoration only: never the only way to see something */
+
+  /* Type. A scale where each step is 1.25 times the last. rem units follow
+     the reader's own browser font size, so text grows when they zoom. */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --step-0: 1rem;
+  --step-1: 1.25rem;
+  --step-2: 1.563rem;
+  --step-3: 1.953rem;
+  --step-4: 2.441rem;
+
+  /* Space. One small set of sizes, used everywhere, keeps the page calm. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  --radius: 0.5rem;
+  --measure: 65ch;   /* comfortable line length for reading */
+}
+
+
+/* 2. Base ---------------------------------------------------------------- */
+
+/* Make width include padding and border. Without this, adding padding makes
+   boxes wider than you set them, which is the most common CSS surprise. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+
+/* 3. Typography ---------------------------------------------------------- */
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+}
+
+h1 { font-size: var(--step-4); margin: 0 0 var(--space-3); }
+h2 { font-size: var(--step-3); margin: var(--space-6) 0 var(--space-3); }
+h3 { font-size: var(--step-2); margin: var(--space-5) 0 var(--space-2); }
+
+p,
+li {
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+/* Visited links look different, so people know where they have been. */
+a:visited {
+  color: var(--color-accent);
+}
+
+
+/* 4. Layout -------------------------------------------------------------- */
+
+/* On the home page the navigation sits between the header and main, so it
+   gets the same width rules. */
+header,
+body > nav,
+main,
+footer {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--space-3);
+}
+
+footer {
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+}
+
+
+/* 5. Components ---------------------------------------------------------- */
+
+/* Skip link: off-screen until it receives keyboard focus, then visible. */
+a[href="#main"]:first-child {
+  position: absolute;
+  left: -999rem;
+}
+
+a[href="#main"]:first-child:focus {
+  left: var(--space-3);
+  top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface);
+  z-index: 10;
+}
+
+/* Header band: the colour stretches across the whole window, while the text
+   inside lines up with the 60rem column below. max() picks the larger of
+   the normal padding and the space either side of the column. */
+body > header {
+  max-width: none;
+  padding-inline: max(var(--space-3), calc((100% - 60rem) / 2 + var(--space-3)));
+  background: var(--color-band);
+  border-bottom: 4px solid var(--color-primary);
+}
+
+/* Navigation: a list, displayed in a row. (Course 1.4 makes it responsive.) */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  font-weight: 600;
+}
+
+/* Images and video never overflow their container. */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* Tables. */
+table {
+  border-collapse: collapse;
+  margin: var(--space-3) 0;
+  background: var(--color-surface);
+}
+
+caption {
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: var(--space-2);
+}
+
+th,
+td {
+  border: 1px solid var(--color-line);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+}
+
+thead th {
+  background: var(--color-band);
+}
+
+/* Forms. */
+fieldset {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+legend {
+  padding: 0 var(--space-2);
+  font-weight: 700;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  max-width: 30rem;
+  padding: var(--space-2);
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+/* Radio buttons and checkboxes: a larger target, closer to its label. */
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: -0.2rem;
+  accent-color: var(--color-primary);
+}
+
+button {
+  padding: var(--space-2) var(--space-4);
+  font: inherit;
+  font-weight: 700;
+  color: var(--color-surface);
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+details {
+  margin: var(--space-3) 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+
+/* 6. States -------------------------------------------------------------- */
+
+a:hover {
+  text-decoration-thickness: 0.2em;
+}
+
+button:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Focus: clearly visible on everything people can reach with the keyboard.
+   :focus-visible shows it for keyboard users without a ring on every click. */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* The current page in the navigation: marked by more than colour alone. */
+nav a[aria-current="page"] {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+
+/* 7. Responsive (Course 1.4) --------------------------------------------- */
+
+/* Fluid headings: clamp(smallest, preferred, largest). The preferred size
+   grows with the width of the window (vw), but never beyond the limits. */
+h1 { font-size: clamp(var(--step-3), 1.5rem + 3vw, var(--step-4)); }
+h2 { font-size: clamp(var(--step-2), 1.25rem + 2vw, var(--step-3)); }
+
+/* Navigation with flexbox: items sit in a row and wrap onto new lines when
+   there is not enough room. gap spaces them without margins. */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
+}
+
+/* Touch targets: at least 44 by 44 CSS pixels, so fingers can hit them. */
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+/* Programme cards with grid: as many columns as fit, each at least 15rem.
+   min(100%, 15rem) stops a card overflowing a very narrow phone. */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-top: 6px solid var(--color-primary);
+  border-radius: var(--radius);
+  /* Makes the card a container, so its contents can respond to the card's
+     own width rather than the window's. */
+  container-type: inline-size;
+}
+
+.card h3 { margin-top: 0; font-size: var(--step-1); }
+.card p { margin: 0 0 var(--space-2); }
+
+.tag {
+  display: inline-block;
+  padding: 0 var(--space-2);
+  background: var(--color-band);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+/* Container query: in a wide card, the tag moves to the top-right corner. */
+@container (min-width: 22rem) {
+  .card { position: relative; }
+  .tag { position: absolute; top: var(--space-3); right: var(--space-3); }
+  .card h3 { padding-right: 12rem; }
+}
+
+/* A scrollable box for wide tables. */
+.table-wrap {
+  overflow-x: auto;
+}
+
+/* Larger screens: the About text and its picture side by side. */
+@media (min-width: 48rem) {
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-5);
+    align-items: start;
+  }
+
+  #about h2 {
+    grid-column: 1 / -1;
+  }
+
+  #about img {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+  }
+}
+
+
+/* 8. The programme explorer (Course 1.6) ----------------------------------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-5);
+  align-items: end;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+
+.filters p { margin: 0; }
+
+/* A saved programme's button is filled in and shows a tick: more than colour. */
+.card button[aria-pressed="true"] {
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+}
+
+.card button[aria-pressed="true"]::before {
+  content: "✓ ";
+}

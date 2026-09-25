@@ -2,7 +2,7 @@
   "id": "web-05-web-accessibility-foundations",
   "courseId": "web-developer",
   "lessonId": "web-accessibility-foundations-05",
-  "status": "draft",
+  "status": "review",
   "phase": 1,
   "title": {
     "en": "Web Accessibility Foundations",
@@ -21,6 +21,8 @@
   },
   "difficulty": "beginner",
   "technologies": [
+    "HTML",
+    "CSS",
     "ARIA"
   ],
   "hasCode": true,
@@ -38,6 +40,12 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "image-alt",
+    "link-name",
+    "table-headers",
+    "form-labels",
+    "skip-link",
+    "pause-stop-hide"
   ]
 }

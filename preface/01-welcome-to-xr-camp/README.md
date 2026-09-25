@@ -158,7 +158,7 @@ Most people who stop learning to code do not stop because it is too hard. They s
 
 ## Performance considerations
 
-A-Frame is a large download, about 1.3 MB, the first time the page opens. After that your browser remembers it. If your connection is slow or metered, open the page once on a good connection and it will load quickly afterwards.
+A-Frame is a large download the first time the page opens: about 1.3 MB of code, or about 350 KB after the server compresses it. After that your browser remembers it. If your connection is slow or metered, open the page once on a good connection and it will load quickly afterwards.
 
 ## Common mistakes
 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: an audited 3D scene - XR Camp reference solution</title>
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    body { max-width: 50rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #1b1b1f; background: #fdfcf8; }
+    a-scene { display: block; width: 100%; height: 20rem; }
+    button { font: inherit; padding: 0.5rem 1rem; background: #5b2a86; color: #fff; border: 2px solid #5b2a86; border-radius: 0.25rem; cursor: pointer; }
+    button[aria-pressed="true"] { background: #fff; color: #5b2a86; }
+    :focus-visible { outline: 3px solid #d62f6b; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Our 3D logo</h1>
+
+    <!-- Fix 1: a text description, updated when the scene changes. -->
+    <p id="scene-description" aria-live="polite">A purple cube, turning slowly on a pale blue background.</p>
+
+    <!-- Fix 2: every interaction has a keyboard route: a real button does what clicking the cube does.
+         Fix 3: motion can be paused, and starts paused for people who ask for reduced motion. -->
+    <p>
+      <button type="button" id="change">Change the colour</button>
+      <button type="button" id="pause" aria-pressed="false">Pause animation</button>
+    </p>
+
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false" cursor="rayOrigin: mouse" raycaster="objects: .clickable">
+      <a-sky color="#eef4ff"></a-sky>
+      <!-- Slower: 12 seconds per turn instead of 3. -->
+      <a-box id="logo" class="clickable" position="0 1.5 -3" color="#5b2a86"
+             animation="property: rotation; to: 0 360 0; loop: true; dur: 12000; easing: linear"></a-box>
+    </a-scene>
+  </main>
+
+  <script>
+    const logo = document.getElementById('logo');
+    const description = document.getElementById('scene-description');
+    const pause = document.getElementById('pause');
+    const colours = [['#5b2a86', 'purple'], ['#1f8a8a', 'teal'], ['#b0245a', 'pink'], ['#e0a526', 'gold']];
+    let i = 0;
+
+    function describe() {
+      const paused = pause.getAttribute('aria-pressed') === 'true';
+      description.textContent = `A ${colours[i][1]} cube, ${paused ? 'standing still' : 'turning slowly'} on a pale blue background.`;
+    }
+
+    // One function, two ways to reach it: clicking the cube, or the button.
+    function changeColour() {
+      i = (i + 1) % colours.length;
+      logo.setAttribute('color', colours[i][0]);
+      describe();
+    }
+    logo.addEventListener('click', changeColour);
+    document.getElementById('change').addEventListener('click', changeColour);
+
+    function setPaused(paused) {
+      logo.setAttribute('animation', 'enabled', !paused);
+      pause.setAttribute('aria-pressed', String(paused));
+      describe();
+    }
+    pause.addEventListener('click', () => setPaused(pause.getAttribute('aria-pressed') !== 'true'));
+
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (logo.hasLoaded) setPaused(reduce);
+    else logo.addEventListener('loaded', () => setPaused(reduce));
+  </script>
+</body>
+</html>

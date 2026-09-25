@@ -6,7 +6,7 @@ Count a real page's requests in your browser's developer tools.
 
 ## Task
 
-1. Open any website. Press **F12** (on a Mac, **⌘ + Option + I**) to open the developer tools.
+1. Open any website. Press **F12** (on a Mac, **⌘ + Option + I**) to open the developer tools. In Safari, first turn on **Settings → Advanced → Show features for web developers**.
 2. Choose the **Network** tab and reload the page.
 3. Each row is one request. Find:
    - how many requests there were in total (shown at the bottom);

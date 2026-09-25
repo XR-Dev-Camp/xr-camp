@@ -73,7 +73,7 @@ Every choice a developer makes decides who can use a product, what it does with 
 
 ### Accessibility and disability
 
-The World Health Organization estimates that about 1.3 billion people, around one in six, live with a significant disability. Some are blind or have low vision; some are Deaf or hard of hearing; some cannot use a mouse or a touchscreen; some find complex pages hard to follow. Almost everyone will be disabled at some point, through age, illness, or injury, and anyone can be temporarily limited: a broken arm, bright sunlight on a screen, a noisy bus.
+The World Health Organization estimates that about 1.3 billion people, around one in six, live with a significant disability. Some are blind or have low vision; some are Deaf or hard of hearing; some cannot use a mouse or a touchscreen; some find complex pages hard to follow. Many people become disabled at some point in their lives, through age, illness, or injury, and anyone can be temporarily limited: a broken arm, bright sunlight on a screen, a noisy bus.
 
 The **Web Content Accessibility Guidelines (WCAG)** describe how to build for all of them, organised around four principles, often remembered as **POUR**:
 
@@ -96,7 +96,7 @@ Every piece of personal information you collect is a responsibility: it must be 
 
 | Pattern | What it does |
 | --- | --- |
-| **Fake urgency** | Countdowns and "only 2 left!" messages that are not true |
+| **Fake urgency and scarcity** | Countdowns and "only 2 left!" messages that are not true |
 | **Hidden costs** | Fees that appear only at the last step |
 | **Confirmshaming** | Making you feel foolish for saying no |
 | **Pre-ticked boxes** | Agreeing on your behalf unless you notice |
@@ -217,14 +217,14 @@ Three optional extensions, in [`challenges/`](challenges/):
 ## Further reading
 
 - [W3C: Introduction to web accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
-- [W3C: WCAG 2.2 at a glance](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)
+- [W3C: WCAG 2 at a glance](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)
 - [Deceptive Design](https://www.deceptive.design/): examples of deceptive patterns
-- [Creative Commons: About the licences](https://creativecommons.org/share-your-work/cclicenses/)
+- [Creative Commons: About the licences](https://creativecommons.org/cc-licenses/)
 - [XR Guild](https://xrguild.org/)
 
 ## Women to Know
 
-**Nina da Hora** is a Brazilian computer scientist who describes herself as an anti-racist hacker. Her research at UNICAMP studies why facial-recognition and computer-vision systems fail on Black faces, and in 2020 she founded Instituto da Hora, a nonprofit working for digital rights.
+**Nina da Hora** is a Brazilian computer scientist widely known as an anti-racist hacker ("hacker antirracista"). Her master's research at UNICAMP, completed in 2026, studied why facial-recognition and computer-vision systems fail on Black faces, and in 2020 she founded Instituto da Hora, a nonprofit working for digital rights.
 
 Her work is a reminder of the first idea in this lesson: technology is not neutral. Asking who a system fails, and why, is part of a developer's job.
 

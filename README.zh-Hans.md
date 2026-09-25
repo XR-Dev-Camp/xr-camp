@@ -22,7 +22,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 阶段 | 你将构建 | 时长 | 已完成课程 |
 | --- | --- | --- | --- |
 | [0 · 欢迎来到未来](preface/README.zh-Hans.md) | 你的第一个 3D 世界、一条网络发展时间线，以及一个比较三种 3D 构建方式的实验室。 | 64 次学习 · 约 4 个月 | 9 课中 9 课 |
-| [1 · 成为网页开发者](web-developer/README.zh-Hans.md) | 无障碍、响应式的网站，发布到网上，让世界各地的人都能访问。 | 144 次学习 · 约 8 个月 | 9 课中 3 课 |
+| [1 · 成为网页开发者](web-developer/README.zh-Hans.md) | 无障碍、响应式的网站，发布到网上，让世界各地的人都能访问。 | 144 次学习 · 约 8 个月 | 9 课中 5 课 |
 | [2 · 成为前端工程师](frontend-engineer/README.zh-Hans.md) | 可以安装到手机、离线运行并使用实时数据的网页应用。 | 145 次学习 · 约 8 个月 | 9 课中 0 课 |
 | [3 · 成为 Web3D 开发者](web3d-developer/README.zh-Hans.md) | 使用 A-Frame 和 three.js 构建的交互式 3D 体验。 | 138 次学习 · 约 8 个月 | 7 课中 0 课 |
 | [4 · 成为沉浸式开发者](immersive-developer/README.zh-Hans.md) | 通过一个链接就能在头显中打开的虚拟现实和增强现实体验。 | 111 次学习 · 约 6 个月 | 6 课中 0 课 |
@@ -39,14 +39,14 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
 | 1 | [欢迎来到 XR Camp](preface/01-welcome-to-xr-camp/README.zh-Hans.md) | 2 小时 · 3 次学习 | ✅ 已完成 |
-| 2 | [Computer Fundamentals](preface/02-computer-fundamentals/README.zh-Hans.md) | 6 小时 · 8 次学习 | ✅ 已完成 |
-| 3 | [The Internet and the Web](preface/03-the-internet-and-the-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | ✅ 已完成 |
+| 2 | [计算机基础](preface/02-computer-fundamentals/README.zh-Hans.md) | 6 小时 · 8 次学习 | ✅ 已完成 |
+| 3 | [互联网与万维网](preface/03-the-internet-and-the-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | ✅ 已完成 |
 | 4 | [万维网发展史](preface/04-history-of-the-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | ✅ 已完成 |
 | 5 | [Web3D 发展史](preface/05-history-of-web3d/README.zh-Hans.md) | 6 小时 · 8 次学习 | ✅ 已完成 |
-| 6 | [The Spatial Web](preface/06-the-spatial-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | ✅ 已完成 |
-| 7 | [Organizations Building the Future](preface/07-organizations-building-the-future/README.zh-Hans.md) | 6 小时 · 8 次学习 | ✅ 已完成 |
-| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](preface/08-ethics-accessibility-privacy-and-responsible-ai/README.zh-Hans.md) | 7 小时 · 10 次学习 | ✅ 已完成 |
-| 9 | [Careers in the Spatial Web](preface/09-careers-in-the-spatial-web/README.zh-Hans.md) | 4 小时 · 6 次学习 | ✅ 已完成 |
+| 6 | [空间网络](preface/06-the-spatial-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | ✅ 已完成 |
+| 7 | [构建未来的组织](preface/07-organizations-building-the-future/README.zh-Hans.md) | 6 小时 · 8 次学习 | ✅ 已完成 |
+| 8 | [伦理、无障碍、隐私与负责任的 AI](preface/08-ethics-accessibility-privacy-and-responsible-ai/README.zh-Hans.md) | 7 小时 · 10 次学习 | ✅ 已完成 |
+| 9 | [空间网络中的职业](preface/09-careers-in-the-spatial-web/README.zh-Hans.md) | 4 小时 · 6 次学习 | ✅ 已完成 |
 
 ### 阶段 1 · 成为网页开发者
 
@@ -55,8 +55,8 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 1 | [HTML 基础](web-developer/01-html-foundations/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 2 | [Accessible Forms and User Input](web-developer/02-accessible-forms-and-user-input/README.zh-Hans.md) | 7 小时 · 10 次学习 | ✅ 已完成 |
 | 3 | [CSS Foundations](web-developer/03-css-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
-| 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
-| 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |
+| 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
+| 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
 | 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 | 🚧 即将推出 |
 | 7 | [Developer Tools, Debugging, and Testing](web-developer/07-developer-tools-debugging-and-testing/README.zh-Hans.md) | 9 小时 · 12 次学习 | 🚧 即将推出 |
 | 8 | [Git, GitHub, and Publishing](web-developer/08-git-github-and-publishing/README.zh-Hans.md) | 9 小时 · 12 次学习 | 🚧 即将推出 |

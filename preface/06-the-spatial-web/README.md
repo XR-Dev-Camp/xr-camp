@@ -82,7 +82,7 @@ For most of its history, the web has been flat: text and pictures on a rectangle
 - **Augmented reality (AR)** adds digital things to the real world: a virtual plant on your real table, seen through your phone's camera or through glasses.
 - **Mixed reality (MR)** is AR where the digital things understand and respond to the real space: a virtual ball that bounces off your real wall.
 
-**XR** (extended reality) is the umbrella word for all three, and **WebXR** is the web standard that lets a web page open in any of them, from a link, with no app to install.
+**XR** (extended reality) is the umbrella word for all three, and **WebXR** is the web standard that lets a web page open in any of them, from a link, with no app to install, in browsers that support it.
 
 ### Spatial computing, digital twins, and maps
 
@@ -136,12 +136,12 @@ Change the 3D shapes' colours, sizes, and positions to match your object. Then r
 | --- | --- | --- |
 | The SVG has a text alternative | 1.1.1 | A drawing needs words for people who cannot see it. |
 | The 3D scene has a matching description | 1.1.1 | The same, for the 3D view. |
-| The immersive buttons only appear when they work | 3.2.4 | No dead ends. |
+| The immersive buttons only appear when they work | Good practice (not a WCAG rule) | No dead ends. |
 | The comparison table has a caption and headers | 1.3.1 | Each cell keeps its meaning. |
 
 ## Performance considerations
 
-The 2D view costs a few kilobytes. The 3D view downloads A-Frame (about 1.3 MB) the first time. That difference is the whole argument of this lesson: every dimension you add has a cost for the people you build for.
+The 2D view costs a few kilobytes. The 3D view downloads A-Frame (about 1.3 MB of code, about 350 KB after the server compresses it) the first time. That difference is the whole argument of this lesson: every dimension you add has a cost for the people you build for.
 
 ## Common mistakes
 
@@ -180,7 +180,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 ## Women to Know
 
-**Fei-Fei Li (李飞飞)** is a Stanford computer scientist who created ImageNet, the collection of labelled photographs that sparked modern deep learning. She co-directs Stanford's Human-Centered AI Institute and co-founded AI4ALL, a nonprofit that opens AI education to young people from groups under-represented in the field. In 2024 she co-founded World Labs, where, as CEO, she works on what she calls "spatial intelligence": AI that understands 3D worlds.
+**Fei-Fei Li (李飞飞)** is a Stanford computer scientist who created ImageNet, the collection of labelled photographs that sparked modern deep learning. She co-directs Stanford's Human-Centered AI Institute and co-founded AI4ALL, a nonprofit that helps students from groups under-represented in AI to study it and build careers in it. In 2024 she co-founded World Labs, where, as CEO, she works on what she calls "spatial intelligence": AI that understands 3D worlds.
 
 She grew up in Chengdu before moving to the United States at sixteen. Her work connects two ideas from this lesson: computers learning to see, and computers learning to understand space.
 

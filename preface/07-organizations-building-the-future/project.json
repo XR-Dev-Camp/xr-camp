@@ -6,13 +6,13 @@
   "phase": 0,
   "title": {
     "en": "Organizations Building the Future",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Organizaciones que construyen el futuro",
+    "zh-Hans": "构建未来的组织"
   },
   "summary": {
     "en": "Create an interactive ecosystem map connecting standards organizations to technologies.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea un mapa interactivo del ecosistema que conecta las organizaciones de estándares con las tecnologías.",
+    "zh-Hans": "创建一张交互式生态地图，把标准组织与它们负责的技术联系起来。"
   },
   "estimatedMinutes": 360,
   "schedule": {

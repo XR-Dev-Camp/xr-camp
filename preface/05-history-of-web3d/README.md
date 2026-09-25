@@ -150,7 +150,7 @@ Look closely at the three boxes. They are different sizes, turned differently, a
 
 ## Performance considerations
 
-Each example downloads its library the first time: about 1.9 MB for three.js (in two files), 0.8 MB for X3DOM, and 1.3 MB for A-Frame. The iframes use `loading="lazy"`, so on a phone, examples further down the page load only when you scroll to them. On a slow connection, open the lab once while you have a good signal; your browser keeps the libraries afterwards.
+Each example downloads its library the first time: about 1.9 MB of code for three.js (in two files), 0.8 MB for X3DOM, and 1.3 MB for A-Frame. Servers compress these files as they send them, so the actual download is smaller, often about a quarter of that. The iframes use `loading="lazy"`, so on a phone, examples further down the page load only when you scroll to them. On a slow connection, open the lab once while you have a good signal; your browser keeps the libraries afterwards.
 
 ## Common mistakes
 

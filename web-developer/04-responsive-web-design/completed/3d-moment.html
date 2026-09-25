@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: a responsive 3D scene - Riverside Community Centre</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    /* Mobile first: text, then a full-width scene with a 4:3 shape. */
+    .tour { display: grid; gap: var(--space-4); }
+    .tour a-scene {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;   /* keeps its shape at every width */
+      height: auto;
+      border-radius: var(--radius);
+    }
+
+    /* Wide screens: text and scene side by side, the scene square. */
+    @media (min-width: 48rem) {
+      .tour { grid-template-columns: 1fr 1fr; align-items: center; }
+      .tour a-scene { aspect-ratio: 1 / 1; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+  <header>
+    <p><a href="index.html">Riverside Community Centre</a></p>
+  </header>
+
+  <main id="main">
+    <h1>A responsive 3D scene</h1>
+
+    <div class="tour">
+      <div>
+        <h2>Our building, in 3D</h2>
+        <p id="scene-description">A small 3D model of the centre: a cream building with a red roof, a purple door, two windows, and a grey ramp beside the door, on green grass. Drag to look around. Nothing moves on its own.</p>
+        <p>Make this window narrow, then wide. On a phone the scene fills the width; on a wide screen it sits beside this text. The same CSS grid you used for the programme cards does the work.</p>
+      </div>
+
+      <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+        <a-sky color="#dcefff"></a-sky>
+        <a-plane rotation="-90 0 0" width="30" height="30" color="#9ccf8a"></a-plane>
+        <a-entity position="0 0 -5">
+          <a-box position="0 1 0" width="3" height="2" depth="2" color="#f3e3c7"></a-box>
+          <a-cone position="0 2.5 0" radius-bottom="2.3" radius-top="0" height="1" segments-radial="4" rotation="0 45 0" color="#b5542d"></a-cone>
+          <a-box position="0 0.6 1.01" width="0.6" height="1.2" depth="0.05" color="#5b2a86"></a-box>
+          <a-box position="-0.95 1.2 1.01" width="0.6" height="0.5" depth="0.05" color="#ffffff"></a-box>
+          <a-box position="0.95 1.2 1.01" width="0.6" height="0.5" depth="0.05" color="#ffffff"></a-box>
+          <a-box position="0.9 0.08 1.4" rotation="-8 0 0" width="1.2" height="0.08" depth="0.8" color="#b9b3c2"></a-box>
+        </a-entity>
+      </a-scene>
+    </div>
+
+    <p><a href="index.html">Back to the home page</a></p>
+  </main>
+</body>
+</html>

@@ -22,7 +22,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | Fase | Construirás | Tiempo | Lecciones listas |
 | --- | --- | --- | --- |
 | [0 · Bienvenida al futuro](preface/README.es.md) | Tu primer mundo 3D, una línea de tiempo de la web y un laboratorio que compara tres formas de construir en 3D. | 64 sesiones · unos 4 meses | 9 de 9 |
-| [1 · Conviértete en desarrolladora web](web-developer/README.es.md) | Sitios web accesibles y adaptables, publicados para que cualquiera en el mundo los visite. | 144 sesiones · unos 8 meses | 3 de 9 |
+| [1 · Conviértete en desarrolladora web](web-developer/README.es.md) | Sitios web accesibles y adaptables, publicados para que cualquiera en el mundo los visite. | 144 sesiones · unos 8 meses | 5 de 9 |
 | [2 · Conviértete en ingeniera frontend](frontend-engineer/README.es.md) | Aplicaciones web que se instalan en el teléfono, funcionan sin conexión y usan datos en vivo. | 145 sesiones · unos 8 meses | 0 de 9 |
 | [3 · Conviértete en desarrolladora Web3D](web3d-developer/README.es.md) | Experiencias 3D interactivas con A-Frame y three.js. | 138 sesiones · unos 8 meses | 0 de 7 |
 | [4 · Conviértete en desarrolladora inmersiva](immersive-developer/README.es.md) | Experiencias de realidad virtual y aumentada que se abren en un visor desde un enlace. | 111 sesiones · unos 6 meses | 0 de 6 |
@@ -39,14 +39,14 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | # | Lección | Tiempo | Estado |
 | --- | --- | --- | --- |
 | 1 | [Bienvenida a XR Camp](preface/01-welcome-to-xr-camp/README.es.md) | 2 h · 3 sesiones | ✅ Lista |
-| 2 | [Computer Fundamentals](preface/02-computer-fundamentals/README.es.md) | 6 h · 8 sesiones | ✅ Lista |
-| 3 | [The Internet and the Web](preface/03-the-internet-and-the-web/README.es.md) | 5 h · 7 sesiones | ✅ Lista |
+| 2 | [Fundamentos de computación](preface/02-computer-fundamentals/README.es.md) | 6 h · 8 sesiones | ✅ Lista |
+| 3 | [Internet y la web](preface/03-the-internet-and-the-web/README.es.md) | 5 h · 7 sesiones | ✅ Lista |
 | 4 | [Historia de la web](preface/04-history-of-the-web/README.es.md) | 5 h · 7 sesiones | ✅ Lista |
 | 5 | [Historia de Web3D](preface/05-history-of-web3d/README.es.md) | 6 h · 8 sesiones | ✅ Lista |
-| 6 | [The Spatial Web](preface/06-the-spatial-web/README.es.md) | 5 h · 7 sesiones | ✅ Lista |
-| 7 | [Organizations Building the Future](preface/07-organizations-building-the-future/README.es.md) | 6 h · 8 sesiones | ✅ Lista |
-| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](preface/08-ethics-accessibility-privacy-and-responsible-ai/README.es.md) | 7 h · 10 sesiones | ✅ Lista |
-| 9 | [Careers in the Spatial Web](preface/09-careers-in-the-spatial-web/README.es.md) | 4 h · 6 sesiones | ✅ Lista |
+| 6 | [La web espacial](preface/06-the-spatial-web/README.es.md) | 5 h · 7 sesiones | ✅ Lista |
+| 7 | [Organizaciones que construyen el futuro](preface/07-organizations-building-the-future/README.es.md) | 6 h · 8 sesiones | ✅ Lista |
+| 8 | [Ética, accesibilidad, privacidad e IA responsable](preface/08-ethics-accessibility-privacy-and-responsible-ai/README.es.md) | 7 h · 10 sesiones | ✅ Lista |
+| 9 | [Carreras en la web espacial](preface/09-careers-in-the-spatial-web/README.es.md) | 4 h · 6 sesiones | ✅ Lista |
 
 ### Fase 1 · Conviértete en desarrolladora web
 
@@ -55,8 +55,8 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | 1 | [Fundamentos de HTML](web-developer/01-html-foundations/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 2 | [Accessible Forms and User Input](web-developer/02-accessible-forms-and-user-input/README.es.md) | 7 h · 10 sesiones | ✅ Lista |
 | 3 | [CSS Foundations](web-developer/03-css-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
-| 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
-| 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
+| 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
 | 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.es.md) | 16 h · 22 sesiones | 🚧 Próximamente |
 | 7 | [Developer Tools, Debugging, and Testing](web-developer/07-developer-tools-debugging-and-testing/README.es.md) | 9 h · 12 sesiones | 🚧 Próximamente |
 | 8 | [Git, GitHub, and Publishing](web-developer/08-git-github-and-publishing/README.es.md) | 9 h · 12 sesiones | 🚧 Próximamente |

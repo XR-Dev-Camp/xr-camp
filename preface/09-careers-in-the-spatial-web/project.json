@@ -6,13 +6,13 @@
   "phase": 0,
   "title": {
     "en": "Careers in the Spatial Web",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Carreras en la web espacial",
+    "zh-Hans": "空间网络中的职业"
   },
   "summary": {
     "en": "Create a personal career pathway and skills map.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea tu propio camino profesional y un mapa de tus habilidades.",
+    "zh-Hans": "创建一份个人职业路径和技能地图。"
   },
   "estimatedMinutes": 240,
   "schedule": {

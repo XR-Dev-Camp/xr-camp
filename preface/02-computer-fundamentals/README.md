@@ -111,7 +111,7 @@ Developers use the keyboard far more than the mouse. These shortcuts work in alm
 | Save | Ctrl + S | ⌘ + S |
 | Find on the page | Ctrl + F | ⌘ + F |
 | Select all | Ctrl + A | ⌘ + A |
-| Reload the page | Ctrl + R or F5 | ⌘ + R |
+| Reload the page | Ctrl + R (or F5 on Windows and Linux) | ⌘ + R |
 | New tab | Ctrl + T | ⌘ + T |
 | Switch between programs | Alt + Tab | ⌘ + Tab |
 
@@ -138,7 +138,7 @@ xr-camp/
 └── downloads/          # lessons you have downloaded
 ```
 
-**Naming rules that will save you hours:** use lower-case letters, numbers, and hyphens. No spaces, no accents, no capital letters: `my-first-world`, not `My First World!`. Web servers treat `Photo.jpg` and `photo.jpg` as different files, and spaces in names break links.
+**Naming rules that will save you hours:** use lower-case letters, numbers, and hyphens. No spaces, no accents, no capital letters: `my-first-world`, not `My First World!`. Most web servers treat `Photo.jpg` and `photo.jpg` as different files, and spaces in names can break links.
 
 ### Step 4: downloads, uploads, and the cloud (TODO 5)
 
@@ -157,7 +157,7 @@ Use a modern browser, and keep it updated: updates fix security holes and add th
 | Browser | Check for updates |
 | --- | --- |
 | Chrome | **⋮ menu → Help → About Google Chrome** |
-| Firefox | **☰ menu → Help → About Firefox** |
+| Firefox | **☰ menu → Help (called Help and Report in newer versions) → About Firefox** |
 | Edge | **… menu → Help and feedback → About Microsoft Edge** |
 | Safari | Updates with macOS: **System Settings → General → Software Update** |
 
@@ -170,7 +170,7 @@ Then practise:
   - macOS: **⌘ + Shift + 4**, then drag
   - ChromeOS: **Ctrl + Shift + Show windows**
   - Android: **Power + Volume down**
-  - iPhone: **Side button + Volume up**
+  - iPhone: **Side button + Volume up** (on an iPhone with a Home button: **Side button + Home button**)
 
 ### Step 6: passwords, two-step sign-in, and scams (TODO 7)
 
@@ -199,9 +199,9 @@ Write your own version of this routine on your page, in your own words.
 
 ## Key code explained
 
-**`<dl>`, `<dt>`, and `<dd>`: a description list.** Your device section pairs names with values ("System: Windows 11"). That is exactly what a description list is for, and a screen reader announces the pairs clearly.
+**`<dl>`, `<dt>`, and `<dd>`: a description list.** Your device section pairs names with values ("System: Windows 11"). That is exactly what a description list is for, and it lets screen readers tell that the page holds a list of names and values.
 
-**`<kbd>`: keyboard input.** Wrapping a key in `<kbd>` (`<kbd>Ctrl</kbd> + <kbd>C</kbd>`) tells browsers and assistive technology that it is something to press, not something to read.
+**`<kbd>`: keyboard input.** Wrapping a key in `<kbd>` (`<kbd>Ctrl</kbd> + <kbd>C</kbd>`) marks it in your code as something to press, not something to read. Browsers show it in a different style; most screen readers read it as normal text, so the words around it still matter.
 
 **`<ol>` for the troubleshooting routine.** The steps have an order, so it is an ordered list.
 
@@ -211,7 +211,7 @@ Write your own version of this routine on your page, in your own words.
 | --- | --- | --- |
 | One `<h1>`, sections as `<h2>` | 1.3.1 | Headings are how screen-reader users move through a page. |
 | Shortcut table has `<th scope>` and a `<caption>` | 1.3.1 | Each key stays linked to its action. |
-| Keys marked up with `<kbd>` | 1.3.1 | Keys are announced as keys. |
+| Keys marked up with `<kbd>` | 1.3.1 | The code says which text is a key to press. |
 | `lang` matches your language | 3.1.1 | Correct pronunciation. |
 
 ## Performance considerations
@@ -231,7 +231,7 @@ The page is plain HTML and a little CSS: it opens instantly, even from a USB dri
 
 **My file opens as text, not a web page.** Check the extension is `.html`, not `.html.txt`.
 
-**I can't find my Downloads folder.** Open your browser's downloads list (**Ctrl + J** on Windows and ChromeOS, **⌘ + Option + L** on Mac) and choose **Show in folder**.
+**I can't find my Downloads folder.** Open your browser's downloads list (**Ctrl + J** on Windows and ChromeOS; on a Mac, **⌘ + Shift + J** in Chrome, **⌘ + J** in Firefox, or the downloads button near the top right in Safari) and choose **Show in folder** (on a Mac, **Show in Finder**).
 
 **The screenshot shortcut does nothing.** Some keyboards need the **Fn** key too. Search "screenshot" and your device's model.
 

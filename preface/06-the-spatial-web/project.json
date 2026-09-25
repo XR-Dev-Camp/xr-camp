@@ -6,13 +6,13 @@
   "phase": 0,
   "title": {
     "en": "The Spatial Web",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "La web espacial",
+    "zh-Hans": "空间网络"
   },
   "summary": {
     "en": "Compare and document a 2D interface, interactive 3D application, and immersive experience.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Compara y documenta una interfaz 2D, una aplicación 3D interactiva y una experiencia inmersiva.",
+    "zh-Hans": "比较并记录 2D 界面、交互式 3D 应用和沉浸式体验。"
   },
   "estimatedMinutes": 300,
   "schedule": {

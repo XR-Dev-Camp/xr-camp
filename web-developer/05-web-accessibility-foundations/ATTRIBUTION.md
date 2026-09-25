@@ -4,4 +4,4 @@ Third-party assets used in this project.
 
 | Asset | Source | Author | License | Notes |
 | --- | --- | --- | --- | --- |
-| _none yet_ | | | | |
+| `centre-960.jpg`, `divider.svg` | Made for XR Camp | XR Camp | CC0 | Simple drawings |

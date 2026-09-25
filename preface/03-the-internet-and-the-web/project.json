@@ -6,13 +6,13 @@
   "phase": 0,
   "title": {
     "en": "The Internet and the Web",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Internet y la web",
+    "zh-Hans": "互联网与万维网"
   },
   "summary": {
     "en": "Create an interactive diagram explaining what happens when a user visits a website.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea un diagrama interactivo que explica qué pasa cuando una persona visita un sitio web.",
+    "zh-Hans": "制作一张交互式示意图，讲解用户访问网站时会发生什么。"
   },
   "estimatedMinutes": 300,
   "schedule": {

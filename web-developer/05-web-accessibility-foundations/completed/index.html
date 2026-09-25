@@ -3,12 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web Accessibility Foundations - XR Camp reference solution</title>
+  <title>Events this month - Riverside Community Centre</title>
+  <!-- The repaired page. Each fix is numbered to match the audit in audit.html. -->
+  <style>
+    body { max-width: 50rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #1b1b1f; background: #fdfcf8; }
+    h1, h2 { color: #3f1d5e; line-height: 1.2; }
+    .small { color: #4a4a55; font-size: 0.95rem; }            /* 14. contrast 8.5:1 */
+    .notice { background: #5b2a86; color: #fff; padding: 0.5rem 1rem; }
+    .skip { position: absolute; left: -999rem; }
+    .skip:focus { left: 1rem; top: 1rem; padding: 0.5rem 1rem; background: #fff; }
+    button { font: inherit; padding: 0.5rem 1rem; background: #5b2a86; color: #fff; border: 2px solid #5b2a86; border-radius: 0.25rem; cursor: pointer; }
+    input { font: inherit; padding: 0.4rem; border: 2px solid #8a8398; border-radius: 0.25rem; }
+    :focus-visible { outline: 3px solid #d62f6b; outline-offset: 3px; }   /* 13. visible focus */
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #c9c4d4; padding: 0.4rem 0.6rem; text-align: left; }
+    caption { text-align: left; font-weight: 700; }
+    img { max-width: 100%; height: auto; }
+  </style>
 </head>
 <body>
-  <main>
-    <h1>Web Accessibility Foundations</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+  <a class="skip" href="#main">Skip to main content</a>                <!-- 15. skip link -->
+
+  <!-- 3. The moving ticker is now a still notice. Nothing moves, so there is
+       nothing to pause and nothing to trouble people sensitive to motion. -->
+  <p class="notice">New: free coding workshops for women every Saturday. Places are limited.</p>
+
+  <main id="main">                                                      <!-- 15. landmark -->
+    <h1>Riverside events</h1>                                           <!-- 4. real heading -->
+    <p>What's on at Riverside Community Centre this month.</p>
+
+    <!-- 5. Informative image: alt text says what matters. -->
+    <img src="centre-960.jpg" alt="The front of the centre, with a step-free ramp beside the purple main door." width="800" height="450">
+    <!-- 6. Decorative image: empty alt, so screen readers skip it. -->
+    <p><img src="divider.svg" alt="" width="600" height="20"></p>
+
+    <h2>This month</h2>
+    <table>                                                             <!-- 8. caption and headers -->
+      <caption>Events this month, and whether places are left</caption>
+      <thead>
+        <tr><th scope="col">Event</th><th scope="col">Day</th><th scope="col">Time</th><th scope="col">Places</th></tr>
+      </thead>
+      <tbody>
+        <!-- 7. "Full" is written in words, not shown only in red. -->
+        <tr><th scope="row">Coding for beginners</th><td>Saturday</td><td>10am</td><td>Places left</td></tr>
+        <tr><th scope="row">Community lunch</th><td>Sunday</td><td>1pm</td><td>Full</td></tr>
+        <tr><th scope="row">Homework club open day</th><td>Wednesday</td><td>4pm</td><td>Places left</td></tr>
+        <tr><th scope="row">Craft fair</th><td>Saturday</td><td>11am</td><td>Full</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Register</h2>
+    <!-- 9. The link says where it goes, and goes somewhere real. -->
+    <p><a href="../../02-accessible-forms-and-user-input/completed/index.html">Register for the coding workshop</a>.</p>
+    <p>Or leave your email and we will contact you:</p>
+    <form action="#" onsubmit="event.preventDefault(); document.getElementById('sent').textContent = 'Thank you. We will email you soon.';">
+      <!-- 10. A real label. 11. No positive tabindex: the natural order is right. -->
+      <p>
+        <label for="email">Email address</label><br>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <!-- 12. A real button: reachable with Tab, pressed with Enter or Space. -->
+        <button type="submit">Send</button>
+      </p>
+      <p id="sent" role="status"></p>
+    </form>
+
+    <p class="small">Places are given in the order we receive them. Please arrive ten minutes early.</p>
   </main>
 </body>
 </html>

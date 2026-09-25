@@ -1,19 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- The Riverside site from Courses 1.1 and 1.2, now styled by styles.css. -->
 <head>
   <meta charset="UTF-8">
 
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Responsive Web Design - XR Camp starter</title>
-</head>
-<body>
-  <main>
-    <!-- Add your main heading below. -->
+  <meta name="description" content="Opening hours, programmes, and contact details for Riverside Community Centre.">
 
-    <!-- Add your project content below. -->
+  <title>Riverside Community Centre - opening hours and programmes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <h1>Riverside Community Centre</h1>
+    <p>A shared space for everyone in the Riverside neighbourhood.</p>
+  </header>
+
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#hours">Opening hours</a></li>
+      <li><a href="#programmes">Programmes</a></li>
+      <li><a href="#visit">Visit and contact</a></li>
+        <li><a href="join.html">Join a programme</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" tabindex="-1">
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About us</h2>
+
+      <p>
+        Riverside Community Centre has served the neighbourhood since 1974. We
+        run free and low-cost activities for all ages, and our building is open
+        to community groups who need a place to meet.
+      </p>
+
+      <p>
+        Everyone is welcome here, regardless of background, income, or ability.
+        If a barrier stops you taking part, please
+        <a href="#visit">get in touch</a> and we will do what we can.
+      </p>
+
+      <!-- TODO 8: Replace this with a responsive image: src="centre-960.jpg", a srcset
+           listing centre-480.jpg, centre-960.jpg, and centre-1440.jpg with their widths,
+           and a sizes attribute. Keep the alt text, width, and height. -->
+      <img src="centre.svg"
+           alt="The centre's front entrance, with a step-free ramp beside the main doors."
+           width="800" height="450">
+    </section>
+
+    <section id="hours" aria-labelledby="hours-heading">
+      <h2 id="hours-heading">Opening hours</h2>
+
+      <!-- TODO 9: Wrap this table in <div class="table-wrap" role="region" tabindex="0">,
+           labelled by the caption (give the caption an id, and use aria-labelledby). -->
+      <table>
+        <caption>Opening hours during term time</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Opens</th>
+            <th scope="col">Closes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Monday to Thursday</th>
+            <td>9am</td>
+            <td>9pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td>9am</td>
+            <td>6pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturday</th>
+            <td>10am</td>
+            <td>4pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Sunday</th>
+            <td>Closed</td>
+            <td>Closed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Hours change during school holidays. Check our
+        <a href="#visit">contact details</a> before travelling.
+      </p>
+    </section>
+
+    <section id="programmes" aria-labelledby="programmes-heading">
+      <h2 id="programmes-heading">Programmes</h2>
+
+      <!-- TODO 5: Turn these two lists into one list of six programme cards:
+           <ul class="cards">, and for each programme <li class="card"> with an <h3>,
+           a sentence about when it runs, and <p class="tag"> saying who it is for. -->
+      <h3>For children and young people</h3>
+      <ul>
+        <li>Homework club, weekdays after school</li>
+        <li>Youth group, Friday evenings</li>
+        <li>Holiday activity scheme</li>
+      </ul>
+
+      <h3>For adults</h3>
+      <ul>
+        <li>English conversation practice</li>
+        <li>Job search and CV support</li>
+        <li>Digital skills drop-in</li>
+      </ul>
+
+      <h3>How to join a programme</h3>
+      <ol>
+        <li>Check the opening hours above.</li>
+        <li>Call or email us, or come to reception.</li>
+        <li>Complete a short registration form on your first visit.</li>
+      </ol>
+
+      <h3>Welcome video</h3>
+      <video controls width="640">
+        <source src="../../01-html-foundations/assets/welcome.mp4" type="video/mp4">
+        <track kind="captions"
+               src="../../01-html-foundations/assets/welcome-captions.vtt"
+               srclang="en"
+               label="English"
+               default>
+        <p>
+          Your browser cannot play this video.
+          <a href="../../01-html-foundations/assets/welcome.mp4">Download the welcome video (MP4)</a>
+          or read the <a href="#about">written introduction above</a>.
+        </p>
+      </video>
+    </section>
+
+    <section id="visit" aria-labelledby="visit-heading">
+      <h2 id="visit-heading">Visit and contact</h2>
+
+      <dl>
+        <dt>Address</dt>
+        <dd>14 Mill Lane, Riverside</dd>
+
+        <dt>Telephone</dt>
+        <dd><a href="tel:+441234567890">01234 567890</a></dd>
+
+        <dt>Email</dt>
+        <dd><a href="mailto:hello@riverside.example">hello@riverside.example</a></dd>
+
+        <dt>Access</dt>
+        <dd>
+          Step-free entrance, accessible toilet, and a hearing loop at
+          reception. Assistance dogs are welcome.
+        </dd>
+      </dl>
+
+      <p>
+        Our building is managed by the borough council. You can read the
+        <a href="https://example.gov.uk/community-buildings"
+           target="_blank"
+           rel="noopener">
+          borough council's community buildings policy (opens in a new tab)</a>.
+      </p>
+    </section>
 
   </main>
+
+  <footer>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#main">Back to top</a></li>
+        <li><a href="https://example.gov.uk/accessibility">Accessibility statement</a></li>
+      </ul>
+    </nav>
+
+    <p>
+      <small>
+        Riverside Community Centre is a registered charity.
+        Page last reviewed on <time datetime="2026-07-30">30 July 2026</time>.
+      </small>
+    </p>
+  </footer>
+
 </body>
 </html>

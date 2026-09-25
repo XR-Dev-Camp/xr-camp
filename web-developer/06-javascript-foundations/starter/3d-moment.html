@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: your first 3D event - Riverside Community Centre</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>a-scene { display: block; width: 100%; height: 18rem; border-radius: var(--radius); }</style>
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+  <main id="main">
+    <h1>Your first 3D event</h1>
+    <p>Click the lantern, or press the button, to change its colour.</p>
+
+    <!-- The description is a live region: it is announced when it changes. -->
+    <p id="scene-description" role="status">A purple paper lantern hangs in front of a night sky. Nothing moves.</p>
+    <p><button type="button" id="change">Change the lantern's colour</button></p>
+
+    <!-- cursor="rayOrigin: mouse" makes mouse clicks reach 3D objects;
+         raycaster="objects: .clickable" says which objects can be clicked. -->
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false"
+             cursor="rayOrigin: mouse" raycaster="objects: .clickable">
+      <a-sky color="#1b1b3a"></a-sky>
+      <a-entity position="0 1.6 -3">
+        <a-cylinder position="0 0.9 0" radius="0.02" height="0.8" color="#8a8398"></a-cylinder>
+        <a-sphere id="lantern" class="clickable" radius="0.45" scale="1 1.2 1" color="#5b2a86"></a-sphere>
+      </a-entity>
+    </a-scene>
+
+    <p><a href="index.html">Back to the programme explorer</a></p>
+  </main>
+
+  <script>
+    const lantern = document.getElementById('lantern');
+    const description = document.getElementById('scene-description');
+    const colours = [['#5b2a86', 'purple'], ['#d8342a', 'red'], ['#e0a526', 'gold'], ['#1f8a8a', 'teal']];
+    let current = 0;
+
+    // One function, called by both the 3D click and the button, so the
+    // keyboard and the mouse can do exactly the same thing.
+    function changeColour() {
+      current = (current + 1) % colours.length;
+      const [hex, name] = colours[current];
+      lantern.setAttribute('color', hex);
+      description.textContent = `A ${name} paper lantern hangs in front of a night sky. Nothing moves.`;
+    }
+
+    lantern.addEventListener('click', changeColour);
+    document.getElementById('change').addEventListener('click', changeColour);
+  </script>
+</body>
+</html>

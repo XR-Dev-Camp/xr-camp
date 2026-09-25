@@ -2,23 +2,25 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Your audit
+- [ ] You tested with the keyboard, a screen reader, zoom, and an automated tool.
+- [ ] Your report lists at least fifteen problems.
+- [ ] Each problem names the WCAG criterion, who it affects, and the fix.
+- [ ] Your report says what the automated tool missed.
 
-## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+## Your repaired page
+- [ ] `lang` is set, and the title describes the page.
+- [ ] One `h1`, then `h2`s: headings are real headings.
+- [ ] The informative image has meaningful alt text; the decorative one has `alt=""`.
+- [ ] "Full" is written in words, not only shown in colour.
+- [ ] The table has a caption and header cells with `scope`.
+- [ ] Every link says where it goes.
+- [ ] The email field has a visible label; there is no positive `tabindex`.
+- [ ] "Send" is a real `<button>` in a `<form>`, and works with Enter.
+- [ ] Focus is always visible, and text contrast is at least 4.5:1.
+- [ ] Nothing moves on its own.
+- [ ] There is a skip link and a `main` landmark.
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+## Testing again
+- [ ] You repeated the keyboard and screen-reader tests on the repaired page.
+- [ ] The automated tool reports no errors on the repaired page.
