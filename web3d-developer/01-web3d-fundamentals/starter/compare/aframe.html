@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The exhibit in A-Frame - Compare the engines - XR Camp</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>a-scene { display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius); }</style>
+</head>
+<body>
+  <header><p>XR Camp · Web3D · Compare the engines</p></header>
+  <main>
+    <h1>The exhibit in A-Frame</h1>
+    <p id="scene-description" class="scene-text">A wooden table on a pale floor. On the table, an orange clay pot on the left and a green stone on the right. Nothing moves.</p>
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+      <!-- TODO 15: Build the same exhibit with A-Frame elements: a-sky,
+           a-plane (rotation="-90 0 0"), a-box for the table, a-cylinder,
+           a-dodecahedron, two lights (<a-entity light="type: ambient">
+           and a directional one), and a fixed camera:
+           <a-entity camera="fov: 50" position="0 2.6 5" rotation="-20 0 0"
+             look-controls="enabled: false" wasd-controls="enabled: false">
+           Note: A-Frame rotations are in DEGREES; three.js uses radians. -->
+    </a-scene>
+    <p><a href="../index.html">Back to the lab</a></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The exhibit in three.js - Compare the engines - XR Camp</title>
+  <link rel="stylesheet" href="../styles.css">
+  <!-- three.module.min.js loads three.core.js; the second line swaps in the
+       minified copy, which is about a quarter of the size. -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header><p>XR Camp · Web3D · Compare the engines</p></header>
+  <main>
+    <h1>The exhibit in three.js</h1>
+    <p><strong>Style:</strong> JavaScript. You create every object, light, and camera yourself, and ask the renderer to draw. About 30 lines.</p>
+    <p id="scene-description" class="scene-text">A wooden table on a pale floor. On the table, an orange clay pot on the left and a green stone on the right. Nothing moves.</p>
+    <div class="canvas-box" id="canvas-box"></div>
+    <p><a href="../index.html">Back to the lab</a></p>
+  </main>
+  <script type="module">
+    import * as THREE from 'three';
+
+    const box = document.querySelector('#canvas-box');
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    box.append(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color('#eef4ff');
+    const camera = new THREE.PerspectiveCamera(50, 4 / 3, 0.1, 100);
+    camera.position.set(0, 2.6, 5);
+    camera.lookAt(0, 0.8, 0);
+
+    const mesh = (geometry, color, x, y, z) => {
+      const m = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({ color }));
+      m.position.set(x, y, z);
+      scene.add(m);
+      return m;
+    };
+    mesh(new THREE.PlaneGeometry(10, 10), '#dcd6e6', 0, 0, 0).rotation.x = -Math.PI / 2;
+    mesh(new THREE.BoxGeometry(2.4, 0.8, 1.2), '#8a5a3b', 0, 0.4, 0);          // the table, as one block
+    mesh(new THREE.CylinderGeometry(0.25, 0.18, 0.5, 32), '#b5562e', -0.5, 1.05, 0);
+    mesh(new THREE.DodecahedronGeometry(0.22), '#2f7d5b', 0.4, 1.02, 0);
+
+    scene.add(new THREE.AmbientLight('#ffffff', 0.6));
+    const sun = new THREE.DirectionalLight('#fff4e0', 2);
+    sun.position.set(3.5, 4, 3.5);
+    scene.add(sun);
+
+    // Draw once, and again only when the box changes size.
+    new ResizeObserver(() => {
+      const { width, height } = box.getBoundingClientRect();
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.render(scene, camera);
+    }).observe(box);
+  </script>
+</body>
+</html>

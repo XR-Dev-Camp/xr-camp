@@ -3,12 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web3D Fundamentals - XR Camp reference solution</title>
+  <meta name="description" content="A hands-on lab for the ideas behind every 3D engine: coordinates, the scene graph, cameras, lights, and materials.">
+  <title>Web3D concepts lab - XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- three.js, pinned to the version in versions.json. The import map lets
+       lab.js say import * as THREE from 'three'. -->
+  <!-- three.module.min.js loads three.core.js; the second line swaps in the
+       minified copy, which is about a quarter of the size. -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js"
+      }
+    }
+  </script>
+  <script type="module" src="lab.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Web3D</p></header>
   <main>
-    <h1>Web3D Fundamentals</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Web3D concepts lab</h1>
+    <p>Every 3D engine, from A-Frame to Unity, is built from the same few ideas. Change each control, watch the scene, and read how its description changes.</p>
+    <noscript><p>The lab needs JavaScript and WebGL. The scene description below explains the starting scene.</p></noscript>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The scene</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+        <!-- The same information as the picture, in words, updated after every change. -->
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">A wooden table stands in the middle of a pale floor. On it are an orange clay pot and a green stone. Nothing moves unless you change a control.</p>
+        <h3>Scene graph</h3>
+        <ul class="tree" id="tree" aria-label="Scene graph"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Scene controls">
+        <fieldset>
+          <legend>1. Coordinates: move the stone</legend>
+          <p class="hint">x is right, y is up, z is toward you. Units are metres. The red, green, and blue lines are the x, y, and z axes.</p>
+          <div class="control"><label for="stone-x">x</label><output for="stone-x" id="stone-x-out"></output><input type="range" id="stone-x" min="-2" max="2" step="0.1" value="0.4"></div>
+          <div class="control"><label for="stone-y">y</label><output for="stone-y" id="stone-y-out"></output><input type="range" id="stone-y" min="0" max="2.5" step="0.1" value="1.1"></div>
+          <div class="control"><label for="stone-z">z</label><output for="stone-z" id="stone-z-out"></output><input type="range" id="stone-z" min="-2" max="2" step="0.1" value="0"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Transforms and the scene graph</legend>
+          <div class="control"><label for="table-turn">Turn the table (degrees)</label><output for="table-turn" id="table-turn-out"></output><input type="range" id="table-turn" min="0" max="360" step="5" value="0"></div>
+          <div class="control"><label for="pot-scale">Pot size (scale)</label><output for="pot-scale" id="pot-scale-out"></output><input type="range" id="pot-scale" min="0.5" max="2" step="0.1" value="1"></div>
+          <p><input type="checkbox" id="stone-on-table" checked> <label for="stone-on-table">The stone is a child of the table</label></p>
+          <p class="hint">Children move with their parent. Untick the box, then turn the table: the stone stays where it is.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. The camera</legend>
+          <p><label for="camera-type">Camera type</label><br>
+            <select id="camera-type">
+              <option value="perspective">Perspective (like an eye)</option>
+              <option value="orthographic">Orthographic (like a plan)</option>
+            </select></p>
+          <div class="control"><label for="fov">Field of view (degrees)</label><output for="fov" id="fov-out"></output><input type="range" id="fov" min="20" max="100" step="5" value="50"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Lights</legend>
+          <div class="control"><label for="ambient">Ambient light</label><output for="ambient" id="ambient-out"></output><input type="range" id="ambient" min="0" max="2" step="0.1" value="0.6"></div>
+          <div class="control"><label for="sun">Sunlight direction (degrees)</label><output for="sun" id="sun-out"></output><input type="range" id="sun" min="0" max="360" step="15" value="45"></div>
+          <p><button type="button" id="lamp" aria-pressed="false">Lamp</button></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Materials: the pot</legend>
+          <p><label for="material">Material</label><br>
+            <select id="material">
+              <option value="basic">Basic: ignores light</option>
+              <option value="lambert">Lambert: matte</option>
+              <option value="standard" selected>Standard: physically based</option>
+            </select></p>
+          <div class="control"><label for="roughness">Roughness</label><output for="roughness" id="roughness-out"></output><input type="range" id="roughness" min="0" max="1" step="0.05" value="0.7"></div>
+          <div class="control"><label for="metalness">Metalness</label><output for="metalness" id="metalness-out"></output><input type="range" id="metalness" min="0" max="1" step="0.05" value="0"></div>
+        </fieldset>
+
+        <p><button type="button" id="reset">Reset everything</button></p>
+      </div>
+    </div>
+
+    <h2>Compare the engines</h2>
+    <p>The same small exhibit, built four ways. Open each one, then read its source code.</p>
+    <ul class="compare-nav">
+      <li><a href="compare/webgl.html">Raw WebGL</a></li>
+      <li><a href="compare/three.html">three.js</a></li>
+      <li><a href="compare/aframe.html">A-Frame</a></li>
+      <li><a href="compare/x3d.html">X3D with X3DOM</a></li>
+      <li><a href="analysis.md">Ana's comparison</a></li>
+    </ul>
   </main>
 </body>
 </html>

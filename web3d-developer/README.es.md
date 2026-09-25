@@ -16,7 +16,7 @@
 
 | # | Lección | Tiempo | Estado |
 | --- | --- | --- | --- |
-| 1 | [Web3D Fundamentals](01-web3d-fundamentals/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 1 | [Web3D Fundamentals](01-web3d-fundamentals/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
 | 2 | [A-Frame Foundations](02-a-frame-foundations/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
 | 3 | [Advanced A-Frame and Interaction](03-advanced-a-frame-and-interaction/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
 | 4 | [Three.js Foundations](04-threejs-foundations/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |

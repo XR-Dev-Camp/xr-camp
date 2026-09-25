@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The exhibit in A-Frame - Compare the engines - XR Camp</title>
+  <link rel="stylesheet" href="../styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. It is built on three.js. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>a-scene { display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius); }</style>
+</head>
+<body>
+  <header><p>XR Camp · Web3D · Compare the engines</p></header>
+  <main>
+    <h1>The exhibit in A-Frame</h1>
+    <p><strong>Style:</strong> HTML. Each object is an element; A-Frame adds a camera, lights, and a VR button unless you say otherwise. About 10 lines of scene.</p>
+    <p id="scene-description" class="scene-text">A wooden table on a pale floor. On the table, an orange clay pot on the left and a green stone on the right. Nothing moves.</p>
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+      <a-sky color="#eef4ff"></a-sky>
+      <a-plane rotation="-90 0 0" width="10" height="10" color="#dcd6e6"></a-plane>
+      <a-box position="0 0.4 0" width="2.4" height="0.8" depth="1.2" color="#8a5a3b"></a-box>
+      <a-cylinder position="-0.5 1.05 0" radius="0.22" height="0.5" color="#b5562e"></a-cylinder>
+      <a-dodecahedron position="0.4 1.02 0" radius="0.22" color="#2f7d5b"></a-dodecahedron>
+      <a-entity light="type: ambient; intensity: 0.6"></a-entity>
+      <a-entity light="type: directional; intensity: 2; color: #fff4e0" position="3.5 4 3.5"></a-entity>
+      <!-- A fixed camera, in the same place as the three.js version. -->
+      <a-entity camera="fov: 50" position="0 2.6 5" rotation="-20 0 0" look-controls="enabled: false" wasd-controls="enabled: false"></a-entity>
+    </a-scene>
+    <p><a href="../index.html">Back to the lab</a></p>
+  </main>
+</body>
+</html>

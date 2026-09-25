@@ -2,7 +2,7 @@
   "id": "w3d-01-web3d-fundamentals",
   "courseId": "web3d-developer",
   "lessonId": "web3d-fundamentals-01",
-  "status": "draft",
+  "status": "review",
   "phase": 3,
   "title": {
     "en": "Web3D Fundamentals",
@@ -21,6 +21,9 @@
   },
   "difficulty": "intermediate",
   "technologies": [
+    "WebGL",
+    "three.js",
+    "A-Frame",
     "X3D/X3DOM"
   ],
   "hasCode": true,
@@ -38,6 +41,8 @@
     "keyboard-3d",
     "reduced-motion-3d",
     "2d-fallback",
-    "comfort"
+    "comfort",
+    "keyboard-operable",
+    "form-labels"
   ]
 }

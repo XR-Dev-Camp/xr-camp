@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The exhibit in three.js - Compare the engines - XR Camp</title>
+  <link rel="stylesheet" href="../styles.css">
+  <!-- three.module.min.js loads three.core.js; the second line swaps in the
+       minified copy, which is about a quarter of the size. -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header><p>XR Camp · Web3D · Compare the engines</p></header>
+  <main>
+    <h1>The exhibit in three.js</h1>
+    <p id="scene-description" class="scene-text">A wooden table on a pale floor. On the table, an orange clay pot on the left and a green stone on the right. Nothing moves.</p>
+    <div class="canvas-box" id="canvas-box"></div>
+    <p><a href="../index.html">Back to the lab</a></p>
+  </main>
+  <script type="module">
+    import * as THREE from 'three';
+
+    // TODO 14: Build the exhibit in three.js, as small as you can:
+    // - a WebGLRenderer, appended to #canvas-box
+    // - a Scene with a pale background, and a PerspectiveCamera (fov 50) at
+    //   0, 2.6, 5, looking at 0, 0.8, 0
+    // - a floor (PlaneGeometry, rotated -90° = -Math.PI / 2 around x), the
+    //   table as one BoxGeometry(2.4, 0.8, 1.2), a pot (CylinderGeometry),
+    //   and a stone (DodecahedronGeometry), all with MeshStandardMaterial
+    // - an AmbientLight and a DirectionalLight
+    // - render once, and again when #canvas-box changes size (ResizeObserver)
+    // Use the colours and positions from the lab's lab.js.
+  </script>
+</body>
+</html>

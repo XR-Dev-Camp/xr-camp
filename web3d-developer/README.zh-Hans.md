@@ -16,7 +16,7 @@
 
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
-| 1 | [Web3D Fundamentals](01-web3d-fundamentals/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
+| 1 | [Web3D Fundamentals](01-web3d-fundamentals/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 2 | [A-Frame Foundations](02-a-frame-foundations/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
 | 3 | [Advanced A-Frame and Interaction](03-advanced-a-frame-and-interaction/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
 | 4 | [Three.js Foundations](04-threejs-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
