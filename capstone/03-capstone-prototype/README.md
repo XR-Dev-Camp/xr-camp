@@ -81,6 +81,3 @@ _Content to be authored._
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[Open this lesson on xrcamp.dev](https://xrcamp.dev/lessons/capstone-prototype-03)

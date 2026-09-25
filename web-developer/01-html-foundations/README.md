@@ -53,7 +53,7 @@ The reference solution in [`completed/`](completed/) is a community centre page 
 ├── README.md            # This guide
 ├── README.es.md         # Spanish
 ├── README.zh-Hans.md    # Simplified Chinese
-├── project.json         # Metadata used by xrcamp.dev
+├── project.json         # Lesson metadata
 ├── starter/             # Begin here — a scaffold with 11 TODOs
 ├── completed/           # Reference solution — open this last
 ├── challenges/          # Three optional extensions
@@ -97,7 +97,7 @@ This project is about 16 sessions of 45 minutes. Four sessions a week takes abou
 | 13 | Work through [`tests/checklist.md`](tests/checklist.md) | Every item ticked |
 | 14 | One challenge extension | A second page or a personal touch |
 | 15 | The **3D moment** | A 3D world inside your page |
-| 16 | **Submitting your work** and your reflection | Your link on xrcamp.dev |
+| 16 | **Submitting your work** and your reflection | Your page, published and in your portfolio |
 
 ### Step 1 — Describe the page (TODO 1–2)
 
@@ -292,7 +292,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 2. Validate at [validator.w3.org](https://validator.w3.org/) with zero errors.
 3. Navigate the entire page with only the keyboard.
 4. Publish it. You will learn how in **Course 1.8 — Git, GitHub, and Publishing**; if you already know, GitHub Pages works well.
-5. Submit your link on xrcamp.dev, on this lesson's page.
+5. Add the link to your portfolio. When the XR Camp community opens, share it there too.
 6. Write a short reflection in your learner journal: what surprised you about alt text?
 
 ## Further reading
@@ -318,6 +318,3 @@ This project is built entirely on two open standards: the [HTML Living Standard]
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[Open this lesson on xrcamp.dev](https://xrcamp.dev/lessons/html-foundations-01)

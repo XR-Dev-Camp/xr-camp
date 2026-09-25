@@ -83,6 +83,3 @@ _内容待撰写。_
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[在 xrcamp.dev 上打开本课](https://xrcamp.dev/lessons/backend-and-api-foundations-01)

@@ -89,6 +89,3 @@ _Contenido pendiente de redacción._
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[Abrir esta lección en xrcamp.dev](https://xrcamp.dev/lessons/application-architecture-and-maintainable-code-03)

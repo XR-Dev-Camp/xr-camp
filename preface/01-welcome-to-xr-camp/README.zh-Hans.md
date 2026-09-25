@@ -33,7 +33,7 @@ _内容待撰写。_
 ├── README.md            # This guide
 ├── README.es.md         # Spanish
 ├── README.zh-Hans.md    # Simplified Chinese
-├── project.json         # Metadata used by xrcamp.dev
+├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a 3D world with 6 TODOs
 ├── completed/           # Reference solution: open this last
 ├── challenges/          # Three optional extensions
@@ -86,6 +86,3 @@ _内容待撰写。_
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[在 xrcamp.dev 上打开本课](https://xrcamp.dev/lessons/welcome-to-xr-camp-01)

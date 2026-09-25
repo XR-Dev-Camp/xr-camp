@@ -1,6 +1,6 @@
 # XR Camp Projects
 
-**Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
+**Language / Idioma / 语言:** English · Español y 简体中文 próximamente / 即将推出
 
 The public workshop for [XR Camp](https://xrcamp.dev) — starter code, reference solutions, challenges, and technical documentation for every project in the curriculum.
 

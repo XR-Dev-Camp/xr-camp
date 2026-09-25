@@ -53,7 +53,7 @@
 ├── README.md            # 英文指南
 ├── README.es.md         # 西班牙语
 ├── README.zh-Hans.md    # 本文件
-├── project.json         # xrcamp.dev 使用的元数据
+├── project.json         # 课程元数据
 ├── starter/             # 从这里开始 —— 含 11 个 TODO 的骨架
 ├── completed/           # 参考解决方案 —— 最后再打开
 ├── challenges/          # 三个可选拓展
@@ -97,7 +97,7 @@
 | 13 | 逐项完成 [`tests/checklist.md`](tests/checklist.md) | 所有项目都已勾选 |
 | 14 | 完成一项拓展挑战 | 第二个页面或个人特色 |
 | 15 | **3D 时刻** | 嵌入页面中的 3D 世界 |
-| 16 | **提交作业**并写下反思 | 你在 xrcamp.dev 上提交的链接 |
+| 16 | **提交作业**并写下反思 | 已发布并加入作品集的页面 |
 
 ### 第 1 步 —— 描述页面（TODO 1–2）
 
@@ -292,7 +292,7 @@
 2. 在 [validator.w3.org](https://validator.w3.org/) 校验，做到零错误。
 3. 仅用键盘浏览整个页面。
 4. 把它发布出去。**课程 1.8 —— Git、GitHub 与发布** 会教你怎么做；如果你已经会了，GitHub Pages 很合适。
-5. 在 xrcamp.dev 本课页面提交你的链接。
+5. 把链接加入你的作品集。XR Camp 社区开放后，也在那里分享。
 6. 在学习日志中写一小段反思：关于替代文本，什么让你感到意外？
 
 ## 延伸阅读
@@ -318,6 +318,3 @@
 
 代码：[`LICENSE-CODE`](../../LICENSE-CODE) · 内容：[`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[在 xrcamp.dev 上打开本课](https://xrcamp.dev/lessons/html-foundations-01)

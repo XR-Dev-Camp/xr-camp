@@ -36,7 +36,7 @@ None. This is where everyone starts.
 | A computer with a modern browser (Firefox, Chrome, Edge, or Safari) | Seeing your world | Free |
 | A plain text editor: Notepad (Windows), TextEdit (Mac), or [VS Code](https://code.visualstudio.com/) | Changing your world | Free |
 | An internet connection, the first time you open the page | Downloading A-Frame, the 3D tool | Free |
-| Your learner journal: a notebook, or the XR Camp Learner Journal on xrcamp.dev | Your plan and reflections | Free |
+| Your learner journal: a notebook, or the XR Camp Learner Journal template | Your plan and reflections | Free |
 
 **Using TextEdit on a Mac?** Open **Format → Make Plain Text** before you save. Otherwise TextEdit quietly saves formatting codes into your file and the page breaks.
 
@@ -55,7 +55,7 @@ Then, in session 3, you will build something just as important: a plan for fitti
 ├── README.md            # This guide
 ├── README.es.md         # Spanish
 ├── README.zh-Hans.md    # Simplified Chinese
-├── project.json         # Metadata used by xrcamp.dev
+├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a 3D world with 6 TODOs
 ├── completed/           # Reference solution: open this last
 ├── challenges/          # Three optional extensions
@@ -191,7 +191,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your world. (Search the web for "how to take a screenshot" and your device if you are unsure.)
-3. Share your screenshot and your scene description on xrcamp.dev, on this lesson's page.
+3. Keep your screenshot and your scene description in your learner journal. When the XR Camp community opens, share them there.
 4. In your learner journal, write one sentence: how did it feel to build a 3D world in your first hour?
 
 ## Further reading
@@ -207,6 +207,3 @@ _To be chosen from the roster in [`docs/en/women-to-know.md`](../../docs/en/wome
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[Open this lesson on xrcamp.dev](https://xrcamp.dev/lessons/welcome-to-xr-camp-01)

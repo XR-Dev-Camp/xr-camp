@@ -45,7 +45,7 @@ The reference solution in [`completed/`](completed/) is Ana's timeline. The styl
 ├── README.md            # This guide
 ├── README.es.md         # Spanish
 ├── README.zh-Hans.md    # Simplified Chinese
-├── project.json         # Metadata used by xrcamp.dev
+├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a timeline with one milestone per era and 9 TODOs
 ├── completed/           # Reference solution: open this last
 ├── challenges/          # Three optional extensions
@@ -106,7 +106,7 @@ This is the part of the story XR Camp is about, and the part you are about to he
 | 4 | Read **The spatial and intelligent web**, TODO 7 | The whole history of the web |
 | 5 | TODOs 8–9: your own milestones and sources | A timeline that includes you |
 | 6 | Work through [`tests/checklist.md`](tests/checklist.md) | Every item ticked |
-| 7 | One challenge extension, then **Submitting your work** | Your timeline shared on xrcamp.dev |
+| 7 | One challenge extension, then **Submitting your work** | A finished timeline in your portfolio |
 
 ### Adding a milestone
 
@@ -177,7 +177,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your timeline at phone width and at full width.
-3. Share both on xrcamp.dev, on this lesson's page. (You will learn to publish the page itself in Course 1.8.)
+3. Keep both in your learner journal. When the XR Camp community opens, share them there. (You will learn to publish the page itself in Course 1.8.)
 4. In your learner journal, answer: which milestone surprised you most, and why?
 
 ## Further reading
@@ -204,6 +204,3 @@ The web works on any device, in any country, in any browser, because its rules a
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[Open this lesson on xrcamp.dev](https://xrcamp.dev/lessons/history-of-the-web-04)

@@ -23,7 +23,7 @@ Standards documents are cited, not redistributed. Each remains the property of i
 
 ## Contributors
 
-Contributors are credited in the repository's commit history and contributor graph. Instructors and curriculum authors are additionally credited on their lesson pages at xrcamp.dev.
+Contributors are credited in the repository's commit history and contributor graph. Instructors and curriculum authors are additionally credited in the lessons they write.
 
 ## Asset policy
 

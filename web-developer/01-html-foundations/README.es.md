@@ -53,7 +53,7 @@ La solución de referencia en [`completed/`](completed/) es la página de un cen
 ├── README.md            # Esta guía (en inglés)
 ├── README.es.md         # Español
 ├── README.zh-Hans.md    # Chino simplificado
-├── project.json         # Metadatos que usa xrcamp.dev
+├── project.json         # Metadatos de la lección
 ├── starter/             # Empieza aquí — un esqueleto con 11 TODO
 ├── completed/           # Solución de referencia — ábrela al final
 ├── challenges/          # Tres extensiones opcionales
@@ -97,7 +97,7 @@ Este proyecto son unas 16 sesiones de 45 minutos. Con cuatro sesiones por semana
 | 13 | Revisa [`tests/checklist.md`](tests/checklist.md) | Todos los puntos marcados |
 | 14 | Un reto adicional | Una segunda página o un toque personal |
 | 15 | El **Momento 3D** | Un mundo 3D dentro de tu página |
-| 16 | **Cómo entregar tu trabajo** y tu reflexión | Tu enlace en xrcamp.dev |
+| 16 | **Cómo entregar tu trabajo** y tu reflexión | Tu página, publicada y en tu portafolio |
 
 ### Paso 1 — Describe la página (TODO 1–2)
 
@@ -292,7 +292,7 @@ Tres extensiones opcionales, en [`challenges/`](challenges/):
 2. Valida en [validator.w3.org](https://validator.w3.org/) con cero errores.
 3. Recorre toda la página usando solo el teclado.
 4. Publícala. Aprenderás cómo en el **Curso 1.8 — Git, GitHub y publicación**; si ya sabes, GitHub Pages funciona bien.
-5. Envía tu enlace en xrcamp.dev, en la página de esta lección.
+5. Añade el enlace a tu portafolio. Cuando abra la comunidad de XR Camp, compártelo también allí.
 6. Escribe una breve reflexión en tu diario de aprendizaje: ¿qué te sorprendió del texto alternativo?
 
 ## Lecturas adicionales
@@ -318,6 +318,3 @@ Este proyecto se apoya por completo en dos estándares abiertos: el [HTML Living
 
 Código: [`LICENSE-CODE`](../../LICENSE-CODE) · Contenido: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[Abrir esta lección en xrcamp.dev](https://xrcamp.dev/lessons/html-foundations-01)

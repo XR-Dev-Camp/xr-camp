@@ -32,10 +32,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      # The gitleaks CLI, pinned, scanning the whole history. (The gitleaks
+      # action scans only the pushed range, which breaks on a first push.)
       - name: Scan history for credentials
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.24.3/gitleaks_8.24.3_linux_x64.tar.gz | tar xz -C /tmp gitleaks
+          /tmp/gitleaks git --redact --verbose .
 
   links:
     name: Link check
@@ -45,7 +47,14 @@ jobs:
       - name: Check markdown links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --accept 200,206,429 '**/*.md'
+          # 403 is accepted because many news and publisher sites refuse bots.
+          # The Women to Know roster is research notes full of such sites, so
+          # its sources are checked by editors before publication instead.
+          args: >-
+            --no-progress --exclude-loopback --max-retries 3 --timeout 30
+            --accept 200,202,206,403,429
+            --exclude-path docs/en/women-to-know.md
+            '**/*.md'
           fail: true
 
   accessibility:
@@ -66,8 +75,10 @@ jobs:
         # that gap, and validate-projects.mjs requires them to be declared.
         run: |
           status=0
+          # --no-sandbox: GitHub's Ubuntu runners block Chrome's sandbox.
+          echo '{ "chromeLaunchConfig": { "args": ["--no-sandbox"] }, "timeout": 60000 }' > /tmp/pa11y.json
           for f in $(find . -path '*/completed/index.html' | sort); do
             echo "--- $f"
-            npx pa11y --standard WCAG2AA --reporter cli "file://$PWD/${f#./}" || status=1
+            npx pa11y --config /tmp/pa11y.json --standard WCAG2AA --reporter cli "file://$PWD/${f#./}" || status=1
           done
           exit $status

@@ -47,7 +47,7 @@ The three examples are already built for you, in `starter/examples/`. You are th
 ├── README.md            # This guide
 ├── README.es.md         # Spanish
 ├── README.zh-Hans.md    # Simplified Chinese
-├── project.json         # Metadata used by xrcamp.dev
+├── project.json         # Lesson metadata
 ├── starter/
 │   ├── index.html       # Begin here: the lab page, with 7 TODOs
 │   └── examples/        # The box in X3D, A-Frame, and three.js
@@ -114,7 +114,7 @@ Declarative is faster to start and easier to read. Imperative is more work and g
 | 5 | TODOs 4–5: the timeline up to 2015 | Half the timeline |
 | 6 | Read **Sharing, immersion, and power**; TODO 6 | The whole timeline |
 | 7 | TODO 7, your conclusions; then [`tests/checklist.md`](tests/checklist.md) | A finished lab |
-| 8 | One challenge extension, then **Submitting your work** | Your lab shared on xrcamp.dev |
+| 8 | One challenge extension, then **Submitting your work** | A finished lab in your portfolio |
 
 ### Studying an example
 
@@ -181,7 +181,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your lab, with your table and conclusions visible.
-3. Share it on xrcamp.dev, on this lesson's page.
+3. Keep it in your learner journal. When the XR Camp community opens, share it there.
 4. In your learner journal, answer: do you think of yourself as more of a declarative or an imperative person? Why?
 
 ## Further reading
@@ -208,6 +208,3 @@ Four open standards appear in this lesson: **X3D** (Web3D Consortium and ISO), *
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
 
----
-
-[Open this lesson on xrcamp.dev](https://xrcamp.dev/lessons/history-of-web3d-05)
