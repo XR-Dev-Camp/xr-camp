@@ -2,23 +2,21 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Labels and structure
+- [ ] Every field has a visible `<label>`, and its `for` matches the field's `id`.
+- [ ] Radio buttons are grouped in a `<fieldset>` with a `<legend>` that asks the question.
+- [ ] Required fields have the `required` attribute **and** say "(required)" in words.
+- [ ] Email and phone fields use the right `type` and `autocomplete`.
+- [ ] Hints are linked with `aria-describedby`.
 
-## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+## Privacy
+- [ ] Every field is something you really need, or is clearly optional.
+- [ ] The newsletter box is unticked.
+- [ ] The privacy note says what, why, how long, who, and how to delete.
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+## Testing
+- [ ] You completed and sent both forms using only the keyboard.
+- [ ] Sending the empty registration form is stopped, with a message.
+- [ ] You listened to the form with a screen reader.
+- [ ] At 200% zoom, nothing is cut off.
+- [ ] `lang` at the top of the file matches your language.

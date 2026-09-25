@@ -2,84 +2,208 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-> <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
-
 **课程:** `preface` · **课时:** `history-of-web3d-05` · **时长:** 约 6 小时 · 8 次学习，每次 45 分钟 · 每周 4 次，约 2 周
 
 ---
 
 > 创建一个 Web3D 技术对比实验室，包含小型示例和一条标准发展时间线。
 
+---
+
 ## 学习目标
 
-_内容待撰写。_
+完成本项目后，你将能够：
+
+1. 讲述网页 3D 的故事：从 1994年的 VRML，到今天的 WebXR 和 WebGPU。
+2. 解释**声明式** 3D 与**命令式** 3D 的区别，并各举一个例子。
+3. 解释为什么 X3D、WebGL 和 glTF 这样的开放标准，对每一个从事 3D 构建的人都很重要。
+4. 读懂用 X3D、A-Frame 和 three.js 编写的小型 3D 示例，并用浅显的话说出每一行的作用。
+5. 为一个 3D 项目选择一个合理的入门工具，并说明选择的理由。
 
 ## 先决条件
 
-_内容待撰写。_
+- **课程 0.1 — 欢迎来到 XR Camp。** 你已经用 A-Frame 构建过一个场景。
+- **课程 0.4 — 万维网发展史。** 你知道 W3C 是什么，也知道开放标准为什么重要。
 
 ## 所需工具
 
-_内容待撰写。_
+| 工具 | 用途 | 费用 |
+| --- | --- | --- |
+| 现代浏览器 | 查看实验室页面 | 免费 |
+| 纯文本编辑器 | 编辑实验室页面 | 免费 |
+| 网络连接 | 三个示例需要下载各自的 3D 库 | 免费 |
+| 你的学习日志 | 记录笔记和来源 | 免费 |
 
 ## 你将构建什么
 
-_内容待撰写。_
+一个**对比实验室**：在一个页面上，用三种方式（X3D、A-Frame 和 three.js）构建同一个紫色盒子，再加上一张对比表格、一条 Web3D 标准时间线，以及你自己的结论。
+
+三个示例已经为你构建好，位于 `starter/examples/`。你就是科学家：研究它们、修改它们，并记录下你的发现。
 
 ## 文件夹说明
 
 ```text
 05-history-of-web3d/
-├── README.md
-├── starter/        # begin here
-├── completed/      # reference solution
-├── challenges/     # foundation · creative · explorer
-├── tests/          # self-review checklist
+├── README.md            # This guide
+├── README.es.md         # Spanish
+├── README.zh-Hans.md    # Simplified Chinese
+├── project.json         # Lesson metadata
+├── starter/
+│   ├── index.html       # Begin here: the lab page, with 7 TODOs
+│   └── examples/        # The box in X3D, A-Frame, and three.js
+├── completed/           # Reference solution: open this last
+├── challenges/          # Three optional extensions
+├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
 ```
 
 ## 环境配置
 
-_内容待撰写。_
+1. 在你的 `xr-camp` 文件夹中，复制 `starter` 文件夹，并把副本重命名为 `web3d-lab`。
+2. 在浏览器中打开 `web3d-lab/index.html`。稍等片刻，三个紫色盒子就会出现。
+3. 同时在文本编辑器中打开 `web3d-lab/examples/` 里的每一个文件。这三个文件你都要读。
+
+## 历史故事
+
+### 最初的梦想：VRML（1994–2003）
+
+万维网几乎刚一诞生，人们就希望它能变成 3D 的。**1994年5月**，在第一届万维网大会上，一场关于网页 3D 的会议观看了 Mark Pesce 展示他与 Tony Parisi 共同制作的演示，**VRML**（Virtual Reality Modeling Language，虚拟现实建模语言）的构想由此诞生。这个构想简单而大胆：一个 3D 世界应该是一个可以链接的文件，就像一个页面一样。
+
+VRML 于 **1997年**成为国际标准（VRML97）。你可以在浏览器中漫游 3D 世界，但前提是先安装一个插件，而 1990年代的电脑和拨号网络都很难带动它。梦想是对的，只是技术来得太早。
+
+### 经久的标准：X3D（2004年起）
+
+负责维护 VRML 的团体后来成为 **Web3D Consortium**（Web3D 联盟），并设计了 VRML 的继任者：**X3D**，它自 **2004年**起成为 ISO 标准。X3D 被用在那些需要让 3D 数据在几十年内保持可读的领域：工程、医学，以及文化遗产，例如历史建筑的扫描数据。**2009年**，来自 Fraunhofer IGD 研究所的 **X3DOM** 让 X3D 可以直接放进 HTML 页面中。这就是你实验室中的第一个示例。
+
+### 无需插件的 3D：WebGL 与各种库（2010–2015）
+
+转折点出现在 **2011年3月**：**WebGL 1.0** 让每一个浏览器都能完全不借助插件，快速绘制 3D 图形。WebGL 功能强大，但非常底层：画一个盒子就需要写很多行代码。于是，人们在它之上构建了各种库：
+
+- **three.js**（2010年），由 Ricardo Cabello 创建，如今是网页上使用最广泛的 3D 库。这是你的第三个示例。
+- **Babylon.js**（2013年），起源于 Microsoft，在游戏领域很受欢迎。
+- **A-Frame**（2015年12月），出自 Mozilla 的 VR 团队，它重新带回了 VRML 的理念，即把 3D 写成页面中的标签，只不过这一次建立在 WebGL 之上，并且可以直接用于头显。这是你的第二个示例。
+
+### 共享、沉浸与性能：glTF、WebXR、WebGPU（2015年至今）
+
+3D 模型需要一种通用的文件格式，就像照片有 JPEG 一样。来自 Khronos Group（WebGL 背后的组织）的 **glTF** 填补了这个空白：1.0 版于 **2015年10月**推出，2.0 版于 **2017年6月**推出，并在 **2022年**成为 ISO 标准。它常被称为「3D 界的 JPEG」。
+
+**2019年12月**，**WebXR Device API** 在一款主流浏览器中正式发布，网页从此可以在虚拟现实或增强现实头显中打开。**2023年5月**，**WebGPU** 登场：它是 WebGL 的继任者，速度更快，而且除了图形之外还能运行 AI 计算。
+
+在 VRML 诞生三十年后，最初的梦想终于成真：一个可以链接、可以在手机上打开、也可以戴上头显走进去的 3D 世界，无需任何插件，完全由开放标准构建而成。
+
+### 声明式与命令式
+
+这是本课最重要的概念，在今后的整个职业生涯中你都会遇到它。
+
+- **声明式**是指你描述**想要什么**：「一个紫色的盒子，放在这里，这样转动」。工具自己会想办法把它画出来。X3D 和 A-Frame 是声明式的，HTML 也是。
+- **命令式**是指你一步一步地给出**怎么做**的指令：「创建一个渲染器；创建一台相机；添加一盏灯；创建一个盒子；把它加入场景；绘制」。three.js 是命令式的，大多数 JavaScript 也是。
+
+声明式上手更快，也更容易读懂。命令式工作量更大，但给你更多的控制权。专业人士两种都会用，而且常常在同一个项目中同时使用：A-Frame 本身就是在 three.js 之上构建的。
 
 ## 分步讲解
 
-_内容待撰写。_
+### 规划你的学习时间
+
+| 次数 | 学习内容 | 完成成果 |
+| --- | --- | --- |
+| 1 | 环境配置，TODO 1–2，阅读**最初的梦想**和**经久的标准** | 打开了实验室页面，并写上了你的名字 |
+| 2 | 研究 `examples/x3dom.html`，然后修改它的颜色 | 你第一次编辑的 X3D |
+| 3 | 阅读**无需插件的 3D**；研究 `examples/aframe.html` 和 `examples/three.html` | 读懂全部三个示例 |
+| 4 | 阅读**声明式与命令式**；TODO 3，对比表格 | 一张完成的表格 |
+| 5 | TODO 4–5：截至 2015年的时间线 | 一半的时间线 |
+| 6 | 阅读**共享、沉浸与性能**；TODO 6 | 完整的时间线 |
+| 7 | TODO 7，你的结论；然后逐项完成 [`tests/checklist.md`](tests/checklist.md) | 一个完成的实验室 |
+| 8 | 完成一项拓展挑战，然后**提交作业** | 作品集中一个完成的实验室 |
+
+### 研究一个示例
+
+对于每个示例，在编辑器中打开它，并在学习日志中回答三个问题：
+
+1. **盒子在哪里？** 找到创建它的那一行或几行代码。
+2. **颜色在哪里？** 把它改成另一种颜色，保存，然后刷新实验室页面。
+3. **工具替我做了什么？** 找一找相机和灯光。如果找不到，那就是工具替你添加了它们。
+
+每种工具书写颜色的方式都不一样：X3D 用三个 0 到 1 之间的数字分别表示红、绿、蓝（`0.36 0.16 0.53`），而 A-Frame 和 three.js 使用你在课程 0.1 中见过的十六进制代码（`#5b2a86`）。不同的工具，不同的年代，同一种颜色。
+
+### 为什么三个盒子看起来不一样
+
+仔细看看这三个盒子。它们大小不同、转动的角度不同、光照也不同。每种工具都会选择一个默认的相机位置和默认的灯光，而 three.js 示例则自己做出选择，因为它没有任何默认设置。**默认设置是别人替你做出的决定。** 注意到它们，是掌控它们的第一步。
 
 ## 关键代码解析
 
-_内容待撰写。_
+**`<box size="1.5 1.5 1.5">`（X3D）** 和 **`<a-box>`（A-Frame）** 都用一个标签来描述一个盒子。浏览器本身并不认识这些标签；是你加载的库（`x3dom.js` 或 `aframe.min.js`）教会了它。
+
+**`new THREE.Mesh(geometry, material)`（three.js）** 用两个部分构建盒子：*几何体*（geometry，它的形状）和*材质*（material，它的表面看起来是什么样子）。每一个 3D 引擎在底层都是这样工作的，A-Frame 也不例外。
+
+**`<iframe src="examples/aframe.html" title="The box in A-Frame">`** 把一个页面放进另一个页面中。每个示例都放在自己单独的页面里，这样每个页面只加载它自己需要的库。`title` 是屏幕阅读器为这个框架朗读的内容。
 
 ## 无障碍要求
 
-_内容待撰写。_
+| 要求 | WCAG 2.2 | 原因 |
+| --- | --- | --- |
+| 每个示例都有文字描述（`id="scene-description"`） | 1.1.1 | 没有描述的话，3D 画布对屏幕阅读器来说是不可见的。 |
+| 每个 `<iframe>` 都有 `title` | 4.1.2 | 否则屏幕阅读器只会朗读「框架」。 |
+| 表格有 `<caption>`，表头带有 `scope` | 1.3.1 | 每个单元格都与它所在的行和列保持关联。 |
+| 没有任何东西在动 | 2.2.2、2.3.3 | 这些示例都是静止的。如果你在挑战中添加了动画，也要同时添加一个暂停按钮。 |
+| 代码示例在自己的框内横向滚动，而不是让整个页面滚动 | 1.4.10 | 页面在手机宽度下依然易于阅读。 |
 
 ## 性能注意事项
 
-_内容待撰写。_
+每个示例第一次都要下载它的库：three.js 约 1.9 MB（分为两个文件），X3DOM 约 0.8 MB，A-Frame 约 1.3 MB。这些 iframe 使用了 `loading="lazy"`，所以在手机上，页面靠下的示例只有在你滚动到那里时才会加载。如果网速较慢，请趁信号好的时候先打开一次实验室页面；之后浏览器会保留这些库。
 
 ## 常见错误
 
-_内容待撰写。_
+| 错误做法 | 会发生什么 | 正确做法 |
+| --- | --- | --- |
+| 编辑的是示例文件，刷新的却是另一份副本 | 什么都没变 | 确认你编辑的是你所打开的那个文件夹里的文件 |
+| 在 X3D 中使用十六进制代码（`#5b2a86`） | 盒子变成灰色或黑色 | X3D 使用三个 0 到 1 之间的数字 |
+| 删掉了 three.js 中的灯光 | 盒子变成黑色 | three.js 不会替你添加灯光 |
+| 把 three.js 称为「声明式」 | 表格中出现错误答案 | three.js 是命令式的：它执行一条条指令 |
 
 ## 故障排查
 
-_内容待撰写。_
+**某个示例一直是空白的。** 它的库还没有下载完成。检查你的网络连接，然后刷新。
+
+**three.js 示例是空白的，但其他示例正常。** 非常老旧的浏览器不支持它所使用的 `importmap`。请更新你的浏览器。
+
+**我改了颜色，但实验室页面没有更新。** 刷新实验室页面本身。如果还是不行，单独打开那个示例页面，刷新它，然后再刷新实验室页面。
 
 ## 拓展挑战
 
-_内容待撰写。_
+三个可选拓展，位于 [`challenges/`](challenges/)：
+
+1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 在三种工具中都把盒子换成球体。
+2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 添加第四个示例：与你在课程 0.1 中构建的世界相同的场景。
+3. **[探索](challenges/challenge-3.zh-Hans.md)** —— 在 A-Frame 中加载一个真实的 glTF 模型。
 
 ## 提交作业
 
-_内容待撰写。_
+1. 完成 [`tests/checklist.md`](tests/checklist.md) 中的每一项。
+2. 给你的实验室截一张图，让表格和结论都清晰可见。
+3. 把截图保存在你的学习日志中。XR Camp 社区开放后，也在那里分享。
+4. 在学习日志中回答：你觉得自己更像一个「声明式」的人，还是一个「命令式」的人？为什么？
 
 ## 延伸阅读
 
-_内容待撰写。_
+- [Web3D Consortium —— X3D](https://www.web3d.org/x3d/what-x3d)（英文）
+- [Khronos Group —— glTF](https://www.khronos.org/gltf/)（英文）
+- [Khronos Group —— WebGL](https://www.khronos.org/webgl/)（英文）
+- [three.js](https://threejs.org/) 和 [A-Frame](https://aframe.io/)（英文）—— 你将在第三阶段使用的两个库
+- [Immersive Web Working Group（W3C）](https://www.w3.org/immersive-web/)（英文）—— WebXR 在这里编写
+
+## 值得认识的女性
+
+**Ada Rose Cannon** 是 W3C 沉浸式网络工作组（Immersive Web Working Group）和社区组（Community Group）的联合主席：正是这群人在编写 **WebXR**，也就是让网页能够在头显中打开的标准。Cannon 是 Apple 的网页平台工程师，从事 Safari 和 WebKit 相关工作；此前，她曾担任 Samsung Internet 的开发者布道师长达六年，推广 WebXR 等新的网页技术。
+
+你时间线上的最后一个里程碑并不是自然而然发生的。正是像 Cannon 这样的人，花了多年时间开会、编写规范、制作演示，才让「一个可以链接的 3D 世界」能够在每一个浏览器中运行。标准制定工作是你将在课程 0.9 中了解到的职业之一。
+
+> **编辑说明 —— 发布前须核实。** 「值得认识的女性」栏目中的生平陈述必须与原始资料核对，并在可行时于本课上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+
+## 标准聚焦
+
+本课中出现了四项开放标准：**X3D**（Web3D Consortium 与 ISO）、**WebGL**（Khronos Group）、**glTF**（Khronos Group 与 ISO）和 **WebXR**（W3C）。你今天制作的一个 glTF 模型，将来也应该能在尚未被编写出来的软件中打开。这正是标准存在的意义。
 
 ## 许可协议
 
-Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
-
+代码：[`LICENSE-CODE`](../../LICENSE-CODE) · 内容：[`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)

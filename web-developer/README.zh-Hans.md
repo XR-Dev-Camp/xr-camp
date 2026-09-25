@@ -17,8 +17,8 @@
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
 | 1 | [HTML 基础](01-html-foundations/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
-| 2 | [Accessible Forms and User Input](02-accessible-forms-and-user-input/README.zh-Hans.md) | 7 小时 · 10 次学习 | 🚧 即将推出 |
-| 3 | [CSS Foundations](03-css-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
+| 2 | [Accessible Forms and User Input](02-accessible-forms-and-user-input/README.zh-Hans.md) | 7 小时 · 10 次学习 | ✅ 已完成 |
+| 3 | [CSS Foundations](03-css-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 4 | [Responsive Web Design](04-responsive-web-design/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
 | 5 | [Web Accessibility Foundations](05-web-accessibility-foundations/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |
 | 6 | [JavaScript Foundations](06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 | 🚧 即将推出 |

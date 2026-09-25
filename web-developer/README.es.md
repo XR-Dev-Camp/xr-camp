@@ -17,8 +17,8 @@
 | # | Lección | Tiempo | Estado |
 | --- | --- | --- | --- |
 | 1 | [Fundamentos de HTML](01-html-foundations/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
-| 2 | [Accessible Forms and User Input](02-accessible-forms-and-user-input/README.es.md) | 7 h · 10 sesiones | 🚧 Próximamente |
-| 3 | [CSS Foundations](03-css-foundations/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 2 | [Accessible Forms and User Input](02-accessible-forms-and-user-input/README.es.md) | 7 h · 10 sesiones | ✅ Lista |
+| 3 | [CSS Foundations](03-css-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
 | 4 | [Responsive Web Design](04-responsive-web-design/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
 | 5 | [Web Accessibility Foundations](05-web-accessibility-foundations/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
 | 6 | [JavaScript Foundations](06-javascript-foundations/README.es.md) | 16 h · 22 sesiones | 🚧 Próximamente |

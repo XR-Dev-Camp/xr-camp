@@ -2,18 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Accessible Forms and User Input - XR Camp starter</title>
+  <!-- TODO 1: Give this page a description and a title that name YOUR centre
+       or organisation, like: "Join a programme - Riverside Community Centre". -->
+  <title>Join a programme</title>
 </head>
 <body>
-  <main>
-    <!-- Add your main heading below. -->
+  <a href="#main">Skip to main content</a>
 
-    <!-- Add your project content below. -->
+  <header>
+    <!-- In your own site this page is join.html, next to your home page from Course 1.1. -->
+    <p><a href="index.html">Riverside Community Centre</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="join.html" aria-current="page">Join a programme</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main id="main">
+    <h1>Join a programme</h1>
+    <p>Fill in this form and we will contact you within two working days. Fields marked <strong>(required)</strong> must be filled in; everything else is optional.</p>
+
+    <!-- TODO 2: Add a <form> with action="thanks.html" and method="get".
+         Inside it, add a <fieldset> with the <legend> "About you", and a
+         labelled text field for the person's full name.
+         Remember: every <input> needs a <label> whose "for" matches its "id". -->
+
+    <!-- TODO 3: Add a labelled email field and a labelled phone field.
+         Use the right type (email, tel) and autocomplete (email, tel).
+         Give each a short hint explaining WHY you ask, linked with aria-describedby. -->
+
+    <!-- TODO 4: Add a second <fieldset> whose <legend> asks "Which programme would
+         you like to join?", with one radio button per programme. All radios
+         share the same name. -->
+
+    <!-- TODO 5: Add a <select> for the preferred day (with a "No preference"
+         option first), and a <textarea> asking what would make a visit easier. -->
+
+    <!-- TODO 6: Mark the name, email, and programme as required: add the
+         required attribute AND write "(required)" in the label or legend.
+         Then press the submit button with the form empty, and read the
+         browser's messages. -->
+
+    <!-- TODO 7: Add an UNTICKED newsletter checkbox, and a <details> section
+         "How we use your information": what you collect, why, how long you
+         keep it, who can see it, and how to ask for it to be deleted.
+         Then add the submit button. -->
+
+    <!-- TODO 8: Below the registration form, add an <h2> "Tell us how we are
+         doing" and a second form: a rating (radio buttons with words, not
+         only numbers) and a comments textarea with maxlength="500" and a hint. -->
+
+    <!-- TODO 9: Fill in and send both forms. Look at the address of the
+         thank-you page. What do you see after the "?"? -->
   </main>
+
+  <footer>
+    <p>Riverside Community Centre. <a href="#main">Back to top</a></p>
+  </footer>
 </body>
 </html>

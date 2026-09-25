@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img">
+  <!-- A simple drawing of the community centre, made for XR Camp (CC0). -->
+  <rect width="800" height="450" fill="#dcefff"/>
+  <rect y="360" width="800" height="90" fill="#9ccf8a"/>
+  <rect x="180" y="150" width="440" height="210" fill="#f3e3c7"/>
+  <polygon points="160,150 400,60 640,150" fill="#b5542d"/>
+  <rect x="360" y="250" width="80" height="110" fill="#5b2a86"/>
+  <rect x="220" y="200" width="90" height="70" fill="#fff" stroke="#8a8398" stroke-width="4"/>
+  <rect x="490" y="200" width="90" height="70" fill="#fff" stroke="#8a8398" stroke-width="4"/>
+  <polygon points="440,360 440,340 560,360" fill="#b9b3c2"/>
+  <line x1="440" y1="330" x2="560" y2="350" stroke="#4a4a55" stroke-width="4"/>
+</svg>

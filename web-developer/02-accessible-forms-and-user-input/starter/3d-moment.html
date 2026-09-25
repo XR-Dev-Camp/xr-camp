@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: a form that shapes a world - XR Camp</title>
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    body { max-width: 52rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #1b1b1f; background: #fdfcf8; }
+    .layout { display: grid; gap: 1rem; }
+    @media (min-width: 44rem) { .layout { grid-template-columns: 16rem 1fr; } }
+    a-scene { display: block; width: 100%; height: 18rem; }
+    :focus-visible { outline: 3px solid #d62f6b; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>A form that shapes a world</h1>
+    <p>The form controls you just learned can control 3D. Change the shape, colour, and size, and the object changes.</p>
+
+    <div class="layout">
+      <form id="controls">
+        <p>
+          <label for="shape">Shape</label><br>
+          <select id="shape">
+            <option value="box">Box</option>
+            <option value="sphere">Sphere</option>
+            <option value="cone">Cone</option>
+            <option value="torus">Ring</option>
+          </select>
+        </p>
+        <p>
+          <label for="colour">Colour</label><br>
+          <input id="colour" type="color" value="#5b2a86">
+        </p>
+        <p>
+          <label for="size">Size</label><br>
+          <input id="size" type="range" min="0.5" max="2" step="0.1" value="1">
+        </p>
+      </form>
+
+      <div>
+        <!-- The description updates with the scene, and is announced when it changes. -->
+        <p id="scene-description" aria-live="polite">A purple box, at size 1, on a pale background. Nothing moves.</p>
+        <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+          <a-sky color="#eef4ff"></a-sky>
+          <a-entity id="thing" position="0 1.4 -3" rotation="20 30 0"
+                    geometry="primitive: box" material="color: #5b2a86"></a-entity>
+        </a-scene>
+      </div>
+    </div>
+
+    <p><a href="index.html">Back to the form lesson</a></p>
+  </main>
+
+  <script>
+    // Every form control fires an "input" event when it changes. We read the
+    // values and pass them to the 3D object. You will write code like this in
+    // Course 1.6.
+    const thing = document.getElementById('thing');
+    const shape = document.getElementById('shape');
+    const colour = document.getElementById('colour');
+    const size = document.getElementById('size');
+    const description = document.getElementById('scene-description');
+
+    function update() {
+      thing.setAttribute('geometry', 'primitive', shape.value);
+      thing.setAttribute('material', 'color', colour.value);
+      thing.setAttribute('scale', `${size.value} ${size.value} ${size.value}`);
+      const name = shape.options[shape.selectedIndex].text.toLowerCase();
+      description.textContent = `A ${name} in the colour ${colour.value}, at size ${size.value}, on a pale background. Nothing moves.`;
+    }
+
+    document.getElementById('controls').addEventListener('input', update);
+  </script>
+</body>
+</html>

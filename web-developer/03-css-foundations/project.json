@@ -2,7 +2,7 @@
   "id": "web-03-css-foundations",
   "courseId": "web-developer",
   "lessonId": "css-foundations-03",
-  "status": "draft",
+  "status": "review",
   "phase": 1,
   "title": {
     "en": "CSS Foundations",
@@ -21,6 +21,7 @@
   },
   "difficulty": "beginner",
   "technologies": [
+    "HTML",
     "CSS"
   ],
   "hasCode": true,
@@ -38,6 +39,7 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "text-resize"
   ]
 }

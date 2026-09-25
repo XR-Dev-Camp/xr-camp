@@ -2,7 +2,7 @@
   "id": "web-02-accessible-forms-and-user-input",
   "courseId": "web-developer",
   "lessonId": "accessible-forms-and-user-input-02",
-  "status": "draft",
+  "status": "review",
   "phase": 1,
   "title": {
     "en": "Accessible Forms and User Input",
@@ -38,6 +38,8 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "form-labels",
+    "keyboard-operable"
   ]
 }

@@ -1,0 +1,65 @@
+/*
+  My site's visual system
+  -----------------------
+  One stylesheet for every page. Work through the TODOs in order: each one
+  is a step in the lesson guide. Save, then reload the browser after each.
+
+  Organise it from general to specific:
+    1. Design tokens   2. Base   3. Typography   4. Layout
+    5. Components      6. States
+*/
+
+
+/* 1. Design tokens ------------------------------------------------------- */
+
+:root {
+  /* TODO 4: Choose your colours. Check every text colour against its
+     background with a contrast checker: 4.5:1 or more for normal text.
+     Write each ratio in a comment next to it. */
+  --color-text: #1b1b1f;
+  --color-bg: #fdfcf8;
+
+  /* TODO 5: Add a type scale: --step-0 to --step-4, each 1.25 times the last,
+     in rem. And a font stack that includes fonts for Chinese. */
+
+  /* TODO 6: Add a spacing scale: --space-1 to --space-6. */
+}
+
+
+/* 2. Base ---------------------------------------------------------------- */
+
+/* TODO 2: Make every element use box-sizing: border-box.
+   Then style body: no margin, your font, your text and background colours,
+   and a line-height of about 1.6. */
+
+
+/* 3. Typography ---------------------------------------------------------- */
+
+/* TODO 3: Style h1, h2, and h3 using your type scale. Give paragraphs and
+   list items a comfortable maximum width (about 65ch). Style links, and
+   make visited links look different. */
+
+
+/* 4. Layout -------------------------------------------------------------- */
+
+/* TODO 7: Give header, main, and footer a maximum width, centred, with
+   padding from your spacing scale. */
+
+
+/* 5. Components ---------------------------------------------------------- */
+
+/* TODO 8: The header band, the navigation list shown in a row, and images
+   and video that never overflow (max-width: 100%). */
+
+/* TODO 9: Hide the skip link off-screen, and show it when it has focus. */
+
+/* TODO 10: Tables: collapsed borders, a caption, padded cells. */
+
+/* TODO 11: Forms on join.html: fieldsets, labels, fields, and the button. */
+
+
+/* 6. States -------------------------------------------------------------- */
+
+/* TODO 12: Hover styles, a clearly visible :focus-visible outline on
+   everything, and the current page in the navigation marked by more than
+   colour alone. */
