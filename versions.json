@@ -12,8 +12,10 @@
       "version": "0.186.1",
       "urls": [
         "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
         "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
-      ]
+      ],
+      "$comment": "three.module.min.js imports ./three.core.js (unminified, about 1.46 MB). Every import map must also map https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js to three.core.min.js."
     },
     "x3dom": {
       "version": "1.8.3",

@@ -14,6 +14,20 @@ Two rules keep lessons working for every learner, for years: **pin every library
 
 CI fails any `.html` file that loads a pinned library with `@latest`, with a different version, or with no version at all.
 
+**three.js needs two lines in its import map.** `three.module.min.js` imports `./three.core.js`, which on jsDelivr is the unminified file (about 1.46 MB). Map it to the minified copy, so a page downloads about 0.8 MB instead of 1.85 MB:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+      "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+    }
+  }
+</script>
+```
+
 **Why:** three.js makes breaking changes in most releases. A lesson that loads "latest" works on the day it is written and breaks months later, and a beginner cannot tell whether the bug is theirs or ours. Nothing makes a new learner quit faster.
 
 **Upgrading** is a deliberate change made in one pull request: update `versions.json`, update every lesson that uses the library, and re-test each one against its `tests/checklist.md`.

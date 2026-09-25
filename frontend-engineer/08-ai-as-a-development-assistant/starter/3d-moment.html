@@ -7,8 +7,15 @@
   <title>3D moment: check an AI's explanation - My XR Camp</title>
   <link rel="stylesheet" href="styles.css">
   <!-- three.js, pinned to the version in versions.json. -->
+  <!-- three.module.min.js loads three.core.js; the second line swaps in the
+       minified copy, which is about a quarter of the size. -->
   <script type="importmap">
-    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js" } }
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js"
+      }
+    }
   </script>
 </head>
 <body>
