@@ -1,0 +1,37 @@
+# Curso para Principiantes - Lección 1: HTML Hola Mundo
+
+¡Bienvenida a tu primera experiencia de programación! Vamos a crear tu primera página web.
+
+## Qué Aprenderás:
+- Estructura básica de una página HTML
+- Escribir tu primer "Hola Mundo"
+- Cómo el navegador interpreta tu código
+
+## Paso a Paso:
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Primera Página Web</title>
+</head>
+<body>
+  <h1>¡Hola, Mundo!</h1>
+  <p>Este es mi primer sitio web creado con XR Camp.</p>
+</body>
+</html>
+```
+
+### Notas del Código:
+- `<!DOCTYPE html>` indica que es una página HTML5.
+- `<html lang="es">` define el idioma.
+- `<h1>` es un encabezado principal y `<p>` es un párrafo.
+
+## Desafío:
+- Cambia el `<h1>` para que diga tu nombre.
+- Agrega un segundo `<p>` con tu color favorito.
+
+## Recursos Útiles:
+- [W3Schools HTML Intro (Español)](https://www.w3schools.com/html/html_intro.asp)
+
+¡Felicidades, ya eres desarrolladora web!

@@ -1,0 +1,37 @@
+# 初学者课程 - 第1课：HTML 你好世界
+
+欢迎来到你的第一个编程体验！我们一起创建你的第一个网页。
+
+## 你将学习：
+- HTML页面的基本结构
+- 编写你的第一个 "你好，世界"
+- 浏览器如何解析你的代码
+
+## 步骤：
+```html
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>我的第一个网页</title>
+</head>
+<body>
+  <h1>你好，世界！</h1>
+  <p>这是我通过 XR Camp 创建的第一个网站！</p>
+</body>
+</html>
+```
+
+### 代码解释：
+- `<!DOCTYPE html>` 告诉浏览器这是HTML5页面。
+- `<html lang="zh">` 设置页面语言。
+- `<h1>` 是主标题，`<p>` 是段落。
+
+## 小挑战：
+- 修改 `<h1>` 内容显示你的名字。
+- 添加第二个 `<p>` 标签，写下你最喜欢的颜色。
+
+## 推荐资源：
+- [W3Schools HTML 入门](https://www.w3schools.com/html/html_intro.asp)
+
+完成后，恭喜你正式迈入网页开发的世界！
