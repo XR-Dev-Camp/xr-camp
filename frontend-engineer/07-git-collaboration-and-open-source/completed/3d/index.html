@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D example - XR Camp contribution practice</title>
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    body { max-width: 50rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #1b1b1f; background: #fdfcf8; }
+    a-scene { display: block; width: 100%; height: 20rem; }
+    a { color: #5b2a86; }
+    button { font: inherit; padding: 0.5rem 1rem; color: #fff; background: #5b2a86; border: 2px solid #5b2a86; border-radius: 0.5rem; cursor: pointer; }
+    button[aria-pressed="true"] { background: #fff; color: #3f1d5e; }
+    :focus-visible { outline: 3px solid #d62f6b; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Three shapes</h1>
+    <p>A small A-Frame scene, fixed through two pull requests: it now has a scene description (issue 1), and it respects reduced motion, with a Pause button (issue 2).</p>
+
+    <!-- Issue 2: pause for everyone; paused from the start if the learner
+         asked their device to reduce motion. -->
+    <p><button type="button" id="pause" aria-pressed="false">Pause animation</button></p>
+
+    <!-- Issue 1: what a sighted visitor sees, in words, left to right. -->
+    <p id="scene-description">A pale floor with three shapes in a row, from left to right: a purple box, a green ball, and an orange cone. The box and the cone turn slowly, unless the animation is paused.</p>
+
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+      <a-sky color="#eef4ff"></a-sky>
+      <a-plane rotation="-90 0 0" width="10" height="10" color="#dcd6e6"></a-plane>
+      <a-box position="-1.5 0.6 -4" color="#5b2a86" spin></a-box>
+      <a-sphere position="0 0.7 -4" radius="0.6" color="#1d6b4f"></a-sphere>
+      <a-cone position="1.5 0.6 -4" radius-bottom="0.6" height="1.2" color="#b5562e" spin></a-cone>
+    </a-scene>
+    <p><a href="../index.html">Back to the study tips wall</a></p>
+  </main>
+
+  <script>
+    // One flag decides whether anything may move.
+    const motion = { paused: window.matchMedia('(prefers-reduced-motion: reduce)').matches };
+
+    // Replaces the looping animation attributes: turn 60 degrees a second,
+    // inside A-Frame's frame loop, unless motion is paused.
+    AFRAME.registerComponent('spin', {
+      tick(time, delta) {
+        if (motion.paused) return;
+        this.el.object3D.rotation.y += THREE.MathUtils.degToRad(60) * (delta / 1000);
+      },
+    });
+
+    const button = document.querySelector('#pause');
+    const description = document.querySelector('#scene-description');
+    function update() {
+      button.setAttribute('aria-pressed', String(motion.paused));
+      description.textContent = 'A pale floor with three shapes in a row, from left to right: a purple box, a green ball, and an orange cone. '
+        + (motion.paused ? 'Nothing moves.' : 'The box and the cone turn slowly.');
+    }
+    button.addEventListener('click', () => { motion.paused = !motion.paused; update(); });
+    update();
+  </script>
+</body>
+</html>

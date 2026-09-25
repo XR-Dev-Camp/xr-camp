@@ -20,8 +20,8 @@
 | 2 | [The Document Object Model and Dynamic Interfaces](02-the-document-object-model-and-dynamic-interfaces/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
 | 3 | [Application Architecture and Maintainable Code](03-application-architecture-and-maintainable-code/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 4 | [APIs, JSON, and Asynchronous Applications](04-apis-json-and-asynchronous-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
-| 5 | [Web Components](05-web-components/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |
+| 5 | [Web Components](05-web-components/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
 | 6 | [Progressive Web Applications](06-progressive-web-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
-| 7 | [Git Collaboration and Open Source](07-git-collaboration-and-open-source/README.zh-Hans.md) | 9 小时 · 12 次学习 | 🚧 即将推出 |
-| 8 | [AI as a Development Assistant](08-ai-as-a-development-assistant/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |
+| 7 | [Git Collaboration and Open Source](07-git-collaboration-and-open-source/README.zh-Hans.md) | 9 小时 · 12 次学习 | ✅ 已完成 |
+| 8 | [AI as a Development Assistant](08-ai-as-a-development-assistant/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
 | 9 | [Phase 2 Capstone - Production Frontend Application](09-production-frontend-application/README.zh-Hans.md) | 18 小时 · 24 次学习 | 🚧 即将推出 |

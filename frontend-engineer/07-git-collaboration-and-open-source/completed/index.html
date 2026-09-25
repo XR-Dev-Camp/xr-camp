@@ -1,14 +1,40 @@
 <!DOCTYPE html>
+<!-- Ana's copy of the study tips wall, after her pull requests were merged:
+     lang set (issue 6), heading typo fixed (issue 3), small print darkened
+     (issue 4), and two new tips, added after resolving a merge conflict. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Git Collaboration and Open Source - XR Camp reference solution</title>
+  <title>Study tips wall - XR Camp contribution practice</title>
+  <style>
+    body { max-width: 40rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #1b1b1f; background: #fdfcf8; }
+    h1 { color: #3f1d5e; }
+    li { margin-bottom: 0.75rem; }
+    .who { font-weight: 600; }
+    /* Was #999999 (about 2.8:1). #595959 is about 6.8:1 on this background. */
+    .small { font-size: 0.85rem; color: #595959; }
+    a { color: #5b2a86; }
+    :focus-visible { outline: 3px solid #d62f6b; outline-offset: 3px; }
+  </style>
 </head>
 <body>
   <main>
-    <h1>Git Collaboration and Open Source</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Study tips</h1>
+    <p>One tip from each person who has practised contributing here. Add yours at the end of the list: see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+
+    <ul>
+      <li>Study at the same time every day, even for 20 minutes. <span class="who">(XR Camp)</span></li>
+      <li>When you are stuck for 15 minutes, write down exactly what you tried, then ask. <span class="who">(XR Camp)</span></li>
+      <li>Commit small, commit often: you can always go back. <span class="who">(XR Camp)</span></li>
+      <!-- Ana and Lucía both added a tip here, in different branches: Git
+           could not choose, so this was the merge conflict. Keeping both. -->
+      <li>Read the error message out loud. It usually says what is wrong. <span class="who">(Ana)</span></li>
+      <li>Explain your code to a friend who does not code. If you cannot, you do not understand it yet. <span class="who">(Lucía)</span></li>
+    </ul>
+
+    <p><a href="3d/index.html">See the 3D example</a></p>
+    <p class="small">Part of XR Camp, a free school for the immersive web.</p>
   </main>
 </body>
 </html>

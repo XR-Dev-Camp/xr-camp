@@ -2,18 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Web Components - XR Camp starter</title>
+  <meta name="description" content="Every XR Camp lesson as a card, built with one reusable custom element.">
+  <title>Lesson cards - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>My XR Camp</p></header>
+
   <main>
-    <!-- Add your main heading below. -->
+    <h1>Lesson cards</h1>
+    <p>Every XR Camp lesson as a card, built with one reusable element: <code>&lt;lesson-card&gt;</code>. Mark lessons as done. Your progress is saved in this browser only, and your learning dashboard sees it too.</p>
 
-    <!-- Add your project content below. -->
+    <!-- One polite live region for every change on the page. -->
+    <p id="status" role="status" class="visually-hidden"></p>
 
+    <section aria-labelledby="example-heading">
+      <h2 id="example-heading">One card, written in HTML</h2>
+      <p>This card is written straight into the HTML file. Its title and description show even before JavaScript runs.</p>
+      <!-- TODO 1: Write one card, straight into the HTML:
+           <lesson-card lesson-id="fe-05-web-components" lesson-title="Web Components"
+                        minutes="600" status="coming-soon" heading-level="3">
+             a <p slot="description"> with one sentence about this lesson,
+             and one more <p> (no slot attribute) with anything else.
+           </lesson-card>
+           Reload. The browser does not know <lesson-card> yet, so what does
+           it show? Look at it in the Elements panel. -->
+    </section>
+
+    <section aria-labelledby="catalog-heading">
+      <h2 id="catalog-heading">Lessons from the catalog</h2>
+      <!-- Hidden until the catalog has loaded, so it never appears without working. -->
+      <p id="phase-picker" hidden>
+        <label for="phase">Phase</label><br>
+        <select id="phase"></select>
+      </p>
+      <noscript><p>The lesson cards need JavaScript. The course list is also on the XR Camp home page.</p></noscript>
+      <ul id="cards" class="card-grid" role="list"></ul>
+    </section>
+
+    <p><a href="components.md">Read the components' documentation</a> · <a href="3d-moment.html">Try the 3D moment: a 3D viewer in your own element</a></p>
   </main>
 </body>
 </html>

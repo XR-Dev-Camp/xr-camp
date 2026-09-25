@@ -576,7 +576,7 @@
       "id": "fe-05-web-components",
       "courseId": "frontend-engineer",
       "lessonId": "web-components-05",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "Web Components",
@@ -590,7 +590,11 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "Web Components"
+        "JavaScript",
+        "Web Components",
+        "Custom Elements",
+        "Shadow DOM",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "frontend-engineer/05-web-components"
@@ -622,7 +626,7 @@
       "id": "fe-07-git-collaboration-and-open-source",
       "courseId": "frontend-engineer",
       "lessonId": "git-collaboration-and-open-source-07",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "Git Collaboration and Open Source",
@@ -636,7 +640,9 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "Git"
+        "Git",
+        "GitHub",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "frontend-engineer/07-git-collaboration-and-open-source"
@@ -645,7 +651,7 @@
       "id": "fe-08-ai-as-a-development-assistant",
       "courseId": "frontend-engineer",
       "lessonId": "ai-as-a-development-assistant-08",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "AI as a Development Assistant",
@@ -659,7 +665,11 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "AI Tooling"
+        "AI Tooling",
+        "Code Review",
+        "JavaScript",
+        "HTML",
+        "Three.js"
       ],
       "hasCode": true,
       "path": "frontend-engineer/08-ai-as-a-development-assistant"

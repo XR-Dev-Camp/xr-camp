@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D example - XR Camp contribution practice</title>
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    body { max-width: 50rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: #1b1b1f; background: #fdfcf8; }
+    a-scene { display: block; width: 100%; height: 20rem; }
+    a { color: #5b2a86; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Three shapes</h1>
+    <p>A small A-Frame scene. It has some problems on purpose: see <a href="../GOOD-FIRST-ISSUES.md">GOOD-FIRST-ISSUES.md</a>.</p>
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+      <a-sky color="#eef4ff"></a-sky>
+      <a-plane rotation="-90 0 0" width="10" height="10" color="#dcd6e6"></a-plane>
+      <a-box position="-1.5 0.6 -4" color="#5b2a86" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000; easing: linear"></a-box>
+      <a-sphere position="0 0.7 -4" radius="0.6" color="#1d6b4f"></a-sphere>
+      <a-cone position="1.5 0.6 -4" radius-bottom="0.6" height="1.2" color="#b5562e" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000; easing: linear"></a-cone>
+    </a-scene>
+    <p><a href="../index.html">Back to the study tips wall</a></p>
+  </main>
+</body>
+</html>

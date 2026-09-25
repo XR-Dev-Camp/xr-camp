@@ -23,7 +23,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | --- | --- | --- | --- |
 | [0 · Bienvenida al futuro](preface/README.es.md) | Tu primer mundo 3D, una línea de tiempo de la web y un laboratorio que compara tres formas de construir en 3D. | 64 sesiones · unos 4 meses | 9 de 9 |
 | [1 · Conviértete en desarrolladora web](web-developer/README.es.md) | Sitios web accesibles y adaptables, publicados para que cualquiera en el mundo los visite. | 144 sesiones · unos 8 meses | 9 de 9 |
-| [2 · Conviértete en ingeniera frontend](frontend-engineer/README.es.md) | Aplicaciones web que se instalan en el teléfono, funcionan sin conexión y usan datos en vivo. | 145 sesiones · unos 8 meses | 4 de 9 |
+| [2 · Conviértete en ingeniera frontend](frontend-engineer/README.es.md) | Aplicaciones web que se instalan en el teléfono, funcionan sin conexión y usan datos en vivo. | 145 sesiones · unos 8 meses | 7 de 9 |
 | [3 · Conviértete en desarrolladora Web3D](web3d-developer/README.es.md) | Experiencias 3D interactivas con A-Frame y three.js. | 138 sesiones · unos 8 meses | 0 de 7 |
 | [4 · Conviértete en desarrolladora inmersiva](immersive-developer/README.es.md) | Experiencias de realidad virtual y aumentada que se abren en un visor desde un enlace. | 111 sesiones · unos 6 meses | 0 de 6 |
 | [5 · Conviértete en desarrolladora espacial full-stack](full-stack-spatial/README.es.md) | Aplicaciones 3D multiusuario con cuentas, datos y conexiones en tiempo real. | 155 sesiones · unos 9 meses | 0 de 8 |
@@ -70,10 +70,10 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | 2 | [The Document Object Model and Dynamic Interfaces](frontend-engineer/02-the-document-object-model-and-dynamic-interfaces/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
 | 3 | [Application Architecture and Maintainable Code](frontend-engineer/03-application-architecture-and-maintainable-code/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 4 | [APIs, JSON, and Asynchronous Applications](frontend-engineer/04-apis-json-and-asynchronous-applications/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
-| 5 | [Web Components](frontend-engineer/05-web-components/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 5 | [Web Components](frontend-engineer/05-web-components/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
 | 6 | [Progressive Web Applications](frontend-engineer/06-progressive-web-applications/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
-| 7 | [Git Collaboration and Open Source](frontend-engineer/07-git-collaboration-and-open-source/README.es.md) | 9 h · 12 sesiones | 🚧 Próximamente |
-| 8 | [AI as a Development Assistant](frontend-engineer/08-ai-as-a-development-assistant/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 7 | [Git Collaboration and Open Source](frontend-engineer/07-git-collaboration-and-open-source/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
+| 8 | [AI as a Development Assistant](frontend-engineer/08-ai-as-a-development-assistant/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
 | 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.es.md) | 18 h · 24 sesiones | 🚧 Próximamente |
 
 ### Fase 3 · Conviértete en desarrolladora Web3D

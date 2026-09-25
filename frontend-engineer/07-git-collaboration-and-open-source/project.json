@@ -2,7 +2,7 @@
   "id": "fe-07-git-collaboration-and-open-source",
   "courseId": "frontend-engineer",
   "lessonId": "git-collaboration-and-open-source-07",
-  "status": "draft",
+  "status": "review",
   "phase": 2,
   "title": {
     "en": "Git Collaboration and Open Source",
@@ -21,7 +21,9 @@
   },
   "difficulty": "intermediate",
   "technologies": [
-    "Git"
+    "Git",
+    "GitHub",
+    "A-Frame"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -38,6 +40,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: a 3D viewer in your own element - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. A classic script, so
+       it has run before the module below defines <model-stage>. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <script type="module" src="js/model-stage.js"></script>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>A 3D viewer in your own element</h1>
+    <p>Everything below the heading "The viewer" comes from one tag: <code>&lt;model-stage&gt;</code>. Its shape and colour are attributes. Its description is a paragraph you write inside it, so it is there even before the 3D scene loads, and even if it never does.</p>
+
+    <h2>The viewer</h2>
+    <model-stage shape="torus" color="#5b2a86" label="3D view: a purple ring">
+      <p slot="description" id="scene-description">A purple ring, like a thick bracelet, floats at eye level above a pale floor, tilted a little towards you. It turns slowly around its centre, unless you pause it or have asked your device to reduce motion. Use Turn left and Turn right to turn it one step at a time.</p>
+    </model-stage>
+
+    <h2>How it is written</h2>
+    <pre><code>&lt;model-stage shape="torus" color="#5b2a86" label="3D view: a purple ring"&gt;
+  &lt;p slot="description" id="scene-description"&gt;A purple ring …&lt;/p&gt;
+&lt;/model-stage&gt;</code></pre>
+    <p>Try changing <code>shape</code> to <code>box</code>, <code>sphere</code>, <code>cone</code>, <code>cylinder</code>, or <code>dodecahedron</code> in your browser's developer tools. The model changes at once. Then change the description to match: the words and the scene must never disagree.</p>
+
+    <p><a href="index.html">Back to the lesson cards</a></p>
+  </main>
+</body>
+</html>

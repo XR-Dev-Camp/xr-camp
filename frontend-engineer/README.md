@@ -20,8 +20,8 @@
 | 2 | [The Document Object Model and Dynamic Interfaces](02-the-document-object-model-and-dynamic-interfaces/README.md) | 10 h · 14 sessions | ✅ Ready |
 | 3 | [Application Architecture and Maintainable Code](03-application-architecture-and-maintainable-code/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 4 | [APIs, JSON, and Asynchronous Applications](04-apis-json-and-asynchronous-applications/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 5 | [Web Components](05-web-components/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
+| 5 | [Web Components](05-web-components/README.md) | 10 h · 14 sessions | ✅ Ready |
 | 6 | [Progressive Web Applications](06-progressive-web-applications/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
-| 7 | [Git Collaboration and Open Source](07-git-collaboration-and-open-source/README.md) | 9 h · 12 sessions | 🚧 Coming soon |
-| 8 | [AI as a Development Assistant](08-ai-as-a-development-assistant/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
+| 7 | [Git Collaboration and Open Source](07-git-collaboration-and-open-source/README.md) | 9 h · 12 sessions | ✅ Ready |
+| 8 | [AI as a Development Assistant](08-ai-as-a-development-assistant/README.md) | 10 h · 14 sessions | ✅ Ready |
 | 9 | [Phase 2 Capstone - Production Frontend Application](09-production-frontend-application/README.md) | 18 h · 24 sessions | 🚧 Coming soon |
