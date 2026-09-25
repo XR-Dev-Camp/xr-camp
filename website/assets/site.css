@@ -100,6 +100,9 @@ a:hover { color: var(--pink); }
 .site-nav a { display: inline-block; padding: 0.5rem 0; color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
 .site-nav a:hover { color: var(--gold); }
 @media (max-width: 60rem) {
+  /* On phones and tablets the header wraps to several rows, which is too tall
+     to keep on screen: it scrolls away with the page instead. */
+  .site-header { position: static; }
   /* On small screens the menu scrolls sideways rather than hiding items. */
   .site-nav { order: 3; width: 100%; overflow-x: auto; }
   .site-nav ul { width: max-content; }
