@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `web-developer` · **Lesson:** `developer-tools-debugging-and-testing-07` · **Estimated time:** 540 minutes
+**Course:** `web-developer` · **Lesson:** `developer-tools-debugging-and-testing-07` · **Time:** about 9 hours · 12 sessions of 45 minutes · about 3 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Fix a deliberately broken 3D scene using the A-Frame Inspector and the browser Performance panel.
 
 ## Challenge extensions
 

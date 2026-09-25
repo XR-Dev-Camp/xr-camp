@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `web-developer` · **Lesson:** `responsive-web-design-04` · **Estimated time:** 840 minutes
+**Course:** `web-developer` · **Lesson:** `responsive-web-design-04` · **Time:** about 14 hours · 19 sessions of 45 minutes · about 5 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Make a 3D scene fill the screen on a phone and sit beside the text on a wide screen, using Grid and aspect-ratio.
 
 ## Challenge extensions
 

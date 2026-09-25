@@ -2,21 +2,27 @@
   "id": "pre-04-history-of-the-web",
   "courseId": "preface",
   "lessonId": "history-of-the-web-04",
+  "status": "review",
   "phase": 0,
   "title": {
     "en": "History of the Web",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Historia de la web",
+    "zh-Hans": "万维网发展史"
   },
   "summary": {
     "en": "Build and publish a responsive timeline of major web milestones.",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Crea y publica una línea de tiempo adaptable con los hitos más importantes de la web.",
+    "zh-Hans": "构建并发布一条响应式的万维网重要里程碑时间线。"
   },
   "estimatedMinutes": 300,
+  "schedule": {
+    "sessions": 7,
+    "sessionMinutes": 45
+  },
   "difficulty": "foundation",
   "technologies": [
-    "HTML"
+    "HTML",
+    "CSS"
   ],
   "hasCode": true,
   "starterPath": "./starter",

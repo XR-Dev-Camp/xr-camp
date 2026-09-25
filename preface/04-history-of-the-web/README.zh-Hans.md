@@ -1,14 +1,14 @@
-# History of the Web
+# 万维网发展史
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `preface` · **课时:** `history-of-the-web-04` · **预计时长:** 300 分钟
+**课程:** `preface` · **课时:** `history-of-the-web-04` · **时长:** 约 5 小时 · 7 次学习，每次 45 分钟 · 每周 4 次，约 2 周
 
 ---
 
-> Build and publish a responsive timeline of major web milestones.
+> 构建并发布一条响应式的万维网重要里程碑时间线。
 
 ## 学习目标
 

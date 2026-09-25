@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `frontend-engineer` · **课时:** `git-collaboration-and-open-source-07` · **预计时长:** 540 分钟
+**课程:** `frontend-engineer` · **课时:** `git-collaboration-and-open-source-07` · **时长:** 约 9 小时 · 12 次学习，每次 45 分钟 · 每周 4 次，约 3 周
 
 ---
 
@@ -66,6 +66,12 @@ _内容待撰写。_
 ## 故障排查
 
 _内容待撰写。_
+
+## 3D 时刻
+
+<!-- TODO: translate -->
+
+_Content to be authored._
 
 ## 拓展挑战
 

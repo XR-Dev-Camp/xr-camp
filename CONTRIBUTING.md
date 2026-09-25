@@ -24,7 +24,7 @@ Opening a clear issue is a real contribution. You do not need to write code.
 
 ## Before you open a pull request
 
-Every pull request must satisfy all eight of these. Reviewers will check each one.
+Every pull request must satisfy all ten of these. Reviewers will check each one.
 
 - [ ] **Readable** — another engineer can follow it five years from now.
 - [ ] **Modular** — no tight coupling; clear interfaces.
@@ -34,6 +34,8 @@ Every pull request must satisfy all eight of these. Reviewers will check each on
 - [ ] **Performant** — no gratuitous payload; assets optimized.
 - [ ] **Localized** — learner-facing strings changed in `README.md` are flagged for `README.es.md` and `README.zh-Hans.md`.
 - [ ] **Secure** — no secrets, credentials, tokens, personal data, or private URLs.
+- [ ] **Pinned** — A-Frame and three.js load exactly the versions in [`versions.json`](versions.json).
+- [ ] **Within budget** — assets meet the size limits in [`docs/en/3d-assets-and-versions.md`](docs/en/3d-assets-and-versions.md).
 
 Avoid premature optimization. Avoid clever code. Prefer the version a beginner can read.
 
@@ -52,7 +54,15 @@ NN-course-slug/
 ├── LICENSE  ATTRIBUTION.md
 ```
 
-`project.json` is consumed directly by the xrcamp.dev platform. Its `lessonId` **must** match the lesson ID used in the private curriculum, progress tracking, certificates, and translation files. A mismatched ID silently breaks the learner's link from lesson to project. CI validates this — see [`.github/workflows/validate.yml`](.github/workflows/validate.yml).
+`project.json` describes each project, and [`catalog.json`](catalog.json) is built from all of them. Its `id` and `lessonId` are permanent once a lesson is published: links and bookmarks point to them, so a changed ID silently breaks them. CI validates this — see [`.github/workflows/validate.yml`](.github/workflows/validate.yml).
+
+Three other `project.json` fields matter to learners:
+
+- **`status`**: `draft` (being written, hidden from learners), `review` (complete in English, awaiting review and translation), or `published` (complete in all three languages). CI rejects `review` or `published` while placeholder text remains.
+- **`schedule`**: the number of 45-minute sessions. It must equal `estimatedMinutes / sessionMinutes`, rounded up. If you change the estimate, change the schedule and the time line at the top of all three READMEs.
+- **`accessibilityChecks`**: 3D and XR projects must include the manual checks listed in [`docs/en/xr-accessibility.md`](docs/en/xr-accessibility.md).
+
+Run `node scripts/validate-projects.mjs` before you push, and `node scripts/validate-projects.mjs --write-catalog` after changing any `project.json`.
 
 ---
 
@@ -61,6 +71,8 @@ NN-course-slug/
 A pull request that adds an inaccessible interface will not be merged, regardless of how good it looks. If you are unsure how to fix an accessibility issue, open the pull request anyway and ask — that is a teaching opportunity, not a failure.
 
 3D and XR enhancements must never prevent access to the core content. Every project must remain usable with a keyboard and conventional 2D controls wherever feasible.
+
+The automated audit in CI cannot see inside a 3D canvas. For 3D and XR work, complete the manual checks in [`docs/en/xr-accessibility.md`](docs/en/xr-accessibility.md) and say in your pull request that you did.
 
 ---
 

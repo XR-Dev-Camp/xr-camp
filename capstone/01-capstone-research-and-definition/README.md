@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `capstone` · **Lesson:** `capstone-research-and-definition-01` · **Estimated time:** 480 minutes
+**Course:** `capstone` · **Lesson:** `capstone-research-and-definition-01` · **Time:** about 8 hours · 11 sessions of 45 minutes · about 3 weeks at 4 sessions a week
 
 ---
 

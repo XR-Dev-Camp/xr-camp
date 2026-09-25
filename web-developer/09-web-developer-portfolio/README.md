@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `web-developer` · **Lesson:** `web-developer-portfolio-09` · **Estimated time:** 900 minutes
+**Course:** `web-developer` · **Lesson:** `web-developer-portfolio-09` · **Time:** about 15 hours · 20 sessions of 45 minutes · about 5 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Add a small interactive 3D gallery of your projects to your portfolio, with a plain 2D list as the fallback.
 
 ## Challenge extensions
 

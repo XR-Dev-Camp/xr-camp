@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `preface` · **Lección:** `careers-in-the-spatial-web-09` · **Tiempo estimado:** 240 minutos
+**Curso:** `preface` · **Lección:** `careers-in-the-spatial-web-09` · **Tiempo:** unas 4 horas · 6 sesiones de 45 minutos · unas 2 semanas con 4 sesiones por semana
 
 ---
 

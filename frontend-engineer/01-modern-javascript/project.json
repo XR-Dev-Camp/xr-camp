@@ -2,6 +2,7 @@
   "id": "fe-01-modern-javascript",
   "courseId": "frontend-engineer",
   "lessonId": "modern-javascript-01",
+  "status": "draft",
   "phase": 2,
   "title": {
     "en": "Modern JavaScript",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,
+  "schedule": {
+    "sessions": 19,
+    "sessionMinutes": 45
+  },
   "difficulty": "intermediate",
   "technologies": [
     "JavaScript"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Generate a 3D scene from data: a JavaScript module of positions, colours, and labels becomes objects in space.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

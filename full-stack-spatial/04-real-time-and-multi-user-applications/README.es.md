@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `full-stack-spatial` · **Lección:** `real-time-and-multi-user-applications-04` · **Tiempo estimado:** 1020 minutos
+**Curso:** `full-stack-spatial` · **Lección:** `real-time-and-multi-user-applications-04` · **Tiempo:** unas 17 horas · 23 sesiones de 45 minutos · unas 6 semanas con 4 sesiones por semana
 
 ---
 

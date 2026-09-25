@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `capstone` · **Lección:** `capstone-production-04` · **Tiempo estimado:** 1680 minutos
+**Curso:** `capstone` · **Lección:** `capstone-production-04` · **Tiempo:** unas 28 horas · 38 sesiones de 45 minutos · unas 10 semanas con 4 sesiones por semana
 
 ---
 

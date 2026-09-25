@@ -2,6 +2,7 @@
   "id": "w3d-05-threejs-interaction-assets-and-animation",
   "courseId": "web3d-developer",
   "lessonId": "threejs-interaction-assets-and-animation-05",
+  "status": "draft",
   "phase": 3,
   "title": {
     "en": "Three.js Interaction, Assets, and Animation",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 960,
+  "schedule": {
+    "sessions": 22,
+    "sessionMinutes": 45
+  },
   "difficulty": "intermediate",
   "technologies": [
     "Three.js"
@@ -28,6 +33,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `preface` · **Lesson:** `the-spatial-web-06` · **Estimated time:** 300 minutes
+**Course:** `preface` · **Lesson:** `the-spatial-web-06` · **Time:** about 5 hours · 7 sessions of 45 minutes · about 2 weeks at 4 sessions a week
 
 ---
 

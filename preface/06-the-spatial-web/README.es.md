@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `preface` · **Lección:** `the-spatial-web-06` · **Tiempo estimado:** 300 minutos
+**Curso:** `preface` · **Lección:** `the-spatial-web-06` · **Tiempo:** unas 5 horas · 7 sesiones de 45 minutos · unas 2 semanas con 4 sesiones por semana
 
 ---
 

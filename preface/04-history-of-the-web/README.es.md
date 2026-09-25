@@ -1,14 +1,14 @@
-# History of the Web
+# Historia de la web
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `preface` · **Lección:** `history-of-the-web-04` · **Tiempo estimado:** 300 minutos
+**Curso:** `preface` · **Lección:** `history-of-the-web-04` · **Tiempo:** unas 5 horas · 7 sesiones de 45 minutos · unas 2 semanas con 4 sesiones por semana
 
 ---
 
-> Build and publish a responsive timeline of major web milestones.
+> Crea y publica una línea de tiempo adaptable con los hitos más importantes de la web.
 
 ## Objetivos de aprendizaje
 

@@ -2,6 +2,7 @@
   "id": "web-09-web-developer-portfolio",
   "courseId": "web-developer",
   "lessonId": "web-developer-portfolio-09",
+  "status": "draft",
   "phase": 1,
   "title": {
     "en": "Phase 1 Capstone - Web Developer Portfolio",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 900,
+  "schedule": {
+    "sessions": 20,
+    "sessionMinutes": 45
+  },
   "difficulty": "beginner",
   "technologies": [
     "HTML"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Add a small interactive 3D gallery of your projects to your portfolio, with a plain 2D list as the fallback.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

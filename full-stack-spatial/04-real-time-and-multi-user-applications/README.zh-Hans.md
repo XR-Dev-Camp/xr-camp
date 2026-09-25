@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `full-stack-spatial` · **课时:** `real-time-and-multi-user-applications-04` · **预计时长:** 1020 分钟
+**课程:** `full-stack-spatial` · **课时:** `real-time-and-multi-user-applications-04` · **时长:** 约 17 小时 · 23 次学习，每次 45 分钟 · 每周 4 次，约 6 周
 
 ---
 

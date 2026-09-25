@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `professional-developer` · **Lección:** `internationalization-and-localization-02` · **Tiempo estimado:** 600 minutos
+**Curso:** `professional-developer` · **Lección:** `internationalization-and-localization-02` · **Tiempo:** unas 10 horas · 14 sesiones de 45 minutos · unas 4 semanas con 4 sesiones por semana
 
 ---
 

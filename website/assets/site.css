@@ -1,0 +1,212 @@
+/*
+  XR Camp site styles.
+  The page is readable on its own: the 3D scene behind it is an enhancement.
+  Text always sits on a solid-enough panel to keep WCAG AA contrast over any
+  part of the scene. No web fonts: system fonts load instantly everywhere,
+  including mainland China.
+*/
+
+:root {
+  --night: #0d0820;
+  --panel: rgb(20 12 44 / 0.88);
+  --panel-edge: rgb(201 167 255 / 0.25);
+  --text: #f5f2ff;
+  --muted: #cfc6e8;
+  --lilac: #c9a7ff;
+  --pink: #ff8fc3;
+  --gold: #ffd166;
+  --teal: #5fd4c4;
+  --ink: #1a0f2e;
+  --radius: 1rem;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+/* Buttons set display, which would otherwise override the hidden attribute. */
+[hidden] { display: none !important; }
+
+html { background: var(--night); }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+  /* Shown whenever the 3D scene is off or unavailable. */
+  background:
+    radial-gradient(60rem 40rem at 80% 10%, rgb(91 42 134 / 0.55), transparent 70%),
+    radial-gradient(50rem 40rem at 10% 90%, rgb(31 138 138 / 0.35), transparent 70%),
+    var(--night);
+  background-attachment: fixed;
+}
+
+/* The scene fills the window, behind everything. */
+#scene-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+#scene-layer a-scene { width: 100%; height: 100%; }
+
+.site-header, main, .site-footer { position: relative; z-index: 1; }
+
+a { color: var(--lilac); text-underline-offset: 0.2em; }
+a:hover { color: var(--pink); }
+
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 0.25rem; }
+
+.skip-link { position: absolute; left: -999rem; z-index: 10; }
+.skip-link:focus { left: 1rem; top: 1rem; padding: 0.5rem 1rem; background: var(--gold); color: var(--ink); }
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.75rem clamp(1rem, 4vw, 2.5rem);
+  background: rgb(13 8 32 / 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.brand { font-weight: 800; font-size: 1.25rem; color: var(--text); text-decoration: none; letter-spacing: 0.02em; }
+
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+
+.controls button, .languages summary {
+  font: inherit;
+  font-size: 0.9rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.9rem;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--panel-edge);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* On/off state is shown by a mark as well as colour. */
+.controls button[aria-pressed="true"] { background: var(--lilac); color: var(--ink); border-color: var(--lilac); }
+.controls button[aria-pressed="true"]::before { content: "✓ "; }
+
+.languages { position: relative; }
+.languages summary { list-style: none; }
+.languages summary::-webkit-details-marker { display: none; }
+.languages ul {
+  position: absolute;
+  right: 0;
+  margin: 0.5rem 0 0;
+  padding: 0.5rem;
+  list-style: none;
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: 0.75rem;
+  min-width: 10rem;
+}
+.languages li a { display: block; padding: 0.5rem 0.75rem; color: var(--text); }
+.languages a[aria-current="page"] { font-weight: 700; color: var(--gold); }
+
+/* Content */
+
+main { padding: 0 clamp(1rem, 4vw, 2.5rem); }
+
+section { padding: 12vh 0; }
+
+.panel {
+  max-width: 36rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+}
+
+.hero { min-height: 100svh; display: flex; align-items: center; padding-top: 0; }
+.panel-hero { max-width: 40rem; }
+
+.eyebrow { margin: 0; color: var(--gold); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em; }
+
+h1 { font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1.08; margin: 0.5rem 0 1rem; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); line-height: 1.15; margin: 0 0 1rem; }
+h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
+
+.lead { font-size: 1.2rem; color: var(--text); }
+.note { color: var(--muted); font-size: 0.95rem; margin-bottom: 0; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.6rem 1.25rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid var(--lilac);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.button:hover { color: var(--ink); background: var(--lilac); }
+.button.primary { color: var(--ink); background: var(--pink); border-color: var(--pink); }
+.button.primary:hover { background: var(--gold); border-color: var(--gold); }
+.button.xr { border-color: var(--teal); }
+.button.xr:hover { background: var(--teal); }
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: rgb(0 0 0 / 0.35);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+code { color: var(--gold); }
+figure { margin: 1.5rem 0 0; }
+figcaption { color: var(--muted); font-size: 0.95rem; margin-top: 0.5rem; }
+
+/* The eight phases. On wide screens they alternate sides, so the world each
+   one describes is visible beside it. */
+.phases { list-style: none; margin: 0; padding: 0; }
+.phase { margin: 0 0 40vh; }
+.phase-number { margin: 0; color: var(--gold); font-weight: 700; }
+.facts { margin: 0.75rem 0; padding-left: 1.25rem; color: var(--muted); }
+
+@media (min-width: 60rem) {
+  .phase:nth-child(even) { margin-left: auto; }
+  section[data-station="end"] .panel, .why { margin-left: auto; }
+}
+
+.how { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+.how p { margin: 0; color: var(--muted); }
+
+.why { display: grid; gap: 1.25rem; max-width: 44rem; }
+.why img { border-radius: var(--radius); width: 8rem; height: auto; }
+.why .name { font-weight: 800; font-size: 1.2rem; margin: 0; }
+.why .place { color: var(--muted); margin: 0 0 1rem; }
+.why blockquote { margin: 0; font-style: italic; }
+@media (min-width: 40rem) {
+  .why { grid-template-columns: 8rem 1fr; }
+  .why h2 { grid-column: 1 / -1; }
+}
+
+.site-footer {
+  max-width: none;
+  margin-top: 10vh;
+  border-radius: 0;
+  border-width: 1px 0 0;
+  padding: 2rem clamp(1rem, 4vw, 2.5rem);
+  color: var(--muted);
+}
+.site-footer summary { cursor: pointer; color: var(--text); font-weight: 700; }

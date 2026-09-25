@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `professional-developer` · **课时:** `production-deployment-and-devops-01` · **预计时长:** 720 分钟
+**课程:** `professional-developer` · **课时:** `production-deployment-and-devops-01` · **时长:** 约 12 小时 · 16 次学习，每次 45 分钟 · 每周 4 次，约 4 周
 
 ---
 

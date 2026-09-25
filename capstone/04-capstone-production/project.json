@@ -2,6 +2,7 @@
   "id": "cap-04-capstone-production",
   "courseId": "capstone",
   "lessonId": "capstone-production-04",
+  "status": "draft",
   "phase": 7,
   "title": {
     "en": "Capstone Production",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 1680,
+  "schedule": {
+    "sessions": 38,
+    "sessionMinutes": 45
+  },
   "difficulty": "capstone",
   "technologies": [
     "HTML"

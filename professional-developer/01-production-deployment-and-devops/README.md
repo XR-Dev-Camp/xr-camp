@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `professional-developer` · **Lesson:** `production-deployment-and-devops-01` · **Estimated time:** 720 minutes
+**Course:** `professional-developer` · **Lesson:** `production-deployment-and-devops-01` · **Time:** about 12 hours · 16 sessions of 45 minutes · about 4 weeks at 4 sessions a week
 
 ---
 

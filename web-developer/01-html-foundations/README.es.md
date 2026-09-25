@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Curso:** `web-developer` · **Lección:** `html-foundations-01` · **Tiempo estimado:** 720 minutos (10–14 horas)
+**Curso:** `web-developer` · **Lección:** `html-foundations-01` · **Tiempo:** unas 12 horas · 16 sesiones de 45 minutos · unas 4 semanas con 4 sesiones por semana
 
 > Crea un sitio web accesible de información personal o comunitaria.
 
@@ -75,6 +75,29 @@ Mantén ambas ventanas a la vista. Cada vez que guardes en el editor, recarga el
 ## Recorrido paso a paso
 
 El punto de partida contiene once comentarios `TODO` numerados. Ve en orden; cada uno se apoya en el anterior.
+
+### Planifica tus sesiones
+
+Este proyecto son unas 16 sesiones de 45 minutos. Con cuatro sesiones por semana, tardarás unas cuatro semanas. Cada sesión termina con algo que puedes ver en el navegador, así que puedes parar al final de cualquier fila sin perder nada. Si te saltas una semana, vuelve a empezar desde el principio de tu última sesión.
+
+| Sesión | Qué haces | Terminas con |
+| --- | --- | --- |
+| 1 | Lee esta guía y completa la **Configuración** | El punto de partida abierto en el editor y en el navegador |
+| 2 | Pasos 1–2: título, descripción, enlace de salto | Una pestaña con nombre y un enlace de salto que funciona |
+| 3 | Pasos 3–4: encabezado y navegación | Un título de página y una lista de navegación |
+| 4 | Paso 5: secciones y encabezados | Enlaces internos que saltan a cada sección |
+| 5 | Paso 6: escribe tus textos | Párrafos reales sobre tu comunidad |
+| 6 | Paso 6: imágenes y texto alternativo | Una imagen con texto alternativo que has leído en voz alta |
+| 7 | Paso 7: la tabla | Una tabla que un lector de pantalla puede explicar |
+| 8 | Paso 8: listas | Programas o servicios como listas de verdad |
+| 9 | Paso 8: multimedia y subtítulos | Un vídeo o audio con subtítulos |
+| 10 | Pasos 9–10: datos de contacto y pie de página | Una página completa, de principio a fin |
+| 11 | Paso 11: valida | Cero errores en el validador |
+| 12 | Lee **Explicación del código clave** y **Requisitos de accesibilidad** | Notas en tu diario de aprendizaje |
+| 13 | Revisa [`tests/checklist.md`](tests/checklist.md) | Todos los puntos marcados |
+| 14 | Un reto adicional | Una segunda página o un toque personal |
+| 15 | El **Momento 3D** | Un mundo 3D dentro de tu página |
+| 16 | **Cómo entregar tu trabajo** y tu reflexión | Tu enlace en xrcamp.dev |
 
 ### Paso 1 — Describe la página (TODO 1–2)
 
@@ -236,6 +259,24 @@ Aquí no hay JavaScript ni CSS, así que tu página ya es rápida. Dos hábitos 
 **Mi vídeo no se reproduce.** Los navegadores admiten formatos distintos; MP4 con H.264 es el más seguro. Si aparece el texto alternativo, es que falta el archivo o la ruta es incorrecta.
 
 **El validador da errores que no entiendo.** Corrige el primero y vuelve a validar. Una sola etiqueta sin cerrar suele producir una cascada de diez errores que desaparecen todos juntos.
+
+## Momento 3D
+
+En **Bienvenida a XR Camp** construiste un mundo 3D en tu primera hora. Ahora ponlo dentro de tu página.
+
+1. Copia el `index.html` de ese mundo en una carpeta llamada `world/`, junto al `index.html` de este proyecto.
+2. Añádelo dentro de una de tus secciones:
+
+```html
+<figure>
+  <iframe src="world/index.html"
+          title="Mi primer mundo 3D: un jardín con tres figuras"
+          width="800" height="450" loading="lazy"></iframe>
+  <figcaption>Mi primer mundo 3D. Arrastra o usa las flechas para mirar alrededor.</figcaption>
+</figure>
+```
+
+El `title` del `<iframe>` es lo que anuncia un lector de pantalla, igual que el texto alternativo de una imagen. El `<figcaption>` explica a todo el mundo cómo usarlo. Indica `width` y `height` por la misma razón que en las imágenes: la página no salta mientras se carga el mundo.
 
 ## Retos adicionales
 

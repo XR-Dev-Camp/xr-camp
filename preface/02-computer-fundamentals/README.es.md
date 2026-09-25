@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `preface` · **Lección:** `computer-fundamentals-02` · **Tiempo estimado:** 360 minutos
+**Curso:** `preface` · **Lección:** `computer-fundamentals-02` · **Tiempo:** unas 6 horas · 8 sesiones de 45 minutos · unas 2 semanas con 4 sesiones por semana
 
 ---
 

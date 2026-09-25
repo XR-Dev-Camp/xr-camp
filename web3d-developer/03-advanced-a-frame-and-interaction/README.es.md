@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `web3d-developer` · **Lección:** `advanced-a-frame-and-interaction-03` · **Tiempo estimado:** 840 minutos
+**Curso:** `web3d-developer` · **Lección:** `advanced-a-frame-and-interaction-03` · **Tiempo:** unas 14 horas · 19 sesiones de 45 minutos · unas 5 semanas con 4 sesiones por semana
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `full-stack-spatial` · **Lesson:** `backend-and-api-foundations-01` · **Estimated time:** 840 minutes
+**Course:** `full-stack-spatial` · **Lesson:** `backend-and-api-foundations-01` · **Time:** about 14 hours · 19 sessions of 45 minutes · about 5 weeks at 4 sessions a week
 
 ---
 

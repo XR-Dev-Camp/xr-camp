@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `web3d-developer` · **课时:** `interactive-web3d-experience-07` · **预计时长:** 1200 分钟
+**课程:** `web3d-developer` · **课时:** `interactive-web3d-experience-07` · **时长:** 约 20 小时 · 27 次学习，每次 45 分钟 · 每周 4 次，约 7 周
 
 ---
 

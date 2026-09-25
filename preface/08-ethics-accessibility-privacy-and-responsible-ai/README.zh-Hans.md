@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `preface` · **课时:** `ethics-accessibility-privacy-and-responsible-ai-08` · **预计时长:** 420 分钟
+**课程:** `preface` · **课时:** `ethics-accessibility-privacy-and-responsible-ai-08` · **时长:** 约 7 小时 · 10 次学习，每次 45 分钟 · 每周 4 次，约 3 周
 
 ---
 

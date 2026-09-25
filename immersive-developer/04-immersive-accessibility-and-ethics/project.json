@@ -2,6 +2,7 @@
   "id": "imm-04-immersive-accessibility-and-ethics",
   "courseId": "immersive-developer",
   "lessonId": "immersive-accessibility-and-ethics-04",
+  "status": "draft",
   "phase": 4,
   "title": {
     "en": "Immersive Accessibility and Ethics",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
+  "schedule": {
+    "sessions": 16,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "WebXR",
@@ -29,6 +34,13 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort",
+    "xr-input-alternatives",
+    "xr-seated-mode"
   ]
 }

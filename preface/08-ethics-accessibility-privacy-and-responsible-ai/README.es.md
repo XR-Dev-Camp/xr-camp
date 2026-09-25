@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `preface` · **Lección:** `ethics-accessibility-privacy-and-responsible-ai-08` · **Tiempo estimado:** 420 minutos
+**Curso:** `preface` · **Lección:** `ethics-accessibility-privacy-and-responsible-ai-08` · **Tiempo:** unas 7 horas · 10 sesiones de 45 minutos · unas 3 semanas con 4 sesiones por semana
 
 ---
 

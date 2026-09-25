@@ -2,6 +2,7 @@
   "id": "web-05-web-accessibility-foundations",
   "courseId": "web-developer",
   "lessonId": "web-accessibility-foundations-05",
+  "status": "draft",
   "phase": 1,
   "title": {
     "en": "Web Accessibility Foundations",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 600,
+  "schedule": {
+    "sessions": 14,
+    "sessionMinutes": 45
+  },
   "difficulty": "beginner",
   "technologies": [
     "ARIA"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Audit a 3D scene: add a text description, a keyboard route, and a reduced-motion switch.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

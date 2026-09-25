@@ -2,6 +2,7 @@
   "id": "web-03-css-foundations",
   "courseId": "web-developer",
   "lessonId": "css-foundations-03",
+  "status": "draft",
   "phase": 1,
   "title": {
     "en": "CSS Foundations",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,
+  "schedule": {
+    "sessions": 19,
+    "sessionMinutes": 45
+  },
   "difficulty": "beginner",
   "technologies": [
     "CSS"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Frame a 3D scene inside your page and use your CSS custom properties so the scene and the page share one colour system.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

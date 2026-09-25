@@ -2,6 +2,7 @@
   "id": "web-06-javascript-foundations",
   "courseId": "web-developer",
   "lessonId": "javascript-foundations-06",
+  "status": "draft",
   "phase": 1,
   "title": {
     "en": "JavaScript Foundations",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 960,
+  "schedule": {
+    "sessions": 22,
+    "sessionMinutes": 45
+  },
   "difficulty": "beginner",
   "technologies": [
     "JavaScript"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Write your first 3D event: click (or press Enter on) an object to change its colour and announce the change to screen readers.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

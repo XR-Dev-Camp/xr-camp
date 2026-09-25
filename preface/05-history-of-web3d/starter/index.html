@@ -2,18 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Web3D comparison lab: the same 3D box in X3D, A-Frame, and three.js, and a timeline of Web3D standards.">
+  <!-- TODO 1: Put your name in the title. -->
+  <title>Web3D comparison lab</title>
 
-  <title>History of Web3D - XR Camp starter</title>
+  <style>
+    :root {
+      --text: #1b1b1f;
+      --muted: #4a4a55;
+      --background: #fdfcf8;
+      --line: #5b2a86;
+      --focus: #d62f6b;
+      --card: #ffffff;
+      --code: #f1eef6;
+    }
+
+    * { box-sizing: border-box; }
+
+    body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--background); }
+
+    .skip-link { position: absolute; left: -999rem; }
+    .skip-link:focus { left: 1rem; top: 1rem; padding: 0.5rem 1rem; background: var(--card); }
+    a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+    header, main, footer { max-width: 60rem; margin: 0 auto; padding: 1rem; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; padding: 0; list-style: none; }
+
+    .lab { display: grid; gap: 1.5rem; }
+    @media (min-width: 60rem) { .lab { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+    figure { min-width: 0; margin: 0; padding: 1rem; background: var(--card); border-radius: 0.5rem; }
+    iframe { width: 100%; height: 20rem; border: 1px solid #d8d4de; border-radius: 0.25rem; }
+    figcaption { font-weight: 700; margin-bottom: 0.5rem; }
+
+    pre { overflow-x: auto; padding: 0.75rem; background: var(--code); border-radius: 0.25rem; font-size: 0.85rem; }
+
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; min-width: 36rem; background: var(--card); }
+    th, td { border: 1px solid #d8d4de; padding: 0.5rem; text-align: left; vertical-align: top; }
+
+    .timeline { list-style: none; margin: 0; padding: 0 0 0 1.25rem; border-left: 3px solid var(--line); }
+    .timeline li { margin: 0 0 1rem; padding: 0.5rem 1rem; background: var(--card); border-radius: 0.5rem; }
+    .timeline time { font-weight: 700; color: var(--line); }
+  </style>
 </head>
 <body>
-  <main>
-    <!-- Add your main heading below. -->
+  <a class="skip-link" href="#main">Skip to the lab</a>
 
-    <!-- Add your project content below. -->
+  <header>
+    <h1>Web3D comparison lab</h1>
+    <p>One purple box, built three ways, and thirty years of 3D on the web. Built by a new XR Camp learner.</p>
+    <!-- TODO 2: Put your name in the sentence above. -->
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#lab">The lab</a></li>
+        <li><a href="#compare">Comparison</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#notes">My conclusions</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main id="main">
+    <section id="lab" aria-labelledby="lab-heading">
+      <h2 id="lab-heading">The lab: one box, three ways</h2>
+      <p>Each example below is a separate page, so each one loads only its own library.</p>
+
+      <div class="lab">
+        <figure>
+          <figcaption>X3D, using X3DOM (2004 standard)</figcaption>
+          <iframe src="examples/x3dom.html" title="The box in X3D" loading="lazy"></iframe>
+          <pre><code>&lt;shape&gt;
+  &lt;appearance&gt;
+    &lt;material diffuseColor="0.36 0.16 0.53"&gt;&lt;/material&gt;
+  &lt;/appearance&gt;
+  &lt;box size="1.5 1.5 1.5"&gt;&lt;/box&gt;
+&lt;/shape&gt;</code></pre>
+        </figure>
+
+        <figure>
+          <figcaption>A-Frame (2015)</figcaption>
+          <iframe src="examples/aframe.html" title="The box in A-Frame" loading="lazy"></iframe>
+          <pre><code>&lt;a-box position="0 1.6 -3"
+       rotation="30 35 0"
+       color="#5b2a86"&gt;&lt;/a-box&gt;</code></pre>
+        </figure>
+
+        <figure>
+          <figcaption>three.js (2010)</figcaption>
+          <iframe src="examples/three.html" title="The box in three.js" loading="lazy"></iframe>
+          <pre><code>const box = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshStandardMaterial({ color: '#5b2a86' }),
+);
+box.rotation.set(0.5, 0.6, 0);
+scene.add(box);</code></pre>
+        </figure>
+      </div>
+    </section>
+
+    <section id="compare" aria-labelledby="compare-heading">
+      <h2 id="compare-heading">Comparison</h2>
+      <!-- TODO 3: Replace every "?" in the table. Look at each example and its code; the lesson guide explains the rest. -->
+      <div class="table-wrap">
+        <table>
+          <caption>Three ways to put a box on the web</caption>
+          <thead>
+            <tr>
+              <th scope="col">Question</th>
+              <th scope="col">X3D (X3DOM)</th>
+              <th scope="col">A-Frame</th>
+              <th scope="col">three.js</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Declarative or imperative?</th>
+              <td>Declarative: tags describe the scene</td>
+              <td>Declarative: tags describe the scene</td>
+              <td>Imperative: JavaScript gives step-by-step instructions</td>
+            </tr>
+            <tr>
+              <th scope="row">Who is behind it?</th>
+              <td>?</td>
+              <td>?</td>
+              <td>?</td>
+            </tr>
+            <tr>
+              <th scope="row">Lines for the box</th>
+              <td>?</td>
+              <td>?</td>
+              <td>?</td>
+            </tr>
+            <tr>
+              <th scope="row">Lights and camera</th>
+              <td>?</td>
+              <td>?</td>
+              <td>?</td>
+            </tr>
+            <tr>
+              <th scope="row">Best for</th>
+              <td>?</td>
+              <td>?</td>
+              <td>?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="timeline" aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading">Timeline of Web3D</h2>
+      <ol class="timeline">
+        <li><time datetime="1994-05">May 1994</time>: At the first World Wide Web conference, Mark Pesce shows a 3D demo he built with Tony Parisi, and the idea of VRML, a language for 3D on the web, is born.</li>
+        <li><time datetime="2011-03">March 2011</time>: WebGL 1.0: browsers can draw fast 3D without plug-ins.</li>
+        <li><time datetime="2019-12">December 2019</time>: The WebXR Device API ships in Chrome 79.</li>
+        <!-- TODO 4-6: Add at least seven more milestones, in date order: TODO 4 for the VRML and X3D years,
+             TODO 5 for WebGL and the libraries, TODO 6 for glTF, WebXR, and WebGPU. -->
+      </ol>
+    </section>
+
+    <section id="notes" aria-labelledby="notes-heading">
+      <h2 id="notes-heading">My conclusions</h2>
+      <!-- TODO 7: Write two short paragraphs.
+           1. Why does the same box look different in each tool?
+           2. If you built a 3D project for your own community, which tool would you start with, and why? -->
+      <p>?</p>
+    </section>
   </main>
+
+  <footer>
+    <p>Sources are listed in the lesson guide. Made for XR Camp, Phase 0.</p>
+  </footer>
 </body>
 </html>

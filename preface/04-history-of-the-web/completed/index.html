@@ -3,12 +3,287 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>History of the Web - XR Camp reference solution</title>
+  <meta name="description" content="A responsive timeline of the web, from the first ideas about linked documents to 3D, XR, and AI.">
+  <title>A timeline of the web - XR Camp reference solution</title>
+
+  <style>
+    /*
+      Mobile first: one column, with a line down the left like a thread.
+      On wider screens the date moves into its own column.
+      There is no animation anywhere, so there is nothing to reduce.
+    */
+    :root {
+      --text: #1b1b1f;
+      --muted: #4a4a55;
+      --background: #fdfcf8;
+      --line: #5b2a86;
+      --focus: #d62f6b;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    .skip-link { position: absolute; left: -999rem; }
+    .skip-link:focus { left: 1rem; top: 1rem; padding: 0.5rem 1rem; background: var(--card); }
+
+    a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+    header, main, footer { max-width: 52rem; margin: 0 auto; padding: 1rem; }
+
+    nav ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; padding: 0; list-style: none; }
+
+    .timeline { list-style: none; margin: 0; padding: 0 0 0 1.25rem; border-left: 3px solid var(--line); }
+
+    .timeline li { position: relative; margin: 0 0 1.5rem; padding: 0.75rem 1rem; background: var(--card); border-radius: 0.5rem; }
+
+    /* The dot on the thread. Decorative, so it lives in CSS, not HTML. */
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -1.95rem;
+      top: 1.1rem;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+      background: var(--line);
+    }
+
+    .timeline time { display: block; font-weight: 700; color: var(--line); }
+    .timeline h3 { margin: 0.25rem 0; font-size: 1.1rem; }
+    .timeline p { margin: 0; color: var(--muted); }
+
+    @media (min-width: 48rem) {
+      .timeline li { display: grid; grid-template-columns: 9rem 1fr; column-gap: 1rem; }
+      .timeline time { grid-row: 1 / span 2; }
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <h1>History of the Web</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+  <a class="skip-link" href="#main">Skip to the timeline</a>
+
+  <header>
+    <h1>A timeline of the web</h1>
+    <p>From the first dream of linked documents to 3D worlds, XR, and AI. Built by Ana for XR Camp.</p>
+    <nav aria-label="Eras">
+      <ul>
+        <li><a href="#before">Before the web</a></li>
+        <li><a href="#documents">The document web</a></li>
+        <li><a href="#applications">The application web</a></li>
+        <li><a href="#everywhere">The everywhere web</a></li>
+        <li><a href="#spatial">The spatial and intelligent web</a></li>
+        <li><a href="#mine">My own milestones</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="before" aria-labelledby="before-heading">
+      <h2 id="before-heading">Before the web (1945–1988)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="1945-07">July 1945</time>
+          <h3>"As We May Think"</h3>
+          <p>Vannevar Bush imagines the memex, a desk that stores documents and links them together by association.</p>
+        </li>
+        <li>
+          <time datetime="1965">1965</time>
+          <h3>The word "hypertext"</h3>
+          <p>Ted Nelson publishes the word hypertext: text that links to other text.</p>
+        </li>
+        <li>
+          <time datetime="1968-12-09">9 December 1968</time>
+          <h3>"The Mother of All Demos"</h3>
+          <p>Douglas Engelbart shows a mouse, clickable links, and live collaboration on screen, decades early.</p>
+        </li>
+        <li>
+          <time datetime="1969-10-29">29 October 1969</time>
+          <h3>The first ARPANET message</h3>
+          <p>Two computers in California exchange the first message on ARPANET, the network that grew into the internet.</p>
+        </li>
+        <li>
+          <time datetime="1983-01-01">1 January 1983</time>
+          <h3>ARPANET switches to TCP/IP</h3>
+          <p>The rules computers still use to talk to each other become the standard. Many call this the birth of the internet.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="documents" aria-labelledby="documents-heading">
+      <h2 id="documents-heading">The document web (1989–1998)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="1989-03">March 1989</time>
+          <h3>A proposal at CERN</h3>
+          <p>Tim Berners-Lee proposes a linked information system at CERN. His manager writes on it: "Vague but exciting."</p>
+        </li>
+        <li>
+          <time datetime="1990-12">December 1990</time>
+          <h3>The first website</h3>
+          <p>The first web server, browser, and website run at CERN.</p>
+        </li>
+        <li>
+          <time datetime="1991">1991</time>
+          <h3>A browser for everyone</h3>
+          <p>Nicola Pellow's line-mode browser lets people use the web from simple text-only terminals, not just expensive workstations.</p>
+        </li>
+        <li>
+          <time datetime="1993-04-30">30 April 1993</time>
+          <h3>The web is given away</h3>
+          <p>CERN puts the web's software in the public domain, so anyone can build on it without paying.</p>
+        </li>
+        <li>
+          <time datetime="1993">1993</time>
+          <h3>Mosaic</h3>
+          <p>The Mosaic browser shows images inside pages, and the web starts to look like the web.</p>
+        </li>
+        <li>
+          <time datetime="1994-04-20">20 April 1994</time>
+          <h3>China connects</h3>
+          <p>China's first full connection to the internet goes live, after Hu Qiheng of the Chinese Academy of Sciences persuades the US National Science Foundation to allow it.</p>
+        </li>
+        <li>
+          <time datetime="1994-10">October 1994</time>
+          <h3>W3C and CSS</h3>
+          <p>Tim Berners-Lee founds the World Wide Web Consortium (W3C) to write the web's standards. The same month, Håkon Wium Lie proposes CSS.</p>
+        </li>
+        <li>
+          <time datetime="1995">1995</time>
+          <h3>JavaScript</h3>
+          <p>Brendan Eich creates JavaScript at Netscape, famously in about ten days, so pages can respond to people.</p>
+        </li>
+        <li>
+          <time datetime="1995">1995</time>
+          <h3>Yinghaiwei</h3>
+          <p>Zhang Shuxin founds Yinghaiwei, often called China's first internet company, and brings dial-up internet to ordinary households.</p>
+        </li>
+        <li>
+          <time datetime="1996-12">December 1996</time>
+          <h3>CSS becomes a standard</h3>
+          <p>CSS level 1 becomes a W3C Recommendation. Structure and style can finally be kept apart.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="applications" aria-labelledby="applications-heading">
+      <h2 id="applications-heading">The application web (1999–2006)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="1999-05">May 1999</time>
+          <h3>WCAG 1.0</h3>
+          <p>The first Web Content Accessibility Guidelines set out how to make the web work for disabled people.</p>
+        </li>
+        <li>
+          <time datetime="1999">1999</time>
+          <h3>Fetching without reloading</h3>
+          <p>Internet Explorer 5 adds XMLHTTP (later standardised as XMLHttpRequest), letting a page get new data without loading a whole new page.</p>
+        </li>
+        <li>
+          <time datetime="2004-06">June 2004</time>
+          <h3>WHATWG</h3>
+          <p>Browser makers form the WHATWG to keep HTML evolving for web applications.</p>
+        </li>
+        <li>
+          <time datetime="2005-02">February 2005</time>
+          <h3>"Ajax"</h3>
+          <p>The name Ajax is coined for pages that update themselves, as Gmail and Google Maps had just shown was possible.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="everywhere" aria-labelledby="everywhere-heading">
+      <h2 id="everywhere-heading">The everywhere web (2007–2019)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="2007-06">June 2007</time>
+          <h3>The web in your pocket</h3>
+          <p>The iPhone goes on sale with a full web browser. Phones become the main way many people use the web.</p>
+        </li>
+        <li>
+          <time datetime="2008-12">December 2008</time>
+          <h3>WCAG 2.0</h3>
+          <p>Accessibility guidelines are rewritten around four principles: perceivable, operable, understandable, robust.</p>
+        </li>
+        <li>
+          <time datetime="2010-05">May 2010</time>
+          <h3>Responsive web design</h3>
+          <p>Ethan Marcotte names responsive web design: one page that adapts to any screen.</p>
+        </li>
+        <li>
+          <time datetime="2014-10">October 2014</time>
+          <h3>HTML5</h3>
+          <p>HTML5 becomes a W3C Recommendation, with native video, audio, and graphics.</p>
+        </li>
+        <li>
+          <time datetime="2015">2015</time>
+          <h3>Progressive web apps</h3>
+          <p>Frances Berriman and Alex Russell name progressive web apps: websites that install like apps and work offline.</p>
+        </li>
+        <li>
+          <time datetime="2019-05">May 2019</time>
+          <h3>One HTML standard</h3>
+          <p>W3C and WHATWG agree to work on a single HTML Living Standard.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="spatial" aria-labelledby="spatial-heading">
+      <h2 id="spatial-heading">The spatial and intelligent web (2011–today)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="2011-03">March 2011</time>
+          <h3>WebGL</h3>
+          <p>WebGL 1.0 lets browsers draw fast 3D graphics without plug-ins.</p>
+        </li>
+        <li>
+          <time datetime="2019-12">December 2019</time>
+          <h3>WebXR</h3>
+          <p>The WebXR Device API ships in a major browser, so websites can open in virtual and augmented reality headsets.</p>
+        </li>
+        <li>
+          <time datetime="2022-11">November 2022</time>
+          <h3>AI assistants go mainstream</h3>
+          <p>ChatGPT is released, and AI assistants begin to change how people search, learn, and write code.</p>
+        </li>
+        <li>
+          <time datetime="2023-05">May 2023</time>
+          <h3>WebGPU</h3>
+          <p>WebGPU ships in a major browser, bringing modern graphics and AI computation to the web.</p>
+        </li>
+        <li>
+          <time datetime="2023-10">October 2023</time>
+          <h3>WCAG 2.2</h3>
+          <p>The current accessibility guidelines add rules for focus, dragging, and target size.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="mine" aria-labelledby="mine-heading">
+      <h2 id="mine-heading">My own milestones</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="2009">2009</time>
+          <h3>My first time online</h3>
+          <p>At an internet café in my town, to write to my cousin abroad.</p>
+        </li>
+        <li>
+          <time datetime="2026-09">September 2026</time>
+          <h3>I built a 3D world</h3>
+          <p>In my first hour at XR Camp.</p>
+        </li>
+      </ol>
+    </section>
   </main>
+
+  <footer>
+    <p>Sources are listed in the lesson guide. Made for XR Camp, Phase 0.</p>
+  </footer>
 </body>
 </html>

@@ -2,6 +2,7 @@
   "id": "w3d-07-interactive-web3d-experience",
   "courseId": "web3d-developer",
   "lessonId": "interactive-web3d-experience-07",
+  "status": "draft",
   "phase": 3,
   "title": {
     "en": "Phase 3 Capstone - Interactive Web3D Experience",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 1200,
+  "schedule": {
+    "sessions": 27,
+    "sessionMinutes": 45
+  },
   "difficulty": "intermediate",
   "technologies": [
     "X3D/X3DOM"
@@ -28,6 +33,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

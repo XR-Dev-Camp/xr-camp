@@ -2,6 +2,7 @@
   "id": "w3d-01-web3d-fundamentals",
   "courseId": "web3d-developer",
   "lessonId": "web3d-fundamentals-01",
+  "status": "draft",
   "phase": 3,
   "title": {
     "en": "Web3D Fundamentals",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,
+  "schedule": {
+    "sessions": 19,
+    "sessionMinutes": 45
+  },
   "difficulty": "intermediate",
   "technologies": [
     "X3D/X3DOM"
@@ -28,6 +33,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

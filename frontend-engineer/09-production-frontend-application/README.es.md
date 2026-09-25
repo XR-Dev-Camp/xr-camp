@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `frontend-engineer` · **Lección:** `production-frontend-application-09` · **Tiempo estimado:** 1080 minutos
+**Curso:** `frontend-engineer` · **Lección:** `production-frontend-application-09` · **Tiempo:** unas 18 horas · 24 sesiones de 45 minutos · unas 6 semanas con 4 sesiones por semana
 
 ---
 
@@ -66,6 +66,12 @@ _Contenido pendiente de redacción._
 ## Solución de problemas
 
 _Contenido pendiente de redacción._
+
+## Momento 3D
+
+<!-- TODO: translate -->
+
+_Content to be authored._
 
 ## Retos adicionales
 

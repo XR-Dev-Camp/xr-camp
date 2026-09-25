@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `preface` · **Lesson:** `computer-fundamentals-02` · **Estimated time:** 360 minutes
+**Course:** `preface` · **Lesson:** `computer-fundamentals-02` · **Time:** about 6 hours · 8 sessions of 45 minutes · about 2 weeks at 4 sessions a week
 
 ---
 

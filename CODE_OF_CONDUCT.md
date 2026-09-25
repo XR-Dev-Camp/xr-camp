@@ -47,7 +47,7 @@ Maintainers will follow these steps in proportion to the impact of the behaviour
 
 ## Scope
 
-This applies in all XR Camp spaces — this repository, the platform at xrcamp.dev, community channels, immersive environments, and public events — and when an individual is representing XR Camp in public.
+This applies in all XR Camp spaces — this repository, the website at xrcamp.dev, community channels, immersive environments, and public events — and when an individual is representing XR Camp in public.
 
 ## Attribution
 

@@ -2,6 +2,7 @@
   "id": "fss-07-advanced-pwa-and-offline-spatial-delivery",
   "courseId": "full-stack-spatial",
   "lessonId": "advanced-pwa-and-offline-spatial-delivery-07",
+  "status": "draft",
   "phase": 5,
   "title": {
     "en": "Advanced PWA and Offline Spatial Delivery",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 600,
+  "schedule": {
+    "sessions": 14,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "PWA"

@@ -2,18 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive timeline of the web, from the first ideas about linked documents to 3D, XR, and AI.">
+  <!-- TODO 1: Put your name in the title, for example "A timeline of the web, by Ana". -->
+  <title>A timeline of the web</title>
 
-  <title>History of the Web - XR Camp starter</title>
+  <style>
+    /*
+      Mobile first: one column, with a line down the left like a thread.
+      On wider screens the date moves into its own column.
+      There is no animation anywhere, so there is nothing to reduce.
+      You will learn CSS in Phase 1. For now, leave this as it is.
+    */
+    :root {
+      --text: #1b1b1f;
+      --muted: #4a4a55;
+      --background: #fdfcf8;
+      --line: #5b2a86;
+      --focus: #d62f6b;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    .skip-link { position: absolute; left: -999rem; }
+    .skip-link:focus { left: 1rem; top: 1rem; padding: 0.5rem 1rem; background: var(--card); }
+
+    a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+    header, main, footer { max-width: 52rem; margin: 0 auto; padding: 1rem; }
+
+    nav ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; padding: 0; list-style: none; }
+
+    .timeline { list-style: none; margin: 0; padding: 0 0 0 1.25rem; border-left: 3px solid var(--line); }
+
+    .timeline li { position: relative; margin: 0 0 1.5rem; padding: 0.75rem 1rem; background: var(--card); border-radius: 0.5rem; }
+
+    /* The dot on the thread. Decorative, so it lives in CSS, not HTML. */
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -1.95rem;
+      top: 1.1rem;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+      background: var(--line);
+    }
+
+    .timeline time { display: block; font-weight: 700; color: var(--line); }
+    .timeline h3 { margin: 0.25rem 0; font-size: 1.1rem; }
+    .timeline p { margin: 0; color: var(--muted); }
+
+    @media (min-width: 48rem) {
+      .timeline li { display: grid; grid-template-columns: 9rem 1fr; column-gap: 1rem; }
+      .timeline time { grid-row: 1 / span 2; }
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <!-- Add your main heading below. -->
+  <a class="skip-link" href="#main">Skip to the timeline</a>
 
-    <!-- Add your project content below. -->
+  <header>
+    <h1>A timeline of the web</h1>
+    <!-- TODO 2: Put your name here instead of "a new XR Camp learner". -->
+    <p>From the first dream of linked documents to 3D worlds, XR, and AI. Built by a new XR Camp learner.</p>
+    <nav aria-label="Eras">
+      <ul>
+        <li><a href="#before">Before the web</a></li>
+        <li><a href="#documents">The document web</a></li>
+        <li><a href="#applications">The application web</a></li>
+        <li><a href="#everywhere">The everywhere web</a></li>
+        <li><a href="#spatial">The spatial and intelligent web</a></li>
+        <li><a href="#mine">My own milestones</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main id="main">
+    <section id="before" aria-labelledby="before-heading">
+      <h2 id="before-heading">Before the web (1945–1988)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="1945-07">July 1945</time>
+          <h3>"As We May Think"</h3>
+          <p>Vannevar Bush imagines the memex, a desk that stores documents and links them together by association.</p>
+        </li>
+        <!-- TODO 3: Add at least three more milestones from the "Before the web" era.
+             Copy the <li> ... </li> block above, paste it below, and change the date, heading, and text.
+             Use the milestone bank in the lesson guide, or your own research. -->
+      </ol>
+    </section>
+
+    <section id="documents" aria-labelledby="documents-heading">
+      <h2 id="documents-heading">The document web (1989–1998)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="1989-03">March 1989</time>
+          <h3>A proposal at CERN</h3>
+          <p>Tim Berners-Lee proposes a linked information system at CERN. His manager writes on it: "Vague but exciting."</p>
+        </li>
+        <!-- TODO 4: Add at least four more milestones from "The document web".
+             Include at least one from your own country or region. -->
+      </ol>
+    </section>
+
+    <section id="applications" aria-labelledby="applications-heading">
+      <h2 id="applications-heading">The application web (1999–2006)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="1999-05">May 1999</time>
+          <h3>WCAG 1.0</h3>
+          <p>The first Web Content Accessibility Guidelines set out how to make the web work for disabled people.</p>
+        </li>
+        <!-- TODO 5: Add at least two more milestones from "The application web". -->
+      </ol>
+    </section>
+
+    <section id="everywhere" aria-labelledby="everywhere-heading">
+      <h2 id="everywhere-heading">The everywhere web (2007–2019)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="2007-06">June 2007</time>
+          <h3>The web in your pocket</h3>
+          <p>The iPhone goes on sale with a full web browser. Phones become the main way many people use the web.</p>
+        </li>
+        <!-- TODO 6: Add at least three more milestones from "The everywhere web". -->
+      </ol>
+    </section>
+
+    <section id="spatial" aria-labelledby="spatial-heading">
+      <h2 id="spatial-heading">The spatial and intelligent web (2011–today)</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="2011-03">March 2011</time>
+          <h3>WebGL</h3>
+          <p>WebGL 1.0 lets browsers draw fast 3D graphics without plug-ins.</p>
+        </li>
+        <!-- TODO 7: Add at least three more milestones from "The spatial and intelligent web". -->
+      </ol>
+    </section>
+
+    <section id="mine" aria-labelledby="mine-heading">
+      <h2 id="mine-heading">My own milestones</h2>
+      <ol class="timeline">
+        <li>
+          <time datetime="2026">2026</time>
+          <h3>I started XR Camp</h3>
+          <p>And built a 3D world in my first hour.</p>
+        </li>
+        <!-- TODO 8: Replace these with at least two milestones from your own life:
+             your first time online, your first phone, the day you started XR Camp. -->
+      </ol>
+    </section>
   </main>
+
+  <footer>
+    <!-- TODO 9: List where you found your own milestones. -->
+    <p>Sources are listed in the lesson guide. Made for XR Camp, Phase 0.</p>
+  </footer>
 </body>
 </html>

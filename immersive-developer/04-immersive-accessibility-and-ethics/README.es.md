@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `immersive-developer` · **Lección:** `immersive-accessibility-and-ethics-04` · **Tiempo estimado:** 720 minutos
+**Curso:** `immersive-developer` · **Lección:** `immersive-accessibility-and-ethics-04` · **Tiempo:** unas 12 horas · 16 sesiones de 45 minutos · unas 4 semanas con 4 sesiones por semana
 
 ---
 

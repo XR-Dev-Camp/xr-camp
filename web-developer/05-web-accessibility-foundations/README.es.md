@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `web-developer` · **Lección:** `web-accessibility-foundations-05` · **Tiempo estimado:** 600 minutos
+**Curso:** `web-developer` · **Lección:** `web-accessibility-foundations-05` · **Tiempo:** unas 10 horas · 14 sesiones de 45 minutos · unas 4 semanas con 4 sesiones por semana
 
 ---
 
@@ -66,6 +66,12 @@ _Contenido pendiente de redacción._
 ## Solución de problemas
 
 _Contenido pendiente de redacción._
+
+## Momento 3D
+
+<!-- TODO: translate -->
+
+_Content to be authored._
 
 ## Retos adicionales
 

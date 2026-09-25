@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `frontend-engineer` · **Lesson:** `git-collaboration-and-open-source-07` · **Estimated time:** 540 minutes
+**Course:** `frontend-engineer` · **Lesson:** `git-collaboration-and-open-source-07` · **Time:** about 9 hours · 12 sessions of 45 minutes · about 3 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Improve a 3D example in this repository, a fix or a translation, through a real pull request.
 
 ## Challenge extensions
 

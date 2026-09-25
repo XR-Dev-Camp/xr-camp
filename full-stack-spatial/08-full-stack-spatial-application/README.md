@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `full-stack-spatial` · **Lesson:** `full-stack-spatial-application-08` · **Estimated time:** 1500 minutes
+**Course:** `full-stack-spatial` · **Lesson:** `full-stack-spatial-application-08` · **Time:** about 25 hours · 34 sessions of 45 minutes · about 9 weeks at 4 sessions a week
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `professional-developer` · **Lesson:** `instructor-and-mentor-preparation-05` · **Estimated time:** 480 minutes
+**Course:** `professional-developer` · **Lesson:** `instructor-and-mentor-preparation-05` · **Time:** about 8 hours · 11 sessions of 45 minutes · about 3 weeks at 4 sessions a week
 
 ---
 

@@ -2,9 +2,9 @@
 
 ## Scope
 
-This is the **public** XR Camp projects repository. By design it contains no authentication code, no learner data, and no production infrastructure. Those live in the private `xrcamp-platform` repository.
+This is the public XR Camp repository. XR Camp has no accounts and collects no learner data, so by design this repository contains no authentication code, no learner data, and no production infrastructure.
 
-That design is the security control. The most valuable thing you can report here is a **boundary violation** — private material that has leaked into the public repository.
+That design is the security control. The most valuable thing you can report here is anything that should not be public: a secret, a credential, or someone's personal information.
 
 ## Report privately
 

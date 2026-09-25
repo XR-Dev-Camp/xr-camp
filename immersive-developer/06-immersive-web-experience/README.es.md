@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `immersive-developer` · **Lección:** `immersive-web-experience-06` · **Tiempo estimado:** 1320 minutos
+**Curso:** `immersive-developer` · **Lección:** `immersive-web-experience-06` · **Tiempo:** unas 22 horas · 30 sesiones de 45 minutos · unas 8 semanas con 4 sesiones por semana
 
 ---
 

@@ -2,23 +2,18 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Your world
+- [ ] The title and the heading show your name.
+- [ ] You changed the sky, moved a shape, and added a shape of your own.
+- [ ] The page opens in the browser without a blank screen.
 
 ## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+- [ ] The scene description (`id="scene-description"`) matches your world exactly.
+- [ ] Someone who reads only the description can picture the scene.
+- [ ] **Pause animation** stops the movement, and pressing it again restarts it.
+- [ ] You can move around with the W A S D or arrow keys.
+- [ ] `lang` at the top of the file matches the language of your text.
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+## Your plan
+- [ ] Your learner journal says why you are here and what you want to build.
+- [ ] You chose your study days, times, and place.

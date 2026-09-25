@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `web3d-developer` · **课时:** `threejs-interaction-assets-and-animation-05` · **预计时长:** 960 分钟
+**课程:** `web3d-developer` · **课时:** `threejs-interaction-assets-and-animation-05` · **时长:** 约 16 小时 · 22 次学习，每次 45 分钟 · 每周 4 次，约 6 周
 
 ---
 

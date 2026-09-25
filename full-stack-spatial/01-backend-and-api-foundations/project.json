@@ -2,6 +2,7 @@
   "id": "fss-01-backend-and-api-foundations",
   "courseId": "full-stack-spatial",
   "lessonId": "backend-and-api-foundations-01",
+  "status": "draft",
   "phase": 5,
   "title": {
     "en": "Backend and API Foundations",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,
+  "schedule": {
+    "sessions": 19,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "JavaScript",

@@ -2,6 +2,7 @@
   "id": "pre-08-ethics-accessibility-privacy-and-responsible-ai",
   "courseId": "preface",
   "lessonId": "ethics-accessibility-privacy-and-responsible-ai-08",
+  "status": "draft",
   "phase": 0,
   "title": {
     "en": "Ethics, Accessibility, Privacy, and Responsible AI",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 420,
+  "schedule": {
+    "sessions": 10,
+    "sessionMinutes": 45
+  },
   "difficulty": "foundation",
   "technologies": [
     "ARIA",

@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `web-developer` · **Lesson:** `javascript-foundations-06` · **Estimated time:** 960 minutes
+**Course:** `web-developer` · **Lesson:** `javascript-foundations-06` · **Time:** about 16 hours · 22 sessions of 45 minutes · about 6 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Write your first 3D event: click (or press Enter on) an object to change its colour and announce the change to screen readers.
 
 ## Challenge extensions
 

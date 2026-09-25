@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `capstone` · **Lección:** `capstone-research-and-definition-01` · **Tiempo estimado:** 480 minutos
+**Curso:** `capstone` · **Lección:** `capstone-research-and-definition-01` · **Tiempo:** unas 8 horas · 11 sesiones de 45 minutos · unas 3 semanas con 4 sesiones por semana
 
 ---
 

@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `full-stack-spatial` · **课时:** `full-stack-spatial-application-08` · **预计时长:** 1500 分钟
+**课程:** `full-stack-spatial` · **课时:** `full-stack-spatial-application-08` · **时长:** 约 25 小时 · 34 次学习，每次 45 分钟 · 每周 4 次，约 9 周
 
 ---
 

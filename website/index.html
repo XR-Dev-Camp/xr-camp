@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XR Camp: build the web you can step into</title>
+  <meta name="description" content="A free school for the immersive web. Learn to build websites, 3D worlds, and VR and AR experiences that run in a browser. Built for women in Latin America and China, free for everyone.">
+  <meta name="theme-color" content="#0d0820">
+  <meta property="og:title" content="XR Camp: build the web you can step into">
+  <meta property="og:description" content="A free school for the immersive web. Learn to build websites, 3D worlds, and VR and AR experiences that run in a browser. Built for women in Latin America and China, free for everyone.">
+  <link rel="alternate" hreflang="en" href="https://xrcamp.dev/">
+  <link rel="alternate" hreflang="es-419" href="https://xrcamp.dev/es-419/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://xrcamp.dev/zh-hans/">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="module" src="assets/scene.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- The 3D scene is drawn here, behind the page. It is decorative: every
+       word it illustrates is also in the page, and it can be switched off. -->
+  <div id="scene-layer" aria-hidden="true"></div>
+  <script type="application/json" id="scene-data">{"lang":"en","labels":["0 · Welcome to the Future","1 · Become a Web Developer","2 · Become a Frontend Engineer","3 · Become a Web3D Developer","4 · Become an Immersive Developer","5 · Become a Full-Stack Spatial Developer","6 · Become a Professional Developer","7 · Professional Capstone"],"xrHint":"Pinch or pull the trigger to travel to the next world"}</script>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">XR Camp</a>
+    <nav aria-label="Site settings" class="controls">
+      <button type="button" id="toggle-3d" aria-pressed="true" hidden>3D scene</button>
+      <button type="button" id="toggle-motion" aria-pressed="false" hidden>Pause motion</button>
+      <details class="languages">
+        <summary>Language</summary>
+        <ul>
+          <li><a href="index.html" aria-current="page" lang="en">English</a></li>
+          <li><a href="es-419/index.html" lang="es-419" hreflang="es-419">Español</a></li>
+          <li><a href="zh-hans/index.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></li>
+        </ul>
+      </details>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" data-station="overview" aria-labelledby="hero-title">
+      <div class="panel panel-hero">
+        <p class="eyebrow">XR Camp · A free school for the immersive web</p>
+        <h1 id="hero-title">Build the web you can step into.</h1>
+        <p class="lead">Learn to build websites, 3D worlds, and virtual and augmented reality experiences that run in a browser. Free for everyone, starting from your very first line of code.</p>
+        <p class="actions">
+          <a class="button primary" href="https://github.com/XR-Dev-Camp/xr-camp/blob/main/preface/01-welcome-to-xr-camp/README.md">Start lesson one</a>
+          <a class="button" href="https://github.com/XR-Dev-Camp/xr-camp">All lessons on GitHub</a>
+        </p>
+        <p class="actions xr-actions">
+          <button type="button" class="button xr" id="enter-vr" hidden>Step inside in VR</button>
+          <button type="button" class="button xr" id="enter-ar" hidden>Step inside in AR</button>
+        </p>
+        <p class="note">The world behind this text is built with the same tools you will learn here: HTML, A-Frame, and WebXR.</p>
+      </div>
+    </section>
+
+    <section data-station="overview" aria-labelledby="mission-title">
+      <div class="panel">
+        <h2 id="mission-title">Free. For everyone. Built for women.</h2>
+        <p>XR Camp is completely free. There are no fees, no paywalls, and no accounts.</p>
+        <p>It is built first for women in Latin America and China who want to become web, 3D, and immersive developers, including women who have never written code. Lessons are written in English, Spanish, and Simplified Chinese.</p>
+        <p>It is created by women experts and by male allies committed to women’s empowerment.</p>
+      </div>
+    </section>
+
+    <section data-station="0" aria-labelledby="first-hour-title">
+      <div class="panel">
+        <h2 id="first-hour-title">A 3D world in your first hour</h2>
+        <p>You do not start with theory. In your first lesson you open a file, change a few words, and a 3D garden appears in your browser with your name on it. The garden at the start of the thread behind this text is a grown-up version of that first world.</p>
+        <figure>
+          <pre><code>&lt;a-box position="-1.5 0.5 -4" color="#5b2a86"&gt;&lt;/a-box&gt;</code></pre>
+          <figcaption>One line. One purple box. Your first step into 3D.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="path-title">
+      <div class="panel" data-station="0">
+        <h2 id="path-title">Eight phases, from your first click to professional</h2>
+        <p>Every phase ends with a real project you publish. Lessons are planned in 45-minute sessions that fit around work, study, and family, and every phase stands on its own.</p>
+      </div>
+      <ol class="phases">
+        <li class="panel phase" data-station="0" id="phase-0">
+          <p class="phase-number">Phase 0</p>
+          <h3>Welcome to the Future</h3>
+          <p><strong>You will build:</strong> Your first 3D world, a timeline of the web, and a lab comparing three ways to build in 3D.</p>
+          <ul class="facts">
+            <li>64 sessions of 45 minutes · about 4 months at 4 sessions a week</li>
+            <li>3 of 9 lessons ready in English</li>
+          </ul>
+          <p><a href="https://github.com/XR-Dev-Camp/xr-camp/tree/main/preface">Open this phase on GitHub</a></p>
+        </li>
+        <li class="panel phase" data-station="1" id="phase-1">
+          <p class="phase-number">Phase 1</p>
+          <h3>Become a Web Developer</h3>
+          <p><strong>You will build:</strong> Accessible, responsive websites, published for anyone in the world to visit.</p>
+          <ul class="facts">
+            <li>144 sessions of 45 minutes · about 8 months at 4 sessions a week</li>
+            <li>1 of 9 lessons ready in English</li>
+          </ul>
+          <p><a href="https://github.com/XR-Dev-Camp/xr-camp/tree/main/web-developer">Open this phase on GitHub</a></p>
+        </li>
+        <li class="panel phase" data-station="2" id="phase-2">
+          <p class="phase-number">Phase 2</p>
+          <h3>Become a Frontend Engineer</h3>
+          <p><strong>You will build:</strong> Web apps that install on a phone, work offline, and use live data.</p>
+          <ul class="facts">
+            <li>145 sessions of 45 minutes · about 8 months at 4 sessions a week</li>
+            <li>9 lessons, being written now</li>
+          </ul>
+          <p><a href="https://github.com/XR-Dev-Camp/xr-camp/tree/main/frontend-engineer">Open this phase on GitHub</a></p>
+        </li>
+        <li class="panel phase" data-station="3" id="phase-3">
+          <p class="phase-number">Phase 3</p>
+          <h3>Become a Web3D Developer</h3>
+          <p><strong>You will build:</strong> Interactive 3D experiences with A-Frame and three.js.</p>
+          <ul class="facts">
+            <li>138 sessions of 45 minutes · about 8 months at 4 sessions a week</li>
+            <li>7 lessons, being written now</li>
+          </ul>
+          <p><a href="https://github.com/XR-Dev-Camp/xr-camp/tree/main/web3d-developer">Open this phase on GitHub</a></p>
+        </li>
+        <li class="panel phase" data-station="4" id="phase-4">
+          <p class="phase-number">Phase 4</p>
+          <h3>Become an Immersive Developer</h3>
+          <p><strong>You will build:</strong> Virtual and augmented reality experiences that open in a headset from a link.</p>
+          <ul class="facts">
+            <li>111 sessions of 45 minutes · about 6 months at 4 sessions a week</li>
+            <li>6 lessons, being written now</li>
+          </ul>
+          <p><a href="https://github.com/XR-Dev-Camp/xr-camp/tree/main/immersive-developer">Open this phase on GitHub</a></p>
+        </li>
+        <li class="panel phase" data-station="5" id="phase-5">
+          <p class="phase-number">Phase 5</p>
+          <h3>Become a Full-Stack Spatial Developer</h3>
+          <p><strong>You will build:</strong> Multi-user 3D applications with accounts, data, and real-time connections.</p>
+          <ul class="facts">
+            <li>155 sessions of 45 minutes · about 9 months at 4 sessions a week</li>
+            <li>8 lessons, being written now</li>
+          </ul>
+          <p><a href="https://github.com/XR-Dev-Camp/xr-camp/tree/main/full-stack-spatial">Open this phase on GitHub</a></p>
+        </li>
+        <li class="panel phase" data-station="6" id="phase-6">
+          <p class="phase-number">Phase 6</p>
+          <h3>Become a Professional Developer</h3>
+          <p><strong>You will build:</strong> Production deployments, multilingual sites, and your own place in open source.</p>
+          <ul class="facts">
+            <li>73 sessions of 45 minutes · about 4 months at 4 sessions a week</li>
+            <li>5 lessons, being written now</li>
+          </ul>
+          <p><a href="https://github.com/XR-Dev-Camp/xr-camp/tree/main/professional-developer">Open this phase on GitHub</a></p>
+        </li>
+        <li class="panel phase" data-station="7" id="phase-7">
+          <p class="phase-number">Phase 7</p>
+          <h3>Professional Capstone</h3>
+          <p><strong>You will build:</strong> A complete immersive project: researched, designed, built, tested, and launched.</p>
+          <ul class="facts">
+            <li>95 sessions of 45 minutes · about 5 months at 4 sessions a week</li>
+            <li>5 lessons, being written now</li>
+          </ul>
+          <p><a href="https://github.com/XR-Dev-Camp/xr-camp/tree/main/capstone">Open this phase on GitHub</a></p>
+        </li>
+      </ol>
+    </section>
+
+    <section data-station="end" aria-labelledby="how-title">
+      <div class="panel">
+        <h2 id="how-title">How it works</h2>
+        <ul class="how">
+          <li><h3>Everything is on GitHub</h3><p>Every lesson, starter file, and solution is in one public repository. Download it, or fork it and make it yours.</p></li>
+          <li><h3>Learn in 45-minute sessions</h3><p>Every lesson tells you how many sessions it takes and what you will have built by the end of each one.</p></li>
+          <li><h3>Use AI as a tutor, not a crutch</h3><p>AI can explain almost anything. XR Camp teaches you to understand your code before you ask AI to change it.</p></li>
+          <li><h3>Learn together</h3><p>Community will blossom soon.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section data-station="end" aria-labelledby="access-title">
+      <div class="panel">
+        <h2 id="access-title">Accessible by design</h2>
+        <p>This site works with a keyboard and a screen reader, and it respects your device’s motion settings. You can turn the 3D scene off at any time with the switch at the top of the page. Everything you build at XR Camp will meet the same standard.</p>
+      </div>
+    </section>
+
+    <section data-station="end" aria-labelledby="why-title">
+      <div class="panel why">
+        <h2 id="why-title">Why</h2>
+        <img src="assets/damon.jpg" alt="Damon Hernandez" width="239" height="360" loading="lazy">
+        <div>
+          <p class="name">Damon Hernandez</p>
+          <p class="place">San Francisco, USA &amp; Helsinki, Finland</p>
+          <blockquote>
+            <p>“Be the change you want to see.” Taking this to heart, with over 20 years in the immersive and web technology domains, I have dedicated my career to growing the use of these technologies around the world through presentations, workshops, events, meetups, hackathons, and other community initiatives.</p>
+            <p>In my continued pursuit to be a great ally to those in the community, this program’s goal is to enable any woman who is interested in web and immersive technologies to get her tech superpowers.</p>
+            <p>And for Sherine.</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section data-station="end" aria-labelledby="involved-title">
+      <div class="panel">
+        <h2 id="involved-title">Get involved</h2>
+        <p>Want to teach, mentor, translate, or write a lesson? XR Camp is built by women experts and male allies, and there is a place for you.</p>
+        <p class="actions">
+          <a class="button primary" href="https://github.com/XR-Dev-Camp/xr-camp">Contribute on GitHub</a>
+          <a class="button" href="mailto:hello@xrcamp.dev">hello@xrcamp.dev</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="panel site-footer">
+    <details>
+      <summary>About the 3D scene</summary>
+      <p id="scene-description">Behind the text is a night sky with a glowing thread running through it. Along the thread float eight small worlds, one for each phase: a garden of simple shapes, a floating web page, a cluster of connected blocks, a polished knot, a glowing portal, orbs circling each other, a tower, and a golden star. As you scroll, the view travels along the thread from one world to the next. In a VR or AR headset, you can stand among them and travel from world to world.</p>
+    </details>
+    <p>XR Camp. Lessons are free under CC BY-NC-SA 4.0. This site is built with HTML, CSS, JavaScript, A-Frame, and WebXR: all things you will learn here.</p>
+    <p><a href="https://github.com/XR-Dev-Camp/xr-camp">github.com/XR-Dev-Camp/xr-camp</a></p>
+  </footer>
+</body>
+</html>

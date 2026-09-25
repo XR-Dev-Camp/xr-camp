@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `preface` · **Lesson:** `ethics-accessibility-privacy-and-responsible-ai-08` · **Estimated time:** 420 minutes
+**Course:** `preface` · **Lesson:** `ethics-accessibility-privacy-and-responsible-ai-08` · **Time:** about 7 hours · 10 sessions of 45 minutes · about 3 weeks at 4 sessions a week
 
 ---
 

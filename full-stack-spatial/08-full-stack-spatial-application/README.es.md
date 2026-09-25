@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `full-stack-spatial` · **Lección:** `full-stack-spatial-application-08` · **Tiempo estimado:** 1500 minutos
+**Curso:** `full-stack-spatial` · **Lección:** `full-stack-spatial-application-08` · **Tiempo:** unas 25 horas · 34 sesiones de 45 minutos · unas 9 semanas con 4 sesiones por semana
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `full-stack-spatial` · **Lesson:** `security-and-privacy-for-spatial-applications-05` · **Estimated time:** 720 minutes
+**Course:** `full-stack-spatial` · **Lesson:** `security-and-privacy-for-spatial-applications-05` · **Time:** about 12 hours · 16 sessions of 45 minutes · about 4 weeks at 4 sessions a week
 
 ---
 

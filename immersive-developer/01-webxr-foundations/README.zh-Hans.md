@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `immersive-developer` · **课时:** `webxr-foundations-01` · **预计时长:** 840 分钟
+**课程:** `immersive-developer` · **课时:** `webxr-foundations-01` · **时长:** 约 14 小时 · 19 次学习，每次 45 分钟 · 每周 4 次，约 5 周
 
 ---
 

@@ -2,6 +2,7 @@
   "id": "fe-07-git-collaboration-and-open-source",
   "courseId": "frontend-engineer",
   "lessonId": "git-collaboration-and-open-source-07",
+  "status": "draft",
   "phase": 2,
   "title": {
     "en": "Git Collaboration and Open Source",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 540,
+  "schedule": {
+    "sessions": 12,
+    "sessionMinutes": 45
+  },
   "difficulty": "intermediate",
   "technologies": [
     "Git"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Improve a 3D example in this repository, a fix or a translation, through a real pull request.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

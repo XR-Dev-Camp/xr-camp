@@ -2,6 +2,7 @@
   "id": "pro-01-production-deployment-and-devops",
   "courseId": "professional-developer",
   "lessonId": "production-deployment-and-devops-01",
+  "status": "draft",
   "phase": 6,
   "title": {
     "en": "Production Deployment and DevOps",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
+  "schedule": {
+    "sessions": 16,
+    "sessionMinutes": 45
+  },
   "difficulty": "professional",
   "technologies": [
     "CI/CD"

@@ -2,6 +2,7 @@
   "id": "pro-02-internationalization-and-localization",
   "courseId": "professional-developer",
   "lessonId": "internationalization-and-localization-02",
+  "status": "draft",
   "phase": 6,
   "title": {
     "en": "Internationalization and Localization",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 600,
+  "schedule": {
+    "sessions": 14,
+    "sessionMinutes": 45
+  },
   "difficulty": "professional",
   "technologies": [
     "i18n"

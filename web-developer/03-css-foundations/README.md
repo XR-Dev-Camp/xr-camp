@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `web-developer` · **Lesson:** `css-foundations-03` · **Estimated time:** 840 minutes
+**Course:** `web-developer` · **Lesson:** `css-foundations-03` · **Time:** about 14 hours · 19 sessions of 45 minutes · about 5 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Frame a 3D scene inside your page and use your CSS custom properties so the scene and the page share one colour system.
 
 ## Challenge extensions
 

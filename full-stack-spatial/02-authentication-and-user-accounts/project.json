@@ -2,6 +2,7 @@
   "id": "fss-02-authentication-and-user-accounts",
   "courseId": "full-stack-spatial",
   "lessonId": "authentication-and-user-accounts-02",
+  "status": "draft",
   "phase": 5,
   "title": {
     "en": "Authentication and User Accounts",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 600,
+  "schedule": {
+    "sessions": 14,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "Node.js"

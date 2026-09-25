@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `full-stack-spatial` · **课时:** `authentication-and-user-accounts-02` · **预计时长:** 600 分钟
+**课程:** `full-stack-spatial` · **课时:** `authentication-and-user-accounts-02` · **时长:** 约 10 小时 · 14 次学习，每次 45 分钟 · 每周 4 次，约 4 周
 
 ---
 

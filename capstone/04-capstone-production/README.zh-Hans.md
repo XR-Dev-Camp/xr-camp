@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `capstone` · **课时:** `capstone-production-04` · **预计时长:** 1680 分钟
+**课程:** `capstone` · **课时:** `capstone-production-04` · **时长:** 约 28 小时 · 38 次学习，每次 45 分钟 · 每周 4 次，约 10 周
 
 ---
 

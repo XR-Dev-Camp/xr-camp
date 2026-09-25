@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO 1: Put your own name in the title, for example "Ana's first 3D world". -->
+  <title>My first 3D world - XR Camp</title>
+
+  <!--
+    A-Frame turns HTML-like tags such as <a-box> into a 3D scene.
+    You do not need to understand this line yet. Leave it exactly as it is.
+  -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+
+  <style>
+    /* You will learn CSS in Phase 1. For now, leave this as it is. */
+    :root { --text: #1b1b1f; --background: #fdfcf8; --accent: #5b2a86; --focus: #d62f6b; }
+    body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; color: var(--text); background: var(--background); }
+    main { max-width: 60rem; margin: 0 auto; padding: 1rem; }
+    a-scene { display: block; width: 100%; height: min(70vh, 32rem); }
+    button { font: inherit; padding: 0.5rem 1rem; border: 2px solid var(--accent); border-radius: 0.5rem; color: #fff; background: var(--accent); cursor: pointer; }
+    button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- TODO 2: Put your own name in this heading too. -->
+    <h1>My first 3D world</h1>
+
+    <section aria-labelledby="world-heading">
+      <h2 id="world-heading">The world</h2>
+
+      <!--
+        TODO 6 (do this last): Rewrite this description so it matches YOUR world.
+        Someone who cannot see the scene should be able to picture it from these words.
+      -->
+      <p id="scene-description">
+        A small garden under a blue sky. On the green grass stand a red box,
+        a yellow cylinder, and a blue sphere that floats gently up and down.
+      </p>
+
+      <p>
+        Look around by dragging with a mouse or a finger. Move with the
+        W, A, S, and D keys or the arrow keys.
+      </p>
+
+      <p>
+        <button id="motion-toggle" type="button" aria-pressed="false">Pause animation</button>
+      </p>
+
+      <a-scene embedded>
+        <!-- TODO 3: Change the sky colour. Try "#f6d6e0" (pink) or "#1b1b3a" (night). -->
+        <a-sky color="#9fd3ff"></a-sky>
+        <a-plane rotation="-90 0 0" width="100" height="100" color="#7cbf6e"></a-plane>
+
+        <!-- TODO 4: Change the box's colour. Then change its position: the numbers are left/right, up/down, near/far. -->
+        <a-box position="-1.5 0.5 -4" color="#c2372b"></a-box>
+        <a-cylinder position="0 0.75 -5" radius="0.5" height="1.5" color="#e0a526"></a-cylinder>
+
+        <!-- TODO 5: Copy the box line above, paste it here, and change "a-box" to "a-cone".
+                     Give it a new colour and a new position so it does not sit inside the box. -->
+
+        <a-sphere id="moon" position="1.5 1 -4" radius="0.5" color="#2b5fc2"
+                  animation="property: position; to: 1.5 1.5 -4; dir: alternate; loop: true; dur: 3000; easing: easeInOutSine"></a-sphere>
+      </a-scene>
+    </section>
+  </main>
+
+  <script>
+    // This makes the "Pause animation" button work, and stops the animation
+    // for people who have asked their device to reduce motion.
+    // You will learn JavaScript in Phase 1. For now, leave it as it is.
+    const moon = document.querySelector('#moon');
+    const toggle = document.querySelector('#motion-toggle');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function setPaused(paused) {
+      moon.setAttribute('animation', 'enabled', !paused);
+      toggle.setAttribute('aria-pressed', String(paused));
+    }
+
+    toggle.addEventListener('click', () => {
+      setPaused(toggle.getAttribute('aria-pressed') !== 'true');
+    });
+
+    if (moon.hasLoaded) setPaused(prefersReducedMotion);
+    else moon.addEventListener('loaded', () => setPaused(prefersReducedMotion));
+  </script>
+</body>
+</html>

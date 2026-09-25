@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `full-stack-spatial` · **Lesson:** `authentication-and-user-accounts-02` · **Estimated time:** 600 minutes
+**Course:** `full-stack-spatial` · **Lesson:** `authentication-and-user-accounts-02` · **Time:** about 10 hours · 14 sessions of 45 minutes · about 4 weeks at 4 sessions a week
 
 ---
 

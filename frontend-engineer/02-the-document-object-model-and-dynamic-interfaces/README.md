@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `frontend-engineer` · **Lesson:** `the-document-object-model-and-dynamic-interfaces-02` · **Estimated time:** 600 minutes
+**Course:** `frontend-engineer` · **Lesson:** `the-document-object-model-and-dynamic-interfaces-02` · **Time:** about 10 hours · 14 sessions of 45 minutes · about 4 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Build a 2D control panel that adds, removes, and selects 3D objects, keeping keyboard focus sensible between panel and scene.
 
 ## Challenge extensions
 

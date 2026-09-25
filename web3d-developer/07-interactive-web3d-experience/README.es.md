@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `web3d-developer` · **Lección:** `interactive-web3d-experience-07` · **Tiempo estimado:** 1200 minutos
+**Curso:** `web3d-developer` · **Lección:** `interactive-web3d-experience-07` · **Tiempo:** unas 20 horas · 27 sesiones de 45 minutos · unas 7 semanas con 4 sesiones por semana
 
 ---
 

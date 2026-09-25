@@ -2,6 +2,7 @@
   "id": "fe-04-apis-json-and-asynchronous-applications",
   "courseId": "frontend-engineer",
   "lessonId": "apis-json-and-asynchronous-applications-04",
+  "status": "draft",
   "phase": 2,
   "title": {
     "en": "APIs, JSON, and Asynchronous Applications",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
+  "schedule": {
+    "sessions": 16,
+    "sessionMinutes": 45
+  },
   "difficulty": "intermediate",
   "technologies": [
     "JavaScript"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Fetch live public data, such as weather or earthquakes, and show it as 3D bars or markers.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

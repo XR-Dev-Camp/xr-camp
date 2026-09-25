@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `frontend-engineer` · **Lesson:** `modern-javascript-01` · **Estimated time:** 840 minutes
+**Course:** `frontend-engineer` · **Lesson:** `modern-javascript-01` · **Time:** about 14 hours · 19 sessions of 45 minutes · about 5 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Generate a 3D scene from data: a JavaScript module of positions, colours, and labels becomes objects in space.
 
 ## Challenge extensions
 

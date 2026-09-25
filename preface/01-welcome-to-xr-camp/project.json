@@ -2,32 +2,43 @@
   "id": "pre-01-welcome-to-xr-camp",
   "courseId": "preface",
   "lessonId": "welcome-to-xr-camp-01",
+  "status": "review",
   "phase": 0,
   "title": {
     "en": "Welcome to XR Camp",
-    "es-419": "",
-    "zh-Hans": ""
+    "es-419": "Bienvenida a XR Camp",
+    "zh-Hans": "欢迎来到 XR Camp"
   },
   "summary": {
-    "en": "Create a learner profile, choose goals, and complete a personal learning plan.",
-    "es-419": "",
-    "zh-Hans": ""
+    "en": "Build your first 3D world in your first hour, then make a learning plan that fits your life.",
+    "es-419": "Construye tu primer mundo 3D en tu primera hora y luego haz un plan de estudio que encaje en tu vida.",
+    "zh-Hans": "在第一个小时里构建你的第一个 3D 世界，然后制定一份适合你生活的学习计划。"
   },
-  "estimatedMinutes": 120,
+  "estimatedMinutes": 135,
+  "schedule": {
+    "sessions": 3,
+    "sessionMinutes": 45
+  },
   "difficulty": "foundation",
   "technologies": [
-    "HTML"
+    "HTML",
+    "A-Frame"
   ],
-  "hasCode": false,
-  "starterPath": null,
-  "completedPath": null,
-  "demoPath": null,
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
   "accessibilityChecks": [
     "document-language",
     "heading-order",
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

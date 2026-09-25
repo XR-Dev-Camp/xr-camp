@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `professional-developer` · **课时:** `instructor-and-mentor-preparation-05` · **预计时长:** 480 分钟
+**课程:** `professional-developer` · **课时:** `instructor-and-mentor-preparation-05` · **时长:** 约 8 小时 · 11 次学习，每次 45 分钟 · 每周 4 次，约 3 周
 
 ---
 

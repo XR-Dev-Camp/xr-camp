@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `full-stack-spatial` · **Lesson:** `real-time-and-multi-user-applications-04` · **Estimated time:** 1020 minutes
+**Course:** `full-stack-spatial` · **Lesson:** `real-time-and-multi-user-applications-04` · **Time:** about 17 hours · 23 sessions of 45 minutes · about 6 weeks at 4 sessions a week
 
 ---
 

@@ -2,23 +2,27 @@
 
 Work through this list before you submit.
 
+## Your lab
+- [ ] Your name is in the title and the introduction.
+- [ ] You changed the colour in at least one example, and it shows in the lab.
+- [ ] Every `?` in the comparison table is replaced.
+- [ ] The timeline has at least ten milestones, in date order, each with a `datetime`.
+- [ ] Your conclusions answer both questions in TODO 7.
+
 ## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+- [ ] Headings are in order: one `h1`, sections as `h2`.
+- [ ] The table has a `<caption>`, and its headers use `scope`.
+- [ ] `lang` at the top of every file matches its language.
 
-## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+## 3D and XR (manual)
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
+Automated tools cannot see inside a 3D canvas, so these are checked by a person. See [`docs/en/xr-accessibility.md`](../../../docs/en/xr-accessibility.md).
 
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+- [ ] Every example has a `scene-description` that matches what it shows.
+- [ ] Every `<iframe>` has a `title`.
+- [ ] Nothing moves; or, if you added animation in a challenge, there is a pause button.
+- [ ] The page still makes sense without the 3D: the table, timeline, and conclusions are plain HTML.
+- [ ] The camera never moves unless you move it.
+
+## Layout
+- [ ] At phone width, nothing needs sideways scrolling except the code boxes and the table, which scroll inside themselves.

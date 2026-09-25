@@ -2,6 +2,7 @@
   "id": "web-07-developer-tools-debugging-and-testing",
   "courseId": "web-developer",
   "lessonId": "developer-tools-debugging-and-testing-07",
+  "status": "draft",
   "phase": 1,
   "title": {
     "en": "Developer Tools, Debugging, and Testing",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 540,
+  "schedule": {
+    "sessions": 12,
+    "sessionMinutes": 45
+  },
   "difficulty": "beginner",
   "technologies": [
     "HTML"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Fix a deliberately broken 3D scene using the A-Frame Inspector and the browser Performance panel.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

@@ -2,6 +2,7 @@
   "id": "web-04-responsive-web-design",
   "courseId": "web-developer",
   "lessonId": "responsive-web-design-04",
+  "status": "draft",
   "phase": 1,
   "title": {
     "en": "Responsive Web Design",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,
+  "schedule": {
+    "sessions": 19,
+    "sessionMinutes": 45
+  },
   "difficulty": "beginner",
   "technologies": [
     "CSS"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Make a 3D scene fill the screen on a phone and sit beside the text on a wide screen, using Grid and aspect-ratio.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The box in X3D (X3DOM)</title>
+  <!-- X3DOM lets a browser show X3D, the ISO standard, directly inside HTML. Pinned in versions.json. -->
+  <script src="https://www.x3dom.org/download/1.8.3/x3dom.js"></script>
+  <link rel="stylesheet" href="https://www.x3dom.org/download/1.8.3/x3dom.css">
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; color: #1b1b1f; background: #fdfcf8; }
+    p { margin: 0.5rem; }
+    x3d { display: block; width: 100%; height: 16rem; border: none; }
+  </style>
+</head>
+<body>
+  <p id="scene-description">A purple cube, turned so that three of its faces show, on a pale background. Nothing moves.</p>
+
+  <!-- Declarative: you describe WHAT is in the scene, and X3DOM works out how to draw it. -->
+  <x3d>
+    <scene>
+      <background skyColor="0.99 0.99 0.97"></background>
+      <transform rotation="1 1 0 0.6">
+        <shape>
+          <appearance>
+            <material diffuseColor="0.36 0.16 0.53"></material>
+          </appearance>
+          <box size="1.5 1.5 1.5"></box>
+        </shape>
+      </transform>
+    </scene>
+  </x3d>
+</body>
+</html>

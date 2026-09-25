@@ -2,6 +2,7 @@
   "id": "web-02-accessible-forms-and-user-input",
   "courseId": "web-developer",
   "lessonId": "accessible-forms-and-user-input-02",
+  "status": "draft",
   "phase": 1,
   "title": {
     "en": "Accessible Forms and User Input",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 420,
+  "schedule": {
+    "sessions": 10,
+    "sessionMinutes": 45
+  },
   "difficulty": "beginner",
   "technologies": [
     "HTML"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "A ready-made 3D shape sits beside your form: your colour, size, and shape inputs change it live.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",

@@ -2,6 +2,7 @@
   "id": "cap-02-experience-and-system-design",
   "courseId": "capstone",
   "lessonId": "experience-and-system-design-02",
+  "status": "draft",
   "phase": 7,
   "title": {
     "en": "Experience and System Design",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 600,
+  "schedule": {
+    "sessions": 14,
+    "sessionMinutes": 45
+  },
   "difficulty": "capstone",
   "technologies": [
     "HTML"

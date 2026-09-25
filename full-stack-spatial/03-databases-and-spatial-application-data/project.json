@@ -2,6 +2,7 @@
   "id": "fss-03-databases-and-spatial-application-data",
   "courseId": "full-stack-spatial",
   "lessonId": "databases-and-spatial-application-data-03",
+  "status": "draft",
   "phase": 5,
   "title": {
     "en": "Databases and Spatial Application Data",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
+  "schedule": {
+    "sessions": 16,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "Node.js"

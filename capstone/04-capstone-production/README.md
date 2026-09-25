@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `capstone` · **Lesson:** `capstone-production-04` · **Estimated time:** 1680 minutes
+**Course:** `capstone` · **Lesson:** `capstone-production-04` · **Time:** about 28 hours · 38 sessions of 45 minutes · about 10 weeks at 4 sessions a week
 
 ---
 

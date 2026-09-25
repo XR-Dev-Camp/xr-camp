@@ -2,6 +2,7 @@
   "id": "fss-06-ai-for-spatial-computing",
   "courseId": "full-stack-spatial",
   "lessonId": "ai-for-spatial-computing-06",
+  "status": "draft",
   "phase": 5,
   "title": {
     "en": "AI for Spatial Computing",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,
+  "schedule": {
+    "sessions": 19,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "AI Tooling"

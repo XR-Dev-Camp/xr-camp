@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `preface` · **课时:** `careers-in-the-spatial-web-09` · **预计时长:** 240 分钟
+**课程:** `preface` · **课时:** `careers-in-the-spatial-web-09` · **时长:** 约 4 小时 · 6 次学习，每次 45 分钟 · 每周 4 次，约 2 周
 
 ---
 

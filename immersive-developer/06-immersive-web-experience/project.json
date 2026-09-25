@@ -2,6 +2,7 @@
   "id": "imm-06-immersive-web-experience",
   "courseId": "immersive-developer",
   "lessonId": "immersive-web-experience-06",
+  "status": "draft",
   "phase": 4,
   "title": {
     "en": "Phase 4 Capstone - Immersive Web Experience",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 1320,
+  "schedule": {
+    "sessions": 30,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "WebXR"
@@ -28,6 +33,13 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort",
+    "xr-input-alternatives",
+    "xr-seated-mode"
   ]
 }

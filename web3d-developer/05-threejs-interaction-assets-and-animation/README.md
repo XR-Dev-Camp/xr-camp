@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `web3d-developer` · **Lesson:** `threejs-interaction-assets-and-animation-05` · **Estimated time:** 960 minutes
+**Course:** `web3d-developer` · **Lesson:** `threejs-interaction-assets-and-animation-05` · **Time:** about 16 hours · 22 sessions of 45 minutes · about 6 weeks at 4 sessions a week
 
 ---
 

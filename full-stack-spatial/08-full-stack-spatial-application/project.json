@@ -2,6 +2,7 @@
   "id": "fss-08-full-stack-spatial-application",
   "courseId": "full-stack-spatial",
   "lessonId": "full-stack-spatial-application-08",
+  "status": "draft",
   "phase": 5,
   "title": {
     "en": "Phase 5 Capstone - Full-Stack Spatial Application",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 1500,
+  "schedule": {
+    "sessions": 34,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "HTML"

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The box in A-Frame</title>
+  <!-- A-Frame, pinned in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; color: #1b1b1f; background: #fdfcf8; }
+    p { margin: 0.5rem; }
+    a-scene { display: block; width: 100%; height: 16rem; }
+  </style>
+</head>
+<body>
+  <p id="scene-description">A purple cube, turned so that three of its faces show, on a pale background. Nothing moves.</p>
+
+  <!-- Declarative, like X3D: HTML-style tags describe WHAT is in the scene. -->
+  <a-scene embedded vr-mode-ui="enabled: false">
+    <a-sky color="#fdfcf8"></a-sky>
+    <a-box position="0 1.6 -3" rotation="30 35 0" color="#5b2a86"></a-box>
+  </a-scene>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `frontend-engineer` · **Lesson:** `production-frontend-application-09` · **Estimated time:** 1080 minutes
+**Course:** `frontend-engineer` · **Lesson:** `production-frontend-application-09` · **Time:** about 18 hours · 24 sessions of 45 minutes · about 6 weeks at 4 sessions a week
 
 ---
 
@@ -64,6 +64,10 @@ _Content to be authored._
 ## Troubleshooting
 
 _Content to be authored._
+
+## 3D moment
+
+Ship a 3D feature that loads only when needed and never blocks the 2D experience.
 
 ## Challenge extensions
 

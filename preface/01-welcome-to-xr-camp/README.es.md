@@ -1,14 +1,14 @@
-# Welcome to XR Camp
+# Bienvenida a XR Camp
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `preface` · **Lección:** `welcome-to-xr-camp-01` · **Tiempo estimado:** 120 minutos
+**Curso:** `preface` · **Lección:** `welcome-to-xr-camp-01` · **Tiempo:** unas 2 horas · 3 sesiones de 45 minutos · 1 semana con 4 sesiones por semana
 
 ---
 
-> Create a learner profile, choose goals, and complete a personal learning plan.
+> Construye tu primer mundo 3D en tu primera hora y luego haz un plan de estudio que encaje en tu vida.
 
 ## Objetivos de aprendizaje
 
@@ -30,9 +30,14 @@ _Contenido pendiente de redacción._
 
 ```text
 01-welcome-to-xr-camp/
-├── README.md
-├── challenges/     # foundation · creative · explorer
-├── tests/          # self-review checklist
+├── README.md            # This guide
+├── README.es.md         # Spanish
+├── README.zh-Hans.md    # Simplified Chinese
+├── project.json         # Metadata used by xrcamp.dev
+├── starter/             # Begin here: a 3D world with 6 TODOs
+├── completed/           # Reference solution: open this last
+├── challenges/          # Three optional extensions
+├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
 ```

@@ -2,6 +2,7 @@
   "id": "imm-02-xr-input-and-interaction",
   "courseId": "immersive-developer",
   "lessonId": "xr-input-and-interaction-02",
+  "status": "draft",
   "phase": 4,
   "title": {
     "en": "XR Input and Interaction",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
+  "schedule": {
+    "sessions": 16,
+    "sessionMinutes": 45
+  },
   "difficulty": "advanced",
   "technologies": [
     "WebXR"
@@ -28,6 +33,13 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort",
+    "xr-input-alternatives",
+    "xr-seated-mode"
   ]
 }

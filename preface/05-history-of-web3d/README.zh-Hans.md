@@ -1,14 +1,14 @@
-# History of Web3D
+# Web3D 发展史
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**课程:** `preface` · **课时:** `history-of-web3d-05` · **预计时长:** 360 分钟
+**课程:** `preface` · **课时:** `history-of-web3d-05` · **时长:** 约 6 小时 · 8 次学习，每次 45 分钟 · 每周 4 次，约 2 周
 
 ---
 
-> Create a Web3D technology comparison lab containing small examples and a standards timeline.
+> 创建一个 Web3D 技术对比实验室，包含小型示例和一条标准发展时间线。
 
 ## 学习目标
 

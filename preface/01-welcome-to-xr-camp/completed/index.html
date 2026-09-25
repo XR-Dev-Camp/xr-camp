@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A first 3D world built in the first hour of XR Camp.">
+  <title>Ana's first 3D world - XR Camp reference solution</title>
+
+  <!--
+    A-Frame turns HTML-like tags such as <a-box> into a 3D scene.
+    The version is pinned (1.8.0) so this page keeps working exactly as written.
+    See versions.json at the root of the repository.
+  -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+
+  <style>
+    :root {
+      --text: #1b1b1f;
+      --background: #fdfcf8;
+      --accent: #5b2a86;
+      --focus: #d62f6b;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      line-height: 1.5;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* "embedded" lets the scene sit inside the page instead of covering it. */
+    a-scene {
+      display: block;
+      width: 100%;
+      height: min(70vh, 32rem);
+    }
+
+    button {
+      font: inherit;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--accent);
+      border-radius: 0.5rem;
+      color: #fff;
+      background: var(--accent);
+      cursor: pointer;
+    }
+
+    button:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Ana's first 3D world</h1>
+
+    <section aria-labelledby="world-heading">
+      <h2 id="world-heading">The world</h2>
+
+      <!--
+        The description is for everyone who cannot see the scene:
+        screen-reader users, and anyone whose device cannot show 3D.
+        Whenever the scene changes, this text must change too.
+      -->
+      <p id="scene-description">
+        A small garden under a pale pink evening sky. On the green grass stand
+        a purple box, a golden cylinder, and a teal cone. A white moon floats
+        above them, rising and sinking gently.
+      </p>
+
+      <p>
+        Look around by dragging with a mouse or a finger. Move with the
+        W, A, S, and D keys or the arrow keys.
+      </p>
+
+      <p>
+        <button id="motion-toggle" type="button" aria-pressed="false">Pause animation</button>
+      </p>
+
+      <a-scene embedded>
+        <a-sky color="#f6d6e0"></a-sky>
+        <a-plane rotation="-90 0 0" width="100" height="100" color="#7cbf6e"></a-plane>
+
+        <a-box position="-1.5 0.5 -4" color="#5b2a86"></a-box>
+        <a-cylinder position="0 0.75 -5" radius="0.5" height="1.5" color="#e0a526"></a-cylinder>
+        <a-cone position="1.5 0.6 -4" radius-bottom="0.6" height="1.2" color="#1f8a8a"></a-cone>
+
+        <a-sphere id="moon" position="0 2.5 -5" radius="0.5" color="#ffffff"
+                  animation="property: position; to: 0 3 -5; dir: alternate; loop: true; dur: 3000; easing: easeInOutSine"></a-sphere>
+      </a-scene>
+    </section>
+  </main>
+
+  <script>
+    // Motion can make some people feel unwell. Respect the system setting,
+    // and give everyone a button to stop it.
+    const moon = document.querySelector('#moon');
+    const toggle = document.querySelector('#motion-toggle');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // aria-pressed tells screen readers whether "Pause animation" is on,
+    // so the button's label stays the same.
+    function setPaused(paused) {
+      moon.setAttribute('animation', 'enabled', !paused);
+      toggle.setAttribute('aria-pressed', String(paused));
+    }
+
+    toggle.addEventListener('click', () => {
+      setPaused(toggle.getAttribute('aria-pressed') !== 'true');
+    });
+
+    if (moon.hasLoaded) setPaused(prefersReducedMotion);
+    else moon.addEventListener('loaded', () => setPaused(prefersReducedMotion));
+  </script>
+</body>
+</html>

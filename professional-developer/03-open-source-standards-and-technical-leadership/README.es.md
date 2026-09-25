@@ -4,7 +4,7 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
-**Curso:** `professional-developer` · **Lección:** `open-source-standards-and-technical-leadership-03` · **Tiempo estimado:** 720 minutos
+**Curso:** `professional-developer` · **Lección:** `open-source-standards-and-technical-leadership-03` · **Tiempo:** unas 12 horas · 16 sesiones de 45 minutos · unas 4 semanas con 4 sesiones por semana
 
 ---
 

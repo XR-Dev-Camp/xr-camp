@@ -2,7 +2,7 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-**Course:** `web-developer` · **Lesson:** `html-foundations-01` · **Estimated time:** 720 minutes (10–14 hours)
+**Course:** `web-developer` · **Lesson:** `html-foundations-01` · **Time:** about 12 hours · 16 sessions of 45 minutes · about 4 weeks at 4 sessions a week
 
 > Build an accessible personal or community information website.
 
@@ -75,6 +75,29 @@ Keep both windows visible. Every time you save in the editor, reload the browser
 ## Walkthrough
 
 The starter contains eleven numbered `TODO` comments. Work through them in order; each builds on the last.
+
+### Plan your sessions
+
+This project is about 16 sessions of 45 minutes. Four sessions a week takes about four weeks. Every session ends with something you can see in the browser, so stopping at the end of any row is safe. If you miss a week, restart at the beginning of your last session.
+
+| Session | What you do | You finish with |
+| --- | --- | --- |
+| 1 | Read this guide and complete **Setup** | The starter open in your editor and browser |
+| 2 | Steps 1–2: title, description, skip link | A named tab and a working skip link |
+| 3 | Steps 3–4: header and navigation | A page heading and a navigation list |
+| 4 | Step 5: sections and headings | In-page links that jump to each section |
+| 5 | Step 6: write your text | Real paragraphs about your community |
+| 6 | Step 6: images and alt text | An image with alt text you have read aloud |
+| 7 | Step 7: the table | A table a screen reader can explain |
+| 8 | Step 8: lists | Programmes or services as proper lists |
+| 9 | Step 8: media and captions | A video or audio clip with captions |
+| 10 | Steps 9–10: contact details and footer | A complete page, top to bottom |
+| 11 | Step 11: validate | Zero validator errors |
+| 12 | Read **Key code explained** and **Accessibility requirements** | Notes in your learner journal |
+| 13 | Work through [`tests/checklist.md`](tests/checklist.md) | Every item ticked |
+| 14 | One challenge extension | A second page or a personal touch |
+| 15 | The **3D moment** | A 3D world inside your page |
+| 16 | **Submitting your work** and your reflection | Your link on xrcamp.dev |
 
 ### Step 1 — Describe the page (TODO 1–2)
 
@@ -236,6 +259,24 @@ There is no JavaScript and no CSS here, so your page is already fast. Two habits
 **My video does not play.** Browsers support different formats; MP4 with H.264 is the safest. If the fallback text appears instead, the file is missing or the path is wrong.
 
 **The validator reports errors I do not understand.** Fix the first error and revalidate. One unclosed tag often produces a cascade of ten errors that all vanish together.
+
+## 3D moment
+
+In **Welcome to XR Camp** you built a 3D world in your first hour. Now put it inside your page.
+
+1. Copy that world's `index.html` into a folder called `world/`, next to this project's `index.html`.
+2. Add it inside one of your sections:
+
+```html
+<figure>
+  <iframe src="world/index.html"
+          title="My first 3D world: a garden with three shapes"
+          width="800" height="450" loading="lazy"></iframe>
+  <figcaption>My first 3D world. Drag or use the arrow keys to look around.</figcaption>
+</figure>
+```
+
+The `title` on the `<iframe>` is what a screen reader announces, just like alt text on an image. The `<figcaption>` tells everyone how to use it. Set `width` and `height` for the same reason you set them on images: the page does not jump while the world loads.
 
 ## Challenge extensions
 

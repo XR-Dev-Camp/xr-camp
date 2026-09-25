@@ -2,6 +2,7 @@
   "id": "fe-09-production-frontend-application",
   "courseId": "frontend-engineer",
   "lessonId": "production-frontend-application-09",
+  "status": "draft",
   "phase": 2,
   "title": {
     "en": "Phase 2 Capstone - Production Frontend Application",
@@ -14,6 +15,10 @@
     "zh-Hans": ""
   },
   "estimatedMinutes": 1080,
+  "schedule": {
+    "sessions": 24,
+    "sessionMinutes": 45
+  },
   "difficulty": "intermediate",
   "technologies": [
     "HTML"
@@ -22,6 +27,11 @@
   "starterPath": "./starter",
   "completedPath": "./completed",
   "demoPath": "./completed/index.html",
+  "threeDMoment": {
+    "en": "Ship a 3D feature that loads only when needed and never blocks the 2D experience.",
+    "es-419": "",
+    "zh-Hans": ""
+  },
   "accessibilityChecks": [
     "document-language",
     "heading-order",
