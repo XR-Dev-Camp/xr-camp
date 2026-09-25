@@ -23,14 +23,44 @@ export const STRINGS = {
     ctaRepo: 'All lessons on GitHub',
     enterVR: 'Step inside in VR',
     enterAR: 'Step inside in AR',
-    heroNote: 'The world behind this text is built with the same tools you will learn here: HTML, A-Frame, and WebXR.',
 
-    missionTitle: 'Free. For everyone. Built for women.',
+    nav: [['mission', 'Mission'], ['about', 'About'], ['program', 'Program'], ['why', 'Why'], ['phases', 'Phases'], ['contact', 'Contact']],
+
+    missionTitle: 'Our mission',
     mission: [
-      'XR Camp is completely free. There are no fees, no paywalls, and no accounts.',
-      'It is built first for women in Latin America and China who want to become web, 3D, and immersive developers, including women who have never written code. Lessons are written in English, Spanish, and Simplified Chinese.',
+      'XR Camp is an online school that gives women the opportunity to become web designers and developers, with a focus on the immersive web: 3D, virtual reality, and augmented reality.',
+      'It is built first for women in Latin America and China, including women who have never written code. Lessons are written in English, Spanish, and Simplified Chinese.',
+    ],
+
+    aboutTitle: 'Free, for everyone',
+    about: [
+      'XR Camp is completely free. There are no fees, no paywalls, and no accounts. Every lesson, starter file, and solution is in one public repository on GitHub.',
       'It is created by women experts and by male allies committed to women’s empowerment.',
     ],
+
+    programTitle: 'Program',
+    programIntro: 'Learn from women experts and male allies from around the world, one 45-minute session at a time.',
+    program: [
+      ['Web', 'Frontend design and development: HTML, CSS, and JavaScript.'],
+      ['Web 3D', 'Design and development in 3D: A-Frame, three.js, and X3D.'],
+      ['XR: VR and AR', 'Virtual and augmented reality in the browser, with WebXR.'],
+      ['Community', 'Community will blossom soon.'],
+    ],
+    alt: {
+      hero: 'Illustration of a woman wearing a VR headset, reaching into floating screens.',
+      mission: 'Illustration of a woman working at a laptop at her desk.',
+      about: 'A graduate raising her diploma and cap at sunset.',
+      program: [
+        'Illustration of a computer screen reading “Web Design & Development”, surrounded by icons.',
+        'Illustration of people building a large 3D web page.',
+        'Diagram of XR as the overlap of VR, AR, and MR.',
+        'Illustration of a row of women in profile among flowers.',
+      ],
+    },
+    communityCredit: 'Illustration: “Women’s Day” by Iryna Korshak',
+
+    thresholdTitle: 'Now, step into the web you will build.',
+    threshold: 'Keep scrolling. Everything below is built in 3D, with the tools you will learn here: HTML, A-Frame, and WebXR.',
 
     firstHourTitle: 'A 3D world in your first hour',
     firstHour: 'You do not start with theory. In your first lesson you open a file, change a few words, and a 3D garden appears in your browser with your name on it. The garden at the start of the thread behind this text is a grown-up version of that first world.',
@@ -69,7 +99,7 @@ export const STRINGS = {
     contribute: 'Contribute on GitHub',
 
     sceneTitle: 'About the 3D scene',
-    scene: 'Behind the text is a night sky with a glowing thread running through it. Along the thread float eight small worlds, one for each phase: a garden of simple shapes, a floating web page, a cluster of connected blocks, a polished knot, a glowing portal, orbs circling each other, a tower, and a golden star. As you scroll, the view travels along the thread from one world to the next. In a VR or AR headset, you can stand among them and travel from world to world.',
+    scene: 'The page begins flat, in daylight. As you scroll past the Why section, it turns to night, and the four program images lift off the page and fly into a 3D scene. Behind the text is a night sky with a glowing thread running through it. Along the thread float eight small worlds, one for each phase: a garden of simple shapes, a floating web page, a cluster of connected blocks, a polished knot, a glowing portal, orbs circling each other, a tower, and a golden star. As you scroll, the view travels along the thread from one world to the next. In a VR or AR headset, you can stand among them and travel from world to world.',
     xrHint: 'Pinch or pull the trigger to travel to the next world',
     footer: 'XR Camp. Lessons are free under CC BY-NC-SA 4.0. This site is built with HTML, CSS, JavaScript, A-Frame, and WebXR: all things you will learn here.',
 
@@ -105,14 +135,44 @@ export const STRINGS = {
     ctaRepo: 'Todas las lecciones en GitHub',
     enterVR: 'Entra en VR',
     enterAR: 'Entra en AR',
-    heroNote: 'El mundo detrás de este texto está hecho con las mismas herramientas que aprenderás aquí: HTML, A-Frame y WebXR.',
 
-    missionTitle: 'Gratis. Para todo el mundo. Pensada para mujeres.',
+    nav: [['mission', 'Misión'], ['about', 'Acerca de'], ['program', 'Programa'], ['why', 'Por qué'], ['phases', 'Fases'], ['contact', 'Contacto']],
+
+    missionTitle: 'Nuestra misión',
     mission: [
-      'XR Camp es completamente gratuita. No hay cuotas, ni muros de pago, ni cuentas.',
-      'Está pensada ante todo para mujeres de América Latina y China que quieren ser desarrolladoras web, 3D e inmersivas, incluidas las que nunca han escrito código. Las lecciones están en inglés, español y chino simplificado.',
+      'XR Camp es una escuela en línea que da a las mujeres la oportunidad de ser diseñadoras y desarrolladoras web, con un enfoque en la web inmersiva: 3D, realidad virtual y realidad aumentada.',
+      'Está pensada ante todo para mujeres de América Latina y China, incluidas las que nunca han escrito código. Las lecciones están en inglés, español y chino simplificado.',
+    ],
+
+    aboutTitle: 'Gratis, para todo el mundo',
+    about: [
+      'XR Camp es completamente gratuita. No hay cuotas, ni muros de pago, ni cuentas. Cada lección, archivo inicial y solución está en un repositorio público en GitHub.',
       'La crean mujeres expertas y hombres aliados comprometidos con el empoderamiento de las mujeres.',
     ],
+
+    programTitle: 'Programa',
+    programIntro: 'Aprende con mujeres expertas y hombres aliados de todo el mundo, una sesión de 45 minutos a la vez.',
+    program: [
+      ['Web', 'Diseño y desarrollo frontend: HTML, CSS y JavaScript.'],
+      ['Web 3D', 'Diseño y desarrollo en 3D: A-Frame, three.js y X3D.'],
+      ['XR: VR y AR', 'Realidad virtual y aumentada en el navegador, con WebXR.'],
+      ['Comunidad', 'La comunidad florecerá pronto.'],
+    ],
+    alt: {
+      hero: 'Ilustración de una mujer con un visor de realidad virtual, alcanzando pantallas flotantes.',
+      mission: 'Ilustración de una mujer trabajando con su portátil en su escritorio.',
+      about: 'Una graduada levanta su diploma y su birrete al atardecer.',
+      program: [
+        'Ilustración de una pantalla con el texto «Web Design & Development», rodeada de iconos.',
+        'Ilustración de personas construyendo una gran página web en 3D.',
+        'Diagrama de XR como la intersección de VR, AR y MR.',
+        'Ilustración de una fila de mujeres de perfil entre flores.',
+      ],
+    },
+    communityCredit: 'Ilustración: «Women’s Day», de Iryna Korshak',
+
+    thresholdTitle: 'Ahora, entra en la web que vas a construir.',
+    threshold: 'Sigue desplazándote. Todo lo que viene está hecho en 3D, con las herramientas que aprenderás aquí: HTML, A-Frame y WebXR.',
 
     firstHourTitle: 'Un mundo 3D en tu primera hora',
     firstHour: 'No empiezas con teoría. En tu primera lección abres un archivo, cambias unas palabras y aparece en tu navegador un jardín 3D con tu nombre. El jardín al comienzo del hilo, detrás de este texto, es una versión más grande de ese primer mundo.',
@@ -151,7 +211,7 @@ export const STRINGS = {
     contribute: 'Contribuye en GitHub',
 
     sceneTitle: 'Sobre la escena 3D',
-    scene: 'Detrás del texto hay un cielo nocturno atravesado por un hilo luminoso. A lo largo del hilo flotan ocho pequeños mundos, uno por fase: un jardín de figuras sencillas, una página web flotante, un grupo de bloques conectados, un nudo pulido, un portal brillante, esferas que giran unas alrededor de otras, una torre y una estrella dorada. Al desplazarte, la vista recorre el hilo de un mundo al siguiente. Con un visor de VR o AR, puedes estar entre ellos y viajar de mundo en mundo.',
+    scene: 'La página empieza plana, a la luz del día. Al pasar la sección Por qué, se hace de noche y las cuatro imágenes del programa se despegan de la página y vuelan hacia una escena 3D. Detrás del texto hay un cielo nocturno atravesado por un hilo luminoso. A lo largo del hilo flotan ocho pequeños mundos, uno por fase: un jardín de figuras sencillas, una página web flotante, un grupo de bloques conectados, un nudo pulido, un portal brillante, esferas que giran unas alrededor de otras, una torre y una estrella dorada. Al desplazarte, la vista recorre el hilo de un mundo al siguiente. Con un visor de VR o AR, puedes estar entre ellos y viajar de mundo en mundo.',
     xrHint: 'Pellizca o pulsa el gatillo para viajar al siguiente mundo',
     footer: 'XR Camp. Las lecciones son gratuitas bajo CC BY-NC-SA 4.0. Este sitio está hecho con HTML, CSS, JavaScript, A-Frame y WebXR: todo lo que aprenderás aquí.',
 
@@ -187,14 +247,44 @@ export const STRINGS = {
     ctaRepo: '在 GitHub 上查看全部课程',
     enterVR: '进入 VR',
     enterAR: '进入 AR',
-    heroNote: '这段文字背后的世界，正是用你将在这里学到的工具构建的：HTML、A-Frame 和 WebXR。',
 
-    missionTitle: '免费。面向所有人。为女性而建。',
+    nav: [['mission', '使命'], ['about', '关于'], ['program', '课程'], ['why', '初心'], ['phases', '阶段'], ['contact', '联系']],
+
+    missionTitle: '我们的使命',
     mission: [
-      'XR Camp 完全免费。没有费用，没有付费墙，也不需要注册账户。',
-      '它首先为拉丁美洲和中国希望成为网页、3D 和沉浸式开发者的女性而建，包括从未写过代码的女性。课程提供英语、西班牙语和简体中文版本。',
+      'XR Camp 是一所在线学校，让女性有机会成为网页设计师和开发者，并专注于沉浸式网络：3D、虚拟现实和增强现实。',
+      '它首先为拉丁美洲和中国的女性而建，包括从未写过代码的女性。课程提供英语、西班牙语和简体中文版本。',
+    ],
+
+    aboutTitle: '免费，面向所有人',
+    about: [
+      'XR Camp 完全免费。没有费用，没有付费墙，也不需要注册账户。所有课程、起始文件和参考答案都在 GitHub 上的一个公开仓库里。',
       '课程由女性专家以及致力于女性赋权的男性支持者共同创作。',
     ],
+
+    programTitle: '课程',
+    programIntro: '跟随来自世界各地的女性专家和男性支持者学习，每次 45 分钟。',
+    program: [
+      ['网页', '前端设计与开发：HTML、CSS 和 JavaScript。'],
+      ['Web 3D', '3D 设计与开发：A-Frame、three.js 和 X3D。'],
+      ['XR：VR 与 AR', '在浏览器中使用 WebXR 实现虚拟现实和增强现实。'],
+      ['社区', '社区即将绽放。'],
+    ],
+    alt: {
+      hero: '插画：一位戴着 VR 头显的女性，伸手触碰漂浮的屏幕。',
+      mission: '插画：一位女性在书桌前用笔记本电脑工作。',
+      about: '一位毕业生在夕阳下举起毕业证书和学位帽。',
+      program: [
+        '插画：一块写着 “Web Design & Development” 的屏幕，周围环绕着图标。',
+        '插画：一群人正在搭建一个巨大的 3D 网页。',
+        '示意图：XR 是 VR、AR 和 MR 的交集。',
+        '插画：一排侧身站在花丛中的女性。',
+      ],
+    },
+    communityCredit: '插画：Iryna Korshak 的《Women’s Day》',
+
+    thresholdTitle: '现在，走进你将构建的网络。',
+    threshold: '继续向下滚动。接下来的一切都是用 3D 构建的，使用的正是你将在这里学到的工具：HTML、A-Frame 和 WebXR。',
 
     firstHourTitle: '第一个小时，就有一个 3D 世界',
     firstHour: '你不会从理论开始。在第一课中，你打开一个文件，改几个字，浏览器里就会出现一座写着你名字的 3D 花园。这段文字背后那条光线起点的花园，就是那个第一个世界的“长大版”。',
@@ -233,7 +323,7 @@ export const STRINGS = {
     contribute: '在 GitHub 上参与贡献',
 
     sceneTitle: '关于 3D 场景',
-    scene: '文字背后是一片夜空，一条发光的线贯穿其中。沿着这条线漂浮着八个小世界，每个阶段一个：一座由简单形状组成的花园、一张漂浮的网页、一组相互连接的方块、一个光滑的绳结、一道发光的传送门、彼此环绕的球体、一座塔和一颗金色的星星。当你滚动页面时，视角会沿着这条线从一个世界移动到下一个世界。戴上 VR 或 AR 头显，你可以站在它们之间，从一个世界前往另一个世界。',
+    scene: '页面一开始是平面的，处于白天。当你滚动经过“初心”部分时，页面变成夜晚，四张课程图片从页面上飞起，飞进一个 3D 场景。文字背后是一片夜空，一条发光的线贯穿其中。沿着这条线漂浮着八个小世界，每个阶段一个：一座由简单形状组成的花园、一张漂浮的网页、一组相互连接的方块、一个光滑的绳结、一道发光的传送门、彼此环绕的球体、一座塔和一颗金色的星星。当你滚动页面时，视角会沿着这条线从一个世界移动到下一个世界。戴上 VR 或 AR 头显，你可以站在它们之间，从一个世界前往另一个世界。',
     xrHint: '捏合手指或扣动扳机，前往下一个世界',
     footer: 'XR Camp。课程依据 CC BY-NC-SA 4.0 免费提供。本网站使用 HTML、CSS、JavaScript、A-Frame 和 WebXR 构建——这些你都会在这里学到。',
 

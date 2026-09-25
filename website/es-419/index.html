@@ -8,6 +8,7 @@
   <meta name="theme-color" content="#0d0820">
   <meta property="og:title" content="XR Camp: construye la web en la que puedes entrar">
   <meta property="og:description" content="Una escuela gratuita para la web inmersiva. Aprende a crear sitios web, mundos 3D y experiencias de realidad virtual y aumentada que funcionan en el navegador. Pensada para mujeres de América Latina y China, gratuita para todo el mundo.">
+  <meta property="og:image" content="https://xrcamp.dev/assets/img/code_6.jpg">
   <link rel="alternate" hreflang="en" href="https://xrcamp.dev/">
   <link rel="alternate" hreflang="es-419" href="https://xrcamp.dev/es-419/">
   <link rel="alternate" hreflang="zh-Hans" href="https://xrcamp.dev/zh-hans/">
@@ -18,30 +19,45 @@
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- The 3D scene is drawn here, behind the page. It is decorative: every
-       word it illustrates is also in the page, and it can be switched off. -->
+  <!-- Behind the page: the 3D scene, and in front of it a daylight backdrop
+       for the 2D half. As you scroll through the threshold, the daylight
+       fades and the scene appears. The scene is decorative: every word it
+       illustrates is also in the page, and it can be switched off. -->
   <div id="scene-layer" aria-hidden="true"></div>
-  <script type="application/json" id="scene-data">{"lang":"es","labels":["0 · Bienvenida al futuro","1 · Conviértete en desarrolladora web","2 · Conviértete en ingeniera frontend","3 · Conviértete en desarrolladora Web3D","4 · Conviértete en desarrolladora inmersiva","5 · Conviértete en desarrolladora espacial full-stack","6 · Conviértete en desarrolladora profesional","7 · Proyecto final profesional"],"xrHint":"Pellizca o pulsa el gatillo para viajar al siguiente mundo"}</script>
+  <div id="day" aria-hidden="true"></div>
+  <script type="application/json" id="scene-data">{"lang":"es","labels":["0 · Bienvenida al futuro","1 · Conviértete en desarrolladora web","2 · Conviértete en ingeniera frontend","3 · Conviértete en desarrolladora Web3D","4 · Conviértete en desarrolladora inmersiva","5 · Conviértete en desarrolladora espacial full-stack","6 · Conviértete en desarrolladora profesional","7 · Proyecto final profesional"],"xrHint":"Pellizca o pulsa el gatillo para viajar al siguiente mundo","liftImages":["../assets/img/web-dev.jpg","../assets/img/web3d-dev.jpg","../assets/img/xr-dev.jpg","../assets/img/community.jpg"]}</script>
 
   <header class="site-header">
-    <a class="brand" href="../es-419/index.html">XR Camp</a>
-    <nav aria-label="Ajustes del sitio" class="controls">
+    <a class="brand" href="#home">XR Camp</a>
+    <nav aria-label="XR Camp" class="site-nav">
+      <ul>
+          <li><a href="#mission">Misión</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#program">Programa</a></li>
+          <li><a href="#why">Por qué</a></li>
+          <li><a href="#phases">Fases</a></li>
+          <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="controls" role="group" aria-label="Ajustes del sitio">
       <button type="button" id="toggle-3d" aria-pressed="true" hidden>Escena 3D</button>
       <button type="button" id="toggle-motion" aria-pressed="false" hidden>Pausar movimiento</button>
       <details class="languages">
         <summary>Idioma</summary>
         <ul>
-          <li><a href="../index.html" lang="en" hreflang="en">English</a></li>
-          <li><a href="../es-419/index.html" aria-current="page" lang="es-419">Español</a></li>
-          <li><a href="../zh-hans/index.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></li>
+            <li><a href="../index.html" lang="en" hreflang="en">English</a></li>
+            <li><a href="../es-419/index.html" aria-current="page" lang="es-419">Español</a></li>
+            <li><a href="../zh-hans/index.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></li>
         </ul>
       </details>
-    </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero" data-station="overview" aria-labelledby="hero-title">
-      <div class="panel panel-hero">
+    <!-- 2D ---------------------------------------------------------------->
+
+    <section id="home" class="flat hero-2d" data-station="flat" aria-labelledby="hero-title">
+      <div>
         <p class="eyebrow">XR Camp · Una escuela gratuita para la web inmersiva</p>
         <h1 id="hero-title">Construye la web en la que puedes entrar.</h1>
         <p class="lead">Aprende a crear sitios web, mundos 3D y experiencias de realidad virtual y aumentada que funcionan en el navegador. Gratis para todo el mundo, desde tu primera línea de código.</p>
@@ -49,24 +65,90 @@
           <a class="button primary" href="https://github.com/XR-Dev-Camp/xr-camp/blob/main/preface/01-welcome-to-xr-camp/README.es.md">Empieza la primera lección</a>
           <a class="button" href="https://github.com/XR-Dev-Camp/xr-camp">Todas las lecciones en GitHub</a>
         </p>
-        <p class="actions xr-actions">
-          <button type="button" class="button xr" id="enter-vr" hidden>Entra en VR</button>
-          <button type="button" class="button xr" id="enter-ar" hidden>Entra en AR</button>
-        </p>
-        <p class="note">El mundo detrás de este texto está hecho con las mismas herramientas que aprenderás aquí: HTML, A-Frame y WebXR.</p>
+      </div>
+      <img src="../assets/img/code_6.jpg" alt="Ilustración de una mujer con un visor de realidad virtual, alcanzando pantallas flotantes." width="960" height="693">
+    </section>
+
+    <section id="mission" class="flat split" data-station="flat" aria-labelledby="mission-title">
+      <img src="../assets/img/code_1.jpg" alt="Ilustración de una mujer trabajando con su portátil en su escritorio." width="960" height="671" loading="lazy">
+      <div>
+        <h2 id="mission-title">Nuestra misión</h2>
+        <p>XR Camp es una escuela en línea que da a las mujeres la oportunidad de ser diseñadoras y desarrolladoras web, con un enfoque en la web inmersiva: 3D, realidad virtual y realidad aumentada.</p>
+        <p>Está pensada ante todo para mujeres de América Latina y China, incluidas las que nunca han escrito código. Las lecciones están en inglés, español y chino simplificado.</p>
       </div>
     </section>
 
-    <section data-station="overview" aria-labelledby="mission-title">
-      <div class="panel">
-        <h2 id="mission-title">Gratis. Para todo el mundo. Pensada para mujeres.</h2>
-        <p>XR Camp es completamente gratuita. No hay cuotas, ni muros de pago, ni cuentas.</p>
-        <p>Está pensada ante todo para mujeres de América Latina y China que quieren ser desarrolladoras web, 3D e inmersivas, incluidas las que nunca han escrito código. Las lecciones están en inglés, español y chino simplificado.</p>
+    <section id="about" class="flat split reverse" data-station="flat" aria-labelledby="about-title">
+      <img src="../assets/img/code_7.jpg" alt="Una graduada levanta su diploma y su birrete al atardecer." width="960" height="533" loading="lazy">
+      <div>
+        <h2 id="about-title">Gratis, para todo el mundo</h2>
+        <p>XR Camp es completamente gratuita. No hay cuotas, ni muros de pago, ni cuentas. Cada lección, archivo inicial y solución está en un repositorio público en GitHub.</p>
         <p>La crean mujeres expertas y hombres aliados comprometidos con el empoderamiento de las mujeres.</p>
       </div>
     </section>
 
-    <section data-station="0" aria-labelledby="first-hour-title">
+    <section id="program" class="flat" data-station="flat" aria-labelledby="program-title">
+      <h2 id="program-title">Programa</h2>
+      <p>Aprende con mujeres expertas y hombres aliados de todo el mundo, una sesión de 45 minutos a la vez.</p>
+      <ul class="cards">
+          <li class="card">
+            <img src="../assets/img/web-dev.jpg" alt="Ilustración de una pantalla con el texto «Web Design &amp; Development», rodeada de iconos." width="720" height="545" loading="lazy" data-lift="0">
+            <h3>Web</h3>
+            <p>Diseño y desarrollo frontend: HTML, CSS y JavaScript.</p>
+          </li>
+          <li class="card">
+            <img src="../assets/img/web3d-dev.jpg" alt="Ilustración de personas construyendo una gran página web en 3D." width="720" height="545" loading="lazy" data-lift="1">
+            <h3>Web 3D</h3>
+            <p>Diseño y desarrollo en 3D: A-Frame, three.js y X3D.</p>
+          </li>
+          <li class="card">
+            <img src="../assets/img/xr-dev.jpg" alt="Diagrama de XR como la intersección de VR, AR y MR." width="720" height="720" loading="lazy" data-lift="2">
+            <h3>XR: VR y AR</h3>
+            <p>Realidad virtual y aumentada en el navegador, con WebXR.</p>
+          </li>
+          <li class="card">
+            <img src="../assets/img/community.jpg" alt="Ilustración de una fila de mujeres de perfil entre flores." width="720" height="545" loading="lazy" data-lift="3">
+            <h3>Comunidad</h3>
+            <p>La comunidad florecerá pronto.</p>
+            <p class="credit">Ilustración: «Women’s Day», de Iryna Korshak</p>
+          </li>
+      </ul>
+    </section>
+
+    <section id="why" class="flat why-2d" data-station="flat" aria-labelledby="why-title">
+      <h2 id="why-title">Por qué</h2>
+      <div class="why">
+        <img src="../assets/damon.jpg" alt="Damon Hernandez" width="239" height="360" loading="lazy">
+        <div>
+          <p class="name">Damon Hernandez</p>
+          <p class="place">San Francisco, EE. UU. y Helsinki, Finlandia</p>
+          <blockquote>
+            <p>«Sé el cambio que quieres ver». Con eso en mente, y con más de 20 años en las tecnologías web e inmersivas, he dedicado mi carrera a extender su uso por todo el mundo mediante charlas, talleres, eventos, encuentros, hackatones y otras iniciativas comunitarias.</p>
+            <p>En mi empeño por ser un buen aliado de la comunidad, el objetivo de este programa es que cualquier mujer interesada en las tecnologías web e inmersivas consiga sus superpoderes tecnológicos.</p>
+            <p>Y por Sherine.</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- The threshold: scrolling through it folds the page into space. ----->
+
+    <section id="threshold" data-station="fold" aria-labelledby="threshold-title">
+      <div class="threshold-inner">
+        <div class="panel">
+          <h2 id="threshold-title">Ahora, entra en la web que vas a construir.</h2>
+          <p>Sigue desplazándote. Todo lo que viene está hecho en 3D, con las herramientas que aprenderás aquí: HTML, A-Frame y WebXR.</p>
+          <p class="actions xr-actions">
+            <button type="button" class="button xr" id="enter-vr" hidden>Entra en VR</button>
+            <button type="button" class="button xr" id="enter-ar" hidden>Entra en AR</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D ---------------------------------------------------------------->
+
+    <section class="deep" data-station="0" aria-labelledby="first-hour-title">
       <div class="panel">
         <h2 id="first-hour-title">Un mundo 3D en tu primera hora</h2>
         <p>No empiezas con teoría. En tu primera lección abres un archivo, cambias unas palabras y aparece en tu navegador un jardín 3D con tu nombre. El jardín al comienzo del hilo, detrás de este texto, es una versión más grande de ese primer mundo.</p>
@@ -77,7 +159,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="path-title">
+    <section id="phases" class="deep" aria-labelledby="path-title">
       <div class="panel" data-station="0">
         <h2 id="path-title">Ocho fases, de tu primer clic a profesional</h2>
         <p>Cada fase termina con un proyecto real que publicas. Las lecciones se planifican en sesiones de 45 minutos que encajan con el trabajo, los estudios y la familia, y cada fase tiene valor por sí misma.</p>
@@ -166,7 +248,7 @@
       </ol>
     </section>
 
-    <section data-station="end" aria-labelledby="how-title">
+    <section class="deep" data-station="end" aria-labelledby="how-title">
       <div class="panel">
         <h2 id="how-title">Cómo funciona</h2>
         <ul class="how">
@@ -178,30 +260,14 @@
       </div>
     </section>
 
-    <section data-station="end" aria-labelledby="access-title">
+    <section class="deep" data-station="end" aria-labelledby="access-title">
       <div class="panel">
         <h2 id="access-title">Accesible desde el diseño</h2>
         <p>Este sitio funciona con teclado y lector de pantalla, y respeta los ajustes de movimiento de tu dispositivo. Puedes apagar la escena 3D cuando quieras con el interruptor de la parte superior. Todo lo que construyas en XR Camp cumplirá el mismo estándar.</p>
       </div>
     </section>
 
-    <section data-station="end" aria-labelledby="why-title">
-      <div class="panel why">
-        <h2 id="why-title">Por qué</h2>
-        <img src="../assets/damon.jpg" alt="Damon Hernandez" width="239" height="360" loading="lazy">
-        <div>
-          <p class="name">Damon Hernandez</p>
-          <p class="place">San Francisco, EE. UU. y Helsinki, Finlandia</p>
-          <blockquote>
-            <p>«Sé el cambio que quieres ver». Con eso en mente, y con más de 20 años en las tecnologías web e inmersivas, he dedicado mi carrera a extender su uso por todo el mundo mediante charlas, talleres, eventos, encuentros, hackatones y otras iniciativas comunitarias.</p>
-            <p>En mi empeño por ser un buen aliado de la comunidad, el objetivo de este programa es que cualquier mujer interesada en las tecnologías web e inmersivas consiga sus superpoderes tecnológicos.</p>
-            <p>Y por Sherine.</p>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section data-station="end" aria-labelledby="involved-title">
+    <section id="contact" class="deep" data-station="end" aria-labelledby="involved-title">
       <div class="panel">
         <h2 id="involved-title">Participa</h2>
         <p>¿Quieres enseñar, ser mentora o mentor, traducir o escribir una lección? XR Camp la construyen mujeres expertas y hombres aliados, y hay un lugar para ti.</p>
@@ -216,7 +282,7 @@
   <footer class="panel site-footer">
     <details>
       <summary>Sobre la escena 3D</summary>
-      <p id="scene-description">Detrás del texto hay un cielo nocturno atravesado por un hilo luminoso. A lo largo del hilo flotan ocho pequeños mundos, uno por fase: un jardín de figuras sencillas, una página web flotante, un grupo de bloques conectados, un nudo pulido, un portal brillante, esferas que giran unas alrededor de otras, una torre y una estrella dorada. Al desplazarte, la vista recorre el hilo de un mundo al siguiente. Con un visor de VR o AR, puedes estar entre ellos y viajar de mundo en mundo.</p>
+      <p id="scene-description">La página empieza plana, a la luz del día. Al pasar la sección Por qué, se hace de noche y las cuatro imágenes del programa se despegan de la página y vuelan hacia una escena 3D. Detrás del texto hay un cielo nocturno atravesado por un hilo luminoso. A lo largo del hilo flotan ocho pequeños mundos, uno por fase: un jardín de figuras sencillas, una página web flotante, un grupo de bloques conectados, un nudo pulido, un portal brillante, esferas que giran unas alrededor de otras, una torre y una estrella dorada. Al desplazarte, la vista recorre el hilo de un mundo al siguiente. Con un visor de VR o AR, puedes estar entre ellos y viajar de mundo en mundo.</p>
     </details>
     <p>XR Camp. Las lecciones son gratuitas bajo CC BY-NC-SA 4.0. Este sitio está hecho con HTML, CSS, JavaScript, A-Frame y WebXR: todo lo que aprenderás aquí.</p>
     <p><a href="https://github.com/XR-Dev-Camp/xr-camp">github.com/XR-Dev-Camp/xr-camp</a></p>

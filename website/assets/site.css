@@ -17,6 +17,10 @@
   --gold: #ffd166;
   --teal: #5fd4c4;
   --ink: #1a0f2e;
+  --paper: #fdfcf8;
+  --paper-text: #1b1b1f;
+  --paper-muted: #4a4a55;
+  --deep-purple: #5b2a86;
   --radius: 1rem;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
 }
@@ -51,6 +55,19 @@ body {
   position: fixed;
   inset: 0;
   z-index: 0;
+  /* Fully visible by 45% of the fold, so the images can fly in clear night. */
+  opacity: clamp(0, calc(var(--fold, 0) * 2.2), 1);
+}
+
+/* Daylight in front of the night: the 2D half of the site. The threshold
+   sets --fold from 0 to 1 as you scroll through it. */
+#day {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--paper);
+  opacity: clamp(0, calc(1 - var(--fold, 0) * 2.2), 1);
 }
 #scene-layer a-scene { width: 100%; height: 100%; }
 
@@ -77,6 +94,15 @@ a:hover { color: var(--pink); }
   padding: 0.75rem clamp(1rem, 4vw, 2.5rem);
   background: rgb(13 8 32 / 0.8);
   backdrop-filter: blur(8px);
+}
+
+.site-nav ul { display: flex; gap: 0.25rem 1.25rem; margin: 0; padding: 0; list-style: none; }
+.site-nav a { display: inline-block; padding: 0.5rem 0; color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.site-nav a:hover { color: var(--gold); }
+@media (max-width: 60rem) {
+  /* On small screens the menu scrolls sideways rather than hiding items. */
+  .site-nav { order: 3; width: 100%; overflow-x: auto; }
+  .site-nav ul { width: max-content; }
 }
 
 .brand { font-weight: 800; font-size: 1.25rem; color: var(--text); text-decoration: none; letter-spacing: 0.02em; }
@@ -131,8 +157,6 @@ section { padding: 12vh 0; }
   backdrop-filter: blur(6px);
 }
 
-.hero { min-height: 100svh; display: flex; align-items: center; padding-top: 0; }
-.panel-hero { max-width: 40rem; }
 
 .eyebrow { margin: 0; color: var(--gold); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em; }
 
@@ -185,20 +209,19 @@ figcaption { color: var(--muted); font-size: 0.95rem; margin-top: 0.5rem; }
 
 @media (min-width: 60rem) {
   .phase:nth-child(even) { margin-left: auto; }
-  section[data-station="end"] .panel, .why { margin-left: auto; }
+  section[data-station="end"] .panel { margin-left: auto; }
 }
 
 .how { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
 .how p { margin: 0; color: var(--muted); }
 
-.why { display: grid; gap: 1.25rem; max-width: 44rem; }
+.why { display: grid; gap: 1.25rem; max-width: 44rem; align-items: start; }
 .why img { border-radius: var(--radius); width: 8rem; height: auto; }
 .why .name { font-weight: 800; font-size: 1.2rem; margin: 0; }
 .why .place { color: var(--muted); margin: 0 0 1rem; }
 .why blockquote { margin: 0; font-style: italic; }
 @media (min-width: 40rem) {
   .why { grid-template-columns: 8rem 1fr; }
-  .why h2 { grid-column: 1 / -1; }
 }
 
 .site-footer {
@@ -210,3 +233,61 @@ figcaption { color: var(--muted); font-size: 0.95rem; margin-top: 0.5rem; }
   color: var(--muted);
 }
 .site-footer summary { cursor: pointer; color: var(--text); font-weight: 700; }
+
+/* ------------------------------------------------------------------------
+   The 2D half: a flat, light, image-led page.
+   ------------------------------------------------------------------------ */
+
+.flat { color: var(--paper-text); max-width: 72rem; margin: 0 auto; padding: 10vh 0; scroll-margin-top: 5rem; }
+.flat a:not(.button) { color: var(--deep-purple); }
+.flat p { color: var(--paper-muted); }
+.flat h1, .flat h2, .flat h3 { color: var(--paper-text); }
+.flat .eyebrow { color: var(--deep-purple); }
+.flat .lead { color: var(--paper-text); }
+.flat img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+.flat .button { color: var(--paper-text); border-color: var(--deep-purple); }
+.flat .button:hover { color: #fff; background: var(--deep-purple); }
+.flat .button.primary { color: var(--ink); background: var(--pink); border-color: var(--pink); }
+
+.hero-2d { display: grid; gap: 2rem; align-items: center; min-height: calc(100svh - 5rem); padding-top: 4vh; }
+.split { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 56rem) {
+  .hero-2d { grid-template-columns: 1.1fr 1fr; }
+  .split { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .split.reverse > img { order: 2; }
+}
+
+.cards { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.card { background: #fff; border: 1px solid #e6e1ee; border-radius: var(--radius); padding: 1rem; }
+.card img { aspect-ratio: 4 / 3; object-fit: cover; margin-bottom: 1rem; transition: opacity 0.2s; }
+.card h3 { margin-bottom: 0.25rem; }
+.card p { margin: 0; }
+.card .credit { margin-top: 0.5rem; font-size: 0.85rem; }
+
+.why-2d .why { max-width: 48rem; }
+.why-2d blockquote p { color: var(--paper-text); }
+.why-2d .place { color: var(--paper-muted); }
+.why-2d .name { color: var(--paper-text); }
+
+/* ------------------------------------------------------------------------
+   The threshold: a tall section with a panel that stays in view while the
+   page folds from day into the 3D night.
+   ------------------------------------------------------------------------ */
+
+#threshold { height: 240vh; padding: 0; }
+.threshold-inner {
+  position: sticky;
+  top: 22vh;
+  display: flex;
+  justify-content: center;
+  /* Fades out over the last part of the fold, as the 3D sections arrive. */
+  opacity: clamp(0, calc((1 - var(--fold, 0)) * 7), 1);
+}
+.threshold-inner .panel { text-align: center; max-width: 40rem; }
+.threshold-inner .actions { justify-content: center; }
+
+/* ------------------------------------------------------------------------
+   The 3D half keeps the night styles above.
+   ------------------------------------------------------------------------ */
+
+.deep { scroll-margin-top: 5rem; }

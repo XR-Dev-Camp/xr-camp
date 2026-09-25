@@ -76,7 +76,8 @@ jobs:
         run: |
           status=0
           # --no-sandbox: GitHub's Ubuntu runners block Chrome's sandbox.
-          echo '{ "chromeLaunchConfig": { "args": ["--no-sandbox"] }, "timeout": 60000 }' > /tmp/pa11y.json
+          # SwiftShader: runners have no GPU, and 3D lessons need WebGL to load.
+          echo '{ "chromeLaunchConfig": { "args": ["--no-sandbox", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"] }, "timeout": 120000 }' > /tmp/pa11y.json
           for f in $(find . -path '*/completed/index.html' | sort); do
             echo "--- $f"
             npx pa11y --config /tmp/pa11y.json --standard WCAG2AA --reporter cli "file://$PWD/${f#./}" || status=1

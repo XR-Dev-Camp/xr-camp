@@ -8,6 +8,7 @@
   <meta name="theme-color" content="#0d0820">
   <meta property="og:title" content="XR Camp：构建你可以走进去的网络">
   <meta property="og:description" content="一所面向沉浸式网络的免费学校。学习构建在浏览器中运行的网站、3D 世界以及虚拟现实和增强现实体验。为拉丁美洲和中国的女性而建，对所有人免费。">
+  <meta property="og:image" content="https://xrcamp.dev/assets/img/code_6.jpg">
   <link rel="alternate" hreflang="en" href="https://xrcamp.dev/">
   <link rel="alternate" hreflang="es-419" href="https://xrcamp.dev/es-419/">
   <link rel="alternate" hreflang="zh-Hans" href="https://xrcamp.dev/zh-hans/">
@@ -18,30 +19,45 @@
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
 
-  <!-- The 3D scene is drawn here, behind the page. It is decorative: every
-       word it illustrates is also in the page, and it can be switched off. -->
+  <!-- Behind the page: the 3D scene, and in front of it a daylight backdrop
+       for the 2D half. As you scroll through the threshold, the daylight
+       fades and the scene appears. The scene is decorative: every word it
+       illustrates is also in the page, and it can be switched off. -->
   <div id="scene-layer" aria-hidden="true"></div>
-  <script type="application/json" id="scene-data">{"lang":"zh","labels":["0 · 欢迎来到未来","1 · 成为网页开发者","2 · 成为前端工程师","3 · 成为 Web3D 开发者","4 · 成为沉浸式开发者","5 · 成为全栈空间开发者","6 · 成为专业开发者","7 · 专业毕业项目"],"xrHint":"捏合手指或扣动扳机，前往下一个世界"}</script>
+  <div id="day" aria-hidden="true"></div>
+  <script type="application/json" id="scene-data">{"lang":"zh","labels":["0 · 欢迎来到未来","1 · 成为网页开发者","2 · 成为前端工程师","3 · 成为 Web3D 开发者","4 · 成为沉浸式开发者","5 · 成为全栈空间开发者","6 · 成为专业开发者","7 · 专业毕业项目"],"xrHint":"捏合手指或扣动扳机，前往下一个世界","liftImages":["../assets/img/web-dev.jpg","../assets/img/web3d-dev.jpg","../assets/img/xr-dev.jpg","../assets/img/community.jpg"]}</script>
 
   <header class="site-header">
-    <a class="brand" href="../zh-hans/index.html">XR Camp</a>
-    <nav aria-label="网站设置" class="controls">
+    <a class="brand" href="#home">XR Camp</a>
+    <nav aria-label="XR Camp" class="site-nav">
+      <ul>
+          <li><a href="#mission">使命</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#program">课程</a></li>
+          <li><a href="#why">初心</a></li>
+          <li><a href="#phases">阶段</a></li>
+          <li><a href="#contact">联系</a></li>
+      </ul>
+    </nav>
+    <div class="controls" role="group" aria-label="网站设置">
       <button type="button" id="toggle-3d" aria-pressed="true" hidden>3D 场景</button>
       <button type="button" id="toggle-motion" aria-pressed="false" hidden>暂停动画</button>
       <details class="languages">
         <summary>语言</summary>
         <ul>
-          <li><a href="../index.html" lang="en" hreflang="en">English</a></li>
-          <li><a href="../es-419/index.html" lang="es-419" hreflang="es-419">Español</a></li>
-          <li><a href="../zh-hans/index.html" aria-current="page" lang="zh-Hans">简体中文</a></li>
+            <li><a href="../index.html" lang="en" hreflang="en">English</a></li>
+            <li><a href="../es-419/index.html" lang="es-419" hreflang="es-419">Español</a></li>
+            <li><a href="../zh-hans/index.html" aria-current="page" lang="zh-Hans">简体中文</a></li>
         </ul>
       </details>
-    </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero" data-station="overview" aria-labelledby="hero-title">
-      <div class="panel panel-hero">
+    <!-- 2D ---------------------------------------------------------------->
+
+    <section id="home" class="flat hero-2d" data-station="flat" aria-labelledby="hero-title">
+      <div>
         <p class="eyebrow">XR Camp · 一所面向沉浸式网络的免费学校</p>
         <h1 id="hero-title">构建你可以走进去的网络。</h1>
         <p class="lead">学习构建在浏览器中运行的网站、3D 世界以及虚拟现实和增强现实体验。对所有人免费，从你写下的第一行代码开始。</p>
@@ -49,24 +65,90 @@
           <a class="button primary" href="https://github.com/XR-Dev-Camp/xr-camp/blob/main/preface/01-welcome-to-xr-camp/README.zh-Hans.md">开始第一课</a>
           <a class="button" href="https://github.com/XR-Dev-Camp/xr-camp">在 GitHub 上查看全部课程</a>
         </p>
-        <p class="actions xr-actions">
-          <button type="button" class="button xr" id="enter-vr" hidden>进入 VR</button>
-          <button type="button" class="button xr" id="enter-ar" hidden>进入 AR</button>
-        </p>
-        <p class="note">这段文字背后的世界，正是用你将在这里学到的工具构建的：HTML、A-Frame 和 WebXR。</p>
+      </div>
+      <img src="../assets/img/code_6.jpg" alt="插画：一位戴着 VR 头显的女性，伸手触碰漂浮的屏幕。" width="960" height="693">
+    </section>
+
+    <section id="mission" class="flat split" data-station="flat" aria-labelledby="mission-title">
+      <img src="../assets/img/code_1.jpg" alt="插画：一位女性在书桌前用笔记本电脑工作。" width="960" height="671" loading="lazy">
+      <div>
+        <h2 id="mission-title">我们的使命</h2>
+        <p>XR Camp 是一所在线学校，让女性有机会成为网页设计师和开发者，并专注于沉浸式网络：3D、虚拟现实和增强现实。</p>
+        <p>它首先为拉丁美洲和中国的女性而建，包括从未写过代码的女性。课程提供英语、西班牙语和简体中文版本。</p>
       </div>
     </section>
 
-    <section data-station="overview" aria-labelledby="mission-title">
-      <div class="panel">
-        <h2 id="mission-title">免费。面向所有人。为女性而建。</h2>
-        <p>XR Camp 完全免费。没有费用，没有付费墙，也不需要注册账户。</p>
-        <p>它首先为拉丁美洲和中国希望成为网页、3D 和沉浸式开发者的女性而建，包括从未写过代码的女性。课程提供英语、西班牙语和简体中文版本。</p>
+    <section id="about" class="flat split reverse" data-station="flat" aria-labelledby="about-title">
+      <img src="../assets/img/code_7.jpg" alt="一位毕业生在夕阳下举起毕业证书和学位帽。" width="960" height="533" loading="lazy">
+      <div>
+        <h2 id="about-title">免费，面向所有人</h2>
+        <p>XR Camp 完全免费。没有费用，没有付费墙，也不需要注册账户。所有课程、起始文件和参考答案都在 GitHub 上的一个公开仓库里。</p>
         <p>课程由女性专家以及致力于女性赋权的男性支持者共同创作。</p>
       </div>
     </section>
 
-    <section data-station="0" aria-labelledby="first-hour-title">
+    <section id="program" class="flat" data-station="flat" aria-labelledby="program-title">
+      <h2 id="program-title">课程</h2>
+      <p>跟随来自世界各地的女性专家和男性支持者学习，每次 45 分钟。</p>
+      <ul class="cards">
+          <li class="card">
+            <img src="../assets/img/web-dev.jpg" alt="插画：一块写着 “Web Design &amp; Development” 的屏幕，周围环绕着图标。" width="720" height="545" loading="lazy" data-lift="0">
+            <h3>网页</h3>
+            <p>前端设计与开发：HTML、CSS 和 JavaScript。</p>
+          </li>
+          <li class="card">
+            <img src="../assets/img/web3d-dev.jpg" alt="插画：一群人正在搭建一个巨大的 3D 网页。" width="720" height="545" loading="lazy" data-lift="1">
+            <h3>Web 3D</h3>
+            <p>3D 设计与开发：A-Frame、three.js 和 X3D。</p>
+          </li>
+          <li class="card">
+            <img src="../assets/img/xr-dev.jpg" alt="示意图：XR 是 VR、AR 和 MR 的交集。" width="720" height="720" loading="lazy" data-lift="2">
+            <h3>XR：VR 与 AR</h3>
+            <p>在浏览器中使用 WebXR 实现虚拟现实和增强现实。</p>
+          </li>
+          <li class="card">
+            <img src="../assets/img/community.jpg" alt="插画：一排侧身站在花丛中的女性。" width="720" height="545" loading="lazy" data-lift="3">
+            <h3>社区</h3>
+            <p>社区即将绽放。</p>
+            <p class="credit">插画：Iryna Korshak 的《Women’s Day》</p>
+          </li>
+      </ul>
+    </section>
+
+    <section id="why" class="flat why-2d" data-station="flat" aria-labelledby="why-title">
+      <h2 id="why-title">初心</h2>
+      <div class="why">
+        <img src="../assets/damon.jpg" alt="Damon Hernandez" width="239" height="360" loading="lazy">
+        <div>
+          <p class="name">Damon Hernandez</p>
+          <p class="place">美国旧金山 &amp; 芬兰赫尔辛基</p>
+          <blockquote>
+            <p>“成为你希望在世界上看到的改变。”我把这句话放在心上。在沉浸式技术和网络技术领域工作的 20 多年里，我通过演讲、工作坊、活动、聚会、黑客松和其他社区活动，致力于在全球推广这些技术。</p>
+            <p>我一直努力成为社区的好伙伴。这个项目的目标，是让每一位对网络和沉浸式技术感兴趣的女性，都能获得属于她的技术超能力。</p>
+            <p>也献给 Sherine。</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- The threshold: scrolling through it folds the page into space. ----->
+
+    <section id="threshold" data-station="fold" aria-labelledby="threshold-title">
+      <div class="threshold-inner">
+        <div class="panel">
+          <h2 id="threshold-title">现在，走进你将构建的网络。</h2>
+          <p>继续向下滚动。接下来的一切都是用 3D 构建的，使用的正是你将在这里学到的工具：HTML、A-Frame 和 WebXR。</p>
+          <p class="actions xr-actions">
+            <button type="button" class="button xr" id="enter-vr" hidden>进入 VR</button>
+            <button type="button" class="button xr" id="enter-ar" hidden>进入 AR</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D ---------------------------------------------------------------->
+
+    <section class="deep" data-station="0" aria-labelledby="first-hour-title">
       <div class="panel">
         <h2 id="first-hour-title">第一个小时，就有一个 3D 世界</h2>
         <p>你不会从理论开始。在第一课中，你打开一个文件，改几个字，浏览器里就会出现一座写着你名字的 3D 花园。这段文字背后那条光线起点的花园，就是那个第一个世界的“长大版”。</p>
@@ -77,7 +159,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="path-title">
+    <section id="phases" class="deep" aria-labelledby="path-title">
       <div class="panel" data-station="0">
         <h2 id="path-title">八个阶段，从第一次点击到专业开发者</h2>
         <p>每个阶段都以一个你亲手发布的真实项目结束。课程按每次 45 分钟来安排，可以配合工作、学习和家庭生活，而且每个阶段本身都有价值。</p>
@@ -166,7 +248,7 @@
       </ol>
     </section>
 
-    <section data-station="end" aria-labelledby="how-title">
+    <section class="deep" data-station="end" aria-labelledby="how-title">
       <div class="panel">
         <h2 id="how-title">学习方式</h2>
         <ul class="how">
@@ -178,30 +260,14 @@
       </div>
     </section>
 
-    <section data-station="end" aria-labelledby="access-title">
+    <section class="deep" data-station="end" aria-labelledby="access-title">
       <div class="panel">
         <h2 id="access-title">从设计开始就无障碍</h2>
         <p>本网站支持键盘和屏幕阅读器操作，并遵循你设备的动画设置。你可以随时用页面顶部的开关关闭 3D 场景。你在 XR Camp 构建的一切，也都将达到同样的标准。</p>
       </div>
     </section>
 
-    <section data-station="end" aria-labelledby="why-title">
-      <div class="panel why">
-        <h2 id="why-title">初心</h2>
-        <img src="../assets/damon.jpg" alt="Damon Hernandez" width="239" height="360" loading="lazy">
-        <div>
-          <p class="name">Damon Hernandez</p>
-          <p class="place">美国旧金山 &amp; 芬兰赫尔辛基</p>
-          <blockquote>
-            <p>“成为你希望在世界上看到的改变。”我把这句话放在心上。在沉浸式技术和网络技术领域工作的 20 多年里，我通过演讲、工作坊、活动、聚会、黑客松和其他社区活动，致力于在全球推广这些技术。</p>
-            <p>我一直努力成为社区的好伙伴。这个项目的目标，是让每一位对网络和沉浸式技术感兴趣的女性，都能获得属于她的技术超能力。</p>
-            <p>也献给 Sherine。</p>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section data-station="end" aria-labelledby="involved-title">
+    <section id="contact" class="deep" data-station="end" aria-labelledby="involved-title">
       <div class="panel">
         <h2 id="involved-title">加入我们</h2>
         <p>想教课、做导师、翻译或编写课程吗？XR Camp 由女性专家和男性支持者共同建设，这里有你的位置。</p>
@@ -216,7 +282,7 @@
   <footer class="panel site-footer">
     <details>
       <summary>关于 3D 场景</summary>
-      <p id="scene-description">文字背后是一片夜空，一条发光的线贯穿其中。沿着这条线漂浮着八个小世界，每个阶段一个：一座由简单形状组成的花园、一张漂浮的网页、一组相互连接的方块、一个光滑的绳结、一道发光的传送门、彼此环绕的球体、一座塔和一颗金色的星星。当你滚动页面时，视角会沿着这条线从一个世界移动到下一个世界。戴上 VR 或 AR 头显，你可以站在它们之间，从一个世界前往另一个世界。</p>
+      <p id="scene-description">页面一开始是平面的，处于白天。当你滚动经过“初心”部分时，页面变成夜晚，四张课程图片从页面上飞起，飞进一个 3D 场景。文字背后是一片夜空，一条发光的线贯穿其中。沿着这条线漂浮着八个小世界，每个阶段一个：一座由简单形状组成的花园、一张漂浮的网页、一组相互连接的方块、一个光滑的绳结、一道发光的传送门、彼此环绕的球体、一座塔和一颗金色的星星。当你滚动页面时，视角会沿着这条线从一个世界移动到下一个世界。戴上 VR 或 AR 头显，你可以站在它们之间，从一个世界前往另一个世界。</p>
     </details>
     <p>XR Camp。课程依据 CC BY-NC-SA 4.0 免费提供。本网站使用 HTML、CSS、JavaScript、A-Frame 和 WebXR 构建——这些你都会在这里学到。</p>
     <p><a href="https://github.com/XR-Dev-Camp/xr-camp">github.com/XR-Dev-Camp/xr-camp</a></p>

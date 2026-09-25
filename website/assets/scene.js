@@ -7,6 +7,11 @@
      not switched 3D off, A-Frame loads after the page is already usable.
   3. If the device has a headset, "Step inside" buttons appear.
 
+  The page starts as a flat 2D site. Scrolling through the threshold section
+  "folds" it into space: the daylight fades, the night scene appears, and the
+  four program images lift off and fly into their worlds. --fold (0 to 1) on
+  <html> drives the CSS side of that; the 3D side reads state.fold.
+
   Comfort and access rules (docs/en/xr-accessibility.md in the lessons repo):
   - The camera moves only when the visitor scrolls. It never moves on its own.
   - With reduced motion (system setting or the "Pause motion" button), nothing
@@ -29,9 +34,33 @@ const wide = matchMedia('(min-width: 60rem)');
 
 const state = {
   paused: reducedMotion.matches,
-  target: 'overview',
+  target: 'flat',
+  fold: 0,
   xrWorld: 0,
 };
+
+// ---------------------------------------------------------------------------
+// The fold. Runs even without 3D, so the page still turns from day to night.
+// It starts when the threshold is 40% of the way up the screen (the section
+// above has mostly gone) and ends when the threshold's bottom reaches the
+// bottom of the screen.
+
+const threshold = document.getElementById('threshold');
+function updateFold() {
+  const r = threshold.getBoundingClientRect();
+  const start = innerHeight * 0.4;
+  const p = Math.min(1, Math.max(0, (start - r.top) / (r.height - innerHeight + start)));
+  state.fold = p;
+  document.documentElement.style.setProperty('--fold', p.toFixed(3));
+}
+let foldQueued = false;
+addEventListener('scroll', () => {
+  if (foldQueued) return;
+  foldQueued = true;
+  requestAnimationFrame(() => { foldQueued = false; updateFold(); });
+}, { passive: true });
+addEventListener('resize', updateFold);
+updateFold();
 
 const COLORS = {
   night: '#0d0820', lilac: '#c9a7ff', pink: '#ff8fc3', gold: '#ffd166',
@@ -292,6 +321,30 @@ function registerWorld() {
       this.hint.visible = false;
       scene.add(this.hint);
 
+      // The four program images from the 2D page, as panels in space. During
+      // the fold they fly into the worlds they describe: web, Web3D, XR, and
+      // community.
+      const loader = new THREE.TextureLoader();
+      const liftTargets = [1, 3, 4, 5];
+      this.lifts = data.liftImages.map((src, k) => {
+        const texture = loader.load(src, (tex) => {
+          // Crop to 4:3, like the cards on the page.
+          const aspect = tex.image.width / tex.image.height;
+          if (aspect < 4 / 3) { tex.repeat.set(1, aspect / (4 / 3)); tex.offset.set(0, (1 - tex.repeat.y) / 2); }
+        });
+        texture.colorSpace = THREE.SRGBColorSpace;
+        const plane = new THREE.Mesh(
+          new THREE.PlaneGeometry(1.4, 1.05),
+          new THREE.MeshBasicMaterial({ map: texture, transparent: true, opacity: 0, fog: false }),
+        );
+        plane.visible = false;
+        plane.userData.world = liftTargets[k];
+        scene.add(plane);
+        return plane;
+      });
+      this.liftFrom = new THREE.Vector3();
+      this.liftTo = new THREE.Vector3();
+
       this.anim.forEach((f) => f(0));
 
       this.targetPos = new THREE.Vector3();
@@ -312,7 +365,7 @@ function registerWorld() {
     view(name) {
       const pos = new THREE.Vector3();
       const look = new THREE.Vector3();
-      if (name === 'overview') {
+      if (name === 'overview' || name === 'flat' || name === 'fold') {
         // The garden close by, the thread and the other worlds receding behind it.
         pos.set(wide.matches ? -3.5 : 0.5, 2.8, wide.matches ? 8 : 10);
         look.set(wide.matches ? -6.5 : 0.5, wide.matches ? 0.8 : -2.5, -12);
@@ -339,7 +392,10 @@ function registerWorld() {
         this.anim.forEach((f) => f(this.time));
         this.placeBeads(this.time);
       }
-      if (this.el.is('vr-mode') || this.el.is('ar-mode')) return;
+      const inXR = this.el.is('vr-mode') || this.el.is('ar-mode');
+      // Nothing is visible in the 2D half, so draw nothing there.
+      this.el.object3D.visible = inXR || state.fold > 0.001;
+      if (inXR) return;
 
       const { pos, look } = this.view(state.target);
       this.lookHelper.position.copy(pos);
@@ -356,6 +412,37 @@ function registerWorld() {
         this.rig.position.lerp(this.targetPos, k);
         this.rig.quaternion.slerp(this.targetQuat, k);
       }
+
+      this.updateLifts();
+    },
+
+    // The images appear flat in front of you, then fly into their worlds.
+    // With motion paused they stay hidden: the fold is then a simple fade.
+    updateLifts() {
+      const p = state.fold;
+      const show = !state.paused && p > 0.02 && p < 0.999;
+      const ease = (x) => x * x * (3 - 2 * x);
+      this.lifts.forEach((plane, k) => {
+        plane.visible = show;
+        if (!show) return;
+        // Start: a row (or a 2 x 2 grid on a phone) 5 m in front of the camera.
+        const row = wide.matches;
+        // Below the threshold panel, which sits in the upper middle of the screen.
+        this.liftFrom.set(
+          row ? (k - 1.5) * 1.65 : ((k % 2) - 0.5) * 1.55,
+          row ? -1.3 : (0.5 - Math.floor(k / 2)) * 1.25 - 1.9,
+          -5,
+        ).applyQuaternion(this.rig.quaternion).add(this.rig.position);
+        // End: just above the world it belongs to.
+        this.liftTo.copy(this.worlds[plane.userData.world].position).add(new THREE.Vector3(0, 1.9, 0));
+        const travel = ease(Math.min(1, Math.max(0, (p - 0.45) / 0.45)));
+        plane.position.lerpVectors(this.liftFrom, this.liftTo, travel);
+        plane.quaternion.copy(this.rig.quaternion);
+        plane.scale.setScalar(1 - travel * 0.6);
+        const fadeIn = Math.min(1, p / 0.2);
+        const fadeOut = 1 - Math.min(1, Math.max(0, (p - 0.85) / 0.12));
+        plane.material.opacity = fadeIn * fadeOut;
+      });
     },
 
     // In a headset: stand among the worlds, and jump from one to the next.
@@ -365,6 +452,7 @@ function registerWorld() {
       this.el.object3D.fog = ar ? null : this.el.object3D.fog;
       this.stars.visible = !ar;
       this.labels.forEach((l) => { l.visible = true; });
+      this.lifts.forEach((l) => { l.visible = false; });
       this.goToWorld(0);
       this.hint.visible = true;
       const session = this.el.renderer.xr.getSession();
