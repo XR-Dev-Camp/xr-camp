@@ -603,7 +603,7 @@
       "id": "fe-06-progressive-web-applications",
       "courseId": "frontend-engineer",
       "lessonId": "progressive-web-applications-06",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "Progressive Web Applications",
@@ -617,7 +617,11 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "PWA"
+        "JavaScript",
+        "Web App Manifest",
+        "Service Workers",
+        "Cache API",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "frontend-engineer/06-progressive-web-applications"

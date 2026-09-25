@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You are offline - My XR Camp</title>
+  <meta name="theme-color" content="#5b2a86">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- The service worker shows this page when you open a page it has not saved
+       and there is no internet. It needs nothing from the network: its only
+       stylesheet is in the app shell. -->
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>You are offline</h1>
+    <p>This page is not saved on your device, and there is no internet connection right now.</p>
+    <p>These pages are saved, and open without the internet:</p>
+    <ul>
+      <li><a href="./">Study-week weather</a>: the last forecast you loaded, or the sample data.</li>
+      <li><a href="3d-moment.html">The 3D moment</a>: always its description and table, and the 3D scene too once its library has been saved.</li>
+    </ul>
+    <p>When your connection comes back, go back and try again.</p>
+  </main>
+</body>
+</html>

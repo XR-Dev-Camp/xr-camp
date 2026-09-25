@@ -2,7 +2,7 @@
   "id": "fe-06-progressive-web-applications",
   "courseId": "frontend-engineer",
   "lessonId": "progressive-web-applications-06",
-  "status": "draft",
+  "status": "review",
   "phase": 2,
   "title": {
     "en": "Progressive Web Applications",
@@ -21,7 +21,11 @@
   },
   "difficulty": "intermediate",
   "technologies": [
-    "PWA"
+    "JavaScript",
+    "Web App Manifest",
+    "Service Workers",
+    "Cache API",
+    "A-Frame"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -38,6 +42,14 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "focus-order",
+    "status-messages",
+    "keyboard-operable",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

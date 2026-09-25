@@ -3,12 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Progressive Web Applications - XR Camp reference solution</title>
+  <meta name="description" content="A 7-day forecast to help you plan your XR Camp study week. Works offline.">
+  <title>Study-week weather - My XR Camp</title>
+
+  <!-- The web app manifest: the app's name, icons, colours, and how it opens. -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- The colour of the browser's toolbar and the installed app's title bar. -->
+  <meta name="theme-color" content="#5b2a86">
+  <!-- An icon for browsers that read the page, not the manifest. iPhone and
+       iPad use apple-touch-icon for Add to Home Screen. -->
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>My XR Camp</p></header>
+
   <main>
-    <h1>Progressive Web Applications</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Study-week weather</h1>
+
+    <!-- Always on the page, so screen readers announce what is written into
+         it. It is empty, and takes no space, until an update is ready. -->
+    <div class="update-bar">
+      <p id="update-message" role="status"></p>
+      <button type="button" id="update-reload" hidden>Reload</button>
+    </div>
+
+    <p>Walking to a study group or a library this week? Check the forecast, and plan your sessions on the driest days.</p>
+    <noscript><p>This dashboard needs JavaScript to fetch the forecast.</p></noscript>
+
+    <p id="status" role="status" class="visually-hidden"></p>
+
+    <!-- Hidden until main.js has loaded, so it never appears without working. -->
+    <form id="controls" class="panel controls" hidden>
+      <p>
+        <label for="city">City</label><br>
+        <select id="city"></select>
+      </p>
+      <p>
+        <input type="checkbox" id="use-sample">
+        <label for="use-sample">Use sample data (works offline)</label>
+      </p>
+      <p><button type="submit" id="refresh" class="secondary">Refresh</button></p>
+    </form>
+
+    <section aria-labelledby="forecast-heading">
+      <h2 id="forecast-heading">Forecast</h2>
+      <div id="result"></div>
+    </section>
+
+    <p class="source">Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>, under CC BY 4.0.</p>
+    <p id="three-d-link"><a href="3d-moment.html">Try the 3D moment: the forecast as 3D bars</a></p>
+    <p id="three-d-off" hidden>The 3D moment is switched off in low-data mode.</p>
+
+    <section id="app-panel" class="panel app-panel" aria-labelledby="app-heading" hidden>
+      <h2 id="app-heading">This app on your device</h2>
+      <p id="offline-ready"></p>
+
+      <p>
+        <input type="checkbox" id="low-data" aria-describedby="low-data-hint">
+        <label for="low-data">Low-data mode (skip the 3D moment, about 1.3 MB)</label>
+      </p>
+      <p id="low-data-hint" class="hint"></p>
+
+      <h3>Install</h3>
+      <p id="install-status" role="status"></p>
+      <p><button type="button" id="install" hidden>Install Study-week weather</button></p>
+      <ul class="install-steps">
+        <li><strong>Chrome, Edge, or Samsung Internet on Android</strong>: open the browser menu and choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.</li>
+        <li><strong>Chrome or Edge on a computer</strong>: choose the install icon in the address bar, or look for <strong>Install</strong> in the browser menu.</li>
+        <li><strong>Safari on iPhone or iPad</strong>: choose <strong>Share</strong>, then <strong>Add to Home Screen</strong>.</li>
+        <li><strong>Other browsers</strong>: some cannot install web apps. Bookmark this page instead: in most modern browsers it still opens offline.</li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>

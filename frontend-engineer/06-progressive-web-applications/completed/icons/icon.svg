@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Study-week weather: a sun behind a cloud. Made for XR Camp, CC0. -->
+  <rect width="512" height="512" rx="96" fill="#5b2a86"/>
+  <circle cx="330" cy="180" r="62" fill="#f2c14e"/>
+  <g fill="#ffffff">
+    <circle cx="200" cy="300" r="70"/>
+    <circle cx="275" cy="262" r="85"/>
+    <circle cx="350" cy="305" r="60"/>
+    <rect x="140" y="300" width="250" height="75" rx="37.5"/>
+  </g>
+</svg>
