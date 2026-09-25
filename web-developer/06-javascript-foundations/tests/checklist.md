@@ -2,23 +2,22 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Behaviour
+- [ ] Every programme appears when the page loads.
+- [ ] Search, audience, and "Free only" all filter the results as you type or choose.
+- [ ] The count says how many programmes are shown, and changes with the filters.
+- [ ] When nothing matches, a helpful message appears.
+- [ ] Save buttons add and remove programmes from the saved list.
+- [ ] Saved programmes are still there after a reload.
+
+## Code
+- [ ] The console shows no errors.
+- [ ] Text is set with `textContent`, never `innerHTML`.
+- [ ] Every `localStorage` call is inside `try...catch`.
+- [ ] Functions have clear names, and comments explain why, not what.
 
 ## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
-
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+- [ ] Everything works with the keyboard, including Show results and every Save button.
+- [ ] A screen reader announces the count when the filters change.
+- [ ] Save buttons are announced as "pressed" or "not pressed".
+- [ ] Saved buttons look different by more than colour.

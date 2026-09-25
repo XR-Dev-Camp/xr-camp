@@ -18,10 +18,10 @@ jobs:
     name: Project structure and lesson IDs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Validate every project.json
         run: node scripts/validate-projects.mjs
       - name: Check the generated READMEs match catalog.json
@@ -31,7 +31,7 @@ jobs:
     name: Secret and private-data scan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       # The gitleaks CLI, pinned, scanning the whole history. (The gitleaks
@@ -45,7 +45,7 @@ jobs:
     name: Link check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check markdown links
         uses: lycheeverse/lychee-action@v2
         with:
@@ -65,10 +65,10 @@ jobs:
     # A normal run takes about 3 minutes; a hung browser must not block CI.
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Install pa11y
         run: npm install --no-save pa11y@8
       - name: Audit every completed/index.html

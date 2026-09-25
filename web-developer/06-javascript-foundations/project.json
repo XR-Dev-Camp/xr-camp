@@ -2,7 +2,7 @@
   "id": "web-06-javascript-foundations",
   "courseId": "web-developer",
   "lessonId": "javascript-foundations-06",
-  "status": "draft",
+  "status": "review",
   "phase": 1,
   "title": {
     "en": "JavaScript Foundations",
@@ -21,6 +21,8 @@
   },
   "difficulty": "beginner",
   "technologies": [
+    "HTML",
+    "CSS",
     "JavaScript"
   ],
   "hasCode": true,
@@ -38,6 +40,9 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "form-labels",
+    "status-messages",
+    "keyboard-operable"
   ]
 }

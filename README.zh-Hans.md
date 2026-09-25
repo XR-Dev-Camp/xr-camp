@@ -22,7 +22,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 阶段 | 你将构建 | 时长 | 已完成课程 |
 | --- | --- | --- | --- |
 | [0 · 欢迎来到未来](preface/README.zh-Hans.md) | 你的第一个 3D 世界、一条网络发展时间线，以及一个比较三种 3D 构建方式的实验室。 | 64 次学习 · 约 4 个月 | 9 课中 9 课 |
-| [1 · 成为网页开发者](web-developer/README.zh-Hans.md) | 无障碍、响应式的网站，发布到网上，让世界各地的人都能访问。 | 144 次学习 · 约 8 个月 | 9 课中 5 课 |
+| [1 · 成为网页开发者](web-developer/README.zh-Hans.md) | 无障碍、响应式的网站，发布到网上，让世界各地的人都能访问。 | 144 次学习 · 约 8 个月 | 9 课中 6 课 |
 | [2 · 成为前端工程师](frontend-engineer/README.zh-Hans.md) | 可以安装到手机、离线运行并使用实时数据的网页应用。 | 145 次学习 · 约 8 个月 | 9 课中 0 课 |
 | [3 · 成为 Web3D 开发者](web3d-developer/README.zh-Hans.md) | 使用 A-Frame 和 three.js 构建的交互式 3D 体验。 | 138 次学习 · 约 8 个月 | 7 课中 0 课 |
 | [4 · 成为沉浸式开发者](immersive-developer/README.zh-Hans.md) | 通过一个链接就能在头显中打开的虚拟现实和增强现实体验。 | 111 次学习 · 约 6 个月 | 6 课中 0 课 |
@@ -57,7 +57,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 3 | [CSS Foundations](web-developer/03-css-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 | 🚧 即将推出 |
+| 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 | ✅ 已完成 |
 | 7 | [Developer Tools, Debugging, and Testing](web-developer/07-developer-tools-debugging-and-testing/README.zh-Hans.md) | 9 小时 · 12 次学习 | 🚧 即将推出 |
 | 8 | [Git, GitHub, and Publishing](web-developer/08-git-github-and-publishing/README.zh-Hans.md) | 9 小时 · 12 次学习 | 🚧 即将推出 |
 | 9 | [Phase 1 Capstone - Web Developer Portfolio](web-developer/09-web-developer-portfolio/README.zh-Hans.md) | 15 小时 · 20 次学习 | 🚧 即将推出 |

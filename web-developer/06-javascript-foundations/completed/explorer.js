@@ -165,7 +165,11 @@ function showSaved() {
 
 // "input" fires on every keystroke and change; the form never submits.
 document.querySelector('#filters').addEventListener('input', showResults);
-document.querySelector('#filters').addEventListener('submit', (event) => event.preventDefault());
+document.querySelector('#filters').addEventListener('submit', (event) => {
+  event.preventDefault();             // stay on this page
+  showResults();
+  count.focus();                      // take keyboard users to the result count
+});
 
 showResults();
 showSaved();

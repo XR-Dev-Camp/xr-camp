@@ -46,10 +46,13 @@
         <input id="free-only" type="checkbox">
         <label for="free-only">Free programmes only</label>
       </p>
+      <!-- Results update as you type, but a submit button gives everyone a
+           predictable way to apply the filters, including with the keyboard. -->
+      <p><button type="submit">Show results</button></p>
     </form>
 
     <!-- A live region: when its text changes, screen readers announce it. -->
-    <p id="count" role="status"></p>
+    <p id="count" role="status" tabindex="-1"></p>
 
     <h2>Programmes</h2>
     <noscript><p>The explorer needs JavaScript. You can see every programme on our <a href="../../04-responsive-web-design/completed/index.html#programmes">home page</a>.</p></noscript>

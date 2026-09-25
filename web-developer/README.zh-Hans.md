@@ -21,7 +21,7 @@
 | 3 | [CSS Foundations](03-css-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 4 | [Responsive Web Design](04-responsive-web-design/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 5 | [Web Accessibility Foundations](05-web-accessibility-foundations/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 6 | [JavaScript Foundations](06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 | 🚧 即将推出 |
+| 6 | [JavaScript Foundations](06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 | ✅ 已完成 |
 | 7 | [Developer Tools, Debugging, and Testing](07-developer-tools-debugging-and-testing/README.zh-Hans.md) | 9 小时 · 12 次学习 | 🚧 即将推出 |
 | 8 | [Git, GitHub, and Publishing](08-git-github-and-publishing/README.zh-Hans.md) | 9 小时 · 12 次学习 | 🚧 即将推出 |
 | 9 | [Phase 1 Capstone - Web Developer Portfolio](09-web-developer-portfolio/README.zh-Hans.md) | 15 小时 · 20 次学习 | 🚧 即将推出 |

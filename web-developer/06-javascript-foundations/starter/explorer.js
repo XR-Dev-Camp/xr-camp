@@ -56,8 +56,9 @@ const audienceLabels = { children: 'Children and young people', adults: 'Adults'
 // programmes.filter(matches) in showResults.
 
 // TODO 8: Listen for the "input" event on the #filters form, and call
-// showResults every time. Also stop the form submitting ("submit" event,
-// event.preventDefault()).
+// showResults every time. Also listen for its "submit" event (the "Show
+// results" button): call event.preventDefault() so the page does not reload,
+// then showResults(), then move focus to #count.
 
 // TODO 9: When nothing matches, make #count say so, and suggest what to try.
 
