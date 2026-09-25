@@ -2,6 +2,10 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
+<!-- status:start -->
+> 🚧 **This lesson is being written.** What you see below is its outline. See [every lesson and what is ready now](../../README.md#all-lessons).
+<!-- status:end -->
+
 **Course:** `web-developer` · **Lesson:** `javascript-foundations-06` · **Time:** about 16 hours · 22 sessions of 45 minutes · about 6 weeks at 4 sessions a week
 
 ---

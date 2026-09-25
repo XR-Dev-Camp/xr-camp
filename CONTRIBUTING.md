@@ -62,7 +62,14 @@ Three other `project.json` fields matter to learners:
 - **`schedule`**: the number of 45-minute sessions. It must equal `estimatedMinutes / sessionMinutes`, rounded up. If you change the estimate, change the schedule and the time line at the top of all three READMEs.
 - **`accessibilityChecks`**: 3D and XR projects must include the manual checks listed in [`docs/en/xr-accessibility.md`](docs/en/xr-accessibility.md).
 
-Run `node scripts/validate-projects.mjs` before you push, and `node scripts/validate-projects.mjs --write-catalog` after changing any `project.json`.
+Run `node scripts/validate-projects.mjs` before you push. After changing any `project.json`, run these two, in order:
+
+```sh
+node scripts/validate-projects.mjs --write-catalog   # update catalog.json
+node scripts/build-readmes.mjs                       # update the student guides
+```
+
+The top-level `README` files, the `README` in each phase folder, and the "being written" notice on draft lessons are all generated from `catalog.json`. Edit `scripts/build-readmes.mjs`, not those files: CI fails if they are out of date. When a lesson's status changes from `draft` to `review`, its notice disappears and the lesson lists mark it ready.
 
 ---
 

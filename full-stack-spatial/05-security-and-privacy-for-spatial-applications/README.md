@@ -2,6 +2,10 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
+<!-- status:start -->
+> 🚧 **This lesson is being written.** What you see below is its outline. See [every lesson and what is ready now](../../README.md#all-lessons).
+<!-- status:end -->
+
 **Course:** `full-stack-spatial` · **Lesson:** `security-and-privacy-for-spatial-applications-05` · **Time:** about 12 hours · 16 sessions of 45 minutes · about 4 weeks at 4 sessions a week
 
 ---

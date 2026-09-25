@@ -2,6 +2,10 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
+<!-- status:start -->
+> 🚧 **This lesson is being written.** What you see below is its outline. See [every lesson and what is ready now](../../README.md#all-lessons).
+<!-- status:end -->
+
 **Course:** `preface` · **Lesson:** `careers-in-the-spatial-web-09` · **Time:** about 4 hours · 6 sessions of 45 minutes · about 2 weeks at 4 sessions a week
 
 ---

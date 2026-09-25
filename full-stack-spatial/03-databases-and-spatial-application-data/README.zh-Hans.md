@@ -4,6 +4,10 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
+<!-- status:start -->
+> 🚧 **本课程正在编写中。**下面是课程大纲。查看[全部课程以及已完成的课程](../../README.zh-Hans.md#全部课程)。
+<!-- status:end -->
+
 **课程:** `full-stack-spatial` · **课时:** `databases-and-spatial-application-data-03` · **时长:** 约 12 小时 · 16 次学习，每次 45 分钟 · 每周 4 次，约 4 周
 
 ---

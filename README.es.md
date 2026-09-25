@@ -1,0 +1,153 @@
+<!-- Este archivo lo genera scripts/build-readmes.mjs a partir de catalog.json. Edita el script, no este archivo. -->
+
+# XR Camp
+
+**Language / Idioma / 语言:** [English](README.md) · Español · [简体中文](README.zh-Hans.md)
+
+> Una escuela gratuita para la web inmersiva. Aprende a crear sitios web, mundos 3D y experiencias de realidad virtual y aumentada que funcionan en el navegador, desde tu primera línea de código.
+
+XR Camp es **completamente gratuita, para todo el mundo**. Está pensada ante todo para **mujeres de América Latina y China**, incluidas las que nunca han escrito código, y la crean mujeres expertas y hombres aliados comprometidos con el empoderamiento de las mujeres.
+
+## Empieza aquí
+
+1. **Abre tu primera lección:** [Bienvenida a XR Camp](preface/01-welcome-to-xr-camp/README.es.md). En tu primera hora construirás un mundo 3D.
+2. **Descarga las lecciones:** pulsa el botón verde **Code** en la parte superior de esta página y luego **Download ZIP**. Descomprímelo en un lugar donde lo vuelvas a encontrar, como tu carpeta Documentos. No necesitas una cuenta de GitHub.
+3. **Planifica tu semana:** cada lección se divide en sesiones de 45 minutos. Cuatro sesiones por semana es un buen ritmo; dos también está bien.
+4. **Visita el sitio web:** [xrcamp.dev](https://xrcamp.dev/es-419/).
+
+## El camino
+
+Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto que publicas, y cada fase tiene valor por sí misma.
+
+| Fase | Construirás | Tiempo | Lecciones listas |
+| --- | --- | --- | --- |
+| [0 · Bienvenida al futuro](preface/README.es.md) | Tu primer mundo 3D, una línea de tiempo de la web y un laboratorio que compara tres formas de construir en 3D. | 64 sesiones · unos 4 meses | 3 de 9 |
+| [1 · Conviértete en desarrolladora web](web-developer/README.es.md) | Sitios web accesibles y adaptables, publicados para que cualquiera en el mundo los visite. | 144 sesiones · unos 8 meses | 1 de 9 |
+| [2 · Conviértete en ingeniera frontend](frontend-engineer/README.es.md) | Aplicaciones web que se instalan en el teléfono, funcionan sin conexión y usan datos en vivo. | 145 sesiones · unos 8 meses | 0 de 9 |
+| [3 · Conviértete en desarrolladora Web3D](web3d-developer/README.es.md) | Experiencias 3D interactivas con A-Frame y three.js. | 138 sesiones · unos 8 meses | 0 de 7 |
+| [4 · Conviértete en desarrolladora inmersiva](immersive-developer/README.es.md) | Experiencias de realidad virtual y aumentada que se abren en un visor desde un enlace. | 111 sesiones · unos 6 meses | 0 de 6 |
+| [5 · Conviértete en desarrolladora espacial full-stack](full-stack-spatial/README.es.md) | Aplicaciones 3D multiusuario con cuentas, datos y conexiones en tiempo real. | 155 sesiones · unos 9 meses | 0 de 8 |
+| [6 · Conviértete en desarrolladora profesional](professional-developer/README.es.md) | Despliegues en producción, sitios multilingües y tu propio lugar en el código abierto. | 73 sesiones · unos 4 meses | 0 de 5 |
+| [7 · Proyecto final profesional](capstone/README.es.md) | Un proyecto inmersivo completo: investigado, diseñado, construido, probado y lanzado. | 95 sesiones · unos 5 meses | 0 de 5 |
+
+## Todas las lecciones
+
+✅ Lista significa que la lección está completa en inglés (las traducciones al español y al chino están en camino). 🚧 significa que la lección se está escribiendo.
+
+### Fase 0 · Bienvenida al futuro
+
+| # | Lección | Tiempo | Estado |
+| --- | --- | --- | --- |
+| 1 | [Bienvenida a XR Camp](preface/01-welcome-to-xr-camp/README.es.md) | 2 h · 3 sesiones | ✅ Lista |
+| 2 | [Computer Fundamentals](preface/02-computer-fundamentals/README.es.md) | 6 h · 8 sesiones | 🚧 Próximamente |
+| 3 | [The Internet and the Web](preface/03-the-internet-and-the-web/README.es.md) | 5 h · 7 sesiones | 🚧 Próximamente |
+| 4 | [Historia de la web](preface/04-history-of-the-web/README.es.md) | 5 h · 7 sesiones | ✅ Lista |
+| 5 | [Historia de Web3D](preface/05-history-of-web3d/README.es.md) | 6 h · 8 sesiones | ✅ Lista |
+| 6 | [The Spatial Web](preface/06-the-spatial-web/README.es.md) | 5 h · 7 sesiones | 🚧 Próximamente |
+| 7 | [Organizations Building the Future](preface/07-organizations-building-the-future/README.es.md) | 6 h · 8 sesiones | 🚧 Próximamente |
+| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](preface/08-ethics-accessibility-privacy-and-responsible-ai/README.es.md) | 7 h · 10 sesiones | 🚧 Próximamente |
+| 9 | [Careers in the Spatial Web](preface/09-careers-in-the-spatial-web/README.es.md) | 4 h · 6 sesiones | 🚧 Próximamente |
+
+### Fase 1 · Conviértete en desarrolladora web
+
+| # | Lección | Tiempo | Estado |
+| --- | --- | --- | --- |
+| 1 | [Fundamentos de HTML](web-developer/01-html-foundations/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
+| 2 | [Accessible Forms and User Input](web-developer/02-accessible-forms-and-user-input/README.es.md) | 7 h · 10 sesiones | 🚧 Próximamente |
+| 3 | [CSS Foundations](web-developer/03-css-foundations/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.es.md) | 16 h · 22 sesiones | 🚧 Próximamente |
+| 7 | [Developer Tools, Debugging, and Testing](web-developer/07-developer-tools-debugging-and-testing/README.es.md) | 9 h · 12 sesiones | 🚧 Próximamente |
+| 8 | [Git, GitHub, and Publishing](web-developer/08-git-github-and-publishing/README.es.md) | 9 h · 12 sesiones | 🚧 Próximamente |
+| 9 | [Phase 1 Capstone - Web Developer Portfolio](web-developer/09-web-developer-portfolio/README.es.md) | 15 h · 20 sesiones | 🚧 Próximamente |
+
+### Fase 2 · Conviértete en ingeniera frontend
+
+| # | Lección | Tiempo | Estado |
+| --- | --- | --- | --- |
+| 1 | [Modern JavaScript](frontend-engineer/01-modern-javascript/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 2 | [The Document Object Model and Dynamic Interfaces](frontend-engineer/02-the-document-object-model-and-dynamic-interfaces/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 3 | [Application Architecture and Maintainable Code](frontend-engineer/03-application-architecture-and-maintainable-code/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 4 | [APIs, JSON, and Asynchronous Applications](frontend-engineer/04-apis-json-and-asynchronous-applications/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 5 | [Web Components](frontend-engineer/05-web-components/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 6 | [Progressive Web Applications](frontend-engineer/06-progressive-web-applications/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 7 | [Git Collaboration and Open Source](frontend-engineer/07-git-collaboration-and-open-source/README.es.md) | 9 h · 12 sesiones | 🚧 Próximamente |
+| 8 | [AI as a Development Assistant](frontend-engineer/08-ai-as-a-development-assistant/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.es.md) | 18 h · 24 sesiones | 🚧 Próximamente |
+
+### Fase 3 · Conviértete en desarrolladora Web3D
+
+| # | Lección | Tiempo | Estado |
+| --- | --- | --- | --- |
+| 1 | [Web3D Fundamentals](web3d-developer/01-web3d-fundamentals/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 2 | [A-Frame Foundations](web3d-developer/02-a-frame-foundations/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 3 | [Advanced A-Frame and Interaction](web3d-developer/03-advanced-a-frame-and-interaction/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 4 | [Three.js Foundations](web3d-developer/04-threejs-foundations/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.es.md) | 16 h · 22 sesiones | 🚧 Próximamente |
+| 6 | [Performance Engineering for Web3D](web3d-developer/06-performance-engineering-for-web3d/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 7 | [Phase 3 Capstone - Interactive Web3D Experience](web3d-developer/07-interactive-web3d-experience/README.es.md) | 20 h · 27 sesiones | 🚧 Próximamente |
+
+### Fase 4 · Conviértete en desarrolladora inmersiva
+
+| # | Lección | Tiempo | Estado |
+| --- | --- | --- | --- |
+| 1 | [WebXR Foundations](immersive-developer/01-webxr-foundations/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 2 | [XR Input and Interaction](immersive-developer/02-xr-input-and-interaction/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 3 | [Spatial UX Design](immersive-developer/03-spatial-ux-design/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 4 | [Immersive Accessibility and Ethics](immersive-developer/04-immersive-accessibility-and-ethics/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 5 | [Spatial Audio, Media, and Presence](immersive-developer/05-spatial-audio-media-and-presence/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 6 | [Phase 4 Capstone - Immersive Web Experience](immersive-developer/06-immersive-web-experience/README.es.md) | 22 h · 30 sesiones | 🚧 Próximamente |
+
+### Fase 5 · Conviértete en desarrolladora espacial full-stack
+
+| # | Lección | Tiempo | Estado |
+| --- | --- | --- | --- |
+| 1 | [Backend and API Foundations](full-stack-spatial/01-backend-and-api-foundations/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 3 | [Databases and Spatial Application Data](full-stack-spatial/03-databases-and-spatial-application-data/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.es.md) | 17 h · 23 sesiones | 🚧 Próximamente |
+| 5 | [Security and Privacy for Spatial Applications](full-stack-spatial/05-security-and-privacy-for-spatial-applications/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 6 | [AI for Spatial Computing](full-stack-spatial/06-ai-for-spatial-computing/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 7 | [Advanced PWA and Offline Spatial Delivery](full-stack-spatial/07-advanced-pwa-and-offline-spatial-delivery/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](full-stack-spatial/08-full-stack-spatial-application/README.es.md) | 25 h · 34 sesiones | 🚧 Próximamente |
+
+### Fase 6 · Conviértete en desarrolladora profesional
+
+| # | Lección | Tiempo | Estado |
+| --- | --- | --- | --- |
+| 1 | [Production Deployment and DevOps](professional-developer/01-production-deployment-and-devops/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 2 | [Internationalization and Localization](professional-developer/02-internationalization-and-localization/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 3 | [Open Source, Standards, and Technical Leadership](professional-developer/03-open-source-standards-and-technical-leadership/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 4 | [Career Development and Professional Practice](professional-developer/04-career-development-and-professional-practice/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 5 | [Instructor and Mentor Preparation](professional-developer/05-instructor-and-mentor-preparation/README.es.md) | 8 h · 11 sesiones | 🚧 Próximamente |
+
+### Fase 7 · Proyecto final profesional
+
+| # | Lección | Tiempo | Estado |
+| --- | --- | --- | --- |
+| 1 | [Capstone Research and Definition](capstone/01-capstone-research-and-definition/README.es.md) | 8 h · 11 sesiones | 🚧 Próximamente |
+| 2 | [Experience and System Design](capstone/02-experience-and-system-design/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 3 | [Capstone Prototype](capstone/03-capstone-prototype/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 4 | [Capstone Production](capstone/04-capstone-production/README.es.md) | 28 h · 38 sesiones | 🚧 Próximamente |
+| 5 | [Testing, Launch, and Presentation](capstone/05-testing-launch-and-presentation/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+
+## Cómo funciona cada lección
+
+- `README` — la guía de la lección, en inglés, español y chino simplificado.
+- `starter/` — donde empiezas. Cópialo y construye.
+- `completed/` — la solución de referencia. Ábrela solo después de intentarlo de verdad.
+- `challenges/` — tres retos opcionales: Fundamento, Creativo, Explorador.
+- `tests/checklist.md` — revisa tu trabajo antes de compartirlo.
+
+## Accesible desde el diseño
+
+Cada proyecto debe funcionar con teclado y lector de pantalla, cumplir el contraste WCAG 2.2 AA y respetar la preferencia de movimiento reducido. El 3D y la XR nunca deben impedir el acceso al contenido principal.
+
+## Enseña, sé mentora o mentor, traduce o contribuye
+
+XR Camp la construye su comunidad. Lee la [guía para contribuir](CONTRIBUTING.md) y el [código de conducta](CODE_OF_CONDUCT.md). ¿Has encontrado un problema de seguridad o privacidad? Infórmalo en privado: consulta [SECURITY.md](SECURITY.md). El código del sitio web está en [`website/`](website/).
+
+## Licencia
+
+Código: [LICENSE-CODE](LICENSE-CODE). Lecciones, documentación e imágenes: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Uso comercial e institucional: [COMMERCIAL_USE.md](COMMERCIAL_USE.md). Material de terceros: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) y [ATTRIBUTION.md](ATTRIBUTION.md).

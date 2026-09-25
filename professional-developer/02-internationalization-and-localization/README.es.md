@@ -4,6 +4,10 @@
 
 > <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
 
+<!-- status:start -->
+> 🚧 **Esta lección se está escribiendo.** Lo que ves abajo es su esquema. Consulta [todas las lecciones y cuáles están listas](../../README.es.md#todas-las-lecciones).
+<!-- status:end -->
+
 **Curso:** `professional-developer` · **Lección:** `internationalization-and-localization-02` · **Tiempo:** unas 10 horas · 14 sesiones de 45 minutos · unas 4 semanas con 4 sesiones por semana
 
 ---

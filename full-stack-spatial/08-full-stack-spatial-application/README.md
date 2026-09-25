@@ -2,6 +2,10 @@
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
+<!-- status:start -->
+> 🚧 **This lesson is being written.** What you see below is its outline. See [every lesson and what is ready now](../../README.md#all-lessons).
+<!-- status:end -->
+
 **Course:** `full-stack-spatial` · **Lesson:** `full-stack-spatial-application-08` · **Time:** about 25 hours · 34 sessions of 45 minutes · about 9 weeks at 4 sessions a week
 
 ---

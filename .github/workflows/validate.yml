@@ -24,6 +24,8 @@ jobs:
           node-version: '20'
       - name: Validate every project.json
         run: node scripts/validate-projects.mjs
+      - name: Check the generated READMEs match catalog.json
+        run: node scripts/build-readmes.mjs --check
 
   secrets:
     name: Secret and private-data scan
