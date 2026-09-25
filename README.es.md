@@ -13,7 +13,7 @@ XR Camp es **completamente gratuita, para todo el mundo**. Está pensada ante to
 1. **Abre tu primera lección:** [Bienvenida a XR Camp](preface/01-welcome-to-xr-camp/README.es.md). En tu primera hora construirás un mundo 3D.
 2. **Descarga las lecciones:** pulsa el botón verde **Code** en la parte superior de esta página y luego **Download ZIP**. Descomprímelo en un lugar donde lo vuelvas a encontrar, como tu carpeta Documentos. No necesitas una cuenta de GitHub.
 3. **Planifica tu semana:** cada lección se divide en sesiones de 45 minutos. Cuatro sesiones por semana es un buen ritmo; dos también está bien.
-4. **Visita el sitio web:** [xrcamp.dev](https://xrcamp.dev/es-419/).
+4. **Visita el sitio web:** [xrcamp.dev](https://xrcamp.dev).
 
 ## El camino
 

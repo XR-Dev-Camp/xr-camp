@@ -13,7 +13,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 1. **打开第一课：**[欢迎来到 XR Camp](preface/01-welcome-to-xr-camp/README.zh-Hans.md)。在第一个小时里，你就会构建一个 3D 世界。
 2. **下载课程：**点击本页顶部绿色的 **Code** 按钮，然后选择 **Download ZIP**。把它解压到你能再次找到的地方，比如“文稿”文件夹。你不需要 GitHub 账户。
 3. **规划你的每一周：**每节课都分成若干次 45 分钟的学习。每周 4 次是不错的节奏，每周 2 次也可以。
-4. **访问网站：**[xrcamp.dev](https://xrcamp.dev/zh-hans/)。
+4. **访问网站：**[xrcamp.dev](https://xrcamp.dev)。
 
 ## 学习路径
 
