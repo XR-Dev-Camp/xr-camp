@@ -64,7 +64,7 @@
       "id": "pre-02-computer-fundamentals",
       "courseId": "preface",
       "lessonId": "computer-fundamentals-02",
-      "status": "draft",
+      "status": "review",
       "phase": 0,
       "title": {
         "en": "Computer Fundamentals",
@@ -80,14 +80,14 @@
       "technologies": [
         "HTML"
       ],
-      "hasCode": false,
+      "hasCode": true,
       "path": "preface/02-computer-fundamentals"
     },
     {
       "id": "pre-03-the-internet-and-the-web",
       "courseId": "preface",
       "lessonId": "the-internet-and-the-web-03",
-      "status": "draft",
+      "status": "review",
       "phase": 0,
       "title": {
         "en": "The Internet and the Web",
@@ -159,7 +159,7 @@
       "id": "pre-06-the-spatial-web",
       "courseId": "preface",
       "lessonId": "the-spatial-web-06",
-      "status": "draft",
+      "status": "review",
       "phase": 0,
       "title": {
         "en": "The Spatial Web",
@@ -173,7 +173,8 @@
       },
       "difficulty": "foundation",
       "technologies": [
-        "HTML"
+        "HTML",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "preface/06-the-spatial-web"
@@ -182,7 +183,7 @@
       "id": "pre-07-organizations-building-the-future",
       "courseId": "preface",
       "lessonId": "organizations-building-the-future-07",
-      "status": "draft",
+      "status": "review",
       "phase": 0,
       "title": {
         "en": "Organizations Building the Future",
@@ -205,7 +206,7 @@
       "id": "pre-08-ethics-accessibility-privacy-and-responsible-ai",
       "courseId": "preface",
       "lessonId": "ethics-accessibility-privacy-and-responsible-ai-08",
-      "status": "draft",
+      "status": "review",
       "phase": 0,
       "title": {
         "en": "Ethics, Accessibility, Privacy, and Responsible AI",
@@ -229,7 +230,7 @@
       "id": "pre-09-careers-in-the-spatial-web",
       "courseId": "preface",
       "lessonId": "careers-in-the-spatial-web-09",
-      "status": "draft",
+      "status": "review",
       "phase": 0,
       "title": {
         "en": "Careers in the Spatial Web",

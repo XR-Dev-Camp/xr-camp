@@ -2,18 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One object shown three ways: as a flat page, as interactive 3D, and as an immersive experience.">
+  <!-- TODO 1: Put your name in the title and the paragraph under the heading. -->
+  <title>One object, three ways</title>
 
-  <title>The Spatial Web - XR Camp starter</title>
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+
+  <style>
+    :root { --text: #1b1b1f; --muted: #4a4a55; --paper: #fdfcf8; --card: #fff; --accent: #5b2a86; --focus: #d62f6b; }
+    body { max-width: 56rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--paper); }
+    .view { margin: 0 0 2rem; padding: 1rem; background: var(--card); border: 1px solid #c9c4d4; border-radius: 0.75rem; }
+    .card { display: grid; gap: 1rem; align-items: center; }
+    @media (min-width: 40rem) { .card { grid-template-columns: 10rem 1fr; } }
+    a-scene { display: block; width: 100%; height: 20rem; border-radius: 0.5rem; }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; min-width: 36rem; }
+    th, td { border: 1px solid #c9c4d4; padding: 0.5rem; text-align: left; vertical-align: top; }
+    button { font: inherit; padding: 0.5rem 1rem; border: 2px solid var(--accent); border-radius: 0.5rem; background: var(--accent); color: #fff; cursor: pointer; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>One object, three ways</h1>
+    <p>A tomato plant, shown as a flat page, as interactive 3D, and as an immersive experience.</p>
+  </header>
+
   <main>
-    <!-- Add your main heading below. -->
+    <section class="view" aria-labelledby="flat">
+      <h2 id="flat">1. The 2D view</h2>
+      <div class="card">
+        <!-- A simple drawing in SVG: shapes described in code. role="img"
+             and a title make it one image to a screen reader. -->
+        <svg viewBox="0 0 100 120" width="160" role="img" aria-labelledby="plant-title">
+          <title id="plant-title">Drawing of a tomato plant in a terracotta pot</title>
+          <rect x="30" y="80" width="40" height="35" rx="4" fill="#b5542d"/>
+          <rect x="47" y="45" width="6" height="40" fill="#3f7d3a"/>
+          <circle cx="50" cy="40" r="26" fill="#5fa153"/>
+          <circle cx="40" cy="42" r="5" fill="#d8342a"/>
+          <circle cx="60" cy="35" r="5" fill="#d8342a"/>
+          <circle cx="55" cy="52" r="5" fill="#d8342a"/>
+        </svg>
+        <!-- TODO 2: Choose a plant or object from your region (a maize plant, a clay pot,
+             a tea bush, a lantern). Rewrite this card about it. Change the colours
+             in the drawing above to match, and update its <title>. -->
+        <div>
+          <h3>Tomato plant</h3>
+          <p>?</p>
+        </div>
+      </div>
+      <p><strong>Good for:</strong> reading quickly, searching, printing, and every device and assistive technology.</p>
+    </section>
 
-    <!-- Add your project content below. -->
+    <section class="view" aria-labelledby="interactive">
+      <h2 id="interactive">2. The interactive 3D view</h2>
+      <!-- TODO 3: Change the colours and sizes of the 3D shapes below to match your
+           object. Then rewrite this description so it matches your scene exactly. -->
+      <p id="scene-description">
+        The same tomato plant in 3D: a terracotta pot, a green stem, a round green bush, and three red tomatoes.
+        Drag with a mouse or a finger to look around it. Nothing moves on its own.
+      </p>
+      <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+        <a-sky color="#dcefff"></a-sky>
+        <a-circle position="0 0.6 0" rotation="-90 0 0" radius="4" color="#c9b59a"></a-circle>
+        <a-entity position="0 0.6 -3.2">
+          <a-cylinder position="0 0.35 0" radius="0.35" height="0.7" color="#b5542d"></a-cylinder>
+          <a-cylinder position="0 1 0" radius="0.05" height="0.9" color="#3f7d3a"></a-cylinder>
+          <a-sphere position="0 1.55 0" radius="0.5" color="#5fa153"></a-sphere>
+          <a-sphere position="-0.3 1.5 0.3" radius="0.1" color="#d8342a"></a-sphere>
+          <a-sphere position="0.3 1.7 0.25" radius="0.1" color="#d8342a"></a-sphere>
+          <a-sphere position="0.15 1.35 0.42" radius="0.1" color="#d8342a"></a-sphere>
+        </a-entity>
+      </a-scene>
+      <p><strong>Good for:</strong> understanding shape, size, and how parts fit together.</p>
+    </section>
 
+    <section class="view" aria-labelledby="immersive">
+      <h2 id="immersive">3. The immersive view</h2>
+      <p id="xr-status">Checking whether this device can show virtual or augmented reality…</p>
+      <p>
+        <button type="button" id="enter-vr" hidden>View in VR</button>
+        <button type="button" id="enter-ar" hidden>Place it in my room (AR)</button>
+      </p>
+      <!-- TODO 4: In your own words: what can the immersive view show that the others cannot? -->
+      <p><strong>Good for:</strong> ?</p>
+    </section>
+
+    <section aria-labelledby="compare">
+      <h2 id="compare">Comparing the three</h2>
+      <!-- TODO 5: Replace every "?" using the lesson guide and what you noticed about your three views. -->
+      <div class="table-wrap">
+        <table>
+          <caption>2D, interactive 3D, and immersive, compared</caption>
+          <thead>
+            <tr><th scope="col">Question</th><th scope="col">2D</th><th scope="col">Interactive 3D</th><th scope="col">Immersive (VR/AR)</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Who can use it?</th><td>?</td><td>?</td><td>?</td></tr>
+            <tr><th scope="row">How much data?</th><td>?</td><td>?</td><td>?</td></tr>
+            <tr><th scope="row">Best at</th><td>?</td><td>?</td><td>?</td></tr>
+            <tr><th scope="row">Accessibility</th><td>?</td><td>?</td><td>?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="when-not">
+      <h2 id="when-not">When not to use 3D or XR</h2>
+      <!-- TODO 6: Give two examples of things that should NOT be 3D or XR, and explain why. -->
+      <p>?</p>
+    </section>
   </main>
+
+  <script>
+    // Show the immersive buttons only on devices that support them.
+    // You will learn JavaScript in Phase 1. For now, leave this as it is.
+    const scene = document.querySelector('a-scene');
+    const vr = document.getElementById('enter-vr');
+    const ar = document.getElementById('enter-ar');
+    const status = document.getElementById('xr-status');
+
+    async function checkXR() {
+      if (!navigator.xr) {
+        status.textContent = 'This browser cannot show virtual or augmented reality. The 2D and 3D views above work everywhere.';
+        return;
+      }
+      const [canVR, canAR] = await Promise.all([
+        navigator.xr.isSessionSupported('immersive-vr').catch(() => false),
+        navigator.xr.isSessionSupported('immersive-ar').catch(() => false),
+      ]);
+      vr.hidden = !canVR;
+      ar.hidden = !canAR;
+      status.textContent = canVR || canAR
+        ? 'This device can show the plant in an immersive view.'
+        : 'This device cannot show virtual or augmented reality. The 2D and 3D views above work everywhere.';
+    }
+
+    vr.addEventListener('click', () => scene.enterVR());
+    ar.addEventListener('click', () => scene.enterAR());
+    checkXR();
+  </script>
 </body>
 </html>

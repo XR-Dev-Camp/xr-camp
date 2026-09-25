@@ -3,12 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Internet and the Web - XR Camp reference solution</title>
+  <meta name="description" content="What happens, step by step, when you visit a website.">
+  <title>What happens when you visit a website - XR Camp reference solution</title>
+  <style>
+    :root { --text: #1b1b1f; --muted: #4a4a55; --paper: #fdfcf8; --card: #fff; --accent: #5b2a86; --focus: #d62f6b; }
+    body { max-width: 46rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--paper); }
+    .url { font-size: 1.05rem; overflow-x: auto; padding: 0.75rem; background: var(--card); border: 1px solid #c9c4d4; border-radius: 0.5rem; }
+    .url span { padding: 0 0.1rem; border-bottom: 3px solid; }
+    .scheme { border-color: #1f8a8a; } .host { border-color: #5b2a86; } .path { border-color: #c2372b; } .query { border-color: #b8860b; }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { margin: 0 0 1rem; padding: 1rem; background: var(--card); border: 1px solid #c9c4d4; border-left: 6px solid var(--accent); border-radius: 0.5rem; }
+    .steps h3 { margin: 0 0 0.25rem; }
+    .who { margin: 0; color: var(--muted); font-weight: 700; }
+    .controls { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    button { font: inherit; padding: 0.5rem 1rem; border: 2px solid var(--accent); border-radius: 0.5rem; background: var(--accent); color: #fff; cursor: pointer; }
+    button:disabled { background: #fff; color: #6b6478; border-color: #8a8398; cursor: default; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>What happens when you visit a website</h1>
+    <p>Nine steps, from typing an address to seeing a page. Most of them take less than a second. By Ana.</p>
+  </header>
+
   <main>
-    <h1>The Internet and the Web</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <section aria-labelledby="address">
+      <h2 id="address">Reading the address</h2>
+      <p class="url">
+        <span class="scheme">https://</span><span class="host">www.example.org</span><span class="path">/recipes/tamales</span><span class="query">?lang=es</span>
+      </p>
+      <dl>
+        <dt><code>https://</code>: the scheme</dt>
+        <dd>How to talk to the server. The <code>s</code> means the conversation is encrypted.</dd>
+        <dt><code>www.example.org</code>: the host, or domain name</dt>
+        <dd>Which computer to ask. People remember names; computers need numbers.</dd>
+        <dt><code>/recipes/tamales</code>: the path</dt>
+        <dd>Which page on that computer.</dd>
+        <dt><code>?lang=es</code>: the query</dt>
+        <dd>Extra information for the server, here the language.</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="journey">
+      <h2 id="journey">The journey</h2>
+
+      <!-- Without JavaScript, all nine steps show as a list. With JavaScript,
+           the buttons show one step at a time. Both are complete. -->
+      <div class="controls" id="controls" hidden>
+        <button type="button" id="prev">Previous step</button>
+        <button type="button" id="next">Next step</button>
+        <button type="button" id="all">Show all steps</button>
+        <p id="status" aria-live="polite"></p>
+      </div>
+
+      <ol class="steps" id="steps">
+        <li tabindex="-1">
+          <p class="who">You and your browser</p>
+          <h3>1. You type an address</h3>
+          <p>You type <code>www.example.org/recipes/tamales</code>, or tap a link. The browser adds <code>https://</code> if you did not.</p>
+        </li>
+        <li tabindex="-1">
+          <p class="who">Your browser and DNS</p>
+          <h3>2. The name becomes a number</h3>
+          <p>Every computer on the internet has a numeric IP address. The browser asks the Domain Name System (DNS), the internet's address book, which number belongs to <code>www.example.org</code>. The answer is usually remembered for a while, so the next visit is faster.</p>
+        </li>
+        <li tabindex="-1">
+          <p class="who">Your browser and the server</p>
+          <h3>3. A connection opens</h3>
+          <p>The browser connects to the server at that address. Because the address starts with <code>https</code>, they agree on a secret code first, so nobody in between can read or change what they send.</p>
+        </li>
+        <li tabindex="-1">
+          <p class="who">Your browser</p>
+          <h3>4. The request</h3>
+          <p>The browser sends an HTTP request: <code>GET /recipes/tamales</code>, which means "please send me this page", plus details such as your preferred language.</p>
+        </li>
+        <li tabindex="-1">
+          <p class="who">The server</p>
+          <h3>5. The server prepares the page</h3>
+          <p>A <strong>static</strong> site sends a file that already exists. A <strong>dynamic</strong> site builds the page on the spot, perhaps from a database: the same address can then show different content to different people.</p>
+        </li>
+        <li tabindex="-1">
+          <p class="who">The server</p>
+          <h3>6. The response</h3>
+          <p>The server answers with a status code and the page. <code>200</code> means OK; <code>404</code> means not found; <code>500</code> means the server had a problem.</p>
+        </li>
+        <li tabindex="-1">
+          <p class="who">Your browser</p>
+          <h3>7. The browser reads the HTML</h3>
+          <p>The browser reads the HTML from top to bottom and builds the structure of the page: headings, paragraphs, links, images.</p>
+        </li>
+        <li tabindex="-1">
+          <p class="who">Your browser and the server</p>
+          <h3>8. More requests</h3>
+          <p>The HTML mentions other files: CSS for the look, JavaScript for behaviour, images, fonts. The browser requests each one, often dozens for a single page.</p>
+        </li>
+        <li tabindex="-1">
+          <p class="who">You</p>
+          <h3>9. You see the page</h3>
+          <p>The browser draws the page on your screen, and runs the JavaScript that makes it interactive. You read, click, and the journey starts again.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="summary">
+      <h2 id="summary">In one sentence</h2>
+      <p>The <strong>internet</strong> is the network that carries the messages; the <strong>web</strong> is the pages and links that travel across it; the <strong>browser</strong> is the client that asks, and the <strong>server</strong> is the computer that answers.</p>
+    </section>
   </main>
+
+  <script>
+    // Progressive enhancement: turn the list into a step-by-step walk.
+    const steps = [...document.querySelectorAll('#steps li')];
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const all = document.getElementById('all');
+    const status = document.getElementById('status');
+    let current = 0;
+
+    function show(index, moveFocus) {
+      current = index;
+      steps.forEach((step, i) => { step.hidden = i !== index; });
+      prev.disabled = index === 0;
+      next.disabled = index === steps.length - 1;
+      status.textContent = `Step ${index + 1} of ${steps.length}`;
+      // Move focus to the step so screen-reader users hear it straight away.
+      if (moveFocus) steps[index].focus();
+    }
+
+    prev.addEventListener('click', () => show(current - 1, true));
+    next.addEventListener('click', () => show(current + 1, true));
+    all.addEventListener('click', () => {
+      steps.forEach((step) => { step.hidden = false; });
+      document.getElementById('controls').hidden = true;
+      status.textContent = '';
+    });
+
+    document.getElementById('controls').hidden = false;
+    show(0, false);
+  </script>
 </body>
 </html>

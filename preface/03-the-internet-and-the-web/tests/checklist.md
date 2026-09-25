@@ -2,23 +2,17 @@
 
 Work through this list before you submit.
 
+## Your diagram
+- [ ] Your name is in the title and the introduction.
+- [ ] The example address is one you really use, and all four parts are explained.
+- [ ] Every one of the nine steps is explained in your own words.
+- [ ] Your one-sentence summary uses the words internet, web, browser, and server.
+
+## Behaviour
+- [ ] **Next step** and **Previous step** walk through all nine steps.
+- [ ] **Show all steps** shows the whole list.
+- [ ] You can do all of that with the keyboard alone.
+
 ## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
-
-## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
-
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+- [ ] Headings are in order: one `h1`, sections as `h2`, steps as `h3`.
+- [ ] `lang` at the top of the file matches your language.

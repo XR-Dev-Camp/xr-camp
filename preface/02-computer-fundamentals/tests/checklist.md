@@ -2,23 +2,19 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Your folder
+- [ ] You have one `xr-camp` folder, on your device, with the structure from Step 3.
+- [ ] File extensions are visible on your computer.
+- [ ] Folder names use only lower-case letters, numbers, and hyphens.
 
-## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+## Your setup page
+- [ ] Every section is filled in with your real setup.
+- [ ] The shortcut table has a caption, and each row has a row header.
+- [ ] Keys are marked up with `<kbd>`.
+- [ ] There is **no real password** anywhere on the page.
+- [ ] `lang` at the top of the file matches your language.
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+## Your safety
+- [ ] Your browser is up to date.
+- [ ] Two-step sign-in is on for your email.
+- [ ] You have a backup copy of your `xr-camp` folder.

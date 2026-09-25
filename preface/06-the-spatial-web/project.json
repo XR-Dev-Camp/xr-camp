@@ -2,7 +2,7 @@
   "id": "pre-06-the-spatial-web",
   "courseId": "preface",
   "lessonId": "the-spatial-web-06",
-  "status": "draft",
+  "status": "review",
   "phase": 0,
   "title": {
     "en": "The Spatial Web",
@@ -21,7 +21,8 @@
   },
   "difficulty": "foundation",
   "technologies": [
-    "HTML"
+    "HTML",
+    "A-Frame"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -33,6 +34,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

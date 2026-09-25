@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MegaDeals</title>
+  <!--
+    WARNING FOR LEARNERS: this page is deliberately bad.
+    It is a fictional shop, built for XR Camp's ethics lesson, with problems
+    planted on purpose: deceptive design, privacy problems, accessibility
+    failures, and undisclosed AI. Do not copy anything from it.
+  -->
+  <style>
+    body { max-width: 40rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; background: #fff; }
+    .fine { color: #c8c8c8; font-size: 0.7rem; }
+    .banner { padding: 0.5rem; background: #e0303a; color: #fff; font-weight: 700; }
+    .buy { display: inline-block; padding: 0.6rem 1.2rem; background: #2a7a2a; color: #fff; cursor: pointer; }
+    .chat { position: fixed; right: 1rem; bottom: 1rem; max-width: 14rem; padding: 0.75rem; background: #f3f3f3; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <p class="banner">Hurry! This price ends in <span id="timer">05:00</span></p>
+
+  <h1>Wireless headphones</h1>
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Crect width='120' height='80' fill='%23ddd'/%3E%3Cpath d='M30 50 Q60 5 90 50' stroke='%23333' stroke-width='6' fill='none'/%3E%3Crect x='22' y='45' width='16' height='22' rx='4'/%3E%3Crect x='82' y='45' width='16' height='22' rx='4'/%3E%3C/svg%3E" width="240" height="160">
+  <p><strong>$29.99</strong> <span class="fine">+ $12.50 service fee added at checkout</span></p>
+
+  <form>
+    <p>Name <input type="text"></p>
+    <p>Email <input type="email"></p>
+    <p>Date of birth <input type="text"></p>
+    <p>Phone number <input type="text"></p>
+    <p>National ID number <input type="text"></p>
+    <p><input type="checkbox" checked> Send me offers every day</p>
+    <p><input type="checkbox" checked> Share my information with our partners</p>
+  </form>
+
+  <div class="buy" onclick="alert('Order placed!')">Buy now</div>
+  <p><a href="#" style="color:#999">No thanks, I don't like saving money</a></p>
+
+  <p class="fine">To cancel your membership, call our office between 9:00 and 9:15 on Tuesdays.</p>
+
+  <div class="chat">
+    <strong>Sofia</strong><br>
+    Hi! I'm Sofia from the MegaDeals team. I picked these headphones just for you!
+  </div>
+
+  <script>
+    // A fake countdown: it starts again every time the page loads.
+    let seconds = 300;
+    setInterval(() => {
+      seconds = Math.max(0, seconds - 1);
+      const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const s = String(seconds % 60).padStart(2, '0');
+      document.getElementById('timer').textContent = `${m}:${s}`;
+    }, 1000);
+  </script>
+</body>
+</html>

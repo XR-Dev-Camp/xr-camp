@@ -3,12 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ethics, Accessibility, Privacy, and Responsible AI - XR Camp reference solution</title>
+  <meta name="description" content="An ethics audit of a fictional shop, and a personal pledge for building technology responsibly.">
+  <title>My ethics audit and pledge - XR Camp reference solution</title>
+  <style>
+    :root { --text: #1b1b1f; --muted: #4a4a55; --paper: #fdfcf8; --card: #fff; --accent: #5b2a86; --focus: #d62f6b; }
+    body { max-width: 52rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--paper); }
+    .table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+    table { border-collapse: collapse; width: 100%; min-width: 38rem; background: var(--card); }
+    th, td { border: 1px solid #c9c4d4; padding: 0.5rem; text-align: left; vertical-align: top; }
+    caption { text-align: left; font-weight: 700; padding: 0.5rem 0; }
+    .pledge { padding: 1rem 1.5rem; background: var(--card); border-left: 6px solid var(--accent); border-radius: 0.5rem; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>My ethics audit and pledge</h1>
+    <p>What I found when I audited a website, and the promises I make for everything I build. By Ana.</p>
+  </header>
+
   <main>
-    <h1>Ethics, Accessibility, Privacy, and Responsible AI</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <section aria-labelledby="audited">
+      <h2 id="audited">What I audited</h2>
+      <p><a href="../starter/shop-demo.html">MegaDeals</a>, a fictional shop made for this lesson. It looks like many real shops. I tested it with my keyboard, read every word, including the small print, and filled in the form without submitting it.</p>
+    </section>
+
+    <section aria-labelledby="access">
+      <h2 id="access">Accessibility</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Accessibility problems I found</caption>
+          <thead><tr><th scope="col">Problem</th><th scope="col">Who it harms</th><th scope="col">How to fix it</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">The product image has no alt text</th><td>Blind people using a screen reader hear nothing, or the file name</td><td>Add <code>alt="Black wireless headphones"</code></td></tr>
+            <tr><th scope="row">"Buy now" is a <code>div</code>, not a button</th><td>Keyboard users cannot reach or press it</td><td>Use <code>&lt;button&gt;</code></td></tr>
+            <tr><th scope="row">Form fields have no labels</th><td>Screen-reader users do not know what to type</td><td>Use <code>&lt;label&gt;</code> for every field</td></tr>
+            <tr><th scope="row">The small print is very light grey</th><td>People with low vision, or anyone on a phone in sunlight</td><td>Dark enough text to meet WCAG contrast</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy">
+      <h2 id="privacy">Privacy and data</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Privacy problems I found</caption>
+          <thead><tr><th scope="col">Problem</th><th scope="col">Why it is wrong</th><th scope="col">How to fix it</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">It asks for date of birth, phone, and national ID number</th><td>A shop needs none of these to sell headphones. Data you never collect can never leak.</td><td>Ask only for what the order needs</td></tr>
+            <tr><th scope="row">"Share my information with our partners" is already ticked</th><td>Consent must be a real choice, made by the person</td><td>Leave it unticked, or remove it</td></tr>
+            <tr><th scope="row">Cancelling needs a phone call in a 15-minute window</th><td>Leaving should be as easy as joining</td><td>Add a cancel button in the account</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="deceptive">
+      <h2 id="deceptive">Deceptive design</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Deceptive patterns I found</caption>
+          <thead><tr><th scope="col">Pattern</th><th scope="col">What it does</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Fake urgency</th><td>The countdown starts again every time the page loads. The offer never really ends.</td></tr>
+            <tr><th scope="row">Hidden cost</th><td>A $12.50 fee appears only in tiny grey text, and is added at checkout.</td></tr>
+            <tr><th scope="row">Confirmshaming</th><td>The "No thanks, I don't like saving money" link makes you feel foolish for saying no.</td></tr>
+            <tr><th scope="row">Pre-ticked boxes</th><td>You agree to daily emails and data sharing unless you notice and untick them.</td></tr>
+            <tr><th scope="row">Hard to cancel</th><td>Easy to join, almost impossible to leave.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="ai">
+      <h2 id="ai">AI and honesty</h2>
+      <p>"Sofia from the MegaDeals team" is presented as a person, but a real shop would almost certainly use an automated chatbot here. People have a right to know when they are talking to a machine. And "picked just for you" gives no reason for the choice: I do not know what data it used, or whether it shows different prices to different people.</p>
+      <p><strong>Fix:</strong> label the chat as an automated assistant, and explain in plain words why a product is recommended.</p>
+    </section>
+
+    <section aria-labelledby="pledge-title">
+      <h2 id="pledge-title">My pledge</h2>
+      <div class="pledge">
+        <p>As a developer and designer, I promise to:</p>
+        <ol>
+          <li>Build for everyone: keyboard, screen reader, slow connection, old phone.</li>
+          <li>Collect only the data I need, and ask clearly before I collect it.</li>
+          <li>Never use fake urgency, hidden costs, or guilt to change someone's choice.</li>
+          <li>Say when people are talking to AI, and check AI output before I trust it.</li>
+          <li>Show people and cultures, including my own, with respect.</li>
+          <li>Keep people safe and comfortable in 3D and XR: no forced movement, and a way out.</li>
+          <li>Credit the work of others, and use only what I have the right to use.</li>
+        </ol>
+      </div>
+    </section>
   </main>
 </body>
 </html>

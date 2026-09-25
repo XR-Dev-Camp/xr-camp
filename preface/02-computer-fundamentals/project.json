@@ -2,7 +2,7 @@
   "id": "pre-02-computer-fundamentals",
   "courseId": "preface",
   "lessonId": "computer-fundamentals-02",
-  "status": "draft",
+  "status": "review",
   "phase": 0,
   "title": {
     "en": "Computer Fundamentals",
@@ -23,10 +23,10 @@
   "technologies": [
     "HTML"
   ],
-  "hasCode": false,
-  "starterPath": null,
-  "completedPath": null,
-  "demoPath": null,
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
   "accessibilityChecks": [
     "document-language",
     "heading-order",

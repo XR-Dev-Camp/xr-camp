@@ -2,23 +2,18 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Your map
+- [ ] Your name is in the title and the introduction.
+- [ ] Every organisation has one sentence, in your own words.
+- [ ] Your map has ten organisations, including OSI and the XR Guild.
+- [ ] Every card has at least one `data-tags` value, and appears with a filter.
+
+## Below the map
+- [ ] You listed the six steps from an idea to a standard.
+- [ ] You chose one real way to take part.
 
 ## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
-
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+- [ ] Every filter works with the keyboard: Tab to it, Enter or Space to press it.
+- [ ] The selected filter looks different by more than colour.
+- [ ] Without JavaScript, every organisation still shows.
+- [ ] `lang` at the top of the file matches your language.

@@ -2,18 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Ethics, Accessibility, Privacy, and Responsible AI - XR Camp starter</title>
+  <meta name="description" content="An ethics audit of a fictional shop, and a personal pledge for building technology responsibly.">
+  <!-- TODO 1: Put your name in the title and the paragraph under the heading. -->
+  <title>My ethics audit and pledge</title>
+  <style>
+    :root { --text: #1b1b1f; --muted: #4a4a55; --paper: #fdfcf8; --card: #fff; --accent: #5b2a86; --focus: #d62f6b; }
+    body { max-width: 52rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--paper); }
+    .table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+    table { border-collapse: collapse; width: 100%; min-width: 38rem; background: var(--card); }
+    th, td { border: 1px solid #c9c4d4; padding: 0.5rem; text-align: left; vertical-align: top; }
+    caption { text-align: left; font-weight: 700; padding: 0.5rem 0; }
+    .pledge { padding: 1rem 1.5rem; background: var(--card); border-left: 6px solid var(--accent); border-radius: 0.5rem; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>My ethics audit and pledge</h1>
+    <p>What I found when I audited a website, and the promises I make for everything I build.</p>
+  </header>
+
   <main>
-    <!-- Add your main heading below. -->
+    <section aria-labelledby="audited">
+      <h2 id="audited">What I audited</h2>
+      <p><a href="shop-demo.html">MegaDeals</a>, a fictional shop made for this lesson. It looks like many real shops. ?</p>
+      <!-- TODO 2: Say how you tested it: keyboard, reading the small print, filling in the form. -->
+    </section>
 
-    <!-- Add your project content below. -->
+    <section aria-labelledby="access">
+      <h2 id="access">Accessibility</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Accessibility problems I found</caption>
+          <thead><tr><th scope="col">Problem</th><th scope="col">Who it harms</th><th scope="col">How to fix it</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">The product image has no alt text</th><td>Blind people using a screen reader hear nothing, or the file name</td><td>Add <code>alt="Black wireless headphones"</code></td></tr>
+            <!-- TODO 3: The first row is an example. Test MegaDeals with your keyboard and add every other accessibility problem you find. -->
+          </tbody>
+        </table>
+      </div>
+    </section>
 
+    <section aria-labelledby="privacy">
+      <h2 id="privacy">Privacy and data</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Privacy problems I found</caption>
+          <thead><tr><th scope="col">Problem</th><th scope="col">Why it is wrong</th><th scope="col">How to fix it</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">It asks for date of birth, phone, and national ID number</th><td>A shop needs none of these to sell headphones. Data you never collect can never leak.</td><td>Ask only for what the order needs</td></tr>
+            <!-- TODO 4: Add every privacy problem you find. Ask: does a shop really need this? -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="deceptive">
+      <h2 id="deceptive">Deceptive design</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Deceptive patterns I found</caption>
+          <thead><tr><th scope="col">Pattern</th><th scope="col">What it does</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Fake urgency</th><td>The countdown starts again every time the page loads. The offer never really ends.</td></tr>
+            <!-- TODO 5: Add every deceptive pattern you find, using the names in the lesson guide. -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="ai">
+      <h2 id="ai">AI and honesty</h2>
+      <!-- TODO 6: Who is Sofia? What should people be told? -->
+      <p>?</p>
+    </section>
+
+    <section aria-labelledby="pledge-title">
+      <h2 id="pledge-title">My pledge</h2>
+      <div class="pledge">
+        <p>As a developer and designer, I promise to:</p>
+        <ol>
+          <!-- TODO 7: Write at least five promises, in your own words. -->
+          <li>?</li>
+        </ol>
+      </div>
+    </section>
   </main>
 </body>
 </html>

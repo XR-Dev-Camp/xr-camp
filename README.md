@@ -21,7 +21,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 
 | Phase | You will build | Time | Lessons ready |
 | --- | --- | --- | --- |
-| [0 · Welcome to the Future](preface/README.md) | Your first 3D world, a timeline of the web, and a lab comparing three ways to build in 3D. | 64 sessions · about 4 months | 3 of 9 |
+| [0 · Welcome to the Future](preface/README.md) | Your first 3D world, a timeline of the web, and a lab comparing three ways to build in 3D. | 64 sessions · about 4 months | 9 of 9 |
 | [1 · Become a Web Developer](web-developer/README.md) | Accessible, responsive websites, published for anyone in the world to visit. | 144 sessions · about 8 months | 1 of 9 |
 | [2 · Become a Frontend Engineer](frontend-engineer/README.md) | Web apps that install on a phone, work offline, and use live data. | 145 sessions · about 8 months | 0 of 9 |
 | [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions · about 8 months | 0 of 7 |
@@ -39,14 +39,14 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
 | 1 | [Welcome to XR Camp](preface/01-welcome-to-xr-camp/README.md) | 2 h · 3 sessions | ✅ Ready |
-| 2 | [Computer Fundamentals](preface/02-computer-fundamentals/README.md) | 6 h · 8 sessions | 🚧 Coming soon |
-| 3 | [The Internet and the Web](preface/03-the-internet-and-the-web/README.md) | 5 h · 7 sessions | 🚧 Coming soon |
+| 2 | [Computer Fundamentals](preface/02-computer-fundamentals/README.md) | 6 h · 8 sessions | ✅ Ready |
+| 3 | [The Internet and the Web](preface/03-the-internet-and-the-web/README.md) | 5 h · 7 sessions | ✅ Ready |
 | 4 | [History of the Web](preface/04-history-of-the-web/README.md) | 5 h · 7 sessions | ✅ Ready |
 | 5 | [History of Web3D](preface/05-history-of-web3d/README.md) | 6 h · 8 sessions | ✅ Ready |
-| 6 | [The Spatial Web](preface/06-the-spatial-web/README.md) | 5 h · 7 sessions | 🚧 Coming soon |
-| 7 | [Organizations Building the Future](preface/07-organizations-building-the-future/README.md) | 6 h · 8 sessions | 🚧 Coming soon |
-| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](preface/08-ethics-accessibility-privacy-and-responsible-ai/README.md) | 7 h · 10 sessions | 🚧 Coming soon |
-| 9 | [Careers in the Spatial Web](preface/09-careers-in-the-spatial-web/README.md) | 4 h · 6 sessions | 🚧 Coming soon |
+| 6 | [The Spatial Web](preface/06-the-spatial-web/README.md) | 5 h · 7 sessions | ✅ Ready |
+| 7 | [Organizations Building the Future](preface/07-organizations-building-the-future/README.md) | 6 h · 8 sessions | ✅ Ready |
+| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](preface/08-ethics-accessibility-privacy-and-responsible-ai/README.md) | 7 h · 10 sessions | ✅ Ready |
+| 9 | [Careers in the Spatial Web](preface/09-careers-in-the-spatial-web/README.md) | 4 h · 6 sessions | ✅ Ready |
 
 ### Phase 1 · Become a Web Developer
 

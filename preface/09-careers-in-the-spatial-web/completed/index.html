@@ -3,12 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Careers in the Spatial Web - XR Camp reference solution</title>
+  <meta name="description" content="A personal career pathway and skills map for the spatial web.">
+  <title>My path into the spatial web - XR Camp reference solution</title>
+  <style>
+    :root { --text: #1b1b1f; --muted: #4a4a55; --paper: #fdfcf8; --card: #fff; --accent: #5b2a86; --focus: #d62f6b; }
+    body { max-width: 56rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--paper); }
+    .roles { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); padding: 0; list-style: none; }
+    .role { padding: 1rem; background: var(--card); border: 1px solid #c9c4d4; border-radius: 0.5rem; }
+    .role h3 { margin: 0 0 0.25rem; }
+    .role p { margin: 0 0 0.5rem; }
+    .mine { border: 3px solid var(--accent); }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; min-width: 34rem; background: var(--card); }
+    th, td { border: 1px solid #c9c4d4; padding: 0.5rem; text-align: left; vertical-align: top; }
+    caption { text-align: left; font-weight: 700; padding: 0.5rem 0; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>My path into the spatial web</h1>
+    <p>The roles that interest me, the skills they need, and my plan to get there. By Ana.</p>
+  </header>
+
   <main>
-    <h1>Careers in the Spatial Web</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <section aria-labelledby="mine">
+      <h2 id="mine">The roles I am aiming for</h2>
+      <ol>
+        <li><strong>Web3D and XR developer</strong>, because I want to build the museum of my town's history that nobody has built yet.</li>
+        <li><strong>Accessibility specialist</strong>, because my grandmother is blind and most websites shut her out.</li>
+        <li><strong>Developer advocate and educator</strong>, because one day I want to teach at XR Camp.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">My skills map</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>The skills my roles need, where XR Camp teaches them, and where I am now</caption>
+          <thead><tr><th scope="col">Skill</th><th scope="col">Where XR Camp teaches it</th><th scope="col">Where I am now</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">HTML and CSS</th><td>Phase 1</td><td>Started</td></tr>
+            <tr><th scope="row">Accessibility and testing</th><td>Phase 1, and every lesson</td><td>Started</td></tr>
+            <tr><th scope="row">JavaScript</th><td>Phases 1 and 2</td><td>Not yet</td></tr>
+            <tr><th scope="row">A-Frame and three.js</th><td>Phase 3</td><td>Started: I built a 3D world in Course 0.1</td></tr>
+            <tr><th scope="row">WebXR</th><td>Phase 4</td><td>Not yet</td></tr>
+            <tr><th scope="row">Teaching and explaining</th><td>Course 6.5, and writing every lesson in my own words</td><td>Started</td></tr>
+            <tr><th scope="row">English for reading documentation</th><td>Practised in every lesson</td><td>Confident</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="path">
+      <h2 id="path">My pathway</h2>
+      <ol>
+        <li><strong>By March:</strong> finish Phase 0, and publish this page.</li>
+        <li><strong>By November:</strong> finish Phase 1, with a portfolio of accessible websites.</li>
+        <li><strong>Next year:</strong> Phases 2 and 3, and my first 3D exhibit about my town.</li>
+        <li><strong>The year after:</strong> Phase 4, and my exhibit in VR.</li>
+      </ol>
+      <p>I study four evenings a week, for 45 minutes, after my children are asleep.</p>
+    </section>
+
+    <section aria-labelledby="people">
+      <h2 id="people">People to learn from</h2>
+      <ul>
+        <li>The women in every lesson's "Women to Know" section.</li>
+        <li>A developer at my town's museum, who agreed to talk to me once a month.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="all-roles">
+      <h2 id="all-roles">Roles in the spatial web</h2>
+      <p>The twelve roles I explored. The ones I am aiming for have a thick border.</p>
+      <ul class="roles">
+        <li class="role"><h3>Frontend developer</h3><p>Builds the parts of websites and apps that people see and use.</p><p><strong>XR Camp:</strong> Phases 1–2</p></li>
+        <li class="role"><h3>Web and UX designer</h3><p>Designs how products look, feel, and work, based on research with real users.</p><p><strong>XR Camp:</strong> every phase, especially 1 and 4</p></li>
+        <li class="role mine"><h3>Accessibility specialist</h3><p>Makes sure products work for disabled people, and tests with assistive technology.</p><p><strong>XR Camp:</strong> every lesson, especially 1.5 and 4.4</p></li>
+        <li class="role"><h3>JavaScript engineer</h3><p>Writes the logic behind interactive applications.</p><p><strong>XR Camp:</strong> Phases 1, 2, and 5</p></li>
+        <li class="role mine"><h3>Web3D and XR developer</h3><p>Builds 3D and immersive experiences that run in a browser.</p><p><strong>XR Camp:</strong> Phases 3 and 4</p></li>
+        <li class="role"><h3>Spatial UX designer</h3><p>Designs how people move, point, and feel comfortable in 3D and XR.</p><p><strong>XR Camp:</strong> Course 4.3</p></li>
+        <li class="role"><h3>Technical artist</h3><p>Connects art and code: prepares 3D models, materials, and effects so they look good and run fast.</p><p><strong>XR Camp:</strong> Phase 3</p></li>
+        <li class="role"><h3>Geospatial developer</h3><p>Builds maps and applications that work with location data.</p><p><strong>XR Camp:</strong> the optional geospatial track</p></li>
+        <li class="role"><h3>Digital twin developer</h3><p>Builds live 3D copies of real buildings, factories, or cities, connected to sensor data.</p><p><strong>XR Camp:</strong> Phases 3 and 5</p></li>
+        <li class="role"><h3>AI-assisted developer</h3><p>Uses AI tools to build faster, while checking and understanding every result.</p><p><strong>XR Camp:</strong> Courses 2.8 and 5.6</p></li>
+        <li class="role"><h3>Standards contributor</h3><p>Helps write the web's standards, in organisations like W3C.</p><p><strong>XR Camp:</strong> Courses 0.7 and 6.3</p></li>
+        <li class="role mine"><h3>Developer advocate and educator</h3><p>Teaches developers, writes documentation, and builds communities.</p><p><strong>XR Camp:</strong> Courses 6.3 and 6.5</p></li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>

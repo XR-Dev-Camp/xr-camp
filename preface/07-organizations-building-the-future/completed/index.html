@@ -3,12 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Organizations Building the Future - XR Camp reference solution</title>
+  <meta name="description" content="Who writes the rules of the web: an interactive map of standards organisations and the technologies they maintain.">
+  <title>Who builds the web - XR Camp reference solution</title>
+  <style>
+    :root { --text: #1b1b1f; --muted: #4a4a55; --paper: #fdfcf8; --card: #fff; --accent: #5b2a86; --focus: #d62f6b; }
+    body { max-width: 60rem; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--paper); }
+    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; list-style: none; }
+    .filters button { font: inherit; padding: 0.4rem 0.9rem; border: 2px solid var(--accent); border-radius: 999px; background: #fff; color: var(--accent); cursor: pointer; }
+    .filters button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+    .orgs { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); padding: 0; list-style: none; }
+    .org { padding: 1rem; background: var(--card); border: 1px solid #c9c4d4; border-top: 6px solid var(--accent); border-radius: 0.5rem; }
+    .org h3 { margin: 0; }
+    .techs { display: flex; flex-wrap: wrap; gap: 0.35rem; padding: 0; list-style: none; }
+    .techs li { padding: 0.1rem 0.5rem; background: #efe9f7; border-radius: 0.25rem; font-size: 0.9rem; }
+    .join { color: var(--muted); }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Who builds the web</h1>
+    <p>The organisations that write the web's rules, and the technologies each one looks after. By Ana.</p>
+  </header>
+
   <main>
-    <h1>Organizations Building the Future</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <section aria-labelledby="map">
+      <h2 id="map">The map</h2>
+
+      <!-- Hidden until the script runs: without JavaScript, every organisation shows. -->
+      <div id="filter-panel" hidden>
+        <p id="filter-label">Show the organisations behind:</p>
+        <ul class="filters" aria-labelledby="filter-label">
+          <li><button type="button" data-filter="all" aria-pressed="true">Everything</button></li>
+          <li><button type="button" data-filter="html" aria-pressed="false">HTML and CSS</button></li>
+          <li><button type="button" data-filter="js" aria-pressed="false">JavaScript</button></li>
+          <li><button type="button" data-filter="network" aria-pressed="false">HTTP and addresses</button></li>
+          <li><button type="button" data-filter="3d" aria-pressed="false">3D</button></li>
+          <li><button type="button" data-filter="xr" aria-pressed="false">XR</button></li>
+          <li><button type="button" data-filter="maps" aria-pressed="false">Maps</button></li>
+          <li><button type="button" data-filter="open" aria-pressed="false">Open source and ethics</button></li>
+        </ul>
+        <p id="count" aria-live="polite"></p>
+      </div>
+
+      <ul class="orgs" id="orgs">
+        <li class="org" data-tags="html xr 3d">
+          <h3>W3C</h3>
+          <p>The World Wide Web Consortium, founded by Tim Berners-Lee in 1994. Writes most of the web's standards.</p>
+          <ul class="techs"><li>CSS</li><li>WCAG</li><li>SVG</li><li>WebXR</li><li>WebGPU</li></ul>
+          <p class="join">Anyone can join a W3C Community Group for free.</p>
+        </li>
+        <li class="org" data-tags="html">
+          <h3>WHATWG</h3>
+          <p>A group formed by browser makers in 2004. Maintains the HTML Living Standard, which W3C also endorses.</p>
+          <ul class="techs"><li>HTML</li><li>DOM</li><li>Fetch</li><li>URL</li></ul>
+          <p class="join">Anyone can comment on its standards on GitHub.</p>
+        </li>
+        <li class="org" data-tags="js">
+          <h3>Ecma International</h3>
+          <p>Its committee TC39 maintains ECMAScript, the standard behind JavaScript, with a new edition every year.</p>
+          <ul class="techs"><li>JavaScript (ECMAScript)</li></ul>
+          <p class="join">TC39's proposals are discussed openly on GitHub.</p>
+        </li>
+        <li class="org" data-tags="network">
+          <h3>IETF</h3>
+          <p>The Internet Engineering Task Force. Writes the internet's protocols as documents called RFCs.</p>
+          <ul class="techs"><li>HTTP</li><li>TLS</li><li>DNS</li></ul>
+          <p class="join">Anyone can take part through its mailing lists, with no membership.</p>
+        </li>
+        <li class="org" data-tags="3d xr">
+          <h3>Khronos Group</h3>
+          <p>A consortium of companies that write graphics and 3D standards.</p>
+          <ul class="techs"><li>WebGL</li><li>glTF</li><li>OpenXR</li><li>KTX</li></ul>
+          <p class="join">Membership is paid, but its specifications and samples are free to use.</p>
+        </li>
+        <li class="org" data-tags="3d">
+          <h3>Web3D Consortium</h3>
+          <p>Looks after X3D, the ISO standard for 3D scenes that grew from VRML.</p>
+          <ul class="techs"><li>X3D</li><li>VRML</li><li>H-Anim</li></ul>
+          <p class="join">Its specifications are free to read online.</p>
+        </li>
+        <li class="org" data-tags="maps 3d">
+          <h3>Open Geospatial Consortium (OGC)</h3>
+          <p>Writes standards for maps and location data, so that maps from different sources can work together.</p>
+          <ul class="techs"><li>Web map services</li><li>CityGML</li><li>3D Tiles</li></ul>
+          <p class="join">Its standards are free to download.</p>
+        </li>
+        <li class="org" data-tags="xr 3d">
+          <h3>Metaverse Standards Forum</h3>
+          <p>Founded in 2022. Not a standards body itself: it brings standards organisations and companies together so their standards fit.</p>
+          <ul class="techs"><li>Coordination between standards</li></ul>
+          <p class="join">Joining is free for organisations.</p>
+        </li>
+        <li class="org" data-tags="open">
+          <h3>Open Source Initiative (OSI)</h3>
+          <p>Maintains the Open Source Definition and approves which licences count as open source.</p>
+          <ul class="techs"><li>Open source licences</li></ul>
+          <p class="join">Anyone can take part in its public discussions.</p>
+        </li>
+        <li class="org" data-tags="xr open">
+          <h3>XR Guild</h3>
+          <p>A professional association for people who work in XR, focused on ethics and responsible practice.</p>
+          <ul class="techs"><li>Ethical principles for XR</li></ul>
+          <p class="join">Individuals can become members.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="process">
+      <h2 id="process">How a standard is made</h2>
+      <ol>
+        <li><strong>An idea.</strong> Someone has a problem the web cannot solve yet.</li>
+        <li><strong>A community group or explainer.</strong> People write down the problem and possible solutions, in public.</li>
+        <li><strong>A working group.</strong> Browser makers, companies, and experts agree to write a specification.</li>
+        <li><strong>Drafts and review.</strong> The draft is reviewed for accessibility, privacy, security, and internationalisation.</li>
+        <li><strong>Implementations and tests.</strong> Browsers build it, and shared tests check they all behave the same.</li>
+        <li><strong>A standard.</strong> Once it works in more than one browser, it becomes a recommendation.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="me">
+      <h2 id="me">How I could take part</h2>
+      <p>I joined the W3C Immersive Web Community Group, and I will read one issue a week. When I find a mistake in documentation, I will report it.</p>
+    </section>
   </main>
+
+  <script>
+    // Progressive enhancement: filter the map by technology.
+    const buttons = [...document.querySelectorAll('[data-filter]')];
+    const orgs = [...document.querySelectorAll('#orgs .org')];
+    const count = document.getElementById('count');
+
+    function filter(tag) {
+      let shown = 0;
+      orgs.forEach((org) => {
+        const match = tag === 'all' || org.dataset.tags.split(' ').includes(tag);
+        org.hidden = !match;
+        if (match) shown++;
+      });
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === tag)));
+      count.textContent = `Showing ${shown} of ${orgs.length} organisations.`;
+    }
+
+    buttons.forEach((b) => b.addEventListener('click', () => filter(b.dataset.filter)));
+    document.getElementById('filter-panel').hidden = false;
+    filter('all');
+  </script>
 </body>
 </html>

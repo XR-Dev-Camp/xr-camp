@@ -2,23 +2,18 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Your audit
+- [ ] Your name is in the title and the introduction.
+- [ ] You tested MegaDeals with the keyboard only.
+- [ ] Every table has at least three findings, each with who it harms or why it is wrong.
+- [ ] Every problem has a fix.
+- [ ] Your AI section explains what people should be told.
 
-## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+## Your pledge
+- [ ] At least five promises, in your own words.
+- [ ] Each promise is something you can actually do.
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+## Structure and accessibility
+- [ ] Every table has a `<caption>`, and header cells use `scope`.
+- [ ] Headings are in order: one `h1`, sections as `h2`.
+- [ ] `lang` at the top of the file matches your language.

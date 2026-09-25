@@ -17,11 +17,11 @@
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
 | 1 | [Welcome to XR Camp](01-welcome-to-xr-camp/README.md) | 2 h · 3 sessions | ✅ Ready |
-| 2 | [Computer Fundamentals](02-computer-fundamentals/README.md) | 6 h · 8 sessions | 🚧 Coming soon |
-| 3 | [The Internet and the Web](03-the-internet-and-the-web/README.md) | 5 h · 7 sessions | 🚧 Coming soon |
+| 2 | [Computer Fundamentals](02-computer-fundamentals/README.md) | 6 h · 8 sessions | ✅ Ready |
+| 3 | [The Internet and the Web](03-the-internet-and-the-web/README.md) | 5 h · 7 sessions | ✅ Ready |
 | 4 | [History of the Web](04-history-of-the-web/README.md) | 5 h · 7 sessions | ✅ Ready |
 | 5 | [History of Web3D](05-history-of-web3d/README.md) | 6 h · 8 sessions | ✅ Ready |
-| 6 | [The Spatial Web](06-the-spatial-web/README.md) | 5 h · 7 sessions | 🚧 Coming soon |
-| 7 | [Organizations Building the Future](07-organizations-building-the-future/README.md) | 6 h · 8 sessions | 🚧 Coming soon |
-| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](08-ethics-accessibility-privacy-and-responsible-ai/README.md) | 7 h · 10 sessions | 🚧 Coming soon |
-| 9 | [Careers in the Spatial Web](09-careers-in-the-spatial-web/README.md) | 4 h · 6 sessions | 🚧 Coming soon |
+| 6 | [The Spatial Web](06-the-spatial-web/README.md) | 5 h · 7 sessions | ✅ Ready |
+| 7 | [Organizations Building the Future](07-organizations-building-the-future/README.md) | 6 h · 8 sessions | ✅ Ready |
+| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](08-ethics-accessibility-privacy-and-responsible-ai/README.md) | 7 h · 10 sessions | ✅ Ready |
+| 9 | [Careers in the Spatial Web](09-careers-in-the-spatial-web/README.md) | 4 h · 6 sessions | ✅ Ready |

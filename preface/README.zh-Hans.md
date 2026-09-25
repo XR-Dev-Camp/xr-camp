@@ -17,11 +17,11 @@
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
 | 1 | [欢迎来到 XR Camp](01-welcome-to-xr-camp/README.zh-Hans.md) | 2 小时 · 3 次学习 | ✅ 已完成 |
-| 2 | [Computer Fundamentals](02-computer-fundamentals/README.zh-Hans.md) | 6 小时 · 8 次学习 | 🚧 即将推出 |
-| 3 | [The Internet and the Web](03-the-internet-and-the-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | 🚧 即将推出 |
+| 2 | [Computer Fundamentals](02-computer-fundamentals/README.zh-Hans.md) | 6 小时 · 8 次学习 | ✅ 已完成 |
+| 3 | [The Internet and the Web](03-the-internet-and-the-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | ✅ 已完成 |
 | 4 | [万维网发展史](04-history-of-the-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | ✅ 已完成 |
 | 5 | [Web3D 发展史](05-history-of-web3d/README.zh-Hans.md) | 6 小时 · 8 次学习 | ✅ 已完成 |
-| 6 | [The Spatial Web](06-the-spatial-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | 🚧 即将推出 |
-| 7 | [Organizations Building the Future](07-organizations-building-the-future/README.zh-Hans.md) | 6 小时 · 8 次学习 | 🚧 即将推出 |
-| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](08-ethics-accessibility-privacy-and-responsible-ai/README.zh-Hans.md) | 7 小时 · 10 次学习 | 🚧 即将推出 |
-| 9 | [Careers in the Spatial Web](09-careers-in-the-spatial-web/README.zh-Hans.md) | 4 小时 · 6 次学习 | 🚧 即将推出 |
+| 6 | [The Spatial Web](06-the-spatial-web/README.zh-Hans.md) | 5 小时 · 7 次学习 | ✅ 已完成 |
+| 7 | [Organizations Building the Future](07-organizations-building-the-future/README.zh-Hans.md) | 6 小时 · 8 次学习 | ✅ 已完成 |
+| 8 | [Ethics, Accessibility, Privacy, and Responsible AI](08-ethics-accessibility-privacy-and-responsible-ai/README.zh-Hans.md) | 7 小时 · 10 次学习 | ✅ 已完成 |
+| 9 | [Careers in the Spatial Web](09-careers-in-the-spatial-web/README.zh-Hans.md) | 4 小时 · 6 次学习 | ✅ 已完成 |
