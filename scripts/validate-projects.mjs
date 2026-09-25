@@ -50,7 +50,11 @@ const CODE_FILES = ['starter/index.html', 'completed/index.html'];
 // review: English complete, awaiting review and translation.
 // published: complete in every language; ready to show to learners.
 const STATUSES = ['draft', 'review', 'published'];
-const PLACEHOLDERS = ['_Content to be authored._', '_To be authored._', 'Reference solution placeholder'];
+const PLACEHOLDERS = [
+  '_Content to be authored._', '_To be authored._', 'Reference solution placeholder',
+  '_Contenido pendiente de redacción._', '_Pendiente de redacción._', // Spanish templates
+  '_内容待撰写。_', '_待撰写。_', // Chinese templates
+];
 const UNTRANSLATED = 'TODO: translate';
 
 // Automated audits cannot see inside a 3D canvas, so 3D lessons must declare
@@ -236,7 +240,9 @@ async function main() {
         }
       }
       if (p.status === 'published') {
-        for (const rel of ['README.es.md', 'README.zh-Hans.md']) {
+        const translated = ['README.es.md', 'README.zh-Hans.md'];
+        for (const n of [1, 2, 3]) translated.push(`challenges/challenge-${n}.es.md`, `challenges/challenge-${n}.zh-Hans.md`);
+        for (const rel of translated) {
           const text = await read(join(dir, rel));
           if (text.includes(UNTRANSLATED) || PLACEHOLDERS.some((ph) => text.includes(ph))) {
             fail(where, `${rel} is not fully translated but status is "published"`);
