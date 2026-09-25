@@ -1,6 +1,6 @@
 # Commercial and Institutional Use
 
-**Status: draft pending legal review.** This document describes intent. It is not a license and does not grant rights. The operative terms are in [`LICENSE-CONTENT`](../LICENSE-CONTENT) and [`LICENSE-CODE`](LICENSE-CODE), and `LICENSE-CODE` is not yet finalised.
+**Status: draft pending legal review.** This document describes intent. It is not a license and does not grant rights. The operative terms are in [`LICENSE-CONTENT`](../LICENSE-CONTENT) and [`LICENSE-CODE`](../LICENSE-CODE), and `LICENSE-CODE` is not yet finalised.
 
 ---
 
