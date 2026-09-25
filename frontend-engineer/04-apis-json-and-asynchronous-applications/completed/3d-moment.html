@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: the forecast as 3D bars - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>a-scene { display: block; width: 100%; height: 22rem; border-radius: var(--radius); }</style>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>The forecast as 3D bars</h1>
+    <p>Seven bars, one for each day: the taller the bar, the warmer the day. The bluer the bar, the more likely it is to rain. The same data is in the table below.</p>
+    <p id="status" role="status"></p>
+    <p id="scene-description">Loading the forecast…</p>
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+      <a-sky color="#eef4ff"></a-sky>
+      <a-plane rotation="-90 0 0" width="12" height="12" color="#dcd6e6"></a-plane>
+      <a-entity id="bars" position="0 0 -5"></a-entity>
+      <!-- A fixed camera: the view never moves, so nothing can make anyone dizzy. -->
+      <a-entity camera position="0 1.8 0" rotation="-12 0 0" look-controls="enabled: false" wasd-controls="enabled: false"></a-entity>
+    </a-scene>
+    <div id="table"></div>
+    <p class="source">Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>, under CC BY 4.0. If the service cannot be reached, this page uses sample data.</p>
+    <p><a href="index.html">Back to the dashboard</a></p>
+  </main>
+
+  <script type="module">
+    import { CITIES } from './js/config.js';
+    import { fetchForecast, fetchSample } from './js/api.js';
+    import { toDays, dayName } from './js/forecast.js';
+    import { renderForecast } from './js/view.js';
+
+    const city = CITIES[0];
+    const bars = document.querySelector('#bars');
+
+    // Data first, then two views of it: the 3D bars and the table. Both come
+    // from the same array, so they can never disagree.
+    async function getDays() {
+      try {
+        return { days: toDays(await fetchForecast(city)), place: city.name, live: true };
+      } catch {
+        return { days: toDays(await fetchSample()), place: 'the sample city', live: false };
+      }
+    }
+
+    // Rain chance 0% → sand; 100% → deep blue. Colour is never the only
+    // signal: the description and the table give the numbers.
+    function rainColour(rain) {
+      const mix = rain / 100;
+      const r = Math.round(224 - mix * (224 - 31));
+      const g = Math.round(165 - mix * (165 - 78));
+      const b = Math.round(38 + mix * (156 - 38));
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function drawBars(days) {
+      const spacing = 1.1;
+      bars.replaceChildren(...days.map((day, i) => {
+        const height = Math.max(0.2, day.max / 10);   // 25 °C → 2.5 m
+        const bar = document.createElement('a-box');
+        bar.setAttribute('width', 0.7);
+        bar.setAttribute('depth', 0.7);
+        bar.setAttribute('height', height);
+        bar.setAttribute('position', `${(i - (days.length - 1) / 2) * spacing} ${height / 2} 0`);
+        bar.setAttribute('color', rainColour(day.rain));
+        return bar;
+      }));
+    }
+
+    function describe(days, place) {
+      const warmest = days.reduce((a, b) => (b.max > a.max ? b : a));
+      const wettest = days.reduce((a, b) => (b.rain > a.rain ? b : a));
+      return `Seven bars in a row for ${place}, from ${dayName(days[0].date)} on the left to ${dayName(days.at(-1).date)} on the right. `
+        + `The tallest bar is ${dayName(warmest.date)}, at ${Math.round(warmest.max)} °C. `
+        + `The bluest bar is ${dayName(wettest.date)}, with a ${wettest.rain}% chance of rain. Nothing moves.`;
+    }
+
+    const { days, place, live } = await getDays();
+    drawBars(days);
+    document.querySelector('#scene-description').textContent = describe(days, place);
+    renderForecast(document.querySelector('#table'), days, place, live ? 'Live data from Open-Meteo.com.' : 'Sample data: not a real forecast.');
+    document.querySelector('#status').textContent = live ? '' : 'The live forecast could not load, so this is sample data.';
+  </script>
+</body>
+</html>

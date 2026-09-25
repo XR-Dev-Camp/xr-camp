@@ -3,12 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>APIs, JSON, and Asynchronous Applications - XR Camp reference solution</title>
+  <meta name="description" content="A 7-day forecast to help you plan your XR Camp study week.">
+  <title>Study-week weather - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>My XR Camp</p></header>
+
   <main>
-    <h1>APIs, JSON, and Asynchronous Applications</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Study-week weather</h1>
+    <p>Walking to a study group or a library this week? Check the forecast, and plan your sessions on the driest days.</p>
+    <noscript><p>This dashboard needs JavaScript to fetch the forecast.</p></noscript>
+
+    <p id="status" role="status" class="visually-hidden"></p>
+
+    <!-- Hidden until main.js has loaded, so it never appears without working. -->
+    <form id="controls" class="panel controls" hidden>
+      <p>
+        <label for="city">City</label><br>
+        <select id="city"></select>
+      </p>
+      <p>
+        <input type="checkbox" id="use-sample">
+        <label for="use-sample">Use sample data (works offline)</label>
+      </p>
+      <p><button type="submit" id="refresh" class="secondary">Refresh</button></p>
+    </form>
+
+    <section aria-labelledby="forecast-heading">
+      <h2 id="forecast-heading">Forecast</h2>
+      <div id="result"></div>
+    </section>
+
+    <p class="source">Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>, under CC BY 4.0.</p>
+    <p><a href="3d-moment.html">Try the 3D moment: the forecast as 3D bars</a></p>
   </main>
 </body>
 </html>

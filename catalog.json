@@ -550,7 +550,7 @@
       "id": "fe-04-apis-json-and-asynchronous-applications",
       "courseId": "frontend-engineer",
       "lessonId": "apis-json-and-asynchronous-applications-04",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "APIs, JSON, and Asynchronous Applications",
@@ -564,7 +564,10 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "JavaScript"
+        "JavaScript",
+        "Fetch API",
+        "JSON",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "frontend-engineer/04-apis-json-and-asynchronous-applications"
