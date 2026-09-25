@@ -52,10 +52,13 @@ jobs:
           # 403 is accepted because many news and publisher sites refuse bots.
           # The Women to Know roster is research notes full of such sites, so
           # its sources are checked by editors before publication instead.
+          # README-example and README-template files are for learners to copy
+          # into their own repositories, so their links point at files there.
           args: >-
             --no-progress --exclude-loopback --max-retries 3 --timeout 30
             --accept 200,202,206,403,429
             --exclude-path docs/en/women-to-know.md
+            --exclude-path 'README-(example|template)\.md$'
             '**/*.md'
           fail: true
 

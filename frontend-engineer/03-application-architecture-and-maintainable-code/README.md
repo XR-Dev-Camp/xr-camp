@@ -302,7 +302,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 - [MDN: JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 - [MDN: Progressive enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement)
-- [MDN: Pure function (glossary)](https://developer.mozilla.org/en-US/docs/Glossary/Pure_function)
+- [Wikipedia: Pure function](https://en.wikipedia.org/wiki/Pure_function)
 - [MDN: innerHTML, security considerations](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#security_considerations)
 - [A-Frame: Writing a component](https://aframe.io/docs/1.8.0/introduction/writing-a-component.html)
 
