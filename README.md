@@ -146,8 +146,8 @@ Every project must work with a keyboard and a screen reader, meet WCAG 2.2 AA co
 
 ## Teach, mentor, translate, or contribute
 
-XR Camp is built by its community. Read the [contributing guide](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md). Found a security or privacy problem? Please report it privately: see [SECURITY.md](SECURITY.md). The website’s source is in [`website/`](website/).
+XR Camp is built by its community. Read the [contributing guide](.github/CONTRIBUTING.md) and the [code of conduct](.github/CODE_OF_CONDUCT.md). Found a security or privacy problem? Please report it privately: see [.github/SECURITY.md](.github/SECURITY.md). The website’s source is in [`website/`](website/).
 
 ## License
 
-Code: [LICENSE-CODE](LICENSE-CODE). Lessons, documentation, and images: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Commercial and institutional use: [COMMERCIAL_USE.md](COMMERCIAL_USE.md). Third-party material: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [ATTRIBUTION.md](ATTRIBUTION.md).
+Code: [LICENSE-CODE](LICENSE-CODE). Lessons, documentation, and images: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Commercial and institutional use: [docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md). Third-party material: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) and [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).

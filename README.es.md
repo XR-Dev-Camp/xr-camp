@@ -146,8 +146,8 @@ Cada proyecto debe funcionar con teclado y lector de pantalla, cumplir el contra
 
 ## Enseña, sé mentora o mentor, traduce o contribuye
 
-XR Camp la construye su comunidad. Lee la [guía para contribuir](CONTRIBUTING.md) y el [código de conducta](CODE_OF_CONDUCT.md). ¿Has encontrado un problema de seguridad o privacidad? Infórmalo en privado: consulta [SECURITY.md](SECURITY.md). El código del sitio web está en [`website/`](website/).
+XR Camp la construye su comunidad. Lee la [guía para contribuir](.github/CONTRIBUTING.md) y el [código de conducta](.github/CODE_OF_CONDUCT.md). ¿Has encontrado un problema de seguridad o privacidad? Infórmalo en privado: consulta [.github/SECURITY.md](.github/SECURITY.md). El código del sitio web está en [`website/`](website/).
 
 ## Licencia
 
-Código: [LICENSE-CODE](LICENSE-CODE). Lecciones, documentación e imágenes: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Uso comercial e institucional: [COMMERCIAL_USE.md](COMMERCIAL_USE.md). Material de terceros: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) y [ATTRIBUTION.md](ATTRIBUTION.md).
+Código: [LICENSE-CODE](LICENSE-CODE). Lecciones, documentación e imágenes: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Uso comercial e institucional: [docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md). Material de terceros: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) y [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).

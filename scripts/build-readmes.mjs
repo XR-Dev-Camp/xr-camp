@@ -32,12 +32,12 @@ const SITE = 'https://xrcamp.dev';
 
 // Where the policy files live, in one place so a later move is one edit.
 const FILES = {
-  contributing: 'CONTRIBUTING.md',
-  conduct: 'CODE_OF_CONDUCT.md',
-  security: 'SECURITY.md',
-  commercial: 'COMMERCIAL_USE.md',
-  notices: 'THIRD_PARTY_NOTICES.md',
-  attribution: 'ATTRIBUTION.md',
+  contributing: '.github/CONTRIBUTING.md',
+  conduct: '.github/CODE_OF_CONDUCT.md',
+  security: '.github/SECURITY.md',
+  commercial: 'docs/COMMERCIAL_USE.md',
+  notices: 'docs/THIRD_PARTY_NOTICES.md',
+  attribution: 'docs/ATTRIBUTION.md',
 };
 
 const LANGS = {

@@ -88,7 +88,7 @@ contributors arrive.
 If leadership concludes that example projects must also be protected from
 commercial reuse, adopt Option B (PolyForm Noncommercial 1.0.0) instead, and
 accept the portfolio-use ambiguity — documenting an explicit carve-out in
-COMMERCIAL_USE.md permitting learners to display and republish their own
+docs/COMMERCIAL_USE.md permitting learners to display and republish their own
 coursework.
 
 -------------------------------------------------------------------------------
@@ -107,6 +107,6 @@ Choose an option, have counsel review it, then replace the entire contents of
 this file with the verbatim license text and update:
 
   - README.md (licensing section)
-  - COMMERCIAL_USE.md
-  - CONTRIBUTING.md (contribution terms)
+  - docs/COMMERCIAL_USE.md
+  - .github/CONTRIBUTING.md (contribution terms)
   - the LICENSE file in every project directory

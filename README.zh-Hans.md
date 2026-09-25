@@ -146,8 +146,8 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 
 ## 教课、做导师、翻译或参与贡献
 
-XR Camp 由社区共同建设。请阅读[贡献指南](CONTRIBUTING.md)和[行为准则](CODE_OF_CONDUCT.md)。发现安全或隐私问题？请私下报告：参见 [SECURITY.md](SECURITY.md)。网站源代码位于 [`website/`](website/)。
+XR Camp 由社区共同建设。请阅读[贡献指南](.github/CONTRIBUTING.md)和[行为准则](.github/CODE_OF_CONDUCT.md)。发现安全或隐私问题？请私下报告：参见 [.github/SECURITY.md](.github/SECURITY.md)。网站源代码位于 [`website/`](website/)。
 
 ## 许可协议
 
-代码：[LICENSE-CODE](LICENSE-CODE)。课程、文档和图片：[LICENSE-CONTENT](LICENSE-CONTENT)（CC BY-NC-SA 4.0）。商业和机构使用：[COMMERCIAL_USE.md](COMMERCIAL_USE.md)。第三方素材：[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和 [ATTRIBUTION.md](ATTRIBUTION.md)。
+代码：[LICENSE-CODE](LICENSE-CODE)。课程、文档和图片：[LICENSE-CONTENT](LICENSE-CONTENT)（CC BY-NC-SA 4.0）。商业和机构使用：[docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md)。第三方素材：[docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) 和 [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md)。

@@ -39,4 +39,4 @@ Give us reasonable time to remediate before public disclosure. Do not access, mo
 
 ## Credit
 
-With your consent, we will credit you in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and, where the finding is instructive, turn it into a teaching example — with your name attached if you wish.
+With your consent, we will credit you in [`THIRD_PARTY_NOTICES.md`](../docs/THIRD_PARTY_NOTICES.md) and, where the finding is instructive, turn it into a teaching example — with your name attached if you wish.
