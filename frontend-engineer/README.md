@@ -16,9 +16,9 @@
 
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
-| 1 | [Modern JavaScript](01-modern-javascript/README.md) | 14 h · 19 sessions | 🚧 Coming soon |
-| 2 | [The Document Object Model and Dynamic Interfaces](02-the-document-object-model-and-dynamic-interfaces/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
-| 3 | [Application Architecture and Maintainable Code](03-application-architecture-and-maintainable-code/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
+| 1 | [Modern JavaScript](01-modern-javascript/README.md) | 14 h · 19 sessions | ✅ Ready |
+| 2 | [The Document Object Model and Dynamic Interfaces](02-the-document-object-model-and-dynamic-interfaces/README.md) | 10 h · 14 sessions | ✅ Ready |
+| 3 | [Application Architecture and Maintainable Code](03-application-architecture-and-maintainable-code/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 4 | [APIs, JSON, and Asynchronous Applications](04-apis-json-and-asynchronous-applications/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 5 | [Web Components](05-web-components/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
 | 6 | [Progressive Web Applications](06-progressive-web-applications/README.md) | 12 h · 16 sessions | 🚧 Coming soon |

@@ -1,19 +1,271 @@
 <!DOCTYPE html>
+<!-- TODO 1: If you write your page in another language, change "en" to its
+     code: "es" for Spanish, "pt" for Portuguese, "zh-Hans" for Simplified
+     Chinese. Screen readers use it to choose a voice. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO 2: Describe your collection in one sentence. Search engines and
+       link previews show it. -->
+  <meta name="description" content="">
+  <!-- TODO 3: Give the page a title that says whose projects these are, for
+       example: Ana's web projects - Phase 1 of XR Camp -->
+  <title>My web projects</title>
 
-  <title>Git, GitHub, and Publishing - XR Camp starter</title>
+  <!--
+    One small page, so its styles live here, inside <style>, and the page
+    works on its own. The styles are finished: you do not need to change them.
+    The colours are the Riverside site's design tokens from Course 1.3.
+  -->
+    One small page, so its styles live here, inside <style>, and the page
+    works on its own. If your collection grows, move them into styles.css.
+    The colours are the Riverside site's design tokens from Course 1.3, and
+    every text colour was checked for WCAG 2.2 contrast on the background.
+  -->
+  <style>
+    :root {
+      --color-text: #1b1b1f;     /* 16.7:1 on --color-bg */
+      --color-muted: #4a4a55;    /* 8.5:1 */
+      --color-primary: #5b2a86;  /* 9.7:1 */
+      --color-focus: #d62f6b;
+      --color-bg: #fdfcf8;
+      --color-surface: #ffffff;
+      --color-band: #efe9f7;
+      --color-line: #c9c4d4;     /* decoration only */
+      --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --space-2: 0.5rem;
+      --space-3: 1rem;
+      --space-4: 1.5rem;
+      --space-5: 2rem;
+      --radius: 0.5rem;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* The skip link jumps smoothly, unless the visitor has asked for less motion. */
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+
+    header,
+    main,
+    footer {
+      max-width: 60rem;
+      margin: 0 auto;
+      padding: var(--space-3);
+    }
+
+    h1 {
+      font-size: clamp(1.953rem, 1.5rem + 2vw, 2.441rem);
+      line-height: 1.2;
+      margin: var(--space-4) 0 var(--space-3);
+    }
+
+    h2 {
+      font-size: 1.563rem;
+      margin-top: var(--space-5);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin: 0 0 var(--space-2);
+    }
+
+    p {
+      max-width: 65ch;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.15em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 0.2em;
+    }
+
+    /* Everyone who uses a keyboard must always see where they are. */
+    a:focus-visible {
+      outline: 3px solid var(--color-focus);
+      outline-offset: 3px;
+    }
+
+    /* The skip link is hidden until it receives keyboard focus. */
+    .skip-link {
+      position: absolute;
+      left: var(--space-3);
+      top: -10rem;
+      padding: var(--space-2) var(--space-3);
+      background: var(--color-surface);
+      border-radius: var(--radius);
+    }
+
+    .skip-link:focus {
+      top: var(--space-3);
+    }
+
+    .intro {
+      font-size: 1.25rem;
+      color: var(--color-muted);
+    }
+
+    /* One card per row on a phone, two or three on wider screens, with no
+       media query: the grid from Course 1.4. */
+    .cards {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+      gap: var(--space-3);
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius);
+    }
+
+    .card p {
+      margin: 0 0 var(--space-2);
+    }
+
+    .course,
+    .built-with {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+
+    /* Push the link to the bottom of the card, so the links line up. */
+    .card .view {
+      margin-top: auto;
+      padding-top: var(--space-2);
+      font-weight: 600;
+    }
+
+    /* The link fills a comfortable touch target of at least 44 pixels. */
+    .card .view a {
+      display: inline-block;
+      min-height: 44px;
+      padding: var(--space-2) 0;
+    }
+
+    .note {
+      padding: var(--space-3);
+      background: var(--color-band);
+      border-radius: var(--radius);
+    }
+
+    footer {
+      margin-top: var(--space-5);
+      border-top: 1px solid var(--color-line);
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <!-- Add your main heading below. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- Add your project content below. -->
+  <header>
+    <!-- TODO 4: Your name, or the name you use online. You do not have to use
+         your full real name: this page will be public. -->
+    <p>Your name · XR Camp learner</p>
+  </header>
 
+  <main id="main">
+    <!-- TODO 5: A main heading with your name, and one or two sentences that
+         say what visitors will find here. -->
+    <h1>My web projects</h1>
+    <p class="intro">
+      Everything I built in Phase 1 of XR Camp.
+    </p>
+
+    <h2 id="projects-heading">Phase 1 projects</h2>
+
+    <!--
+      Each project is a card: a list item with a heading, a sentence or two,
+      what you built it with, and a link.
+
+      These links assume this folder layout in your repository:
+        index.html            this page
+        my-first-world/       your 3D world from Course 0.1
+        riverside/            your site from Courses 1.1 to 1.6
+      Change the paths if your folders have different names. Letters must
+      match exactly, capitals too: see Step 3 of the lesson.
+    -->
+    <!-- role="list": some browsers stop announcing a list once its bullets
+         are removed with CSS. This puts "list" and the number of items back. -->
+    <ul class="cards" role="list" aria-labelledby="projects-heading">
+      <!-- TODO 6: Your 3D world. Describe it in your own words, and check the
+           link opens it. -->
+      <li class="card">
+        <h3>My first 3D world</h3>
+        <p class="course">Course 0.1</p>
+        <p>
+          Describe your world here.
+        </p>
+        <p class="built-with">Built with HTML and A-Frame. Includes a written description of the scene and a button to pause the animation.</p>
+        <p class="view"><a href="my-first-world/index.html">Visit my first 3D world</a></p>
+      </li>
+
+      <!-- TODO 7: Your website. Describe what it is for and who it helps. -->
+      <li class="card">
+        <h3>Riverside Community Centre website</h3>
+        <p class="course">Courses 1.1, 1.3, and 1.4</p>
+        <p>
+          Describe your website here.
+        </p>
+        <p class="built-with">Built with HTML and CSS.</p>
+        <p class="view"><a href="riverside/index.html">Visit the Riverside website</a></p>
+      </li>
+
+      <!-- TODO 8: Add one card for each of these, copying the card above:
+             Course 1.2, your join form:           riverside/join.html
+             Course 1.5, your accessibility audit: riverside/audit.html
+             Course 1.6, your programme explorer:  riverside/explorer/index.html
+           Each link must say where it goes, so it makes sense on its own:
+           "Use the programme explorer", never "Click here" or "View". -->
+
+    </ul>
+
+    <h2>About this collection</h2>
+    <p>
+      I built these projects while learning at XR Camp, a free school for web,
+      3D, and XR development.
+    </p>
+    <!-- TODO 9: After Step 6, when your repository exists, add a link to it:
+         <a href="https://github.com/your-username/your-repository">the code for these projects on GitHub</a>
+         Use your own username and repository name. -->
+    <p class="note">
+      The code for every project is public on GitHub.
+    </p>
   </main>
+
+  <footer>
+    <!-- TODO 10: After Step 11, say how people may use your work: which
+         licence covers the code, and who owns the words and pictures. -->
+    <p>
+      Licence: to be added.
+    </p>
+  </footer>
 </body>
 </html>

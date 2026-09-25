@@ -1,0 +1,15 @@
+# .gitignore: files Git should never add to this repository.
+# In your own repository, name this file .gitignore (with the dot at the start).
+# One pattern per line. Lines starting with # are comments.
+
+# Files your computer makes on its own
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets: passwords, keys, and tokens never go in a repository
+.env
+*.key
+
+# Private notes and drafts you do not want to publish
+private/

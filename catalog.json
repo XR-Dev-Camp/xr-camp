@@ -397,7 +397,7 @@
       "id": "web-07-developer-tools-debugging-and-testing",
       "courseId": "web-developer",
       "lessonId": "developer-tools-debugging-and-testing-07",
-      "status": "draft",
+      "status": "review",
       "phase": 1,
       "title": {
         "en": "Developer Tools, Debugging, and Testing",
@@ -411,7 +411,9 @@
       },
       "difficulty": "beginner",
       "technologies": [
-        "HTML"
+        "HTML",
+        "CSS",
+        "JavaScript"
       ],
       "hasCode": true,
       "path": "web-developer/07-developer-tools-debugging-and-testing"
@@ -420,7 +422,7 @@
       "id": "web-08-git-github-and-publishing",
       "courseId": "web-developer",
       "lessonId": "git-github-and-publishing-08",
-      "status": "draft",
+      "status": "review",
       "phase": 1,
       "title": {
         "en": "Git, GitHub, and Publishing",
@@ -434,7 +436,8 @@
       },
       "difficulty": "beginner",
       "technologies": [
-        "Git"
+        "Git",
+        "HTML"
       ],
       "hasCode": true,
       "path": "web-developer/08-git-github-and-publishing"
@@ -443,7 +446,7 @@
       "id": "web-09-web-developer-portfolio",
       "courseId": "web-developer",
       "lessonId": "web-developer-portfolio-09",
-      "status": "draft",
+      "status": "review",
       "phase": 1,
       "title": {
         "en": "Phase 1 Capstone - Web Developer Portfolio",
@@ -457,7 +460,10 @@
       },
       "difficulty": "beginner",
       "technologies": [
-        "HTML"
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "web-developer/09-web-developer-portfolio"
@@ -466,7 +472,7 @@
       "id": "fe-01-modern-javascript",
       "courseId": "frontend-engineer",
       "lessonId": "modern-javascript-01",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "Modern JavaScript",
@@ -480,7 +486,10 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "JavaScript"
+        "JavaScript",
+        "ES Modules",
+        "Fetch API",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "frontend-engineer/01-modern-javascript"
@@ -489,7 +498,7 @@
       "id": "fe-02-the-document-object-model-and-dynamic-interfaces",
       "courseId": "frontend-engineer",
       "lessonId": "the-document-object-model-and-dynamic-interfaces-02",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "The Document Object Model and Dynamic Interfaces",
@@ -503,7 +512,10 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "HTML"
+        "JavaScript",
+        "DOM",
+        "ARIA",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "frontend-engineer/02-the-document-object-model-and-dynamic-interfaces"
@@ -512,7 +524,7 @@
       "id": "fe-03-application-architecture-and-maintainable-code",
       "courseId": "frontend-engineer",
       "lessonId": "application-architecture-and-maintainable-code-03",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "Application Architecture and Maintainable Code",
@@ -526,7 +538,10 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "JavaScript"
+        "JavaScript",
+        "ES Modules",
+        "Refactoring",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "frontend-engineer/03-application-architecture-and-maintainable-code"

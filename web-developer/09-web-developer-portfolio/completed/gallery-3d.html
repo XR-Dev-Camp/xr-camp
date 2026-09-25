@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The 3D moment: a small gallery of Ana's projects. The plain list further
+     down this page is the real content; the 3D gallery is built from that
+     list by the script, so the two can never disagree. -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ana's web projects as framed panels in a small 3D gallery, with the same projects as a plain list.">
+  <title>3D gallery of projects - Ana</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. It is only loaded on
+       this page, so the rest of the portfolio stays fast. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p class="site-name"><a href="index.html">Ana</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="case-study.html">Case study</a></li>
+        <li><a href="gallery-3d.html" aria-current="page">3D gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <h1>My projects in 3D</h1>
+    <p>
+      A small 3D gallery of my projects, for fun. Everything in it is also in
+      the <a href="#list-heading">plain list of projects</a> below, which
+      works on every device.
+    </p>
+
+    <section class="gallery" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">The gallery</h2>
+
+      <!-- What the scene shows, in words, for people who cannot see it. -->
+      <p id="scene-description">
+        A quiet gallery room with a warm white wall and a sand-coloured floor.
+        Four framed panels hang on the wall in two rows, one for each project,
+        and each shows the project’s name on a pale background. The selected
+        panel has a red frame and stands a little forward from the wall.
+        Nothing moves on its own, and the view stays still.
+      </p>
+
+      <!-- Every 3D interaction has a keyboard route. Clicking a panel selects
+           it; so do these buttons. The link opens whatever is selected. -->
+      <p class="actions">
+        <button type="button" id="previous">Previous project</button>
+        <button type="button" id="next">Next project</button>
+        <a id="open-project" href="case-study.html">Open the selected project</a>
+      </p>
+      <p id="selected" role="status"></p>
+
+      <!-- cursor="rayOrigin: mouse" lets mouse clicks and taps reach the
+           scene; raycaster="objects: .clickable" says which objects count.
+           xr-mode-ui is off: this gallery is for the screen, not a headset. -->
+      <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false"
+               cursor="rayOrigin: mouse" raycaster="objects: .clickable">
+        <a-sky color="#f2e5d2"></a-sky>
+
+        <!-- Our own camera, with no look-controls and no wasd-controls: the
+             view never moves, so nobody can be made to feel sick, and
+             there is nothing a mouse can do that a keyboard cannot. -->
+        <a-entity camera position="0 1.6 0"></a-entity>
+
+        <a-plane rotation="-90 0 0" width="14" height="14" color="#d9cfc4"></a-plane>
+        <a-plane position="0 2.5 -3.3" width="9" height="5" color="#fbf8f3"></a-plane>
+
+        <!-- The script adds one framed panel here for each project. -->
+        <a-entity id="gallery-wall" position="0 0 -3"></a-entity>
+      </a-scene>
+    </section>
+
+    <!-- The 2D fallback, and the gallery's source. Each item's data-colour
+         is the background of its panel: keep it pale, so the dark name on
+         it stays readable. -->
+    <section aria-labelledby="list-heading">
+      <h2 id="list-heading">All projects as a list</h2>
+      <ol id="project-list">
+        <li data-colour="#e3eff0">
+          <a href="case-study.html">Riverside Community Centre website</a>:
+          <span class="summary">a responsive, accessible website for a community centre, with a full case study.</span>
+        </li>
+        <li data-colour="#f2e5d2">
+          <a href="../../02-accessible-forms-and-user-input/completed/index.html">An accessible sign-up form</a>:
+          <span class="summary">a form with visible labels and helpful error messages.</span>
+        </li>
+        <li data-colour="#f6e0d8">
+          <a href="../../05-web-accessibility-foundations/completed/audit.html">Accessibility audit and repair</a>:
+          <span class="summary">an audit report on an events page, and every problem fixed.</span>
+        </li>
+        <li data-colour="#e6ecd9">
+          <a href="../../06-javascript-foundations/completed/index.html">Programme explorer</a>:
+          <span class="summary">search, filter, and save programmes, with the keyboard or the mouse.</span>
+        </li>
+      </ol>
+    </section>
+
+    <p><a href="index.html#projects">Back to the projects on the home page</a></p>
+
+  </main>
+
+  <footer>
+    <p>
+      <small>
+        Ana is the fictional learner in XR Camp’s reference solutions.
+        Last updated on <time datetime="2026-09-25">25 September 2026</time>.
+      </small>
+    </p>
+  </footer>
+
+  <script>
+    // 1. Read the projects from the plain list: one source of truth.
+    const projects = [...document.querySelectorAll('#project-list li')].map((item) => {
+      const link = item.querySelector('a');
+      return {
+        name: link.textContent.trim(),
+        href: link.getAttribute('href'),
+        summary: item.querySelector('.summary').textContent.trim(),
+        colour: item.dataset.colour || '#ffffff',
+      };
+    });
+
+    const wall = document.getElementById('gallery-wall');
+    const selected = document.getElementById('selected');
+    const openLink = document.getElementById('open-project');
+
+    const FRAME = '#4f4944';          // the usual frame colour
+    const FRAME_SELECTED = '#c0392b'; // the same red as the focus outline
+    const panels = [];
+
+    // 2. Build one framed panel for each project, two per row.
+    const rows = Math.ceil(projects.length / 2);
+    projects.forEach((project, i) => {
+      const row = Math.floor(i / 2);
+      const alone = i === projects.length - 1 && projects.length % 2 === 1;
+      const x = alone ? 0 : (i % 2 === 0 ? -1.05 : 1.05);
+      const y = 1.6 + (rows - 1) * 0.7 - row * 1.4;
+      // Turn the side panels slightly towards the viewer.
+      const turn = alone ? 0 : (i % 2 === 0 ? 10 : -10);
+
+      const panel = document.createElement('a-entity');
+      panel.setAttribute('position', { x, y, z: 0 });
+      panel.setAttribute('rotation', { x: 0, y: turn, z: 0 });
+
+      const frame = document.createElement('a-box');
+      frame.classList.add('clickable');
+      frame.setAttribute('width', 1.9);
+      frame.setAttribute('height', 1.2);
+      frame.setAttribute('depth', 0.08);
+      frame.setAttribute('color', FRAME);
+
+      const canvas = document.createElement('a-plane');
+      canvas.setAttribute('position', '0 0 0.045');
+      canvas.setAttribute('width', 1.7);
+      canvas.setAttribute('height', 1.0);
+      canvas.setAttribute('color', project.colour);
+
+      const label = document.createElement('a-text');
+      label.setAttribute('value', project.name);
+      label.setAttribute('align', 'center');
+      label.setAttribute('color', '#1d1b1a');
+      label.setAttribute('width', 1.5);
+      label.setAttribute('wrap-count', 16);
+      label.setAttribute('position', '0 0 0.05');
+
+      panel.append(frame, canvas, label);
+      wall.append(panel);
+      panels.push({ panel, frame, x, y });
+
+      // Clicking (or tapping) a panel selects it, exactly like the buttons.
+      frame.addEventListener('click', () => select(i));
+    });
+
+    // 3. One function for selecting, whatever the input: click, tap, or button.
+    let current = 0;
+    function select(index) {
+      const old = panels[current];
+      old.frame.setAttribute('color', FRAME);
+      old.panel.setAttribute('position', { x: old.x, y: old.y, z: 0 });
+
+      current = (index + projects.length) % projects.length;   // wrap around
+      const now = panels[current];
+      now.frame.setAttribute('color', FRAME_SELECTED);
+      // Step forward instantly: a change of place, not a movement to watch.
+      now.panel.setAttribute('position', { x: now.x, y: now.y, z: 0.15 });
+
+      const project = projects[current];
+      openLink.href = project.href;
+      openLink.textContent = `Open ${project.name}`;
+      // #selected has role="status", so screen readers announce this.
+      selected.textContent = `Selected: ${project.name} (project ${current + 1} of ${projects.length}): ${project.summary}`;
+    }
+
+    document.getElementById('previous').addEventListener('click', () => select(current - 1));
+    document.getElementById('next').addEventListener('click', () => select(current + 1));
+
+    if (projects.length > 0) select(0);
+  </script>
+</body>
+</html>

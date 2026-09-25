@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checks for utils.js - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>Checks for utils.js</h1>
+    <p>Pure functions are easy to test: give them an input, and compare the output with what you expect. Reload this page after every change to <code>utils.js</code>.</p>
+    <p>Until TODOs 4 and 5 are done, this page stays empty and the console shows an error about a missing export.</p>
+    <p id="summary" role="status"></p>
+    <ul id="results"></ul>
+    <p><a href="index.html">Back to the planner</a></p>
+  </main>
+
+  <script type="module">
+    import { plural, describeMinutes, bySchedule, sessionLabel } from './js/utils.js';
+
+    const results = document.querySelector('#results');
+    let failed = 0;
+
+    // Compare what a function gave with what we expected, and list the result.
+    function check(name, actual, expected) {
+      const ok = Object.is(actual, expected);
+      if (!ok) failed += 1;
+      const item = document.createElement('li');
+      item.textContent = ok
+        ? `PASS: ${name}`
+        : `FAIL: ${name}. Expected ${JSON.stringify(expected)}, got ${JSON.stringify(actual)}.`;
+      results.append(item);
+    }
+
+    check('plural of 1', plural(1, 'session'), '1 session');
+    check('plural of 0', plural(0, 'session'), '0 sessions');
+    check('plural with a custom form', plural(2, 'child', 'children'), '2 children');
+
+    check('0 minutes', describeMinutes(0), '0 minutes');
+    check('45 minutes', describeMinutes(45), '45 minutes');
+    check('exactly 3 hours', describeMinutes(180), '3 hours');
+    check('1 hour 30 minutes', describeMinutes(90), '1 hour 30 minutes');
+
+    const monday = { day: 'Monday', time: '19:00' };
+    const mondayEarly = { day: 'Monday', time: '09:00' };
+    const sunday = { day: 'Sunday', time: '08:00' };
+    check('Monday comes before Sunday', bySchedule(monday, sunday) < 0, true);
+    check('09:00 comes before 19:00', bySchedule(mondayEarly, monday) < 0, true);
+    check('the same session is equal', bySchedule(monday, monday), 0);
+
+    check('session label', sessionLabel({ day: 'Tuesday', time: '19:00', topic: 'CSS grid' }), 'Tuesday at 19:00: CSS grid');
+
+    const total = results.children.length;
+    document.querySelector('#summary').textContent = failed === 0
+      ? `All ${total} checks passed.`
+      : `${failed} of ${total} checks failed.`;
+  </script>
+</body>
+</html>

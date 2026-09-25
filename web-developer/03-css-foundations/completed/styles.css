@@ -33,7 +33,7 @@
   --color-line: #c9c4d4;     /* decoration only: never the only way to see something */
 
   /* Type. A scale where each step is 1.25 times the last. rem units follow
-     the reader's own browser font size, so text grows when they zoom. */
+     the reader's own browser font size, so text grows when they choose bigger text. */
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
   --step-0: 1rem;
   --step-1: 1.25rem;
@@ -127,12 +127,12 @@ footer {
 /* 5. Components ---------------------------------------------------------- */
 
 /* Skip link: off-screen until it receives keyboard focus, then visible. */
-a[href="#main"]:first-child {
+body > a[href="#main"]:first-child {
   position: absolute;
   left: -999rem;
 }
 
-a[href="#main"]:first-child:focus {
+body > a[href="#main"]:first-child:focus {
   left: var(--space-3);
   top: var(--space-3);
   padding: var(--space-2) var(--space-3);

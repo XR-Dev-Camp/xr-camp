@@ -3,12 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modern JavaScript - XR Camp reference solution</title>
+  <meta name="description" content="Every phase and lesson of XR Camp, with its time and whether it is ready.">
+  <title>Course map - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- type="module" lets this script import other modules. Modules are
+       deferred automatically, and only work from a web server (http://). -->
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header>
+    <p>My XR Camp</p>
+  </header>
+
   <main>
-    <h1>Modern JavaScript</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Course map</h1>
+    <p id="summary" role="status"></p>
+
+    <p>
+      <input id="ready-only" type="checkbox">
+      <label for="ready-only">Show only lessons that are ready</label>
+    </p>
+
+    <noscript><p>The course map needs JavaScript. You can see every lesson in the repository's README.</p></noscript>
+    <div id="map"></div>
+
+    <p><a href="3d-moment.html">See the course as a 3D landscape</a></p>
   </main>
 </body>
 </html>

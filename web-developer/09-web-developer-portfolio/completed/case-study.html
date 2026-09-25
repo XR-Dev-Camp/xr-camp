@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- A case study tells the story behind one project: the problem, the people,
+     the process, the decisions and why, the accessibility work, and what was
+     learned. Screenshots show what you made; a case study shows how you think. -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Ana planned, built, tested, and improved an accessible, responsive website for a community centre.">
+  <title>Case study: Riverside Community Centre website - Ana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p class="site-name"><a href="index.html">Ana</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="case-study.html" aria-current="page">Case study</a></li>
+        <li><a href="gallery-3d.html">3D gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <h1>Case study: Riverside Community Centre website</h1>
+    <p class="lead">
+      How I planned, built, tested, and improved a website that works on any
+      screen and for people who use assistive technology.
+    </p>
+
+    <!-- The key facts first, for readers in a hurry. A description list
+         pairs each label with its answer. -->
+    <dl class="facts">
+      <dt>My role</dt>
+      <dd>Everything, on my own: planning, writing, design, code, and testing.</dd>
+
+      <dt>Time</dt>
+      <dd>About 70 hours, over six XR Camp courses.</dd>
+
+      <dt>Tools</dt>
+      <dd>HTML, CSS, JavaScript, VS Code, browser developer tools, NVDA, VoiceOver, and axe DevTools.</dd>
+
+      <dt>Honest note</dt>
+      <dd>Riverside is an imagined centre. This was a learning project, so there are no real visitors yet.</dd>
+
+      <dt>Links</dt>
+      <dd>
+        <a href="../../04-responsive-web-design/completed/index.html">Visit the Riverside website</a>
+      </dd>
+    </dl>
+
+    <figure>
+      <img src="centre-960.jpg"
+           srcset="centre-480.jpg 480w, centre-960.jpg 960w"
+           sizes="(min-width: 48rem) 40rem, 100vw"
+           alt="A simple drawing of the community centre: a cream building with a red roof, a purple door, two windows, and a ramp beside the door."
+           width="800" height="450">
+      <figcaption>
+        The drawing on the site’s home page. It is saved at three widths, and
+        each screen downloads only the size it needs.
+      </figcaption>
+    </figure>
+
+    <section aria-labelledby="problem-heading">
+      <h2 id="problem-heading">The problem</h2>
+      <p>
+        A small community centre needs one place where people can find three
+        things quickly: when it is open, what activities it runs, and how to
+        get there. Most of its visitors check on a phone, often on a slow
+        connection, and some use a screen reader or large text.
+      </p>
+      <p>
+        A site full of pictures and animation would look impressive, but it
+        would be slow and hard to use for exactly the people the centre
+        serves. The goal was the opposite: fast, clear, and usable by
+        everyone.
+      </p>
+    </section>
+
+    <section aria-labelledby="audience-heading">
+      <h2 id="audience-heading">Who it is for</h2>
+      <ul>
+        <li><strong>Parents</strong> looking for the homework club or holiday activities, usually on a phone.</li>
+        <li><strong>Adults learning English</strong>, who need short sentences and plain words.</li>
+        <li><strong>Older neighbours</strong>, who often make the text bigger.</li>
+        <li><strong>Blind and low-vision visitors</strong>, who use a screen reader or zoom.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="process-heading">
+      <h2 id="process-heading">My process</h2>
+      <p>I built the site in six stages, and each stage added one layer to the one before.</p>
+      <ol>
+        <li><strong>Content and structure.</strong> I wrote the words first, then marked them up with headings, landmarks, a table, and a captioned video. The HTML worked before it had any style.</li>
+        <li><strong>A form.</strong> I added a page for joining a programme, with a visible label on every field and error messages that say how to fix the problem.</li>
+        <li><strong>A visual system.</strong> I wrote one stylesheet with named colours, sizes, and spaces, and checked every text colour for contrast.</li>
+        <li><strong>Responsive layout.</strong> I rebuilt the layout mobile first, then tested at four widths and on real phones.</li>
+        <li><strong>An accessibility audit.</strong> I audited a page with the keyboard, a screen reader, zoom, and an automated tool, then applied the same checks to the whole site.</li>
+        <li><strong>Interaction.</strong> I added a programme explorer, where visitors can search, filter, and save programmes.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="decisions-heading">
+      <h2 id="decisions-heading">Decisions I made, and why</h2>
+
+      <div class="decision">
+        <h3>1. Mobile first</h3>
+        <p><strong>What I chose:</strong> I wrote the styles for a 320-pixel phone first, then added layout for bigger screens.</p>
+        <p><strong>Why:</strong> most visitors use phones, so the phone page must be the best one, not a squeezed version of the desktop page.</p>
+        <p><strong>What I considered:</strong> designing for a wide screen first. I tried it on one page, and needed many rules just to undo things on small screens.</p>
+      </div>
+
+      <div class="decision">
+        <h3>2. Programmes as a list of cards</h3>
+        <p><strong>What I chose:</strong> a normal HTML list, laid out as a grid of cards with one line of CSS:</p>
+        <pre><code>grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));</code></pre>
+        <p><strong>Why:</strong> a screen reader still announces “list, 6 items”, and the grid makes one column on a phone and three on a wide screen with no media query at all.</p>
+      </div>
+
+      <div class="decision">
+        <h3>3. A table that scrolls inside its own box</h3>
+        <p><strong>What I chose:</strong> the opening-hours table stays a real table, inside a box that scrolls sideways on very narrow screens and can be reached with the keyboard.</p>
+        <p><strong>Why:</strong> a real table lets screen-reader users hear the day with every time.</p>
+        <p><strong>What I considered:</strong> changing the table into blocks with CSS. It looked fine, but changing how a table displays can make some screen readers stop treating it as a table.</p>
+      </div>
+
+      <div class="decision">
+        <h3>4. Announce results instead of moving focus</h3>
+        <p><strong>What I chose:</strong> in the programme explorer, the number of results is in an element with <code>role="status"</code>, so it is announced while the visitor keeps typing.</p>
+        <p><strong>Why:</strong> my first version moved focus to the results after every key. With a screen reader on, I could not finish typing a word.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="accessibility-heading">
+      <h2 id="accessibility-heading">Accessibility</h2>
+      <p>
+        I aimed for WCAG 2.2 level AA. Some of the work is invisible, so I
+        list it here:
+      </p>
+      <ul>
+        <li>A skip link, one <code>h1</code> per page, and headings in order.</li>
+        <li>Alt text that says what matters, such as the step-free ramp, and empty alt for decoration.</li>
+        <li>Every text colour at 4.5:1 contrast or more, and a focus outline you can always see.</li>
+        <li>Links and buttons at least 44 pixels tall, so they are easy to tap.</li>
+        <li>Captions on the welcome video.</li>
+        <li>Nothing on the site moves on its own.</li>
+      </ul>
+
+      <h3>How I tested</h3>
+      <div class="table-wrap" role="region" aria-labelledby="tests-caption" tabindex="0">
+        <table>
+          <caption id="tests-caption">Tests on the finished site</caption>
+          <thead>
+            <tr>
+              <th scope="col">Test</th>
+              <th scope="col">What I found</th>
+              <th scope="col">What I changed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Keyboard only</th>
+              <td>The opening-hours box could not be reached, so it could not be scrolled.</td>
+              <td>Added <code>tabindex="0"</code> and a label to the box.</td>
+            </tr>
+            <tr>
+              <th scope="row">Screen reader (NVDA, VoiceOver)</th>
+              <td>Two links both said “Find out more”.</td>
+              <td>Rewrote them to say where they go.</td>
+            </tr>
+            <tr>
+              <th scope="row">200% zoom and 320 pixels wide</th>
+              <td>The navigation ran off the screen.</td>
+              <td>Let it wrap onto a second line with flexbox.</td>
+            </tr>
+            <tr>
+              <th scope="row">Automated check (axe DevTools)</th>
+              <td>One grey text colour was 3.9:1.</td>
+              <td>Darkened it to 8.5:1.</td>
+            </tr>
+            <tr>
+              <th scope="row">Two real phones</th>
+              <td>The join button was hard to tap next to a link.</td>
+              <td>Made it taller and added space between them.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What is not perfect yet</h3>
+      <ul>
+        <li>The welcome video has English captions only.</li>
+        <li>There is no Spanish version of the site yet, although many neighbours would prefer one.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">Results</h2>
+      <p>
+        Because Riverside is imagined, I cannot measure real visitors. What I
+        can measure:
+      </p>
+      <ul>
+        <li>The automated check reports no errors on any page.</li>
+        <li>No page scrolls sideways at 320 pixels wide.</li>
+        <li>On a phone, the home page picture is 6 KB instead of 24 KB, because the phone downloads the smallest size.</li>
+        <li>Every task, from finding the opening hours to saving a programme, works with the keyboard alone.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="learned-heading">
+      <h2 id="learned-heading">What I learned</h2>
+      <ul>
+        <li><strong>Accessibility is easier from the start.</strong> Fixing the events page took hours; building the explorer accessibly from the first line took minutes more.</li>
+        <li><strong>Automated tools find only some problems.</strong> The duplicate “Find out more” links passed the automated check. I found them by listening.</li>
+        <li><strong>Plain words are harder than long ones.</strong> I rewrote the About section four times to make it shorter.</li>
+      </ul>
+
+      <h3>What I would do next</h3>
+      <p>
+        Add a Spanish version, with captions in both languages, and test the
+        site with two or three real neighbours instead of only with tools.
+      </p>
+    </section>
+
+    <p><a href="index.html#projects">Back to all projects</a></p>
+
+  </main>
+
+  <footer>
+    <p>
+      <small>
+        Ana is the fictional learner in XR Camp’s reference solutions.
+        Last updated on <time datetime="2026-09-25">25 September 2026</time>.
+      </small>
+    </p>
+  </footer>
+
+</body>
+</html>

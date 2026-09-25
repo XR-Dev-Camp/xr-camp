@@ -2,7 +2,7 @@
   "id": "web-07-developer-tools-debugging-and-testing",
   "courseId": "web-developer",
   "lessonId": "developer-tools-debugging-and-testing-07",
-  "status": "draft",
+  "status": "review",
   "phase": 1,
   "title": {
     "en": "Developer Tools, Debugging, and Testing",
@@ -21,7 +21,9 @@
   },
   "difficulty": "beginner",
   "technologies": [
-    "HTML"
+    "HTML",
+    "CSS",
+    "JavaScript"
   ],
   "hasCode": true,
   "starterPath": "./starter",

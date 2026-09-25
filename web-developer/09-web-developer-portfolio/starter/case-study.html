@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Your case study: the story of one project. Choose the project you learned
+     the most from, not the one that looks best. Write in plain language, in
+     the first person ("I chose", "I tested"), and be honest about what is
+     not finished. -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How I planned, built, and tested ...">
+  <title>Case study: your project's name - your name</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p class="site-name"><a href="index.html">Your name</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="case-study.html" aria-current="page">Case study</a></li>
+        <li><a href="gallery-3d.html">3D gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <h1>Case study: your project's name</h1>
+    <p class="lead">One sentence: what you made, and what it does for people.</p>
+
+    <!-- TODO 5: Fill in the key facts, for readers in a hurry. Keep the
+         dt/dd pairs: each term, then its answer. If the project was
+         practice, or the organisation is imagined, say so here. -->
+    <dl class="facts">
+      <dt>My role</dt>
+      <dd>...</dd>
+
+      <dt>Time</dt>
+      <dd>...</dd>
+
+      <dt>Tools</dt>
+      <dd>...</dd>
+
+      <dt>Links</dt>
+      <dd><a href="https://example.com/">Visit the live project</a></dd>
+    </dl>
+
+    <figure>
+      <img src="centre-960.jpg"
+           srcset="centre-480.jpg 480w, centre-960.jpg 960w"
+           sizes="(min-width: 48rem) 40rem, 100vw"
+           alt="Describe what matters in your picture."
+           width="800" height="450">
+      <figcaption>Say what the picture shows, and why it is here.</figcaption>
+    </figure>
+
+    <!-- TODO 6: The problem, and who it is for.
+         - The problem: what did people need, and what was in their way?
+           Two short paragraphs.
+         - Who it is for: a list of the people who use it, and one thing
+           about each that changed how you built it ("often on a phone",
+           "reading in a second language"). -->
+    <section aria-labelledby="problem-heading">
+      <h2 id="problem-heading">The problem</h2>
+      <p>...</p>
+    </section>
+
+    <section aria-labelledby="audience-heading">
+      <h2 id="audience-heading">Who it is for</h2>
+      <ul>
+        <li>...</li>
+      </ul>
+    </section>
+
+    <!-- TODO 7: Your process, and your decisions.
+         - Process: an ordered list of the stages you went through.
+         - Decisions: at least three, each in a div class="decision" with an
+           h3, and three parts: what you chose, why, and what else you
+           considered. A decision that went wrong first, and what you
+           changed, is often the most interesting one. -->
+    <section aria-labelledby="process-heading">
+      <h2 id="process-heading">My process</h2>
+      <ol>
+        <li>...</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="decisions-heading">
+      <h2 id="decisions-heading">Decisions I made, and why</h2>
+
+      <div class="decision">
+        <h3>1. Your first decision</h3>
+        <p><strong>What I chose:</strong> ...</p>
+        <p><strong>Why:</strong> ...</p>
+        <p><strong>What I considered:</strong> ...</p>
+      </div>
+    </section>
+
+    <!-- TODO 8: Accessibility. Much of this work is invisible, so say it:
+         - a list of what you did;
+         - a table of how you tested: each test, what you found, and what
+           you changed (use your notes from Courses 1.4 and 1.5);
+         - what is not perfect yet. Honesty here builds trust. -->
+    <section aria-labelledby="accessibility-heading">
+      <h2 id="accessibility-heading">Accessibility</h2>
+      <ul>
+        <li>...</li>
+      </ul>
+
+      <h3>How I tested</h3>
+      <div class="table-wrap" role="region" aria-labelledby="tests-caption" tabindex="0">
+        <table>
+          <caption id="tests-caption">Tests on the finished project</caption>
+          <thead>
+            <tr>
+              <th scope="col">Test</th>
+              <th scope="col">What I found</th>
+              <th scope="col">What I changed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Keyboard only</th>
+              <td>...</td>
+              <td>...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What is not perfect yet</h3>
+      <ul>
+        <li>...</li>
+      </ul>
+    </section>
+
+    <!-- TODO 9: Results, and what you learned.
+         - Results: what can you measure? Pages with no automated errors,
+           a smaller page, a task that now works with the keyboard. If there
+           were no real users, say so.
+         - What I learned: two or three lessons, each in one sentence, then
+           one sentence of evidence.
+         - What I would do next. -->
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">Results</h2>
+      <ul>
+        <li>...</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="learned-heading">
+      <h2 id="learned-heading">What I learned</h2>
+      <ul>
+        <li>...</li>
+      </ul>
+
+      <h3>What I would do next</h3>
+      <p>...</p>
+    </section>
+
+    <p><a href="index.html#projects">Back to all projects</a></p>
+
+  </main>
+
+  <footer>
+    <p>
+      <small>
+        Last updated on <time datetime="2026-01-01">1 January 2026</time>.
+      </small>
+    </p>
+  </footer>
+
+</body>
+</html>

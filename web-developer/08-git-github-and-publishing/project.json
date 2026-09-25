@@ -2,7 +2,7 @@
   "id": "web-08-git-github-and-publishing",
   "courseId": "web-developer",
   "lessonId": "git-github-and-publishing-08",
-  "status": "draft",
+  "status": "review",
   "phase": 1,
   "title": {
     "en": "Git, GitHub, and Publishing",
@@ -21,7 +21,8 @@
   },
   "difficulty": "beginner",
   "technologies": [
-    "Git"
+    "Git",
+    "HTML"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -38,6 +39,9 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "skip-link",
+    "link-name",
+    "page-title"
   ]
 }

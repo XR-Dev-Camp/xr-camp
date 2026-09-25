@@ -67,7 +67,7 @@ The reference solution is in [`completed/`](completed/). The starter is the fini
 
 1. Work in your own site folder, or copy this lesson's `starter` folder.
 2. Copy the three `centre-*.jpg` pictures into your site folder. If you use your own photo instead, save it at three widths (480, 960, and 1440 pixels) with any image editor, such as the free GIMP or your computer's built-in photo app.
-3. Open your developer tools, and turn on **device mode**: **Ctrl + Shift + M** (on a Mac, **⌘ + Shift + M**) while the tools are open. You can now choose any screen width.
+3. Open your developer tools, and turn on **device mode**: **Ctrl + Shift + M** (on a Mac, **⌘ + Shift + M**) while the tools are open. In Firefox it is called **Responsive Design Mode**, and on a Mac the shortcut is **⌘ + Option + M**. You can now choose any screen width.
 
 ## Walkthrough
 
@@ -141,7 +141,7 @@ Then make every link at least **44 by 44 CSS pixels**, so fingers can hit it (TO
 Turn the two programme lists into one list of cards:
 
 ```html
-<ul class="cards">
+<ul class="cards" role="list">
   <li class="card">
     <h3>Homework club</h3>
     <p>Weekdays after school.</p>
@@ -151,7 +151,7 @@ Turn the two programme lists into one list of cards:
 </ul>
 ```
 
-It is still a list, so screen readers announce "list, 6 items". Grid will change only how it looks.
+It is still a list, so most screen readers announce "list, 6 items". The cards will use `list-style: none`, and Safari then stops treating the `<ul>` as a list. `role="list"` keeps it a list for everyone. Grid will change only how it looks.
 
 ### Step 6: grid (TODO 6)
 
@@ -177,7 +177,7 @@ A **media query** asks about the window. A **container query** asks about the bo
 }
 ```
 
-At tablet width, the cards are wide enough, and the tag moves to the corner. Container queries work in all current major browsers; in an older browser the card simply keeps its phone layout, which is fine.
+When a card is wide enough inside (for example, one card per row on a large phone turned sideways), the tag moves to the corner. Make the window narrower and wider and watch it move. Container queries work in all current major browsers; in an older browser the card simply keeps its phone layout, which is fine.
 
 ### Step 8: responsive images (TODO 8)
 
@@ -305,11 +305,11 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 ## Women to Know
 
-**Rachel Andrew** is a British web developer, writer, and teacher who has been a member of the W3C's CSS Working Group. Her site Grid by Example collected small, clear examples of CSS grid layout, and helped a generation of developers learn it when it was new.
+**Rachel Andrew** is a British web developer, writer, and speaker who has been a member of the W3C's CSS Working Group. Her site Grid by Example collected small, clear examples of CSS grid layout, and helped a generation of developers learn it when it was new.
 
 The grid you used for the programme cards is a standard: someone had to argue for it, explain it, and teach it. Much of that explaining was done by Rachel Andrew.
 
-> **Editorial note: verify before publication.** Rachel Andrew is not yet in the Women to Know roster; her biography must be checked against primary sources, added to [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md), and, where practical, confirmed with her before the lesson goes live.
+> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
 
 ## Standards spotlight
 

@@ -104,7 +104,7 @@ The reference solution is in [`completed/`](completed/). In your own site, save 
 
 The `for` on the label must match the `id` on the input. That link does three things: a screen reader announces "Full name, required, edit text"; clicking the label puts the cursor in the field, which gives people with shaky hands a bigger target; and voice-control users can say "click Full name".
 
-**Placeholder text is not a label.** It disappears when you type, is usually too pale to read, and many screen readers skip it. Always use a real `<label>`.
+**Placeholder text is not a label.** It disappears when you type, is usually too pale to read, and screen readers do not treat it as a label. Always use a real `<label>`.
 
 ### Step 2: the right type for each field (TODO 3)
 
@@ -125,7 +125,7 @@ Add a short **hint** explaining why you ask, and link it with `aria-describedby`
 
 ### Step 3: choices (TODO 4)
 
-A group of related choices needs a `<fieldset>`, and a `<legend>` that asks the question. Screen readers announce the legend with each option: "Which programme would you like to join? Homework club, radio button, 1 of 5".
+A group of related choices needs a `<fieldset>`, and a `<legend>` that asks the question. Screen readers announce the legend when you move into the group, and some repeat it with each option: "Which programme would you like to join? Homework club, radio button, 1 of 5".
 
 Radio buttons that share a `name` form one group: only one can be chosen, and the arrow keys move between them.
 

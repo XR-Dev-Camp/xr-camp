@@ -2,23 +2,29 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## Behaviour
+- [ ] Every lesson has a checkbox named "Done: <lesson title>".
+- [ ] Ticking a lesson updates its phase, the overall progress, and Next up.
+- [ ] Goals can be added and removed; an empty goal is refused with a message.
+- [ ] Progress and goals survive a reload.
+- [ ] The console shows no errors.
 
-## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+## Code
+- [ ] One `change` listener on the map, and one `click` listener on the goals list (delegation).
+- [ ] Only `state.js` touches `localStorage`.
+- [ ] Ticking a lesson updates only what changed; nothing is redrawn.
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
+## Focus and announcements
+- [ ] After ticking with Space, focus stays on the checkbox.
+- [ ] After adding a goal, focus stays in the input.
+- [ ] After removing a goal, focus moves to the next goal, the previous one, or the input.
+- [ ] Every change is announced by a screen reader.
+- [ ] Progress bars always have their value in words.
 
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+## 3D and XR (manual)
+
+Automated tools cannot see inside a 3D canvas, so these are checked by a person. See [`docs/en/xr-accessibility.md`](../../../docs/en/xr-accessibility.md).
+
+- [ ] Every shape in the 3D moment can be added, selected, and removed from the panel with the keyboard.
+- [ ] The scene description lists every shape and which one is selected.
+- [ ] Nothing moves on its own, and the camera never moves unless you move it.

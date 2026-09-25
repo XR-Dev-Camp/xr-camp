@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: a tangled 3D exhibit - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>a-scene { display: block; width: 100%; height: 22rem; border-radius: var(--radius); }</style>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>A tangled 3D exhibit</h1>
+    <p>This scene works, but its script is tangled on purpose. Refactor it into small components, each with one clear job. The completed version is in <code>completed/3d-moment.html</code>.</p>
+    <p><button type="button" id="b" aria-pressed="false">Pause animation</button></p>
+    <p id="scene-description">Three objects on pedestals, in a row on a pale floor, from left to right: a clay pot, a woven basket ring, and a jade stone. Each turns slowly, unless you have asked your device to reduce motion.</p>
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+      <a-sky color="#eef4ff"></a-sky>
+      <a-plane rotation="-90 0 0" width="12" height="12" color="#dcd6e6"></a-plane>
+      <a-entity id="s"></a-entity>
+    </a-scene>
+    <p><a href="index.html">Back to the planner</a></p>
+  </main>
+
+  <script>
+    // everything
+    var s = document.getElementById('s')
+    var p = false
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) p = true
+    document.getElementById('b').setAttribute('aria-pressed', p)
+
+    var b1 = document.createElement('a-cylinder')
+    b1.setAttribute('position', '-1.6 0.3 -4')
+    b1.setAttribute('radius', '0.45')
+    b1.setAttribute('height', '0.6')
+    b1.setAttribute('color', '#8a8398')
+    s.appendChild(b1)
+    var o1 = document.createElement('a-cylinder')
+    o1.setAttribute('position', '-1.6 0.95 -4')
+    o1.setAttribute('radius', '0.3')
+    o1.setAttribute('height', '0.7')
+    o1.setAttribute('color', '#b5562e')
+    s.appendChild(o1)
+
+    var b2 = document.createElement('a-cylinder')
+    b2.setAttribute('position', '0 0.3 -4')
+    b2.setAttribute('radius', '0.45')
+    b2.setAttribute('height', '0.6')
+    b2.setAttribute('color', '#8a8398')
+    s.appendChild(b2)
+    var o2 = document.createElement('a-torus')
+    o2.setAttribute('position', '0 1 -4')
+    o2.setAttribute('radius', '0.3')
+    o2.setAttribute('radius-tubular', '0.08')
+    o2.setAttribute('color', '#c79a3b')
+    s.appendChild(o2)
+
+    var b3 = document.createElement('a-cylinder')
+    b3.setAttribute('position', '1.6 0.3 -4')
+    b3.setAttribute('radius', '0.45')
+    b3.setAttribute('height', '0.6')
+    b3.setAttribute('color', '#8a8398')
+    s.appendChild(b3)
+    var o3 = document.createElement('a-dodecahedron')
+    o3.setAttribute('position', '1.6 0.95 -4')
+    o3.setAttribute('radius', '0.3')
+    o3.setAttribute('color', '#2f7d5b')
+    s.appendChild(o3)
+
+    // spin (every 16ms, whether the page is visible or not)
+    var r = 0
+    setInterval(function () {
+      if (p) return
+      r = r + 0.4
+      o1.setAttribute('rotation', '0 ' + r + ' 0')
+      o2.setAttribute('rotation', '0 ' + r + ' 0')
+      o3.setAttribute('rotation', '0 ' + r + ' 0')
+    }, 16)
+
+    document.getElementById('b').onclick = function () {
+      p = !p
+      document.getElementById('b').setAttribute('aria-pressed', p)
+    }
+  </script>
+</body>
+</html>

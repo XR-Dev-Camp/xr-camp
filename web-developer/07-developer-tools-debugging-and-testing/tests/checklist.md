@@ -2,23 +2,22 @@
 
 Work through this list before you submit.
 
-## Structure
-- [ ] The page has a valid document structure.
-- [ ] The page language is identified.
-- [ ] There is one clear main heading.
+## The ten symptoms
+- [ ] The page is styled (no 404s in the Network panel).
+- [ ] All programmes appear; the Console shows no errors.
+- [ ] Every label focuses its own control; every `id` is unique.
+- [ ] Programme names are visible on every card.
+- [ ] No sideways scrolling at 390 pixels.
+- [ ] Saved buttons look different from unsaved ones.
+- [ ] Searching for "lunch" finds Community lunch, and "Free only" never ticks itself.
+- [ ] The count shows the right total.
+- [ ] The ✕ button is announced as "Clear search".
+- [ ] A screen reader announces the count when results change.
 
-## Accessibility
-- [ ] Images include useful alternative text.
-- [ ] The keyboard can reach every interactive control.
-- [ ] Focus is visible at all times.
-- [ ] Colour contrast meets WCAG 2.2 AA.
-- [ ] The experience respects reduced-motion preferences.
+## Testing
+- [ ] Everything works with the keyboard alone.
+- [ ] An automated tool reports no errors.
+- [ ] You tested at 320, 390, 768, and 1280 pixels wide.
 
-## Responsiveness
-- [ ] The page works at mobile width.
-- [ ] Nothing overflows horizontally.
-
-## Quality
-- [ ] The browser console has no errors.
-- [ ] Code is formatted consistently and meaningfully named.
-- [ ] Comments explain intent, not syntax.
+## Reports
+- [ ] `bug-reports.md` has one report per bug, each with steps, expected, actual, device, tool, cause, and fix.

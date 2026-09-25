@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: a control panel for a 3D scene - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    .layout { display: grid; gap: var(--space-3); }
+    @media (min-width: 48rem) { .layout { grid-template-columns: 18rem 1fr; } }
+    a-scene { display: block; width: 100%; height: 20rem; border-radius: var(--radius); }
+    .shape-list { list-style: none; padding: 0; }
+    .shape-list li { display: flex; gap: var(--space-2); margin-bottom: var(--space-2); }
+    .shape-list button[aria-pressed="true"] { background: var(--color-primary-dark); }
+    .shape-list button[aria-pressed="true"]::before { content: "✓ "; }
+    .shape-list .remove { background: var(--color-surface); color: var(--color-primary-dark); }
+  </style>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>A control panel for a 3D scene</h1>
+    <div class="layout">
+      <section class="panel" aria-labelledby="panel-heading">
+        <h2 id="panel-heading">Shapes</h2>
+        <form id="add-form">
+          <p>
+            <label for="kind">Shape</label><br>
+            <select id="kind">
+              <option value="box">Box</option>
+              <option value="sphere">Sphere</option>
+              <option value="cone">Cone</option>
+            </select>
+          </p>
+          <p><button type="submit">Add shape</button></p>
+        </form>
+        <ul class="shape-list" id="shape-list" role="list"></ul>
+        <p id="status" role="status"></p>
+      </section>
+      <div>
+        <p id="scene-description" role="status">An empty stage on a pale floor. Nothing moves.</p>
+        <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+          <a-sky color="#eef4ff"></a-sky>
+          <a-plane rotation="-90 0 0" width="12" height="12" color="#dcd6e6"></a-plane>
+          <a-entity id="stage" position="0 0.6 -4"></a-entity>
+        </a-scene>
+      </div>
+    </div>
+    <p><a href="index.html">Back to the dashboard</a></p>
+  </main>
+
+  <script>
+    // The panel is the source of truth: one array of shapes, drawn twice,
+    // once as buttons and once as 3D objects.
+    const shapes = [];
+    let selected = null;
+    let counter = 0;
+    const stage = document.getElementById('stage');
+    const list = document.getElementById('shape-list');
+    const status = document.getElementById('status');
+    const description = document.getElementById('scene-description');
+
+    function describe() {
+      if (shapes.length === 0) { description.textContent = 'An empty stage on a pale floor. Nothing moves.'; return; }
+      const names = shapes.map((s) => `${s.name}${s.id === selected ? ' (selected, gold)' : ''}`);
+      description.textContent = `A row of ${shapes.length} shapes on a pale floor, from left to right: ${names.join(', ')}. Nothing moves.`;
+    }
+
+    function drawScene() {
+      stage.replaceChildren(...shapes.map((shape, i) => {
+        const el = document.createElement(`a-${shape.kind}`);
+        el.setAttribute('position', `${(i - (shapes.length - 1) / 2) * 1.3} 0 0`);
+        el.setAttribute('scale', '0.5 0.5 0.5');
+        el.setAttribute('color', shape.id === selected ? '#e0a526' : '#5b2a86');
+        return el;
+      }));
+      describe();
+    }
+
+    function drawList() {
+      list.replaceChildren(...shapes.map((shape) => {
+        const li = document.createElement('li');
+        li.dataset.id = shape.id;
+        const pick = document.createElement('button');
+        pick.type = 'button'; pick.className = 'select'; pick.textContent = shape.name;
+        pick.setAttribute('aria-pressed', String(shape.id === selected));
+        const remove = document.createElement('button');
+        remove.type = 'button'; remove.className = 'remove'; remove.textContent = 'Remove';
+        remove.setAttribute('aria-label', `Remove ${shape.name}`);
+        li.append(pick, remove);
+        return li;
+      }));
+    }
+
+    document.getElementById('add-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const kind = document.getElementById('kind').value;
+      counter += 1;
+      shapes.push({ id: `s${counter}`, kind, name: `${kind[0].toUpperCase()}${kind.slice(1)} ${counter}` });
+      drawList(); drawScene();
+      status.textContent = `${shapes.at(-1).name} added.`;
+    });
+
+    // One delegated listener for Select and Remove buttons.
+    list.addEventListener('click', (event) => {
+      const li = event.target.closest('li');
+      if (!li) return;
+      const index = shapes.findIndex((s) => s.id === li.dataset.id);
+      const shape = shapes[index];
+
+      if (event.target.classList.contains('select')) {
+        selected = selected === shape.id ? null : shape.id;
+        drawList(); drawScene();
+        // Redrawing replaced the button: put focus back on its replacement.
+        list.querySelector(`[data-id="${shape.id}"] .select`).focus();
+        status.textContent = selected ? `${shape.name} selected.` : `${shape.name} deselected.`;
+      }
+
+      if (event.target.classList.contains('remove')) {
+        shapes.splice(index, 1);
+        if (selected === shape.id) selected = null;
+        drawList(); drawScene();
+        // Focus goes to the next shape, or the previous one, or back to Add.
+        const buttons = list.querySelectorAll('.select');
+        (buttons[index] ?? buttons[index - 1] ?? document.querySelector('#add-form button')).focus();
+        status.textContent = `${shape.name} removed.`;
+      }
+    });
+  </script>
+</body>
+</html>

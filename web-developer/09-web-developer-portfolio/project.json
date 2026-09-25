@@ -2,7 +2,7 @@
   "id": "web-09-web-developer-portfolio",
   "courseId": "web-developer",
   "lessonId": "web-developer-portfolio-09",
-  "status": "draft",
+  "status": "review",
   "phase": 1,
   "title": {
     "en": "Phase 1 Capstone - Web Developer Portfolio",
@@ -21,7 +21,10 @@
   },
   "difficulty": "beginner",
   "technologies": [
-    "HTML"
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "A-Frame"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -38,6 +41,14 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "form-labels",
+    "status-messages",
+    "keyboard-operable",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

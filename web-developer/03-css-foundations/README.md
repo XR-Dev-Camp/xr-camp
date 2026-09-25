@@ -125,7 +125,7 @@ h1 {
 | Descendant | Elements inside other elements | `nav a` |
 | Pseudo-class | Elements in a state | `a:hover`, `:focus-visible` |
 
-Open your browser's developer tools (**F12**), choose **Elements** (or **Inspector** in Firefox), and click any element: the **Styles** panel shows every rule that applies to it.
+Open your browser's developer tools (**F12**), choose **Elements** (or **Inspector** in Firefox), and click any element: the **Styles** panel (**Rules** in Firefox) shows every rule that applies to it.
 
 ### Step 3: the cascade and inheritance (TODO 2)
 
@@ -230,7 +230,7 @@ Order your stylesheet from general to specific: tokens, base, typography, layout
 
 **`nav a[aria-current="page"]`.** Selects the link to the current page using the same attribute screen readers use. One source of truth for both.
 
-**`a[href="#main"]:first-child`.** Selects the skip link without adding a class: an attribute selector plus a structural pseudo-class.
+**`body > a[href="#main"]:first-child`.** Selects the skip link without adding a class: a child combinator, an attribute selector, and a structural pseudo-class. Without `body >`, it would also hide any "Back to top" link that is the first element inside its parent.
 
 ## 3D moment
 

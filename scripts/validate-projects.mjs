@@ -54,6 +54,7 @@ const PLACEHOLDERS = [
   '_Content to be authored._', '_To be authored._', 'Reference solution placeholder',
   '_Contenido pendiente de redacción._', '_Pendiente de redacción._', // Spanish templates
   '_内容待撰写。_', '_待撰写。_', // Chinese templates
+  '<!-- WTK:pending -->', // a Women to Know spotlight still being researched
 ];
 const UNTRANSLATED = 'TODO: translate';
 

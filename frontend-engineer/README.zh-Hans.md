@@ -16,9 +16,9 @@
 
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
-| 1 | [Modern JavaScript](01-modern-javascript/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
-| 2 | [The Document Object Model and Dynamic Interfaces](02-the-document-object-model-and-dynamic-interfaces/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |
-| 3 | [Application Architecture and Maintainable Code](03-application-architecture-and-maintainable-code/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
+| 1 | [Modern JavaScript](01-modern-javascript/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
+| 2 | [The Document Object Model and Dynamic Interfaces](02-the-document-object-model-and-dynamic-interfaces/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
+| 3 | [Application Architecture and Maintainable Code](03-application-architecture-and-maintainable-code/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 4 | [APIs, JSON, and Asynchronous Applications](04-apis-json-and-asynchronous-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
 | 5 | [Web Components](05-web-components/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |
 | 6 | [Progressive Web Applications](06-progressive-web-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |

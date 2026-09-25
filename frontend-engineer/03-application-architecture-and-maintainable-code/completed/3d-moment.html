@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: a tidy 3D exhibit - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>a-scene { display: block; width: 100%; height: 22rem; border-radius: var(--radius); }</style>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>A tidy 3D exhibit</h1>
+    <p>The same scene as the starter, refactored: the exhibits are data, and each component has one job. To add a fourth object, add one line to <code>EXHIBITS</code>.</p>
+    <p><button type="button" id="pause" aria-pressed="false">Pause animation</button></p>
+    <p id="scene-description"></p>
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+      <a-sky color="#eef4ff"></a-sky>
+      <a-plane rotation="-90 0 0" width="12" height="12" color="#dcd6e6"></a-plane>
+      <a-entity id="gallery" position="0 0 -4"></a-entity>
+    </a-scene>
+    <p><a href="index.html">Back to the planner</a></p>
+  </main>
+
+  <script>
+    // --- Config: the exhibits are data, not code. ---------------------------
+    const EXHIBITS = [
+      { name: 'a clay pot', shape: 'cylinder', color: '#b5562e' },
+      { name: 'a woven basket ring', shape: 'torus', color: '#c79a3b' },
+      { name: 'a jade stone', shape: 'dodecahedron', color: '#2f7d5b' },
+    ];
+    const SPACING = 1.6;          // metres between pedestals
+    const TURN_SPEED = 25;        // degrees per second
+
+    // --- Motion: one place decides whether anything may move. ---------------
+    const motion = {
+      paused: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    };
+
+    // --- Component: turn slowly, unless motion is paused. -------------------
+    // A-Frame calls tick() once per frame, and only while the scene is
+    // running, so there is no setInterval to forget about.
+    AFRAME.registerComponent('turntable', {
+      schema: { speed: { default: TURN_SPEED } },
+      tick(time, delta) {
+        if (motion.paused) return;
+        this.el.object3D.rotation.y += THREE.MathUtils.degToRad(this.data.speed) * (delta / 1000);
+      },
+    });
+
+    // --- Component: a pedestal with one exhibit on top. ---------------------
+    AFRAME.registerComponent('pedestal', {
+      schema: { shape: { default: 'box' }, color: { default: '#5b2a86' } },
+      init() {
+        const base = document.createElement('a-cylinder');
+        base.setAttribute('radius', 0.45);
+        base.setAttribute('height', 0.6);
+        base.setAttribute('position', '0 0.3 0');
+        base.setAttribute('color', '#8a8398');
+
+        const item = document.createElement('a-entity');
+        item.setAttribute('geometry', shapeGeometry(this.data.shape));
+        item.setAttribute('material', { color: this.data.color });
+        item.setAttribute('position', '0 0.98 0');
+        item.setAttribute('turntable', '');
+
+        this.el.append(base, item);
+      },
+    });
+
+    // --- Small helpers, each with one job. ----------------------------------
+    function shapeGeometry(shape) {
+      if (shape === 'torus') return { primitive: 'torus', radius: 0.3, radiusTubular: 0.08 };
+      if (shape === 'cylinder') return { primitive: 'cylinder', radius: 0.3, height: 0.7 };
+      return { primitive: shape, radius: 0.3 };
+    }
+
+    // x positions for a centred row: 3 items → -1.6, 0, 1.6
+    function rowPosition(index, count) {
+      return (index - (count - 1) / 2) * SPACING;
+    }
+
+    function describe(exhibits) {
+      const names = exhibits.map((exhibit) => exhibit.name);
+      const list = `${names.slice(0, -1).join(', ')}, and ${names.at(-1)}`;
+      return `${exhibits.length} objects on pedestals, in a row on a pale floor, from left to right: ${list}. `
+        + (motion.paused ? 'Nothing moves.' : 'Each turns slowly.');
+    }
+
+    // --- Build the scene from the data. -------------------------------------
+    function build() {
+      const gallery = document.querySelector('#gallery');
+      gallery.replaceChildren(...EXHIBITS.map((exhibit, index) => {
+        const pedestal = document.createElement('a-entity');
+        pedestal.setAttribute('pedestal', { shape: exhibit.shape, color: exhibit.color });
+        pedestal.setAttribute('position', { x: rowPosition(index, EXHIBITS.length), y: 0, z: 0 });
+        return pedestal;
+      }));
+      document.querySelector('#scene-description').textContent = describe(EXHIBITS);
+    }
+
+    // --- Wire the Pause button. ---------------------------------------------
+    const pauseButton = document.querySelector('#pause');
+    pauseButton.setAttribute('aria-pressed', String(motion.paused));
+    pauseButton.addEventListener('click', () => {
+      motion.paused = !motion.paused;
+      pauseButton.setAttribute('aria-pressed', String(motion.paused));
+      document.querySelector('#scene-description').textContent = describe(EXHIBITS);
+    });
+
+    build();
+  </script>
+</body>
+</html>

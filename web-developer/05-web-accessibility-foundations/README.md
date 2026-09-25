@@ -116,7 +116,7 @@ Learn the basic commands for your screen reader first:
 
 | Action | NVDA (Windows) | VoiceOver (Mac) | TalkBack (Android) |
 | --- | --- | --- | --- |
-| Turn on or off | **Ctrl + Alt + N** | **⌘ + F5** | Settings → Accessibility → TalkBack |
+| Turn on or off | **Ctrl + Alt + N** to start, **Insert + Q** to quit | **⌘ + F5** | Settings → Accessibility → TalkBack |
 | Read the next item | **↓** | **Control + Option + →** | Swipe right |
 | Next heading | **H** | **Control + Option + ⌘ + H** | Choose "Headings" in the reading controls, then swipe down |
 | List all headings or links | **Insert + F7** | **Control + Option + U** (the rotor) | Reading controls |

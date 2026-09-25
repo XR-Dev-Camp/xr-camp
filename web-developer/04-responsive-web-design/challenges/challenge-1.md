@@ -14,7 +14,7 @@ When a site has many pages, its navigation takes up the whole top of a phone scr
    <button type="button" id="menu-button" aria-expanded="false" aria-controls="main-menu" hidden>Menu</button>
    ```
 
-   and give the `<ul>` the id `main-menu`.
+   and give the `<ul>` the id `main-menu`. Also add `nav ul[hidden] { display: none; }` to your stylesheet: your `nav ul { display: flex; }` rule would otherwise override the `hidden` attribute, and the menu would never close.
 
 2. Before `</body>`, add:
 

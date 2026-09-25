@@ -2,18 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Application Architecture and Maintainable Code - XR Camp starter</title>
+  <meta name="description" content="Plan your XR Camp study sessions for the week.">
+  <title>Session planner - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>My XR Camp</p></header>
+
   <main>
-    <!-- Add your main heading below. -->
+    <h1>Session planner</h1>
+    <p>Plan your study sessions for this week. Each session is 45 minutes. Everything is saved in this browser only.</p>
 
-    <!-- Add your project content below. -->
+    <!-- Progressive enhancement: the page and its headings are plain HTML.
+         JavaScript adds the working parts. Without it, the learner still
+         gets an explanation instead of a broken form. -->
+    <noscript><p>The planner needs JavaScript to add and save sessions.</p></noscript>
 
+    <!-- One polite live region for every change. -->
+    <p id="status" role="status" class="visually-hidden"></p>
+
+    <!-- TODO 11: PROGRESSIVE ENHANCEMENT. The old app built its form from a
+         JavaScript string. Write it here, in HTML, instead:
+         <form id="session-form" class="panel planner-form" hidden novalidate>
+         with a labelled <select id="day"> (Monday to Sunday), a labelled
+         <input id="time" type="time" value="19:00">, a labelled
+         <input id="topic" type="text" aria-describedby="topic-error">, an
+         empty <span id="topic-error" class="field-error" hidden></span>,
+         and a submit button "Add session".
+         It stays hidden until main.js shows it, so it never appears
+         without working. Until you write it, the console shows errors. -->
+
+
+    <div id="lists">
+      <section aria-labelledby="todo-heading">
+        <h2 id="todo-heading">Still to do</h2>
+        <ul id="todo-list" class="sessions" role="list"></ul>
+      </section>
+      <section aria-labelledby="done-heading">
+        <h2 id="done-heading">Done</h2>
+        <ul id="done-list" class="sessions" role="list"></ul>
+      </section>
+    </div>
+
+    <div id="summary"></div>
+
+    <p><a href="check.html">Run the checks for utils.js</a> · <a href="3d-moment.html">Try the 3D moment: a tangled 3D exhibit</a> · <a href="old/index.html">The old planner</a></p>
   </main>
 </body>
 </html>

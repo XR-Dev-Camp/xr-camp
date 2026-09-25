@@ -2,18 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>The Document Object Model and Dynamic Interfaces - XR Camp starter</title>
+  <meta name="description" content="Track your progress through XR Camp, and keep your learning goals.">
+  <title>Learning dashboard - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>My XR Camp</p></header>
+
   <main>
-    <!-- Add your main heading below. -->
+    <h1>My learning dashboard</h1>
+    <p>Tick lessons as you finish them. Everything is saved in this browser only.</p>
 
-    <!-- Add your project content below. -->
+    <!-- One polite live region for every change on the page. -->
+    <p id="status" role="status" class="visually-hidden"></p>
 
+    <div class="cards-row">
+      <section class="panel" aria-labelledby="overall-heading">
+        <h2 id="overall-heading">Overall</h2>
+        <div id="overall"></div>
+      </section>
+      <section class="panel" aria-labelledby="next-heading">
+        <h2 id="next-heading">Next up</h2>
+        <div id="next-up"></div>
+      </section>
+    </div>
+
+    <section aria-labelledby="goals-heading">
+      <h2 id="goals-heading">My goals</h2>
+      <form id="goal-form">
+        <p>
+          <label for="goal-text">New goal</label><br>
+          <input id="goal-text" type="text" autocomplete="off">
+        </p>
+        <p><button type="submit">Add goal</button></p>
+      </form>
+      <ul id="goals"></ul>
+    </section>
+
+    <h2 class="visually-hidden">Lessons by phase</h2>
+    <noscript><p>The dashboard needs JavaScript.</p></noscript>
+    <div id="map"></div>
+
+    <p><a href="3d-moment.html">Try the 3D moment: a control panel for a 3D scene</a></p>
   </main>
 </body>
 </html>

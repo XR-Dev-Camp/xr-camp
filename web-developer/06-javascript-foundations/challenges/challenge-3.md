@@ -15,7 +15,7 @@ Sort the results by day or by name.
    found.sort((a, b) => a.dayOrder - b.dayOrder);         // by day
    ```
 
-4. `localeCompare` sorts text correctly in any language, including accents and Chinese.
+4. `localeCompare` sorts text by language rules, so accented letters sort sensibly. The order depends on the language, so pass one: `a.name.localeCompare(b.name, 'es')`, or `'zh'` for Chinese.
 
 ## Why this matters
 

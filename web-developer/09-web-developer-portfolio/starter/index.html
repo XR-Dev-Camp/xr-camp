@@ -1,19 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Your portfolio's home page. The structure is here; the words are yours.
+     Work through the TODOs in order: each one is a step in the lesson guide.
+     If you write in another language, change lang="en" above. -->
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Phase 1 Capstone - Web Developer Portfolio - XR Camp starter</title>
-</head>
-<body>
-  <main>
-    <!-- Add your main heading below. -->
+  <!-- TODO 1: Put your name in the title, the description, and the header
+       below. The title is what people see in a browser tab and in search
+       results, for example "Ana - web developer portfolio". The description
+       is one sentence about what you build, and for whom. -->
+  <meta name="description" content="Your name is a web developer who builds ...">
+  <title>Your name - web developer portfolio</title>
 
-    <!-- Add your project content below. -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- The project filter. It is finished: read it in Step 10. -->
+  <script src="portfolio.js" defer></script>
+</head>
+
+<body>
+
+  <a href="#main">Skip to main content</a>
+
+  <!-- The same header on every page. Copy it exactly into your other pages,
+       and move aria-current="page" to the link for that page. -->
+  <header>
+    <p class="site-name"><a href="index.html">Your name</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="case-study.html">Case study</a></li>
+        <li><a href="gallery-3d.html">3D gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <section class="intro" aria-labelledby="intro-heading">
+      <!-- The h1: who you are and what you build, in one sentence. -->
+      <h1 id="intro-heading">Hello, I’m your name. I build ...</h1>
+      <p class="lead">
+        One or two sentences: what kind of developer you are, and what you
+        care about.
+      </p>
+      <p class="actions">
+        <a class="button-link" href="#projects">See my projects</a>
+        <a href="#contact">Get in touch</a>
+      </p>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About me</h2>
+
+      <!-- TODO 2: Write about yourself in two short paragraphs, in plain
+           language:
+           - how you came to web development, and what you did before;
+           - who you want to build for, and why.
+           Then list what you can do, as things a person can check in your
+           projects ("I can build a form with helpful error messages"), not
+           as adjectives ("passionate", "hard-working").
+           Say where you are learning. Do not include your home address,
+           your age, or anything you would not tell a stranger. -->
+      <p>...</p>
+
+      <h3>What I can do</h3>
+      <ul>
+        <li>...</li>
+      </ul>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <p>One sentence introducing your projects.</p>
+
+      <!-- The filter appears only when portfolio.js runs. -->
+      <fieldset id="filters" class="filters" hidden>
+        <legend>Show projects about</legend>
+        <label><input type="radio" name="skill" value="all" checked> Everything</label>
+        <label><input type="radio" name="skill" value="accessibility"> Accessibility</label>
+        <label><input type="radio" name="skill" value="responsive"> Responsive design</label>
+        <label><input type="radio" name="skill" value="javascript"> JavaScript</label>
+      </fieldset>
+      <p id="project-count" role="status"></p>
+
+      <!-- TODO 3: Make one card for each of your Phase 1 projects: at least
+           three. The first card is an example; copy its shape.
+           Each card needs:
+           - a picture: a screenshot or a simple drawing, with alt=""
+             because the heading already names the project;
+           - an h3 with the project's name;
+           - what it is, in one sentence, and who it was for;
+           - two or three skills, as a list;
+           - links that say where they go: "Visit the Riverside website",
+             never "Click here". Link to the live project and to its code.
+           - data-skills: the filter words it matches, separated by spaces
+             (accessibility, responsive, javascript). -->
+      <ul class="cards" id="project-list">
+        <li class="card project" data-skills="responsive accessibility">
+          <img src="centre.svg" alt="" width="800" height="450">
+          <h3>Riverside Community Centre website</h3>
+          <p>
+            A website for a community centre: opening hours, programmes, and
+            how to visit, on any screen.
+          </p>
+          <p><strong>Built for:</strong> local families, many on phones.</p>
+          <ul class="tags" aria-label="Skills">
+            <li>HTML</li>
+            <li>CSS grid</li>
+            <li>Responsive images</li>
+          </ul>
+          <p class="links">
+            <a href="case-study.html">Read the Riverside case study</a><br>
+            <a href="projects/riverside/index.html">Visit the Riverside website</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="this-site" aria-labelledby="this-site-heading">
+      <h2 id="this-site-heading">How I built this site</h2>
+      <p>
+        Two or three sentences: what the site is made with, the accessibility
+        level you aim for, how you tested it, and how people can tell you
+        about a problem.
+      </p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+
+      <!-- TODO 4: Say what you are looking for, and how to reach you.
+           - An email address you made for your portfolio, as a mailto: link.
+           - A link to your GitHub profile.
+           - Optionally, a professional profile such as LinkedIn.
+           Never your home address, your personal phone number, your ID
+           number, or your birth date. -->
+      <p>...</p>
+    </section>
 
   </main>
+
+  <footer>
+    <p>
+      <small>
+        Last updated on <time datetime="2026-01-01">1 January 2026</time>.
+      </small>
+    </p>
+  </footer>
+
 </body>
 </html>

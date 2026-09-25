@@ -3,12 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Application Architecture and Maintainable Code - XR Camp reference solution</title>
+  <meta name="description" content="Plan your XR Camp study sessions for the week.">
+  <title>Session planner - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>My XR Camp</p></header>
+
   <main>
-    <h1>Application Architecture and Maintainable Code</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Session planner</h1>
+    <p>Plan your study sessions for this week. Each session is 45 minutes. Everything is saved in this browser only.</p>
+
+    <!-- Progressive enhancement: the page and its headings are plain HTML.
+         JavaScript adds the working parts. Without it, the learner still
+         gets an explanation instead of a broken form. -->
+    <noscript><p>The planner needs JavaScript to add and save sessions.</p></noscript>
+
+    <!-- One polite live region for every change. -->
+    <p id="status" role="status" class="visually-hidden"></p>
+
+    <!-- Hidden until main.js has loaded, so it never appears without working. -->
+    <form id="session-form" class="panel planner-form" hidden novalidate>
+      <p>
+        <label for="day">Day</label><br>
+        <select id="day">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+      </p>
+      <p>
+        <label for="time">Time</label><br>
+        <input id="time" type="time" value="19:00" required>
+      </p>
+      <p>
+        <label for="topic">What will you study?</label><br>
+        <input id="topic" type="text" autocomplete="off" aria-describedby="topic-error">
+        <br><span id="topic-error" class="field-error" hidden></span>
+      </p>
+      <p><button type="submit">Add session</button></p>
+    </form>
+
+    <div id="lists">
+      <section aria-labelledby="todo-heading">
+        <h2 id="todo-heading">Still to do</h2>
+        <ul id="todo-list" class="sessions" role="list"></ul>
+      </section>
+      <section aria-labelledby="done-heading">
+        <h2 id="done-heading">Done</h2>
+        <ul id="done-list" class="sessions" role="list"></ul>
+      </section>
+    </div>
+
+    <div id="summary"></div>
+
+    <p><a href="check.html">Run the checks for utils.js</a> · <a href="3d-moment.html">Try the 3D moment: a tidy 3D exhibit</a></p>
   </main>
 </body>
 </html>

@@ -260,7 +260,7 @@ try {
 }
 ```
 
-Storage can be switched off, full, or blocked in private windows. `try...catch` means that if it fails, the explorer still works, just without remembering. Always plan for the thing that can fail.
+Storage can be switched off, blocked by privacy settings, or full. `try...catch` means that if it fails, the explorer still works, just without remembering. Always plan for the thing that can fail.
 
 `localStorage` is only in this browser, on this device, and it is not private from other people who use the same browser. Never store passwords or personal information in it. The page says "Saved in this browser only": honest, and true.
 
@@ -275,8 +275,8 @@ Every developer's code breaks. When it does, the console shows a red message wit
 | Error | Usually means |
 | --- | --- |
 | `Uncaught SyntaxError: Unexpected token` | A missing bracket, comma, or quote, near that line |
-| `Uncaught TypeError: Cannot read properties of null` | `querySelector` found nothing: check the selector and the `id` |
-| `Uncaught ReferenceError: x is not defined` | A spelling mistake, or a variable used before it was created |
+| `Uncaught TypeError: Cannot read properties of null` (Firefox: `... is null`) | `querySelector` found nothing: check the selector and the `id` |
+| `Uncaught ReferenceError: x is not defined` | A spelling mistake, or a variable that was never created or is out of reach |
 
 Click the file name in the console to jump to the line. Then use `console.log` just before it to see what the values really are.
 
@@ -319,7 +319,7 @@ The explorer draws at most a few dozen cards, so redrawing them all on every key
 | `=` instead of `===` in an `if` | It changes the value instead of comparing | `===` to compare |
 | `innerHTML` for text | A security risk with real data | `textContent` |
 | Forgetting `replaceChildren()` | Cards appear twice | Empty the list first |
-| `localStorage` without `try...catch` | The page breaks in private windows | Always wrap it |
+| `localStorage` without `try...catch` | The page breaks when storage is blocked or full | Always wrap it |
 | Moving focus on every keystroke | Screen readers lose their place | Announce with a live region; move focus only on submit |
 
 ## Troubleshooting

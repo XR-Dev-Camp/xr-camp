@@ -2,7 +2,7 @@
   "id": "fe-03-application-architecture-and-maintainable-code",
   "courseId": "frontend-engineer",
   "lessonId": "application-architecture-and-maintainable-code-03",
-  "status": "draft",
+  "status": "review",
   "phase": 2,
   "title": {
     "en": "Application Architecture and Maintainable Code",
@@ -21,7 +21,10 @@
   },
   "difficulty": "intermediate",
   "technologies": [
-    "JavaScript"
+    "JavaScript",
+    "ES Modules",
+    "Refactoring",
+    "A-Frame"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -38,6 +41,15 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "form-labels",
+    "focus-order",
+    "status-messages",
+    "keyboard-operable",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

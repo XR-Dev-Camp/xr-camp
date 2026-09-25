@@ -1,14 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Ana's portfolio: the Phase 1 capstone. Every skill from Courses 1.1 to 1.8
+     in one small site: semantic HTML, one tokenised stylesheet, a responsive
+     layout, accessibility, a little JavaScript, and publishing. -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Phase 1 Capstone - Web Developer Portfolio - XR Camp reference solution</title>
+
+  <!-- What search engines and link previews show under the title. -->
+  <meta name="description" content="Ana is a junior web developer who builds accessible, responsive websites for community organisations.">
+
+  <title>Ana - web developer portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- defer: run after the HTML has been read. The page works without it. -->
+  <script src="portfolio.js" defer></script>
 </head>
+
 <body>
-  <main>
-    <h1>Phase 1 Capstone - Web Developer Portfolio</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+
+  <a href="#main">Skip to main content</a>
+
+  <!-- The same header and navigation on every page, in the same order
+       (WCAG 3.2.3). -->
+  <header>
+    <p class="site-name"><a href="index.html">Ana</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="case-study.html">Case study</a></li>
+        <li><a href="gallery-3d.html">3D gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- Who I am and what I build, in two sentences. A visitor who reads
+         nothing else should still know both. -->
+    <section class="intro" aria-labelledby="intro-heading">
+      <h1 id="intro-heading">Hello, I’m Ana. I build websites that everyone can use.</h1>
+      <p class="lead">
+        I am a junior web developer. I make accessible, responsive websites
+        for community organisations, and I test them with a keyboard, a screen
+        reader, and real phones.
+      </p>
+      <p class="actions">
+        <a class="button-link" href="#projects">See my projects</a>
+        <a href="#contact">Get in touch</a>
+      </p>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About me</h2>
+      <p>
+        I started learning web development at XR Camp, a free school for web,
+        3D, and XR development. Before that I organised volunteers for a
+        neighbourhood group, so I know how much a clear, simple website helps
+        a small organisation, and how much a confusing one costs it.
+      </p>
+      <p>
+        I care most about the people who are usually forgotten: people using
+        an old phone on a slow connection, people who use a screen reader, and
+        people reading in their second language.
+      </p>
+
+      <h3>What I can do</h3>
+      <ul>
+        <li>Write semantic HTML, with clear headings, landmarks, and forms.</li>
+        <li>Build a design system in CSS, with tokens, flexbox, and grid.</li>
+        <li>Make layouts that work from a 320-pixel phone to a wide screen.</li>
+        <li>Audit a page for accessibility against WCAG 2.2, and fix what I find.</li>
+        <li>Add interaction with JavaScript that still works for keyboard and screen-reader users.</li>
+        <li>Publish a site with Git and GitHub Pages.</li>
+      </ul>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <p>
+        Four projects from my first months of learning. Each one says who it
+        was for and what I did. The first has a full
+        <a href="case-study.html">case study</a> about how I made it.
+      </p>
+
+      <!-- The filter is hidden until JavaScript runs. Without JavaScript,
+           every project is simply shown: nothing is lost. -->
+      <fieldset id="filters" class="filters" hidden>
+        <legend>Show projects about</legend>
+        <label><input type="radio" name="skill" value="all" checked> Everything</label>
+        <label><input type="radio" name="skill" value="accessibility"> Accessibility</label>
+        <label><input type="radio" name="skill" value="responsive"> Responsive design</label>
+        <label><input type="radio" name="skill" value="javascript"> JavaScript</label>
+      </fieldset>
+      <p id="project-count" role="status"></p>
+
+      <!-- One card per project. data-skills lists the filter words each
+           card matches, separated by spaces.
+           The pictures repeat what the heading says, so their alt is empty
+           and screen readers skip them.
+           Ana is a fictional learner, so her "live" links point to XR Camp's
+           reference solutions. Your cards link to your own published
+           projects, and to their code on GitHub. -->
+      <ul class="cards" id="project-list">
+        <li class="card project" data-skills="responsive accessibility">
+          <img src="centre.svg" alt="" width="800" height="450">
+          <h3>Riverside Community Centre website</h3>
+          <p>
+            A five-section website for a community centre: opening hours,
+            programmes, and how to visit, on any screen.
+          </p>
+          <p><strong>Built for:</strong> local families, many on phones.</p>
+          <ul class="tags" aria-label="Skills">
+            <li>HTML</li>
+            <li>CSS grid</li>
+            <li>Responsive images</li>
+          </ul>
+          <p class="links">
+            <a href="case-study.html">Read the Riverside case study</a><br>
+            <a href="../../04-responsive-web-design/completed/index.html">Visit the Riverside website</a>
+          </p>
+        </li>
+
+        <li class="card project" data-skills="accessibility">
+          <img src="thumb-form.svg" alt="" width="800" height="450">
+          <h3>An accessible sign-up form</h3>
+          <p>
+            A form for joining a programme, with visible labels, helpful
+            errors, and a clear thank-you page.
+          </p>
+          <p><strong>Built for:</strong> adults joining a class for the first time.</p>
+          <ul class="tags" aria-label="Skills">
+            <li>Forms</li>
+            <li>Validation</li>
+            <li>Error messages</li>
+          </ul>
+          <p class="links">
+            <a href="../../02-accessible-forms-and-user-input/completed/index.html">Try the sign-up form</a>
+          </p>
+        </li>
+
+        <li class="card project" data-skills="accessibility">
+          <img src="thumb-audit.svg" alt="" width="800" height="450">
+          <h3>Accessibility audit and repair</h3>
+          <p>
+            I tested an events page with a keyboard, a screen reader, zoom,
+            and automated tools, reported every problem, and fixed them all.
+          </p>
+          <p><strong>Built for:</strong> the centre's team, who needed to know what to fix first.</p>
+          <ul class="tags" aria-label="Skills">
+            <li>WCAG 2.2</li>
+            <li>Screen readers</li>
+            <li>Audit report</li>
+          </ul>
+          <p class="links">
+            <a href="../../05-web-accessibility-foundations/completed/audit.html">Read the audit report</a><br>
+            <a href="../../05-web-accessibility-foundations/completed/index.html">See the repaired events page</a>
+          </p>
+        </li>
+
+        <li class="card project" data-skills="javascript accessibility">
+          <img src="thumb-explorer.svg" alt="" width="800" height="450">
+          <h3>Programme explorer</h3>
+          <p>
+            Search and filter the centre's programmes as you type, and save
+            favourites that are still there the next day.
+          </p>
+          <p><strong>Built for:</strong> visitors looking for one activity among many.</p>
+          <ul class="tags" aria-label="Skills">
+            <li>JavaScript</li>
+            <li>Live regions</li>
+            <li>localStorage</li>
+          </ul>
+          <p class="links">
+            <a href="../../06-javascript-foundations/completed/index.html">Try the programme explorer</a>
+          </p>
+        </li>
+      </ul>
+
+      <p>
+        Prefer to explore? See the same projects in a
+        <a href="gallery-3d.html">small 3D gallery</a>.
+      </p>
+    </section>
+
+    <section id="this-site" aria-labelledby="this-site-heading">
+      <h2 id="this-site-heading">How I built this site</h2>
+      <p>
+        This site is hand-written HTML and CSS, with one small script for the
+        project filter. It has no framework and no tracking, and the home page
+        is smaller than a single photo from a phone camera.
+      </p>
+      <p>
+        I aim for WCAG 2.2 level AA. I tested every page with the keyboard
+        alone, with NVDA and VoiceOver, at 200% zoom, at 320 pixels wide, and
+        on two phones. If something does not work for you, please
+        <a href="#contact">tell me</a>, and I will fix it.
+      </p>
+    </section>
+
+    <!-- Contact: a way to reach Ana, and nothing more. No home address, no
+         personal phone number, no birth date. The email address is one she
+         made just for her portfolio, so she can close it if it gets spam.
+         Ana is fictional, so she has no GitHub profile; your contact
+         section links to yours. -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>
+        I am looking for a first role or freelance work building websites
+        for small organisations. The best way to reach me is by email:
+      </p>
+      <p><a href="mailto:ana.builds@example.com">ana.builds@example.com</a></p>
+      <p>I usually reply within three working days, in English or Spanish.</p>
+    </section>
+
   </main>
+
+  <footer>
+    <p>
+      <small>
+        Ana is the fictional learner in XR Camp’s reference solutions.
+        Drawings made for XR Camp and shared under CC0.
+        Last updated on <time datetime="2026-09-25">25 September 2026</time>.
+      </small>
+    </p>
+  </footer>
+
 </body>
 </html>

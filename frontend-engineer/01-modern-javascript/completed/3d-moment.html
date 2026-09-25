@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D moment: the course as a landscape - My XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>a-scene { display: block; width: 100%; height: 22rem; border-radius: var(--radius); }</style>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>The course as a 3D landscape</h1>
+    <p>Each column is a phase, and each block is a lesson. Ready lessons are purple; lessons still being written are grey.</p>
+    <!-- Written from the same data as the scene, so it always matches it. -->
+    <p id="scene-description" role="status">Loading the landscape…</p>
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+      <a-sky color="#eef4ff"></a-sky>
+      <a-plane rotation="-90 0 0" width="30" height="30" color="#dcd6e6"></a-plane>
+      <a-entity id="landscape" position="-3.5 0 -7"></a-entity>
+    </a-scene>
+    <p><a href="index.html">Back to the course map</a></p>
+  </main>
+
+  <script type="module">
+    // The same module that feeds the 2D course map feeds the 3D scene.
+    import { loadCatalog, groupByPhase } from './js/data.js';
+
+    const landscape = document.getElementById('landscape');
+    const description = document.getElementById('scene-description');
+
+    try {
+      const { phases, lessons } = await loadCatalog();
+      const groups = groupByPhase(lessons);
+
+      for (const { phase } of phases) {
+        (groups[phase] ?? []).forEach((lesson, i) => {
+          const block = document.createElement('a-box');
+          block.setAttribute('position', `${phase} ${0.3 + i * 0.62} 0`);
+          block.setAttribute('width', 0.8);
+          block.setAttribute('height', 0.55);
+          block.setAttribute('depth', 0.8);
+          block.setAttribute('color', lesson.status === 'ready' ? '#5b2a86' : '#b8b0cf');
+          landscape.append(block);
+        });
+      }
+
+      // Describe the scene in words, from the data.
+      const columns = phases.map(({ phase }) => {
+        const list = groups[phase] ?? [];
+        const ready = list.filter((l) => l.status === 'ready').length;
+        return `phase ${phase}: ${list.length} blocks, ${ready} purple`;
+      });
+      description.textContent = `Eight columns of blocks stand in a row, one per phase, from left to right. ${columns.join('; ')}. Nothing moves.`;
+    } catch (error) {
+      description.textContent = `The landscape could not be built: ${error.message}`;
+    }
+  </script>
+</body>
+</html>
