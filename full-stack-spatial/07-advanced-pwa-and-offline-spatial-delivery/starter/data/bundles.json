@@ -1,0 +1,11 @@
+{
+  "$comment": "The catalogue of downloadable scene bundles. main.js fetches this first, then fetches each entry's own manifestUrl directly from this project's own server (never through a mirror — only a bundle's own listed FILES are mirrorable; see js/mirror.js).",
+  "bundles": [
+    {
+      "id": "history-exhibit",
+      "title": "History exhibit (clay pot, basket, jade stone, fox, milk truck)",
+      "manifestUrl": "data/bundles/history-exhibit.manifest.json",
+      "sceneUrl": "scene.html?bundle=history-exhibit"
+    }
+  ]
+}

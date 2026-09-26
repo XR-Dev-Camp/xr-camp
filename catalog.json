@@ -1177,7 +1177,7 @@
       "id": "fss-07-advanced-pwa-and-offline-spatial-delivery",
       "courseId": "full-stack-spatial",
       "lessonId": "advanced-pwa-and-offline-spatial-delivery-07",
-      "status": "draft",
+      "status": "review",
       "phase": 5,
       "title": {
         "en": "Advanced PWA and Offline Spatial Delivery",
@@ -1191,7 +1191,13 @@
       },
       "difficulty": "advanced",
       "technologies": [
-        "PWA"
+        "PWA",
+        "Service Workers",
+        "Cache API",
+        "OPFS",
+        "Background Sync",
+        "Storage API",
+        "three.js"
       ],
       "hasCode": true,
       "path": "full-stack-spatial/07-advanced-pwa-and-offline-spatial-delivery"
@@ -1214,7 +1220,10 @@
       },
       "difficulty": "advanced",
       "technologies": [
-        "HTML"
+        "Node.js",
+        "WebSocket",
+        "SQLite",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "full-stack-spatial/08-full-stack-spatial-application"

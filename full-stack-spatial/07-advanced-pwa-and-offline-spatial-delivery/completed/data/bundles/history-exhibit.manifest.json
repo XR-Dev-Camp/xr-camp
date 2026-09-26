@@ -1,0 +1,9 @@
+{
+  "$comment": "A scene bundle's own manifest: every file the scene needs to run with no network, and its size in bytes, so the download UI can show real progress and a real total before fetching a single byte. Paths are relative to the configured asset base URL (default: this project's own assets/ folder; see js/mirror.js) — a regional mirror serves the same file names at a different origin.",
+  "id": "history-exhibit",
+  "title": "History exhibit",
+  "files": [
+    { "path": "Fox.glb", "bytes": 162852, "kind": "model" },
+    { "path": "CesiumMilkTruck.glb", "bytes": 369980, "kind": "model" }
+  ]
+}

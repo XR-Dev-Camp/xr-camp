@@ -1,0 +1,16 @@
+{
+  "name": "Offline Scene Bundles - My XR Camp",
+  "short_name": "Scene Bundles",
+  "description": "Download the exhibit's 3D scenes as offline bundles, with a storage panel and a regional mirror setting.",
+  "lang": "en",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#5b2a86",
+  "background_color": "#fdfcf8",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

@@ -3,12 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Advanced PWA and Offline Spatial Delivery - XR Camp reference solution</title>
+  <meta name="description" content="Download the exhibit's history scene as an offline scene bundle: real progress, a Cancel button, a storage panel, Background Sync where it is supported, a low-data mode, and a configurable asset base URL for a regional mirror.">
+  <title>Advanced PWA and Offline Spatial Delivery - XR Camp</title>
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Full-Stack Spatial · Advanced PWA and Offline Spatial Delivery</p></header>
   <main>
-    <h1>Advanced PWA and Offline Spatial Delivery</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Offline scene bundles</h1>
+    <p>The exhibit's models (Course 3.5) are downloadable as a <strong>scene bundle</strong>: one manifest naming every file and its size, so you know exactly what you are about to store before a single byte arrives. Download a bundle once, then open its scene with no network at all.</p>
+    <noscript><p>This page needs JavaScript to list bundles, download them, and read your device's storage.</p></noscript>
+
+    <p id="status" class="status-banner" role="status"></p>
+
+    <section id="settings" aria-labelledby="settings-heading">
+      <h2 id="settings-heading">Settings</h2>
+
+      <div class="option-list">
+        <label><input type="checkbox" id="low-data-toggle"> Low-data mode: ask before any download over 300 KB</label>
+      </div>
+
+      <div id="mirror-settings">
+        <p>
+          <label for="mirror-url-input">Asset base URL (leave blank to use this site's own files)</label><br>
+          <span class="hint" id="mirror-hint">A school or community can host its own copy of the <code>assets/</code> folder and put that server's URL here — useful when the main site is slow or blocked. The mirror must allow cross-origin requests (CORS) or be on this same site.</span><br>
+          <input type="text" id="mirror-url-input" placeholder="e.g. https://mirror.example.org/xrcamp-assets/">
+        </p>
+        <p class="actions"><button type="button" id="save-mirror-button">Save asset base URL</button> <button type="button" id="reset-mirror-button">Reset to default</button></p>
+      </div>
+
+      <div id="storage-panel" aria-labelledby="storage-heading">
+        <h3 id="storage-heading">Device storage</h3>
+        <p id="storage-text" role="status">Checking how much storage this project is using&hellip;</p>
+        <p class="actions"><button type="button" id="persist-button">Ask the browser to keep this storage</button></p>
+        <p id="persist-status" class="hint" role="status"></p>
+      </div>
+    </section>
+
+    <section id="bundles-section" aria-labelledby="bundles-heading">
+      <h2 id="bundles-heading">Available bundles</h2>
+      <ul id="bundles-list" role="list" class="option-list"></ul>
+    </section>
+
+    <section id="offline-support" aria-labelledby="offline-support-heading">
+      <h2 id="offline-support-heading">How offline downloads keep going</h2>
+      <p id="background-sync-status" class="hint">Checking Background Sync support&hellip;</p>
+      <p class="hint">If a download is cut off by losing the connection, this page remembers which bundle was mid-way through and finishes it automatically once the connection is back — through Background Sync where the browser supports it, or by watching for the connection to return while this page stays open, everywhere else.</p>
+    </section>
+
+    <section id="learner-notice" aria-labelledby="learner-notice-heading">
+      <h2 id="learner-notice-heading">This is a learning prototype</h2>
+      <p>This project stores files only on your own device, in this browser's storage for this site. Nothing is uploaded anywhere. A browser can still clear storage it has not been asked to keep (see "Ask the browser to keep this storage" above) — for anything you truly cannot afford to lose, keep a separate copy too.</p>
+    </section>
   </main>
 </body>
 </html>
