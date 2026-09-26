@@ -2,7 +2,7 @@
   "id": "w3d-03-advanced-a-frame-and-interaction",
   "courseId": "web3d-developer",
   "lessonId": "advanced-a-frame-and-interaction-03",
-  "status": "draft",
+  "status": "review",
   "phase": 3,
   "title": {
     "en": "Advanced A-Frame and Interaction",
@@ -21,7 +21,8 @@
   },
   "difficulty": "intermediate",
   "technologies": [
-    "A-Frame"
+    "A-Frame",
+    "WebXR"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -38,6 +39,8 @@
     "keyboard-3d",
     "reduced-motion-3d",
     "2d-fallback",
-    "comfort"
+    "comfort",
+    "xr-input-alternatives",
+    "xr-seated-mode"
   ]
 }

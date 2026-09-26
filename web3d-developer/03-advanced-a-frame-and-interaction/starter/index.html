@@ -2,18 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Advanced A-Frame and Interaction - XR Camp starter</title>
+  <meta name="description" content="The exhibit's first room, now interactive: a custom A-Frame component, a shared select-exhibit code path for mouse, touch, VR controllers, and the keyboard, and positional audio.">
+  <title>The exhibit gains interaction - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="module" src="main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Web3D · Advanced A-Frame and Interaction</p></header>
   <main>
-    <!-- Add your main heading below. -->
+    <h1>The exhibit gains interaction</h1>
+    <p>The same room from <a href="../../02-a-frame-foundations/completed/index.html">3.2</a>, with one new stop, and every exhibit now interactive: select one with a mouse, a finger, a VR controller's trigger, or the keyboard, and it reacts. One custom component, <code>interactive-exhibit</code>, and one shared function, <code>selectExhibit()</code>, will drive all four input methods.</p>
+    <noscript><p>This room needs JavaScript. The list below describes everything in it.</p></noscript>
 
-    <!-- Add your project content below. -->
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The room</h2>
+        <div class="canvas-box" id="canvas-box">
+          <a-scene embedded xr-mode-ui="enabled: true" loading-screen="enabled: false" id="exhibit-scene">
+            <a-assets timeout="10000">
+              <img id="woven" src="../assets/woven-pattern.png" crossorigin="anonymous">
 
+              <!-- TODO 10, part A: add an <audio id="chime-sound"> pointing
+                   at ../assets/chime.wav, with preload="auto", same as
+                   #woven above. -->
+
+            </a-assets>
+
+            <a-sky color="#dfe9fb"></a-sky>
+            <a-entity light="type: ambient; color: #fff; intensity: 0.7"></a-entity>
+            <a-entity light="type: directional; color: #fff; intensity: 0.6" position="2 4 2"></a-entity>
+
+            <a-plane id="floor" position="0 0 0" rotation="-90 0 0" width="6" height="6"
+                     material="src: #woven; repeat: 4 4; roughness: 0.9"></a-plane>
+
+            <!-- TODO 4: this box is carried over from 3.2, unchanged except
+                 for two new attributes you add here: class="interactive"
+                 (so the raycaster below can find it) and
+                 interactive-exhibit="exhibitId: woven-panel; action: turn"
+                 (this lesson's component; its schema is TODO 2). -->
+            <a-box id="woven-panel"
+                   position="0 0.4 -1.8" width="0.8" height="0.8" depth="0.8"
+                   material="src: #woven; roughness: 0.9"></a-box>
+
+            <!-- TODO 10, part B: add a new exhibit, a-cone id="story-lantern",
+                 class="interactive", interactive-exhibit="exhibitId:
+                 story-lantern; action: lift", position "-1.8 0.4 -2.2",
+                 radius-bottom "0.35", radius-top "0.1", height "0.7", and a
+                 material of your choice. -->
+
+            <!-- TODO 4, continued: give this sphere class="interactive" and
+                 interactive-exhibit="exhibitId: chime-bell; action: turn",
+                 and add positional: true to its sound (see the README's
+                 "Positional audio" step): sound="src: #chime-sound;
+                 positional: true; autoplay: false; loop: false; volume: 0.9;
+                 maxDistance: 6". -->
+            <a-sphere id="chime-bell"
+                      position="1.8 0.9 -2.2" radius="0.18"
+                      material="color: #5b2a86; roughness: 0.4"></a-sphere>
+
+            <a-text id="label-en" value="Welcome to the exhibit" align="center" width="2.4"
+                    color="#3f1d5e" position="0 1.9 -2.6"></a-text>
+
+            <!-- TODO 4, continued: add cursor="rayOrigin: mouse; fuse: false"
+                 and raycaster="objects: .interactive; far: 20" to this
+                 camera. Read the README's "The cursor and raycaster
+                 components" step first. -->
+            <a-camera id="camera" position="0 1.6 1.6"
+                      look-controls wasd-controls="enabled: false"></a-camera>
+
+            <!-- TODO 15: add two VR controller entities, one per hand:
+                 <a-entity laser-controls="hand: left" raycaster="objects:
+                 .interactive; far: 20"></a-entity> and the same with "hand:
+                 right". Test with the free Immersive Web Emulator (README
+                 link) once TODO 3 (the click listener) is written. -->
+
+          </a-scene>
+        </div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D room (WebGL is unavailable). Nothing is
+          broken: the list below describes every exhibit, and every button still
+          works.
+        </p>
+
+        <section class="info-panel" id="info-panel" aria-labelledby="info-heading">
+          <h3 id="info-heading">Selected exhibit</h3>
+          <p id="scene-description" class="scene-text">No exhibit selected yet. Choose one from the room, the list below, or the "Select" buttons in the controls.</p>
+          <button type="button" id="chime-button" hidden>&#9654; Play chime</button>
+          <p id="status" role="status"></p>
+        </section>
+
+        <h3>Everything in this room</h3>
+        <p class="hint">This list is not only a fallback: it is the same information as the room, in words, so it is always here (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Room controls">
+        <fieldset>
+          <legend>1. Select an exhibit</legend>
+          <p class="hint">Each button selects one exhibit: the exact same result as clicking, tapping, or pointing a VR controller at it. Tab to a button, then press Enter or Space.</p>
+          <ul class="select-buttons" id="select-buttons" role="list"></ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Idle animation</legend>
+          <button type="button" id="pause-toggle" aria-pressed="false">&#9208; Pause idle animation</button>
+          <p class="hint">The selected exhibit pulses gently while it waits. This is the only thing in the room that moves on its own; reduced motion turns it off automatically, and this button does the same thing by hand.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Input mode</legend>
+          <button type="button" id="gaze-toggle" aria-pressed="false">&#9675; Use gaze cursor (dwell 1.2s to select)</button>
+          <p class="hint" id="gaze-hint">Off: click or tap to select. On: hold your view on an exhibit for 1.2 seconds; looking away cancels. Gaze selection needs no pointer or controller, which helps when neither is available, but the forced wait is hard for anyone who cannot hold their gaze steady or wants more time.</p>
+        </fieldset>
+      </div>
+    </div>
+
+    <h2>Try it in VR</h2>
+    <p>Install the free <a href="https://chromewebstore.google.com/detail/immersive-web-emulator/cgffilbpcibhmcfbgggfhfolhkfbhmik">Immersive Web Emulator</a> browser extension, open its panel, and press "Enter VR" above. Its virtual controllers use <code>laser-controls</code> automatically: point the laser at an exhibit and pull the trigger to select it, the same <code>selectExhibit()</code> path as every other input here.</p>
   </main>
 </body>
 </html>

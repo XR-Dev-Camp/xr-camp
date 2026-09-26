@@ -760,7 +760,7 @@
       "id": "w3d-03-advanced-a-frame-and-interaction",
       "courseId": "web3d-developer",
       "lessonId": "advanced-a-frame-and-interaction-03",
-      "status": "draft",
+      "status": "review",
       "phase": 3,
       "title": {
         "en": "Advanced A-Frame and Interaction",
@@ -774,7 +774,8 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "A-Frame"
+        "A-Frame",
+        "WebXR"
       ],
       "hasCode": true,
       "path": "web3d-developer/03-advanced-a-frame-and-interaction"

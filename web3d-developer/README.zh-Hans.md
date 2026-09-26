@@ -18,7 +18,7 @@
 | --- | --- | --- | --- |
 | 1 | [Web3D Fundamentals](01-web3d-fundamentals/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 2 | [A-Frame Foundations](02-a-frame-foundations/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
-| 3 | [Advanced A-Frame and Interaction](03-advanced-a-frame-and-interaction/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
+| 3 | [Advanced A-Frame and Interaction](03-advanced-a-frame-and-interaction/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 4 | [Three.js Foundations](04-threejs-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 5 | [Three.js Interaction, Assets, and Animation](05-threejs-interaction-assets-and-animation/README.zh-Hans.md) | 16 小时 · 22 次学习 | 🚧 即将推出 |
 | 6 | [Performance Engineering for Web3D](06-performance-engineering-for-web3d/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |

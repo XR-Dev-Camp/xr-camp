@@ -18,7 +18,7 @@
 | --- | --- | --- | --- |
 | 1 | [Web3D Fundamentals](01-web3d-fundamentals/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 2 | [A-Frame Foundations](02-a-frame-foundations/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 3 | [Advanced A-Frame and Interaction](03-advanced-a-frame-and-interaction/README.md) | 14 h · 19 sessions | 🚧 Coming soon |
+| 3 | [Advanced A-Frame and Interaction](03-advanced-a-frame-and-interaction/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 4 | [Three.js Foundations](04-threejs-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 5 | [Three.js Interaction, Assets, and Animation](05-threejs-interaction-assets-and-animation/README.md) | 16 h · 22 sessions | 🚧 Coming soon |
 | 6 | [Performance Engineering for Web3D](06-performance-engineering-for-web3d/README.md) | 12 h · 16 sessions | 🚧 Coming soon |

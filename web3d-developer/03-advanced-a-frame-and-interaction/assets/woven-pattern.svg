@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Woven pattern texture. Self-made for XR Camp. CC0. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <pattern id="weave" width="64" height="64" patternUnits="userSpaceOnUse">
+      <rect width="64" height="64" fill="#efe9f7"/>
+      <!-- Vertical strip, over -->
+      <rect x="0" y="0" width="28" height="64" fill="#c9b8e6"/>
+      <rect x="0" y="0" width="28" height="64" fill="#5b2a86" opacity="0.15"/>
+      <!-- Horizontal strip, appears to weave under/over by alternating shading -->
+      <rect x="0" y="0" width="64" height="28" fill="#8a5fb0"/>
+      <!-- Where strips cross: darker square = "under" -->
+      <rect x="0" y="0" width="28" height="28" fill="#3f1d5e"/>
+      <!-- highlight edges for a woven, slightly raised look -->
+      <rect x="0" y="0" width="28" height="3" fill="#efe9f7" opacity="0.5"/>
+      <rect x="0" y="0" width="3" height="28" fill="#efe9f7" opacity="0.5"/>
+      <rect x="30" y="0" width="2" height="64" fill="#3f1d5e" opacity="0.4"/>
+      <rect x="0" y="30" width="64" height="2" fill="#3f1d5e" opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="512" height="512" fill="url(#weave)"/>
+</svg>

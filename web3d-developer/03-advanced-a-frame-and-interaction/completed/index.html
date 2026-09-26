@@ -3,12 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Advanced A-Frame and Interaction - XR Camp reference solution</title>
+  <meta name="description" content="The exhibit's first room, now interactive: a custom A-Frame component, a shared select-exhibit code path for mouse, touch, VR controllers, and the keyboard, and positional audio.">
+  <title>The exhibit gains interaction - XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <script>
+    // Checked once, early, so main.js can read it without every function
+    // calling matchMedia itself. See "Accessibility requirements" below.
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="module" src="main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Web3D · Advanced A-Frame and Interaction</p></header>
   <main>
-    <h1>Advanced A-Frame and Interaction</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>The exhibit gains interaction</h1>
+    <p>The same room from <a href="../../02-a-frame-foundations/completed/index.html">3.2</a>, with one new stop, and every exhibit now interactive: select one with a mouse, a finger, a VR controller's trigger, or the keyboard, and it reacts. One custom component, <code>interactive-exhibit</code>, and one shared function, <code>selectExhibit()</code>, drive all four input methods.</p>
+    <noscript><p>This room needs JavaScript. The list below describes everything in it.</p></noscript>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The room</h2>
+        <div class="canvas-box" id="canvas-box">
+          <!-- xr-mode-ui is enabled on purpose in this lesson: it teaches
+               laser-controls, and the "Enter VR" button is how a headset (or
+               the Immersive Web Emulator) reaches this room. -->
+          <a-scene embedded xr-mode-ui="enabled: true" loading-screen="enabled: false" id="exhibit-scene">
+            <a-assets timeout="10000">
+              <img id="woven" src="../assets/woven-pattern.png" crossorigin="anonymous">
+              <!-- A short, one-shot chime: the same procedurally generated
+                   loop from 3.2, reused here without its loop, so it plays
+                   once and stops. It never plays until the "Play chime"
+                   button is pressed. -->
+              <audio id="chime-sound" src="../assets/chime.wav" preload="auto"></audio>
+            </a-assets>
+
+            <a-sky color="#dfe9fb"></a-sky>
+            <a-entity light="type: ambient; color: #fff; intensity: 0.7"></a-entity>
+            <a-entity light="type: directional; color: #fff; intensity: 0.6" position="2 4 2"></a-entity>
+
+            <a-plane id="floor" position="0 0 0" rotation="-90 0 0" width="6" height="6"
+                     material="src: #woven; repeat: 4 4; roughness: 0.9"></a-plane>
+
+            <!-- Every exhibit below carries: class="interactive" (what the
+                 raycaster looks for), and interactive-exhibit (this lesson's
+                 component, which does the reacting). -->
+
+            <a-box id="woven-panel" class="interactive"
+                   interactive-exhibit="exhibitId: woven-panel; action: turn"
+                   position="0 0.4 -1.8" width="0.8" height="0.8" depth="0.8"
+                   material="src: #woven; roughness: 0.9"></a-box>
+
+            <!-- New in this lesson: a second exhibit, so the room proves the
+                 component works on more than one entity and more than one
+                 action (TODO 1, TODO 11). -->
+            <a-cone id="story-lantern" class="interactive"
+                    interactive-exhibit="exhibitId: story-lantern; action: lift"
+                    position="-1.8 0.4 -2.2" radius-bottom="0.35" radius-top="0.1" height="0.7"
+                    material="color: #e8a33d; roughness: 0.6"></a-cone>
+
+            <!-- The sound marker from 3.2, now itself an interactive exhibit
+                 with positional audio: "positional: true" ties the sound's
+                 volume and stereo position to this entity's place in the
+                 room, so it sounds like it comes from here, not from
+                 everywhere at once. It still never plays on its own; the
+                 "Play chime" button in the info panel is the only way to
+                 start it (TODO 13). -->
+            <a-sphere id="chime-bell" class="interactive"
+                      interactive-exhibit="exhibitId: chime-bell; action: turn"
+                      position="1.8 0.9 -2.2" radius="0.18"
+                      material="color: #5b2a86; roughness: 0.4"
+                      sound="src: #chime-sound; positional: true; autoplay: false; loop: false; volume: 0.9; maxDistance: 6"></a-sphere>
+
+            <a-text id="label-en" value="Welcome to the exhibit" align="center" width="2.4"
+                    color="#3f1d5e" position="0 1.9 -2.6"></a-text>
+
+            <!-- The camera: cursor (TODO 4) turns raycaster hits into
+                 click/mouseenter/mouseleave events; raycaster (TODO 4) only
+                 tests entities with class "interactive", so the sky, floor,
+                 and text panels are never candidates. fuse starts off
+                 (click-based); the input-mode toggle can switch it to gaze
+                 with a fuse delay (TODO 14). -->
+            <a-camera id="camera" position="0 1.6 1.6"
+                      look-controls wasd-controls="enabled: false"
+                      cursor="rayOrigin: mouse; fuse: false"
+                      raycaster="objects: .interactive; far: 20"></a-camera>
+
+            <!-- laser-controls (TODO 15): a VR controller equivalent of the
+                 mouse cursor above. It combines tracked-controls, a visible
+                 laser line, and a raycaster, and emits the same "click"
+                 event on trigger-press that the mouse cursor emits on
+                 click — so interactive-exhibit's listener needs no separate
+                 VR code path. Harmless with no controller connected. -->
+            <a-entity laser-controls="hand: left" raycaster="objects: .interactive; far: 20"></a-entity>
+            <a-entity laser-controls="hand: right" raycaster="objects: .interactive; far: 20"></a-entity>
+          </a-scene>
+        </div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D room (WebGL is unavailable). Nothing is
+          broken: the list below describes every exhibit, and every button still
+          works.
+        </p>
+
+        <section class="info-panel" id="info-panel" aria-labelledby="info-heading">
+          <h3 id="info-heading">Selected exhibit</h3>
+          <p id="scene-description" class="scene-text">No exhibit selected yet. Choose one from the room, the list below, or the "Select" buttons in the controls.</p>
+          <button type="button" id="chime-button" hidden>&#9654; Play chime</button>
+          <p id="status" role="status"></p>
+        </section>
+
+        <h3>Everything in this room</h3>
+        <p class="hint">This list is not only a fallback: it is the same information as the room, in words, so it is always here (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Room controls">
+        <fieldset>
+          <legend>1. Select an exhibit</legend>
+          <p class="hint">Each button selects one exhibit: the exact same result as clicking, tapping, or pointing a VR controller at it. Tab to a button, then press Enter or Space.</p>
+          <ul class="select-buttons" id="select-buttons" role="list"></ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Idle animation</legend>
+          <button type="button" id="pause-toggle" aria-pressed="false">&#9208; Pause idle animation</button>
+          <p class="hint">The selected exhibit pulses gently while it waits. This is the only thing in the room that moves on its own; reduced motion turns it off automatically, and this button does the same thing by hand.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Input mode</legend>
+          <button type="button" id="gaze-toggle" aria-pressed="false">&#9675; Use gaze cursor (dwell 1.2s to select)</button>
+          <p class="hint" id="gaze-hint">Off: click or tap to select. On: hold your view on an exhibit for 1.2 seconds; looking away cancels. Gaze selection needs no pointer or controller, which helps when neither is available, but the forced wait is hard for anyone who cannot hold their gaze steady or wants more time.</p>
+        </fieldset>
+      </div>
+    </div>
+
+    <h2>Try it in VR</h2>
+    <p>Install the free <a href="https://chromewebstore.google.com/detail/immersive-web-emulator/cgffilbpcibhmcfbgggfhfolhkfbhmik">Immersive Web Emulator</a> browser extension, open its panel, and press "Enter VR" above. Its virtual controllers use <code>laser-controls</code> automatically: point the laser at an exhibit and pull the trigger to select it, the same <code>selectExhibit()</code> path as every other input here.</p>
   </main>
 </body>
 </html>
