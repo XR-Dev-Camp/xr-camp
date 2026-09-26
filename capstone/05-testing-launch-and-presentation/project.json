@@ -2,7 +2,7 @@
   "id": "cap-05-testing-launch-and-presentation",
   "courseId": "capstone",
   "lessonId": "testing-launch-and-presentation-05",
-  "status": "draft",
+  "status": "review",
   "phase": 7,
   "title": {
     "en": "Testing, Launch, and Presentation",
@@ -21,7 +21,8 @@
   },
   "difficulty": "capstone",
   "technologies": [
-    "HTML"
+    "HTML",
+    "Markdown"
   ],
   "hasCode": true,
   "starterPath": "./starter",

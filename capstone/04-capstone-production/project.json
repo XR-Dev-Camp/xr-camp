@@ -2,7 +2,7 @@
   "id": "cap-04-capstone-production",
   "courseId": "capstone",
   "lessonId": "capstone-production-04",
-  "status": "draft",
+  "status": "review",
   "phase": 7,
   "title": {
     "en": "Capstone Production",
@@ -21,7 +21,8 @@
   },
   "difficulty": "capstone",
   "technologies": [
-    "HTML"
+    "HTML",
+    "Markdown"
   ],
   "hasCode": true,
   "starterPath": "./starter",

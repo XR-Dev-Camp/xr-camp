@@ -1344,7 +1344,7 @@
       "id": "cap-01-capstone-research-and-definition",
       "courseId": "capstone",
       "lessonId": "capstone-research-and-definition-01",
-      "status": "draft",
+      "status": "review",
       "phase": 7,
       "title": {
         "en": "Capstone Research and Definition",
@@ -1358,7 +1358,8 @@
       },
       "difficulty": "capstone",
       "technologies": [
-        "HTML"
+        "HTML",
+        "Markdown"
       ],
       "hasCode": true,
       "path": "capstone/01-capstone-research-and-definition"
@@ -1367,7 +1368,7 @@
       "id": "cap-02-experience-and-system-design",
       "courseId": "capstone",
       "lessonId": "experience-and-system-design-02",
-      "status": "draft",
+      "status": "review",
       "phase": 7,
       "title": {
         "en": "Experience and System Design",
@@ -1381,7 +1382,8 @@
       },
       "difficulty": "capstone",
       "technologies": [
-        "HTML"
+        "HTML",
+        "Markdown"
       ],
       "hasCode": true,
       "path": "capstone/02-experience-and-system-design"
@@ -1390,7 +1392,7 @@
       "id": "cap-03-capstone-prototype",
       "courseId": "capstone",
       "lessonId": "capstone-prototype-03",
-      "status": "draft",
+      "status": "review",
       "phase": 7,
       "title": {
         "en": "Capstone Prototype",
@@ -1404,7 +1406,10 @@
       },
       "difficulty": "capstone",
       "technologies": [
-        "HTML"
+        "HTML",
+        "JavaScript",
+        "Three.js",
+        "Markdown"
       ],
       "hasCode": true,
       "path": "capstone/03-capstone-prototype"
@@ -1413,7 +1418,7 @@
       "id": "cap-04-capstone-production",
       "courseId": "capstone",
       "lessonId": "capstone-production-04",
-      "status": "draft",
+      "status": "review",
       "phase": 7,
       "title": {
         "en": "Capstone Production",
@@ -1427,7 +1432,8 @@
       },
       "difficulty": "capstone",
       "technologies": [
-        "HTML"
+        "HTML",
+        "Markdown"
       ],
       "hasCode": true,
       "path": "capstone/04-capstone-production"
@@ -1436,7 +1442,7 @@
       "id": "cap-05-testing-launch-and-presentation",
       "courseId": "capstone",
       "lessonId": "testing-launch-and-presentation-05",
-      "status": "draft",
+      "status": "review",
       "phase": 7,
       "title": {
         "en": "Testing, Launch, and Presentation",
@@ -1450,7 +1456,8 @@
       },
       "difficulty": "capstone",
       "technologies": [
-        "HTML"
+        "HTML",
+        "Markdown"
       ],
       "hasCode": true,
       "path": "capstone/05-testing-launch-and-presentation"

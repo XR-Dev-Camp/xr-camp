@@ -2,7 +2,7 @@
   "id": "cap-03-capstone-prototype",
   "courseId": "capstone",
   "lessonId": "capstone-prototype-03",
-  "status": "draft",
+  "status": "review",
   "phase": 7,
   "title": {
     "en": "Capstone Prototype",
@@ -21,7 +21,10 @@
   },
   "difficulty": "capstone",
   "technologies": [
-    "HTML"
+    "HTML",
+    "JavaScript",
+    "Three.js",
+    "Markdown"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -33,6 +36,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

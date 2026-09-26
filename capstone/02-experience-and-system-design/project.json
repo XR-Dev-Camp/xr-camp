@@ -2,7 +2,7 @@
   "id": "cap-02-experience-and-system-design",
   "courseId": "capstone",
   "lessonId": "experience-and-system-design-02",
-  "status": "draft",
+  "status": "review",
   "phase": 7,
   "title": {
     "en": "Experience and System Design",
@@ -21,7 +21,8 @@
   },
   "difficulty": "capstone",
   "technologies": [
-    "HTML"
+    "HTML",
+    "Markdown"
   ],
   "hasCode": true,
   "starterPath": "./starter",

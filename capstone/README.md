@@ -16,8 +16,8 @@
 
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
-| 1 | [Capstone Research and Definition](01-capstone-research-and-definition/README.md) | 8 h · 11 sessions | 🚧 Coming soon |
-| 2 | [Experience and System Design](02-experience-and-system-design/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
-| 3 | [Capstone Prototype](03-capstone-prototype/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
-| 4 | [Capstone Production](04-capstone-production/README.md) | 28 h · 38 sessions | 🚧 Coming soon |
-| 5 | [Testing, Launch, and Presentation](05-testing-launch-and-presentation/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
+| 1 | [Capstone Research and Definition](01-capstone-research-and-definition/README.md) | 8 h · 11 sessions | ✅ Ready |
+| 2 | [Experience and System Design](02-experience-and-system-design/README.md) | 10 h · 14 sessions | ✅ Ready |
+| 3 | [Capstone Prototype](03-capstone-prototype/README.md) | 12 h · 16 sessions | ✅ Ready |
+| 4 | [Capstone Production](04-capstone-production/README.md) | 28 h · 38 sessions | ✅ Ready |
+| 5 | [Testing, Launch, and Presentation](05-testing-launch-and-presentation/README.md) | 12 h · 16 sessions | ✅ Ready |

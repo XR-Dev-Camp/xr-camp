@@ -28,7 +28,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions · about 6 months | 6 of 6 |
 | [5 · Become a Full-Stack Spatial Developer](full-stack-spatial/README.md) | Multi-user 3D applications with accounts, data, and real-time connections. | 166 sessions · about 10 months | 4 of 8 |
 | [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions · about 4 months | 5 of 5 |
-| [7 · Professional Capstone](capstone/README.md) | A complete immersive project: researched, designed, built, tested, and launched. | 95 sessions · about 5 months | 0 of 5 |
+| [7 · Professional Capstone](capstone/README.md) | A complete immersive project: researched, designed, built, tested, and launched. | 95 sessions · about 5 months | 5 of 5 |
 
 ## All lessons
 
@@ -126,11 +126,11 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
-| 1 | [Capstone Research and Definition](capstone/01-capstone-research-and-definition/README.md) | 8 h · 11 sessions | 🚧 Coming soon |
-| 2 | [Experience and System Design](capstone/02-experience-and-system-design/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
-| 3 | [Capstone Prototype](capstone/03-capstone-prototype/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
-| 4 | [Capstone Production](capstone/04-capstone-production/README.md) | 28 h · 38 sessions | 🚧 Coming soon |
-| 5 | [Testing, Launch, and Presentation](capstone/05-testing-launch-and-presentation/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
+| 1 | [Capstone Research and Definition](capstone/01-capstone-research-and-definition/README.md) | 8 h · 11 sessions | ✅ Ready |
+| 2 | [Experience and System Design](capstone/02-experience-and-system-design/README.md) | 10 h · 14 sessions | ✅ Ready |
+| 3 | [Capstone Prototype](capstone/03-capstone-prototype/README.md) | 12 h · 16 sessions | ✅ Ready |
+| 4 | [Capstone Production](capstone/04-capstone-production/README.md) | 28 h · 38 sessions | ✅ Ready |
+| 5 | [Testing, Launch, and Presentation](capstone/05-testing-launch-and-presentation/README.md) | 12 h · 16 sessions | ✅ Ready |
 
 ## How every lesson works
 

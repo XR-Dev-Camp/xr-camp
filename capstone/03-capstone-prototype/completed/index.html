@@ -3,12 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stage 3 of the Professional Capstone: a tiny working three.js prototype proving one exhibit stand can be shown, described, and controlled accessibly, within budget.">
   <title>Capstone Prototype - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Capstone · Stage 3: Capstone Prototype</p></header>
   <main>
-    <h1>Capstone Prototype</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>The exhibit stand: a tiny working prototype</h1>
+    <p>Ana's Stage 3 prototype proves the riskiest part of her design named in <a href="prototype-plan.md">prototype-plan.md</a>: that a single exhibit stand can be shown, described, and fully controlled without a mouse, within her performance budget. It reuses the accessible 3D page pattern from <a href="../../../web3d-developer/07-interactive-web3d-experience/">the Phase 3 capstone</a>, trimmed to one object.</p>
+    <noscript><p>This prototype needs JavaScript and WebGL 2. The list below describes everything in it.</p></noscript>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The prototype</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D prototype (WebGL 2 is unavailable). Nothing is
+          broken: the list below describes everything it contains.
+        </p>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the prototype&hellip;</p>
+
+        <h3>The 2D twin</h3>
+        <p class="hint">This is not a fallback: it is the same information as the 3D view, in words, always here (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+      </section>
+
+      <div class="controls" role="region" aria-label="Prototype controls">
+        <fieldset>
+          <legend>1. Look around</legend>
+          <p class="hint">Drag the view, or use these buttons — the keyboard route into the same move.</p>
+          <ul class="view-buttons" role="list">
+            <li><button type="button" id="turn-left">Turn left</button></li>
+            <li><button type="button" id="turn-right">Turn right</button></li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Animation</legend>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p class="hint">The stand turns slowly on its own. Nothing else moves by itself, and the camera never moves unless you move it.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Performance budget</legend>
+          <p class="hint">This prototype's budget, from Stage 2's test plan: at most 15 draw calls and 8,000 triangles.</p>
+          <dl class="budget-numbers">
+            <div><dt>Draw calls (live / budget)</dt><dd id="budget-calls">0 / 15</dd></div>
+            <div><dt>Triangles (live / budget)</dt><dd id="budget-triangles">0 / 8000</dd></div>
+          </dl>
+          <p id="budget-result" role="status">Checking&hellip;</p>
+        </fieldset>
+      </div>
+    </div>
   </main>
 </body>
 </html>

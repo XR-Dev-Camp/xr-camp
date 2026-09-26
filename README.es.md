@@ -28,7 +28,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | [4 · Conviértete en desarrolladora inmersiva](immersive-developer/README.es.md) | Experiencias de realidad virtual y aumentada que se abren en un visor desde un enlace. | 111 sesiones · unos 6 meses | 6 de 6 |
 | [5 · Conviértete en desarrolladora espacial full-stack](full-stack-spatial/README.es.md) | Aplicaciones 3D multiusuario con cuentas, datos y conexiones en tiempo real. | 166 sesiones · unos 10 meses | 4 de 8 |
 | [6 · Conviértete en desarrolladora profesional](professional-developer/README.es.md) | Despliegues en producción, sitios multilingües y tu propio lugar en el código abierto. | 73 sesiones · unos 4 meses | 5 de 5 |
-| [7 · Proyecto final profesional](capstone/README.es.md) | Un proyecto inmersivo completo: investigado, diseñado, construido, probado y lanzado. | 95 sesiones · unos 5 meses | 0 de 5 |
+| [7 · Proyecto final profesional](capstone/README.es.md) | Un proyecto inmersivo completo: investigado, diseñado, construido, probado y lanzado. | 95 sesiones · unos 5 meses | 5 de 5 |
 
 ## Todas las lecciones
 
@@ -126,11 +126,11 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 
 | # | Lección | Tiempo | Estado |
 | --- | --- | --- | --- |
-| 1 | [Capstone Research and Definition](capstone/01-capstone-research-and-definition/README.es.md) | 8 h · 11 sesiones | 🚧 Próximamente |
-| 2 | [Experience and System Design](capstone/02-experience-and-system-design/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
-| 3 | [Capstone Prototype](capstone/03-capstone-prototype/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
-| 4 | [Capstone Production](capstone/04-capstone-production/README.es.md) | 28 h · 38 sesiones | 🚧 Próximamente |
-| 5 | [Testing, Launch, and Presentation](capstone/05-testing-launch-and-presentation/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 1 | [Capstone Research and Definition](capstone/01-capstone-research-and-definition/README.es.md) | 8 h · 11 sesiones | ✅ Lista |
+| 2 | [Experience and System Design](capstone/02-experience-and-system-design/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
+| 3 | [Capstone Prototype](capstone/03-capstone-prototype/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
+| 4 | [Capstone Production](capstone/04-capstone-production/README.es.md) | 28 h · 38 sesiones | ✅ Lista |
+| 5 | [Testing, Launch, and Presentation](capstone/05-testing-launch-and-presentation/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 
 ## Cómo funciona cada lección
 

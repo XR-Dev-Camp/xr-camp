@@ -2,7 +2,7 @@
   "id": "cap-01-capstone-research-and-definition",
   "courseId": "capstone",
   "lessonId": "capstone-research-and-definition-01",
-  "status": "draft",
+  "status": "review",
   "phase": 7,
   "title": {
     "en": "Capstone Research and Definition",
@@ -21,7 +21,8 @@
   },
   "difficulty": "capstone",
   "technologies": [
-    "HTML"
+    "HTML",
+    "Markdown"
   ],
   "hasCode": true,
   "starterPath": "./starter",
