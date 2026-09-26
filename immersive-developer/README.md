@@ -16,7 +16,7 @@
 
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
-| 1 | [WebXR Foundations](01-webxr-foundations/README.md) | 14 h · 19 sessions | 🚧 Coming soon |
+| 1 | [WebXR Foundations](01-webxr-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 2 | [XR Input and Interaction](02-xr-input-and-interaction/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 3 | [Spatial UX Design](03-spatial-ux-design/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 4 | [Immersive Accessibility and Ethics](04-immersive-accessibility-and-ethics/README.md) | 12 h · 16 sessions | 🚧 Coming soon |

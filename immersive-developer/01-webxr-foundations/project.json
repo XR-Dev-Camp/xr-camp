@@ -2,7 +2,7 @@
   "id": "imm-01-webxr-foundations",
   "courseId": "immersive-developer",
   "lessonId": "webxr-foundations-01",
-  "status": "draft",
+  "status": "review",
   "phase": 4,
   "title": {
     "en": "WebXR Foundations",
@@ -21,6 +21,7 @@
   },
   "difficulty": "advanced",
   "technologies": [
+    "three.js",
     "WebXR"
   ],
   "hasCode": true,

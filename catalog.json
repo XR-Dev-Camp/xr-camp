@@ -867,7 +867,7 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "X3D/X3DOM"
+        "Three.js"
       ],
       "hasCode": true,
       "path": "web3d-developer/07-interactive-web3d-experience"
@@ -876,7 +876,7 @@
       "id": "imm-01-webxr-foundations",
       "courseId": "immersive-developer",
       "lessonId": "webxr-foundations-01",
-      "status": "draft",
+      "status": "review",
       "phase": 4,
       "title": {
         "en": "WebXR Foundations",
@@ -890,6 +890,7 @@
       },
       "difficulty": "advanced",
       "technologies": [
+        "three.js",
         "WebXR"
       ],
       "hasCode": true,
