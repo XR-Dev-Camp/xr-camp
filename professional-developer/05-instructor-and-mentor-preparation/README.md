@@ -175,7 +175,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md) completely.
 2. Take a screenshot of your finished lesson's completed page, or of your mentor plan.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: which part of writing this — the objectives, the accessibility work, the safety section, or the feedback language — took the most redrafting, and why?
 
 ## Further reading

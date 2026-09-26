@@ -178,7 +178,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your working prototype and your test log's performance numbers.
-3. Keep your prototype plan, test log, and design review in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep your prototype plan, test log, and design review in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: what did your design review change about the plan you had going into this stage?
 
 ## Further reading

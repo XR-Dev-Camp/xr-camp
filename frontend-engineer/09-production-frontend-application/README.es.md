@@ -301,7 +301,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 1. Completa cada punto de [`tests/checklist.md`](tests/checklist.md), incluida su sección «3D y XR (manual)».
 2. Revisa tu proyecto contra cada fila de [`starter/rubric.md`](starter/rubric.md).
 3. Toma capturas de pantalla de: el panel de progreso en tus tres idiomas, la vista 3D, el panel Application con tu service worker activado, y la aplicación instalada (o los pasos de instalación escritos, si tu navegador no tiene ninguno).
-4. Guárdalas en tu diario de aprendizaje y en tu portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+4. Guárdalas en tu diario de aprendizaje y en tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 5. En tu diario, responde: ¿cuál de las cinco vistas conservarías si solo pudieras publicar una, y por qué?
 
 ## Lecturas adicionales

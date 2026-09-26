@@ -293,7 +293,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots of the lab with the stone off the table and the table turned, and of your four comparison pages side by side.
-3. Keep them, and your `analysis.md`, in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them, and your `analysis.md`, in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: which idea in this lesson surprised you, and how would you explain it to a friend using only objects on a real table?
 
 ## Further reading

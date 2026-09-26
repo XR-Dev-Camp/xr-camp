@@ -134,7 +134,7 @@ Most people who stop learning to code do not stop because it is too hard. They s
 2. **What do you want to build?** A website for your community, a 3D museum, a new career. Anything.
 3. **When will you study?** Pick four 45-minute sessions a week: which days, what time, and where. Be realistic. Two sessions a week also works; everything just takes twice as long.
 4. **What will get in the way?** Children, shifts, slow internet, tiredness. Write one thing you will do about each.
-5. **Who will you tell?** Learning with someone else makes you far more likely to keep going. The XR Camp community will blossom soon; until then, tell a friend.
+5. **Who will you tell?** Learning with someone else makes you far more likely to keep going. Tell a friend, and see [where to share your work and ask for help](../../docs/en/community.md).
 
 **How long does it take?** XR Camp is long, because it takes you all the way to professional. That is why every phase ends with its own certificate: you do not have to finish everything to get something real. At four sessions a week, Phase 1 (Become a Web Developer) takes about eight months, and at the end of it you can build and publish accessible websites.
 
@@ -191,7 +191,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your world. (Search the web for "how to take a screenshot" and your device if you are unsure.)
-3. Keep your screenshot and your scene description in your learner journal. When the XR Camp community opens, share them there.
+3. Keep your screenshot and your scene description in your learner journal. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your learner journal, write one sentence: how did it feel to build a 3D world in your first hour?
 
 ## Further reading

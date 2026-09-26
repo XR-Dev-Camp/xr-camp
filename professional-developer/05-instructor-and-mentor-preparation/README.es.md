@@ -175,7 +175,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md) por completo.
 2. Toma una captura de pantalla de la página completada de tu lección terminada, o de tu plan de mentoría.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: ¿qué parte de escribir esto (los objetivos, el trabajo de accesibilidad, la sección de seguridad, o el lenguaje de retroalimentación) requirió más reescritura, y por qué?
 
 ## Lecturas adicionales

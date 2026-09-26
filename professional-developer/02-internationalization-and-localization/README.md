@@ -260,7 +260,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md) in all three languages, with pseudo-localization on and off.
 2. Take a screenshot of the exhibit in each of the three languages, and one with pseudo-localization on.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: which single string, item, or layout choice broke first when you turned on pseudo-localization — and what does that tell you about writing UI text before you have thought about translation?
 
 ## Further reading

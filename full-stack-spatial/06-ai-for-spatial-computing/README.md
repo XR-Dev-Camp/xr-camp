@@ -251,7 +251,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots: a generated draft description before saving, the same scene with its description saved, and a search result with its explanation.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: this project shows every AI draft before saving it, and shows exactly what data was sent. Find one place in the interface where a person could still click "Save" without really reading the draft first. What is one small, low-friction change that would make that a little harder, without turning a genuinely quick, confident review into a chore?
 
 ## Further reading

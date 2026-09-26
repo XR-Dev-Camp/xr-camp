@@ -251,7 +251,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: una descripción de borrador generada antes de guardar, la misma escena con su descripción guardada, y un resultado de búsqueda con su explicación.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: este proyecto muestra cada borrador de IA antes de guardarlo, y muestra exactamente qué datos se enviaron. Encuentra un lugar en la interfaz donde una persona todavía podría hacer clic en "Save" sin realmente leer el borrador primero. ¿Cuál es un cambio pequeño y de baja fricción que haría eso un poco más difícil, sin convertir una revisión genuinamente rápida y segura en una tarea molesta?
 
 ## Lecturas adicionales

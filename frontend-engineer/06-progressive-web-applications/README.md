@@ -400,7 +400,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots of: the Manifest section with your icons, Cache storage, the dashboard offline saying how old its data is, the update message, and the 3D moment offline. If you installed the app, one of its icon on your home screen or app list.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: who do you know who would use this app on a weak or expensive connection, and what would they need next?
 
 ## Further reading

@@ -134,7 +134,7 @@ La mayoría de las personas que dejan de aprender a programar no lo dejan porque
 2. **¿Qué quieres construir?** Un sitio web para tu comunidad, un museo 3D, una nueva carrera profesional. Lo que sea.
 3. **¿Cuándo vas a estudiar?** Elige cuatro sesiones de 45 minutos por semana: qué días, a qué hora y dónde. Sé realista. Dos sesiones por semana también funcionan; simplemente todo tarda el doble.
 4. **¿Qué se va a interponer?** Hijos, turnos de trabajo, internet lento, cansancio. Escribe una cosa que vas a hacer frente a cada uno.
-5. **¿A quién se lo vas a contar?** Aprender con otra persona hace mucho más probable que sigas adelante. La comunidad de XR Camp va a florecer pronto; mientras tanto, cuéntaselo a una amiga o a un amigo.
+5. **¿A quién se lo vas a contar?** Aprender con otra persona hace mucho más probable que sigas adelante. Cuéntaselo a una amiga o a un amigo, y consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 
 **¿Cuánto tiempo lleva?** XR Camp es largo, porque te lleva hasta el nivel profesional. Por eso cada fase termina con su propio certificado: no tienes que terminarlo todo para obtener algo real. Con cuatro sesiones por semana, la Fase 1 (Conviértete en desarrolladora web) dura unos ocho meses, y al final de ella sabrás construir y publicar sitios web accesibles.
 
@@ -191,7 +191,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu mundo. (Si no sabes cómo, busca en internet «cómo tomar una captura de pantalla» junto con el nombre de tu dispositivo).
-3. Guarda tu captura de pantalla y la descripción de tu escena en tu diario de aprendizaje. Cuando abra la comunidad de XR Camp, compártelas también allí.
+3. Guarda tu captura de pantalla y la descripción de tu escena en tu diario de aprendizaje. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario de aprendizaje, escribe una oración: ¿cómo te sentiste al construir un mundo 3D en tu primera hora?
 
 ## Lecturas adicionales

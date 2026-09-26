@@ -159,7 +159,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your published public repository and your presentation's title slide.
-3. Keep your release checklist, case study, presentation outline, and retrospective in your learner journal and portfolio. When the XR Camp community opens, share them there — this is your capstone's public record.
+3. Keep your release checklist, case study, presentation outline, and retrospective in your learner journal and portfolio. Share them with other developers (see [where to share your work](../../docs/en/community.md)) — this is your capstone's public record.
 4. Journal question: looking back across all five stages, what is the one decision you are proudest of, and the one you would make differently?
 
 ## Further reading

@@ -159,7 +159,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu repositorio público publicado y de la diapositiva de título de tu presentación.
-3. Guarda tu lista de verificación de lanzamiento, caso de estudio, esquema de presentación, y retrospectiva en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelos ahí; este es el registro público de tu proyecto final.
+3. Guarda tu lista de verificación de lanzamiento, caso de estudio, esquema de presentación, y retrospectiva en tu diario de aprendizaje y portafolio. Compártelos con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés); este es el registro público de tu proyecto final.
 4. Pregunta de diario: mirando atrás a las cinco etapas, ¿cuál es la decisión de la que estás más orgullosa, y cuál harías distinto?
 
 ## Lecturas adicionales

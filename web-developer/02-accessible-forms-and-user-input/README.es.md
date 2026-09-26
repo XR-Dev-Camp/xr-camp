@@ -230,7 +230,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu formulario, y otra del navegador deteniendo un formulario vacío.
-3. Guárdalas en tu diario de aprendizaje y en tu portafolio. Cuando abra la comunidad de XR Camp, compártelas también allí.
+3. Guárdalas en tu diario de aprendizaje y en tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué campo decidiste *no* pedir, y por qué?
 
 ## Lecturas adicionales

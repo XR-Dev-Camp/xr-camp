@@ -211,7 +211,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots of the room from each of the three waypoints, and of the goals panel in each of its three lock modes.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: which of the three lock modes did you personally find least comfortable to use for more than a few seconds, and why do you think that was?
 
 ## Further reading

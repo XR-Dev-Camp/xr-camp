@@ -98,7 +98,7 @@ web-projects/
         └── ...
 ```
 
-> **Si estás en China continental.** Allí GitHub y GitHub Pages pueden ser lentos o poco confiables, y algunos días quizás no carguen. Gitee Pages, que antes usaban muchas personas en su lugar, dejó de funcionar en 2024. Las opciones de alojamiento cambian, así que pregunta en la comunidad de XR Camp qué funciona ahora. Todo lo de esta lección, salvo subir y publicar, también funciona sin conexión: Git y GitHub Desktop guardan todo tu historial en tu propia computadora, y tu página de colección se abre desde tu carpeta. Puedes hacer ahora los Pasos 1 a 5 y el Paso 11, y publicar cuando la conexión lo permita.
+> **Si estás en China continental.** Allí GitHub y GitHub Pages pueden ser lentos o poco confiables, y algunos días quizás no carguen. Gitee Pages, que antes usaban muchas personas en su lugar, dejó de funcionar en 2024. Las opciones de alojamiento cambian, así que pregunta qué funciona ahora en alguna de las [comunidades donde se ayudan quienes programan](../../docs/en/community.md) (en inglés). Todo lo de esta lección, salvo subir y publicar, también funciona sin conexión: Git y GitHub Desktop guardan todo tu historial en tu propia computadora, y tu página de colección se abre desde tu carpeta. Puedes hacer ahora los Pasos 1 a 5 y el Paso 11, y publicar cuando la conexión lo permita.
 
 ## Recorrido paso a paso
 
@@ -430,7 +430,7 @@ Tres extensiones, en [`challenges/`](challenges/):
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Escribe la dirección de tu sitio publicado, y la de tu repositorio, en tu diario de aprendizaje.
-3. Guarda la captura de pantalla de tu mundo 3D en tu celular, y una de tu página de colección, en tu diario y en tu portafolio. Cuando abra la comunidad de XR Camp, comparte allí la dirección de tu sitio publicado.
+3. Guarda la captura de pantalla de tu mundo 3D en tu celular, y una de tu página de colección, en tu diario y en tu portafolio. Comparte la dirección de tu sitio publicado con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés).
 4. En tu diario, responde: ¿a quién le vas a enviar tu dirección primero, y qué quieres que vea?
 
 ## Lecturas adicionales

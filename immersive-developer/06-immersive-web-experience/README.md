@@ -247,7 +247,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md) end to end, including the "3D and XR (manual)" section.
 2. Take two or three screenshots: the exhibit with an item selected and held, and the Enter VR panel showing its support note or boundary report.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: which of the four combined lessons (4.1, 4.2, 4.4, 4.5) took the most care to wire in correctly, and what almost went wrong?
 
 ## Further reading

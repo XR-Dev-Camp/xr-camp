@@ -240,7 +240,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md) end to end, including the "3D and XR (manual)" section.
 2. Take two or three screenshots: the exhibit with an item selected (info panel open), and the performance budget panel showing a live result.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: which exhibit did you keep exactly as it was from 3.5, and which did you change or add for the Creative or Explorer challenge — and why did you make that choice?
 
 ## Further reading

@@ -342,7 +342,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of the room with one exhibit selected, one of the info panel showing that exhibit's description, and one of the gaze-cursor toggle turned on.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: which input method would you rely on if you could not use a mouse or a touchscreen, and did this lesson's gaze cursor and `laser-controls` genuinely give you that option?
 
 ## Further reading

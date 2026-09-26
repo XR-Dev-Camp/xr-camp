@@ -286,7 +286,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Tu historial de contribuciones, con sus enlaces, es tu entrega: cada issue, revisión, pull request, y la release.
-3. Guárdalo en tu diario de aprendizaje y en tu portafolio. Cuando abra la comunidad de XR Camp, compártelo también allí.
+3. Guárdalo en tu diario de aprendizaje y en tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué te enseñó una revisión de tu trabajo que no habrías descubierto sola?
 
 ## Lecturas adicionales

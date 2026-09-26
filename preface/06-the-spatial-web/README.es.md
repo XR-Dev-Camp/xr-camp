@@ -169,7 +169,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de cada una de las tres vistas (o del mensaje de la sección inmersiva).
-3. Guárdalas en tu diario de aprendizaje. Cuando abra la comunidad de XR Camp, compártelas también allí.
+3. Guárdalas en tu diario de aprendizaje. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué vista explica mejor tu objeto, y por qué?
 
 ## Lecturas adicionales

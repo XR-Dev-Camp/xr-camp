@@ -357,7 +357,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa cada punto de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tus tarjetas de lección, y otra del visor 3D.
-3. Guárdalas, junto con tu `components.md`, en tu diario de aprendizaje y tu portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas, junto con tu `components.md`, en tu diario de aprendizaje y tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué parte de la tarjeta es pública, y cuál es privada? ¿Por qué esa diferencia le importa a quienes usan tu componente?
 
 ## Lecturas adicionales

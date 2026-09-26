@@ -159,7 +159,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your career page.
-3. Keep it in your learner journal, and put a reminder in your calendar to update it at the end of Phase 1. When the XR Camp community opens, share it there.
+3. Keep it in your learner journal, and put a reminder in your calendar to update it at the end of Phase 1. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: what is the first milestone on your path, and when will you reach it?
 
 ## Further reading

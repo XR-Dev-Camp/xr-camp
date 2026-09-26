@@ -224,7 +224,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa cada punto de [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de la exhibición una vez que ambos modelos hayan cargado, y de nuevo con un objeto seleccionado.
-3. Guárdalas, junto con este proyecto, en tu diario de aprendizaje y tu portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas, junto con este proyecto, en tu diario de aprendizaje y tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿por qué usa este proyecto `Promise.allSettled` en lugar de `Promise.all` para cargar sus dos modelos, y qué vería alguien si usara `Promise.all` en su lugar, el día en que un archivo falle al cargar?
 
 ## Lecturas adicionales

@@ -299,7 +299,7 @@ renderer.setAnimationLoop(tick); // still runs every frame — required for WebX
 
 1. 完成 [`tests/checklist.md`](tests/checklist.md) 中的每一项，修复任何未勾选的内容。
 2. 拍两张截图：从相同的相机角度，起始代码的大厅（显示其 Stats 面板数字）和完成后的大厅（显示其 Stats 面板数字）。
-3. 把它们保存在你的学习日志和作品集中。等 XR Camp 社区上线后，也在那里分享它们。
+3. 把它们保存在你的学习日志和作品集中。也可以和其他开发者分享：参见[在哪里分享你的作品和寻求帮助](../../docs/en/community.md)（英文）。
 4. 学习日志问题：在你的机器上，哪一项单独的改动带来的差异最大？Chrome 性能面板证实了你的预期，还是给了你一个意外？
 
 ## 延伸阅读

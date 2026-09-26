@@ -211,7 +211,7 @@ const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, 
 
 1. 逐项完成 [`tests/checklist.md`](tests/checklist.md)。
 2. 从三个路点各拍一张房间的截图，以及目标面板在三种锁定模式下各拍一张截图。
-3. 把它们保存在你的学习日志和作品集中。等 XR Camp 社区上线后，也在那里分享它们。
+3. 把它们保存在你的学习日志和作品集中。也可以和其他开发者分享：参见[在哪里分享你的作品和寻求帮助](../../docs/en/community.md)（英文）。
 4. 学习日志问题：在这三种锁定模式中，你个人觉得哪一种用超过几秒钟就会最不舒服？你认为原因是什么？
 
 ## 延伸阅读

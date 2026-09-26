@@ -472,7 +472,7 @@ Three extensions, in [`challenges/`](challenges/). The first is required:
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Write your portfolio's public address in your learner journal.
 3. Take screenshots of your home page at 320 and 1280 pixels wide, and one of your case study.
-4. When the XR Camp community opens, share your address there, and read two other learners' case studies.
+4. Share your address with other developers (see [where to share your work](../../docs/en/community.md)), and read two other learners' case studies.
 5. In your journal, answer: which decision in your case study are you proudest of, and why?
 
 ## Further reading

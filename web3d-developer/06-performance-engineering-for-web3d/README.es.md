@@ -299,7 +299,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Repasa [`tests/checklist.md`](tests/checklist.md) y corrige lo que quede sin marcar.
 2. Toma dos capturas: la sala del starter (mostrando los números de su panel Stats) y la sala completada (mostrando los números de su panel Stats) desde el mismo ángulo de cámara.
-3. Guárdalas en tu diario de aprendizaje y tu portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: ¿qué cambio individual marcó la mayor diferencia en tu máquina, y el panel Performance de Chrome confirmó lo que esperabas, o te sorprendió?
 
 ## Lecturas adicionales

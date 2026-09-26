@@ -303,7 +303,7 @@ A further optional bonus, beyond the three challenges above and not required for
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md), including its "3D and XR (manual)" section.
 2. Check your project against every row of [`starter/rubric.md`](starter/rubric.md).
 3. Take screenshots of: the dashboard in each of your three languages, the 3D view, the Application panel with your service worker activated, and the app installed (or the written install steps, if your browser has none).
-4. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+4. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 5. In your journal, answer: which of the five views would you keep if you could only ship one, and why?
 
 ## Further reading

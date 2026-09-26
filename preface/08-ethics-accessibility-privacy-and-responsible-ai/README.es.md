@@ -211,7 +211,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu compromiso.
-3. Guarda tu reporte en tu diario de aprendizaje. Cuando abra la comunidad de XR Camp, comparte allí tu compromiso.
+3. Guarda tu reporte en tu diario de aprendizaje. Comparte tu compromiso con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés).
 4. En tu diario, responde: ¿qué hallazgo te gustaría más arreglar, y por qué?
 
 ## Lecturas adicionales

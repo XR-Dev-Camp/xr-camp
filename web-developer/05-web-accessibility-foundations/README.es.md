@@ -239,7 +239,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu tabla de auditoría, y otra del resultado de la herramienta automática en tu página reparada.
-3. Guárdalas en tu diario de aprendizaje y en tu portafolio: un reporte de auditoría es una pieza fuerte para un portafolio. Cuando abra la comunidad de XR Camp, compártelo también allí.
+3. Guárdalas en tu diario de aprendizaje y en tu portafolio: un reporte de auditoría es una pieza fuerte para un portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué escuchaste con el lector de pantalla que te sorprendió?
 
 ## Lecturas adicionales

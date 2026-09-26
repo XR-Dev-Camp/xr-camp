@@ -260,7 +260,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md) en los tres idiomas, con la pseudolocalización activada y desactivada.
 2. Toma una captura de pantalla de la exhibición en cada uno de los tres idiomas, y una con la pseudolocalización activada.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: ¿cuál cadena, objeto o decisión de layout se rompió primero al activar la pseudolocalización, y qué te dice eso sobre escribir texto de interfaz antes de haber pensado en la traducción?
 
 ## Lecturas adicionales

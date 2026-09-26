@@ -279,7 +279,7 @@ setStatus('Server not running: settings are saved in this browser only.', 'offli
 
 1. 完成 [`tests/checklist.md`](tests/checklist.md) 中的每一项。
 2. 给设置面板拍一张截图，再给显示每一项 `node --test` 检查通过的终端拍一张截图。
-3. 把它们保存在你的学习日志和作品集中。等 XR Camp 社区上线后，也在那里分享它们。
+3. 把它们保存在你的学习日志和作品集中。也可以和其他开发者分享：参见[在哪里分享你的作品和寻求帮助](../../docs/en/community.md)（英文）。
 4. 学习日志问题：当你真正理解了某个状态码实际上对客户端做出了什么承诺之后，哪一个状态码最让你意外，为什么？
 
 ## 延伸阅读

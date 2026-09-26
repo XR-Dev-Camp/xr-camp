@@ -308,7 +308,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: la exhibición con una escena guardada cargada, la tabla de posición/rotación, y la salida de terminal de `node server/inspect-db.js`.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: tu base de datos ahora hace cumplir una regla ("solo la dueña puede editar una escena") en el código del servidor, no solo en la interfaz. Encuentra un lugar en este proyecto donde la interfaz *también* oculta un control que una solicitud rechazada igual bloquearía, y uno donde no lo hace. ¿Qué saldría mal si se eliminara la verificación del lado del servidor pero se mantuviera la de la interfaz?
 
 ## Lecturas adicionales

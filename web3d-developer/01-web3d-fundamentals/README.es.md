@@ -293,7 +293,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa cada punto de [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla del laboratorio con la piedra fuera de la mesa y la mesa girada, y de tus cuatro páginas de comparación una junto a otra.
-3. Guárdalas, junto con tu `analysis.md`, en tu diario de aprendizaje y tu portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas, junto con tu `analysis.md`, en tu diario de aprendizaje y tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué idea de esta lección te sorprendió, y cómo se la explicarías a una amiga usando solo objetos de una mesa real?
 
 ## Lecturas adicionales

@@ -213,7 +213,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Recorre por completo [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu escena terminada, y una captura de pantalla de tu propia tabla de auditoría de la sesión 13.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: ¿cuál de las once correcciones de esta lección te habrías perdido si solo hubieras leído XAUR, sin pensar también en la ética más allá del acceso por discapacidad, y por qué crees que XAUR no la cubre?
 
 ## Lecturas adicionales

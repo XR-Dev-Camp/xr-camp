@@ -175,7 +175,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu mapa con el filtro **XR** activado.
-3. Guárdala en tu diario de aprendizaje. Cuando abra la comunidad de XR Camp, compártela también allí.
+3. Guárdala en tu diario de aprendizaje. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿con qué organización te gustaría más trabajar algún día, y por qué?
 
 ## Lecturas adicionales

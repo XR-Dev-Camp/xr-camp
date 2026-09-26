@@ -159,7 +159,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu página profesional.
-3. Guárdala en tu diario de aprendizaje y pon un recordatorio en tu calendario para actualizarla al final de la Fase 1. Cuando abra la comunidad de XR Camp, compártela también allí.
+3. Guárdala en tu diario de aprendizaje y pon un recordatorio en tu calendario para actualizarla al final de la Fase 1. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿cuál es la primera meta de tu camino, y cuándo vas a alcanzarla?
 
 ## Lecturas adicionales

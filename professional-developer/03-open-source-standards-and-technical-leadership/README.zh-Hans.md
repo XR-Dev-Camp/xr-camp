@@ -210,7 +210,7 @@ Created a free W3C account on <date>. Chosen group: <name>.
 
 1. 完整地完成 [`tests/checklist.md`](tests/checklist.md)。
 2. 拍摄截图：你真实提交的议题或拉取请求，以及你完成的 `index.html`。
-3. 把它们保存在你的学习日志和作品集中。等 XR Camp 社区上线后，也在那里分享它们。
+3. 把它们保存在你的学习日志和作品集中。也可以和其他开发者分享：参见[在哪里分享你的作品和寻求帮助](../../docs/en/community.md)（英文）。
 4. 学习日志问题：技术性的说明文档，和围绕它写的那份通俗易懂的计划，哪一个更难写好？为什么？
 
 ## 延伸阅读

@@ -271,7 +271,7 @@ GitHub Actions 和 GitHub Pages 都是免费的，但对中国大陆的一些访
 
 1. 完成 [`tests/checklist.md`](tests/checklist.md) 中的每一项。
 2. 拍摄截图：一次全部任务都为绿色的 Actions 运行记录，以及可访问的 GitHub Pages 网址。
-3. 把它们保存在你的学习日志和作品集中。等 XR Camp 社区上线后，也在那里分享它们。
+3. 把它们保存在你的学习日志和作品集中。也可以和其他开发者分享：参见[在哪里分享你的作品和寻求帮助](../../docs/en/community.md)（英文）。
 4. 在你的学习日志中回答：如果 `deploy` 在没有 `needs: approve` 的情况下运行，会出什么问题？对于一个真实项目而言，这为什么比对这个练习本身更重要？
 
 ## 延伸阅读

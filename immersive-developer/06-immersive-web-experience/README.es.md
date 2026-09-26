@@ -247,7 +247,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Recorre [`tests/checklist.md`](tests/checklist.md) de principio a fin, incluyendo la sección "3D and XR (manual)".
 2. Toma dos o tres capturas de pantalla: la exhibición con un elemento seleccionado y sostenido, y el panel Enter VR mostrando su nota de compatibilidad o su reporte de límite.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: ¿cuál de las cuatro lecciones combinadas (4.1, 4.2, 4.4, 4.5) requirió más cuidado para conectar correctamente, y qué estuvo a punto de salir mal?
 
 ## Lecturas adicionales

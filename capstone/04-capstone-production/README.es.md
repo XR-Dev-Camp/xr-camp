@@ -165,7 +165,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla de tu aplicación terminada y de tu lista de verificación de compilación completada.
-3. Guarda tu lista de verificación de compilación, guía de usuaria, README, y registro de cambios en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelos ahí.
+3. Guarda tu lista de verificación de compilación, guía de usuaria, README, y registro de cambios en tu diario de aprendizaje y portafolio. Compártelos con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés).
 4. Pregunta de diario: ¿qué recortaste de tu alcance original de la Etapa 1, y cómo lo decidiste?
 
 ## Lecturas adicionales

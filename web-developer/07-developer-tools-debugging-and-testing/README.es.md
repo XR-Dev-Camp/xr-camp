@@ -238,7 +238,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla del explorador corregido con la consola abierta y vacía, y otra de un punto de interrupción detenido en una línea.
-3. Guárdalas, junto con tu `bug-reports.md`, en tu diario de aprendizaje y en tu portafolio. Cuando abra la comunidad de XR Camp, compártelas también allí.
+3. Guárdalas, junto con tu `bug-reports.md`, en tu diario de aprendizaje y en tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué error te costó más encontrar, y qué herramienta te ayudó a encontrarlo al final?
 
 ## Lecturas adicionales

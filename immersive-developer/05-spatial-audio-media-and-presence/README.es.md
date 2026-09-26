@@ -212,7 +212,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa cada elemento de [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: la exhibición antes de que empiece cualquier sonido, la guía de audio reproduciéndose con su subtítulo visible, la transcripción, y tu reto de extensión elegido.
-3. Guárdalas, junto con este proyecto, en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas, junto con este proyecto, en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿por qué un `AudioContext` empieza suspendido, y qué podría salir mal para una estudiante si un proyecto real ignorara eso e intentara reproducir sonido en el momento en que carga su página?
 
 ## Lecturas adicionales

@@ -292,7 +292,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 2. Valida en [validator.w3.org](https://validator.w3.org/) con cero errores.
 3. Recorre toda la página usando solo el teclado.
 4. Publícala. Aprenderás cómo en el **Curso 1.8 — Git, GitHub y publicación**; si ya sabes, GitHub Pages funciona bien.
-5. Agrega el enlace a tu portafolio. Cuando abra la comunidad de XR Camp, compártelo también allí.
+5. Agrega el enlace a tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 6. Escribe una breve reflexión en tu diario de aprendizaje: ¿qué te sorprendió del texto alternativo?
 
 ## Lecturas adicionales

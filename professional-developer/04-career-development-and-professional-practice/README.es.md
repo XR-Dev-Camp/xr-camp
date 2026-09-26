@@ -210,7 +210,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md) por completo.
 2. Toma una captura de pantalla de tu `index.html` terminado, impreso a PDF, y de tu caso de estudio.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: ¿cuál documento de este paquete de carrera fue más difícil de escribir con honestidad, y por qué?
 
 ## Lecturas adicionales

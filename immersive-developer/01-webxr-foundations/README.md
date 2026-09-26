@@ -209,7 +209,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots: the desktop exhibit, the Enter VR panel before and after WebXR support is detected, and, if you tested with the Immersive Web Emulator or a headset, the emulator's own device view.
-3. Keep them, and this project, in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them, and this project, in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: why does resetting the view before requesting a session matter for comfort, and what could go wrong for a learner if a lesson skipped that step?
 
 ## Further reading

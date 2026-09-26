@@ -472,7 +472,7 @@ Tres extensiones, en [`challenges/`](challenges/). La primera es obligatoria:
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Escribe la dirección pública de tu portafolio en tu diario de aprendizaje.
 3. Toma capturas de pantalla de tu página de inicio con 320 y 1280 píxeles de ancho, y una de tu estudio de caso.
-4. Cuando abra la comunidad de XR Camp, comparte allí tu dirección, y lee los estudios de caso de otras dos personas que estén aprendiendo.
+4. Comparte tu dirección con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés), y lee los estudios de caso de otras dos personas que estén aprendiendo.
 5. En tu diario, responde: ¿de qué decisión de tu estudio de caso estás más orgullosa, y por qué?
 
 ## Lecturas adicionales

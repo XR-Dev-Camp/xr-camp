@@ -229,7 +229,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: tu terminal mostrando el pase completo de `npm test` (8/8), la salida de tu `npm audit`, y la aplicación con una escena, una anotación, y un mensaje de chat, todos visibles.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: elige una de las siete correcciones de esta lección y describe, en tus propias palabras, qué habría podido hacer un atacante real con la versión sin corregir; no "es inseguro", sino la acción específica (leer los datos de quién, ejecutar qué código, descubrir qué hecho) que permitía el error.
 
 ## Lecturas adicionales

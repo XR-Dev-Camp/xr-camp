@@ -222,7 +222,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: tu terminal mostrando el pase completo de `npm test` (10/10), y la aplicación con una escena, una anotación, un mensaje de chat, y una descripción de IA guardada, todos visibles.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: describe, en tus propias palabras, qué podría salir mal si se eliminara el paso de "revisión humana" en la función de IA de este proyecto final; no "podría estar mal," sino una consecuencia específica y concreta para una usuaria real de una versión real de esta aplicación.
 
 ## Lecturas adicionales

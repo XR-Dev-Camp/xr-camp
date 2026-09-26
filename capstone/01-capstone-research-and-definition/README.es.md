@@ -180,7 +180,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu `mentor-approval.md` completado mostrando una decisión de aprobación.
-3. Guarda tu brief, mapa de partes interesadas, y aprobación de mentoría en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelos ahí.
+3. Guarda tu brief, mapa de partes interesadas, y aprobación de mentoría en tu diario de aprendizaje y portafolio. Compártelos con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés).
 4. Pregunta de diario: ¿cuál es el requisito de tu brief del que menos segura estás, y qué se necesitaría para tener más confianza en él?
 
 ## Lecturas adicionales

@@ -265,7 +265,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots of the exhibit from its starting view, and again after using "Turn left" or the arrow keys.
-3. Keep them, and this project, in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them, and this project, in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: what is the difference between a render loop and rendering on demand, and which would you choose for a scene where absolutely nothing moves?
 
 ## Further reading

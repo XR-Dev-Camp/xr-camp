@@ -227,7 +227,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots: the bundle list mid-download with its progress bar visible, the storage panel after a successful download, and the history exhibit scene running with DevTools set to Offline.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: this lesson always tries an offline-saved file before the network (`resolveModelUrl`). Find one other place in a real app you use often — a map, a messaging app, a music player — where you think the same "saved copy first, network second" order would make it noticeably more usable on a bad connection. What would that app have to store, and how would it know when its saved copy is out of date?
 
 ## Further reading

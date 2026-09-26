@@ -301,7 +301,7 @@ Two further optional bonuses, beyond the three challenges above and not required
 
 1. Work through [`tests/checklist.md`](tests/checklist.md) and fix anything unchecked.
 2. Take two screenshots: the starter hall (showing its Stats panel numbers) and the completed hall (showing its Stats panel numbers) from the same camera angle.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: which single change made the biggest difference on your machine — and did the Chrome Performance panel confirm what you expected, or surprise you?
 
 ## Further reading

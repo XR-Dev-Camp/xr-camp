@@ -213,7 +213,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md) completely.
 2. Take a screenshot of your finished scene, and a screenshot of your own audit table from session 13.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: which of the eleven fixes in this lesson would you have missed if you had only read XAUR, without also thinking about ethics beyond disability access - and why do you think XAUR does not cover it?
 
 ## Further reading

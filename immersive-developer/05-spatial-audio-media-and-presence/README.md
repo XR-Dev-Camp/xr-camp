@@ -212,7 +212,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots: the exhibit before any sound is started, the audio guide playing with its caption visible, the transcript, and your chosen challenge extension.
-3. Keep them, and this project, in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them, and this project, in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: why does an `AudioContext` start suspended, and what could go wrong for a learner if a real project ignored that and tried to play sound the moment its page loaded?
 
 ## Further reading

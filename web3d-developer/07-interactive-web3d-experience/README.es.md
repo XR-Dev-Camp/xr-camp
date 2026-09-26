@@ -240,7 +240,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Repasa [`tests/checklist.md`](tests/checklist.md) de principio a fin, incluida la sección "3D and XR (manual)".
 2. Toma dos o tres capturas de pantalla: la exhibición con un objeto seleccionado (panel de información abierto), y el panel del límite de rendimiento mostrando un resultado en vivo.
-3. Guárdalas en tu diario de aprendizaje y tu portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: ¿qué exhibición mantuviste exactamente como estaba en 3.5, y cuál cambiaste o agregaste para el reto Creativo o Explorador, y por qué tomaste esa decisión?
 
 ## Lecturas adicionales

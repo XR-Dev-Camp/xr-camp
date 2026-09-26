@@ -331,7 +331,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa cada elemento de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla del panel de cuenta con la sesión iniciada, y otra de tu terminal mostrando cada verificación de `node --test` pasando.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿cuál de las decisiones de diseño de esta lección cambiarías primero si estuvieras construyendo esto para usuarios reales, y por qué?
 
 ## Lecturas adicionales

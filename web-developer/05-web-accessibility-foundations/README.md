@@ -239,7 +239,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your audit table, and one of the automated tool's result for your repaired page.
-3. Keep them in your learner journal and portfolio: an audit report is a strong portfolio piece. When the XR Camp community opens, share it there.
+3. Keep them in your learner journal and portfolio: an audit report is a strong portfolio piece. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: what did you hear with the screen reader that surprised you?
 
 ## Further reading

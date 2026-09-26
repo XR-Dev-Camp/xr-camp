@@ -177,7 +177,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your timeline at phone width and at full width.
-3. Keep both in your learner journal. When the XR Camp community opens, share them there. (You will learn to publish the page itself in Course 1.8.)
+3. Keep both in your learner journal. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md). (You will learn to publish the page itself in Course 1.8.)
 4. In your learner journal, answer: which milestone surprised you most, and why?
 
 ## Further reading

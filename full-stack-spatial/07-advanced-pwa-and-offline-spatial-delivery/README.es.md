@@ -227,7 +227,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: la lista de paquetes a mitad de descarga con su barra de progreso visible, el panel de almacenamiento después de una descarga exitosa, y la escena de la exhibición histórica corriendo con DevTools configurado en Offline.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: esta lección siempre intenta un archivo guardado sin conexión antes que la red (`resolveModelUrl`). Encuentra otro lugar en una aplicación real que uses seguido (un mapa, una aplicación de mensajería, un reproductor de música) donde creas que el mismo orden de "primero la copia guardada, luego la red" la haría notablemente más usable en una mala conexión. ¿Qué tendría que guardar esa aplicación, y cómo sabría cuándo su copia guardada está desactualizada?
 
 ## Lecturas adicionales

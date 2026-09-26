@@ -247,7 +247,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your setup page and of your XR Camp folder.
-3. Keep both in your learner journal. When the XR Camp community opens, share them there.
+3. Keep both in your learner journal. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: which shortcut will save you the most time?
 
 ## Further reading

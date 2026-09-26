@@ -211,7 +211,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Recorre [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla de la sala desde cada uno de los tres puntos de referencia, y del panel de metas en cada uno de sus tres modos de anclaje.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: ¿cuál de los tres modos de anclaje te resultó personalmente menos cómodo de usar por más de unos segundos, y por qué crees que fue así?
 
 ## Lecturas adicionales

@@ -183,7 +183,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu grafo de escena y tu layout espacial.
-3. Guarda los ocho documentos en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelos ahí.
+3. Guarda los ocho documentos en tu diario de aprendizaje y portafolio. Compártelos con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés).
 4. Pregunta de diario: ¿cuál de tus ocho documentos cambió más entre tu primer borrador y tu versión aprobada por mentoría, y por qué?
 
 ## Lecturas adicionales

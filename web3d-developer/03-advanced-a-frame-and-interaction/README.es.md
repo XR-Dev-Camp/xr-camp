@@ -342,7 +342,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa cada punto de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de la sala con una exhibición seleccionada, una del panel de información mostrando la descripción de esa exhibición, y una del interruptor de cursor de mirada activado.
-3. Guárdalas en tu diario de aprendizaje y tu portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿en qué método de entrada te apoyarías si no pudieras usar un mouse o una pantalla táctil, y el cursor de mirada y `laser-controls` de esta lección realmente te dieron esa opción?
 
 ## Lecturas adicionales

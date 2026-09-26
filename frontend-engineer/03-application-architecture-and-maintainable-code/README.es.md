@@ -295,7 +295,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu planificador, y otra de `check.html` con todas las verificaciones en verde.
-3. Guárdalas, junto con tu `behaviour.md` completado, en tu diario de aprendizaje y tu portafolio. Cuando abra la comunidad de XR Camp, compártelas también allí.
+3. Guárdalas, junto con tu `behaviour.md` completado, en tu diario de aprendizaje y tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué smell de la app vieja te sorprendió más, y cómo se lo explicarías a una amiga?
 
 ## Lecturas adicionales

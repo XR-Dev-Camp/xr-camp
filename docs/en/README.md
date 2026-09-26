@@ -10,3 +10,4 @@ Repository policies:
 - [Commercial and institutional use](../COMMERCIAL_USE.md)
 - [Contributing](../../.github/CONTRIBUTING.md), [code of conduct](../../.github/CODE_OF_CONDUCT.md), and [security](../../.github/SECURITY.md)
 - [Translation review checklist](translation-review.md): what native-speaker reviewers should check
+- [Where to share your work and ask for help](community.md): communities for web developers and for women in tech, until XR Camp has its own.

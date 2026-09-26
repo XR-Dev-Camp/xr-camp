@@ -209,7 +209,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa cada elemento de [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: la exhibición de escritorio, el panel Enter VR antes y después de detectar la compatibilidad con WebXR, y, si probaste con Immersive Web Emulator o un visor, la propia vista del dispositivo del emulador.
-3. Guárdalas, junto con este proyecto, en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas, junto con este proyecto, en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿por qué importa restablecer la vista antes de solicitar una sesión, para la comodidad, y qué podría salir mal para una estudiante si una lección se saltara ese paso?
 
 ## Lecturas adicionales

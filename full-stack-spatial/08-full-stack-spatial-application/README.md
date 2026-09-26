@@ -222,7 +222,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots: your terminal showing `npm test`'s full pass (10/10), and the app with a scene, an annotation, a chat message, and a saved AI description all visible.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: describe, in your own words, what could go wrong if the "human review" step in this capstone's AI feature were removed — not "it might be wrong," but a specific, concrete consequence for a real user of a real version of this app.
 
 ## Further reading

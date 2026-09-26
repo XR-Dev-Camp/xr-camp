@@ -287,7 +287,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: dos pestañas de navegador mostrando el avatar y la fila del registro de la otra, el registro de chat con mensajes de ambas, y la salida de terminal de `node --test` mostrando todo aprobado.
-3. Guárdalas en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. Pregunta de diario: esta lección hace cumplir la misma regla (límites de tasa, validación, "quién es esta conexión") tanto en el cliente como en el servidor, y explícitamente no confía en la copia del cliente. Encuentra un lugar en tu propio proyecto, esta lección o una anterior, donde solo hayas comprobado algo en la interfaz, y explica qué podría hacer al respecto una persona que aprende con la consola de desarrollador del navegador abierta.
 
 ## Lecturas adicionales

@@ -175,7 +175,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your map with the **XR** filter on.
-3. Keep it in your learner journal. When the XR Camp community opens, share it there.
+3. Keep it in your learner journal. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: which organisation would you most like to work with one day, and why?
 
 ## Further reading

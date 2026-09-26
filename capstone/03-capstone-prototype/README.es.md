@@ -178,7 +178,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Trabaja [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu prototipo funcional y de los números de rendimiento de tu registro de pruebas.
-3. Guarda tu plan de prototipo, registro de pruebas, y revisión de diseño en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelos ahí.
+3. Guarda tu plan de prototipo, registro de pruebas, y revisión de diseño en tu diario de aprendizaje y portafolio. Compártelos con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés).
 4. Pregunta de diario: ¿qué cambió tu revisión de diseño sobre el plan que tenías al entrar a esta etapa?
 
 ## Lecturas adicionales

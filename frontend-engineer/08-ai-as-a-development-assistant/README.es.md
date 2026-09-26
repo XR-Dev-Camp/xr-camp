@@ -331,7 +331,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu página de revisión, y otra de `check.html` con todas las verificaciones en verde.
-3. Guarda esas capturas, tu `review.md`, tu `ai-log.md`, y tu Momento 3D verificado en tu diario de aprendizaje y tu portafolio. Cuando abra la comunidad de XR Camp, compártelos también ahí.
+3. Guarda esas capturas, tu `review.md`, tu `ai-log.md`, y tu Momento 3D verificado en tu diario de aprendizaje y tu portafolio. Compártelos con otras personas que programan (consulta [dónde compartir tu trabajo](../../docs/en/community.md), en inglés).
 4. En tu diario, responde: ¿qué afirmación incorrecta habrías creído sin verificarla, y qué harás diferente la próxima vez que le pidas ayuda a un asistente?
 
 ## Lecturas adicionales

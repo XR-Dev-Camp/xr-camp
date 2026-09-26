@@ -284,7 +284,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla de tres estados: listo, error (ponte sin conexión) y datos de ejemplo. Y una de las barras 3D.
-3. Guárdalas en tu diario de aprendizaje y en tu portafolio. Cuando abra la comunidad de XR Camp, compártelas también allí.
+3. Guárdalas en tu diario de aprendizaje y en tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿qué fallo no esperabas, y cómo lo explica ahora tu app?
 
 ## Lecturas adicionales

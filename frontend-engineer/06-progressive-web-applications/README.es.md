@@ -400,7 +400,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla de: la sección Manifest con tus iconos, Cache storage, el tablero sin conexión diciendo qué tan antiguos son sus datos, el mensaje de actualización, y el momento 3D sin conexión. Si instalaste la app, también su icono en tu pantalla de inicio o lista de apps.
-3. Guárdalas en tu diario de aprendizaje y en tu portafolio. Cuando abra la comunidad de XR Camp, compártelas también ahí.
+3. Guárdalas en tu diario de aprendizaje y en tu portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿a quién conoces que usaría esta app con una conexión débil o costosa, y qué necesitaría después?
 
 ## Lecturas adicionales

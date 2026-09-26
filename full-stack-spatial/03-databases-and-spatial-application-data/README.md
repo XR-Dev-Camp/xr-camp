@@ -308,7 +308,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 1. Work through [`tests/checklist.md`](tests/checklist.md).
 2. Take screenshots: the exhibit with a saved scene loaded, the position/rotation table, and `node server/inspect-db.js`'s terminal output.
-3. Keep them in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. Journal question: your database now enforces a rule ("only the owner may edit a scene") in server code, not only in the UI. Find one place in this project where the UI *also* hides a control a rejected request would still block — and one place where it does not. What would go wrong if the server-side check were removed but the UI check stayed?
 
 ## Further reading

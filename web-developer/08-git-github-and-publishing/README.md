@@ -98,7 +98,7 @@ web-projects/
         └── ...
 ```
 
-> **If you are in mainland China.** GitHub and GitHub Pages can be slow or unreliable there, and some days they may not load at all. Gitee Pages, which many people once used instead, stopped its service in 2024. Hosting options change, so ask in the XR Camp community for what works now. Everything in this lesson except uploading and publishing also works offline: Git and GitHub Desktop keep your full history on your own computer, and your collection page opens from your folder. You can do Steps 1–5 and Step 11 now, and publish when a connection allows.
+> **If you are in mainland China.** GitHub and GitHub Pages can be slow or unreliable there, and some days they may not load at all. Gitee Pages, which many people once used instead, stopped its service in 2024. Hosting options change, so ask in one of the [communities where developers help each other](../../docs/en/community.md) what works now. Everything in this lesson except uploading and publishing also works offline: Git and GitHub Desktop keep your full history on your own computer, and your collection page opens from your folder. You can do Steps 1–5 and Step 11 now, and publish when a connection allows.
 
 ## Walkthrough
 
@@ -430,7 +430,7 @@ Three extensions, in [`challenges/`](challenges/):
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Write your published address, and your repository's address, in your learner journal.
-3. Keep your screenshot of your 3D world on your phone, and one of your collection page, in your journal and portfolio. When the XR Camp community opens, share your published address there.
+3. Keep your screenshot of your 3D world on your phone, and one of your collection page, in your journal and portfolio. Share your published address with other developers (see [where to share your work](../../docs/en/community.md)).
 4. In your journal, answer: who is the first person you will send your address to, and what do you want them to see?
 
 ## Further reading

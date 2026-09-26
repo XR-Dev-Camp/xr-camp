@@ -181,7 +181,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu laboratorio, con tu tabla y tus conclusiones a la vista.
-3. Guárdala en tu diario de aprendizaje. Cuando abra la comunidad de XR Camp, compártela también allí.
+3. Guárdala en tu diario de aprendizaje. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario de aprendizaje, responde: ¿te consideras una persona más declarativa o más imperativa? ¿Por qué?
 
 ## Lecturas adicionales

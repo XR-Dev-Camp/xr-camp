@@ -177,7 +177,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa todos los puntos de [`tests/checklist.md`](tests/checklist.md).
 2. Toma una captura de pantalla de tu línea de tiempo con el ancho de un celular y a ancho completo.
-3. Guarda las dos en tu diario de aprendizaje. Cuando abra la comunidad de XR Camp, compártelas también allí. (Aprenderás a publicar la página en sí en el Curso 1.8).
+3. Guarda las dos en tu diario de aprendizaje. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés). (Aprenderás a publicar la página en sí en el Curso 1.8).
 4. En tu diario de aprendizaje, responde: ¿qué hito te sorprendió más, y por qué?
 
 ## Lecturas adicionales

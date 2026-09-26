@@ -331,7 +331,7 @@ Three extensions, in [`challenges/`](challenges/):
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md).
 2. Take a screenshot of your review page, and one of `check.html` with every check passing.
-3. Keep them, your `review.md`, your `ai-log.md`, and your checked 3D moment in your learner journal and portfolio. When the XR Camp community opens, share them there.
+3. Keep them, your `review.md`, your `ai-log.md`, and your checked 3D moment in your learner journal and portfolio. Share them with other developers: see [where to share your work and ask for help](../../docs/en/community.md).
 4. In your journal, answer: which wrong claim would you have believed without checking, and what will you do differently next time you ask an assistant for help?
 
 ## Further reading

@@ -211,7 +211,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 1. Completa cada elemento de [`tests/checklist.md`](tests/checklist.md).
 2. Toma capturas de pantalla: el laboratorio de escritorio, el menú del mundo, un modelo de control o mano en VR (o en el emulador), y la mira de AR o el resultado de "Place object (2D)".
-3. Guárdalas, junto con este proyecto, en tu diario de aprendizaje y portafolio. Cuando abra la comunidad de XR Camp, compártelas ahí.
+3. Guárdalas, junto con este proyecto, en tu diario de aprendizaje y portafolio. Compártelas con otras personas que programan: consulta [dónde compartir tu trabajo y pedir ayuda](../../docs/en/community.md) (en inglés).
 4. En tu diario, responde: ¿por qué el agarre usa `squeeze` para un control pero `select` para una mano rastreada, y qué saldría mal para una estudiante si una lección supusiera en silencio que cada fuente de entrada funciona igual?
 
 ## Lecturas adicionales
