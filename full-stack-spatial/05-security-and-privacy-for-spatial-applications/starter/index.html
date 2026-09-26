@@ -2,18 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="description" content="A review-and-fix sprint on a deliberately vulnerable local spatial app: stored XSS, a missing Content Security Policy, a secret committed in code, an IDOR on a scene endpoint, verbose errors, and location data kept more precise than it needs to be.">
   <title>Security and Privacy for Spatial Applications - XR Camp starter</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Full-Stack Spatial · Security and Privacy for Spatial Applications</p></header>
   <main>
-    <!-- Add your main heading below. -->
+    <h1>Review and fix: a small spatial app</h1>
+    <p>This starter is a small, deliberately vulnerable spatial app -- accounts, saved scenes with an optional rough location, annotations you leave on a scene, and a shared chat room -- reusing Course 5.4's account and WebSocket foundations. It runs only on your own computer (<code>127.0.0.1</code>) and is never meant to be put online. Seven numbered TODOs, in the server and client code, each mark one real vulnerability: find it, understand why it matters, and fix it. <a href="../completed/">completed/</a> shows the fixed version.</p>
+    <p class="hint"><strong>DELIBERATELY VULNERABLE -- for learning on localhost only; never deploy.</strong> Every file with a bug repeats this warning at its top.</p>
+    <noscript><p>This page needs JavaScript to sign in and use the app.</p></noscript>
 
-    <!-- Add your project content below. -->
+    <p id="status" class="status-banner" role="status"></p>
 
+    <section id="account-section" aria-labelledby="account-heading">
+      <h2 id="account-heading">Your account</h2>
+
+      <div id="signed-out-view">
+        <div class="account-forms">
+          <form id="register-form">
+            <fieldset>
+              <legend>Create an account</legend>
+              <p class="hint" id="register-hint">No symbol or number is required. A longer password (10 characters or more) matters more than a complicated one.</p>
+              <p>
+                <label for="register-username">Username</label><br>
+                <input type="text" id="register-username" name="username" autocomplete="username" required minlength="3" maxlength="32" pattern="[a-z0-9_\-]+" aria-describedby="username-pattern-hint">
+              </p>
+              <p class="hint" id="username-pattern-hint">3-32 characters: lowercase letters, numbers, "_" or "-".</p>
+              <p>
+                <label for="register-password">Password</label><br>
+                <input type="password" id="register-password" name="password" autocomplete="new-password" required minlength="10" aria-describedby="register-hint">
+              </p>
+              <ul id="register-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Create account</button></p>
+            </fieldset>
+          </form>
+
+          <form id="login-form">
+            <fieldset>
+              <legend>Sign in</legend>
+              <p>
+                <label for="login-username">Username</label><br>
+                <input type="text" id="login-username" name="username" autocomplete="username" required>
+              </p>
+              <p>
+                <label for="login-password">Password</label><br>
+                <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+              </p>
+              <ul id="login-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Sign in</button></p>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <div id="signed-in-view" hidden>
+        <p>Signed in as <strong id="account-username"></strong>. <button type="button" id="logout-button">Sign out</button></p>
+      </div>
+    </section>
+
+    <section id="app-section" aria-labelledby="app-heading" hidden>
+      <h2 id="app-heading">Scenes</h2>
+
+      <div class="lab">
+        <div class="view">
+          <div class="canvas-box" id="canvas-box">
+            <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false">
+              <a-assets></a-assets>
+              <a-entity id="scene-box" geometry="primitive: box; width: 0.6; height: 0.6; depth: 0.6" material="color: #8a8398" position="0 0.8 0"></a-entity>
+              <a-entity id="scene-label" text="value: No scene open yet; align: center; width: 2.4; color: #241b33" position="0 1.4 0"></a-entity>
+              <a-entity light="type: ambient; intensity: 0.8"></a-entity>
+              <a-entity light="type: directional; intensity: 0.6" position="2 3 2"></a-entity>
+              <a-entity camera position="0 1.4 2.6" look-controls="enabled: false" wasd-controls="enabled: false"></a-entity>
+            </a-scene>
+          </div>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p id="scene-description" class="scene-text">No scene open yet.</p>
+        </div>
+
+        <div class="controls">
+          <fieldset>
+            <legend>Create a scene</legend>
+            <form id="create-scene-form">
+              <p>
+                <label for="scene-name">Name</label><br>
+                <input type="text" id="scene-name" maxlength="60" required>
+              </p>
+              <p><label><input type="checkbox" id="scene-public">Make this scene public</label></p>
+              <p class="hint">Location is optional. This project never needs more than roughly where a scene is -- consider leaving it blank.</p>
+              <p>
+                <label for="scene-lat">Latitude (optional)</label><br>
+                <input type="number" id="scene-lat" step="any" min="-90" max="90">
+              </p>
+              <p>
+                <label for="scene-lng">Longitude (optional)</label><br>
+                <input type="number" id="scene-lng" step="any" min="-180" max="180">
+              </p>
+              <ul id="scene-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Create scene</button></p>
+            </form>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your scenes</legend>
+            <ul id="my-scenes-list" class="option-list" role="list"></ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Open a scene by ID</legend>
+            <p class="hint">Paste any scene ID here -- your own, or one a classmate shared -- to see what this endpoint currently allows.</p>
+            <form id="open-scene-form">
+              <p>
+                <label for="open-scene-id">Scene ID</label><br>
+                <input type="text" id="open-scene-id" required>
+              </p>
+              <ul id="open-scene-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Open</button></p>
+            </form>
+          </fieldset>
+        </div>
+      </div>
+
+      <section id="scene-detail-section" aria-labelledby="scene-detail-heading" hidden>
+        <h2 id="scene-detail-heading">Scene: <span id="scene-detail-name"></span></h2>
+        <p class="hint">This list is the same information as the 3D view above, in words, and it is always here (WCAG 1.3.1).</p>
+        <ul id="scene-detail-list" role="list"></ul>
+
+        <h3>Annotations</h3>
+        <ul id="annotation-list" class="chat-log" role="list"></ul>
+        <form id="annotation-form">
+          <p>
+            <label for="annotation-text">Add an annotation</label><br>
+            <input type="text" id="annotation-text" maxlength="280" required>
+          </p>
+          <ul id="annotation-errors" class="field-errors" role="list"></ul>
+          <p class="actions"><button type="submit">Add annotation</button></p>
+        </form>
+      </section>
+
+      <section id="chat-section" aria-labelledby="chat-heading">
+        <h2 id="chat-heading">Chat (review-room)</h2>
+        <div id="chat-log" class="chat-log" role="log" aria-live="polite" aria-relevant="additions">
+          <ul id="chat-list" role="list"></ul>
+        </div>
+        <form id="chat-form">
+          <p>
+            <label for="chat-input">Message</label><br>
+            <input type="text" id="chat-input" maxlength="280" autocomplete="off" required>
+          </p>
+          <ul id="chat-errors" class="field-errors" role="list"></ul>
+          <p class="actions"><button type="submit">Send</button></p>
+        </form>
+      </section>
+    </section>
+
+    <div id="learner-notice">
+      <h2>Before you reuse this</h2>
+      <p>This starter is deliberately vulnerable, on purpose, so you can find and fix real security mistakes on a small, safe copy of an app -- never copy its server code into a real project. The server only binds to <code>127.0.0.1</code>; it is not reachable from any other device even on your own network.</p>
+    </div>
   </main>
 </body>
 </html>

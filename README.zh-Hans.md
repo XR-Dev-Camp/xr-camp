@@ -26,7 +26,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | [2 · 成为前端工程师](frontend-engineer/README.zh-Hans.md) | 可以安装到手机、离线运行并使用实时数据的网页应用。 | 145 次学习 · 约 8 个月 | 9 课中 9 课 |
 | [3 · 成为 Web3D 开发者](web3d-developer/README.zh-Hans.md) | 使用 A-Frame 和 three.js 构建的交互式 3D 体验。 | 138 次学习 · 约 8 个月 | 7 课中 7 课 |
 | [4 · 成为沉浸式开发者](immersive-developer/README.zh-Hans.md) | 通过一个链接就能在头显中打开的虚拟现实和增强现实体验。 | 111 次学习 · 约 6 个月 | 6 课中 6 课 |
-| [5 · 成为全栈空间开发者](full-stack-spatial/README.zh-Hans.md) | 带有账户、数据和实时连接的多用户 3D 应用。 | 166 次学习 · 约 10 个月 | 8 课中 5 课 |
+| [5 · 成为全栈空间开发者](full-stack-spatial/README.zh-Hans.md) | 带有账户、数据和实时连接的多用户 3D 应用。 | 166 次学习 · 约 10 个月 | 8 课中 6 课 |
 | [6 · 成为专业开发者](professional-developer/README.zh-Hans.md) | 生产环境部署、多语言网站，以及你在开源世界中的一席之地。 | 73 次学习 · 约 4 个月 | 5 课中 5 课 |
 | [7 · 专业毕业项目](capstone/README.zh-Hans.md) | 一个完整的沉浸式项目：调研、设计、构建、测试并发布。 | 95 次学习 · 约 5 个月 | 5 课中 5 课 |
 
@@ -107,7 +107,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.zh-Hans.md) | 19 小时 · 25 次学习 | ✅ 已完成 |
 | 3 | [Databases and Spatial Application Data](full-stack-spatial/03-databases-and-spatial-application-data/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.zh-Hans.md) | 17 小时 · 23 次学习 | ✅ 已完成 |
-| 5 | [Security and Privacy for Spatial Applications](full-stack-spatial/05-security-and-privacy-for-spatial-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
+| 5 | [Security and Privacy for Spatial Applications](full-stack-spatial/05-security-and-privacy-for-spatial-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 6 | [AI for Spatial Computing](full-stack-spatial/06-ai-for-spatial-computing/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 7 | [Advanced PWA and Offline Spatial Delivery](full-stack-spatial/07-advanced-pwa-and-offline-spatial-delivery/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |
 | 8 | [Phase 5 Capstone - Full-Stack Spatial Application](full-stack-spatial/08-full-stack-spatial-application/README.zh-Hans.md) | 25 小时 · 34 次学习 | 🚧 即将推出 |

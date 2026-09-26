@@ -1,0 +1,19 @@
+{
+  "name": "fss-05-security-and-privacy-for-spatial-applications-server-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The deliberately vulnerable version of this lesson's server: accounts, scenes, annotations, and chat, built on node:http, node:sqlite, and the ws package -- for learning on localhost only, never deploy.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test --test-timeout=15000"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "ws": "8.21.3"
+  },
+  "devDependencies": {}
+}
