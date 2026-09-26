@@ -476,7 +476,7 @@
       "phase": 2,
       "title": {
         "en": "Modern JavaScript",
-        "es-419": "",
+        "es-419": "JavaScript moderno",
         "zh-Hans": ""
       },
       "estimatedMinutes": 840,
@@ -502,7 +502,7 @@
       "phase": 2,
       "title": {
         "en": "The Document Object Model and Dynamic Interfaces",
-        "es-419": "",
+        "es-419": "El Modelo de Objetos del Documento y las interfaces dinámicas",
         "zh-Hans": ""
       },
       "estimatedMinutes": 600,
@@ -528,7 +528,7 @@
       "phase": 2,
       "title": {
         "en": "Application Architecture and Maintainable Code",
-        "es-419": "",
+        "es-419": "Arquitectura de aplicaciones y código mantenible",
         "zh-Hans": ""
       },
       "estimatedMinutes": 720,
@@ -554,7 +554,7 @@
       "phase": 2,
       "title": {
         "en": "APIs, JSON, and Asynchronous Applications",
-        "es-419": "",
+        "es-419": "APIs, JSON y aplicaciones asíncronas",
         "zh-Hans": ""
       },
       "estimatedMinutes": 720,
@@ -580,7 +580,7 @@
       "phase": 2,
       "title": {
         "en": "Web Components",
-        "es-419": "",
+        "es-419": "Componentes web",
         "zh-Hans": ""
       },
       "estimatedMinutes": 600,
@@ -607,7 +607,7 @@
       "phase": 2,
       "title": {
         "en": "Progressive Web Applications",
-        "es-419": "",
+        "es-419": "Aplicaciones web progresivas",
         "zh-Hans": ""
       },
       "estimatedMinutes": 720,
@@ -634,7 +634,7 @@
       "phase": 2,
       "title": {
         "en": "Git Collaboration and Open Source",
-        "es-419": "",
+        "es-419": "Colaboración en Git y código abierto",
         "zh-Hans": ""
       },
       "estimatedMinutes": 540,
@@ -659,7 +659,7 @@
       "phase": 2,
       "title": {
         "en": "AI as a Development Assistant",
-        "es-419": "",
+        "es-419": "La IA como asistente de desarrollo",
         "zh-Hans": ""
       },
       "estimatedMinutes": 600,
@@ -686,7 +686,7 @@
       "phase": 2,
       "title": {
         "en": "Phase 2 Capstone - Production Frontend Application",
-        "es-419": "",
+        "es-419": "Proyecto final de la Fase 2 - Aplicación frontend de producción",
         "zh-Hans": ""
       },
       "estimatedMinutes": 1080,
@@ -783,7 +783,7 @@
       "id": "w3d-04-threejs-foundations",
       "courseId": "web3d-developer",
       "lessonId": "threejs-foundations-04",
-      "status": "draft",
+      "status": "review",
       "phase": 3,
       "title": {
         "en": "Three.js Foundations",
