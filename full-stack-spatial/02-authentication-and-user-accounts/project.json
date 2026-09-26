@@ -6,12 +6,12 @@
   "phase": 5,
   "title": {
     "en": "Authentication and User Accounts",
-    "es-419": "",
+    "es-419": "Autenticación y cuentas de usuario",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build a secure learner account and profile prototype.",
-    "es-419": "",
+    "es-419": "Construye un prototipo seguro de cuenta y perfil para quien aprende.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 1125,

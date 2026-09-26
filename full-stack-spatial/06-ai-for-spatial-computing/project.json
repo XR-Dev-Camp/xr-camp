@@ -6,12 +6,12 @@
   "phase": 5,
   "title": {
     "en": "AI for Spatial Computing",
-    "es-419": "",
+    "es-419": "IA para computación espacial",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build an AI-assisted spatial tool while documenting human review and safeguards.",
-    "es-419": "",
+    "es-419": "Construye una herramienta espacial asistida por IA documentando la revisión humana y las salvaguardas.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,

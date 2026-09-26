@@ -6,12 +6,12 @@
   "phase": 5,
   "title": {
     "en": "Real-Time and Multi-User Applications",
-    "es-419": "",
+    "es-419": "Aplicaciones en tiempo real y multiusuario",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build a small collaborative 3D world.",
-    "es-419": "",
+    "es-419": "Construye un pequeño mundo 3D colaborativo.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 1020,

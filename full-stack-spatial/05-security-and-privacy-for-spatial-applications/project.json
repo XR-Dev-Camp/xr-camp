@@ -6,12 +6,12 @@
   "phase": 5,
   "title": {
     "en": "Security and Privacy for Spatial Applications",
-    "es-419": "",
+    "es-419": "Seguridad y privacidad para aplicaciones espaciales",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Complete a security and privacy review and remediation sprint.",
-    "es-419": "",
+    "es-419": "Completa una revisión de seguridad y privacidad y un sprint de remediación.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,

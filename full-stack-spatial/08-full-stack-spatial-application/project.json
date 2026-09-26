@@ -6,12 +6,12 @@
   "phase": 5,
   "title": {
     "en": "Phase 5 Capstone - Full-Stack Spatial Application",
-    "es-419": "",
+    "es-419": "Proyecto final de la Fase 5 - Aplicación espacial full-stack",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Combine every Phase 5 lesson into one reviewed, security-fixed full-stack spatial app, with an optional AI description draft and deployment notes for localhost or a small server.",
-    "es-419": "",
+    "es-419": "Combina cada lección de la Fase 5 en una sola aplicación espacial full-stack, revisada y con la seguridad corregida, con un borrador de descripción por IA opcional y notas de despliegue para localhost o un servidor pequeño.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 1500,

@@ -6,12 +6,12 @@
   "phase": 5,
   "title": {
     "en": "Databases and Spatial Application Data",
-    "es-419": "",
+    "es-419": "Bases de datos y datos de aplicaciones espaciales",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Save and load user-created scenes or annotations.",
-    "es-419": "",
+    "es-419": "Guarda y carga escenas o anotaciones creadas por la usuaria.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
