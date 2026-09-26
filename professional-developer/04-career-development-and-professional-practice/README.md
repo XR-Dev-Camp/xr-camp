@@ -215,7 +215,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 ## Further reading
 
-- [MDN: CSS media queries and the print media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/print) — how `media="print"` and `@page` work
+- [MDN: Printing](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Printing) — how `media="print"` and `@page` work
 - [MDN: Generated content (`::before`/`::after`) and `attr()`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_generated_content) — how to print a link's destination
 - [WCAG 2.2 quick reference](https://www.w3.org/WAI/WCAG22/quickref/) — the success criteria this lesson cites
 - [schema.org: Person](https://schema.org/Person) — the structured-data vocabulary used in the Explorer challenge
