@@ -1088,7 +1088,10 @@
       },
       "difficulty": "advanced",
       "technologies": [
-        "Node.js"
+        "JavaScript",
+        "Node.js",
+        "SQLite",
+        "Three.js"
       ],
       "hasCode": true,
       "path": "full-stack-spatial/03-databases-and-spatial-application-data"
@@ -1263,7 +1266,7 @@
       "id": "pro-03-open-source-standards-and-technical-leadership",
       "courseId": "professional-developer",
       "lessonId": "open-source-standards-and-technical-leadership-03",
-      "status": "draft",
+      "status": "review",
       "phase": 6,
       "title": {
         "en": "Open Source, Standards, and Technical Leadership",
@@ -1277,7 +1280,9 @@
       },
       "difficulty": "professional",
       "technologies": [
-        "Git"
+        "Git",
+        "GitHub",
+        "Markdown"
       ],
       "hasCode": true,
       "path": "professional-developer/03-open-source-standards-and-technical-leadership"

@@ -2,7 +2,7 @@
   "id": "pro-03-open-source-standards-and-technical-leadership",
   "courseId": "professional-developer",
   "lessonId": "open-source-standards-and-technical-leadership-03",
-  "status": "draft",
+  "status": "review",
   "phase": 6,
   "title": {
     "en": "Open Source, Standards, and Technical Leadership",
@@ -21,7 +21,9 @@
   },
   "difficulty": "professional",
   "technologies": [
-    "Git"
+    "Git",
+    "GitHub",
+    "Markdown"
   ],
   "hasCode": true,
   "starterPath": "./starter",

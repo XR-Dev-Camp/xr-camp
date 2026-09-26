@@ -27,7 +27,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions · about 8 months | 7 of 7 |
 | [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions · about 6 months | 6 of 6 |
 | [5 · Become a Full-Stack Spatial Developer](full-stack-spatial/README.md) | Multi-user 3D applications with accounts, data, and real-time connections. | 166 sessions · about 10 months | 2 of 8 |
-| [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions · about 4 months | 2 of 5 |
+| [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions · about 4 months | 3 of 5 |
 | [7 · Professional Capstone](capstone/README.md) | A complete immersive project: researched, designed, built, tested, and launched. | 95 sessions · about 5 months | 0 of 5 |
 
 ## All lessons
@@ -118,7 +118,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | --- | --- | --- | --- |
 | 1 | [Production Deployment and DevOps](professional-developer/01-production-deployment-and-devops/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 2 | [Internationalization and Localization](professional-developer/02-internationalization-and-localization/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 3 | [Open Source, Standards, and Technical Leadership](professional-developer/03-open-source-standards-and-technical-leadership/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
+| 3 | [Open Source, Standards, and Technical Leadership](professional-developer/03-open-source-standards-and-technical-leadership/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 4 | [Career Development and Professional Practice](professional-developer/04-career-development-and-professional-practice/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 5 | [Instructor and Mentor Preparation](professional-developer/05-instructor-and-mentor-preparation/README.md) | 8 h · 11 sessions | 🚧 Coming soon |
 

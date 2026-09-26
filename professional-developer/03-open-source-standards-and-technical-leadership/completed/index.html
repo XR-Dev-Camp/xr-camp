@@ -3,12 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open Source, Standards, and Technical Leadership - XR Camp reference solution</title>
+  <title>Ana's standards and leadership plan - Open Source, Standards, and Technical Leadership - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <p>XR Camp · Web3D</p>
+  </header>
   <main>
-    <h1>Open Source, Standards, and Technical Leadership</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Ana's open standards and leadership plan</h1>
+    <p class="plan-intro">This page summarizes the plan in <a href="standards-plan.md"><code>standards-plan.md</code></a>. It links out to the full documents rather than repeating them, the way a good project README points to its detailed docs instead of duplicating them.</p>
+
+    <ul class="doc-links" role="list">
+      <li><a href="standards-plan.md">Standards participation plan</a></li>
+      <li><a href="explainer-draft.md">Explainer draft</a></li>
+      <li><a href="contribution-record.md">Contribution record</a></li>
+      <li><a href="mini-project/GOVERNANCE.md">Mini-project governance</a></li>
+      <li><a href="mini-project/CODE_OF_CONDUCT.md">Mini-project code of conduct</a></li>
+      <li><a href="mini-project/decision-record-0001-choose-a-licence.md">Licence decision record</a></li>
+    </ul>
+
+    <section class="plan-section" aria-labelledby="cg-heading">
+      <h2 id="cg-heading">Community Group</h2>
+      <p>Joined the <a href="https://www.w3.org/community/immersive-web/">W3C Immersive Web Community Group</a> with a free W3C account, created 3 March. It is where early WebXR ideas are discussed before they reach a chartered Working Group, and it connects directly to the scene-description pattern this course has taught since Phase 1.</p>
+      <p><span class="status-word done">Done.</span> See <a href="standards-plan.md#1-my-w3c-account-and-community-group">section 1 of the plan</a> for why this group.</p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="explainer-heading">
+      <h2 id="explainer-heading">Explainer</h2>
+      <p>A practice explainer, written with the real W3C TAG explainer template, proposing a small documentation note recommending <code>aria-describedby</code> to link a WebXR scene to its text alternative.</p>
+      <p><span class="status-word done">Done.</span> Read the full <a href="explainer-draft.md">explainer draft</a>.</p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="issue-heading">
+      <h2 id="issue-heading">Planned spec issue</h2>
+      <p>A drafted issue for the <code>immersive-web/webxr</code> repository, asking the spec's Best Practices section to recommend a consistent pattern for a scene's text alternative.</p>
+      <p><span class="status-word planned">Planned.</span> Filing it is this lesson's required Foundation challenge. See <a href="standards-plan.md#4-my-planned-spec-issue">section 4 of the plan</a> for the exact title and body.</p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="contribution-heading">
+      <h2 id="contribution-heading">Contribution</h2>
+      <p>A merged documentation pull request on <code>mdn/content</code>, adding an accessibility note to the WebXR Device API page.</p>
+      <p><span class="status-word done">Done.</span> Read the full <a href="contribution-record.md">contribution record</a>.</p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="review-heading">
+      <h2 id="review-heading">Reviewing someone else's work</h2>
+      <p>Reviewed a documentation pull request about the <code>prefers-reduced-motion</code> media feature, and suggested a wording change that the author accepted the same day.</p>
+      <p><span class="status-word done">Done.</span> See <a href="standards-plan.md#6-reviewing-someone-elses-work">section 6 of the plan</a> for the comment itself.</p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="project-heading">
+      <h2 id="project-heading">Running a small open-source project</h2>
+      <p><code>scene-description-lint</code>: a small imagined command-line tool that checks a folder of HTML files for a scene-description element next to every 3D scene. Its governance names two roles and a lightweight approval rule; its code of conduct is the Contributor Covenant with a real reporting address; its licence is <strong>MIT</strong>, chosen so any learner's project can use it freely.</p>
+      <p><span class="status-word done">Done.</span> See the governance, code of conduct, and licence decision record linked above.</p>
+    </section>
+
+    <section class="plan-section" aria-labelledby="mentoring-heading">
+      <h2 id="mentoring-heading">Technical leadership: mentoring</h2>
+      <p>For anyone joining <code>scene-description-lint</code>, the plan is to explain the "why" before the "how", by pointing to <a href="../../../docs/en/xr-accessibility.md"><code>docs/en/xr-accessibility.md</code></a> first. On a first pull request: name something done well, ask questions rather than give instructions where a choice is a matter of taste, and always explain the reason behind a requested change.</p>
+      <p><span class="status-word done">Done.</span> See <a href="standards-plan.md#8-technical-leadership-mentoring">section 8 of the plan</a>.</p>
+    </section>
   </main>
 </body>
 </html>
