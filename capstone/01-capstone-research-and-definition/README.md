@@ -195,7 +195,7 @@ Cristina Junqueira is a Brazilian entrepreneur, born in Ribeirão Preto, who in 
 
 Think of Junqueira's story as this stage in miniature: a clearly defined problem, one audience, and one first product, built before anything more ambitious. In 2026 she is leading Nubank's launch into the United States from Miami, still working from the same discipline of naming the problem precisely before building the solution.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

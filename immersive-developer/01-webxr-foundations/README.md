@@ -226,7 +226,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Reference spaces, session events, and reset views can feel like plumbing, but they exist to make experiences like the ones her research studies possible at all: how people perceive, move through, and interact inside virtual, tracked spaces. The seated-comfort choices this lesson makes are a small, practical piece of the much larger field she works in.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

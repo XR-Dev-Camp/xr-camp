@@ -198,7 +198,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 El último hito de tu línea de tiempo no ocurrió sin más. Personas como Cannon pasaron años en reuniones, redactando especificaciones y construyendo demostraciones para que «un mundo 3D al que puedes enlazar» funcionara en todos los navegadores. El trabajo en estándares es una de las carreras que conocerás en el Curso 0.9.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

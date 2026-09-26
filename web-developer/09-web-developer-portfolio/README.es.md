@@ -489,7 +489,7 @@ Tres extensiones, en [`challenges/`](challenges/). La primera es obligatoria:
 
 Un portafolio que muestra cómo llegaste a algún lugar, y no solo dónde terminaste, es una forma de enseñar. Cuando escribes tu estudio de caso, haces lo que hacen docentes como Shirley Wu: conviertes tu proceso en algo de lo que otras personas pueden aprender. Busca Data Sketches y pregúntate: ¿qué muestra, además de las imágenes terminadas?
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

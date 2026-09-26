@@ -349,7 +349,7 @@ To try both yourself: `cd completed`, then `npm install`. Run the unit tests wit
 
 The 3D bar chart you just built is a small cousin of the charting work she has spent years on: turning numbers into shapes people can read at a glance, in a browser, for free. Her guide did the same for a generation of Chinese-speaking developers learning three.js, the library XR Camp's Web3D courses are built on.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

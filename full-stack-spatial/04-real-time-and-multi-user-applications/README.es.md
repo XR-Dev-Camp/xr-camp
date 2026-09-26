@@ -306,7 +306,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Su investigación (cómo las personas perciben e interactúan con los avatares de las demás en un espacio virtual compartido) es el tema más profundo detrás de la pequeña sala de esta lección: las actualizaciones de posición, la lista de presencia, y la sensación de "hay alguien más aquí conmigo" que la conexión WebSocket de esta lección existe para crear.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

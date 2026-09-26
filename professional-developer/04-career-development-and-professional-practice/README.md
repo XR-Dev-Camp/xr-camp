@@ -227,7 +227,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 A career built across decades, several very different roles, and eventually a deliberate shift toward mentoring is exactly the kind of long professional practice this lesson's small documents are a first sketch of: naming your work honestly, at every stage, so the next opportunity can find you.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

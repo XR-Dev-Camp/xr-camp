@@ -309,7 +309,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 La cuadrícula que usaste para las tarjetas de los programas es un estándar: alguien tuvo que defenderla, explicarla y enseñarla. Buena parte de esa explicación la hizo Rachel Andrew.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

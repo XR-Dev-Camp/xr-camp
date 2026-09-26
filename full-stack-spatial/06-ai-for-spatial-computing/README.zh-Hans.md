@@ -268,7 +268,7 @@ Node.js 可以从 [nodejs.org](https://nodejs.org/) 下载；如果官方站点�
 
 她的职业生涯与本课的两个功能直接相关：一个知识图谱恰好是一种为了回答「我们实际上知道什么，以及我们对此有多大把握」而构建出来的结构——这正是 `checkDescriptionForHallucinations` 和 `filterMatchesAgainstRealScenes` 对一个规模小得多的模型回复所提出的同一个问题，也正是让一个 AI 功能扎根于真实的、经过验证的数据、而不是一个模型仅仅听起来很自信的说法之中的同一种严谨态度。
 
-> **编者注：发布前请核实。** 「值得认识的女性」中的人物信息必须以一手资料核实，并在可行时于课程上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

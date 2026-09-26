@@ -258,7 +258,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Her work is a reminder that this lesson's fixes are not only a checklist: a precise location kept "just in case" (TODO 7), or a permission check quietly skipped (TODO 5), are exactly the kind of small technical decisions that, at the scale of a city's surveillance system, become the subject of the public campaigns she has spent her career on.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

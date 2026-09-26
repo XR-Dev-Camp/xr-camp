@@ -194,7 +194,7 @@ Katya Echazarreta es una ingeniera eléctrica, nacida en Guadalajara, México, q
 
 Cada misión en la que trabajó en el JPL dependía de pruebas en tierra que demostraran que un sistema funcionaría antes de que dejara la Tierra alguna vez. Eso es exactamente lo que te pide esta etapa para tu proyecto final: demostrar que las partes más riesgosas funcionan, en tierra, en un prototipo pequeño, antes de comprometerte con la compilación de producción completa.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

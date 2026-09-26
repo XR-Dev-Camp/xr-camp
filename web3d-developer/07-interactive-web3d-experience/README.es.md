@@ -259,7 +259,7 @@ Anita Havele es directora ejecutiva del Web3D Consortium, el organismo de están
 
 Publicar una experiencia pulida en Web3D, como pide este proyecto final, depende de que estándares como glTF y X3D se mantengan interoperables entre herramientas y navegadores, un trabajo que rara vez capta la atención de quien aprende, porque tiene éxito precisamente al ser invisible. El rol de Havele, coordinando el trabajo de un organismo de estándares con otros varios, es un recordatorio de que "simplemente funciona" suele ser el resultado de que personas mantienen deliberadamente los formatos compatibles.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

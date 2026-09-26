@@ -451,7 +451,7 @@ Tres extensiones, en [`challenges/`](challenges/):
 
 Un repositorio no es solo para código. Tracy Chou usó uno para reunir cifras difíciles de encontrar, en público, donde cualquier persona podía verlas y sumar las suyas. Todo lo que aprendiste en esta lección (un repositorio público, un README que lo explica, *commits* de muchas personas) puede ser una herramienta para el cambio.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

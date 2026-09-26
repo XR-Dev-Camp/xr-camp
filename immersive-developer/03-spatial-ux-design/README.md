@@ -228,7 +228,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Every choice in this lesson — where a panel sits, how it is labelled, what it silently communicates by staying put or by following you — is exactly the kind of question her field studies: not just whether an interface works, but what it says to the person using it, and how they come to understand that without being told directly.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

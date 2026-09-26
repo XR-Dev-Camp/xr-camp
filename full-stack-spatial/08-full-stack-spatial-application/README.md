@@ -241,7 +241,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Ushahidi began as exactly the kind of small, urgent tool this capstone practices building: a working server, a database of reports tied to places, and real people relying on it under pressure. The discipline this lesson asks for — reviewing what already works before adding to it, and writing down plainly how to run and deploy what you built — is the same discipline a tool built to be trusted in a crisis has to have from the start.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

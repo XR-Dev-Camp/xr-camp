@@ -316,7 +316,7 @@ Nancy Hitschfeld Kahler es profesora de ciencias de la computación en la Univer
 
 Más allá de su propia investigación, Hitschfeld Kahler cofundó la Red Adelina Gutiérrez, una red que trabaja por la equidad de género en su campo. Una lección de rendimiento es un lugar apropiado para nombrarla: las preguntas que plantea su trabajo (cómo se construye una malla, y cómo se le pide a una GPU que haga menos trabajo para el mismo resultado) son las mismas preguntas que esta lección ha estado haciendo sobre una sala llena de pedestales.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

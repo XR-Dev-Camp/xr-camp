@@ -489,7 +489,7 @@ Three extensions, in [`challenges/`](challenges/). The first is required:
 
 A portfolio that shows how you got somewhere, not only where you ended, is a kind of teaching. When you write your case study, you do what teachers like Shirley Wu do: you make your process something other people can learn from. Look up Data Sketches, and ask yourself: what does it show besides the finished pictures?
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

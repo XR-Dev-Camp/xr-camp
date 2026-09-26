@@ -310,7 +310,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 La página de WebGL puro que leíste en esta lección funciona igual en todos los navegadores porque personas como ella escriben la especificación, línea por línea, y logran que los fabricantes de navegadores se pongan de acuerdo. Dos de las tecnologías de tu tabla de comparación llevan su trabajo.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

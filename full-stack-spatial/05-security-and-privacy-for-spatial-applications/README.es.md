@@ -246,7 +246,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Su trabajo es un recordatorio de que las correcciones de esta lección no son solo una lista de verificación: una ubicación precisa guardada "por si acaso" (TODO 7), o una verificación de permisos silenciosamente omitida (TODO 5), son exactamente el tipo de decisiones técnicas pequeñas que, a la escala del sistema de vigilancia de una ciudad, se convierten en el tema de las campañas públicas a las que ha dedicado su carrera.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

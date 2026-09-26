@@ -277,7 +277,7 @@ Irma Alvarez Ccoscco is a Quechua poet, educator, and digital-language activist 
 
 Her work is a reminder that localization is not only about the large world languages a project starts with. The same `Intl` APIs, font-stack thinking, and translation-QA discipline this lesson practises on Spanish and Chinese apply just as much to a language spoken by a few million people as to one spoken by a billion — and a language with far less existing software localized into it needs that care even more.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

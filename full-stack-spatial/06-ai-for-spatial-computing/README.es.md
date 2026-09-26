@@ -268,7 +268,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Su carrera está directamente detrás de las dos funciones de esta lección: un grafo de conocimiento es exactamente una estructura construida para responder "qué sabemos realmente, y cuánta confianza tenemos en ello": la misma pregunta que hacen `checkDescriptionForHallucinations` y `filterMatchesAgainstRealScenes` sobre la respuesta de un modelo mucho más pequeño, y la misma disciplina que mantiene a una función de IA anclada en datos reales y verificados en lugar de en lo que un modelo simplemente suena seguro de decir.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

@@ -288,7 +288,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 La ingeniería de producción y confiabilidad de sitios es exactamente el territorio de esta lección: mantener algo real funcionando, con seguridad, después de que se publica. El camino de Fernanda, desde la organización comunitaria de software libre hasta liderar ingeniería de producción en algunas de las plataformas más grandes del mundo, muestra que las dos cosas no son carreras separadas.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

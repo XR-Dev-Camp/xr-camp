@@ -256,7 +256,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 El DOM confunde a muchas personas principiantes porque se parece a tu HTML, pero no es lo mismo. Explicar bien esa diferencia, y de forma gratuita, es exactamente el tipo de enseñanza que ayuda a desarrolladoras autodidactas en todas partes.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

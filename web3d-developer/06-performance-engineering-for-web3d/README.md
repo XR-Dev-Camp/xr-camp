@@ -413,7 +413,7 @@ Nancy Hitschfeld Kahler is a computer-science professor at the University of Chi
 
 Beyond her own research, Hitschfeld Kahler co-created the Adelina Gutiérrez Network, a network working for gender equity in her field. A performance lesson is a fitting place to name her: the questions her work asks — how a mesh is built, and how a GPU is asked to do less work for the same result — are the same questions this lesson has been asking about a hall full of pedestals.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

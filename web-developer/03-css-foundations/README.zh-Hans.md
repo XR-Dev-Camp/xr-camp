@@ -304,7 +304,7 @@ body {
 
 网页最初是围绕从左到右书写的英语构建的。Chen Hui Jing 的工作展示了当 CSS 认真对待每一种语言（包括许多 XR Camp 学员所说的语言）时，它能做到什么。
 
-> **编辑说明 —— 发布前须核实。** 「值得认识的女性」栏目中的生平陈述必须与原始资料核对，并在可行时于本课上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

@@ -296,7 +296,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Explicar cómo encajan un servidor, una API y un cliente, con claridad y en tu propio idioma, es exactamente la destreza que esta lección te pide practicar por primera vez. Marcia lleva años haciendo precisamente eso para la comunidad de desarrolladoras y desarrolladores de habla hispana, desde el propio escenario de AWS hasta una plataforma que construyó ella misma.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

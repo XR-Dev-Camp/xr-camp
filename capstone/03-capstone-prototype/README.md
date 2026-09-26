@@ -194,7 +194,7 @@ Katya Echazarreta is an electrical engineer, born in Guadalajara, Mexico, who wo
 
 Every mission she worked on at JPL depended on ground testing that proved a system would work before it ever left Earth. That is exactly what this stage asks of your capstone: prove the riskiest parts work, on the ground, in a small prototype, before committing to the full production build.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

@@ -227,7 +227,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Kaiyuanshe and GNOME.Asia are exactly the kind of open, community-run structures this lesson asks you to practise joining: a group anyone can propose, that decides things together, and that keeps growing because people like Chen Yang keep showing up to organise it, year after year, not only to write its code.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

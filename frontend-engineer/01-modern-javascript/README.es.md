@@ -319,7 +319,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Los módulos solo ayudan si el código antiguo y el código nuevo pueden trabajar juntos. Hacer eso posible en una de las plataformas de JavaScript más usadas del mundo es un trabajo cuidadoso y paciente, y buena parte fue obra suya.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

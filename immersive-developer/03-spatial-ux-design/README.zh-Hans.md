@@ -228,7 +228,7 @@ const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, 
 
 本课中的每一个选择——一个面板放在哪里、它如何被标注、它通过固定不动还是跟随你，悄悄传达了什么——正是她所在领域研究的那类问题：不仅是一个界面是否能用，还有它对使用者说了什么，以及对方是如何在没有被直接告知的情况下理解这一点的。
 
-> **编者注：发布前请核实。** 「值得认识的女性」中的人物信息必须以一手资料核实，并在可行时于课程上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

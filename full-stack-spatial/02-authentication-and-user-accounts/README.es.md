@@ -350,7 +350,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Esta lección se apoya en una función hash (scrypt) en casi cada paso: para guardar una contraseña, un código de recuperación, y para comparar secretos de forma segura. La carrera de Wang Xiaoyun es un recordatorio de que las funciones hash no son hechos fijos e inmutables: son diseños, construidos por personas, que a veces resultan tener debilidades que solo un criptoanálisis cuidadoso y paciente encuentra. El mismo cuidado que rompió MD5 y SHA-1 es lo que mantiene que valga la pena revisar las recomendaciones actuales, como las que cita esta lección, a medida que cambian.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

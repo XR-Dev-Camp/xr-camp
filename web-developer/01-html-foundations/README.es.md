@@ -308,7 +308,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 La conexión con esta lección es directa: los puntos de referencia, los encabezados y el texto alternativo que has escrito hoy son útiles precisamente porque personas como Watson lucharon para que existieran en los estándares y se implementaran correctamente en los navegadores.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de esta sección deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección.
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

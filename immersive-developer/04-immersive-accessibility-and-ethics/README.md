@@ -230,7 +230,7 @@ Wanda Díaz-Merced is a Puerto Rican astronomer who lost her sight as a young st
 
 Her work is a direct answer to this lesson's theme: instead of treating a blind scientist's needs as an afterthought, sonification makes an entire dataset accessible by a different sense from the one it was originally designed for - the same principle behind giving this lesson's talk a full text transcript and a full 2D fallback, not just a nod towards accessibility bolted onto a visual-first design. She continues to advocate for disability inclusion in STEM.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

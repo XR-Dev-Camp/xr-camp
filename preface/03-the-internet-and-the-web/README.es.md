@@ -184,7 +184,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Cada paso de tu diagrama depende de que las redes estén conectadas entre sí. Para cientos de millones de personas, esa conexión empezó con el trabajo de Hu Qiheng.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

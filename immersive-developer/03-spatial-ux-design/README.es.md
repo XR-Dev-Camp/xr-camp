@@ -228,7 +228,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Cada decisión de esta lección -dónde se ubica un panel, cómo está etiquetado, qué comunica en silencio al quedarse quieto o al seguirte- es exactamente el tipo de pregunta que estudia su campo: no solo si una interfaz funciona, sino qué le dice a la persona que la usa, y cómo llega a entenderlo sin que se lo digan directamente.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

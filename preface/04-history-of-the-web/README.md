@@ -194,7 +194,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Yinghaiwei did not survive, and its story is often told in China as a lesson about being too early. But being early is also what pioneers do. Many of the milestones on your timeline were built by people whose first attempts failed.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

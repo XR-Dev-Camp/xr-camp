@@ -198,7 +198,7 @@ Diana Trujillo is an aerospace engineer, born in Cali, Colombia, who emigrated t
 
 A robotic arm only works because its full system — joints, sensors, software, and the people who operate it — was designed together before a single part was built. That is the discipline this stage asks of you: journeys, layout, data, and security, planned as one system before you write any production code.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

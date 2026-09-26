@@ -175,7 +175,7 @@ Yasodara Córdova es una tecnóloga brasileña que, como líder de proyecto en W
 
 Serenata de Amor solo importó una vez lanzada: una herramienta funcional y pública que le permitía a cualquiera inspeccionar sus hallazgos y su código de código abierto. Ese es también el último paso de esta etapa: no solo construir algo, sino publicarlo donde otras personas puedan revisarlo, usarlo, y aprender de él.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

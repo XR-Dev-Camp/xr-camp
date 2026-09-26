@@ -266,7 +266,7 @@ Ayşegül Yönet is a W3C Invited Expert and co-chair of the W3C Immersive Web W
 
 A capstone that combines Enter VR, controller input, and hit-test placement into one page depends entirely on the WebXR Device API staying a stable, cross-browser standard rather than a set of incompatible vendor APIs — the exact work Yönet's working group does. Reading a spec before using an API, the way `js/xr.js`'s comments point back to the WebXR Device API's own rules about user activation, is a small daily habit that keeps this kind of standards work visible.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

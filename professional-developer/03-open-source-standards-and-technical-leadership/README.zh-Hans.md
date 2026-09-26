@@ -227,7 +227,7 @@ Created a free W3C account on <date>. Chosen group: <name>.
 
 开源社和 GNOME.Asia 正是本课要求你练习去加入的那种开放的、由社区自主运作的组织：一个任何人都可以提议成立、共同做出决定的组织，并且能够持续成长，正是因为像陈阳这样的人年复一年地站出来组织它——不只是编写它的代码。
 
-> **编者注：发布前请核实。** 「值得认识的女性」中的人物信息必须以一手资料核实，并在可行时于课程上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

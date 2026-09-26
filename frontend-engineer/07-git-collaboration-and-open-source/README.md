@@ -303,7 +303,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Open source is made by communities, not only by code. R-Ladies began as one meetup, and became a place where thousands of women found their first collaborators, reviewers, and mentors: exactly what a study partner and a practice repository start to give you.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

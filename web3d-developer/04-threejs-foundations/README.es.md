@@ -282,7 +282,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Cada cuadro que dibuja el bucle de renderizado de esta lección lo dibuja una GPU, y AMD, la empresa que ella dirige, es una de las pocas empresas en el mundo que las diseña. El callback de `renderer.setAnimationLoop` que escribiste en esta lección es, en el fondo, una solicitud a hardware que personas como ella construyen y dirigen.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

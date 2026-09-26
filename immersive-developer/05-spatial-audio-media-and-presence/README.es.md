@@ -229,7 +229,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Su trabajo puso una historia real, contada con sonido y una escena alrededor de quien mira, en el centro de para qué podía servir un visor, años antes de que existieran las herramientas de esta lección. Los subtítulos, la transcripción, y los sonidos espaciales silenciosos que construiste aquí son piezas pequeñas y actuales de la misma idea: presencia e historia, trabajando juntas, y siempre con una entrada para quien no puede, o prefiere no, depender solo del audio.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

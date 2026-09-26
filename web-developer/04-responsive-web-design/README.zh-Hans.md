@@ -309,7 +309,7 @@ nav ul {
 
 你为项目卡片所用的网格是一项标准：必须有人为它据理力争、解释它、教授它。其中大量的解释工作，是由 Rachel Andrew 完成的。
 
-> **编辑说明 —— 发布前须核实。** 「值得认识的女性」栏目中的生平陈述必须与原始资料核对，并在可行时于本课上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

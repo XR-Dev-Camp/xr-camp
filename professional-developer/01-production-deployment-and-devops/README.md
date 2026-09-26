@@ -288,7 +288,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Production and site-reliability engineering is exactly this lesson's territory: keeping something real running, safely, after it ships. Fernanda's path, from community free-software organising to leading production engineering at some of the largest platforms in the world, shows that the two are not separate careers.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

@@ -312,7 +312,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 La arquitectura y los sistemas de diseño son la forma en que los equipos mantienen el código ordenado a medida que crece: la misma idea que la configuración, el store y los componentes de esta lección. Aprenderlo en tu propio idioma, de alguien de tu propia región, hace mucho más fácil imaginarte haciéndolo.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

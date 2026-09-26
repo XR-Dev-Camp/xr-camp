@@ -296,7 +296,7 @@ setStatus('Server not running: settings are saved in this browser only.', 'offli
 
 清晰地、用自己的语言解释一个服务器、一个 API 和一个客户端是如何拼合在一起的，正是本课第一次要求你练习的技能。Marcia 多年来一直在为西语开发者社区做着完全相同的事情，从 AWS 自己的舞台，到她自己搭建的一个平台。
 
-> **编者注：发布前请核实。** 「值得认识的女性」中的人物信息必须以一手资料核实，并在可行时于课程上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

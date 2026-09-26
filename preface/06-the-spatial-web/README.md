@@ -184,7 +184,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 She grew up in Chengdu before moving to the United States at sixteen. Her work connects two ideas from this lesson: computers learning to see, and computers learning to understand space.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

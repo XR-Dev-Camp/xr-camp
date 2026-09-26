@@ -243,7 +243,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 This project's fox and milk truck are single, individually animated models; the field she has spent her career on asks a harder question, how to animate hundreds of virtual humans at once, believably, in real time. The same `AnimationMixer` idea this project introduces, driving one skeleton from one clip, is the smallest unit of a problem her research scales up to a crowd.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

@@ -268,7 +268,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Her career sits directly behind this lesson's two features: a knowledge graph is exactly a structure built to answer "what do we actually know, and how confident are we in it" — the same question `checkDescriptionForHallucinations` and `filterMatchesAgainstRealScenes` ask about a much smaller model reply, and the same discipline that keeps an AI feature grounded in real, verified data rather than in what a model merely sounds confident about.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

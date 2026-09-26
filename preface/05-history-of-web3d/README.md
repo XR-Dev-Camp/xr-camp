@@ -198,7 +198,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 The last milestone on your timeline did not simply happen. People like Cannon spent years in meetings, writing specifications, and building demos so that "a 3D world you can link to" would work in every browser. Standards work is one of the careers you will meet in Course 0.9.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

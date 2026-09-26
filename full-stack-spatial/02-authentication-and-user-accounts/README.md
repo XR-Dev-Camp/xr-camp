@@ -350,7 +350,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 This lesson leans on a hash function (scrypt) at almost every step: to store a password, a recovery code, and to compare secrets safely. Wang Xiaoyun's career is a reminder that hash functions are not fixed, timeless facts — they are designs, built by people, that sometimes turn out to have weaknesses only careful, patient cryptanalysis finds. The same care that broke MD5 and SHA-1 is what keeps today's recommendations, like the ones this lesson cites, worth re-checking as they change.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

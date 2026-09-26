@@ -364,7 +364,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Cursos gratuitos en tu propio idioma, de alguien que empezó donde tú estás: así aprendieron muchas personas que desarrollan en América Latina. Los arreglos, los objetos y los bucles de esta lección son justo las bases sobre las que se construye su libro.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

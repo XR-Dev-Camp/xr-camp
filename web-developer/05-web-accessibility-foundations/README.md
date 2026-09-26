@@ -256,7 +256,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Automatic alt text is exactly the kind of help this lesson is about, and also a reminder of its limit: a machine can say "two people smiling outdoors", but only a person who knows the context can write "the centre's step-free entrance".
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

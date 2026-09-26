@@ -229,7 +229,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Her work put a real story, told with sound and a scene around the viewer, at the centre of what a headset could be for, years before this lesson's own tools existed. The captions, transcript, and quiet spatial sounds you built here are small, present-day pieces of the same idea: presence and story, working together, and always with a way in for anyone who cannot, or would rather not, rely on the audio alone.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

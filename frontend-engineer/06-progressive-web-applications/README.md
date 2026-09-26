@@ -419,7 +419,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 The name you have used all through this lesson came from a designer. Naming an idea well is how it spreads: "progressive" says that a website can become an app step by step, without leaving anyone's browser behind.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

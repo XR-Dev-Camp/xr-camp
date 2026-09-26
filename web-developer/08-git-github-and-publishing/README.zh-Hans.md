@@ -451,7 +451,7 @@ https://your-username.github.io/web-projects/my-first-world/
 
 仓库不只是用来放代码的。Tracy Chou 用一个仓库，公开地收集那些很难找到的数字，任何人都能看到它们，也能往里面添加。你在本课中学到的一切（一个公开仓库、一份说明它的 README、来自许多人的提交）都可以成为推动改变的工具。
 
-> **编辑说明 —— 发布前须核实。** 「值得认识的女性」栏目中的生平陈述必须与原始资料核对，并在可行时于本课上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

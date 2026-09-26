@@ -198,7 +198,7 @@ Diana Trujillo es una ingeniera aeroespacial, nacida en Cali, Colombia, que emig
 
 Un brazo robótico solo funciona porque todo su sistema (articulaciones, sensores, software, y las personas que lo operan) se diseñó en conjunto antes de construir una sola pieza. Esa es la disciplina que te pide esta etapa: recorridos, layout, datos, y seguridad, planificados como un solo sistema antes de escribir ningún código de producción.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

@@ -350,7 +350,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Su doctorado en Stanford, sobre comprensión lectora neuronal, ayudó a dar forma a la investigación en respuesta de preguntas, y ahora trabaja con grandes modelos de lenguaje (LLM), el tipo de tecnología detrás de los asistentes de esta lección. Cuando le haces una pregunta a un asistente y verificas su respuesta, estás trabajando en el mismo problema desde el otro lado.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

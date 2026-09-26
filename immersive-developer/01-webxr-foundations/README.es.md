@@ -226,7 +226,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Los espacios de referencia, los eventos de sesión y el restablecimiento de la vista pueden sentirse como plomería técnica, pero existen para hacer posibles experiencias como las que estudia su investigación: cómo las personas perciben, se mueven a través de, e interactúan dentro de espacios virtuales y rastreados. Las decisiones de comodidad en modo sentado que toma esta lección son una pieza pequeña y práctica del campo mucho más grande en el que ella trabaja.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

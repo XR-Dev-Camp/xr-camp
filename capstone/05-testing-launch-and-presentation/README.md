@@ -175,7 +175,7 @@ Yasodara Córdova is a Brazilian technologist who, as a project leader with W3C 
 
 Serenata de Amor only mattered once it was released: a working, public tool that let anyone inspect its findings and its open-source code. That is the last step of this stage, too — not just building something, but publishing it where it can be checked, used, and learned from by others.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

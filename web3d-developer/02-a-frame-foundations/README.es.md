@@ -336,7 +336,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 La sala que acabas de construir usa las mismas dos tecnologías sobre las que se construyó Hubs: A-Frame, escrito como HTML, sobre three.js. Hubs tomó esa misma idea, una sala hecha de primitivas y componentes, y dejó que las personas entraran juntas a ella, desde un navegador, sin necesitar un visor para unirse.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

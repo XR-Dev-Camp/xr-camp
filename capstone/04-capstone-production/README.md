@@ -200,7 +200,7 @@ Jess Lee grew up in Hong Kong before studying computer science at Stanford. As a
 
 Lee's path started with a detailed, specific critique of a real product — the same close attention to what actually works, and what does not yet, that a long production stage like this one demands from you, checklist item by checklist item.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

@@ -359,7 +359,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 This lesson's exhibit is small, but the idea behind it, letting more people build and shape immersive experiences rather than only viewing them, is the same one Acuña's initiative has been teaching in Colombia since 2020: interaction design and creation as a skill anyone can learn, not a specialist's domain.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

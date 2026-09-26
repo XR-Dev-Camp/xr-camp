@@ -256,7 +256,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 El texto alternativo automático es justo el tipo de ayuda del que trata esta lección, y también un recordatorio de su límite: una máquina puede decir «dos personas sonriendo al aire libre», pero solo una persona que conoce el contexto puede escribir «la entrada sin escalones del centro».
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

@@ -360,7 +360,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 Free courses in your own language, from someone who started where you are: that is how many developers in Latin America learned. The arrays, objects, and loops in this lesson are exactly the foundations her book builds on.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

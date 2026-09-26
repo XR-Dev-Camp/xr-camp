@@ -308,7 +308,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 The connection to this lesson is direct: the landmarks, headings, and alt text you wrote today are useful precisely because people like Watson fought for them to exist in the standards and to be implemented properly in browsers.
 
-> **Editorial note — verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live.
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

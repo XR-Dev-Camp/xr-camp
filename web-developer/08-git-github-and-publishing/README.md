@@ -451,7 +451,7 @@ Three extensions, in [`challenges/`](challenges/):
 
 A repository is not only for code. Tracy Chou used one to collect numbers that were hard to find, in public, where anyone could see them and add to them. Everything you learned in this lesson (a public repository, a README that explains it, commits from many people) can be a tool for change.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

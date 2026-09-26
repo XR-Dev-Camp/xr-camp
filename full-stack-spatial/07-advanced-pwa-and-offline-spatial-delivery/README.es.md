@@ -244,7 +244,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Los datos satelitales solo ayudan a una comunidad si llegan a las personas que los necesitan, a menudo por conexiones lentas o poco confiables. Empaquetar datos espaciales grandes para que puedan descargarse una vez y usarse sin conexión, como hiciste en esta lección, es parte de ese mismo trabajo.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

@@ -227,7 +227,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Una carrera construida a lo largo de décadas, varios roles muy distintos, y eventualmente un giro deliberado hacia la mentoría es exactamente el tipo de práctica profesional larga de la que los pequeños documentos de esta lección son un primer esbozo: nombrar tu trabajo con honestidad, en cada etapa, para que la próxima oportunidad pueda encontrarte.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

@@ -228,7 +228,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 El "agarre directo" de esta lección es, por debajo, una comprobación de distancia entre dos objetos: una pieza pequeña y cotidiana del problema de detección de colisiones que su investigación hizo lo bastante rápido para gráficos en tiempo real. Su pulso háptico pertenece al mismo campo más amplio en el que ha pasado buena parte de su carrera, dando una base física al tacto y al sonido virtuales.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

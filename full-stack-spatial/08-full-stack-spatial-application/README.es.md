@@ -241,7 +241,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 Ushahidi empezó como exactamente el tipo de herramienta pequeña y urgente que practica construir este proyecto final: un servidor funcional, una base de datos de reportes ligados a lugares, y personas reales dependiendo de él bajo presión. La disciplina que pide esta lección (revisar lo que ya funciona antes de agregarle algo, y escribir con claridad cómo ejecutar y desplegar lo que construiste) es la misma disciplina que debe tener desde el principio una herramienta construida para ser confiable en una crisis.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

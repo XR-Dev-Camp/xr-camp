@@ -266,7 +266,7 @@ Ayşegül Yönet 是一位 W3C 受邀专家，也是 W3C Immersive Web Working G
 
 一个把 Enter VR、控制器输入和 hit-test 放置整合到一个页面中的结业项目，完全依赖于 WebXR Device API 始终是一个稳定的、跨浏览器的标准，而不是一堆互不兼容的厂商专属 API——这正是 Yönet 所在工作组所做的工作。在使用一个 API 之前先阅读它的规范——就像 `js/xr.js` 的注释回指 WebXR Device API 自身关于用户激活的规则那样——是一个微小的日常习惯，让这类标准工作保持可见。
 
-> **编者注：发布前请核实。** 「值得认识的女性」中的人物信息必须以一手资料核实，并在可行时于课程上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

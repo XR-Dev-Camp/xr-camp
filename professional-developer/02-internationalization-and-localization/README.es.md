@@ -277,7 +277,7 @@ Irma Alvarez Ccoscco es una poeta quechua, educadora y activista del idioma digi
 
 Su trabajo es un recordatorio de que la localización no se trata solo de los grandes idiomas mundiales con los que empieza un proyecto. Las mismas APIs de `Intl`, el mismo pensamiento sobre pilas de fuentes, y la misma disciplina de QA de traducción que esta lección practica con español y chino aplican igual de bien a un idioma hablado por unos pocos millones de personas que a uno hablado por mil millones, y un idioma con mucho menos software ya localizado lo necesita todavía más.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

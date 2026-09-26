@@ -306,7 +306,7 @@ export function validateSomething(input) {
 
 她的研究——人们如何在一个共享虚拟空间中感知并与彼此的虚拟形象互动——正是本课这个小房间背后更深层的主题：位置更新、在场名单，以及本课的 WebSocket 连接所要创造的那种「有另一个人和我在一起」的感觉。
 
-> **编者注：发布前请核实。** 「值得认识的女性」中的人物信息必须以一手资料核实，并在可行时于课程上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+_资料来自公开来源，于 2026 年核实。发现错误？[告诉我们](https://github.com/XR-Dev-Camp/xr-camp/issues)。_
 
 ## 标准聚焦
 

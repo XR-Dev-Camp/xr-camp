@@ -243,7 +243,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 El zorro y el camión de leche de este proyecto son modelos individuales, animados por separado; el campo al que ella ha dedicado su carrera plantea una pregunta más difícil: cómo animar a cientos de humanos virtuales a la vez, de forma creíble, en tiempo real. La misma idea de `AnimationMixer` que introduce este proyecto, mover un esqueleto a partir de un clip, es la unidad más pequeña de un problema que su investigación escala hasta una multitud.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

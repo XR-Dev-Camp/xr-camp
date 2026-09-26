@@ -228,7 +228,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 This lesson's "direct grab" is, underneath, a distance check between two objects: a small, everyday piece of the collision-detection problem her research made fast enough for real-time graphics. Its haptic pulse belongs to the same broader field she has spent much of her career on, giving virtual touch and sound a physical basis.
 
-> **Editorial note: verify before publication.** Biographical claims in Women to Know spotlights must be checked against primary sources and, where practical, confirmed with the subject before the lesson goes live. See [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Facts from public sources, checked 2026. Spotted an error? [Tell us](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Standards spotlight
 

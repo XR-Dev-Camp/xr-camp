@@ -230,7 +230,7 @@ Wanda Díaz-Merced es una astrónoma puertorriqueña que perdió la vista siendo
 
 Su trabajo es una respuesta directa al tema de esta lección: en lugar de tratar las necesidades de una científica ciega como una idea de último momento, la sonificación hace que un conjunto de datos completo sea accesible mediante un sentido distinto de aquel para el que fue diseñado originalmente -el mismo principio detrás de dar a la charla de esta lección una transcripción de texto completa y una alternativa 2D completa, no solo un gesto hacia la accesibilidad añadido a un diseño pensado primero para lo visual. Ella sigue defendiendo la inclusión de la discapacidad en STEM.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

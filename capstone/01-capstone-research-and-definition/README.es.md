@@ -195,7 +195,7 @@ Cristina Junqueira es una empresaria brasileña, nacida en Ribeirão Preto, que 
 
 Piensa en la historia de Junqueira como esta etapa en miniatura: un problema claramente definido, una audiencia, y un primer producto, construido antes que nada más ambicioso. En 2026 está liderando el lanzamiento de Nubank en Estados Unidos desde Miami, todavía trabajando desde la misma disciplina de nombrar el problema con precisión antes de construir la solución.
 
-> **Nota editorial: verificar antes de publicar.** Los datos biográficos de las secciones «Mujeres que conviene conocer» deben verificarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 

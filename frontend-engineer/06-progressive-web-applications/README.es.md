@@ -419,7 +419,7 @@ Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Funda
 
 El nombre que has usado a lo largo de toda esta lección vino de una diseñadora. Ponerle buen nombre a una idea es lo que hace que se difunda: «progresiva» dice que un sitio web puede convertirse en aplicación paso a paso, sin dejar atrás a nadie por el navegador que usa.
 
-> **Nota editorial — verificar antes de publicar.** Las afirmaciones biográficas de las secciones Mujeres que conviene conocer deben contrastarse con fuentes primarias y, cuando sea posible, confirmarse con la persona antes de publicar la lección. Consulta [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md).
+_Datos de fuentes públicas, verificados en 2026. ¿Encontraste un error? [Avísanos](https://github.com/XR-Dev-Camp/xr-camp/issues)._
 
 ## Estándar destacado
 
