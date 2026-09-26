@@ -3,12 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A gallery talk in XR, redesigned to be accessible: readable captions, a full transcript, seated-reach controls, reduced motion, informed consent for the camera, and a personal-space bubble and mute/block controls for a shared visitor.">
   <title>Immersive Accessibility and Ethics - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Immersive · Immersive Accessibility and Ethics</p></header>
   <main>
-    <h1>Immersive Accessibility and Ethics</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>A gallery talk, redesigned</h1>
+    <p>Ana gives a short talk about three objects. This is the same talk as the starter, with every accessibility and ethics problem fixed. Read <a href="audit.md">audit.md</a> for how each fix maps to the W3C's XR Accessibility User Requirements (XAUR) and WCAG 2.2.</p>
+    <noscript><p>This experience needs JavaScript. The transcript and controls below still describe everything in it.</p></noscript>
+
+    <div class="canvas-box" id="canvas-box">
+      <div id="captions" aria-hidden="true"></div>
+    </div>
+    <p id="no-webgl-message" class="no-webgl-message" hidden>
+      This browser cannot show the 3D scene (WebGL 2 is unavailable). Nothing here is lost: the transcript and "Ask a question" below work fully without it.
+    </p>
+
+    <h2>Scene description</h2>
+    <p id="scene-description" class="scene-text">Loading the scene&hellip;</p>
+
+    <div class="controls">
+      <fieldset>
+        <legend>1. The talk</legend>
+        <p><button type="button" id="start-talk">Start the talk</button></p>
+        <p class="hint">Captions appear at the bottom of the scene, and stay up until the next line. This is the full transcript, always here, whether or not you play the talk:</p>
+        <ol class="plain-list" id="transcript-list" role="list"></ol>
+        <p><button type="button" id="captions-toggle" aria-pressed="true">Turn off captions</button></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Animation</legend>
+        <p><button type="button" id="pause-toggle" aria-pressed="false">Pause presenter animation</button></p>
+        <p class="hint">Ana sways gently while she talks. Nothing else moves by itself, and the camera never moves unless you move it.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Ask a question</legend>
+        <p><button type="button" id="ask-question">Ask a question</button></p>
+        <p id="answer" class="scene-text" tabindex="-1" hidden>Great question. This collection is on loan from three community museums, and every object was donated by the family that made or used it.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Camera personalization (optional)</legend>
+        <div class="privacy-notice">
+          <h3>Before you turn this on</h3>
+          <p id="privacy-notice-text"></p>
+        </div>
+        <p>
+          <button type="button" id="enable-camera">Turn on camera personalization</button>
+          <button type="button" id="disable-camera" hidden>Turn off camera</button>
+        </p>
+        <p id="camera-status" role="status">Camera personalization is off. The talk works fully without it.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>5. The visitor</legend>
+        <p id="visitor-status" role="status">Waiting for a visitor to join.</p>
+        <div class="visitor-controls">
+          <button type="button" id="mute-visitor" aria-pressed="false">Mute visitor</button>
+          <button type="button" id="block-visitor" aria-pressed="false">Block visitor</button>
+        </div>
+        <p class="hint">XR Camp has no live multiplayer server, so this visitor is simulated - but the controls are the same ones a real shared XR space needs to offer for a real other person.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>6. Enter VR</legend>
+        <p><button type="button" id="xr-button" hidden>Enter VR</button></p>
+        <p id="xr-status" role="status">Checking whether this browser and device support VR&hellip;</p>
+      </fieldset>
+    </div>
   </main>
 </body>
 </html>

@@ -2,18 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="description" content="A gallery talk in XR, deliberately built with accessibility and ethics problems for you to find and fix.">
   <title>Immersive Accessibility and Ethics - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Immersive · Immersive Accessibility and Ethics</p></header>
   <main>
-    <!-- Add your main heading below. -->
+    <p class="broken-banner">&#9888; This scene is deliberately broken. It runs, but it fails learners with disabilities and takes liberties with their privacy and comfort on purpose, so you have real problems to audit and fix. See the numbered <code>TODO</code> comments in <code>js/</code>.</p>
 
-    <!-- Add your project content below. -->
+    <h1>A gallery talk, badly built</h1>
+    <p>Ana gives a short talk about three objects. Press "Start the talk" to hear it.</p>
+    <noscript><p>This experience needs JavaScript and WebGL 2.</p></noscript>
 
+    <div class="canvas-box" id="canvas-box"></div>
+
+    <div class="controls">
+      <fieldset>
+        <legend>The talk</legend>
+        <p><button type="button" id="start-talk">Start the talk</button></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ask a question</legend>
+        <p class="hint">There is no button here on purpose: in this starter, "Ask a question" only exists as a 3D object floating high above and to the side of the scene. Try to reach it with the keyboard alone.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>The visitor</legend>
+        <p id="visitor-status" role="status">Waiting for a visitor to join.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Enter VR</legend>
+        <p><button type="button" id="xr-button" hidden>Enter VR</button></p>
+        <p id="xr-status" role="status">Checking whether this browser and device support VR&hellip;</p>
+      </fieldset>
+    </div>
   </main>
 </body>
 </html>

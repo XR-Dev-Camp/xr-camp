@@ -2,7 +2,7 @@
   "id": "imm-04-immersive-accessibility-and-ethics",
   "courseId": "immersive-developer",
   "lessonId": "immersive-accessibility-and-ethics-04",
-  "status": "draft",
+  "status": "review",
   "phase": 4,
   "title": {
     "en": "Immersive Accessibility and Ethics",
@@ -21,7 +21,9 @@
   },
   "difficulty": "advanced",
   "technologies": [
+    "Three.js",
     "WebXR",
+    "Web Speech API",
     "ARIA"
   ],
   "hasCode": true,
