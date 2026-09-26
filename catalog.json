@@ -924,7 +924,7 @@
       "id": "imm-03-spatial-ux-design",
       "courseId": "immersive-developer",
       "lessonId": "spatial-ux-design-03",
-      "status": "draft",
+      "status": "review",
       "phase": 4,
       "title": {
         "en": "Spatial UX Design",
@@ -938,6 +938,7 @@
       },
       "difficulty": "advanced",
       "technologies": [
+        "Three.js",
         "WebXR"
       ],
       "hasCode": true,

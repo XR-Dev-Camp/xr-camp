@@ -2,7 +2,7 @@
   "id": "imm-03-spatial-ux-design",
   "courseId": "immersive-developer",
   "lessonId": "spatial-ux-design-03",
-  "status": "draft",
+  "status": "review",
   "phase": 4,
   "title": {
     "en": "Spatial UX Design",
@@ -10,7 +10,7 @@
     "zh-Hans": ""
   },
   "summary": {
-    "en": "Redesign a conventional interface as a usable spatial experience.",
+    "en": "Redesign the My XR Camp learning dashboard as a spatial interface, with world-, body-, and view-locked panels and teleport locomotion.",
     "es-419": "",
     "zh-Hans": ""
   },
@@ -21,6 +21,7 @@
   },
   "difficulty": "advanced",
   "technologies": [
+    "Three.js",
     "WebXR"
   ],
   "hasCode": true,

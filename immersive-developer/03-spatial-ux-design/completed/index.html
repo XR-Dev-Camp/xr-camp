@@ -3,12 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spatial UX Design - XR Camp reference solution</title>
+  <meta name="description" content="The My XR Camp learning dashboard, redesigned as a spatial interface: a world-locked progress kiosk, a goals panel you can switch between world-, body-, and view-locked, and teleport locomotion between three reading distances.">
+  <title>Spatial UX Design - XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Immersive · Spatial UX Design</p></header>
   <main>
-    <h1>Spatial UX Design</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>My XR Camp, redesigned in space</h1>
+    <p>The same learning dashboard from Course 2.2 — your progress, your next lesson, and your goals — rebuilt as a small spatial room instead of a flat page. Move between three distances from the progress kiosk to feel how reading distance changes legibility, and switch how the goals panel is anchored to compare world-locked, body-locked, and view-locked placement.</p>
+    <noscript><p>This dashboard needs JavaScript and WebGL 2. The lists below describe everything in it.</p></noscript>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The room</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D room (WebGL 2 is unavailable). Nothing is
+          broken: the lists below describe everything it contains.
+        </p>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the room&hellip;</p>
+        <p id="move-status" class="hint" role="status"></p>
+
+        <h3>Your progress</h3>
+        <p class="hint">The same numbers as the kiosk panel, in words (WCAG 1.3.1).</p>
+        <ul class="phase-list" id="phase-list" role="list"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Room controls">
+        <fieldset>
+          <legend>1. Move to a distance from the kiosk</legend>
+          <p class="hint">Each spot is a different reading distance from the progress kiosk. Watch the scene description and the degree number change as you move.</p>
+          <ul class="waypoint-buttons" role="list" id="waypoint-buttons"></ul>
+          <p>
+            <label>
+              <input type="checkbox" id="smooth-toggle">
+              Move smoothly instead of teleporting (shows a comfort vignette while moving)
+            </label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. How is the goals panel anchored?</legend>
+          <p class="hint">Switch the same panel between the three ways a spatial interface can anchor content.</p>
+          <ul class="lock-mode-options" role="list">
+            <li><label><input type="radio" name="lock-mode" value="world"> World-locked: fixed in the room</label></li>
+            <li><label><input type="radio" name="lock-mode" value="body" checked> Body-locked: follows you (default)</label></li>
+            <li><label><input type="radio" name="lock-mode" value="view"> View-locked: pinned to your view</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. My goals</legend>
+          <form id="goal-form">
+            <label for="goal-input">Add a goal</label>
+            <input type="text" id="goal-input" name="goal" autocomplete="off">
+            <button type="submit">Add</button>
+          </form>
+          <ul class="goal-list" id="goal-list" role="list"></ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Enter VR</legend>
+          <p class="hint">If your browser and a VR headset support WebXR, this button appears. Everything above still works the same way while presenting: the waypoints move you, and the goals panel keeps whatever anchoring you chose.</p>
+          <p><button type="button" id="xr-button" hidden>Enter VR</button></p>
+          <p id="xr-status" role="status">Checking whether this browser and device support VR&hellip;</p>
+        </fieldset>
+      </div>
+    </div>
   </main>
 </body>
 </html>

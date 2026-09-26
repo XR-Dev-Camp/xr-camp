@@ -18,7 +18,7 @@
 | --- | --- | --- | --- |
 | 1 | [WebXR Foundations](01-webxr-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 2 | [XR Input and Interaction](02-xr-input-and-interaction/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 3 | [Spatial UX Design](03-spatial-ux-design/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
+| 3 | [Spatial UX Design](03-spatial-ux-design/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 4 | [Immersive Accessibility and Ethics](04-immersive-accessibility-and-ethics/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 5 | [Spatial Audio, Media, and Presence](05-spatial-audio-media-and-presence/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
 | 6 | [Phase 4 Capstone - Immersive Web Experience](06-immersive-web-experience/README.md) | 22 h · 30 sessions | 🚧 Coming soon |

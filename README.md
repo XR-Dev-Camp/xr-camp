@@ -25,7 +25,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | [1 · Become a Web Developer](web-developer/README.md) | Accessible, responsive websites, published for anyone in the world to visit. | 144 sessions · about 8 months | 9 of 9 |
 | [2 · Become a Frontend Engineer](frontend-engineer/README.md) | Web apps that install on a phone, work offline, and use live data. | 145 sessions · about 8 months | 9 of 9 |
 | [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions · about 8 months | 7 of 7 |
-| [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions · about 6 months | 2 of 6 |
+| [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions · about 6 months | 3 of 6 |
 | [5 · Become a Full-Stack Spatial Developer](full-stack-spatial/README.md) | Multi-user 3D applications with accounts, data, and real-time connections. | 155 sessions · about 9 months | 0 of 8 |
 | [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions · about 4 months | 0 of 5 |
 | [7 · Professional Capstone](capstone/README.md) | A complete immersive project: researched, designed, built, tested, and launched. | 95 sessions · about 5 months | 0 of 5 |
@@ -94,7 +94,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | --- | --- | --- | --- |
 | 1 | [WebXR Foundations](immersive-developer/01-webxr-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 2 | [XR Input and Interaction](immersive-developer/02-xr-input-and-interaction/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 3 | [Spatial UX Design](immersive-developer/03-spatial-ux-design/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
+| 3 | [Spatial UX Design](immersive-developer/03-spatial-ux-design/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 4 | [Immersive Accessibility and Ethics](immersive-developer/04-immersive-accessibility-and-ethics/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 5 | [Spatial Audio, Media, and Presence](immersive-developer/05-spatial-audio-media-and-presence/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
 | 6 | [Phase 4 Capstone - Immersive Web Experience](immersive-developer/06-immersive-web-experience/README.md) | 22 h · 30 sessions | 🚧 Coming soon |
