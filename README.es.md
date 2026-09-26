@@ -12,7 +12,7 @@ XR Camp es **completamente gratuita, para todo el mundo**. Está pensada ante to
 
 1. **Abre tu primera lección:** [Bienvenida a XR Camp](preface/01-welcome-to-xr-camp/README.es.md). En tu primera hora construirás un mundo 3D.
 2. **Descarga las lecciones:** pulsa el botón verde **Code** en la parte superior de esta página y luego **Download ZIP**. Descomprímelo en un lugar donde lo vuelvas a encontrar, como tu carpeta Documentos. No necesitas una cuenta de GitHub.
-3. **Planifica tu semana:** cada lección se divide en sesiones de 45 minutos. Cuatro sesiones por semana es un buen ritmo; dos también está bien.
+3. **Aprende a pasos cortos:** cada lección se divide en sesiones de 45 minutos, y cada sesión termina con algo que tú hiciste. La mayoría de las lecciones toma cuatro semanas o menos, con cuatro sesiones por semana. Cada fase termina con una habilidad real que puedes usar y mostrar: puedes detenerte después de cualquier fase o seguir adelante. Dos sesiones por semana también está bien: avanza a tu ritmo.
 4. **Visita el sitio web:** [xrcamp.dev](https://xrcamp.dev).
 
 ## El camino
@@ -21,14 +21,14 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 
 | Fase | Construirás | Tiempo | Lecciones listas |
 | --- | --- | --- | --- |
-| [0 · Bienvenida al futuro](preface/README.es.md) | Tu primer mundo 3D, una línea de tiempo de la web y un laboratorio que compara tres formas de construir en 3D. | 64 sesiones · unos 4 meses | 9 de 9 |
-| [1 · Conviértete en desarrolladora web](web-developer/README.es.md) | Sitios web accesibles y adaptables, publicados para que cualquiera en el mundo los visite. | 144 sesiones · unos 8 meses | 9 de 9 |
-| [2 · Conviértete en ingeniera frontend](frontend-engineer/README.es.md) | Aplicaciones web que se instalan en el teléfono, funcionan sin conexión y usan datos en vivo. | 145 sesiones · unos 8 meses | 9 de 9 |
-| [3 · Conviértete en desarrolladora Web3D](web3d-developer/README.es.md) | Experiencias 3D interactivas con A-Frame y three.js. | 138 sesiones · unos 8 meses | 7 de 7 |
-| [4 · Conviértete en desarrolladora inmersiva](immersive-developer/README.es.md) | Experiencias de realidad virtual y aumentada que se abren en un visor desde un enlace. | 111 sesiones · unos 6 meses | 6 de 6 |
-| [5 · Conviértete en desarrolladora espacial full-stack](full-stack-spatial/README.es.md) | Aplicaciones 3D multiusuario con cuentas, datos y conexiones en tiempo real. | 166 sesiones · unos 10 meses | 8 de 8 |
-| [6 · Conviértete en desarrolladora profesional](professional-developer/README.es.md) | Despliegues en producción, sitios multilingües y tu propio lugar en el código abierto. | 73 sesiones · unos 4 meses | 5 de 5 |
-| [7 · Proyecto final profesional](capstone/README.es.md) | Un proyecto inmersivo completo: investigado, diseñado, construido, probado y lanzado. | 95 sesiones · unos 5 meses | 5 de 5 |
+| [0 · Bienvenida al futuro](preface/README.es.md) | Tu primer mundo 3D, una línea de tiempo de la web y un laboratorio que compara tres formas de construir en 3D. | 64 sesiones de 45 min · unos 4 meses con 4 por semana | 9 de 9 |
+| [1 · Conviértete en desarrolladora web](web-developer/README.es.md) | Sitios web accesibles y adaptables, publicados para que cualquiera en el mundo los visite. | 144 sesiones de 45 min · unos 8 meses con 4 por semana | 9 de 9 |
+| [2 · Conviértete en ingeniera frontend](frontend-engineer/README.es.md) | Aplicaciones web que se instalan en el teléfono, funcionan sin conexión y usan datos en vivo. | 145 sesiones de 45 min · unos 8 meses con 4 por semana | 9 de 9 |
+| [3 · Conviértete en desarrolladora Web3D](web3d-developer/README.es.md) | Experiencias 3D interactivas con A-Frame y three.js. | 138 sesiones de 45 min · unos 8 meses con 4 por semana | 7 de 7 |
+| [4 · Conviértete en desarrolladora inmersiva](immersive-developer/README.es.md) | Experiencias de realidad virtual y aumentada que se abren en un visor desde un enlace. | 111 sesiones de 45 min · unos 6 meses con 4 por semana | 6 de 6 |
+| [5 · Conviértete en desarrolladora espacial full-stack](full-stack-spatial/README.es.md) | Aplicaciones 3D multiusuario con cuentas, datos y conexiones en tiempo real. | 166 sesiones de 45 min · unos 10 meses con 4 por semana | 8 de 8 |
+| [6 · Conviértete en desarrolladora profesional](professional-developer/README.es.md) | Despliegues en producción, sitios multilingües y tu propio lugar en el código abierto. | 73 sesiones de 45 min · unos 4 meses con 4 por semana | 5 de 5 |
+| [7 · Proyecto final profesional](capstone/README.es.md) | Un proyecto inmersivo completo: investigado, diseñado, construido, probado y lanzado. | 95 sesiones de 45 min · unos 5 meses con 4 por semana | 5 de 5 |
 
 ## Todas las lecciones
 
@@ -150,4 +150,4 @@ XR Camp la construye su comunidad. Lee la [guía para contribuir](.github/CONTRI
 
 ## Licencia
 
-Código: [LICENSE-CODE](LICENSE-CODE). Lecciones, documentación e imágenes: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Uso comercial e institucional: [docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md). Material de terceros: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) y [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).
+Código: [LICENSE-CODE](LICENSE-CODE) (Apache-2.0). Lecciones, documentación e imágenes: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Uso comercial e institucional: [docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md). Material de terceros: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) y [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).

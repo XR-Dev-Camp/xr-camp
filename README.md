@@ -12,7 +12,7 @@ XR Camp is **completely free, for everyone**. It is built first for **women in L
 
 1. **Open your first lesson:** [Welcome to XR Camp](preface/01-welcome-to-xr-camp/README.md). In your first hour you will build a 3D world.
 2. **Download the lessons:** click the green **Code** button at the top of this page, then **Download ZIP**. Unzip it somewhere you will find again, such as your Documents folder. You do not need a GitHub account.
-3. **Plan your week:** every lesson is split into 45-minute sessions. Four sessions a week is a good pace; two is fine too.
+3. **Learn in small steps:** every lesson is split into 45-minute sessions, and every session ends with something you made. Most lessons take four weeks or less at four sessions a week. Each phase ends with a real skill you can use and show, so you can stop after any phase, or keep going. Two sessions a week is fine too: go at your own pace.
 4. **Visit the website:** [xrcamp.dev](https://xrcamp.dev).
 
 ## The path
@@ -21,14 +21,14 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 
 | Phase | You will build | Time | Lessons ready |
 | --- | --- | --- | --- |
-| [0 · Welcome to the Future](preface/README.md) | Your first 3D world, a timeline of the web, and a lab comparing three ways to build in 3D. | 64 sessions · about 4 months | 9 of 9 |
-| [1 · Become a Web Developer](web-developer/README.md) | Accessible, responsive websites, published for anyone in the world to visit. | 144 sessions · about 8 months | 9 of 9 |
-| [2 · Become a Frontend Engineer](frontend-engineer/README.md) | Web apps that install on a phone, work offline, and use live data. | 145 sessions · about 8 months | 9 of 9 |
-| [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions · about 8 months | 7 of 7 |
-| [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions · about 6 months | 6 of 6 |
-| [5 · Become a Full-Stack Spatial Developer](full-stack-spatial/README.md) | Multi-user 3D applications with accounts, data, and real-time connections. | 166 sessions · about 10 months | 8 of 8 |
-| [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions · about 4 months | 5 of 5 |
-| [7 · Professional Capstone](capstone/README.md) | A complete immersive project: researched, designed, built, tested, and launched. | 95 sessions · about 5 months | 5 of 5 |
+| [0 · Welcome to the Future](preface/README.md) | Your first 3D world, a timeline of the web, and a lab comparing three ways to build in 3D. | 64 sessions of 45 min · about 4 months at 4 a week | 9 of 9 |
+| [1 · Become a Web Developer](web-developer/README.md) | Accessible, responsive websites, published for anyone in the world to visit. | 144 sessions of 45 min · about 8 months at 4 a week | 9 of 9 |
+| [2 · Become a Frontend Engineer](frontend-engineer/README.md) | Web apps that install on a phone, work offline, and use live data. | 145 sessions of 45 min · about 8 months at 4 a week | 9 of 9 |
+| [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions of 45 min · about 8 months at 4 a week | 7 of 7 |
+| [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions of 45 min · about 6 months at 4 a week | 6 of 6 |
+| [5 · Become a Full-Stack Spatial Developer](full-stack-spatial/README.md) | Multi-user 3D applications with accounts, data, and real-time connections. | 166 sessions of 45 min · about 10 months at 4 a week | 8 of 8 |
+| [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions of 45 min · about 4 months at 4 a week | 5 of 5 |
+| [7 · Professional Capstone](capstone/README.md) | A complete immersive project: researched, designed, built, tested, and launched. | 95 sessions of 45 min · about 5 months at 4 a week | 5 of 5 |
 
 ## All lessons
 
@@ -150,4 +150,4 @@ XR Camp is built by its community. Read the [contributing guide](.github/CONTRIB
 
 ## License
 
-Code: [LICENSE-CODE](LICENSE-CODE). Lessons, documentation, and images: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Commercial and institutional use: [docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md). Third-party material: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) and [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).
+Code: [LICENSE-CODE](LICENSE-CODE) (Apache-2.0). Lessons, documentation, and images: [LICENSE-CONTENT](LICENSE-CONTENT) (CC BY-NC-SA 4.0). Commercial and institutional use: [docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md). Third-party material: [docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) and [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md).

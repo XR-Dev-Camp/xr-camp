@@ -12,7 +12,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 
 1. **打开第一课：**[欢迎来到 XR Camp](preface/01-welcome-to-xr-camp/README.zh-Hans.md)。在第一个小时里，你就会构建一个 3D 世界。
 2. **下载课程：**点击本页顶部绿色的 **Code** 按钮，然后选择 **Download ZIP**。把它解压到你能再次找到的地方，比如“文稿”文件夹。你不需要 GitHub 账户。
-3. **规划你的每一周：**每节课都分成若干次 45 分钟的学习。每周 4 次是不错的节奏，每周 2 次也可以。
+3. **小步前进：**每节课都分成若干次 45 分钟的学习，每次学习都会以一个你亲手完成的成果结束。按每周 4 次计算，大多数课程只需四周或更短。每个阶段都会让你掌握一项可以使用、可以展示的真实技能：你可以在任何一个阶段后停下，也可以继续前进。每周 2 次也完全可以：按你自己的节奏来。
 4. **访问网站：**[xrcamp.dev](https://xrcamp.dev)。
 
 ## 学习路径
@@ -21,14 +21,14 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 
 | 阶段 | 你将构建 | 时长 | 已完成课程 |
 | --- | --- | --- | --- |
-| [0 · 欢迎来到未来](preface/README.zh-Hans.md) | 你的第一个 3D 世界、一条网络发展时间线，以及一个比较三种 3D 构建方式的实验室。 | 64 次学习 · 约 4 个月 | 9 课中 9 课 |
-| [1 · 成为网页开发者](web-developer/README.zh-Hans.md) | 无障碍、响应式的网站，发布到网上，让世界各地的人都能访问。 | 144 次学习 · 约 8 个月 | 9 课中 9 课 |
-| [2 · 成为前端工程师](frontend-engineer/README.zh-Hans.md) | 可以安装到手机、离线运行并使用实时数据的网页应用。 | 145 次学习 · 约 8 个月 | 9 课中 9 课 |
-| [3 · 成为 Web3D 开发者](web3d-developer/README.zh-Hans.md) | 使用 A-Frame 和 three.js 构建的交互式 3D 体验。 | 138 次学习 · 约 8 个月 | 7 课中 7 课 |
-| [4 · 成为沉浸式开发者](immersive-developer/README.zh-Hans.md) | 通过一个链接就能在头显中打开的虚拟现实和增强现实体验。 | 111 次学习 · 约 6 个月 | 6 课中 6 课 |
-| [5 · 成为全栈空间开发者](full-stack-spatial/README.zh-Hans.md) | 带有账户、数据和实时连接的多用户 3D 应用。 | 166 次学习 · 约 10 个月 | 8 课中 8 课 |
-| [6 · 成为专业开发者](professional-developer/README.zh-Hans.md) | 生产环境部署、多语言网站，以及你在开源世界中的一席之地。 | 73 次学习 · 约 4 个月 | 5 课中 5 课 |
-| [7 · 专业毕业项目](capstone/README.zh-Hans.md) | 一个完整的沉浸式项目：调研、设计、构建、测试并发布。 | 95 次学习 · 约 5 个月 | 5 课中 5 课 |
+| [0 · 欢迎来到未来](preface/README.zh-Hans.md) | 你的第一个 3D 世界、一条网络发展时间线，以及一个比较三种 3D 构建方式的实验室。 | 64 次 45 分钟的学习 · 每周 4 次约 4 个月 | 9 课中 9 课 |
+| [1 · 成为网页开发者](web-developer/README.zh-Hans.md) | 无障碍、响应式的网站，发布到网上，让世界各地的人都能访问。 | 144 次 45 分钟的学习 · 每周 4 次约 8 个月 | 9 课中 9 课 |
+| [2 · 成为前端工程师](frontend-engineer/README.zh-Hans.md) | 可以安装到手机、离线运行并使用实时数据的网页应用。 | 145 次 45 分钟的学习 · 每周 4 次约 8 个月 | 9 课中 9 课 |
+| [3 · 成为 Web3D 开发者](web3d-developer/README.zh-Hans.md) | 使用 A-Frame 和 three.js 构建的交互式 3D 体验。 | 138 次 45 分钟的学习 · 每周 4 次约 8 个月 | 7 课中 7 课 |
+| [4 · 成为沉浸式开发者](immersive-developer/README.zh-Hans.md) | 通过一个链接就能在头显中打开的虚拟现实和增强现实体验。 | 111 次 45 分钟的学习 · 每周 4 次约 6 个月 | 6 课中 6 课 |
+| [5 · 成为全栈空间开发者](full-stack-spatial/README.zh-Hans.md) | 带有账户、数据和实时连接的多用户 3D 应用。 | 166 次 45 分钟的学习 · 每周 4 次约 10 个月 | 8 课中 8 课 |
+| [6 · 成为专业开发者](professional-developer/README.zh-Hans.md) | 生产环境部署、多语言网站，以及你在开源世界中的一席之地。 | 73 次 45 分钟的学习 · 每周 4 次约 4 个月 | 5 课中 5 课 |
+| [7 · 专业毕业项目](capstone/README.zh-Hans.md) | 一个完整的沉浸式项目：调研、设计、构建、测试并发布。 | 95 次 45 分钟的学习 · 每周 4 次约 5 个月 | 5 课中 5 课 |
 
 ## 全部课程
 
@@ -150,4 +150,4 @@ XR Camp 由社区共同建设。请阅读[贡献指南](.github/CONTRIBUTING.md)
 
 ## 许可协议
 
-代码：[LICENSE-CODE](LICENSE-CODE)。课程、文档和图片：[LICENSE-CONTENT](LICENSE-CONTENT)（CC BY-NC-SA 4.0）。商业和机构使用：[docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md)。第三方素材：[docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) 和 [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md)。
+代码：[LICENSE-CODE](LICENSE-CODE)（Apache-2.0）。课程、文档和图片：[LICENSE-CONTENT](LICENSE-CONTENT)（CC BY-NC-SA 4.0）。商业和机构使用：[docs/COMMERCIAL_USE.md](docs/COMMERCIAL_USE.md)。第三方素材：[docs/THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md) 和 [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md)。
