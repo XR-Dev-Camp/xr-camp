@@ -4,11 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Phase 4 Capstone - Immersive Web Experience - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 <body>
+  <header><p>XR Camp · Immersive Developer</p></header>
   <main>
-    <h1>Phase 4 Capstone - Immersive Web Experience</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Phase 4 Capstone: Immersive Web Experience</h1>
+
+    <p id="scene-description">Loading the exhibit description…</p>
+    <p id="status" role="status"></p>
+
+    <section id="scene-panel" class="canvas-box" aria-label="3D exhibit">
+      <canvas id="scene-canvas"></canvas>
+    </section>
+    <p id="no-webgl-message" class="no-webgl-message" hidden>
+      This browser or device cannot show the 3D exhibit. Every fact about it is still below, in the exhibit list and the transcript.
+    </p>
+
+    <section aria-labelledby="xr-heading">
+      <h2 id="xr-heading">Enter VR</h2>
+      <p>Entering VR asks your browser for permission to use a headset's position and, if you use one, a controller's or a hand's position. No camera image, audio recording, or personal data leaves this page.</p>
+      <button type="button" id="enter-vr">Enter VR</button>
+      <p id="vr-support-note" class="scene-text">Checking WebXR support…</p>
+      <p id="boundary-status" class="scene-text"></p>
+    </section>
+
+    <section aria-labelledby="exhibits-heading">
+      <h2 id="exhibits-heading">Exhibits</h2>
+      <ul id="exhibit-list" class="exhibit-list" role="list"></ul>
+    </section>
+
+    <section aria-labelledby="controls-heading">
+      <h2 id="controls-heading">Controls</h2>
+      <div class="button-row">
+        <button type="button" id="place-marker">Place marker</button>
+        <button type="button" id="pause-toggle" aria-pressed="false">Pause turning</button>
+        <button type="button" id="reload">Reload</button>
+      </div>
+    </section>
+
+    <section id="caption-bar" aria-labelledby="caption-heading">
+      <h2 id="caption-heading" class="visually-hidden">Narration caption</h2>
+      <p id="caption-text" class="caption-text" role="status">No narration is playing.</p>
+    </section>
+
+    <section aria-labelledby="transcript-heading">
+      <h2 id="transcript-heading">Transcript</h2>
+      <ul id="transcript" class="transcript" role="list"></ul>
+    </section>
+
+    <section aria-labelledby="personalize-heading">
+      <h2 id="personalize-heading">Personalize (optional, uses your camera)</h2>
+      <p>This optional feature checks whether your camera is available, so a future lesson could use it to personalize the exhibit. It does not take a photo, does not show a preview, and does not store or send anything: the camera is switched on and immediately off again, only to check permission.</p>
+      <button type="button" id="personalize-consent">Yes, briefly check my camera</button>
+      <p id="personalize-result" role="status"></p>
+    </section>
   </main>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

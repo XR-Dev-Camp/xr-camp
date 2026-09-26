@@ -2,18 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Phase 4 Capstone - Immersive Web Experience - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 <body>
+  <header><p>XR Camp · Immersive Developer</p></header>
   <main>
-    <!-- Add your main heading below. -->
+    <h1>Phase 4 Capstone: Immersive Web Experience</h1>
 
-    <!-- Add your project content below. -->
+    <p id="scene-description">Loading the exhibit description…</p>
+    <p id="status" role="status"></p>
 
+    <section id="scene-panel" class="canvas-box" aria-label="3D exhibit">
+      <canvas id="scene-canvas"></canvas>
+    </section>
+    <p id="no-webgl-message" class="no-webgl-message" hidden>
+      This browser or device cannot show the 3D exhibit. Every fact about it is still below, in the exhibit list and the transcript.
+    </p>
+
+    <section aria-labelledby="xr-heading">
+      <h2 id="xr-heading">Enter VR</h2>
+      <p>Entering VR asks your browser for permission to use a headset's position and, if you use one, a controller's or a hand's position. No camera image, audio recording, or personal data leaves this page.</p>
+      <button type="button" id="enter-vr">Enter VR</button>
+      <p id="vr-support-note" class="scene-text">Checking WebXR support…</p>
+      <!-- TODO 1: add a paragraph here with id="boundary-status" and
+           class="scene-text", starting empty. js/xr.js's enterVR() already
+           reports the play-space boundary through an onBoundary callback
+           (4.1); js/main.js's TODO 2 writes that report into this
+           paragraph, so a VR visitor always knows whether — and how big —
+           a safe boundary was reported by their headset (4.4's "give
+           shared space a boundary" fix). -->
+    </section>
+
+    <section aria-labelledby="exhibits-heading">
+      <h2 id="exhibits-heading">Exhibits</h2>
+      <ul id="exhibit-list" class="exhibit-list" role="list"></ul>
+    </section>
+
+    <section aria-labelledby="controls-heading">
+      <h2 id="controls-heading">Controls</h2>
+      <div class="button-row">
+        <!-- TODO 3: add a button here with id="place-marker", labelled
+             "Place marker": the 2D/keyboard equal of 4.2's AR hit-test
+             placement. js/interact.js already exports `placeMarker(app)`;
+             js/main.js's TODO 4 wires this button to it. -->
+        <button type="button" id="pause-toggle" aria-pressed="false">Pause turning</button>
+        <button type="button" id="reload">Reload</button>
+      </div>
+    </section>
+
+    <!-- TODO 7: add two sections here, matching the pattern above:
+         (a) a caption bar: <section id="caption-bar" aria-labelledby="caption-heading">
+         with a visually-hidden <h2 id="caption-heading"> ("Narration
+         caption") and a <p id="caption-text" class="caption-text"
+         role="status"> starting with "No narration is playing." — the
+         viewer-anchored caption 4.4's audit asked for and 4.5 built
+         (anchored to the visitor, not to a point in the 3D world);
+         (b) a transcript: <section aria-labelledby="transcript-heading">
+         with an <h2 id="transcript-heading">Transcript</h2> and an empty
+         <ul id="transcript" class="transcript" role="list">, which
+         js/main.js's TODO 8 fills from the same data the captions use, so
+         it is complete whether or not anyone has pressed Play narration
+         yet (4.5, WCAG 1.2.1). -->
+
+    <section aria-labelledby="personalize-heading">
+      <h2 id="personalize-heading">Personalize (optional, uses your camera)</h2>
+      <!-- TODO 5: add the explanation and controls this section is missing:
+           a paragraph explaining, in plain language, exactly what this
+           feature does with the camera and what it does not do (this is
+           4.4's audit fix for a starter that used to take a photo without
+           asking — say what you might find, before you ask to sense it); a
+           button with id="personalize-consent" ("Yes, briefly check my
+           camera"); and a paragraph with id="personalize-result" and
+           role="status", starting empty. js/presenter.js's
+           requestPersonalize() already checks camera access and stops it
+           immediately; js/main.js's TODO 6 calls it only from this
+           button's click. -->
+    </section>
   </main>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

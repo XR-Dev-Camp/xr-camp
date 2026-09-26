@@ -1,0 +1,136 @@
+/* XR Camp Phase 3: the stylesheet for the Web3D lab and the virtual exhibit.
+   The same tokens as My XR Camp in Phase 2. */
+
+:root {
+  --color-text: #1b1b1f;
+  --color-muted: #4a4a55;
+  --color-primary: #5b2a86;
+  --color-primary-dark: #3f1d5e;
+  --color-focus: #d62f6b;
+  --color-bg: #fdfcf8;
+  --color-surface: #ffffff;
+  --color-band: #efe9f7;
+  --color-line: #c9c4d4;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --radius: 0.5rem;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); line-height: 1.6; color: var(--color-text); background: var(--color-bg); }
+header { background: var(--color-band); border-bottom: 4px solid var(--color-primary); padding: var(--space-3); }
+header p { max-width: 72rem; margin: 0 auto; font-weight: 700; color: var(--color-primary-dark); }
+main { max-width: 72rem; margin: 0 auto; padding: var(--space-3); }
+h1, h2, h3 { color: var(--color-primary-dark); line-height: 1.2; }
+h1 { font-size: clamp(1.8rem, 1.3rem + 2vw, 2.4rem); }
+a { color: var(--color-primary); }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+code { font-size: 0.95em; }
+[hidden] { display: none !important; }
+
+button { font: inherit; padding: var(--space-2) var(--space-3); color: #fff; background: var(--color-primary); border: 2px solid var(--color-primary); border-radius: var(--radius); cursor: pointer; }
+button[aria-pressed="true"] { background: var(--color-surface); color: var(--color-primary-dark); }
+button[aria-pressed="true"]::before { content: "✓ "; }
+select { font: inherit; padding: var(--space-2); border: 2px solid #8a8398; border-radius: var(--radius); background: var(--color-surface); }
+
+/* The lab: the 3D view beside the controls on wide screens, above them on phones. */
+.lab { display: grid; gap: var(--space-4); }
+@media (min-width: 60rem) { .lab { grid-template-columns: minmax(0, 1fr) 24rem; align-items: start; } .view { position: sticky; top: var(--space-3); } }
+.canvas-box { width: 100%; aspect-ratio: 4 / 3; background: #eef4ff; border: 1px solid var(--color-line); border-radius: var(--radius); overflow: hidden; }
+.canvas-box canvas { display: block; width: 100% !important; height: 100% !important; }
+
+.controls fieldset { margin: 0 0 var(--space-3); padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+.controls legend { font-weight: 700; color: var(--color-primary-dark); padding: 0 var(--space-2); }
+.control { display: grid; grid-template-columns: 1fr auto; gap: 0 var(--space-2); align-items: center; margin-bottom: var(--space-2); }
+.control input[type="range"] { grid-column: 1 / -1; width: 100%; accent-color: var(--color-primary); min-height: 1.5rem; }
+.control output { font-variant-numeric: tabular-nums; color: var(--color-muted); }
+.hint { margin: 0 0 var(--space-2); color: var(--color-muted); font-size: 0.95rem; }
+
+.tree, .tree ul { list-style: none; margin: 0; padding-left: 1.25rem; }
+.tree { padding-left: 0; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.95rem; }
+.tree li::before { content: "└ "; color: var(--color-muted); }
+
+.scene-text { padding: var(--space-3); background: var(--color-surface); border-left: 4px solid var(--color-primary); border-radius: var(--radius); }
+
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 36rem; background: var(--color-surface); }
+caption { text-align: left; font-weight: 700; padding-bottom: var(--space-2); }
+th, td { padding: var(--space-2); border-bottom: 1px solid var(--color-line); text-align: left; vertical-align: top; }
+
+.compare-nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-3); padding: 0; list-style: none; }
+
+/* === 04 Three.js Foundations: the exhibit's three.js edition ===
+   Everything below is new for this lesson: the always-present 2D list of
+   the exhibit's contents, the WebGL-unavailable message, the "look around"
+   buttons, and the Stats panel that shows draw calls, triangles, and the
+   geometry/texture counts used to prove disposal works. The tokens and
+   rules above are unchanged from 3.1's concepts lab. */
+
+/* The exhibit's contents, as an accessible list. Not a fallback shown only
+   when 3D fails: it is always here, so the information never lives only in
+   the picture (WCAG 1.3.1). Safari drops list semantics once list-style is
+   none, so role="list" restores them in the HTML. */
+.exhibit-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.exhibit-list li { padding: var(--space-2) var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+.exhibit-list strong { color: var(--color-primary-dark); }
+
+/* Shown only when the page detects there is no WebGL 2. The exhibit list
+   above still works without it. */
+.no-webgl-message { padding: var(--space-3); background: #fff4f0; border: 1px solid #d62f6b; border-radius: var(--radius); color: var(--color-text); }
+
+/* "Turn left" and "Turn right": a keyboard-and-mouse-free route to the same
+   move dragging the view makes. */
+.view-buttons { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0; margin: 0 0 var(--space-2); list-style: none; }
+
+/* The Stats panel: collapsed by default, so it never distracts from the
+   exhibit, but always one keypress away. */
+.stats dl { display: grid; grid-template-columns: 1fr auto; gap: var(--space-2) var(--space-3); margin: var(--space-2) 0; }
+.stats dl div { display: contents; }
+.stats dt { color: var(--color-muted); }
+.stats dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--color-primary-dark); text-align: right; }
+
+/* === 4.1 WebXR Foundations: the "Enter VR" panel ===
+   Everything below is new for this lesson. The Enter VR button sits inside
+   this page's own control panel, styled like every other button here,
+   instead of three.js's VRButton helper, which draws itself as a fixed,
+   separately styled element outside the page's normal layout. #xr-status
+   is a live region: it must stay visible (not display: none) so assistive
+   technology and sighted learners alike see the same state changes. */
+#xr-status { padding: var(--space-2) var(--space-3); background: var(--color-band); border-radius: var(--radius); color: var(--color-text); }
+
+/* === 4.5 Spatial Audio, Media, and Presence ===
+   Everything below is new for this lesson: the native audio guide player,
+   the live caption paragraph it drives, the always-present transcript list,
+   and the pedestal-sounds control panel. Nothing above changes. */
+
+/* The audio guide keeps the browser's own player, so scrubbing, volume, and
+   playback rate are never reinvented: only its width is set, to match the
+   rest of the column. */
+#guide-audio { width: 100%; margin: var(--space-2) 0; }
+
+/* A live region (role="status" in the HTML): announces the currently active
+   caption as it changes, for anyone not reading the 3D story screen. */
+.caption-text { padding: var(--space-2) var(--space-3); background: var(--color-band); border-radius: var(--radius); font-style: italic; color: var(--color-primary-dark); }
+
+/* The transcript: the audio guide's full text, in one list, always present,
+   whether or not the guide has ever been played (WCAG 1.2.1). role="list"
+   on the HTML restores Safari's list semantics, lost once list-style is none. */
+.transcript { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); counter-reset: cue; }
+.transcript li { padding: var(--space-2) var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+.transcript li::before { counter-increment: cue; content: counter(cue) ". "; font-weight: 700; color: var(--color-muted); }
+
+/* === 4.6 Phase 4 Capstone: Immersive Web Experience ===
+   Everything below is new for this lesson: the row of exhibit-card buttons
+   (Select, Grab, Play narration), the shared control row (Place marker,
+   Pause, Reload), and the visually-hidden heading used once, for the
+   caption region, so a screen reader still announces what the live text
+   below it is. Nothing above changes. */
+
+.button-row { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+
+/* Visually hidden but still announced: for a heading that gives a live
+   region its name without adding visible clutter next to text that already
+   changes on its own. */
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

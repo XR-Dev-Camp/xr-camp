@@ -1000,7 +1000,7 @@
       "id": "imm-06-immersive-web-experience",
       "courseId": "immersive-developer",
       "lessonId": "immersive-web-experience-06",
-      "status": "draft",
+      "status": "review",
       "phase": 4,
       "title": {
         "en": "Phase 4 Capstone - Immersive Web Experience",
@@ -1014,7 +1014,8 @@
       },
       "difficulty": "advanced",
       "technologies": [
-        "WebXR"
+        "WebXR",
+        "Three.js"
       ],
       "hasCode": true,
       "path": "immersive-developer/06-immersive-web-experience"
