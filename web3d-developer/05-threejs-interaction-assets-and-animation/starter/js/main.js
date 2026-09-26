@@ -1,5 +1,5 @@
 // main.js: wires the page's buttons and text to the engine (app.js) and the
-// exhibit's data (exhibit.js, describe.js). TODOs 9-13 are in this file. No
+// exhibit's data (exhibit.js, describe.js). TODOs 9-12 are in this file. No
 // three.js API should appear in this file: it only reads and writes the
 // DOM, and calls what the other modules export.
 
