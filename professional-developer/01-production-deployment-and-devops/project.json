@@ -2,7 +2,7 @@
   "id": "pro-01-production-deployment-and-devops",
   "courseId": "professional-developer",
   "lessonId": "production-deployment-and-devops-01",
-  "status": "draft",
+  "status": "review",
   "phase": 6,
   "title": {
     "en": "Production Deployment and DevOps",
@@ -21,7 +21,9 @@
   },
   "difficulty": "professional",
   "technologies": [
-    "CI/CD"
+    "GitHub Actions",
+    "CI/CD",
+    "GitHub Pages"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -33,6 +35,8 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "status-messages",
+    "keyboard-operable"
   ]
 }

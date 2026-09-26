@@ -1,0 +1,90 @@
+# Example GitHub Actions workflow: release pipeline for the virtual exhibit.
+#
+# This file only RUNS from a repository's own `.github/workflows/` folder, so
+# it lives here as an example. Read completed/workflows/deploy.yml once you
+# have filled in every TODO below, and compare.
+#
+# Verify before you rely on this file: action versions move. Check each
+# action's own "Releases" page on GitHub for its current major version
+# before you pin it in a real project.
+
+name: Deploy exhibit
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # TODO 4: name this job "Validate HTML and links". Add steps to:
+  #   - actions/checkout@v7
+  #   - actions/setup-node@v7, node-version '24'
+  #   - install html-validate (a pinned major version) and run it against
+  #     every HTML file under app/, turning off "no-redundant-role",
+  #     "prefer-native-element", and "long-title" (see
+  #     completed/workflows/deploy.yml for why: they conflict with
+  #     deliberate accessibility choices already made in app/)
+  #   - run lycheeverse/lychee-action@v2 against every HTML file under app/
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+  # TODO 5: name this job "Accessibility audit". It must run after `validate`
+  # (needs: validate). Add steps to:
+  #   - actions/checkout@v7 and actions/setup-node@v7
+  #   - install pa11y (pinned, as this repository's own
+  #     .github/workflows/validate.yml does — read it for the exact command)
+  #   - run pa11y, with a Chrome launch config that adds
+  #     --no-sandbox, --use-angle=swiftshader, and
+  #     --enable-unsafe-swiftshader (there is no GPU on a runner), against
+  #     app/index.html
+  accessibility:
+    runs-on: ubuntu-latest
+    needs: validate
+
+  # TODO 6: name this job "Build". It must run after `accessibility`. Add
+  # steps to:
+  #   - actions/checkout@v7
+  #   - actions/configure-pages@v6
+  #   - actions/upload-pages-artifact@v5, with path: app
+  build:
+    runs-on: ubuntu-latest
+    needs: accessibility
+
+  # TODO 7: name this job "Await manual approval". It must run after `build`.
+  # Give it one step that just echoes a message. Its real job is the
+  # `environment: name: production` key: an environment with "Required
+  # reviewers" turned on (Settings -> Environments, in your own repository)
+  # pauses the run here until someone approves it.
+  approve:
+    runs-on: ubuntu-latest
+    needs: build
+
+  # TODO 8: name this job "Deploy to GitHub Pages". It must run after
+  # `approve`, and needs `permissions: pages: write` and `id-token: write`
+  # (add these under the job, not just at the top of the file: Pages needs an
+  # OpenID Connect token that only this job should have). Give it:
+  #   - environment: name: github-pages, url set from the deploy step's
+  #     page_url output (see completed/workflows/deploy.yml for the exact
+  #     expression)
+  #   - one step, id: deployment, using actions/deploy-pages@v5
+  deploy:
+    runs-on: ubuntu-latest
+    needs: approve
+
+  # TODO 9: name this job "Publish release notes". It must run after
+  # `deploy`, only `if: startsWith(github.ref, 'refs/tags/v')`, and needs
+  # `permissions: contents: write`. Add steps to:
+  #   - actions/checkout@v7
+  #   - one run step, with env GH_TOKEN: ${{ github.token }}, that calls
+  #     `gh release create` for the tag (github.ref_name), with
+  #     `--generate-notes` so GitHub writes the notes from commits and pull
+  #     requests since the previous tag
+  release:
+    runs-on: ubuntu-latest
+    needs: deploy

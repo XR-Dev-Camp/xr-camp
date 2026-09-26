@@ -16,7 +16,7 @@
 
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
-| 1 | [Production Deployment and DevOps](01-production-deployment-and-devops/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
+| 1 | [Production Deployment and DevOps](01-production-deployment-and-devops/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 2 | [Internationalization and Localization](02-internationalization-and-localization/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |
 | 3 | [Open Source, Standards, and Technical Leadership](03-open-source-standards-and-technical-leadership/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
 | 4 | [Career Development and Professional Practice](04-career-development-and-professional-practice/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |

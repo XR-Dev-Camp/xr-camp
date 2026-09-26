@@ -1,0 +1,42 @@
+# Example GitHub Actions workflow: roll back to a previous release.
+#
+# Read completed/workflows/rollback.yml once every TODO below is filled in,
+# and compare.
+
+name: Rollback
+
+on:
+  workflow_dispatch:
+    # TODO 10: add one input, `tag`, type string, required: true, with a
+    # description telling the person running this workflow what to type (a
+    # previous release tag, for example v1.2.0).
+
+permissions:
+  contents: read
+
+jobs:
+  # TODO 11: name this job "Build the chosen tag". Give it the same steps as
+  # `build` in deploy.yml (checkout, configure-pages, upload-pages-artifact),
+  # but pass `ref: ${{ inputs.tag }}` to actions/checkout@v7, so it checks out
+  # the requested tag instead of whatever triggered the run.
+  build:
+    runs-on: ubuntu-latest
+
+  approve:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: production
+    steps:
+      - run: echo "Approved. Rolling back to ${{ inputs.tag }}."
+
+  # TODO 12: name this job "Redeploy to GitHub Pages" and copy it from
+  # `deploy` in deploy.yml exactly (same permissions, same environment, same
+  # actions/deploy-pages@v5 step). Then add a fourth job, `note`, that runs
+  # after this one, checks out the repository, and uses `gh release view` and
+  # `gh release edit` (env GH_TOKEN: ${{ github.token }}) to append a line to
+  # the tag's release recording that it was rolled back into production, when,
+  # and by whom (github.actor). See completed/workflows/rollback.yml.
+  deploy:
+    runs-on: ubuntu-latest
+    needs: approve

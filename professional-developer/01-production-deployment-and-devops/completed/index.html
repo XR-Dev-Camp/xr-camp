@@ -3,12 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Production Deployment and DevOps - XR Camp reference solution</title>
+  <title>Release dashboard - Production Deployment and DevOps - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <p>XR Camp · Web3D</p>
+  </header>
   <main>
-    <h1>Production Deployment and DevOps</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Release dashboard: the virtual exhibit</h1>
+    <p>This page is not a live status board: it does not call any API, so it works offline and needs no account. It documents, for a person reading it, what the pipeline in <a href="workflows/deploy.yml"><code>workflows/deploy.yml</code></a> and <a href="workflows/rollback.yml"><code>workflows/rollback.yml</code></a> does every time it runs, so a teammate — or your future self — can understand a deployment without reading YAML first.</p>
+
+    <section aria-labelledby="what-heading">
+      <h2 id="what-heading">What is being deployed</h2>
+      <p>The <a href="app/index.html">virtual exhibit</a> (from Course 3.7): five 3D objects in a browser, with a full 2D twin and keyboard controls. It is plain HTML, CSS, and JavaScript, so it needs no build step: the pipeline copies it to GitHub Pages as it is.</p>
+    </section>
+
+    <section aria-labelledby="stages-heading">
+      <h2 id="stages-heading">Pipeline stages, in order</h2>
+      <p>Every push to <code>main</code>, or a run started by hand, works through six jobs. Each one must pass before the next starts.</p>
+      <ol class="stage-list" role="list">
+        <li>
+          <h3>1. Validate</h3>
+          <p>Checks the exhibit's HTML with <code>html-validate</code>, and every link inside it with <code>lychee</code>. Nothing is deployed until the markup and links are sound.</p>
+        </li>
+        <li>
+          <h3>2. Accessibility audit</h3>
+          <p>Runs <code>pa11y</code> against <code>app/index.html</code> in headless Chrome, checking WCAG 2.2 AA rules against the rendered page. It cannot see inside the WebGL canvas, so it checks the page around the 3D scene: labels, headings, contrast, and the status regions.</p>
+        </li>
+        <li>
+          <h3>3. Build</h3>
+          <p>Packages the exhibit's files with <code>actions/upload-pages-artifact</code>, ready for GitHub Pages. A project with a build step (a bundler, a static-site generator) would run it here and upload its output folder instead.</p>
+        </li>
+        <li>
+          <h3>4. Manual approval</h3>
+          <p>The run pauses at the <code>production</code> environment. Nothing deploys until a required reviewer, set up in the repository's Settings, approves the run in the Actions tab. This is the guard against an accidental or unreviewed release.</p>
+        </li>
+        <li>
+          <h3>5. Deploy</h3>
+          <p><code>actions/deploy-pages</code> publishes the built artifact to the live GitHub Pages URL, using the <code>github-pages</code> environment GitHub manages automatically.</p>
+        </li>
+        <li>
+          <h3>6. Release notes</h3>
+          <p>When the run was triggered by a version tag (like <code>v1.3.0</code>), <code>gh release create --generate-notes</code> publishes a GitHub Release, with notes built from the commits and pull requests since the previous tag. No extra account or token: <code>gh</code> is already on the runner.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="rollback-heading">
+      <h2 id="rollback-heading">Rolling back</h2>
+      <p><code>workflows/rollback.yml</code> is a second, separate workflow, started by hand from the Actions tab. Type the tag you want live again (for example <code>v1.2.0</code>); it checks out exactly that tag, rebuilds it, waits for the same manual approval, and redeploys it. Rolling back never rewrites history: it publishes an old, already-tested version again, and adds a note to that tag's release recording when and by whom.</p>
+    </section>
+
+    <section aria-labelledby="case-study-heading">
+      <h2 id="case-study-heading">Case study: this repository's own pipeline</h2>
+      <p>The README's "Case study" section reads and explains this repository's own <a href="../../../.github/workflows/validate.yml"><code>.github/workflows/validate.yml</code></a>: the workflow that checks every lesson before it can be merged. It is a second, working example of the same ideas above — jobs, <code>needs</code>, and a headless accessibility audit — applied to lesson content instead of a 3D exhibit.</p>
+    </section>
+
+    <section aria-labelledby="regions-heading">
+      <h2 id="regions-heading">Outside GitHub</h2>
+      <p>GitHub Actions and GitHub Pages are free, but GitHub's own domains are slow or blocked for some visitors in mainland China. Two options are worth knowing about, cautiously: <strong>Gitee Go</strong> (a CI/CD product on the Chinese platform Gitee, similar in shape to GitHub Actions) can build and deploy to a self-hosted server; and a <strong>self-hosted runner</strong> lets you keep your workflow files here on GitHub while the machine that runs them sits on a network closer to your audience. Gitee Pages, Gitee's own free static-hosting product, stopped serving in 2024, so it is not an option any more. Check each option's current terms yourself before relying on it: hosting policies change.</p>
+    </section>
   </main>
 </body>
 </html>

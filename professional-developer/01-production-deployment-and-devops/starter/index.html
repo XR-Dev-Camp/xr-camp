@@ -2,18 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Production Deployment and DevOps - XR Camp starter</title>
+  <title>Release dashboard - Production Deployment and DevOps - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <p>XR Camp · Web3D</p>
+  </header>
   <main>
-    <!-- Add your main heading below. -->
+    <!-- TODO 1: add the page's <h1>, "Release dashboard: the virtual exhibit",
+         and one paragraph explaining that this page documents the pipeline
+         rather than calling any live API (so it stays free, offline-friendly,
+         and needs no account). See the README's "Walkthrough" for wording. -->
 
-    <!-- Add your project content below. -->
+    <section aria-labelledby="what-heading">
+      <h2 id="what-heading">What is being deployed</h2>
+      <p>The <a href="app/index.html">virtual exhibit</a> (from Course 3.7): five 3D objects in a browser, with a full 2D twin and keyboard controls. It is plain HTML, CSS, and JavaScript, so it needs no build step: the pipeline copies it to GitHub Pages as it is.</p>
+    </section>
 
+    <!-- TODO 2: add an ordered list, class="stage-list" role="list", with one
+         <li> per pipeline job (validate, accessibility audit, build, manual
+         approval, deploy, release notes). Each <li> needs an <h3> naming the
+         job and a <p> explaining what it does. Base the wording on
+         workflows/deploy.yml once you have written it (TODOs 4-9). -->
+    <section aria-labelledby="stages-heading">
+      <h2 id="stages-heading">Pipeline stages, in order</h2>
+    </section>
+
+    <section aria-labelledby="rollback-heading">
+      <h2 id="rollback-heading">Rolling back</h2>
+      <!-- TODO 3: add a paragraph explaining workflows/rollback.yml: how a
+           person starts it (Actions tab, a tag as input), and what it does
+           (rebuild that tag, wait for approval, redeploy, and record the
+           rollback on that tag's release). Write it only after TODOs 10-12. -->
+    </section>
+
+    <section aria-labelledby="case-study-heading">
+      <h2 id="case-study-heading">Case study: this repository's own pipeline</h2>
+      <p>The README's "Case study" section reads and explains this repository's own <a href="../../../.github/workflows/validate.yml"><code>.github/workflows/validate.yml</code></a>: the workflow that checks every lesson before it can be merged.</p>
+    </section>
+
+    <section aria-labelledby="regions-heading">
+      <h2 id="regions-heading">Outside GitHub</h2>
+      <p>GitHub Actions and GitHub Pages are free, but GitHub's own domains are slow or blocked for some visitors in mainland China. Two options are worth knowing about, cautiously: <strong>Gitee Go</strong> (a CI/CD product on the Chinese platform Gitee, similar in shape to GitHub Actions) can build and deploy to a self-hosted server; and a <strong>self-hosted runner</strong> lets you keep your workflow files here on GitHub while the machine that runs them sits on a network closer to your audience. Gitee Pages, Gitee's own free static-hosting product, stopped serving in 2024, so it is not an option any more. Check each option's current terms yourself before relying on it: hosting policies change.</p>
+    </section>
   </main>
 </body>
 </html>
