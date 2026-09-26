@@ -184,7 +184,6 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 - [`.github/CODE_OF_CONDUCT.md`](../../.github/CODE_OF_CONDUCT.md) — the code of conduct every XR Camp space, including yours, follows
 - [`docs/en/xr-accessibility.md`](../../docs/en/xr-accessibility.md) — the manual 3D and XR accessibility checks referenced throughout this lesson
 - [W3C: Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/) — the success-criterion explanations this lesson cites
-- [Mozilla Foundation: Teaching Kits and open teaching materials](https://foundation.mozilla.org/en/what-we-fund/awards/) — an example of another organisation publishing openly licensed, community-contributed teaching material, the same model this lesson prepares you to contribute to
 
 ## Women to Know
 

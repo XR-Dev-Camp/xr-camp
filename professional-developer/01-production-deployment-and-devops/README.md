@@ -85,11 +85,11 @@ The reference solution is in [`completed/`](completed/). The starter has 12 TODO
 | 3 | Step 1, continued: the pipeline stages list (TODO 2) | Six stages listed, in order |
 | 4 | Step 1, continued: the rollback and outside-GitHub sections (TODO 3) | A finished dashboard |
 | 5 | Step 2: case study — read `validate.yml` job by job | Notes on its four jobs, ready for the README |
-| 6 | Step 3: the validate job (TODOs 4-5) | HTML and link checks passing in the Actions tab |
-| 7 | Step 4: the accessibility job (TODO 6) | A `pa11y` audit passing |
-| 8 | Step 5: the build job (TODO 7) | A Pages artifact uploaded |
-| 9 | Step 6: the approval and deploy jobs (TODOs 8-9) | A run paused for approval, then a live Pages URL |
-| 10 | Step 7: release notes (TODO 9, continued) | A tagged push publishes a GitHub Release |
+| 6 | Step 3: the validate job (TODO 4) | HTML and link checks passing in the Actions tab |
+| 7 | Step 4: the accessibility job (TODO 5) | A `pa11y` audit passing |
+| 8 | Step 5: the build job (TODO 6) | A Pages artifact uploaded |
+| 9 | Step 6: the approval and deploy jobs (TODOs 7-8) | A run paused for approval, then a live Pages URL |
+| 10 | Step 7: release notes (TODO 9) | A tagged push publishes a GitHub Release |
 | 11 | Step 8: the rollback trigger (TODO 10) | A `workflow_dispatch` form with a `tag` input |
 | 12 | Step 8, continued: rebuilding and redeploying a tag (TODOs 11-12) | An older tag live again, noted on its release |
 | 13 | Step 9: options outside GitHub, cautiously | A short written comparison, in your own words |
@@ -114,7 +114,7 @@ Open [`.github/workflows/validate.yml`](../../.github/workflows/validate.yml), a
 
 Every job you write from here on reuses one of these four ideas: a mechanical check, a security scan, a link check, or a headless accessibility audit.
 
-### Step 3: the validate job (TODOs 4-5)
+### Step 3: the validate job (TODO 4)
 
 In `workflows/deploy.yml`, the `validate` job runs first. It checks out the code, then:
 
@@ -135,7 +135,7 @@ In `workflows/deploy.yml`, the `validate` job runs first. It checks out the code
 
 `html-validate` checks the markup itself (unclosed tags, invalid attributes); `lychee` checks that every link in it actually resolves. Neither needs an account or an API key. The three rules turned off would otherwise flag the exhibit's own deliberate choices: `role="list"` on a styled `<ul>`/`<ol>` (restores list semantics for older Safari VoiceOver), a landmark built with `role="region"` on a `<div>`, and titles that are descriptive rather than short.
 
-### Step 4: the accessibility job (TODO 6)
+### Step 4: the accessibility job (TODO 5)
 
 `accessibility` runs after `validate` (`needs: validate`). It installs `pa11y`, exactly as the case study's own job does, and audits `app/index.html`:
 
@@ -148,7 +148,7 @@ In `workflows/deploy.yml`, the `validate` job runs first. It checks out the code
 
 This checks the rendered DOM: every label, heading, and live region around the 3D view. It cannot look inside the WebGL canvas, so `tests/checklist.md` still needs its "3D and XR (manual)" section for a person to check the scene itself.
 
-### Step 5: the build job (TODO 7)
+### Step 5: the build job (TODO 6)
 
 `build` runs after `accessibility`. GitHub's own official actions package a static site as a "Pages artifact":
 
@@ -161,7 +161,7 @@ This checks the rendered DOM: every label, heading, and live region around the 3
 
 `configure-pages` reads your repository's Pages settings; `upload-pages-artifact` zips the folder you name and stores it for the deploy job to publish. There is no build tool here because the exhibit is plain HTML, CSS, and JavaScript; a project using a bundler would run its build command first, and upload that command's output folder instead.
 
-### Step 6: manual approval, then deploy (TODOs 8-9)
+### Step 6: manual approval, then deploy (TODOs 7-8)
 
 `approve` runs after `build`, and does almost nothing itself: one step that echoes a message. What matters is `environment: name: production`, matching the environment you created in Setup. GitHub pauses the run at this job until a required reviewer approves it from the Actions tab — the same review a pull request gets, but for a release.
 
