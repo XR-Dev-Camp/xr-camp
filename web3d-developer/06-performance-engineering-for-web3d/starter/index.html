@@ -2,18 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="description" content="A deliberately slow exhibit hall: hundreds of separate meshes, oversized generated textures, shadows on everything, no disposal, and a render loop that never stops. Optimise it as you work through the lesson.">
   <title>Performance Engineering for Web3D - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Web3D · Performance Engineering</p></header>
   <main>
-    <!-- Add your main heading below. -->
+    <h1>The exhibit hall: a performance lab</h1>
+    <p>This starter is the exhibit scaled up to a full hall — and built the slow way, on purpose. Nine numbered TODOs across <code>js/hall.js</code>, <code>js/textures.js</code>, and <code>js/app.js</code> mark exactly what to fix. Follow the walkthrough in <a href="../README.md">the lesson README</a> one TODO at a time, and watch the Stats panel change as you go.</p>
+    <noscript><p>This exhibit needs JavaScript and WebGL 2. The list below describes everything in it.</p></noscript>
 
-    <!-- Add your project content below. -->
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The hall</h2>
+        <div class="canvas-box" id="canvas-box"></div>
 
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D hall (WebGL 2 is unavailable). Nothing is
+          broken: the list below describes everything the hall contains.
+        </p>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the hall&hellip;</p>
+
+        <h3>Everything in the hall</h3>
+        <p class="hint">This list is not only a fallback: it is the same information as the picture, in words, so it is always here (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Hall controls">
+        <fieldset>
+          <legend>1. Look around</legend>
+          <p class="hint">Drag the view with a mouse or a finger. Or focus the hall (press Tab) and use the arrow keys. These two buttons do the same as dragging left or right, without a mouse.</p>
+          <ul class="view-buttons" role="list">
+            <li><button type="button" id="turn-left">Turn left</button></li>
+            <li><button type="button" id="turn-right">Turn right</button></li>
+          </ul>
+          <p><button type="button" id="reset-view">Reset view</button></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Travel</legend>
+          <p class="hint">Jump straight to a showcase or a wing. Each one is far enough from the main grid that walking there is the point.</p>
+          <ul class="view-buttons" role="list" id="travel-buttons"></ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Animation</legend>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p class="hint">The four showcase pieces turn slowly on their own. Nothing else in the hall moves by itself, and the camera never moves unless you move it.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Memory and performance</legend>
+          <p><button type="button" id="rebuild">Rebuild hall</button></p>
+          <p class="hint">Rebuilds the hall from scratch. Watch the Geometries and Textures counts below: in this starter, they climb every time and never come back down.</p>
+          <details class="stats" open>
+            <summary>Stats</summary>
+            <dl>
+              <div><dt>Draw calls</dt><dd id="stat-calls">0</dd></div>
+              <div><dt>Triangles</dt><dd id="stat-triangles">0</dd></div>
+              <div><dt>Geometries in memory</dt><dd id="stat-geometries">0</dd></div>
+              <div><dt>Textures in memory</dt><dd id="stat-textures">0</dd></div>
+              <div><dt>Renders per second</dt><dd id="stat-renders">0</dd></div>
+            </dl>
+            <p class="hint">A draw call is one instruction from the CPU telling the GPU "draw this". "Renders per second" counts how often the scene is actually redrawn — in this starter, always about 60, whether or not anything changed.</p>
+          </details>
+        </fieldset>
+      </div>
+    </div>
   </main>
 </body>
 </html>

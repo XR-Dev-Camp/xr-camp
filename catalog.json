@@ -830,7 +830,7 @@
       "id": "w3d-06-performance-engineering-for-web3d",
       "courseId": "web3d-developer",
       "lessonId": "performance-engineering-for-web3d-06",
-      "status": "draft",
+      "status": "review",
       "phase": 3,
       "title": {
         "en": "Performance Engineering for Web3D",
@@ -844,7 +844,7 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "X3D/X3DOM"
+        "Three.js"
       ],
       "hasCode": true,
       "path": "web3d-developer/06-performance-engineering-for-web3d"
