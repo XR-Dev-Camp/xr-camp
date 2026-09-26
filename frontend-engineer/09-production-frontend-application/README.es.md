@@ -4,6 +4,8 @@
 
 **Curso:** `frontend-engineer` · **Lección:** `production-frontend-application-09` · **Tiempo:** unas 18 horas · 24 sesiones de 45 minutos · unas 6 semanas con 4 sesiones por semana
 
+> **Esta es una lección más larga (24 sesiones).** Avanza paso a paso: cada sesión termina igual con algo que hiciste, y está bien tomar un descanso corto entre pasos.
+
 ---
 
 > Publica una aplicación frontend mantenible, instalable y lista para varios idiomas.

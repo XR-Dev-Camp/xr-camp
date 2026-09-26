@@ -4,6 +4,8 @@
 
 **Course:** `full-stack-spatial` · **Lesson:** `full-stack-spatial-application-08` · **Time:** about 25 hours · 34 sessions of 45 minutes · about 9 weeks at 4 sessions a week
 
+> **This is a longer lesson (34 sessions).** Take it one step at a time: each session still ends with something you made, and it is fine to take a short break between steps.
+
 ---
 
 > Combine every Phase 5 lesson into one reviewed, security-fixed full-stack spatial app, with an optional AI description draft and deployment notes for localhost or a small server.

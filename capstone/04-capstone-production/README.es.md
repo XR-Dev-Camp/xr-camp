@@ -4,6 +4,8 @@
 
 **Curso:** `capstone` · **Lección:** `capstone-production-04` · **Tiempo:** unas 28 horas · 38 sesiones de 45 minutos · unas 10 semanas con 4 sesiones por semana
 
+> **Esta es una lección más larga (38 sesiones).** Avanza paso a paso: cada sesión termina igual con algo que hiciste, y está bien tomar un descanso corto entre pasos.
+
 ---
 
 > Construye la aplicación de producción.

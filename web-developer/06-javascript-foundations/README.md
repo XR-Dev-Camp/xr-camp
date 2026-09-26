@@ -4,6 +4,8 @@
 
 **Course:** `web-developer` · **Lesson:** `javascript-foundations-06` · **Time:** about 16 hours · 22 sessions of 45 minutes · about 6 weeks at 4 sessions a week
 
+> **This is a longer lesson (22 sessions).** Take it one step at a time: each session still ends with something you made, and it is fine to take a short break between steps.
+
 ---
 
 > Build an interactive dashboard or information explorer.

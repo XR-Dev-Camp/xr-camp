@@ -4,6 +4,8 @@
 
 **Course:** `web3d-developer` · **Lesson:** `interactive-web3d-experience-07` · **Time:** about 20 hours · 27 sessions of 45 minutes · about 7 weeks at 4 sessions a week
 
+> **This is a longer lesson (27 sessions).** Take it one step at a time: each session still ends with something you made, and it is fine to take a short break between steps.
+
 ---
 
 > Publish a polished Web3D experience using A-Frame or Three.js.

@@ -4,6 +4,8 @@
 
 **Curso:** `web3d-developer` · **Lección:** `threejs-interaction-assets-and-animation-05` · **Tiempo:** unas 16 horas · 22 sesiones de 45 minutos · unas 6 semanas con 4 sesiones por semana
 
+> **Esta es una lección más larga (22 sesiones).** Avanza paso a paso: cada sesión termina igual con algo que hiciste, y está bien tomar un descanso corto entre pasos.
+
 ---
 
 > Construye el explorador de modelos de la exhibición: carga dos modelos glTF reales, con licencia CC, con `GLTFLoader`, junto a los tres objetos primitivos de 3.4, con una barra de carga, selección por raycasting también alcanzable desde el teclado, la animación propia de cada modelo, espacios de color correctos, y atribución en la página.

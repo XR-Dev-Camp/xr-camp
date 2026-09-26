@@ -4,6 +4,8 @@
 
 **Curso:** `full-stack-spatial` · **Lección:** `authentication-and-user-accounts-02` · **Tiempo:** unas 19 horas · 25 sesiones de 45 minutos · unas 6 semanas con 4 sesiones por semana
 
+> **Esta es una lección más larga (25 sesiones).** Avanza paso a paso: cada sesión termina igual con algo que hiciste, y está bien tomar un descanso corto entre pasos.
+
 ---
 
 > Construye un prototipo seguro de cuenta y perfil para quien aprende.

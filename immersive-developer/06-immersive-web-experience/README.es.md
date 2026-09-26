@@ -4,6 +4,8 @@
 
 **Curso:** `immersive-developer` · **Lección:** `immersive-web-experience-06` · **Tiempo:** unas 22 horas · 30 sesiones de 45 minutos · unas 8 semanas con 4 sesiones por semana
 
+> **Esta es una lección más larga (30 sesiones).** Avanza paso a paso: cada sesión termina igual con algo que hiciste, y está bien tomar un descanso corto entre pasos.
+
 ---
 
 > Publica una experiencia XR completa, usable con y sin visor.

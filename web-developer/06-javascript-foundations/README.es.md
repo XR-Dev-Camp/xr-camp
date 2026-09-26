@@ -4,6 +4,8 @@
 
 **Curso:** `web-developer` · **Lección:** `javascript-foundations-06` · **Tiempo:** unas 16 horas · 22 sesiones de 45 minutos · unas 6 semanas con 4 sesiones por semana
 
+> **Esta es una lección más larga (22 sesiones).** Avanza paso a paso: cada sesión termina igual con algo que hiciste, y está bien tomar un descanso corto entre pasos.
+
 ---
 
 > Construye un panel interactivo o un explorador de información.

@@ -4,6 +4,8 @@
 
 **Course:** `full-stack-spatial` · **Lesson:** `authentication-and-user-accounts-02` · **Time:** about 19 hours · 25 sessions of 45 minutes · about 6 weeks at 4 sessions a week
 
+> **This is a longer lesson (25 sessions).** Take it one step at a time: each session still ends with something you made, and it is fine to take a short break between steps.
+
 ---
 
 > Build a secure learner account and profile prototype.

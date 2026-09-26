@@ -4,6 +4,8 @@
 
 **Curso:** `full-stack-spatial` · **Lección:** `full-stack-spatial-application-08` · **Tiempo:** unas 25 horas · 34 sesiones de 45 minutos · unas 9 semanas con 4 sesiones por semana
 
+> **Esta es una lección más larga (34 sesiones).** Avanza paso a paso: cada sesión termina igual con algo que hiciste, y está bien tomar un descanso corto entre pasos.
+
 ---
 
 > Combina cada lección de la Fase 5 en una sola aplicación espacial full-stack, revisada y con la seguridad corregida, con un borrador de descripción por IA opcional y notas de despliegue para localhost o un servidor pequeño.

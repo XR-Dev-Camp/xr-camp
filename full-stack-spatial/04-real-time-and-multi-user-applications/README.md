@@ -4,6 +4,8 @@
 
 **Course:** `full-stack-spatial` · **Lesson:** `real-time-and-multi-user-applications-04` · **Time:** about 17 hours · 23 sessions of 45 minutes · about 6 weeks at 4 sessions a week
 
+> **This is a longer lesson (23 sessions).** Take it one step at a time: each session still ends with something you made, and it is fine to take a short break between steps.
+
 ---
 
 > Build a small collaborative 3D world.
