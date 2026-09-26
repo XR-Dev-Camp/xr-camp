@@ -32,7 +32,7 @@
                    turned into a PNG with a headless-browser screenshot (see
                    ATTRIBUTION.md). <a-assets> preloads it before the scene
                    needs it, so it never pops in half-drawn. -->
-              <img id="woven" src="../assets/woven-pattern.png" crossorigin="anonymous">
+              <img id="woven" alt="" src="../assets/woven-pattern.png" crossorigin="anonymous">
               <!-- A short, calm loop, generated with Python (wave + numpy),
                    never longer than a few seconds of silence-to-silence so it
                    loops without a click. It only ever plays if the learner
@@ -59,10 +59,10 @@
                  loaded from cdn.aframe.io) that covers plain Latin letters,
                  digits, and basic punctuation. Plain Spanish without accents
                  renders fine with it. -->
-            <a-text id="label-en" value="Welcome to the exhibit" align="center" width="2.4"
-                    color="#3f1d5e" position="-2.4 1.7 -2.6"></a-text>
-            <a-text id="label-es" value="Bienvenida a la sala" align="center" width="2.4"
-                    color="#3f1d5e" position="0 1.7 -2.8"></a-text>
+            <a-entity id="label-en"
+                    position="-2.4 1.7 -2.6" text="value: Welcome to the exhibit; align: center; width: 2.4; color: #3f1d5e"></a-entity>
+            <a-entity id="label-es"
+                    position="0 1.7 -2.8" text="value: Bienvenida a la sala; align: center; width: 2.4; color: #3f1d5e"></a-entity>
 
             <!-- The Chinese label is NOT an a-text: the default font drops
                  accented Spanish vowels, ñ, and all CJK characters (verified

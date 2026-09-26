@@ -6,7 +6,7 @@ Add a short video clip of your own.
 
 ## Task
 
-1. Choose a short clip that matters to you (an object from home, a place, a family video), a few seconds long, kept well under the 10 MB video budget in [`docs/en/3d-assets-and-versions.md`](../../docs/en/3d-assets-and-versions.md). Save it as `.mp4` in your own `assets/` folder.
+1. Choose a short clip that matters to you (an object from home, a place, a family video), a few seconds long, kept well under the 10 MB video budget in [`docs/en/3d-assets-and-versions.md`](../../../docs/en/3d-assets-and-versions.md). Save it as `.mp4` in your own `assets/` folder.
 2. Add it to `<a-assets>` as a `<video>`, muted (autoplay in a scene requires it) and `playsinline`, then show it with `<a-video src="#your-clip" width="..." height="..." position="..."></a-video>`, sized so it does not overlap the other panels.
 3. Add a matching entry to `exhibitData`, so it gets a "Look at" button and a 2D list entry like everything else.
 4. Because `<a-video>` itself has no caption support, add captions where the 2D fallback can show them: either a plain HTML `<video>` element elsewhere on the page with a `<track kind="captions" src="your-captions.vtt" srclang="en">`, or a short written transcript in the exhibit list's description for that stop.

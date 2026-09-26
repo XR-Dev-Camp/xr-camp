@@ -31,7 +31,7 @@
                the Immersive Web Emulator) reaches this room. -->
           <a-scene embedded xr-mode-ui="enabled: true" loading-screen="enabled: false" id="exhibit-scene">
             <a-assets timeout="10000">
-              <img id="woven" src="../assets/woven-pattern.png" crossorigin="anonymous">
+              <img id="woven" alt="" src="../assets/woven-pattern.png" crossorigin="anonymous">
               <!-- A short, one-shot chime: the same procedurally generated
                    loop from 3.2, reused here without its loop, so it plays
                    once and stops. It never plays until the "Play chime"
@@ -76,8 +76,8 @@
                       material="color: #5b2a86; roughness: 0.4"
                       sound="src: #chime-sound; positional: true; autoplay: false; loop: false; volume: 0.9; maxDistance: 6"></a-sphere>
 
-            <a-text id="label-en" value="Welcome to the exhibit" align="center" width="2.4"
-                    color="#3f1d5e" position="0 1.9 -2.6"></a-text>
+            <a-entity id="label-en"
+                    position="0 1.9 -2.6" text="value: Welcome to the exhibit; align: center; width: 2.4; color: #3f1d5e"></a-entity>
 
             <!-- The camera: cursor (TODO 4) turns raycaster hits into
                  click/mouseenter/mouseleave events; raycaster (TODO 4) only
