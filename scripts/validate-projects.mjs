@@ -142,10 +142,43 @@ async function checkNpmVersions(where, dir, npmVersions) {
   }
 }
 
+// Regex special characters in a pinned version string ("1.8.0") must be
+// escaped before it is spliced into a RegExp — the dots are otherwise
+// wildcards.
+const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// A pinned-library URL's path after its version segment, e.g.
+// "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js" ->
+// "build/three.module.min.js". Returns null for a URL this doesn't
+// recognize as versioned (checkLibraryVersions already flagged that).
+function vendorRelativePath(lib, version, url) {
+  const v = escapeRegExp(version);
+  const npm = url.match(new RegExp(`${lib}@${v}/(.+)$`, 'i'));
+  if (npm) return npm[1];
+  const site = url.match(new RegExp(`/(?:releases|download)/${v}/(.+)$`));
+  if (site) return site[1];
+  return null;
+}
+
+// Every pinned-library file a lesson loads must be mirrored under
+// vendor/<lib>/<version>/... (see vendor/README.md and
+// docs/THIRD_PARTY_NOTICES.md): lessons load the CDN copy by default, but
+// the offline/blocked-CDN path only works if the vendored file is actually
+// there.
+async function checkVendored(where, file, lib, version, relPath) {
+  // A directory reference (e.g. an import map's "examples/jsm/" base) names
+  // no single file to check; the addons it resolves are checked separately,
+  // by their own import.
+  if (!relPath || relPath.endsWith('/')) return;
+  if (!await exists(join(ROOT, 'vendor', lib, version, relPath))) {
+    fail(where, `${file} loads ${lib} from a URL whose file is not vendored at vendor/${lib}/${version}/${relPath}`);
+  }
+}
+
 // Every A-Frame or three.js URL must name the pinned version exactly.
 // "latest", a different version, or no version at all breaks lessons silently
 // the day a new release ships.
-function checkLibraryVersions(where, file, html, versions) {
+async function checkLibraryVersions(where, file, html, versions) {
   for (const url of html.match(/https?:\/\/[^\s"'<>)]+/g) ?? []) {
     // Only code the page loads; an ordinary link to documentation is fine.
     if (!/\.m?js$|\.css$|\/jsm\/|\/build\//.test(url)) continue;
@@ -157,8 +190,26 @@ function checkLibraryVersions(where, file, html, versions) {
       const got = found?.[1];
       if (got !== version) {
         fail(where, `${file} loads ${lib} ${got ? `version "${got}"` : 'without a version'}; versions.json pins ${version}`);
+        continue;
       }
+      await checkVendored(where, file, lib, version, vendorRelativePath(lib, version, url));
     }
+  }
+}
+
+// An import shown in a comment (e.g. code a lesson displays as a "next
+// step" but does not run) is not code the page loads, so strip whole-line
+// and block comments first — the same reasoning as liveCode() for HTML.
+const liveJs = (js) => js.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^[ \t]*\/\/.*$/gm, '');
+
+// A lesson's JS imports three.js addons by bare specifier ("three/addons/...")
+// resolved through the page's import map to the pinned CDN URL — so each one
+// needs the same vendored-file guarantee as a URL written directly in HTML.
+async function checkVendoredAddonImports(where, file, js, versions) {
+  const three = versions.three;
+  if (!three) return;
+  for (const m of liveJs(js).matchAll(/from\s+['"]three\/addons\/([^'"]+)['"]/g)) {
+    await checkVendored(where, file, 'three', three.version, `examples/jsm/${m[1]}`);
   }
 }
 
@@ -317,7 +368,9 @@ async function main() {
         if (budget && size > budget.max) {
           fail(where, `${rel} is ${(size / MB).toFixed(1)} MB; the ${budget.kind} budget is ${budget.max / MB} MB`);
         }
-        if (extname(file).toLowerCase() === '.html') checkLibraryVersions(where, rel, await read(file), versions);
+        const ext = extname(file).toLowerCase();
+        if (ext === '.html') await checkLibraryVersions(where, rel, await read(file), versions);
+        if (ext === '.js' || ext === '.mjs') await checkVendoredAddonImports(where, rel, await read(file), versions);
       }
       if (total > PROJECT_BUDGET) {
         fail(where, `project is ${(total / MB).toFixed(1)} MB; the budget is ${PROJECT_BUDGET / MB} MB`);
