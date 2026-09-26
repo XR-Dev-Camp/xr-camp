@@ -6,12 +6,12 @@
   "phase": 2,
   "title": {
     "en": "Application Architecture and Maintainable Code",
-    "es-419": "",
+    "es-419": "Arquitectura de aplicaciones y código mantenible",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Refactor an intentionally poorly structured application.",
-    "es-419": "",
+    "es-419": "Refactoriza una aplicación construida intencionalmente con mala estructura.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
@@ -32,7 +32,7 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Refactor a tangled 3D scene script into small components, each with one clear job.",
-    "es-419": "",
+    "es-419": "Refactoriza un script de escena 3D enredado en pequeños componentes, cada uno con una sola responsabilidad clara.",
     "zh-Hans": ""
   },
   "accessibilityChecks": [

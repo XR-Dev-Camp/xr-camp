@@ -6,12 +6,12 @@
   "phase": 2,
   "title": {
     "en": "Git Collaboration and Open Source",
-    "es-419": "",
+    "es-419": "Colaboración en Git y código abierto",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Complete a contribution through an issue and pull request.",
-    "es-419": "",
+    "es-419": "Completa una contribución mediante un issue y un pull request.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 540,
@@ -31,7 +31,7 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Improve a 3D example in this repository, a fix or a translation, through a real pull request.",
-    "es-419": "",
+    "es-419": "Mejora un ejemplo 3D de este repositorio, una corrección o una traducción, mediante un pull request real.",
     "zh-Hans": ""
   },
   "accessibilityChecks": [

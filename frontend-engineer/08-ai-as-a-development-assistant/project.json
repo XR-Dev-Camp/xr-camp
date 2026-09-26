@@ -6,12 +6,12 @@
   "phase": 2,
   "title": {
     "en": "AI as a Development Assistant",
-    "es-419": "",
+    "es-419": "La IA como asistente de desarrollo",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Complete and document an AI-assisted code review without surrendering understanding.",
-    "es-419": "",
+    "es-419": "Completa y documenta una revisión de código asistida por IA sin renunciar a tu propia comprensión.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 600,
@@ -33,7 +33,7 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Ask an AI assistant to explain an unfamiliar Three.js snippet, then check every claim against the official documentation.",
-    "es-419": "",
+    "es-419": "Pídele a un asistente de IA que explique un fragmento de Three.js desconocido, y luego verifica cada afirmación contra la documentación oficial.",
     "zh-Hans": ""
   },
   "accessibilityChecks": [

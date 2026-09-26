@@ -6,12 +6,12 @@
   "phase": 2,
   "title": {
     "en": "Modern JavaScript",
-    "es-419": "",
+    "es-419": "JavaScript moderno",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build a modular data-driven web application.",
-    "es-419": "",
+    "es-419": "Construye una aplicación web modular basada en datos.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,
@@ -32,7 +32,7 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Generate a 3D scene from data: a JavaScript module of positions, colours, and labels becomes objects in space.",
-    "es-419": "",
+    "es-419": "Genera una escena 3D a partir de datos: un módulo de JavaScript con posiciones, colores y etiquetas se convierte en objetos en el espacio.",
     "zh-Hans": ""
   },
   "accessibilityChecks": [

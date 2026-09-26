@@ -6,12 +6,12 @@
   "phase": 2,
   "title": {
     "en": "Web Components",
-    "es-419": "",
+    "es-419": "Componentes web",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build a reusable XR Camp lesson card or project viewer component.",
-    "es-419": "",
+    "es-419": "Crea un componente reutilizable de XR Camp: una tarjeta de lección o un visor de proyectos.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 600,
@@ -33,7 +33,7 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Wrap a 3D model viewer in your own custom element with a slot for its accessible description.",
-    "es-419": "",
+    "es-419": "Encierra un visor de modelos 3D en tu propio elemento personalizado, con un slot para su descripción accesible.",
     "zh-Hans": ""
   },
   "accessibilityChecks": [

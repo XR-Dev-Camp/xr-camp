@@ -6,12 +6,12 @@
   "phase": 2,
   "title": {
     "en": "APIs, JSON, and Asynchronous Applications",
-    "es-419": "",
+    "es-419": "APIs, JSON y aplicaciones asíncronas",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build a public-data, cultural, education, or community dashboard.",
-    "es-419": "",
+    "es-419": "Crea un panel de datos públicos, cultural, educativo o comunitario.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
@@ -32,7 +32,7 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Fetch live public data, such as weather or earthquakes, and show it as 3D bars or markers.",
-    "es-419": "",
+    "es-419": "Obtén datos públicos en vivo, como el clima o los terremotos, y muéstralos como barras o marcadores 3D.",
     "zh-Hans": ""
   },
   "accessibilityChecks": [

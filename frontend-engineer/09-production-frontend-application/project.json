@@ -6,12 +6,12 @@
   "phase": 2,
   "title": {
     "en": "Phase 2 Capstone - Production Frontend Application",
-    "es-419": "",
+    "es-419": "Proyecto final de la Fase 2 - Aplicación frontend de producción",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Release a maintainable, installable, multilingual-ready frontend application.",
-    "es-419": "",
+    "es-419": "Publica una aplicación frontend mantenible, instalable y lista para varios idiomas.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 1080,
@@ -35,7 +35,7 @@
   "demoPath": "./completed/index.html",
   "threeDMoment": {
     "en": "Ship a 3D feature that loads only when needed and never blocks the 2D experience.",
-    "es-419": "",
+    "es-419": "Publica una función 3D que se carga solo cuando se necesita y que nunca bloquea la experiencia 2D.",
     "zh-Hans": ""
   },
   "accessibilityChecks": [

@@ -37,6 +37,15 @@ When you have reviewed a lesson, tick it off below and delete the notes you reso
 | 1.7 Developer Tools | Title *Herramientas para desarrolladores*; *punto de interrupción*; *reporte de error*; *esconder errores* (plant bugs); *grafo de escena*; *linter* in English; complaint quotes mix Spanish and English UI labels |
 | 1.8 Git, GitHub, and Publishing | *commit*, *push*, *fork*, *pull request* kept in English with glosses (*confirmación*, *enviar*, *bifurcación*, *solicitud de cambios*); *hacer commit*; *verificación en dos pasos*; *buscar/traer cambios del origen*; *compilación e implementación*; *error de tipeo* |
 | 1.9 Web Developer Portfolio | Title *Portafolio de desarrolladora web* (feminine; or *de desarrollo web*); *Proyecto final* (capstone); *estudio de caso*; *alternativa* (fallback); *arquitectura de la información*; *throttling (limitación de red)*; *verde azulado oscuro*; *mareo por movimiento*; *declaración de accesibilidad*; example sentences translated |
+| 2.1 Modern JavaScript | *se difieren* vs *se posponen* (deferred scripts); *committer* glossed as «colaboradora»; *Comité Directivo Técnico (Technical Steering Committee)*; *solo listas* (ready only) |
+| 2.2 DOM and Dynamic Interfaces | *se propaga (bubbling)*; *región dinámica* (as in 1.5) vs *región en vivo*; English UI strings kept with glosses; *marcador de posición*; *coalescencia nula*; the fuller editorial note could be backported to 1.1 |
+| 2.3 Application Architecture | *code smell* kept, glossed once as *señales de mal código*; *store* untranslated; button labels (Done, Delete, Edit, Save, Undo) kept in English; *depuración con viaje en el tiempo*; *código muerto*; *conectando todo* (wiring it together) |
+| 2.4 APIs, JSON, and Async | *datos de prueba (mock data)*, glossed each time; *primero caché, después red*; *condición de carrera*; *encadenamiento opcional*; *Chengdú* with an accent (confirm place-name convention) |
+| 2.5 Web Components | *actualizada* (upgraded); *reasigna el objetivo* (retargeting); *contenido de respaldo* (slot fallback); *encapsulamiento* vs *encapsulación*; shadow root / light DOM untranslated; *información sobreimpresa (tooltip)*; *Encierra* (Wrap) |
+| 2.6 Progressive Web Applications | *icono maskable/adaptable*; cache first, network first, stale-while-revalidate kept in English with glosses; *esqueleto de la app* (app shell); *insignia*; *zona segura*; *redirección de puertos* |
+| 2.7 Git Collaboration | *issue* kept as a loanword (no gloss); *conflicto de fusión*; *revisión de código*; *quien mantiene el proyecto* (maintainer); *release* kept, feminine (*una release*); *aplastar y fusionar* / *rebasar y fusionar* (Squash / Rebase and merge) |
+| 2.8 AI as a Development Assistant | *prompt* kept with gloss *instrucciones para la IA*; *alucinación*; *recuadro* vs *región*; *reacomodo (reflow)*; *firma* (API signature); example prompts left in English |
+| 2.9 Production Frontend Application | Spanish course titles for 2.1–2.8 coined here (check them); *módulo de idioma* (locale module); service worker, router and app shell left in English; *Versionado semántico*; *Proyecto final de la Fase 2* |
 
 ## Chinese: terms to check
 
@@ -82,3 +91,12 @@ When you have reviewed a lesson, tick it off below and delete the notes you reso
 | 1.7 Developer Tools, Debugging, and Testing | [ ] | [ ] |
 | 1.8 Git, GitHub, and Publishing | [ ] | [ ] |
 | 1.9 Web Developer Portfolio | [ ] | [ ] |
+| 2.1 Modern JavaScript | [ ] | [ ] |
+| 2.2 The DOM and Dynamic Interfaces | [ ] | [ ] |
+| 2.3 Application Architecture | [ ] | [ ] |
+| 2.4 APIs, JSON, and Async | [ ] | [ ] |
+| 2.5 Web Components | [ ] | [ ] |
+| 2.6 Progressive Web Applications | [ ] | [ ] |
+| 2.7 Git Collaboration and Open Source | [ ] | [ ] |
+| 2.8 AI as a Development Assistant | [ ] | [ ] |
+| 2.9 Production Frontend Application | [ ] | [ ] |
