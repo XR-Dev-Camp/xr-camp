@@ -8,7 +8,7 @@ This is a single, unversioned lesson. This capstone's `starter/` and `completed/
 
 ## Reporting a vulnerability
 
-If you find a security issue in this lesson's code that is not one of the seven Course 5.5 already reviewed (see [`../05-security-and-privacy-for-spatial-applications/README.md`](../05-security-and-privacy-for-spatial-applications/README.md)'s "What went wrong, and how it was fixed") and not something this capstone's own README already names as a limitation:
+If you find a security issue in this lesson's code that is not one of the seven Course 5.5 already reviewed (see [`../05-security-and-privacy-for-spatial-applications/README.md`](../../05-security-and-privacy-for-spatial-applications/README.md)'s "What went wrong, and how it was fixed") and not something this capstone's own README already names as a limitation:
 
 1. **Do not open a public GitHub issue.** A public issue announces the problem to everyone, including anyone who might misuse it, before a fix exists.
 2. Report it the way this repository's own [`.github/SECURITY.md`](../../../.github/SECURITY.md) asks for project-wide issues, since this lesson is part of that same repository.
