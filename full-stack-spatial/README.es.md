@@ -16,7 +16,7 @@
 
 | # | Lección | Tiempo | Estado |
 | --- | --- | --- | --- |
-| 1 | [Backend and API Foundations](01-backend-and-api-foundations/README.es.md) | 14 h · 19 sesiones | 🚧 Próximamente |
+| 1 | [Backend and API Foundations](01-backend-and-api-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
 | 2 | [Authentication and User Accounts](02-authentication-and-user-accounts/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
 | 3 | [Databases and Spatial Application Data](03-databases-and-spatial-application-data/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
 | 4 | [Real-Time and Multi-User Applications](04-real-time-and-multi-user-applications/README.es.md) | 17 h · 23 sesiones | 🚧 Próximamente |

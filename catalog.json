@@ -1023,7 +1023,7 @@
       "id": "fss-01-backend-and-api-foundations",
       "courseId": "full-stack-spatial",
       "lessonId": "backend-and-api-foundations-01",
-      "status": "draft",
+      "status": "review",
       "phase": 5,
       "title": {
         "en": "Backend and API Foundations",
@@ -1038,7 +1038,8 @@
       "difficulty": "advanced",
       "technologies": [
         "JavaScript",
-        "Node.js"
+        "Node.js",
+        "Three.js"
       ],
       "hasCode": true,
       "path": "full-stack-spatial/01-backend-and-api-foundations"

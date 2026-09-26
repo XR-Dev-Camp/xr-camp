@@ -3,12 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Backend and API Foundations - XR Camp reference solution</title>
+  <meta name="description" content="The exhibit's settings panel: choose which exhibits are shown, where the camera starts, your language, and reduced motion, saved through a small Node.js API (or in this browser, if the server is not running).">
+  <title>Backend and API Foundations - XR Camp</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Checked once, early, so js/main.js can read it without calling
+    // matchMedia itself. Only used to pick a sensible first-run default:
+    // once you have saved a choice, your choice always wins.
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <!-- three.js, pinned to the version in versions.json (the same import map
+       every lesson uses). -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Full-Stack Spatial · Backend and API Foundations</p></header>
   <main>
-    <h1>Backend and API Foundations</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>The exhibit's settings panel</h1>
+    <p>Choose which exhibits are shown, where the camera starts, your language, and whether the jade stone is allowed to turn. Press <strong>Save settings</strong> to keep your choices. A small Node.js server (in <a href="server/"><code>server/</code></a>) saves them to a file, so they are still there next time — but this page works, and saves to this browser instead, even when that server is not running.</p>
+    <noscript><p>This page needs JavaScript to load and save settings, and to show the exhibit.</p></noscript>
+
+    <p id="status" class="status-banner" role="status"></p>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The exhibit</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the exhibit&hellip;</p>
+
+        <h3>Everything in the exhibit</h3>
+        <p class="hint">This list is the same information as the picture, in words, and it is always here, whether or not an exhibit is currently shown (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+
+        <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+      </section>
+
+      <div class="controls" role="region" aria-label="Settings">
+        <form id="settings-form">
+          <fieldset>
+            <legend>1. Which exhibits are shown</legend>
+            <ul class="option-list" role="list">
+              <li><label><input type="checkbox" id="exhibit-clay-pot">Clay pot</label></li>
+              <li><label><input type="checkbox" id="exhibit-basket-ring">Woven basket ring</label></li>
+              <li><label><input type="checkbox" id="exhibit-jade-stone">Jade stone</label></li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Camera start</legend>
+            <ul class="option-list" role="list">
+              <li><label><input type="radio" name="cameraStart" value="front">Front view</label></li>
+              <li><label><input type="radio" name="cameraStart" value="left">Left side</label></li>
+              <li><label><input type="radio" name="cameraStart" value="right">Right side</label></li>
+              <li><label><input type="radio" name="cameraStart" value="close">Close-up</label></li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Language and motion</legend>
+            <p>
+              <label for="language">Language</label><br>
+              <select id="language">
+                <option value="en">English</option>
+                <option value="es-419">Español</option>
+                <option value="zh-Hans">简体中文</option>
+              </select>
+            </p>
+            <p class="hint">This saves your preference. Course 6.2 adds the translated pages themselves.</p>
+            <p><label><input type="checkbox" id="reduced-motion">Reduce motion (keep the exhibit still)</label></p>
+          </fieldset>
+
+          <ul id="field-errors" class="field-errors" role="list"></ul>
+
+          <p class="actions">
+            <button type="submit">Save settings</button>
+            <button type="button" id="reset-button">Reset to defaults</button>
+          </p>
+        </form>
+      </div>
+    </div>
   </main>
 </body>
 </html>

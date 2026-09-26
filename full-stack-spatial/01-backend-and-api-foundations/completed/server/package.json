@@ -1,0 +1,17 @@
+{
+  "name": "fss-01-backend-and-api-foundations-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The exhibit settings API for XR Camp lesson 5.1 (full-stack-spatial). No dependencies: node:http, node:fs and node:test only.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

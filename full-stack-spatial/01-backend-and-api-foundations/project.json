@@ -2,7 +2,7 @@
   "id": "fss-01-backend-and-api-foundations",
   "courseId": "full-stack-spatial",
   "lessonId": "backend-and-api-foundations-01",
-  "status": "draft",
+  "status": "review",
   "phase": 5,
   "title": {
     "en": "Backend and API Foundations",
@@ -22,7 +22,8 @@
   "difficulty": "advanced",
   "technologies": [
     "JavaScript",
-    "Node.js"
+    "Node.js",
+    "Three.js"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -34,6 +35,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

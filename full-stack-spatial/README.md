@@ -16,7 +16,7 @@
 
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
-| 1 | [Backend and API Foundations](01-backend-and-api-foundations/README.md) | 14 h · 19 sessions | 🚧 Coming soon |
+| 1 | [Backend and API Foundations](01-backend-and-api-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 2 | [Authentication and User Accounts](02-authentication-and-user-accounts/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
 | 3 | [Databases and Spatial Application Data](03-databases-and-spatial-application-data/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 4 | [Real-Time and Multi-User Applications](04-real-time-and-multi-user-applications/README.md) | 17 h · 23 sessions | 🚧 Coming soon |
