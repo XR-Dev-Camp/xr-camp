@@ -256,7 +256,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 - [W3C: WebXR Hit Test Module](https://www.w3.org/TR/webxr-hit-test-1/)
 - [W3C: XR Accessibility User Requirements (XAUR)](https://www.w3.org/TR/xaur/)
 - [MDN: ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-- [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+- [Keep a Changelog](https://keepachangelog.com/)
 
 ## Women to Know
 

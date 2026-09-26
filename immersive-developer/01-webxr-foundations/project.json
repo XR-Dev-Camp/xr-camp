@@ -7,12 +7,12 @@
   "title": {
     "en": "WebXR Foundations",
     "es-419": "Fundamentos de WebXR",
-    "zh-Hans": ""
+    "zh-Hans": "WebXR 基础"
   },
   "summary": {
     "en": "Create a WebXR-capable experience with desktop and mobile fallbacks.",
     "es-419": "Crea una experiencia compatible con WebXR, con alternativas para escritorio y móvil.",
-    "zh-Hans": ""
+    "zh-Hans": "构建一个支持 WebXR 的体验，并带有桌面端和移动端后备方案。"
   },
   "estimatedMinutes": 840,
   "schedule": {

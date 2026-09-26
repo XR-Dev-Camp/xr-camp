@@ -7,12 +7,12 @@
   "title": {
     "en": "XR Input and Interaction",
     "es-419": "Entrada e interacción en XR",
-    "zh-Hans": ""
+    "zh-Hans": "XR 输入与交互"
   },
   "summary": {
     "en": "Build an XR interaction laboratory.",
     "es-419": "Construye un laboratorio de interacción en XR.",
-    "zh-Hans": ""
+    "zh-Hans": "搭建一个 XR 交互实验室。"
   },
   "estimatedMinutes": 720,
   "schedule": {
