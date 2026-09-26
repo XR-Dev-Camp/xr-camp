@@ -6,10 +6,10 @@ Render a card's shadow root with **no JavaScript at all**, using declarative sha
 
 ## Task
 
-1. Declarative shadow DOM lets you write a shadow root straight into the HTML, with a `<template shadowrootmode="open">` as the element's first child. The browser attaches it while reading the page. It is part of the HTML Standard and supported in current versions of the major browsers. Write one card this way:
+1. Declarative shadow DOM lets you write a shadow root straight into the HTML, with a `<template shadowrootmode="open">` as the element's first child. The browser attaches it while reading the page. It is part of the HTML Standard and supported in current versions of the major browsers. Write one card this way, with a `prerendered` class you will use in a moment:
 
    ```html
-   <lesson-card lesson-title="Web Components" minutes="600" status="ready">
+   <lesson-card class="prerendered" lesson-title="Web Components" minutes="600" status="ready">
      <template shadowrootmode="open">
        <style>/* the card's styles */</style>
        <article part="card">
@@ -22,8 +22,9 @@ Render a card's shadow root with **no JavaScript at all**, using declarative sha
    </lesson-card>
    ```
 
-2. Turn JavaScript off (or comment out the script), and reload. The card is fully styled, and its slots work. What is missing?
-3. Now make the class work with it. In the constructor, use the root that is already there, if there is one, and only copy the template when there is none:
+2. Turn JavaScript off (or comment out the script), and reload. Its slots work, but the card is not fully styled: your `lesson-card:not(:defined)` rule from TODO 9 still matches it too (the element is never defined without JavaScript), so it gets a second box, and its title shows twice — once from your declarative `<h3>`, once from `attr(lesson-title)`. What is missing?
+3. Fix it by excluding prerendered cards from that rule: change `lesson-card:not(:defined)` and `lesson-card:not(:defined)::before` to `lesson-card:not(:defined):not(.prerendered)`, and reload with JavaScript still off. The extra box and the second title are gone.
+4. Now make the class work with it. In the constructor, use the root that is already there, if there is one, and only copy the template when there is none:
 
    ```js
    const root = this.shadowRoot ?? this.attachShadow({ mode: 'open' });
@@ -31,7 +32,7 @@ Render a card's shadow root with **no JavaScript at all**, using declarative sha
    ```
 
    Turn JavaScript back on: the button now works, with no flash of different content.
-4. In your journal, answer: when would you write the shadow root in HTML, and when would you let JavaScript build it? Think about slow connections, and about how much HTML you repeat for every card.
+5. In your journal, answer: when would you write the shadow root in HTML, and when would you let JavaScript build it? Think about slow connections, and about how much HTML you repeat for every card.
 
 ## Why this matters
 
@@ -42,4 +43,4 @@ Declarative shadow DOM lets a server send finished components as plain HTML, so 
 - [ ] One card renders, styled, with JavaScript off.
 - [ ] With JavaScript on, the same card's Done button works and fires `lesson-toggle`.
 - [ ] Cards created by `main.js` still work exactly as before.
-- [ ] Your journal has your answer to step 4.
+- [ ] Your journal has your answer to step 5.

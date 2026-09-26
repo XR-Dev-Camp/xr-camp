@@ -33,7 +33,7 @@ By the end of this project you will be able to:
 
 | Tool | Purpose | Cost |
 | --- | --- | --- |
-| A modern browser, with its developer tools | The Elements panel shows shadow roots, and lets you change attributes live | Free |
+| A modern browser, with its developer tools | The Elements panel (called Inspector in Firefox) shows shadow roots, and lets you change attributes live | Free |
 | VS Code and a local server | Modules and `fetch` need `http://` | Free |
 | A screen reader | Testing names, states, and announcements | Free |
 
@@ -41,7 +41,7 @@ Everything in this lesson works offline, except A-Frame in the 3D moment, which 
 
 ## What you will build
 
-The fourth part of **My XR Camp**: a **lesson card** you can use anywhere, as easily as a `<button>`:
+The fifth part of **My XR Camp**: a **lesson card** you can use anywhere, as easily as a `<button>`:
 
 ```html
 <lesson-card lesson-title="Web Components" minutes="600" status="ready" heading-level="3">
@@ -74,7 +74,7 @@ The reference solution is in [`completed/`](completed/). The starter has the pag
 │   ├── 3d-moment.html   # The 3D viewer page (finished)
 │   └── js/model-stage.js  # The 3D viewer element: TODOs 13–14
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -105,7 +105,7 @@ The reference solution is in [`completed/`](completed/). The starter has the pag
 | 11 | Step 10: document it (TODO 12) | `components.md`, tested by following it |
 | 12 | The **3D moment** (TODOs 13–14) | A 3D viewer in your own element |
 | 13 | [`tests/checklist.md`](tests/checklist.md) | A finished lesson card |
-| 14 | One challenge extension, then **Submitting your work** | The fourth part of My XR Camp |
+| 14 | One challenge extension, then **Submitting your work** | The fifth part of My XR Camp |
 
 ### Step 1: an element the browser does not know (TODO 1)
 
@@ -300,12 +300,12 @@ The description is written by you, not generated, so keep it true: if you change
 | Status is shown in words, with a border, not by colour alone | 1.4.1 | Colour is not the only way to tell ready from coming soon. |
 | Focus is visible inside the card | 2.4.7 | Page focus styles do not cross the shadow boundary, so the card has its own. |
 | Changes are announced by the page's live region | 4.1.3 | "Marked as done: Web Components." |
-| The 3D scene has a text description, and can be paused | 1.1.1, 2.2.2, 2.3.3 | The words carry everything the picture shows; movement is never forced. |
+| The 3D scene has a text description, and can be paused | 1.1.1, 2.2.2 | The words carry everything the picture shows; movement is never forced. |
 | The 3D model can be turned with buttons | 2.1.1 | Every 3D interaction has a keyboard route. |
 
 ## Performance considerations
 
-Every card clones the same template, which is faster than building each one from a string, and the template's `<style>` is parsed only once. `#render()` only changes a few `textContent` values, so rendering again after every attribute change is cheap.
+Every card clones the same template, which is faster than building each one from a string, and browsers can usually reuse the parsed styles for the identical `<style>` in every clone. (To share one stylesheet for sure, use a constructable stylesheet with `adoptedStyleSheets`.) `#render()` only changes a few `textContent` values, so rendering again after every attribute change is cheap.
 
 Custom elements need no framework: `lesson-card.js` is a few kilobytes, and the browser already knows how to run it.
 
@@ -319,8 +319,8 @@ A-Frame's `tick` runs once per frame, only while the scene is running. When the 
 | Adding attributes or children in the `constructor` | An error when the element is created with `createElement` | Build the shadow root in the constructor; read attributes in `connectedCallback` and `attributeChangedCallback` |
 | Forgetting `observedAttributes` | Changing an attribute does nothing | List every attribute you react to |
 | Using `title` as your own attribute | A tooltip appears over the whole card | Use a name of your own: `lesson-title` |
-| An event without `composed: true` | The page never hears it | `bubbles: true, composed: true` |
-| `aria-labelledby` pointing across the shadow boundary | The button has no name | Keep the label and the control together, inside |
+| An event fired from inside the shadow root without `composed: true` | The page never hears it | `bubbles: true, composed: true` (or dispatch it on the element itself) |
+| `aria-labelledby` pointing across the shadow boundary | The label is ignored: the button gets a different name (just its own text), or none | Keep the label and the control together, inside |
 | Expecting page CSS to style the insides | Nothing changes | Custom properties in, `::part()` from outside |
 | A `<div>` with a click listener as the button | No keyboard, no role, no state | A real `<button>` |
 | Putting an A-Frame scene inside a shadow root | The scene may not render or size correctly | Build it in the light DOM |
@@ -329,11 +329,13 @@ A-Frame's `tick` runs once per frame, only while the scene is running. When the 
 
 **The card shows only my paragraphs, as plain text.** The element is not defined. Look for the first error in the Console, and check that `main.js` imports `./lesson-card.js`.
 
-**`Failed to execute 'define' on 'CustomElementRegistry': the name "lesson-card" has already been used`.** The element was defined twice. Use the `customElements.get()` check.
+**An error saying the name "lesson-card" has already been used (Chrome) or has already been defined (Firefox).** The element was defined twice. Use the `customElements.get()` check.
 
-**`Failed to construct 'CustomElement': The result must not have attributes`.** Your constructor adds an attribute to the element itself. Move that work to `connectedCallback`.
+**An error containing `The result must not have attributes` (Chrome and Edge; Safari: `must not have attributes`).** Your constructor adds an attribute, or a child, to the element itself. Move that work to `connectedCallback`.
 
-**The title never appears.** `observedAttributes` must be `static`, and the attribute names must match exactly: `lesson-title`, not `lessonTitle`.
+**The title never appears.** The attribute name must match exactly: `lesson-title`, not `lessonTitle`.
+
+**The card does not update when I change an attribute.** `observedAttributes` must be `static`, and must list that attribute.
 
 **My description shows twice, or not at all.** Check the spelling: `slot="description"` on the paragraph, and `<slot name="description">` in the template.
 
@@ -345,7 +347,7 @@ A-Frame's `tick` runs once per frame, only while the scene is running. When the 
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: add a new attribute and a new part to the card, and update the documentation.
 2. **[Creative](challenges/challenge-2.md)**: make a card for something from your own community, with the card's words in your language.
