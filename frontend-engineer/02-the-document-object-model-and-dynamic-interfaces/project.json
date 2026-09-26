@@ -7,12 +7,12 @@
   "title": {
     "en": "The Document Object Model and Dynamic Interfaces",
     "es-419": "El Modelo de Objetos del Documento y las interfaces dinámicas",
-    "zh-Hans": ""
+    "zh-Hans": "文档对象模型与动态界面"
   },
   "summary": {
     "en": "Create an accessible interactive learning dashboard.",
     "es-419": "Crea un panel de aprendizaje interactivo y accesible.",
-    "zh-Hans": ""
+    "zh-Hans": "创建一个无障碍的交互式学习仪表盘。"
   },
   "estimatedMinutes": 600,
   "schedule": {
@@ -33,7 +33,7 @@
   "threeDMoment": {
     "en": "Build a 2D control panel that adds, removes, and selects 3D objects, keeping keyboard focus sensible between panel and scene.",
     "es-419": "Construye un panel de control 2D que agrega, elimina y selecciona objetos 3D, manteniendo el foco del teclado en un lugar lógico entre el panel y la escena.",
-    "zh-Hans": ""
+    "zh-Hans": "构建一个 2D 控制面板，用于添加、删除和选择 3D 物体，并在面板和场景之间保持键盘焦点合理。"
   },
   "accessibilityChecks": [
     "document-language",

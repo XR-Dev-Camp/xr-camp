@@ -7,12 +7,12 @@
   "title": {
     "en": "AI as a Development Assistant",
     "es-419": "La IA como asistente de desarrollo",
-    "zh-Hans": ""
+    "zh-Hans": "AI 作为开发助手"
   },
   "summary": {
     "en": "Complete and document an AI-assisted code review without surrendering understanding.",
     "es-419": "Completa y documenta una revisión de código asistida por IA sin renunciar a tu propia comprensión.",
-    "zh-Hans": ""
+    "zh-Hans": "完成并记录一次 AI 辅助的代码审查，同时不放弃自己的理解。"
   },
   "estimatedMinutes": 600,
   "schedule": {
@@ -34,7 +34,7 @@
   "threeDMoment": {
     "en": "Ask an AI assistant to explain an unfamiliar Three.js snippet, then check every claim against the official documentation.",
     "es-419": "Pídele a un asistente de IA que explique un fragmento de Three.js desconocido, y luego verifica cada afirmación contra la documentación oficial.",
-    "zh-Hans": ""
+    "zh-Hans": "请一个 AI 助手解释一段陌生的 Three.js 代码，然后对照官方文档核实它的每一条论断。"
   },
   "accessibilityChecks": [
     "document-language",

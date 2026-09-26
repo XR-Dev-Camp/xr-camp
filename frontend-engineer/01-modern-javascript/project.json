@@ -7,12 +7,12 @@
   "title": {
     "en": "Modern JavaScript",
     "es-419": "JavaScript moderno",
-    "zh-Hans": ""
+    "zh-Hans": "现代 JavaScript"
   },
   "summary": {
     "en": "Build a modular data-driven web application.",
     "es-419": "Construye una aplicación web modular basada en datos.",
-    "zh-Hans": ""
+    "zh-Hans": "构建一个模块化的数据驱动 Web 应用。"
   },
   "estimatedMinutes": 840,
   "schedule": {
@@ -33,7 +33,7 @@
   "threeDMoment": {
     "en": "Generate a 3D scene from data: a JavaScript module of positions, colours, and labels becomes objects in space.",
     "es-419": "Genera una escena 3D a partir de datos: un módulo de JavaScript con posiciones, colores y etiquetas se convierte en objetos en el espacio.",
-    "zh-Hans": ""
+    "zh-Hans": "从数据生成一个 3D 场景：一个包含位置、颜色和标签的 JavaScript 模块变成了空间中的物体。"
   },
   "accessibilityChecks": [
     "document-language",

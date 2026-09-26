@@ -7,12 +7,12 @@
   "title": {
     "en": "Git Collaboration and Open Source",
     "es-419": "Colaboración en Git y código abierto",
-    "zh-Hans": ""
+    "zh-Hans": "Git 协作与开源"
   },
   "summary": {
     "en": "Complete a contribution through an issue and pull request.",
     "es-419": "Completa una contribución mediante un issue y un pull request.",
-    "zh-Hans": ""
+    "zh-Hans": "通过一个议题和一次拉取请求完成一次贡献。"
   },
   "estimatedMinutes": 540,
   "schedule": {
@@ -32,7 +32,7 @@
   "threeDMoment": {
     "en": "Improve a 3D example in this repository, a fix or a translation, through a real pull request.",
     "es-419": "Mejora un ejemplo 3D de este repositorio, una corrección o una traducción, mediante un pull request real.",
-    "zh-Hans": ""
+    "zh-Hans": "通过一次真实的拉取请求，改进这个仓库中的一个 3D 示例，可以是一处修复，也可以是一份翻译。"
   },
   "accessibilityChecks": [
     "document-language",

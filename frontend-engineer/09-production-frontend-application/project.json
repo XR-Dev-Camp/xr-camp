@@ -7,12 +7,12 @@
   "title": {
     "en": "Phase 2 Capstone - Production Frontend Application",
     "es-419": "Proyecto final de la Fase 2 - Aplicación frontend de producción",
-    "zh-Hans": ""
+    "zh-Hans": "第 2 阶段毕业项目——生产级前端应用"
   },
   "summary": {
     "en": "Release a maintainable, installable, multilingual-ready frontend application.",
     "es-419": "Publica una aplicación frontend mantenible, instalable y lista para varios idiomas.",
-    "zh-Hans": ""
+    "zh-Hans": "发布一个可维护、可安装、为多语言做好准备的前端应用。"
   },
   "estimatedMinutes": 1080,
   "schedule": {
@@ -36,7 +36,7 @@
   "threeDMoment": {
     "en": "Ship a 3D feature that loads only when needed and never blocks the 2D experience.",
     "es-419": "Publica una función 3D que se carga solo cuando se necesita y que nunca bloquea la experiencia 2D.",
-    "zh-Hans": ""
+    "zh-Hans": "交付一个只在需要时才加载、绝不会阻塞 2D 体验的 3D 功能。"
   },
   "accessibilityChecks": [
     "document-language",

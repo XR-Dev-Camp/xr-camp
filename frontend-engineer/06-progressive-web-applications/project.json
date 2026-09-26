@@ -7,12 +7,12 @@
   "title": {
     "en": "Progressive Web Applications",
     "es-419": "Aplicaciones web progresivas",
-    "zh-Hans": ""
+    "zh-Hans": "渐进式 Web 应用"
   },
   "summary": {
     "en": "Turn a previous application into an installable offline-capable PWA.",
     "es-419": "Convierte una aplicación anterior en una PWA instalable que funciona sin conexión.",
-    "zh-Hans": ""
+    "zh-Hans": "把之前的一个应用改造成一个可安装、支持离线的 PWA。"
   },
   "estimatedMinutes": 720,
   "schedule": {
@@ -34,7 +34,7 @@
   "threeDMoment": {
     "en": "Cache a 3D scene and its model files so it opens offline on a phone.",
     "es-419": "Cachea una escena 3D y sus archivos de modelo para que abra sin conexión en un celular.",
-    "zh-Hans": ""
+    "zh-Hans": "缓存一个 3D 场景及其模型文件，让它能在手机上离线打开。"
   },
   "accessibilityChecks": [
     "document-language",
