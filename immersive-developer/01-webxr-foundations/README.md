@@ -165,7 +165,7 @@ Checking `supportsImmersiveVR()` once, on page load, rather than only reacting w
 | `#xr-status` is a live region that announces session changes | Good practice | A learner who cannot see the headset view still hears that something changed. |
 | Every XR action has a non-XR alternative | 2.1.1 | The entire exhibit is fully usable with a mouse, a finger, or a keyboard; VR is always optional. |
 | The experience works seated, with nothing out of comfortable reach or above head height | Good practice | Not everyone can stand, reach high, or turn around freely. |
-| The camera never moves unless the learner moves it, on a screen or in a headset | 2.3.3 | Unrequested motion is disorienting, and can cause real physical discomfort in VR. |
+| The camera never moves unless the learner moves it, on a screen or in a headset | 2.2.2 | Unrequested motion is disorienting, and can cause real physical discomfort in VR. |
 | The exhibit's contents exist as HTML, not only inside the canvas or a headset | 1.3.1 | The information is never lost when WebGL, WebXR, or a device is unavailable. |
 
 ## Performance considerations

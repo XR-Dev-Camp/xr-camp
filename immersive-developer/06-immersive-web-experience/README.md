@@ -268,7 +268,7 @@ A capstone that combines Enter VR, controller input, and hit-test placement into
 
 ## Standards spotlight
 
-Every subsystem this capstone combines rests on one W3C standard: the WebXR Device API (`navigator.xr`), developed by the Immersive Web Working Group, with the WebXR Hit Test and Augmented Reality Modules extending it for surface placement. The Working Group publishes these as Recommendations and Working Drafts respectively, coordinating with the Immersive Web Community Group, where earlier experimental proposals (like hand input and depth sensing) are incubated before they reach the Working Group. A capstone that "just works" across a phone, a headset, and a plain screen is quietly resting on that one API staying the same everywhere it runs.
+Every subsystem this capstone combines rests on one W3C standard: the WebXR Device API (`navigator.xr`), developed by the Immersive Web Working Group, with the WebXR Hit Test and Augmented Reality Modules extending it for surface placement. The Working Group publishes these and other WebXR modules, including the Hand Input and Depth Sensing Modules, as Working Drafts on the Recommendation track. A capstone that "just works" across a phone, a headset, and a plain screen is quietly resting on that one API staying the same everywhere it runs.
 
 ## License
 

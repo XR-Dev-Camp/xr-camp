@@ -63,11 +63,11 @@ export function initInteraction({ renderer, scene, menuButtons, getGrabTarget, o
   // TODO 3: the same idea for a tracked hand. `renderer.xr.getHand(index)`
   // returns a group three.js moves to match the hand's overall pose;
   // `handModelFactory.createHandModel(hand, 'mesh')` adds a skinned mesh
-  // that follows each of the 25 joints WebXR's Hand Input module reports.
-  // Try 'boxes' or 'spheres' instead of 'mesh' in the Explorer challenge:
-  // they need no extra model download, useful for testing without a
-  // hand-tracking-capable device. Build the model, `.add()` it onto the
-  // hand, `scene.add(hand)`, and return the hand.
+  // that follows 25 joints: the wrist, four for the thumb, and five for
+  // each of the other four fingers. Try 'boxes' or 'spheres' instead of
+  // 'mesh' in the Explorer challenge: they need no extra model download,
+  // useful for testing without a hand-tracking-capable device. Build the
+  // model, `.add()` it onto the hand, `scene.add(hand)`, and return the hand.
   function buildHandModel(index) {
 
   }

@@ -216,7 +216,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 ## Further reading
 
-- [Meta Horizon OS: Panels](https://developers.meta.com/horizon/design/panels/) — a working platform's guidance on panel distance and sizing, read cautiously as one data point, not a universal rule.
+- [Meta Horizon OS: Panels](https://developers.meta.com/horizon/design/panels/) — a working platform's guidance on panel sizing, read cautiously as one data point, not a universal rule.
 - [Meta Horizon OS: Comfort](https://developers.meta.com/horizon/design/comfort/) — locomotion and motion-discomfort guidance, including favouring teleporting over continuous movement.
 - [Android XR: Scale, sizes, and visual design](https://developer.android.com/design/ui/xr/guides/visual-design) — a different platform's own default panel distance, useful for seeing that these numbers vary.
 - [W3C: XR Accessibility User Requirements (XAUR)](https://www.w3.org/TR/xaur/) — the standards document behind this repo's manual XR accessibility checks.
