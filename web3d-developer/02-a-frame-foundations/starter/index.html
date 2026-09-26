@@ -2,18 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>A-Frame Foundations - XR Camp starter</title>
+  <meta name="description" content="The first room of the virtual exhibit: a 3D Hello World environment built with A-Frame.">
+  <title>The exhibit's first room - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- A-Frame, pinned to the version in versions.json. -->
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <script>
+    // Checked once, early, so main.js can read it without every function
+    // calling matchMedia itself. See "Accessibility requirements" in the README.
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="module" src="main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Web3D · A-Frame Foundations</p></header>
   <main>
-    <!-- Add your main heading below. -->
+    <h1>The exhibit's first room</h1>
+    <p>Your virtual exhibit's first room: a small space built entirely from A-Frame's built-in shapes, called <strong>primitives</strong>. Look around with the mouse or a finger, or use the buttons to jump straight to any exhibit stop.</p>
+    <noscript><p>This room needs JavaScript. The list below describes everything in it.</p></noscript>
 
-    <!-- Add your project content below. -->
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The room</h2>
+        <div class="canvas-box" id="canvas-box">
+          <a-scene embedded id="exhibit-scene">
 
+            <!-- TODO 1: <a-assets> (see the README's "Preloading with
+                 <a-assets>" step). Give it timeout="10000", and inside it:
+                 - an <img id="woven"> pointing at ../assets/woven-pattern.png
+                 - an <audio id="calm-loop"> pointing at ../assets/calm-loop.wav
+                 Both need to exist before the scene below can reference them
+                 with src="#woven" and src="#calm-loop". -->
+
+
+            <!-- TODO 2: an <a-sky> (a pale colour is enough), and two lights:
+                 an ambient light so shadowed sides are not pure black, and a
+                 directional light so surfaces show their shape. See the
+                 README's "Lights" step. -->
+
+
+            <!-- TODO 3: the floor. An <a-plane> at position "0 0 0", rotated
+                 "-90 0 0" (so it lies flat), width and height "6", with
+                 material="src: #woven; repeat: 4 4". Give it id="floor". -->
+
+
+            <!-- TODO 4: the woven-pattern pedestal. An <a-box> with
+                 id="woven-panel", a small size (try width/height/depth
+                 "0.8"), positioned in front of the camera, with
+                 material="src: #woven". This is the whole idea of a
+                 primitive: one tag, a few properties, no code. -->
+
+
+            <!-- TODO 5: the English welcome panel. An <a-text> with
+                 id="label-en", value="Welcome to the exhibit", and a
+                 position and colour of your choice. See the README's
+                 "Primitives" and "Text" steps. -->
+
+
+            <!-- TODO 6: the Spanish welcome panel. Another <a-text>, with
+                 id="label-es", value="Bienvenida a la sala". Notice this
+                 sentence has no accented letters or "ñ" on purpose: read
+                 "Multilingual text" in the README before you choose your
+                 own words here. -->
+
+
+            <!-- TODO 7: the Chinese welcome panel. This one is NOT an
+                 <a-text>: the README's "Multilingual text" step explains
+                 why, and main.js's TODO 11 draws it instead. For now, add
+                 an <a-entity id="label-zh"> with
+                 geometry="primitive: plane; width: 1.6; height: 0.8" and
+                 material="shader: flat; side: double", positioned near the
+                 other two panels. -->
+
+
+            <!-- TODO 8: the sound marker. An <a-entity id="sound-marker">,
+                 any small geometry and colour, with
+                 sound="src: #calm-loop; autoplay: false; loop: true; volume: 0.7".
+                 autoplay MUST stay false (WCAG 1.4.2): main.js's TODO 14
+                 gives the learner a visible button to start it instead. -->
+
+
+            <!-- TODO 9: the camera. An <a-camera id="camera">, positioned at
+                 standing eye height (try "0 1.6 1.6"), with look-controls,
+                 and wasd-controls="enabled: false" so nothing walks by
+                 itself. See the README's "Camera" step and its comfort note. -->
+
+          </a-scene>
+        </div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D room (WebGL is unavailable). Nothing is
+          broken: the list below describes everything the room contains, and every
+          button still works.
+        </p>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">A small room with a pale sky, a floor and a pedestal in a woven pattern, three welcome panels in English, Spanish, and Chinese, and a sound marker that plays a calm loop only when you ask it to. Use "Look at" below to visit each stop.</p>
+
+        <h3>Everything in this room</h3>
+        <p class="hint">This list is not only a fallback: it is the same information as the room, in words, so it is always here (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Room controls">
+        <fieldset>
+          <legend>1. Look at an exhibit stop</legend>
+          <p class="hint">Each button turns the view to face one stop. This is the keyboard's route into a 3D room: Tab to a button, then press Enter or Space.</p>
+          <ul class="look-at-buttons" id="look-at-buttons"></ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Sound</legend>
+          <div class="sound-control">
+            <button type="button" id="sound-toggle" aria-pressed="false">▶ Play calm sound</button>
+          </div>
+          <p class="hint">A short, quiet loop. It never plays by itself.</p>
+        </fieldset>
+      </div>
+    </div>
+
+    <h2>Adding your own video (optional)</h2>
+    <p>This room ships with no video, so nothing here can arrive broken for you. When you have a short clip of your own (an object from home, a place that matters to you), see <a href="../challenges/challenge-3.md">Challenge 3</a> for how to add it with <code>&lt;a-video&gt;</code>.</p>
   </main>
 </body>
 </html>
