@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shapes and Colour - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+</head>
+<body>
+  <header>
+    <p>XR Camp · Sample lesson (by Ana)</p>
+  </header>
+  <main>
+    <h1>Shapes and colour</h1>
+
+    <!-- TODO 3: Replace this sentence with a real description of the finished
+         scene: name every shape, its colour, and roughly where it is. A
+         screen reader user relies on this paragraph instead of the picture,
+         so it must stay true to what is actually in the scene below. -->
+    <p id="scene-description">Nothing is in the scene yet.</p>
+
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false" aria-hidden="true">
+      <a-assets></a-assets>
+
+      <!-- TODO 1: Give this box a size (width, height, depth) and a color
+           attribute, for example color="#a4133c" for red. -->
+      <a-box id="box" position="-1.5 0.5 -3"></a-box>
+
+      <!-- TODO 2: Add an <a-sphere id="sphere"> here, positioned at
+           "0 0.5 -3", with a radius and a color of your choice. -->
+
+      <a-cylinder id="cylinder" position="1.5 0.5 -3" radius="0.5" height="1" color="#c9a227"></a-cylinder>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="8" height="8" color="#4a4a55"></a-plane>
+
+      <a-entity position="0 1.2 0" camera look-controls="enabled: false" wasd-controls="enabled: false"></a-entity>
+
+      <a-light type="ambient" color="#ffffff" intensity="0.7"></a-light>
+      <a-light type="directional" position="1 2 1" intensity="0.6"></a-light>
+    </a-scene>
+
+    <h2 id="shapes-heading">The shapes, in words</h2>
+    <ul class="shape-list" role="list" aria-labelledby="shapes-heading">
+      <li>Box: not finished yet (TODO 1).</li>
+      <li>Sphere: not added yet (TODO 2).</li>
+      <li><span class="swatch" aria-hidden="true" style="background: #c9a227;"></span> Cylinder, gold, on the right.</li>
+    </ul>
+  </main>
+</body>
+</html>

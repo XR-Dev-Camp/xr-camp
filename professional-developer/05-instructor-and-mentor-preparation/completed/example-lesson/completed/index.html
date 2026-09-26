@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shapes and Colour - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+</head>
+<body>
+  <header>
+    <p>XR Camp · Sample lesson (by Ana)</p>
+  </header>
+  <main>
+    <h1>Shapes and colour</h1>
+
+    <!-- The scene's text alternative. It is real content, not a caption:
+         it exists whether or not the canvas below ever loads. -->
+    <p id="scene-description">A red box, a blue sphere, and a gold cylinder sit in a row on a grey floor. The gold cylinder turns slowly in place. Nothing else moves, and the camera never moves on its own.</p>
+
+    <a-scene embedded xr-mode-ui="enabled: false" loading-screen="enabled: false" aria-hidden="true">
+      <a-assets></a-assets>
+
+      <a-box id="box" position="-1.5 0.5 -3" width="1" height="1" depth="1" color="#a4133c"></a-box>
+      <a-sphere id="sphere" position="0 0.5 -3" radius="0.6" color="#1d4ed8"></a-sphere>
+      <a-cylinder id="cylinder" position="1.5 0.5 -3" radius="0.5" height="1" color="#c9a227"></a-cylinder>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="8" height="8" color="#4a4a55"></a-plane>
+
+      <!-- Fixed camera: this lesson does not teach camera controls, so the
+           learner never moves the viewpoint by accident (WCAG 2.3.3). -->
+      <a-entity position="0 1.2 0" camera look-controls="enabled: false" wasd-controls="enabled: false"></a-entity>
+
+      <a-light type="ambient" color="#ffffff" intensity="0.7"></a-light>
+      <a-light type="directional" position="1 2 1" intensity="0.6"></a-light>
+    </a-scene>
+
+    <!-- The always-present 2D equivalent. A learner using a screen reader,
+         an old phone with no WebGL, or a slow connection gets the same
+         information from this list as anyone who can see the canvas. -->
+    <h2 id="shapes-heading">The shapes, in words</h2>
+    <ul class="shape-list" role="list" aria-labelledby="shapes-heading">
+      <li><span class="swatch" aria-hidden="true" style="background: #a4133c;"></span> Box, red, on the left.</li>
+      <li><span class="swatch" aria-hidden="true" style="background: #1d4ed8;"></span> Sphere, blue, in the middle.</li>
+      <li><span class="swatch" aria-hidden="true" style="background: #c9a227;"></span> Cylinder, gold, on the right. It turns slowly, unless animation is paused.</li>
+    </ul>
+
+    <div class="controls">
+      <button type="button" id="highlight-btn">Highlight next shape: red box</button>
+      <button type="button" id="motion-btn" aria-pressed="false">Pause animation</button>
+    </div>
+
+    <!-- A live region: the highlight button's effect is announced in words,
+         not only shown as a colour change on the canvas. -->
+    <p id="status" role="status"></p>
+
+    <script src="script.js"></script>
+  </main>
+</body>
+</html>

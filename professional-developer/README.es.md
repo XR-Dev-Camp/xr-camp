@@ -20,4 +20,4 @@
 | 2 | [Internationalization and Localization](02-internationalization-and-localization/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
 | 3 | [Open Source, Standards, and Technical Leadership](03-open-source-standards-and-technical-leadership/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 4 | [Career Development and Professional Practice](04-career-development-and-professional-practice/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
-| 5 | [Instructor and Mentor Preparation](05-instructor-and-mentor-preparation/README.es.md) | 8 h · 11 sesiones | 🚧 Próximamente |
+| 5 | [Instructor and Mentor Preparation](05-instructor-and-mentor-preparation/README.es.md) | 8 h · 11 sesiones | ✅ Lista |

@@ -1,29 +1,22 @@
 {
-  "id": "pro-05-instructor-and-mentor-preparation",
-  "courseId": "professional-developer",
-  "lessonId": "instructor-and-mentor-preparation-05",
-  "status": "review",
-  "phase": 6,
+  "id": "demo-shapes-and-colour",
+  "courseId": "sample",
+  "lessonId": "shapes-and-colour-demo",
+  "status": "published",
   "title": {
-    "en": "Instructor and Mentor Preparation",
-    "es-419": "",
-    "zh-Hans": ""
+    "en": "Shapes and Colour: A Tiny A-Frame Lesson"
   },
   "summary": {
-    "en": "Write a short lesson in the XR Camp format, or a mentor plan, and prepare to contribute it back.",
-    "es-419": "",
-    "zh-Hans": ""
+    "en": "Place three coloured shapes in an A-Frame scene and describe them in words."
   },
-  "estimatedMinutes": 480,
+  "estimatedMinutes": 45,
   "schedule": {
-    "sessions": 11,
+    "sessions": 1,
     "sessionMinutes": 45
   },
-  "difficulty": "professional",
+  "difficulty": "beginner",
   "technologies": [
     "HTML",
-    "CSS",
-    "Markdown",
     "A-Frame"
   ],
   "hasCode": true,

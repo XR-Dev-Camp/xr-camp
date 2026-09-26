@@ -1,0 +1,34 @@
+{
+  "_comment": "TODO 6: A skeleton. Fill in every bracketed value. See project.json in any real lesson in this repository for a filled-in example, and .github/CONTRIBUTING.md for what id, lessonId, status, schedule, and accessibilityChecks mean.",
+  "id": "[unique-id, permanent once published]",
+  "courseId": "[the course this lesson belongs to]",
+  "lessonId": "[unique-lesson-id, permanent once published]",
+  "status": "draft",
+  "title": {
+    "en": "[Your lesson's title]"
+  },
+  "summary": {
+    "en": "[One sentence: what a learner produces.]"
+  },
+  "estimatedMinutes": 135,
+  "schedule": {
+    "sessions": 3,
+    "sessionMinutes": 45
+  },
+  "difficulty": "[beginner | intermediate | advanced | professional]",
+  "technologies": [
+    "[e.g. HTML, or A-Frame if your lesson has a 3D scene]"
+  ],
+  "hasCode": true,
+  "starterPath": "./starter",
+  "completedPath": "./completed",
+  "demoPath": "./completed/index.html",
+  "accessibilityChecks": [
+    "document-language",
+    "heading-order",
+    "viewport",
+    "focus-visible",
+    "color-contrast",
+    "reduced-motion"
+  ]
+}

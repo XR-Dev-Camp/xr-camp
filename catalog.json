@@ -1316,7 +1316,7 @@
       "id": "pro-05-instructor-and-mentor-preparation",
       "courseId": "professional-developer",
       "lessonId": "instructor-and-mentor-preparation-05",
-      "status": "draft",
+      "status": "review",
       "phase": 6,
       "title": {
         "en": "Instructor and Mentor Preparation",
@@ -1330,7 +1330,10 @@
       },
       "difficulty": "professional",
       "technologies": [
-        "HTML"
+        "HTML",
+        "CSS",
+        "Markdown",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "professional-developer/05-instructor-and-mentor-preparation"
