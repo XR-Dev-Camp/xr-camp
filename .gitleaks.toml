@@ -1,0 +1,9 @@
+# Secret scanning for XR Camp. Keep every default rule, but skip vendored
+# third-party libraries: minified code contains random-looking strings
+# that are not secrets (see vendor/README.md for their sources).
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Vendored third-party libraries"
+paths = ['''^vendor/''']
