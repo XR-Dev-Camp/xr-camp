@@ -247,7 +247,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 - [MDN: ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [three.js manual: WebGLRenderer.info](https://threejs.org/docs/#api/en/renderers/WebGLRenderer.info)
-- [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+- [Keep a Changelog](https://keepachangelog.com/)
 - [Khronos glTF-Sample-Assets](https://github.com/KhronosGroup/glTF-Sample-Assets)
 - [W3C WAI: Writing a good alt text and text alternative](https://www.w3.org/WAI/tips/writing/)
 

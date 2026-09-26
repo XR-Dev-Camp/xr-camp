@@ -7,12 +7,12 @@
   "title": {
     "en": "A-Frame Foundations",
     "es-419": "Fundamentos de A-Frame",
-    "zh-Hans": ""
+    "zh-Hans": "A-Frame 基础"
   },
   "summary": {
     "en": "Build a browser-based 3D Hello World environment.",
     "es-419": "Construye un entorno 3D de \"Hola mundo\" que funcione en el navegador.",
-    "zh-Hans": ""
+    "zh-Hans": "搭建一个基于浏览器的 3D「Hello World」环境。"
   },
   "estimatedMinutes": 720,
   "schedule": {

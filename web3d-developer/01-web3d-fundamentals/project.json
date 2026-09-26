@@ -7,12 +7,12 @@
   "title": {
     "en": "Web3D Fundamentals",
     "es-419": "Fundamentos de Web3D",
-    "zh-Hans": ""
+    "zh-Hans": "Web3D 基础"
   },
   "summary": {
     "en": "Create a technology comparison laboratory with compact examples and written analysis.",
     "es-419": "Crea un laboratorio de comparación de tecnologías con ejemplos breves y un análisis escrito.",
-    "zh-Hans": ""
+    "zh-Hans": "搭建一个技术对比实验室，包含精简示例和书面分析。"
   },
   "estimatedMinutes": 840,
   "schedule": {

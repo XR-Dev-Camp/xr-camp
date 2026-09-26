@@ -1,85 +1,252 @@
-# Three.js Interaction, Assets, and Animation
+# Three.js 交互、素材与动画
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-> <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
-
-**课程:** `web3d-developer` · **课时:** `threejs-interaction-assets-and-animation-05` · **时长:** 约 16 小时 · 22 次学习，每次 45 分钟 · 每周 4 次，约 6 周
+**课程：** `web3d-developer` · **课时：** `threejs-interaction-assets-and-animation-05` · **时长：** 约 16 小时 · 22 次学习，每次 45 分钟 · 每周 4 次，约 6 周
 
 ---
 
-> Build an interactive product viewer, story environment, or model explorer.
+> 搭建展览的模型浏览器：用 `GLTFLoader` 加载两个真实的、采用 CC 许可的 glTF 模型，与第 3.4 课的三个基本几何体物体并列，配有加载进度条、也能用键盘完成的射线检测选择、每个模型自带的内置动画、正确的色彩空间，以及页面上的署名信息。
+
+---
 
 ## 学习目标
 
-_内容待撰写。_
+完成本项目后，你将能够：
+
+1. 用 **`GLTFLoader`** 加载一个 `.glb` 文件，并用 **`LoadingManager`** 追踪它的加载进度。
+2. 用 `Promise.allSettled` 处理一个加载失败的模型，而不破坏场景的其余部分。
+3. 用 **`THREE.Box3`** 测量一个未知尺寸的模型，把它放到展台上，而不是靠猜一个缩放数值。
+4. 解释为什么一张颜色贴图（基础色、自发光）是 **sRGB** 的，而一张数据贴图（法线、粗糙度/金属度）是**线性（linear）**的，以及 `GLTFLoader` 已经在哪里正确设置了这一点。
+5. 用 **`THREE.Raycaster`** 通过指针选中一个物体，并为同一个动作提供键盘路径。
+6. 用 **`AnimationMixer`** 和 **`AnimationClip`** 播放一个模型自带的动画，并用本课程已经用过的方式暂停它。
+7. 阅读一个模型的许可证文件，为它撰写一段准确的、页面上的署名信息，并同步更新仓库中的 `ATTRIBUTION.md`。
+8. 识别一张贴图或一个几何体何时在一个 glTF 文件的多个网格或材质之间被**共享**，并确保只释放它一次。
 
 ## 先决条件
 
-_内容待撰写。_
+- **Three.js 基础（3.4）**：本项目的起始代码就是第 3.4 课完成后的应用，它的渲染器、相机、控件和渲染循环都保持不变。
+- **Web3D 基础（3.1）**和 **A-Frame 基础与进阶 A-Frame（3.2-3.3）**：同一个展览，现在获得了这些课程当时推迟处理的两个真实模型。
 
 ## 所需工具
 
-_内容待撰写。_
+| 工具 | 用途 | 费用 |
+| --- | --- | --- |
+| 支持 WebGL 2 的现代浏览器 | 本课的每一个页面都需要 | 免费 |
+| VS Code 和本地服务器 | 模块、导入映射和 `fetch` 都需要 `http://` | 免费 |
+| 浏览器的**网络（Network）**面板 | 观察两个 `.glb` 文件的加载过程，并模拟慢速网络 | 免费 |
+
+这个库和两个模型都从 `cdn.jsdelivr.net` 和本项目自己的 `assets/` 文件夹加载。如果这个 CDN 在你所在的地区较慢或被屏蔽，可以在能访问的地方下载一次这些固定版本的文件，把它们保存在页面旁边，再把导入映射中的地址改成本地文件；这两个 `.glb` 文件已经是本地的，不需要改动。
 
 ## 你将构建什么
 
-_内容待撰写。_
+展览会新增两件物品，放在两个新展台上：一只**狐狸模型**和一辆 **Cesium 牛奶卡车**，都是来自 Khronos Group 官方示例素材库的、真实的、采用 CC 许可的 glTF 模型，用 `GLTFLoader` 加载。点击或点按这五件物品中的任意一件（第 3.4 课的三个基本几何体，加上这两个模型）即可选中它，也可以使用「选择」按钮；每个模型在加载完成后，会播放自己内置的动画，在加载完成之前，用加载进度条和一条平实语言的错误提示信息来覆盖这段时间。
+
+参考答案在 [`completed/`](completed/) 中。起始代码是第 3.4 课已经完成的应用，渲染器、相机、控件和渲染循环都已经正常工作；你要用十二个 TODO 来扩展它。
 
 ## 文件夹说明
 
 ```text
 05-threejs-interaction-assets-and-animation/
-├── README.md
-├── starter/        # begin here
-├── completed/      # reference solution
-├── challenges/     # foundation · creative · explorer
-├── tests/          # self-review checklist
-├── assets/
+├── README.md            # This guide
+├── README.es.md         # Spanish
+├── README.zh-Hans.md    # Simplified Chinese
+├── project.json         # Lesson metadata
+├── starter/
+│   ├── index.html, styles.css    # The page and its controls (finished)
+│   └── js/
+│       ├── loader.js              # LoadingManager and GLTFLoader: TODO 1
+│       ├── exhibit.js             # Fitting, colour spaces, loading: TODOs 2-4
+│       ├── app.js                 # Picking, selection, animation: TODOs 5-7
+│       ├── describe.js            # The description: TODO 8
+│       └── main.js                # Wiring the page: TODOs 9-12
+├── completed/            # Reference solution: open this last
+├── challenges/           # Three challenges: Foundation is required
+├── tests/checklist.md    # Self-review before you submit
+├── assets/               # Fox.glb and CesiumMilkTruck.glb
 └── screenshots/
 ```
 
 ## 环境配置
 
-_内容待撰写。_
+1. 把起始代码复制到你的 `virtual-exhibit` 文件夹中，和你第 3.1-3.4 课的成果放在一起，并用 Git 提交。
+2. 检查 `assets/` 中是否已经有 `Fox.glb` 和 `CesiumMilkTruck.glb`：本项目的 `ATTRIBUTION.md` 中准确说明了它们的来源。
+3. 启动本地服务器，打开 `index.html`。三个基本几何体和它们的展台会立即出现，和第 3.4 课结束时一样；两个模型的展台会保持空白（一个变暗的占位符），直到你完成下面的 TODO。
 
 ## 分步讲解
 
-_内容待撰写。_
+### 规划你的学习节奏
+
+| 节次 | 你要做的事 | 完成后你将拥有 |
+| --- | --- | --- |
+| 1 | 环境配置；阅读 `js/exhibit.js` 中新增的 `ITEMS` 条目和 `loader.js` | 能解释每个新字段（`file`、`credit`、`licenseUrl`）的用途 |
+| 2 | 第 1 步：LoadingManager 和 GLTFLoader（TODO 1） | `createManager()` 报告进度和错误 |
+| 3 | 第 2 步：把模型放到展台上（TODO 2） | 能解释为什么一个固定的缩放数值会是错误的 |
+| 4 | 第 3 步：色彩空间（TODO 3） | 能说出哪些 glTF 贴图是 sRGB，哪些是线性的 |
+| 5 | 第 4 步：加载两个模型（TODO 4），第一部分 | 一个 `.glb` 文件在网络面板中开始加载 |
+| 6 | 第 4 步（续）：`Promise.allSettled` 与动画片段 | 一个模型出现在它的展台上，播放着自己的动画 |
+| 7 | 第 5 步：射线检测（TODO 5） | 点击一件物品会把它的 id 打印到控制台 |
+| 8 | 第 6 步：高亮选中项（TODO 6） | 被点击的物品会明显地染上颜色 |
+| 9 | 第 7 步：为每个已加载模型播放动画（TODO 7） | 两个模型同时播放各自的动画 |
+| 10 | 第 8 步：场景描述（TODO 8） | `#scene-description` 会说明加载中、已加载和已选中的状态 |
+| 11 | 第 9 步：加载进度条（TODO 9） | 模型加载时进度条会填满 |
+| 12 | 第 10 步：页面上的署名信息（TODO 10） | 每个模型的署名和许可证链接出现在页面上 |
+| 13 | 第 11 步：选中一件物品，并在画布上拾取一件（TODO 11），第一部分 | 一个「选择」按钮会更新 `#selection-info` |
+| 14 | 第 11 步（续）：画布点击处理函数 | 点击一个模型会选中它，效果和它的「选择」按钮完全一样 |
+| 15 | 第 12 步：重新加载（TODO 12） | 重新加载展览会释放并重新加载两个模型 |
+| 16 | 用限速网络测试（网络面板） | 加载进度条和错误提示都按预期工作 |
+| 17 | 只用键盘测试每一个交互 | Tab 键、方向键和每一个按钮都能到达每一个功能 |
+| 18 | 打开减少动态效果测试 | 两个模型加载后都已经是暂停状态 |
+| 19 | 对照两个模型的 `LICENSE.md` 文件检查 `ATTRIBUTION.md` | 每一条署名和许可证链接都准确无误 |
+| 20 | [`tests/checklist.md`](tests/checklist.md) | 一个完成的起始应用 |
+| 21 | 一个拓展挑战 | 你自己对模型浏览器的扩展 |
+| 22 | **提交作业** | 展览的模型浏览器，为第 3.6 课做好准备 |
+
+### 第 1 步：LoadingManager 和 GLTFLoader（TODO 1）
+
+一个 `THREE.LoadingManager` 追踪着用它构建的每一个加载器发出的每一个请求：`GLTFLoader` 本身，以及每个 `.glb` 文件的贴图所触发的、各自独立的 `.bin` 和图片请求。`manager.onProgress(url, loaded, total)` 会在其中每一个请求上触发，所以一个在两个模型之间共享的管理器，就能报告出**合并后**的进度，本课的代码完全不需要自己把两个数字加在一起。如果其中任何一个失败，`manager.onError(url)` 会触发。
+
+### 第 2 步：把模型放到展台上（TODO 2）
+
+一个由不同美术师、用不同工具导出的模型，到达时使用的是他们各自采用的单位：米、厘米，或者某种任意的游戏引擎单位。写死一个固定的缩放数值（凭肉眼猜测 `model.scale.setScalar(0.03)`），对某些模型来说会是错的，而且每次遇到新模型都需要重新猜。`THREE.Box3().setFromObject(model)` 会按照模型到达时使用的单位，测量出它真实的包围盒；先按照高度缩放到一个固定目标，再重新测量一次，读取新包围盒的 `min.y`，就能把任何模型真正的最低点精确地放在展台上，无论它的作者使用的是什么单位。
+
+### 第 3 步：色彩空间（TODO 3）
+
+一个材质的**基础色贴图**和**自发光贴图**，存储颜色的方式和一张照片一样：美术师看着这张图片，觉得它看起来是对的，用 **sRGB** 编码，这种编码会把更多的数值范围留给人眼更敏感的深色调。**法线贴图**或**金属度/粗糙度贴图**存储的是数字，而不是颜色——一个方向，或者一个百分比——必须保持**线性（linear）**，否则这些数字会被同一条让照片看起来正确的曲线错误地调亮。`GLTFLoader` 已经为它创建的每一张贴图正确设置了 `texture.colorSpace`，所以本项目的 `ensureColorSpaces()` 只是一道确认它无误的安全网，而不是修复某个损坏之处。
+
+### 第 4 步：加载两个模型（TODO 4）
+
+这里的关键在于使用 `Promise.allSettled`，而不是 `Promise.all`：`Promise.all` 只要有一个 Promise 失败就会立刻拒绝，这意味着某个学习者网络受阻，或者某个文件路径出错，就会拖垮整个展览。`allSettled` 会等待每一个 Promise 都完成，无论成功还是失败，让本项目能各自独立地处理它们——一只正常显示的狐狸，旁边是一辆牛奶卡车的平实语言错误提示，两者并存。
+
+一个模型的场景图到达之后，`gltf.animations` 是一个 `THREE.AnimationClip` 对象组成的数组：0 个、1 个，或者更多，取决于美术师制作了什么。本项目的这两个模型各自都自带一个循环播放的片段；一个拥有多个片段的模型（真正的 Fox 文件本身，而不是本项目对它的用法，自带三个片段：Survey、Walk 和 Run）就需要代码来决定播放哪一个，因为一个骨骼通常无法同时播放两个动画。
+
+### 第 5 步：射线检测（TODO 5）
+
+`THREE.Raycaster` 从相机出发，穿过屏幕上的一个点，射入场景，并按由近到远的顺序报告它经过的一切。这个点必须是**归一化设备坐标（normalised device coordinates）**：在画布范围内是 -1 到 1，y 轴是翻转的，因为屏幕坐标向下增长，而 NDC 向上增长。要从一次指针事件中得到这个坐标，必须先减去画布自身在屏幕上的位置（`getBoundingClientRect()`），而不仅仅是窗口的位置：否则一个没有紧贴浏览器边缘的画布，会拾取到错误的点。
+
+### 第 6 步：高亮选中项（TODO 6）
+
+一个基本几何体物体只有一个网格和一个材质；一个 glTF 模型可能拥有多个网格和多个材质。选中「牛奶卡车」实际上意味着给它根物体下每一个网格上的每一个材质染色，而这正是 `object3D.traverse()` 存在的意义。每个材质原本的 `emissive` 颜色都必须在被覆盖之前先记住，否则以后想恢复它时就没有可以恢复的对象了。
+
+### 第 7 步：为每个已加载模型播放动画（TODO 7）
+
+`mixer.update(delta)` 必须每帧都运行，`AnimationMixer` 才能前进，这和 `OrbitControls` 的阻尼对 `controls.update()` 的要求是一样的。在 `animating` 为 `false` 时跳过这个调用——而不是用一个为零的 delta 去调用它——正是让一个模型精确地冻结在原地的方式，和本项目的玉石旋转在第 3.4 课中已经采用的做法完全一样。
+
+### 第 8 步：场景描述（TODO 8）
+
+一个有两样东西正在加载、第五样东西可能被选中的场景，比第 3.4 课那三个静态的基本几何体需要描述的状态要多得多。这段描述必须为每一个模型说明它是仍在加载、加载失败，还是已经就绪，因为屏幕阅读器用户没有进度条可以瞥一眼。
+
+### 第 9 步：加载进度条（TODO 9）
+
+`<progress>` 是一个原生的 HTML 元素，自带内置的无障碍语义；设置它的 `value` 和 `max` 属性，就足以让辅助技术朗读出百分比进度，完全不需要任何 ARIA。它旁边、位于 `role="status"` 实时区域中的加载文字，用文字朗读同样的信息，这是为了照顾那些屏幕阅读器不会以相同方式呈现 `<progress>` 数值的读者。
+
+### 第 10 步：页面上的署名信息（TODO 10）
+
+一个仓库级别的 `ATTRIBUTION.md` 是必要的，但并不充分：一个只打开页面的学习者，没有理由特意去找一个放在旁边的文件。用场景所读取的同一份 `ITEMS` 数据来构建署名面板，意味着署名文字、许可证链接和来源链接永远不会和 `ATTRIBUTION.md` 中所说的不一致，因为它们本来就是同一份文字，只是放在了一个地方。
+
+### 第 11 步：选中一件物品，并在画布上拾取一件（TODO 11）
+
+一个「选择」按钮和一次画布点击最终都会调用同一个 `selectItem(id)` 函数：指针交互（射线检测）和它的键盘可访问等价物（一个按钮）必须产生完全相同的结果，否则其中一个就成了二等公民。一次没有命中任何物品的点击——落在背景上，或者地面的空白处——会被刻意忽略，而不是被当作「取消选择」处理：指针的一次微小失误，不应该撤销学习者刚刚做出的有意选择。
+
+### 第 12 步：重新加载（TODO 12）
+
+「重新加载展览」会释放当前场景中的每一个网格、材质和贴图——第 3.4 课已经验证过的那三个基本几何体，现在还包括这两个模型自己的几何体和贴图——然后从零开始重新加载。观察 Stats 面板中的 Geometries 计数：它每次都会回到同一个数字，这是本项目能提供的最有力证据，证明学习者浏览的过程中，没有任何东西在 GPU 内存中悄悄堆积。
 
 ## 关键代码解析
 
-_内容待撰写。_
+**`new THREE.LoadingManager()`**，传给一个加载器的构造函数，会报告这个加载器（以及任何用同一个管理器构建的其他加载器）发出的每一个请求的合并进度和错误。
+
+**`new THREE.Box3().setFromObject(object3D)`** 计算一个物体在世界空间中的轴对齐包围盒；`.getSize()` 和 `.getCenter()` 从中读出一个 `Vector3`，`.min` / `.max` 则直接读出它的角点。
+
+**`texture.colorSpace`** 对颜色贴图（基础色、自发光）是 `THREE.SRGBColorSpace`，对数据贴图（法线、粗糙度/金属度）是 `THREE.NoColorSpace`。`GLTFLoader` 在加载时会正确设置这一点。
+
+**`raycaster.setFromCamera(ndc, camera)`**，再调用 **`raycaster.intersectObjects(objects, true)`**，会按由近到远的顺序，返回一条穿过屏幕上某点的射线所经过的每一个物体；参数 `true` 会同时搜索子孙物体。
+
+**`new THREE.AnimationMixer(root)`**、**`mixer.clipAction(clip)`** 和 **`action.play()`** 在一个物体上播放一个 `AnimationClip`；`mixer.update(delta)` 必须在它播放期间每帧都运行。
+
+**`Promise.allSettled(promises)`** 会等待每一个 Promise 都完成，无论成功与否，这与 `Promise.all` 不同，后者只要第一个失败就会立刻拒绝。
+
+## 3D 与 XR 无障碍
+
+- 每一个 3D 交互都有键盘路径：Tab 键能到达画布和「选择」按钮；方向键能环绕它；在画布上点击或点按一件物品，和按下它的「选择」按钮，效果完全一样。
+- 场景描述（`#scene-description`）会随每一次变化更新：哪些模型已经加载完成、哪些失败了以及原因、哪一件被选中，以及是否有任何东西正在播放动画。
+- 减少动态效果得到遵守：当操作系统要求时，玉石的旋转和每一个已加载模型自己的动画，都会在加载后就已经是暂停状态。
+- 展览的列表和署名面板都以 HTML 形式存在，所以展览的信息和它的许可证信息永远不会只存在于画布内部。
+- 除非有人主动移动，否则相机绝不会移动，一个模型的动画是它自己作者创作的内容（一个走路循环、一个行驶循环），绝不是本项目自己添加的东西。
 
 ## 无障碍要求
 
-_内容待撰写。_
+| 要求 | WCAG 2.2 | 原因 |
+| --- | --- | --- |
+| 在画布上选中一件物品，也能通过「选择」按钮完成 | 2.1.1 | 射线检测默认只是一种指针交互；按钮是它的键盘路径。 |
+| 加载进度条的百分比也会以文字形式朗读出来 | 4.1.2, 1.1.1 | `<progress>` 的无障碍语义在不同辅助技术下表现不同；它旁边的文字则准确而通用。 |
+| 一个加载失败的模型会显示一条平实语言的提示信息，而不是一个空白展台 | 1.1.1 | 一次静默的失败，无论对屏幕阅读器用户，还是对瞥一眼空白处的任何人来说，都没有提供任何信息。 |
+| 减少动态效果对玉石和每一个已加载模型都得到遵守 | 2.2.2 | 没有人会看到自己没有要求的动效，包括本项目自己并未创作的动效。 |
+| 每个模型的署名和许可证都在页面上可见，而不仅仅在仓库文件中 | 良好实践 | 一个只打开页面的学习者，依然能看到自己正在看什么，以及它采用了什么许可证。 |
+| 页面在手机上不会出现横向滚动 | 1.4.10 | 展览会显示在控件的上方。 |
 
 ## 性能注意事项
 
-_内容待撰写。_
+两个模型都远低于本项目每个模型 5 MB 的预算（分别是 163 KB 和 370 KB），因为 Khronos Group 自己的示例素材本身已经经过了合理的优化；第 3.6 课会更深入地讲解压缩学习者自己更大模型可能需要的手段。在慢速网络下，加载两个小文件仍然有实实在在、看得见的成本，这也是本项目要显示一个加载进度条、而不是让人静静等待的原因。`Promise.allSettled` 意味着一个缓慢或失败的文件，永远不会阻止另一个文件出现。「重新加载展览」时释放每一个几何体、材质和贴图，在这里比在第 3.4 课中更加重要：一张真实的贴图，不同于基本几何体的单一颜色，可能占用相当可观的几兆字节 GPU 内存，任由它在反复重新加载中累积，最终会拖慢页面，甚至导致标签页崩溃。
 
 ## 常见错误
 
-_内容待撰写。_
+| 错误 | 会发生什么 | 应该怎么做 |
+| --- | --- | --- |
+| 为一个模型猜一个固定的缩放数值 | 它会大得离谱、小得离谱，或者悬浮在展台上方 | 用 `THREE.Box3` 测量它，再据此缩放 |
+| 用 `Promise.all` 加载两个相互独立的模型 | 一个失败的模型会让另一个永远无法出现 | 用 `Promise.allSettled`，逐个物品处理 |
+| 从 `event.clientX` 和窗口尺寸转换 NDC 坐标，而不是画布自身的方框 | 只要画布没有紧贴窗口边缘，射线检测就会拾取错误的物体 | 减去 `getBoundingClientRect()` 自身的 `left`/`top`，再除以它自身的 `width`/`height` |
+| 在渲染循环中忘记调用 `mixer.update(delta)` | 一个模型的动画永远不会超过它的第一帧 | 在混合器所控制的模型正在动画播放的每一帧都调用它 |
+| 为每一个使用某张共享贴图的网格各释放一次它，却不检查是否已经释放过 | 没有明显的 bug，但会浪费工作，也会给「每个资源只调用一次释放」的假设埋下陷阱 | 用一个按 `uuid` 记录的 `Set` 追踪已释放的资源 |
+| 把「选择」按钮当作点击画布的低配版本 | 随着模型的变化，键盘路径会悄悄落后 | 让两者都通过完全相同的 `selectItem(id)` 函数 |
 
 ## 故障排查
 
-_内容待撰写。_
+**一个模型的展台一直保持一个变暗的、空白的形状。** 检查网络面板中它的 `.glb` 文件是否出现 404：`exhibit.js` 的 `ITEMS` 条目使用的是相对于 `index.html` 的路径（`../assets/Fox.glb`），`starter/` 和 `completed/` 之间的唯一区别，只是两者都已经正确地向上指了一层。如果路径是对的，就去控制台检查是否有解析错误。
+
+**模型出现了，但大小离谱地过大或过小，或者半埋在展台里。** TODO 2（`fitAndPlaceModel`）缺失、不完整，或者是在缩放之前而不是之后测量包围盒。记住：缩放之后的第二次 `Box3` 测量，才是你真正应该用来定位它的那组数字。
+
+**点击一个模型没有反应，但它的「选择」按钮有效。** TODO 5（`pickItem`）要么没有正确转换成 NDC 坐标，要么没有沿着 `.parent` 向上走得足够远，找到某个更深层网格的祖先分组所携带的 `userData.itemId`。
+
+**Stats 面板的 Textures 计数在每次点击「重新加载展览」时都会稍微上升。** Geometries 应该每次都精确地回到同一个数字；当一个模型的多个材质共享同一张贴图时（本项目的牛奶卡车的车轮就是这样），Textures 可能会有一两个的浮动——这是渲染器自身内部统计一张被多个材质共用的贴图时的一处小瑕疵，并不代表你自己的释放调用有问题。真正重要的是，反复重新加载不会让任何一个数字上升几十或几百个：如果发生了这种情况，检查 `disposeObject()` 的遍历是否真的触及了每一个网格上的每一个材质。
+
+**即使按下了「暂停动画」，或者打开了减少动态效果，一个已加载模型的动画仍在播放。** `tick()` 中缺少 TODO 7：检查混合器的更新是否放在了和玉石自己的旋转已经使用的同一个 `if (animating)` 代码块里面。
 
 ## 拓展挑战
 
-_内容待撰写。_
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
+
+1. **[基础](challenges/challenge-1.zh-Hans.md)**：从 Khronos 示例素材库中添加第三个 glTF 模型，亲自检查它的许可证文件。
+2. **[创意](challenges/challenge-2.zh-Hans.md)**：用你自己的语言，为某一个模型撰写你自己的页面描述，并添加一个信息面板，在该模型被选中时显示它。
+3. **[探索](challenges/challenge-3.zh-Hans.md)**：对于拥有多个动画片段的模型，让学习者选择播放哪一个。
 
 ## 提交作业
 
-_内容待撰写。_
+1. 完成 [`tests/checklist.md`](tests/checklist.md) 中的每一项。
+2. 给两个模型都加载完成后的展览截图，再给选中某一件物品之后的展览截图。
+3. 把它们和这个项目一起保存在你的学习日志和作品集中。等 XR Camp 社区上线后，也在那里分享它们。
+4. 在你的学习日志中回答：为什么本项目在加载两个模型时使用 `Promise.allSettled`，而不是 `Promise.all`？如果某天有一个文件加载失败，使用 `Promise.all` 的话，学习者会看到什么？
 
 ## 延伸阅读
 
-_内容待撰写。_
+- [three.js manual: Load 3D models](https://threejs.org/manual/#en/load-gltf)（英文）
+- [three.js docs: `GLTFLoader`](https://threejs.org/docs/#examples/en/loaders/GLTFLoader)（英文）
+- [three.js docs: `AnimationMixer`](https://threejs.org/docs/#api/en/animation/AnimationMixer)（英文）
+- [MDN: `Promise.allSettled()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)（英文）
+- [Khronos Group: glTF-Sample-Assets](https://github.com/KhronosGroup/glTF-Sample-Assets)（英文）
+
+## 值得认识的女性
+
+**Soraia Raupp Musse** 是巴西阿雷格里港天主教大学（PUCRS）的计算机图形学教授，也是人群模拟和虚拟人研究领域的领军学者。她在瑞士洛桑联邦理工学院（EPFL）师从 Daniel Thalmann 攻读博士学位，后来又与他合著了施普林格出版社的《Crowd Simulation》一书。
+
+本项目的狐狸和牛奶卡车都是单独的、各自动画的模型；而她毕生投入的这个研究领域要回答一个更难的问题：如何在实时环境中，可信地同时给成百上千个虚拟人赋予动画。本项目引入的这个由一个片段驱动一个骨骼的 `AnimationMixer` 思想，正是她的研究扩展到整个人群规模时，那个问题最小的单元。
+
+> **编者注：发布前请核实。** 「值得认识的女性」中的人物信息必须以一手资料核实，并在可行时于课程上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+
+## 标准聚焦
+
+本项目两个模型所采用的 **glTF 2.0** 格式，是 Khronos Group 的标准：一份开放的、免版税的规范，用于传输 3D 场景和模型，按照 Khronos Group 自己的描述，它被设计成一种小巧的、能快速加载的「3D 版 JPEG」。`GLTFLoader` 是 three.js 自己实现的 glTF 读取器，它本身并不是一项标准，这正是本课程要把它的版本号和 three.js 自身的版本号一起固定下来的原因。本项目两个模型所采用的 **Creative Commons** 许可证（CC0 1.0 和 CC BY 4.0）并不是 Khronos 或 W3C 的标准，而是一套被广泛使用的、标准化的公共许可证，正是它们让检查和为一个模型的使用条款署名成为可能。
 
 ## 许可协议
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
-

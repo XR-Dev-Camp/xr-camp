@@ -7,12 +7,12 @@
   "title": {
     "en": "Phase 3 Capstone - Interactive Web3D Experience",
     "es-419": "Proyecto final de la Fase 3: Experiencia interactiva en Web3D",
-    "zh-Hans": ""
+    "zh-Hans": "第 3 阶段毕业项目——交互式 Web3D 体验"
   },
   "summary": {
     "en": "Publish a polished Web3D experience using A-Frame or Three.js.",
     "es-419": "Publica una experiencia pulida en Web3D usando A-Frame o three.js.",
-    "zh-Hans": ""
+    "zh-Hans": "用 A-Frame 或 Three.js 发布一个打磨完善的 Web3D 体验。"
   },
   "estimatedMinutes": 1200,
   "schedule": {

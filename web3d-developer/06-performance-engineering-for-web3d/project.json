@@ -7,12 +7,12 @@
   "title": {
     "en": "Performance Engineering for Web3D",
     "es-419": "Ingeniería de rendimiento para Web3D",
-    "zh-Hans": ""
+    "zh-Hans": "Web3D 性能工程"
   },
   "summary": {
     "en": "Optimize a deliberately slow 3D application for mobile use.",
     "es-419": "Optimiza una aplicación 3D deliberadamente lenta para uso en móviles.",
-    "zh-Hans": ""
+    "zh-Hans": "为移动端使用场景，优化一个刻意做得很慢的 3D 应用。"
   },
   "estimatedMinutes": 720,
   "schedule": {

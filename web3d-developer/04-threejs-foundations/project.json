@@ -7,12 +7,12 @@
   "title": {
     "en": "Three.js Foundations",
     "es-419": "Fundamentos de three.js",
-    "zh-Hans": ""
+    "zh-Hans": "Three.js 基础"
   },
   "summary": {
     "en": "Build a clean and optimized Three.js starter application.",
     "es-419": "Construye una aplicación starter de three.js limpia y optimizada.",
-    "zh-Hans": ""
+    "zh-Hans": "搭建一个干净、经过优化的 Three.js 起始应用。"
   },
   "estimatedMinutes": 840,
   "schedule": {
