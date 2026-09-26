@@ -257,7 +257,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 ## Further reading
 
 - [MDN: Using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-- [Ollama documentation: OpenAI compatibility](https://github.com/ollama/ollama/blob/main/docs/openai.md)
+- [Ollama documentation: OpenAI compatibility](https://docs.ollama.com/api/openai-compatibility)
 - [LM Studio documentation: Local Server](https://lmstudio.ai/docs/app/api)
 - [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - [Node.js docs: `node:sqlite`](https://nodejs.org/api/sqlite.html)
