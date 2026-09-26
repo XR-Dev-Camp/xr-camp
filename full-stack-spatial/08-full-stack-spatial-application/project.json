@@ -2,7 +2,7 @@
   "id": "fss-08-full-stack-spatial-application",
   "courseId": "full-stack-spatial",
   "lessonId": "full-stack-spatial-application-08",
-  "status": "draft",
+  "status": "review",
   "phase": 5,
   "title": {
     "en": "Phase 5 Capstone - Full-Stack Spatial Application",
@@ -10,7 +10,7 @@
     "zh-Hans": ""
   },
   "summary": {
-    "en": "Release a production-style full-stack spatial application.",
+    "en": "Combine every Phase 5 lesson into one reviewed, security-fixed full-stack spatial app, with an optional AI description draft and deployment notes for localhost or a small server.",
     "es-419": "",
     "zh-Hans": ""
   },
@@ -21,7 +21,10 @@
   },
   "difficulty": "advanced",
   "technologies": [
-    "HTML"
+    "Node.js",
+    "WebSocket",
+    "SQLite",
+    "A-Frame"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -33,6 +36,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

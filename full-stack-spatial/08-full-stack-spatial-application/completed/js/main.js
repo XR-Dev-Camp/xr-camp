@@ -1,0 +1,367 @@
+// main.js: the account panel, the scenes panel, the chat panel, and this
+// capstone's own "Description" panel. FIXED (Course 5.5): TODO 1 and TODO 2
+// (annotations and chat are rendered with textContent, never innerHTML --
+// see below). FIXED (TODO 13): the description panel, wired below.
+
+import * as scene from './scene.js';
+import { connectRoom } from './net.js';
+import { requestDescriptionDraft, saveDescription as saveDescriptionRequest } from './ai.js';
+
+const $ = (id) => document.getElementById(id);
+
+let currentAccount = null;
+let csrfToken = null;
+let net = null;
+let currentScene = null;
+
+function setStatus(message, kind) {
+  const banner = $('status');
+  banner.textContent = message;
+  banner.classList.toggle('is-offline', kind === 'offline');
+  banner.classList.toggle('is-error', kind === 'error');
+}
+
+function showFieldErrors(list, body) {
+  const messages = body?.details ?? [body?.error ?? 'Something went wrong.'];
+  list.replaceChildren(...messages.filter(Boolean).map((message) => {
+    const li = document.createElement('li');
+    li.textContent = message;
+    return li;
+  }));
+}
+
+function showSignedIn(account) {
+  $('signed-out-view').hidden = true;
+  $('signed-in-view').hidden = false;
+  $('account-username').textContent = account.username;
+  $('app-section').hidden = false;
+}
+
+function showSignedOut() {
+  $('signed-in-view').hidden = true;
+  $('signed-out-view').hidden = false;
+  $('app-section').hidden = true;
+}
+
+async function api(path, options = {}) {
+  const res = await fetch(path, { credentials: 'include', ...options });
+  const body = await res.json().catch(() => ({}));
+  return { ok: res.ok, status: res.status, body };
+}
+
+// --- Scenes ------------------------------------------------------------------
+
+function renderMyScenes(scenes) {
+  const list = $('my-scenes-list');
+  list.replaceChildren(...scenes.map((s) => {
+    const li = document.createElement('li');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = `${s.name} (${s.isPublic ? 'public' : 'private'})`;
+    button.setAttribute('aria-label', `Open scene: ${s.name}`);
+    button.addEventListener('click', () => openScene(s.id));
+    const idNote = document.createElement('span');
+    idNote.className = 'hint';
+    idNote.textContent = ` ID: ${s.id}`;
+    li.append(button, idNote);
+    return li;
+  }));
+}
+
+async function loadMyScenes() {
+  const { ok, body } = await api('/api/scenes');
+  if (ok) renderMyScenes(body.scenes);
+}
+
+function renderSceneDetail(sceneData, annotations) {
+  currentScene = sceneData;
+  $('scene-detail-section').hidden = false;
+  $('scene-detail-name').textContent = sceneData.name;
+
+  const list = $('scene-detail-list');
+  const rows = [
+    `ID: ${sceneData.id}`,
+    `Visibility: ${sceneData.isPublic ? 'public' : 'private'}`,
+    sceneData.locationLat != null ? `Location: ${sceneData.locationLat}, ${sceneData.locationLng}` : 'Location: none saved',
+  ];
+  list.replaceChildren(...rows.map((text) => {
+    const li = document.createElement('li');
+    li.textContent = text;
+    return li;
+  }));
+
+  const isOwner = sceneData.ownerId === currentAccount?.id;
+  scene.showScene({ name: sceneData.name, isPublic: sceneData.isPublic, isOwner });
+  $('scene-description').textContent = `Viewing "${sceneData.name}", a ${sceneData.isPublic ? 'public' : 'private'} scene${isOwner ? ' you own' : ''}. ${annotations.length} annotation(s). ${scene.isAnimating() ? 'The marker turns gently.' : 'Animation is paused.'}`;
+
+  renderAnnotations(annotations);
+  renderSavedDescription(sceneData);
+  $('draft-description-button').disabled = false;
+  $('save-description-button').disabled = !isOwner;
+}
+
+// FIXED (TODO 13): set with textContent, the same rule this file applies to
+// every other stored text (annotations, chat) -- a saved description came
+// from an AI draft a person approved, but it is still stored, user-supplied
+// text, and js/main.js never trusts stored text enough to use innerHTML.
+function renderSavedDescription(sceneData) {
+  $('saved-description').textContent = sceneData.description
+    ? sceneData.description
+    : 'No description saved yet.';
+}
+
+// FIXED (TODO 1): every annotation is set with textContent, which never
+// interprets its argument as markup -- a literal "<script>" in the text
+// renders as the four visible characters "<scr", "ipt>", nothing runs. This
+// is one of two independent layers against the same bug: routes.js's TODO 1
+// fix (sanitizeText, applied before storage) is the other. See MDN's
+// Cross-Site Scripting article and the README's "Key code explained".
+function renderAnnotations(annotations) {
+  const list = $('annotation-list');
+  list.replaceChildren(...annotations.map((a) => {
+    const li = document.createElement('li');
+    li.textContent = a.text;
+    return li;
+  }));
+}
+
+async function openScene(id) {
+  const errors = $('open-scene-errors');
+  errors.replaceChildren();
+  const { ok, body } = await api(`/api/scenes/${encodeURIComponent(id)}`);
+  if (!ok) {
+    showFieldErrors(errors, body);
+    return;
+  }
+  renderSceneDetail(body.scene, body.annotations);
+}
+
+// --- WebSocket chat ----------------------------------------------------------
+
+// FIXED (TODO 2): built with createElement/textContent, the same pattern
+// Course 5.4 used, instead of innerHTML -- a chat message can never inject
+// markup into this page, no matter what it contains. This is one of two
+// independent layers: realtime.js's TODO 2 fix (sanitizeText, applied
+// before relaying) is the other.
+function appendChatMessage(username, text, { system = false } = {}) {
+  const list = $('chat-list');
+  const li = document.createElement('li');
+  if (system) {
+    li.className = 'chat-system';
+    li.textContent = text;
+  } else {
+    const name = document.createElement('strong');
+    name.textContent = `${username}: `;
+    li.append(name, document.createTextNode(text));
+  }
+  list.append(li);
+  $('chat-log').scrollTop = $('chat-log').scrollHeight;
+}
+
+function joinChat() {
+  net = connectRoom('review-room', {
+    onChat: (message) => appendChatMessage(message.username, message.text),
+    onPresence: (message) => appendChatMessage(null, `${message.username} ${message.event === 'join' ? 'joined' : 'left'} the room.`, { system: true }),
+    onError: (message) => setStatus(message, 'error'),
+    onStatus: (text) => setStatus(text, text.startsWith('Connected') ? undefined : 'offline'),
+  });
+}
+
+function leaveChat() {
+  net?.stop();
+  net = null;
+}
+
+// --- Loading what the page needs on open ------------------------------------
+
+async function loadMe() {
+  try {
+    const res = await fetch('/api/auth/me', { credentials: 'include' });
+    if (res.status === 401) return { signedIn: false, offline: false };
+    if (!res.ok) throw new Error(`GET /api/auth/me returned ${res.status}`);
+    const body = await res.json();
+    return {
+      signedIn: true, offline: false, account: body.account, csrfToken: body.csrfToken,
+    };
+  } catch {
+    return { signedIn: false, offline: true };
+  }
+}
+
+async function init() {
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  scene.setAnimating(!reducedMotion);
+
+  const session = await loadMe();
+  if (session.offline) {
+    setStatus('Server not running: sign-in and the app need the Node.js server (see completed/README.md).', 'offline');
+  }
+  currentAccount = session.account ?? null;
+  csrfToken = session.csrfToken ?? null;
+
+  if (currentAccount) {
+    showSignedIn(currentAccount);
+    await loadMyScenes();
+    joinChat();
+  } else {
+    showSignedOut();
+  }
+
+  const pauseButton = $('pause-toggle');
+  pauseButton.addEventListener('click', () => {
+    const on = !scene.isAnimating();
+    scene.setAnimating(on);
+    pauseButton.setAttribute('aria-pressed', String(!on));
+    pauseButton.textContent = on ? 'Pause animation' : 'Resume animation';
+  });
+
+  $('register-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const errorsList = $('register-errors');
+    errorsList.replaceChildren();
+    const username = $('register-username').value.trim().toLowerCase();
+    const password = $('register-password').value;
+    const { ok, status, body } = await api('/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+    if (ok || status === 201) {
+      $('register-form').reset();
+      $('login-username').value = username;
+      setStatus('Account created. Sign in below.');
+      $('login-username').focus();
+      return;
+    }
+    showFieldErrors(errorsList, body);
+  });
+
+  $('login-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const errorsList = $('login-errors');
+    errorsList.replaceChildren();
+    const username = $('login-username').value.trim().toLowerCase();
+    const password = $('login-password').value;
+    const { ok, body } = await api('/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+    if (!ok) {
+      showFieldErrors(errorsList, body);
+      return;
+    }
+    currentAccount = body.account;
+    csrfToken = body.csrfToken;
+    $('login-form').reset();
+    showSignedIn(currentAccount);
+    await loadMyScenes();
+    joinChat();
+    setStatus(`Signed in as ${currentAccount.username}.`);
+  });
+
+  $('logout-button').addEventListener('click', async () => {
+    await api('/api/auth/logout', {
+      method: 'POST',
+      headers: { 'X-CSRF-Token': csrfToken },
+    }).catch(() => {});
+    leaveChat();
+    currentAccount = null;
+    csrfToken = null;
+    showSignedOut();
+    setStatus('Signed out.');
+  });
+
+  $('create-scene-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const errorsList = $('scene-errors');
+    errorsList.replaceChildren();
+    const name = $('scene-name').value.trim();
+    const isPublic = $('scene-public').checked;
+    const latValue = $('scene-lat').value;
+    const lngValue = $('scene-lng').value;
+    const payload = { name, isPublic };
+    if (latValue !== '' && lngValue !== '') {
+      payload.locationLat = Number(latValue);
+      payload.locationLng = Number(lngValue);
+    }
+    const { ok, body } = await api('/api/scenes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+      body: JSON.stringify(payload),
+    });
+    if (!ok) {
+      showFieldErrors(errorsList, body);
+      return;
+    }
+    $('create-scene-form').reset();
+    await loadMyScenes();
+  });
+
+  $('open-scene-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    await openScene($('open-scene-id').value.trim());
+  });
+
+  $('annotation-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const errorsList = $('annotation-errors');
+    errorsList.replaceChildren();
+    if (!currentScene) return;
+    const text = $('annotation-text').value.trim();
+    const { ok, body } = await api(`/api/scenes/${encodeURIComponent(currentScene.id)}/annotations`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+      body: JSON.stringify({ text }),
+    });
+    if (!ok) {
+      showFieldErrors(errorsList, body);
+      return;
+    }
+    $('annotation-text').value = '';
+    await openScene(currentScene.id);
+  });
+
+  $('draft-description-button').addEventListener('click', async () => {
+    const errorsList = $('description-errors');
+    errorsList.replaceChildren();
+    if (!currentScene) return;
+    const { ok, body } = await requestDescriptionDraft(currentScene.id);
+    if (!ok) {
+      showFieldErrors(errorsList, body);
+      return;
+    }
+    $('description-draft').value = body.description;
+    setStatus(`Draft built by the "${body.provider}" provider. Read it, edit it if needed, then choose Save.`);
+  });
+
+  $('save-description-button').addEventListener('click', async () => {
+    const errorsList = $('description-errors');
+    errorsList.replaceChildren();
+    if (!currentScene) return;
+    const description = $('description-draft').value.trim();
+    if (description.length === 0) {
+      showFieldErrors(errorsList, { error: 'Write or draft a description first.' });
+      return;
+    }
+    const { ok, body } = await saveDescriptionRequest(currentScene.id, description, csrfToken);
+    if (!ok) {
+      showFieldErrors(errorsList, body);
+      return;
+    }
+    currentScene = body.scene;
+    renderSavedDescription(body.scene);
+    setStatus('Description saved.');
+  });
+
+  $('chat-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const input = $('chat-input');
+    const text = input.value.trim();
+    if (text.length === 0 || !net) return;
+    net.sendChat(text);
+    input.value = '';
+  });
+}
+
+init();
