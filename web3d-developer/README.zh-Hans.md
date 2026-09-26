@@ -22,4 +22,4 @@
 | 4 | [Three.js Foundations](04-threejs-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 5 | [Three.js Interaction, Assets, and Animation](05-threejs-interaction-assets-and-animation/README.zh-Hans.md) | 16 小时 · 22 次学习 | ✅ 已完成 |
 | 6 | [Performance Engineering for Web3D](06-performance-engineering-for-web3d/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
-| 7 | [Phase 3 Capstone - Interactive Web3D Experience](07-interactive-web3d-experience/README.zh-Hans.md) | 20 小时 · 27 次学习 | 🚧 即将推出 |
+| 7 | [Phase 3 Capstone - Interactive Web3D Experience](07-interactive-web3d-experience/README.zh-Hans.md) | 20 小时 · 27 次学习 | ✅ 已完成 |

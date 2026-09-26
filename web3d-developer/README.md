@@ -22,4 +22,4 @@
 | 4 | [Three.js Foundations](04-threejs-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 5 | [Three.js Interaction, Assets, and Animation](05-threejs-interaction-assets-and-animation/README.md) | 16 h · 22 sessions | ✅ Ready |
 | 6 | [Performance Engineering for Web3D](06-performance-engineering-for-web3d/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 7 | [Phase 3 Capstone - Interactive Web3D Experience](07-interactive-web3d-experience/README.md) | 20 h · 27 sessions | 🚧 Coming soon |
+| 7 | [Phase 3 Capstone - Interactive Web3D Experience](07-interactive-web3d-experience/README.md) | 20 h · 27 sessions | ✅ Ready |

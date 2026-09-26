@@ -2,7 +2,7 @@
   "id": "w3d-07-interactive-web3d-experience",
   "courseId": "web3d-developer",
   "lessonId": "interactive-web3d-experience-07",
-  "status": "draft",
+  "status": "review",
   "phase": 3,
   "title": {
     "en": "Phase 3 Capstone - Interactive Web3D Experience",
@@ -21,7 +21,7 @@
   },
   "difficulty": "intermediate",
   "technologies": [
-    "X3D/X3DOM"
+    "Three.js"
   ],
   "hasCode": true,
   "starterPath": "./starter",

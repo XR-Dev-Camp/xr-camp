@@ -3,12 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Phase 3 capstone: the virtual cultural exhibit from 3.1-3.6, polished into one page with an info panel per exhibit, a performance budget check, a 2D twin, and on-page attribution.">
   <title>Phase 3 Capstone - Interactive Web3D Experience - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header>
+    <p>XR Camp · Web3D · Phase 3 Capstone: Interactive Web3D Experience</p>
+    <nav aria-label="Capstone documents">
+      <ul class="doc-links" role="list">
+        <li><a href="attribution.html">Full attribution</a></li>
+        <li><a href="CHANGELOG.md">Release notes</a></li>
+        <li><a href="../starter/brief.md">Brief</a></li>
+        <li><a href="../starter/rubric.md">Rubric</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <h1>Phase 3 Capstone - Interactive Web3D Experience</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>The virtual cultural exhibit</h1>
+    <p>Five exhibits, built across 3.1 through 3.6, now on one polished page: a clay pot, a woven basket ring, and a jade stone built from primitives, joined by a fox figure and a Cesium milk truck, two real CC-licensed glTF models. Click or tap an exhibit to open its info panel, or use the Select buttons below. Each model plays its own built-in animation once it finishes loading.</p>
+    <noscript><p>This exhibit needs JavaScript and WebGL 2. The list below describes everything in it.</p></noscript>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The exhibit</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D exhibit (WebGL 2 is unavailable). Nothing is
+          broken: the list below describes everything the exhibit contains.
+        </p>
+
+        <p id="loading-status" class="loading-status" role="status"></p>
+        <progress id="loading-bar" class="loading-bar" max="100" value="0" hidden></progress>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the exhibit&hellip;</p>
+
+        <h3>The 2D twin</h3>
+        <p class="hint">This list is not only a fallback: it is the same information as the picture, in words, so it is always here, whether or not WebGL works (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Exhibit controls">
+        <fieldset>
+          <legend>1. Look around</legend>
+          <p class="hint">Drag the view with a mouse or a finger. Or focus the exhibit (press Tab) and use the arrow keys. These two buttons do the same as dragging left or right, without a mouse.</p>
+          <ul class="view-buttons" role="list">
+            <li><button type="button" id="turn-left">Turn left</button></li>
+            <li><button type="button" id="turn-right">Turn right</button></li>
+          </ul>
+          <p><button type="button" id="reset-view">Reset view</button></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Select an exhibit</legend>
+          <p class="hint">Click or tap an exhibit in the 3D view, or choose it here. This is the keyboard route into the exhibit: it does exactly the same thing, without a pointer.</p>
+          <ul class="select-buttons" id="select-buttons" role="list"></ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Info panel</legend>
+          <div id="info-panel" class="scene-text" role="status">Nothing is selected yet. Choose an exhibit above to see its details here.</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Animation</legend>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p class="hint">The jade stone turns on its own, and each model plays its own built-in animation once it loads. Nothing else moves by itself, and the camera never moves unless you move it.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Performance budget</legend>
+          <p class="hint">This capstone's budget, from the README: at most 20 draw calls and 25,000 triangles once every exhibit has loaded. Measured on the machine this lesson was written on, with a margin — see "Performance considerations" in the README.</p>
+          <dl class="budget-numbers">
+            <div><dt>Draw calls (live / budget)</dt><dd id="budget-calls">0 / 20</dd></div>
+            <div><dt>Triangles (live / budget)</dt><dd id="budget-triangles">0 / 25000</dd></div>
+          </dl>
+          <p id="budget-result" role="status">Checking…</p>
+          <details class="stats">
+            <summary>More stats</summary>
+            <dl>
+              <div><dt>Draw calls</dt><dd id="stat-calls">0</dd></div>
+              <div><dt>Triangles</dt><dd id="stat-triangles">0</dd></div>
+              <div><dt>Geometries in memory</dt><dd id="stat-geometries">0</dd></div>
+              <div><dt>Textures in memory</dt><dd id="stat-textures">0</dd></div>
+            </dl>
+          </details>
+        </fieldset>
+
+        <fieldset>
+          <legend>6. Memory</legend>
+          <p><button type="button" id="reload">Reload exhibit</button></p>
+          <p class="hint">Disposes every mesh, material, and texture, then loads both models again from scratch. Watch the Geometries and Textures counts above: if disposal works, they return to the same numbers.</p>
+        </fieldset>
+      </div>
+    </div>
+
+    <section aria-labelledby="attribution-heading">
+      <h2 id="attribution-heading">Model attribution</h2>
+      <p class="hint">Both models are official Khronos Group sample assets, used under the licences below. See also the full <a href="attribution.html">attribution page</a> and <a href="../ATTRIBUTION.md"><code>ATTRIBUTION.md</code></a>.</p>
+      <ul class="attribution-list" id="attribution-list" role="list"></ul>
+    </section>
   </main>
 </body>
 </html>
