@@ -24,4 +24,4 @@
 | 6 | [Aplicaciones web progresivas](06-progressive-web-applications/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 7 | [Colaboración en Git y código abierto](07-git-collaboration-and-open-source/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
 | 8 | [La IA como asistente de desarrollo](08-ai-as-a-development-assistant/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
-| 9 | [Proyecto final de la Fase 2 - Aplicación frontend de producción](09-production-frontend-application/README.es.md) | 18 h · 24 sesiones | ✅ Lista |
+| 9 | [Proyecto final de la Fase 2 - Aplicación frontend de producción](09-production-frontend-application/README.es.md) | 18 h · 24 sesiones · lección más larga | ✅ Lista |

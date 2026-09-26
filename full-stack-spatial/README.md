@@ -17,10 +17,10 @@
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
 | 1 | [Backend and API Foundations](01-backend-and-api-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
-| 2 | [Authentication and User Accounts](02-authentication-and-user-accounts/README.md) | 19 h · 25 sessions | ✅ Ready |
+| 2 | [Authentication and User Accounts](02-authentication-and-user-accounts/README.md) | 19 h · 25 sessions · longer lesson | ✅ Ready |
 | 3 | [Databases and Spatial Application Data](03-databases-and-spatial-application-data/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 4 | [Real-Time and Multi-User Applications](04-real-time-and-multi-user-applications/README.md) | 17 h · 23 sessions | ✅ Ready |
+| 4 | [Real-Time and Multi-User Applications](04-real-time-and-multi-user-applications/README.md) | 17 h · 23 sessions · longer lesson | ✅ Ready |
 | 5 | [Security and Privacy for Spatial Applications](05-security-and-privacy-for-spatial-applications/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 6 | [AI for Spatial Computing](06-ai-for-spatial-computing/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 7 | [Advanced PWA and Offline Spatial Delivery](07-advanced-pwa-and-offline-spatial-delivery/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](08-full-stack-spatial-application/README.md) | 25 h · 34 sessions | ✅ Ready |
+| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](08-full-stack-spatial-application/README.md) | 25 h · 34 sessions · longer lesson | ✅ Ready |

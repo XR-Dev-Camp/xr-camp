@@ -65,8 +65,8 @@ async function registerAndLogIn(username, password = 'a-very-good-password') {
   return { cookie, account: body.account, csrfToken: body.csrfToken };
 }
 
-function connectWs(cookie, room = 'review-room') {
-  return new WebSocket(`${wsUrl}?room=${room}`, { headers: { Cookie: cookie } });
+function connectWs(cookie, room = 'review-room', origin = 'http://127.0.0.1:8891') {
+  return new WebSocket(`${wsUrl}?room=${room}`, { headers: { Cookie: cookie, Origin: origin } });
 }
 
 function waitForOpen(ws) {
@@ -115,6 +115,14 @@ test('an annotation containing a script tag is stored as plain text, never marku
 
   assert.ok(!annotations[0].text.includes('<'), `stored annotation text still contains markup: ${annotations[0].text}`);
   assert.equal(annotations[0].text, 'alert(document.cookie)hello');
+});
+
+// --- Inherited from 5.4: Origin checked on the WebSocket upgrade -----------
+
+test('a WebSocket upgrade from a foreign Origin is rejected, even with a valid session cookie', async () => {
+  const alice = await registerAndLogIn(freshUsername('alice'));
+  const ws = connectWs(alice.cookie, 'review-room', 'https://evil.example');
+  await assert.rejects(waitForOpen(ws));
 });
 
 // --- Inherited from 5.5: stored XSS in chat (already fixed) -----------------

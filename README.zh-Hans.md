@@ -57,7 +57,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 3 | [CSS 基础](web-developer/03-css-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 4 | [响应式网页设计](web-developer/04-responsive-web-design/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 5 | [网页无障碍基础](web-developer/05-web-accessibility-foundations/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 6 | [JavaScript 基础](web-developer/06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 | ✅ 已完成 |
+| 6 | [JavaScript 基础](web-developer/06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 · 较长的课程 | ✅ 已完成 |
 | 7 | [开发者工具、调试与测试](web-developer/07-developer-tools-debugging-and-testing/README.zh-Hans.md) | 9 小时 · 12 次学习 | ✅ 已完成 |
 | 8 | [Git、GitHub 与发布](web-developer/08-git-github-and-publishing/README.zh-Hans.md) | 9 小时 · 12 次学习 | ✅ 已完成 |
 | 9 | [第一阶段结业项目 - Web 开发者作品集](web-developer/09-web-developer-portfolio/README.zh-Hans.md) | 15 小时 · 20 次学习 | ✅ 已完成 |
@@ -74,7 +74,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 6 | [Progressive Web Applications](frontend-engineer/06-progressive-web-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 7 | [Git Collaboration and Open Source](frontend-engineer/07-git-collaboration-and-open-source/README.zh-Hans.md) | 9 小时 · 12 次学习 | ✅ 已完成 |
 | 8 | [AI as a Development Assistant](frontend-engineer/08-ai-as-a-development-assistant/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.zh-Hans.md) | 18 小时 · 24 次学习 | ✅ 已完成 |
+| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.zh-Hans.md) | 18 小时 · 24 次学习 · 较长的课程 | ✅ 已完成 |
 
 ### 阶段 3 · 成为 Web3D 开发者
 
@@ -84,9 +84,9 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 2 | [A-Frame Foundations](web3d-developer/02-a-frame-foundations/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 3 | [Advanced A-Frame and Interaction](web3d-developer/03-advanced-a-frame-and-interaction/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 4 | [Three.js Foundations](web3d-developer/04-threejs-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
-| 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.zh-Hans.md) | 16 小时 · 22 次学习 | ✅ 已完成 |
+| 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.zh-Hans.md) | 16 小时 · 22 次学习 · 较长的课程 | ✅ 已完成 |
 | 6 | [Performance Engineering for Web3D](web3d-developer/06-performance-engineering-for-web3d/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
-| 7 | [Phase 3 Capstone - Interactive Web3D Experience](web3d-developer/07-interactive-web3d-experience/README.zh-Hans.md) | 20 小时 · 27 次学习 | ✅ 已完成 |
+| 7 | [Phase 3 Capstone - Interactive Web3D Experience](web3d-developer/07-interactive-web3d-experience/README.zh-Hans.md) | 20 小时 · 27 次学习 · 较长的课程 | ✅ 已完成 |
 
 ### 阶段 4 · 成为沉浸式开发者
 
@@ -97,20 +97,20 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 3 | [Spatial UX Design](immersive-developer/03-spatial-ux-design/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 4 | [Immersive Accessibility and Ethics](immersive-developer/04-immersive-accessibility-and-ethics/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 5 | [Spatial Audio, Media, and Presence](immersive-developer/05-spatial-audio-media-and-presence/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 6 | [Phase 4 Capstone - Immersive Web Experience](immersive-developer/06-immersive-web-experience/README.zh-Hans.md) | 22 小时 · 30 次学习 | ✅ 已完成 |
+| 6 | [Phase 4 Capstone - Immersive Web Experience](immersive-developer/06-immersive-web-experience/README.zh-Hans.md) | 22 小时 · 30 次学习 · 较长的课程 | ✅ 已完成 |
 
 ### 阶段 5 · 成为全栈空间开发者
 
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
 | 1 | [Backend and API Foundations](full-stack-spatial/01-backend-and-api-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
-| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.zh-Hans.md) | 19 小时 · 25 次学习 | ✅ 已完成 |
+| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.zh-Hans.md) | 19 小时 · 25 次学习 · 较长的课程 | ✅ 已完成 |
 | 3 | [Databases and Spatial Application Data](full-stack-spatial/03-databases-and-spatial-application-data/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
-| 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.zh-Hans.md) | 17 小时 · 23 次学习 | ✅ 已完成 |
+| 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.zh-Hans.md) | 17 小时 · 23 次学习 · 较长的课程 | ✅ 已完成 |
 | 5 | [Security and Privacy for Spatial Applications](full-stack-spatial/05-security-and-privacy-for-spatial-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 6 | [AI for Spatial Computing](full-stack-spatial/06-ai-for-spatial-computing/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 7 | [Advanced PWA and Offline Spatial Delivery](full-stack-spatial/07-advanced-pwa-and-offline-spatial-delivery/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](full-stack-spatial/08-full-stack-spatial-application/README.zh-Hans.md) | 25 小时 · 34 次学习 | ✅ 已完成 |
+| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](full-stack-spatial/08-full-stack-spatial-application/README.zh-Hans.md) | 25 小时 · 34 次学习 · 较长的课程 | ✅ 已完成 |
 
 ### 阶段 6 · 成为专业开发者
 
@@ -129,7 +129,7 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 1 | [Capstone Research and Definition](capstone/01-capstone-research-and-definition/README.zh-Hans.md) | 8 小时 · 11 次学习 | ✅ 已完成 |
 | 2 | [Experience and System Design](capstone/02-experience-and-system-design/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
 | 3 | [Capstone Prototype](capstone/03-capstone-prototype/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
-| 4 | [Capstone Production](capstone/04-capstone-production/README.zh-Hans.md) | 28 小时 · 38 次学习 | ✅ 已完成 |
+| 4 | [Capstone Production](capstone/04-capstone-production/README.zh-Hans.md) | 28 小时 · 38 次学习 · 较长的课程 | ✅ 已完成 |
 | 5 | [Testing, Launch, and Presentation](capstone/05-testing-launch-and-presentation/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 
 ## 每节课的结构

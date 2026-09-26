@@ -19,5 +19,5 @@
 | 1 | [Capstone Research and Definition](01-capstone-research-and-definition/README.zh-Hans.md) | 8 小时 · 11 次学习 | ✅ 已完成 |
 | 2 | [Experience and System Design](02-experience-and-system-design/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
 | 3 | [Capstone Prototype](03-capstone-prototype/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
-| 4 | [Capstone Production](04-capstone-production/README.zh-Hans.md) | 28 小时 · 38 次学习 | ✅ 已完成 |
+| 4 | [Capstone Production](04-capstone-production/README.zh-Hans.md) | 28 小时 · 38 次学习 · 较长的课程 | ✅ 已完成 |
 | 5 | [Testing, Launch, and Presentation](05-testing-launch-and-presentation/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |

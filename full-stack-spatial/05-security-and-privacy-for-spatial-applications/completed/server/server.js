@@ -33,7 +33,7 @@ import {
   login, logout, me, register, requireAuth, sendJson,
 } from './routes.js';
 import { parseCookies } from './cookies.js';
-import { authenticateUpgrade } from './wsAuth.js';
+import { authenticateUpgrade, checkOrigin } from './wsAuth.js';
 import { handleConnection, heartbeat } from './realtime.js';
 import { KNOWN_ROOMS, membersOf } from './rooms.js';
 
@@ -42,6 +42,10 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT) || 8890;
 const HOST = '127.0.0.1'; // never 0.0.0.0: this server is for localhost review only
 const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || `http://127.0.0.1:${PORT}`;
+const ALLOWED_WS_ORIGINS = (process.env.ALLOWED_ORIGIN || `http://127.0.0.1:${PORT}`)
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 const CLIENT_DIR = join(HERE, '..');
 
 const CONTENT_TYPES = {
@@ -179,6 +183,12 @@ const wss = new WebSocketServer({ noServer: true });
 server.on('upgrade', (req, socket, head) => {
   const { pathname, searchParams } = new URL(req.url, `http://${req.headers.host}`);
   if (pathname !== '/ws') {
+    socket.destroy();
+    return;
+  }
+
+  if (!checkOrigin(req, ALLOWED_WS_ORIGINS)) {
+    socket.write('HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n');
     socket.destroy();
     return;
   }

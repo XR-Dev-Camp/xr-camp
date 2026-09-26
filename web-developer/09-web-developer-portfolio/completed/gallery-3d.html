@@ -57,7 +57,7 @@
       <p class="actions">
         <button type="button" id="previous">Previous project</button>
         <button type="button" id="next">Next project</button>
-        <a id="open-project" href="case-study.html">Open the selected project</a>
+        <a id="open-project" class="button-link" href="case-study.html">Open the selected project</a>
       </p>
       <p id="selected" role="status"></p>
 
@@ -166,12 +166,16 @@
       canvas.setAttribute('height', 1.0);
       canvas.setAttribute('color', project.colour);
 
-      const label = document.createElement('a-text');
-      label.setAttribute('value', project.name);
-      label.setAttribute('align', 'center');
-      label.setAttribute('color', '#1d1b1a');
-      label.setAttribute('width', 1.5);
-      label.setAttribute('wrap-count', 16);
+      // A plain <a-entity text="..."> instead of <a-text align="...">: pa11y
+      // reads a bare align attribute as the obsolete HTML one (H49).
+      const label = document.createElement('a-entity');
+      label.setAttribute('text', {
+        value: project.name,
+        align: 'center',
+        color: '#1d1b1a',
+        width: 1.5,
+        wrapCount: 16,
+      });
       label.setAttribute('position', '0 0 0.05');
 
       panel.append(frame, canvas, label);

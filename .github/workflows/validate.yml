@@ -74,9 +74,12 @@ jobs:
           node-version: '24'
       - name: Install pa11y
         run: npm install --no-save pa11y@8
-      - name: Audit every completed/index.html
+      - name: Audit every completed/**/*.html
         # A reference solution is what learners copy. An inaccessible one
         # teaches inaccessibility at scale, so this gate is non-negotiable.
+        # Every HTML page under completed/, not just index.html: secondary
+        # pages (3d-moment, audit, gallery-3d, nested example lessons, ...)
+        # are reference solutions too.
         # pa11y cannot see inside a 3D canvas: a scene can pass here and still be
         # unusable. The manual 3D/XR checks (docs/en/xr-accessibility.md) cover
         # that gap, and validate-projects.mjs requires them to be declared.
@@ -85,7 +88,7 @@ jobs:
           # --no-sandbox: GitHub's Ubuntu runners block Chrome's sandbox.
           # SwiftShader: runners have no GPU, and 3D lessons need WebGL to load.
           echo '{ "chromeLaunchConfig": { "args": ["--no-sandbox", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"] }, "timeout": 120000 }' > /tmp/pa11y.json
-          for f in $(find . -path '*/completed/index.html' | sort); do
+          for f in $(find . -path '*/completed/*.html' | sort); do
             echo "--- $f"
             timeout 180 npx pa11y --config /tmp/pa11y.json --standard WCAG2AA --reporter cli "file://$PWD/${f#./}" || status=1
           done

@@ -14,10 +14,12 @@
     <!-- In your own site this page is join.html, next to your home page. Here, "Home"
          points to the finished site from Course 1.1. -->
     <p><a href="../../01-html-foundations/completed/index.html">Riverside Community Centre</a></p>
+    <!-- Inline styles below give each nav link at least 24 by 24 CSS px
+         (WCAG 2.5.8), so a touch tap does not land on the wrong link. -->
     <nav aria-label="Main">
       <ul>
-        <li><a href="../../01-html-foundations/completed/index.html">Home</a></li>
-        <li><a href="index.html" aria-current="page">Join a programme</a></li>
+        <li><a href="../../01-html-foundations/completed/index.html" style="display: inline-block; padding: 0.5em 0.25em;">Home</a></li>
+        <li><a href="index.html" aria-current="page" style="display: inline-block; padding: 0.5em 0.25em;">Join a programme</a></li>
       </ul>
     </nav>
   </header>
@@ -79,7 +81,7 @@
       <p>
         <label for="needs">Is there anything we can do to make your visit easier?</label><br>
         <span id="needs-hint">For example, step-free access, a quiet space, or a Spanish-speaking volunteer. Only share what you are comfortable sharing.</span><br>
-        <textarea id="needs" name="needs" rows="4" cols="40" aria-describedby="needs-hint"></textarea>
+        <textarea id="needs" name="needs" rows="4" cols="40" style="max-width: 100%" aria-describedby="needs-hint"></textarea>
       </p>
 
       <p>
@@ -109,7 +111,7 @@
       <p>
         <label for="comments">What could we do better?</label><br>
         <span id="comments-hint">Up to 500 characters. You do not need to give your name.</span><br>
-        <textarea id="comments" name="comments" rows="5" cols="40" maxlength="500" aria-describedby="comments-hint"></textarea>
+        <textarea id="comments" name="comments" rows="5" cols="40" style="max-width: 100%" maxlength="500" aria-describedby="comments-hint"></textarea>
       </p>
 
       <p><button type="submit">Send feedback</button></p>

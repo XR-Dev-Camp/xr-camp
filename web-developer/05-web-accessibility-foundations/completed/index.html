@@ -15,10 +15,13 @@
     button { font: inherit; padding: 0.5rem 1rem; background: #5b2a86; color: #fff; border: 2px solid #5b2a86; border-radius: 0.25rem; cursor: pointer; }
     input { font: inherit; padding: 0.4rem; border: 2px solid #8a8398; border-radius: 0.25rem; }
     :focus-visible { outline: 3px solid #d62f6b; outline-offset: 3px; }   /* 13. visible focus */
-    table { border-collapse: collapse; }
+    table { border-collapse: collapse; width: 100%; }
     th, td { border: 1px solid #c9c4d4; padding: 0.4rem 0.6rem; text-align: left; }
     caption { text-align: left; font-weight: 700; }
     img { max-width: 100%; height: auto; }
+    /* 16. Reflow: on a narrow screen the table scrolls in its own box
+       instead of forcing the whole page to scroll sideways. */
+    .table-scroll { overflow-x: auto; }
   </style>
 </head>
 <body>
@@ -38,19 +41,23 @@
     <p><img src="divider.svg" alt="" width="600" height="20"></p>
 
     <h2>This month</h2>
-    <table>                                                             <!-- 8. caption and headers -->
-      <caption>Events this month, and whether places are left</caption>
-      <thead>
-        <tr><th scope="col">Event</th><th scope="col">Day</th><th scope="col">Time</th><th scope="col">Places</th></tr>
-      </thead>
-      <tbody>
-        <!-- 7. "Full" is written in words, not shown only in red. -->
-        <tr><th scope="row">Coding for beginners</th><td>Saturday</td><td>10am</td><td>Places left</td></tr>
-        <tr><th scope="row">Community lunch</th><td>Sunday</td><td>1pm</td><td>Full</td></tr>
-        <tr><th scope="row">Homework club open day</th><td>Wednesday</td><td>4pm</td><td>Places left</td></tr>
-        <tr><th scope="row">Craft fair</th><td>Saturday</td><td>11am</td><td>Full</td></tr>
-      </tbody>
-    </table>
+    <!-- 16. Wrapping the table in a focusable, scrollable box keeps it usable
+         at narrow widths without the whole page scrolling sideways. -->
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Events this month, scrollable table">
+      <table>                                                             <!-- 8. caption and headers -->
+        <caption>Events this month, and whether places are left</caption>
+        <thead>
+          <tr><th scope="col">Event</th><th scope="col">Day</th><th scope="col">Time</th><th scope="col">Places</th></tr>
+        </thead>
+        <tbody>
+          <!-- 7. "Full" is written in words, not shown only in red. -->
+          <tr><th scope="row">Coding for beginners</th><td>Saturday</td><td>10am</td><td>Places left</td></tr>
+          <tr><th scope="row">Community lunch</th><td>Sunday</td><td>1pm</td><td>Full</td></tr>
+          <tr><th scope="row">Homework club open day</th><td>Wednesday</td><td>4pm</td><td>Places left</td></tr>
+          <tr><th scope="row">Craft fair</th><td>Saturday</td><td>11am</td><td>Full</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <h2>Register</h2>
     <!-- 9. The link says where it goes, and goes somewhere real. -->

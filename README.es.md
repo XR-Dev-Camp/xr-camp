@@ -57,7 +57,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | 3 | [Fundamentos de CSS](web-developer/03-css-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
 | 4 | [Diseño web adaptable](web-developer/04-responsive-web-design/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
 | 5 | [Fundamentos de accesibilidad web](web-developer/05-web-accessibility-foundations/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
-| 6 | [Fundamentos de JavaScript](web-developer/06-javascript-foundations/README.es.md) | 16 h · 22 sesiones | ✅ Lista |
+| 6 | [Fundamentos de JavaScript](web-developer/06-javascript-foundations/README.es.md) | 16 h · 22 sesiones · lección más larga | ✅ Lista |
 | 7 | [Herramientas para desarrolladores, depuración y pruebas](web-developer/07-developer-tools-debugging-and-testing/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
 | 8 | [Git, GitHub y publicación](web-developer/08-git-github-and-publishing/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
 | 9 | [Proyecto final de la Fase 1 - Portafolio de desarrolladora web](web-developer/09-web-developer-portfolio/README.es.md) | 15 h · 20 sesiones | ✅ Lista |
@@ -74,7 +74,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | 6 | [Aplicaciones web progresivas](frontend-engineer/06-progressive-web-applications/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 7 | [Colaboración en Git y código abierto](frontend-engineer/07-git-collaboration-and-open-source/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
 | 8 | [La IA como asistente de desarrollo](frontend-engineer/08-ai-as-a-development-assistant/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
-| 9 | [Proyecto final de la Fase 2 - Aplicación frontend de producción](frontend-engineer/09-production-frontend-application/README.es.md) | 18 h · 24 sesiones | ✅ Lista |
+| 9 | [Proyecto final de la Fase 2 - Aplicación frontend de producción](frontend-engineer/09-production-frontend-application/README.es.md) | 18 h · 24 sesiones · lección más larga | ✅ Lista |
 
 ### Fase 3 · Conviértete en desarrolladora Web3D
 
@@ -84,9 +84,9 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | 2 | [A-Frame Foundations](web3d-developer/02-a-frame-foundations/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 3 | [Advanced A-Frame and Interaction](web3d-developer/03-advanced-a-frame-and-interaction/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
 | 4 | [Three.js Foundations](web3d-developer/04-threejs-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
-| 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.es.md) | 16 h · 22 sesiones | ✅ Lista |
+| 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.es.md) | 16 h · 22 sesiones · lección más larga | ✅ Lista |
 | 6 | [Performance Engineering for Web3D](web3d-developer/06-performance-engineering-for-web3d/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
-| 7 | [Phase 3 Capstone - Interactive Web3D Experience](web3d-developer/07-interactive-web3d-experience/README.es.md) | 20 h · 27 sesiones | ✅ Lista |
+| 7 | [Phase 3 Capstone - Interactive Web3D Experience](web3d-developer/07-interactive-web3d-experience/README.es.md) | 20 h · 27 sesiones · lección más larga | ✅ Lista |
 
 ### Fase 4 · Conviértete en desarrolladora inmersiva
 
@@ -97,20 +97,20 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | 3 | [Spatial UX Design](immersive-developer/03-spatial-ux-design/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 4 | [Immersive Accessibility and Ethics](immersive-developer/04-immersive-accessibility-and-ethics/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 5 | [Spatial Audio, Media, and Presence](immersive-developer/05-spatial-audio-media-and-presence/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
-| 6 | [Phase 4 Capstone - Immersive Web Experience](immersive-developer/06-immersive-web-experience/README.es.md) | 22 h · 30 sesiones | ✅ Lista |
+| 6 | [Phase 4 Capstone - Immersive Web Experience](immersive-developer/06-immersive-web-experience/README.es.md) | 22 h · 30 sesiones · lección más larga | ✅ Lista |
 
 ### Fase 5 · Conviértete en desarrolladora espacial full-stack
 
 | # | Lección | Tiempo | Estado |
 | --- | --- | --- | --- |
 | 1 | [Backend and API Foundations](full-stack-spatial/01-backend-and-api-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
-| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.es.md) | 19 h · 25 sesiones | ✅ Lista |
+| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.es.md) | 19 h · 25 sesiones · lección más larga | ✅ Lista |
 | 3 | [Databases and Spatial Application Data](full-stack-spatial/03-databases-and-spatial-application-data/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
-| 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.es.md) | 17 h · 23 sesiones | ✅ Lista |
+| 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.es.md) | 17 h · 23 sesiones · lección más larga | ✅ Lista |
 | 5 | [Security and Privacy for Spatial Applications](full-stack-spatial/05-security-and-privacy-for-spatial-applications/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 6 | [AI for Spatial Computing](full-stack-spatial/06-ai-for-spatial-computing/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
 | 7 | [Advanced PWA and Offline Spatial Delivery](full-stack-spatial/07-advanced-pwa-and-offline-spatial-delivery/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
-| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](full-stack-spatial/08-full-stack-spatial-application/README.es.md) | 25 h · 34 sesiones | ✅ Lista |
+| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](full-stack-spatial/08-full-stack-spatial-application/README.es.md) | 25 h · 34 sesiones · lección más larga | ✅ Lista |
 
 ### Fase 6 · Conviértete en desarrolladora profesional
 
@@ -129,7 +129,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | 1 | [Capstone Research and Definition](capstone/01-capstone-research-and-definition/README.es.md) | 8 h · 11 sesiones | ✅ Lista |
 | 2 | [Experience and System Design](capstone/02-experience-and-system-design/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
 | 3 | [Capstone Prototype](capstone/03-capstone-prototype/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
-| 4 | [Capstone Production](capstone/04-capstone-production/README.es.md) | 28 h · 38 sesiones | ✅ Lista |
+| 4 | [Capstone Production](capstone/04-capstone-production/README.es.md) | 28 h · 38 sesiones · lección más larga | ✅ Lista |
 | 5 | [Testing, Launch, and Presentation](capstone/05-testing-launch-and-presentation/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 
 ## Cómo funciona cada lección

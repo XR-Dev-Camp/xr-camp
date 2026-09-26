@@ -77,9 +77,14 @@ Rather than a second worked build (which would only repeat Stage 3's pattern at 
 | 1 | Setup; re-read your Stage 2 design and Stage 3 test log | A build plan grounded in what you already proved works |
 | 2–3 | Step 1: the build checklist (TODOs 1–2) | A checklist broken into small, checkable tasks |
 | 4 | Step 1, continued (TODO 3) | Tasks ordered so early ones unblock later ones |
-| 5–20 | Step 2: build the core experience, one checklist item at a time | Each session ends with one more checked-off, visibly working item |
+| 5–8 | Step 2a: build the scene / core experience items from your checklist | The 3D scene loads and shows its main content, even if interaction is not finished yet |
+| 9–12 | Step 2b: build the data items from your checklist | Real content (your own scenes, models, or records) is loading into the experience, not placeholder data |
+| 13–16 | Step 2c: build the accessibility items from your checklist | Keyboard control, a scene description, and a 2D fallback all work for the parts built so far |
+| 17–20 | Step 2d: build the performance items from your checklist | The build stays inside your Stage 2 budget as each new piece is added, not fixed later in one pass |
 | 21 | Mid-build review: re-test against your Stage 2 accessibility and performance plans | A list of any regressions to fix before continuing |
-| 22–30 | Step 2, continued: remaining checklist items | The full experience working end to end |
+| 22–25 | Step 2e: remaining scene and data checklist items, plus anything the mid-build review found | Every planned feature exists in some working form |
+| 26–28 | Step 2f: a second pass on accessibility and performance, now that the whole experience exists | Issues that only show up once features interact with each other are fixed |
+| 29–30 | Step 2g: edge cases and rough edges (empty states, errors, slow connections) | The experience holds up outside the happy path you tested first |
 | 31 | Step 3: the user guide (TODOs 4–5) | Instructions a real user could follow unaided |
 | 32 | Step 4: the README (TODOs 6–7) | A README a stranger could use to run your project locally |
 | 33 | Step 5: the changelog (TODO 8) | A dated record of what changed, and why |
@@ -95,7 +100,19 @@ Open [`starter/build-checklist.md`](starter/build-checklist.md). Break your Stag
 
 ### Step 2: build
 
-This is not a single walkthrough step: it is most of the stage. Work through your checklist, one item at a time, testing as you go the way Stage 3 taught you — keyboard, screen reader, reduced motion, and performance, applied continuously rather than saved for the end. Reuse the accessible-3D-page pattern and pinned library versions from Stage 3 and from `web3d-developer/07` wherever your capstone needs them.
+This is not a single walkthrough step: it is most of the stage, spread over 25 sessions (5–20 and 22–30 above). Work through your checklist, one item at a time, testing as you go the way Stage 3 taught you — keyboard, screen reader, reduced motion, and performance, applied continuously rather than saved for the end. Reuse the accessible-3D-page pattern and pinned library versions from Stage 3 and from `web3d-developer/07` wherever your capstone needs them.
+
+Every capstone is different, so this stage cannot hand you a fixed list of tasks the way earlier lessons could — but "one checklist item at a time" should not mean guessing what a session-sized item looks like. Work through your own `build-checklist.md` (Step 1) in this order, one group at a time, so each session still ends with something visibly working:
+
+- **Step 2a: Scene / core experience (sessions 5–8).** Get the 3D scene itself on screen with its main content, even before every interaction works. Example checklist items: "the scene loads and shows the main exhibit space," "the camera starts at the position your Stage 2 design specifies," "the first interactive object responds to a click."
+- **Step 2b: Data (sessions 9–12).** Replace placeholder content with your own real data. Example checklist items: "scene content loads from your own JSON/data file, not hard-coded values," "adding a new item to the data file adds it to the scene with no code change," "empty or malformed data shows a message instead of a broken scene."
+- **Step 2c: Accessibility (sessions 13–16).** Build the accessibility features for what already exists, rather than saving them for the end. Example checklist items: "`#scene-description` describes the current state in words," "every 3D interaction built so far has a keyboard route," "`prefers-reduced-motion` is honoured by every animation added so far."
+- **Step 2d: Performance (sessions 17–20).** Check the build against your Stage 2 budget as you go, not only at the end. Example checklist items: "total asset size is measured and under budget," "the scene holds its target frame rate with everything built so far loaded," "a slow-network test (see Stage 2's plan) still shows a usable page."
+- **Step 2e: Remaining items (sessions 22–25).** Finish whatever Steps 2a–2d and the mid-build review (session 21) left outstanding, so every planned feature exists in some working form.
+- **Step 2f: Second accessibility and performance pass (sessions 26–28).** Some issues only appear once every feature is present together — a keyboard trap between two features that were each fine alone, or a frame-rate drop only visible with everything loaded. Re-test the whole experience, not just what changed most recently.
+- **Step 2g: Edge cases (sessions 29–30).** Example checklist items: "an empty or first-run state is handled, not just the populated one," "a failed data load shows an error message instead of a silent blank scene," "the experience still works (perhaps in a reduced form) on a slow connection."
+
+If a group's sessions run out before its items are done, borrow from the buffer already built into sessions 22–30 rather than skipping accessibility or performance — both are graded by `tests/checklist.md` in Stage 5, the same as any feature.
 
 ### Step 3: the user guide (TODOs 4–5)
 

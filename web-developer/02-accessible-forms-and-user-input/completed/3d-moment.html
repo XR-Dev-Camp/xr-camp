@@ -20,7 +20,10 @@
     <p>The form controls you just learned can control 3D. Change the shape, colour, and size, and the object changes.</p>
 
     <div class="layout">
-      <form id="controls">
+      <!-- A plain div, not a form: these controls update the scene live and
+           have nothing to submit. A <form> with no submit button fails
+           WCAG 2.2 (H32): a keyboard user would have no way to send it. -->
+      <div id="controls">
         <p>
           <label for="shape">Shape</label><br>
           <select id="shape">
@@ -38,7 +41,7 @@
           <label for="size">Size</label><br>
           <input id="size" type="range" min="0.5" max="2" step="0.1" value="1">
         </p>
-      </form>
+      </div>
 
       <div>
         <!-- The description updates with the scene, and is announced when it changes. -->

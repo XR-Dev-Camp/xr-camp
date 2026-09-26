@@ -36,7 +36,7 @@ button[aria-pressed="true"]::before { content: "✓ "; }
 select { font: inherit; padding: var(--space-2); border: 2px solid #8a8398; border-radius: var(--radius); background: var(--color-surface); }
 
 /* The lab: the 3D view beside the controls on wide screens, above them on phones. */
-.lab { display: grid; gap: var(--space-4); }
+.lab { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
 @media (min-width: 60rem) { .lab { grid-template-columns: minmax(0, 1fr) 24rem; align-items: start; } .view { position: sticky; top: var(--space-3); } }
 .canvas-box { width: 100%; aspect-ratio: 4 / 3; background: #eef4ff; border: 1px solid var(--color-line); border-radius: var(--radius); overflow: hidden; }
 .canvas-box canvas { display: block; width: 100% !important; height: 100% !important; }

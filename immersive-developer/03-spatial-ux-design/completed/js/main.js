@@ -107,11 +107,13 @@ if (!supportsWebGL2()) {
   });
 
   for (const waypoint of WAYPOINTS) {
+    const item = document.createElement('li');
     const button = document.createElement('button');
     button.type = 'button';
     button.textContent = `${waypoint.label} (${waypoint.distance} m)`;
     button.addEventListener('click', () => app.teleportTo(waypoint.id));
-    $('waypoint-buttons').append(button);
+    item.append(button);
+    $('waypoint-buttons').append(item);
   }
 
   $('smooth-toggle').addEventListener('change', (event) => app.setSmooth(event.target.checked));

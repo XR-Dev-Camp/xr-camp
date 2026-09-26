@@ -21,7 +21,7 @@
 | 3 | [CSS 基础](03-css-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 4 | [响应式网页设计](04-responsive-web-design/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 5 | [网页无障碍基础](05-web-accessibility-foundations/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 6 | [JavaScript 基础](06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 | ✅ 已完成 |
+| 6 | [JavaScript 基础](06-javascript-foundations/README.zh-Hans.md) | 16 小时 · 22 次学习 · 较长的课程 | ✅ 已完成 |
 | 7 | [开发者工具、调试与测试](07-developer-tools-debugging-and-testing/README.zh-Hans.md) | 9 小时 · 12 次学习 | ✅ 已完成 |
 | 8 | [Git、GitHub 与发布](08-git-github-and-publishing/README.zh-Hans.md) | 9 小时 · 12 次学习 | ✅ 已完成 |
 | 9 | [第一阶段结业项目 - Web 开发者作品集](09-web-developer-portfolio/README.zh-Hans.md) | 15 小时 · 20 次学习 | ✅ 已完成 |

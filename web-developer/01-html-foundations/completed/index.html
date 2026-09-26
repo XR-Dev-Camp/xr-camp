@@ -70,12 +70,17 @@
 
       aria-label distinguishes this landmark from the footer navigation below.
       When a page has two landmarks of the same type, each needs a name.
+
+      Each link below also carries a small inline style, another exception to
+      "no CSS on this page": WCAG 2.5.8 asks stand-alone targets like nav
+      links (not inline links inside a sentence) for at least 24 by 24 CSS
+      pixels, so a touch-screen tap does not land on the wrong link.
     -->
     <ul>
-      <li><a href="#about">About us</a></li>
-      <li><a href="#hours">Opening hours</a></li>
-      <li><a href="#programmes">Programmes</a></li>
-      <li><a href="#visit">Visit and contact</a></li>
+      <li><a href="#about" style="display: inline-block; padding: 0.5em 0.25em;">About us</a></li>
+      <li><a href="#hours" style="display: inline-block; padding: 0.5em 0.25em;">Opening hours</a></li>
+      <li><a href="#programmes" style="display: inline-block; padding: 0.5em 0.25em;">Programmes</a></li>
+      <li><a href="#visit" style="display: inline-block; padding: 0.5em 0.25em;">Visit and contact</a></li>
     </ul>
   </nav>
 
@@ -227,7 +232,15 @@
         play the media. Always provide another route to the information.
       -->
       <h3>Welcome video</h3>
-      <video controls width="640" poster="../assets/video-poster.jpg">
+      <!--
+        style="max-width: 100%; height: auto" keeps the video inside a narrow
+        screen instead of forcing a horizontal scrollbar. This is the one
+        inline style on this page: everything else here really is unstyled
+        HTML, but a fixed pixel width on media is a special case that breaks
+        small screens, so a minimal responsive rule for it is worth the
+        exception.
+      -->
+      <video controls width="640" style="max-width: 100%; height: auto" poster="../assets/video-poster.jpg">
         <source src="../assets/welcome.mp4" type="video/mp4">
         <track kind="captions"
                src="../assets/welcome-captions.vtt"
@@ -294,8 +307,8 @@
   <footer>
     <nav aria-label="Footer">
       <ul>
-        <li><a href="#main">Back to top</a></li>
-        <li><a href="https://example.gov.uk/accessibility">Accessibility statement</a></li>
+        <li><a href="#main" style="display: inline-block; padding: 0.5em 0.25em;">Back to top</a></li>
+        <li><a href="https://example.gov.uk/accessibility" style="display: inline-block; padding: 0.5em 0.25em;">Accessibility statement</a></li>
       </ul>
     </nav>
 

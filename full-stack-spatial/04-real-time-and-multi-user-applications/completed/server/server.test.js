@@ -62,9 +62,12 @@ async function registerAndLogIn(username, password = 'a-very-good-password') {
 }
 
 // Opens a WebSocket the way a browser would, except a browser attaches its
-// cookies invisibly and this has to do it by hand (see the file comment).
-function connectWs(cookie, room = 'main-hall') {
-  return new WebSocket(`${wsUrl}?room=${room}`, { headers: { Cookie: cookie } });
+// cookies (and its Origin header) invisibly, and this has to do both by
+// hand (see the file comment). The default Origin matches server.js's own
+// ALLOWED_ORIGIN default, so tests that are not specifically about Origin
+// checking do not have to think about it.
+function connectWs(cookie, room = 'main-hall', origin = 'http://127.0.0.1:8880') {
+  return new WebSocket(`${wsUrl}?room=${room}`, { headers: { Cookie: cookie, Origin: origin } });
 }
 
 function waitForOpen(ws) {
@@ -98,6 +101,23 @@ function collectMessages(ws, count) {
 
 test('a WebSocket upgrade with no session cookie is rejected before it ever opens', async () => {
   const ws = new WebSocket(wsUrl); // no Cookie header at all
+  await assert.rejects(waitForOpen(ws));
+});
+
+test('a WebSocket upgrade from a foreign Origin is rejected, even with a valid session cookie', async () => {
+  // This is the cross-site WebSocket hijacking (CSWSH) case: a malicious
+  // page on another origin holds a visitor's cookie (the browser attaches
+  // it automatically) but cannot forge a trusted Origin header, so the
+  // server must reject the upgrade on Origin alone, before it even looks at
+  // the cookie.
+  const { cookie } = await registerAndLogIn(freshUsername());
+  const ws = connectWs(cookie, 'main-hall', 'https://evil.example');
+  await assert.rejects(waitForOpen(ws));
+});
+
+test('a WebSocket upgrade with no Origin header at all is rejected', async () => {
+  const { cookie } = await registerAndLogIn(freshUsername());
+  const ws = new WebSocket(`${wsUrl}?room=main-hall`, { headers: { Cookie: cookie } });
   await assert.rejects(waitForOpen(ws));
 });
 

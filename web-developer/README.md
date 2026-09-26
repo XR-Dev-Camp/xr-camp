@@ -21,7 +21,7 @@
 | 3 | [CSS Foundations](03-css-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 4 | [Responsive Web Design](04-responsive-web-design/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 5 | [Web Accessibility Foundations](05-web-accessibility-foundations/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 6 | [JavaScript Foundations](06-javascript-foundations/README.md) | 16 h · 22 sessions | ✅ Ready |
+| 6 | [JavaScript Foundations](06-javascript-foundations/README.md) | 16 h · 22 sessions · longer lesson | ✅ Ready |
 | 7 | [Developer Tools, Debugging, and Testing](07-developer-tools-debugging-and-testing/README.md) | 9 h · 12 sessions | ✅ Ready |
 | 8 | [Git, GitHub, and Publishing](08-git-github-and-publishing/README.md) | 9 h · 12 sessions | ✅ Ready |
 | 9 | [Phase 1 Capstone - Web Developer Portfolio](09-web-developer-portfolio/README.md) | 15 h · 20 sessions | ✅ Ready |

@@ -57,7 +57,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | 3 | [CSS Foundations](web-developer/03-css-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 4 | [Responsive Web Design](web-developer/04-responsive-web-design/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 5 | [Web Accessibility Foundations](web-developer/05-web-accessibility-foundations/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.md) | 16 h · 22 sessions | ✅ Ready |
+| 6 | [JavaScript Foundations](web-developer/06-javascript-foundations/README.md) | 16 h · 22 sessions · longer lesson | ✅ Ready |
 | 7 | [Developer Tools, Debugging, and Testing](web-developer/07-developer-tools-debugging-and-testing/README.md) | 9 h · 12 sessions | ✅ Ready |
 | 8 | [Git, GitHub, and Publishing](web-developer/08-git-github-and-publishing/README.md) | 9 h · 12 sessions | ✅ Ready |
 | 9 | [Phase 1 Capstone - Web Developer Portfolio](web-developer/09-web-developer-portfolio/README.md) | 15 h · 20 sessions | ✅ Ready |
@@ -74,7 +74,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | 6 | [Progressive Web Applications](frontend-engineer/06-progressive-web-applications/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 7 | [Git Collaboration and Open Source](frontend-engineer/07-git-collaboration-and-open-source/README.md) | 9 h · 12 sessions | ✅ Ready |
 | 8 | [AI as a Development Assistant](frontend-engineer/08-ai-as-a-development-assistant/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.md) | 18 h · 24 sessions | ✅ Ready |
+| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.md) | 18 h · 24 sessions · longer lesson | ✅ Ready |
 
 ### Phase 3 · Become a Web3D Developer
 
@@ -84,9 +84,9 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | 2 | [A-Frame Foundations](web3d-developer/02-a-frame-foundations/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 3 | [Advanced A-Frame and Interaction](web3d-developer/03-advanced-a-frame-and-interaction/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 4 | [Three.js Foundations](web3d-developer/04-threejs-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
-| 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.md) | 16 h · 22 sessions | ✅ Ready |
+| 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.md) | 16 h · 22 sessions · longer lesson | ✅ Ready |
 | 6 | [Performance Engineering for Web3D](web3d-developer/06-performance-engineering-for-web3d/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 7 | [Phase 3 Capstone - Interactive Web3D Experience](web3d-developer/07-interactive-web3d-experience/README.md) | 20 h · 27 sessions | ✅ Ready |
+| 7 | [Phase 3 Capstone - Interactive Web3D Experience](web3d-developer/07-interactive-web3d-experience/README.md) | 20 h · 27 sessions · longer lesson | ✅ Ready |
 
 ### Phase 4 · Become an Immersive Developer
 
@@ -97,20 +97,20 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | 3 | [Spatial UX Design](immersive-developer/03-spatial-ux-design/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 4 | [Immersive Accessibility and Ethics](immersive-developer/04-immersive-accessibility-and-ethics/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 5 | [Spatial Audio, Media, and Presence](immersive-developer/05-spatial-audio-media-and-presence/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 6 | [Phase 4 Capstone - Immersive Web Experience](immersive-developer/06-immersive-web-experience/README.md) | 22 h · 30 sessions | ✅ Ready |
+| 6 | [Phase 4 Capstone - Immersive Web Experience](immersive-developer/06-immersive-web-experience/README.md) | 22 h · 30 sessions · longer lesson | ✅ Ready |
 
 ### Phase 5 · Become a Full-Stack Spatial Developer
 
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
 | 1 | [Backend and API Foundations](full-stack-spatial/01-backend-and-api-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
-| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.md) | 19 h · 25 sessions | ✅ Ready |
+| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.md) | 19 h · 25 sessions · longer lesson | ✅ Ready |
 | 3 | [Databases and Spatial Application Data](full-stack-spatial/03-databases-and-spatial-application-data/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.md) | 17 h · 23 sessions | ✅ Ready |
+| 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.md) | 17 h · 23 sessions · longer lesson | ✅ Ready |
 | 5 | [Security and Privacy for Spatial Applications](full-stack-spatial/05-security-and-privacy-for-spatial-applications/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 6 | [AI for Spatial Computing](full-stack-spatial/06-ai-for-spatial-computing/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 7 | [Advanced PWA and Offline Spatial Delivery](full-stack-spatial/07-advanced-pwa-and-offline-spatial-delivery/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](full-stack-spatial/08-full-stack-spatial-application/README.md) | 25 h · 34 sessions | ✅ Ready |
+| 8 | [Phase 5 Capstone - Full-Stack Spatial Application](full-stack-spatial/08-full-stack-spatial-application/README.md) | 25 h · 34 sessions · longer lesson | ✅ Ready |
 
 ### Phase 6 · Become a Professional Developer
 
@@ -129,7 +129,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | 1 | [Capstone Research and Definition](capstone/01-capstone-research-and-definition/README.md) | 8 h · 11 sessions | ✅ Ready |
 | 2 | [Experience and System Design](capstone/02-experience-and-system-design/README.md) | 10 h · 14 sessions | ✅ Ready |
 | 3 | [Capstone Prototype](capstone/03-capstone-prototype/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 4 | [Capstone Production](capstone/04-capstone-production/README.md) | 28 h · 38 sessions | ✅ Ready |
+| 4 | [Capstone Production](capstone/04-capstone-production/README.md) | 28 h · 38 sessions · longer lesson | ✅ Ready |
 | 5 | [Testing, Launch, and Presentation](capstone/05-testing-launch-and-presentation/README.md) | 12 h · 16 sessions | ✅ Ready |
 
 ## How every lesson works

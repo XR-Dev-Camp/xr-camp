@@ -21,4 +21,4 @@
 | 3 | [Spatial UX Design](03-spatial-ux-design/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 4 | [Immersive Accessibility and Ethics](04-immersive-accessibility-and-ethics/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 5 | [Spatial Audio, Media, and Presence](05-spatial-audio-media-and-presence/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 6 | [Phase 4 Capstone - Immersive Web Experience](06-immersive-web-experience/README.md) | 22 h · 30 sessions | ✅ Ready |
+| 6 | [Phase 4 Capstone - Immersive Web Experience](06-immersive-web-experience/README.md) | 22 h · 30 sessions · longer lesson | ✅ Ready |

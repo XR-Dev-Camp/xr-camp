@@ -20,7 +20,7 @@
     <p>Audited by Ana. Tested with the keyboard only, NVDA with Firefox, VoiceOver on an iPhone, zoom to 200%, and the axe DevTools and WAVE browser extensions. Before: <a href="../starter/index.html">the original page</a>. After: <a href="index.html">the repaired page</a>.</p>
 
     <h2>Summary</h2>
-    <p>I found 15 problems. The most serious: the Send "button" could not be used with a keyboard, the email field had no label, and the moving banner could not be stopped. The automated tools found only some of them; I found the rest by testing with the keyboard, a screen reader, and my eyes.</p>
+    <p>I found 16 problems. The most serious: the Send "button" could not be used with a keyboard, the email field had no label, and the moving banner could not be stopped. The automated tools found only some of them; I found the rest by testing with the keyboard, a screen reader, and my eyes.</p>
 
     <h2>Findings</h2>
     <div class="table-wrap" role="region" aria-labelledby="findings" tabindex="0">
@@ -45,6 +45,7 @@
           <tr><th scope="row">13</th><td>Focus outline removed</td><td>2.4.7</td><td>Keyboard users cannot see where they are</td><td>A clear <code>:focus-visible</code> outline</td></tr>
           <tr><th scope="row">14</th><td>Grey small print, contrast about 2:1</td><td>1.4.3</td><td>People with low vision; anyone in sunlight</td><td>Darker text: 8.5:1</td></tr>
           <tr><th scope="row">15</th><td>No landmarks, no skip link</td><td>1.3.1, 2.4.1</td><td>Screen-reader and keyboard users</td><td>A <code>main</code> landmark and a skip link</td></tr>
+          <tr><th scope="row">16</th><td>Table forces the whole page to scroll sideways at narrow widths</td><td>1.4.10</td><td>Low-vision and mobile users zoomed in or on a small screen</td><td>A focusable, scrollable wrapper around the table</td></tr>
         </tbody>
       </table>
     </div>
