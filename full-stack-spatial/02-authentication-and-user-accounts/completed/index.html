@@ -3,12 +3,234 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Authentication and User Accounts - XR Camp reference solution</title>
+  <meta name="description" content="A learning prototype for account sign-up, sign-in, roles, and privacy: create an account to save your own exhibit settings, and see the same small Node.js API fall back gracefully when it is not running.">
+  <title>Authentication and User Accounts - XR Camp</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Checked once, early, so js/main.js can read it without calling
+    // matchMedia itself. Only used to pick a sensible first-run default:
+    // once a signed-in account has saved a choice, that choice always wins.
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <!-- three.js, pinned to the version in versions.json (the same import map
+       every lesson uses). -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Full-Stack Spatial · Authentication and User Accounts</p></header>
   <main>
-    <h1>Authentication and User Accounts</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Sign in to make the exhibit yours</h1>
+    <p>Course 5.1 built an exhibit settings API anyone could change. This lesson gives every learner their own account, so <strong>your</strong> settings are yours: a password only you know protects them, and a curator role can manage a note everyone sees without being able to touch anyone's personal settings. This is a learning prototype: read <a href="#learner-notice">the notice below</a> before reusing any of it.</p>
+    <noscript><p>This page needs JavaScript to sign in, save settings, and show the exhibit.</p></noscript>
+
+    <p id="status" class="status-banner" role="status"></p>
+
+    <section id="account-section" aria-labelledby="account-heading">
+      <h2 id="account-heading">Your account</h2>
+
+      <div id="signed-out-view">
+        <div class="account-forms">
+          <form id="register-form">
+            <fieldset>
+              <legend>Create an account</legend>
+              <p class="hint" id="register-hint">No symbol or number is required. A longer password (10 characters or more) matters more than a complicated one.</p>
+              <p>
+                <label for="register-username">Username</label><br>
+                <input id="register-username" name="username" autocomplete="username" required minlength="3" maxlength="32" pattern="[a-z0-9_\-]+" aria-describedby="username-pattern-hint">
+              </p>
+              <p class="hint" id="username-pattern-hint">3-32 characters: lowercase letters, numbers, "_" or "-".</p>
+              <p>
+                <label for="register-password">Password</label><br>
+                <input id="register-password" name="password" type="password" autocomplete="new-password" required minlength="10" aria-describedby="register-hint">
+              </p>
+              <ul id="register-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Create account</button></p>
+            </fieldset>
+          </form>
+
+          <div id="recovery-code-box" class="recovery-box" hidden>
+            <h3>Save your recovery code now</h3>
+            <p>If you ever forget your password, this code is the only way back into your account. It is shown only this once.</p>
+            <p><output id="recovery-code-output" class="recovery-code"></output></p>
+          </div>
+
+          <form id="login-form">
+            <fieldset>
+              <legend>Sign in</legend>
+              <p>
+                <label for="login-username">Username</label><br>
+                <input id="login-username" name="username" autocomplete="username" required>
+              </p>
+              <p>
+                <label for="login-password">Password</label><br>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+              </p>
+              <ul id="login-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Sign in</button></p>
+            </fieldset>
+          </form>
+
+          <p>
+            <button type="button" id="recovery-toggle" aria-expanded="false" aria-controls="recovery-form">Forgotten your password?</button>
+          </p>
+
+          <form id="recovery-form" hidden>
+            <fieldset>
+              <legend>Reset your password with your recovery code</legend>
+              <p>
+                <label for="recover-username">Username</label><br>
+                <input id="recover-username" required>
+              </p>
+              <p>
+                <label for="recover-code">Recovery code</label><br>
+                <input id="recover-code" required>
+              </p>
+              <p>
+                <label for="recover-password">New password</label><br>
+                <input id="recover-password" type="password" minlength="10" required>
+              </p>
+              <ul id="recover-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Reset password</button></p>
+            </fieldset>
+          </form>
+
+          <div id="new-recovery-code-box" class="recovery-box" hidden>
+            <h3>Your new recovery code</h3>
+            <p>Your old one no longer works. Save this one instead; it is shown only this once.</p>
+            <p><output id="new-recovery-code-output" class="recovery-code"></output></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="signed-in-view" hidden>
+        <p>Signed in as <strong id="account-username"></strong> (<span id="account-role"></span>).</p>
+        <p class="actions"><button type="button" id="logout-button">Sign out</button></p>
+      </div>
+    </section>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The exhibit</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the exhibit&hellip;</p>
+
+        <h3>Everything in the exhibit</h3>
+        <p class="hint">This list is the same information as the picture, in words, and it is always here, whether or not an exhibit is currently shown (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+
+        <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+      </section>
+
+      <div class="controls" role="region" aria-label="Your settings and the curator's note">
+        <section id="settings-section" aria-labelledby="settings-heading">
+          <h2 id="settings-heading">Your settings</h2>
+          <p id="settings-locked-message">Sign in above to customize and save your own exhibit settings. Until then, everyone sees the same default view.</p>
+
+          <form id="settings-form" hidden>
+            <fieldset>
+              <legend>1. Which exhibits are shown</legend>
+              <ul class="option-list" role="list">
+                <li><label><input type="checkbox" id="exhibit-clay-pot">Clay pot</label></li>
+                <li><label><input type="checkbox" id="exhibit-basket-ring">Woven basket ring</label></li>
+                <li><label><input type="checkbox" id="exhibit-jade-stone">Jade stone</label></li>
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend>2. Camera start</legend>
+              <ul class="option-list" role="list">
+                <li><label><input type="radio" name="cameraStart" value="front">Front view</label></li>
+                <li><label><input type="radio" name="cameraStart" value="left">Left side</label></li>
+                <li><label><input type="radio" name="cameraStart" value="right">Right side</label></li>
+                <li><label><input type="radio" name="cameraStart" value="close">Close-up</label></li>
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend>3. Language and motion</legend>
+              <p>
+                <label for="language">Language</label><br>
+                <select id="language">
+                  <option value="en">English</option>
+                  <option value="es-419">Español</option>
+                  <option value="zh-Hans">简体中文</option>
+                </select>
+              </p>
+              <p><label><input type="checkbox" id="reduced-motion">Reduce motion (keep the exhibit still)</label></p>
+            </fieldset>
+
+            <ul id="settings-errors" class="field-errors" role="list"></ul>
+
+            <p class="actions">
+              <button type="submit">Save settings</button>
+              <button type="button" id="reset-button">Reset to defaults</button>
+            </p>
+          </form>
+        </section>
+
+        <section id="curator-section" aria-labelledby="curator-heading">
+          <h2 id="curator-heading">Curator's note</h2>
+          <p id="curator-note-text" class="scene-text">Loading&hellip;</p>
+          <p id="curator-note-meta" class="hint"></p>
+
+          <form id="curator-note-form" hidden>
+            <p>
+              <label for="curator-note-input">Edit the note every visitor sees</label><br>
+              <textarea id="curator-note-input" maxlength="500" rows="3"></textarea>
+            </p>
+            <ul id="curator-note-errors" class="field-errors" role="list"></ul>
+            <p class="actions"><button type="submit">Save note</button></p>
+          </form>
+
+          <div id="curator-dashboard" hidden>
+            <h3>Accounts sharing their settings with curators</h3>
+            <p class="hint">Only accounts that turned on "Share my settings with curators" appear here (see "Privacy and your data" once you sign in).</p>
+            <ul id="curator-dashboard-list" class="option-list" role="list"></ul>
+          </div>
+        </section>
+
+        <section id="privacy-section" aria-labelledby="privacy-heading" hidden>
+          <h2 id="privacy-heading">Privacy and your data</h2>
+          <p><label><input type="checkbox" id="privacy-toggle"> Share my settings with curators</label></p>
+
+          <p class="actions"><button type="button" id="export-button">Download my data (JSON)</button></p>
+
+          <h3>Delete your account</h3>
+          <p>This removes your account, your saved settings, and signs out every device using it. It cannot be undone.</p>
+          <form id="delete-form">
+            <p>
+              <label for="delete-password">Confirm your password</label><br>
+              <input id="delete-password" type="password" required autocomplete="current-password">
+            </p>
+            <ul id="delete-errors" class="field-errors" role="list"></ul>
+            <p class="actions"><button type="submit">Delete my account permanently</button></p>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <section id="passkeys-section" aria-labelledby="passkeys-heading">
+      <h2 id="passkeys-heading">Passkeys: a stronger sign-in this lesson does not build</h2>
+      <p>A <strong>passkey</strong> replaces a password with a public/private key pair: your device proves who you are with the private key, which never leaves it, instead of you typing a secret a server must store and protect. That removes an entire category of the risk this lesson spends so much effort managing — there is no password hash to steal, and nothing to phish. Passkeys are built on the W3C's <strong>WebAuthn</strong> specification; see "Further reading" for the spec and an implementation guide. Building a passkey demo needs a public, HTTPS-served origin and a device with a passkey-capable browser, both outside what this localhost course can rely on, so this lesson explains the idea and stops there.</p>
+      <p><button type="button" disabled aria-disabled="true">Sign in with a passkey (not built in this lesson)</button></p>
+    </section>
+
+    <section id="learner-notice" aria-labelledby="learner-notice-heading">
+      <h2 id="learner-notice-heading">This is a learning prototype</h2>
+      <p>This project is for learning, and it is deliberately small: one process, one machine, no shared session store, and an in-memory rate limiter that a restart clears. Before any part of this design protects a real account, real money, or real personal data, have it reviewed by someone with security expertise. Course 5.5 returns to this project to find and fix planted vulnerabilities.</p>
+    </section>
   </main>
 </body>
 </html>

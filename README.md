@@ -26,8 +26,8 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | [2 · Become a Frontend Engineer](frontend-engineer/README.md) | Web apps that install on a phone, work offline, and use live data. | 145 sessions · about 8 months | 9 of 9 |
 | [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions · about 8 months | 7 of 7 |
 | [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions · about 6 months | 6 of 6 |
-| [5 · Become a Full-Stack Spatial Developer](full-stack-spatial/README.md) | Multi-user 3D applications with accounts, data, and real-time connections. | 155 sessions · about 9 months | 1 of 8 |
-| [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions · about 4 months | 0 of 5 |
+| [5 · Become a Full-Stack Spatial Developer](full-stack-spatial/README.md) | Multi-user 3D applications with accounts, data, and real-time connections. | 166 sessions · about 10 months | 2 of 8 |
+| [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions · about 4 months | 1 of 5 |
 | [7 · Professional Capstone](capstone/README.md) | A complete immersive project: researched, designed, built, tested, and launched. | 95 sessions · about 5 months | 0 of 5 |
 
 ## All lessons
@@ -104,7 +104,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
 | 1 | [Backend and API Foundations](full-stack-spatial/01-backend-and-api-foundations/README.md) | 14 h · 19 sessions | ✅ Ready |
-| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
+| 2 | [Authentication and User Accounts](full-stack-spatial/02-authentication-and-user-accounts/README.md) | 19 h · 25 sessions | ✅ Ready |
 | 3 | [Databases and Spatial Application Data](full-stack-spatial/03-databases-and-spatial-application-data/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 4 | [Real-Time and Multi-User Applications](full-stack-spatial/04-real-time-and-multi-user-applications/README.md) | 17 h · 23 sessions | 🚧 Coming soon |
 | 5 | [Security and Privacy for Spatial Applications](full-stack-spatial/05-security-and-privacy-for-spatial-applications/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
@@ -116,7 +116,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
-| 1 | [Production Deployment and DevOps](professional-developer/01-production-deployment-and-devops/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
+| 1 | [Production Deployment and DevOps](professional-developer/01-production-deployment-and-devops/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 2 | [Internationalization and Localization](professional-developer/02-internationalization-and-localization/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
 | 3 | [Open Source, Standards, and Technical Leadership](professional-developer/03-open-source-standards-and-technical-leadership/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 4 | [Career Development and Professional Practice](professional-developer/04-career-development-and-professional-practice/README.md) | 12 h · 16 sessions | 🚧 Coming soon |

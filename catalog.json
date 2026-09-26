@@ -1049,21 +1049,23 @@
       "id": "fss-02-authentication-and-user-accounts",
       "courseId": "full-stack-spatial",
       "lessonId": "authentication-and-user-accounts-02",
-      "status": "draft",
+      "status": "review",
       "phase": 5,
       "title": {
         "en": "Authentication and User Accounts",
         "es-419": "",
         "zh-Hans": ""
       },
-      "estimatedMinutes": 600,
+      "estimatedMinutes": 1125,
       "schedule": {
-        "sessions": 14,
+        "sessions": 25,
         "sessionMinutes": 45
       },
       "difficulty": "advanced",
       "technologies": [
-        "Node.js"
+        "JavaScript",
+        "Node.js",
+        "Three.js"
       ],
       "hasCode": true,
       "path": "full-stack-spatial/02-authentication-and-user-accounts"
@@ -1210,7 +1212,7 @@
       "id": "pro-01-production-deployment-and-devops",
       "courseId": "professional-developer",
       "lessonId": "production-deployment-and-devops-01",
-      "status": "draft",
+      "status": "review",
       "phase": 6,
       "title": {
         "en": "Production Deployment and DevOps",
@@ -1224,7 +1226,9 @@
       },
       "difficulty": "professional",
       "technologies": [
-        "CI/CD"
+        "GitHub Actions",
+        "CI/CD",
+        "GitHub Pages"
       ],
       "hasCode": true,
       "path": "professional-developer/01-production-deployment-and-devops"

@@ -8,7 +8,7 @@
 
 **Construirás:** Aplicaciones 3D multiusuario con cuentas, datos y conexiones en tiempo real.
 
-**Tiempo:** unas 114 horas · 155 sesiones de 45 minutos · unos 9 meses con 4 sesiones por semana
+**Tiempo:** unas 123 horas · 166 sesiones de 45 minutos · unos 10 meses con 4 sesiones por semana
 
 **Empieza por:** [Backend and API Foundations](01-backend-and-api-foundations/README.es.md)
 
@@ -17,7 +17,7 @@
 | # | Lección | Tiempo | Estado |
 | --- | --- | --- | --- |
 | 1 | [Backend and API Foundations](01-backend-and-api-foundations/README.es.md) | 14 h · 19 sesiones | ✅ Lista |
-| 2 | [Authentication and User Accounts](02-authentication-and-user-accounts/README.es.md) | 10 h · 14 sesiones | 🚧 Próximamente |
+| 2 | [Authentication and User Accounts](02-authentication-and-user-accounts/README.es.md) | 19 h · 25 sesiones | ✅ Lista |
 | 3 | [Databases and Spatial Application Data](03-databases-and-spatial-application-data/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
 | 4 | [Real-Time and Multi-User Applications](04-real-time-and-multi-user-applications/README.es.md) | 17 h · 23 sesiones | 🚧 Próximamente |
 | 5 | [Security and Privacy for Spatial Applications](05-security-and-privacy-for-spatial-applications/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
