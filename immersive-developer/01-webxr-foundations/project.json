@@ -6,12 +6,12 @@
   "phase": 4,
   "title": {
     "en": "WebXR Foundations",
-    "es-419": "",
+    "es-419": "Fundamentos de WebXR",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Create a WebXR-capable experience with desktop and mobile fallbacks.",
-    "es-419": "",
+    "es-419": "Crea una experiencia compatible con WebXR, con alternativas para escritorio y móvil.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,

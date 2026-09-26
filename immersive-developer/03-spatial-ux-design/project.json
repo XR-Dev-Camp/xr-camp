@@ -6,12 +6,12 @@
   "phase": 4,
   "title": {
     "en": "Spatial UX Design",
-    "es-419": "",
+    "es-419": "Diseño de UX espacial",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Redesign the My XR Camp learning dashboard as a spatial interface, with world-, body-, and view-locked panels and teleport locomotion.",
-    "es-419": "",
+    "es-419": "Rediseña el panel de aprendizaje de My XR Camp como una interfaz espacial, con paneles anclados al mundo, al cuerpo y a la vista, y locomoción por teletransporte.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,

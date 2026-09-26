@@ -6,12 +6,12 @@
   "phase": 4,
   "title": {
     "en": "Phase 4 Capstone - Immersive Web Experience",
-    "es-419": "",
+    "es-419": "Proyecto final de la Fase 4 - Experiencia web inmersiva",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Publish a complete XR experience usable with and without a headset.",
-    "es-419": "",
+    "es-419": "Publica una experiencia XR completa, usable con y sin visor.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 1320,

@@ -6,12 +6,12 @@
   "phase": 4,
   "title": {
     "en": "XR Input and Interaction",
-    "es-419": "",
+    "es-419": "Entrada e interacción en XR",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build an XR interaction laboratory.",
-    "es-419": "",
+    "es-419": "Construye un laboratorio de interacción en XR.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
