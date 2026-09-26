@@ -1,0 +1,24 @@
+-- 002_create_reports.sql: the one piece of this lesson's moderation story
+-- that must survive a server restart and be seen by a human later. Blocking
+-- and muting (see realtime.js and js/main.js) only change what one browser
+-- shows or relays right now; a report is evidence, so it goes in the
+-- database, not in memory.
+--
+-- TODO 1: write this migration. It needs one table, `reports`, with these
+-- columns:
+--   id                 TEXT PRIMARY KEY
+--   room_id            TEXT NOT NULL
+--   reporter_id        TEXT NOT NULL, a foreign key to users(id), ON DELETE
+--                       CASCADE — the reporting account's own id, never a
+--                       value a client sends (see server/realtime.js)
+--   reported_username  TEXT NOT NULL — plain text, not a foreign key: the
+--                       reported account might be deleted before anyone
+--                       reviews the report, and the report should still say
+--                       who it was about
+--   reason             TEXT NOT NULL
+--   message_excerpt    TEXT (nullable — a report may or may not include one)
+--   created_at         TEXT NOT NULL
+--
+-- Look at 001_create_users.sql for the exact CREATE TABLE style this course
+-- uses (one statement per file, plain column types, a REFERENCES clause for
+-- the one foreign key).

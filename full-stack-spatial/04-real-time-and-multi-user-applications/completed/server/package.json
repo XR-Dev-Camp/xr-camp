@@ -1,0 +1,19 @@
+{
+  "name": "fss-04-real-time-and-multi-user-applications-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The real-time room server for XR Camp lesson 5.4 (full-stack-spatial): WebSocket rooms, presence, chat, and moderation reports, built on node:http, node:sqlite, and the ws package.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "ws": "8.21.3"
+  },
+  "devDependencies": {}
+}

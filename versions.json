@@ -24,5 +24,9 @@
         "https://www.x3dom.org/download/1.8.3/x3dom.css"
       ]
     }
+  },
+  "npm": {
+    "$comment": "Pinned npm package versions for lesson server code (package.json 'dependencies'/'devDependencies'). Every lesson's package.json must depend on exactly these version strings, with no ^ or ~ range — scripts/validate-projects.mjs enforces it. Upgrading is a deliberate change: update this file, update every lesson's package.json that uses the package, and re-test them.",
+    "ws": "8.21.3"
   }
 }

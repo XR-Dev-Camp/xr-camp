@@ -2,18 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Real-Time and Multi-User Applications - XR Camp starter</title>
+  <meta name="description" content="A small shared 3D room: sign in, move your avatar, and chat with anyone else who has this page open, over a WebSocket connection that reconnects itself if it drops. Block, mute, and report controls, and a server that never trusts a client's word for who it is, how fast it may speak, or where it may stand.">
+  <title>Real-Time and Multi-User Applications - XR Camp</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Full-Stack Spatial · Real-Time and Multi-User Applications</p></header>
   <main>
-    <!-- Add your main heading below. -->
+    <h1>Meet in a small shared room</h1>
+    <p>Course 5.3 gave every learner's account somewhere to save its own work. This lesson connects several signed-in accounts to each other, at the same time: sign in, and everyone else with this page open right now shares one small room. Move around with the buttons below, say something in the chat, and watch the room update for everyone else within a tenth of a second — without ever refreshing the page.</p>
+    <noscript><p>This page needs JavaScript to sign in and join the room.</p></noscript>
 
-    <!-- Add your project content below. -->
+    <p id="status" class="status-banner" role="status"></p>
 
+    <section id="account-section" aria-labelledby="account-heading">
+      <h2 id="account-heading">Your account</h2>
+
+      <div id="signed-out-view">
+        <div class="account-forms">
+          <form id="register-form">
+            <fieldset>
+              <legend>Create an account</legend>
+              <p class="hint" id="register-hint">No symbol or number is required. A longer password (10 characters or more) matters more than a complicated one.</p>
+              <p>
+                <label for="register-username">Username</label><br>
+                <input type="text" id="register-username" name="username" autocomplete="username" required minlength="3" maxlength="32" pattern="[a-z0-9_\-]+" aria-describedby="username-pattern-hint">
+              </p>
+              <p class="hint" id="username-pattern-hint">3-32 characters: lowercase letters, numbers, "_" or "-". This becomes the name everyone else in the room sees.</p>
+              <p>
+                <label for="register-password">Password</label><br>
+                <input type="password" id="register-password" name="password" autocomplete="new-password" required minlength="10" aria-describedby="register-hint">
+              </p>
+              <ul id="register-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Create account</button></p>
+            </fieldset>
+          </form>
+
+          <form id="login-form">
+            <fieldset>
+              <legend>Sign in</legend>
+              <p>
+                <label for="login-username">Username</label><br>
+                <input type="text" id="login-username" name="username" autocomplete="username" required>
+              </p>
+              <p>
+                <label for="login-password">Password</label><br>
+                <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+              </p>
+              <ul id="login-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Sign in</button></p>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <div id="signed-in-view" hidden>
+        <p>Signed in as <strong id="account-username"></strong>. <button type="button" id="logout-button">Sign out</button></p>
+      </div>
+    </section>
+
+    <section id="room-section" aria-labelledby="room-heading" hidden>
+      <h2 id="room-heading">The room</h2>
+
+      <div class="lab">
+        <div class="view">
+          <div class="canvas-box" id="canvas-box"></div>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p id="scene-description" class="scene-text"></p>
+        </div>
+
+        <div class="controls">
+          <fieldset>
+            <legend>Move</legend>
+            <div class="move-grid">
+              <button type="button" id="move-forward" aria-label="Move: forward">Forward</button>
+              <button type="button" id="move-back" aria-label="Move: back">Back</button>
+              <button type="button" id="move-left" aria-label="Move: left">Left</button>
+              <button type="button" id="move-right" aria-label="Move: right">Right</button>
+              <button type="button" id="turn-left" aria-label="Turn: left">Turn left</button>
+              <button type="button" id="turn-right" aria-label="Turn: right">Turn right</button>
+            </div>
+            <p class="hint">Buttons only, on purpose — no dragging the 3D view is required to take part in this room.</p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Who is here</legend>
+            <div class="table-wrap">
+              <table aria-describedby="roster-caption">
+                <caption id="roster-caption">Every member's exact position, kept in sync with the 3D view above.</caption>
+                <thead>
+                  <tr><th scope="col">Name</th><th scope="col">x</th><th scope="col">z</th><th scope="col">Facing</th><th scope="col">Actions</th></tr>
+                </thead>
+                <tbody id="roster-table-body"></tbody>
+              </table>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <section id="chat-section" aria-labelledby="chat-heading">
+        <h2 id="chat-heading">Chat</h2>
+        <div id="chat-log" class="chat-log" role="log" aria-live="polite" aria-relevant="additions">
+          <ul id="chat-list" role="list"></ul>
+        </div>
+        <form id="chat-form">
+          <p>
+            <label for="chat-input">Message</label><br>
+            <input type="text" id="chat-input" maxlength="280" autocomplete="off" required>
+          </p>
+          <ul id="chat-errors" class="field-errors" role="list"></ul>
+          <p class="actions"><button type="submit">Send</button></p>
+        </form>
+      </section>
+
+      <section id="report-section" aria-labelledby="report-heading" hidden>
+        <h2 id="report-heading">Report <span id="report-target-name"></span></h2>
+        <p>Reports go straight to a database a moderator can review later; blocking and muting (in the table above) only change what you see, right now, on this device.</p>
+        <form id="report-form">
+          <p>
+            <label for="report-reason">Reason</label><br>
+            <select id="report-reason" required>
+              <option value="">Choose a reason</option>
+              <option value="harassment">Harassment</option>
+              <option value="spam">Spam</option>
+              <option value="inappropriate-content">Inappropriate content</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+          <p>
+            <label for="report-detail">What happened? (optional)</label><br>
+            <textarea id="report-detail" maxlength="280" rows="3"></textarea>
+          </p>
+          <p class="actions">
+            <button type="submit">Send report</button>
+            <button type="button" id="report-cancel">Cancel</button>
+          </p>
+        </form>
+      </section>
+    </section>
+
+    <div id="learner-notice">
+      <h2>Before you reuse this</h2>
+      <p>This lesson's server keeps chat messages and positions only in memory — nothing about what anyone says or where they stand is ever written to a database. The one thing that <em>is</em> saved is a report (see <a href="server/migrations/002_create_reports.sql">the reports table</a>): a reporter's own account, the account they reported, a reason, and an optional short excerpt. Never build a real product's moderation tooling from a course project without a safety and legal review.</p>
+    </div>
   </main>
 </body>
 </html>

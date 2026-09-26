@@ -99,6 +99,49 @@ async function listFiles(dir) {
   return out;
 }
 
+// Every package.json a lesson ships (starter or completed) under `dir`,
+// skipping node_modules — installed packages are never committed (see the
+// root .gitignore) and, even when present locally after `npm install`,
+// their own nested package.json files are not this course's to pin.
+async function findPackageJsonFiles(dir) {
+  const out = [];
+  for (const e of await readdir(dir, { withFileTypes: true }).catch(() => [])) {
+    if (e.name === 'node_modules') continue;
+    const p = join(dir, e.name);
+    if (e.isDirectory()) out.push(...await findPackageJsonFiles(p));
+    else if (e.isFile() && e.name === 'package.json') out.push(p);
+  }
+  return out;
+}
+
+// A lesson's server code is only as reproducible as its pinned versions: an
+// unpinned or drifted npm dependency breaks a lesson silently the day a new
+// release ships, the same risk checkLibraryVersions() guards against for
+// CDN libraries. Every dependency/devDependency in every lesson package.json
+// must match versions.json's "npm" object exactly (no ^ or ~ ranges).
+async function checkNpmVersions(where, dir, npmVersions) {
+  for (const file of await findPackageJsonFiles(dir)) {
+    const rel = relative(dir, file);
+    let pkg;
+    try {
+      pkg = JSON.parse(await readFile(file, 'utf8'));
+    } catch (e) {
+      fail(where, `${rel} is not valid JSON: ${e.message}`);
+      continue;
+    }
+    for (const field of ['dependencies', 'devDependencies']) {
+      for (const [name, version] of Object.entries(pkg[field] ?? {})) {
+        const pinned = npmVersions[name];
+        if (pinned === undefined) {
+          fail(where, `${rel} depends on "${name}" (${field}), which is not pinned in versions.json's "npm" object`);
+        } else if (version !== pinned) {
+          fail(where, `${rel} depends on "${name}"@"${version}" (${field}); versions.json pins ${pinned} — use the exact version, no ^ or ~`);
+        }
+      }
+    }
+  }
+}
+
 // Every A-Frame or three.js URL must name the pinned version exactly.
 // "latest", a different version, or no version at all breaks lessons silently
 // the day a new release ships.
@@ -125,8 +168,11 @@ async function main() {
   const catalog = [];
 
   let versions = {};
+  let npmVersions = {};
   try {
-    versions = JSON.parse(await readFile(join(ROOT, 'versions.json'), 'utf8')).libraries;
+    const parsedVersions = JSON.parse(await readFile(join(ROOT, 'versions.json'), 'utf8'));
+    versions = parsedVersions.libraries;
+    npmVersions = parsedVersions.npm ?? {};
   } catch (e) {
     fail('versions.json', `missing or not valid JSON: ${e.message}`);
   }
@@ -207,6 +253,9 @@ async function main() {
       if (p.hasCode !== false) {
         for (const rel of CODE_FILES) {
           if (!await exists(join(dir, rel))) fail(where, `required file missing: ${rel}`);
+        }
+        for (const sub of ['starter', 'completed']) {
+          if (await exists(join(dir, sub))) await checkNpmVersions(where, join(dir, sub), npmVersions);
         }
         const completed = await readFile(join(dir, 'completed/index.html'), 'utf8').catch(() => '');
         if (completed && !/<html[^>]+lang=/i.test(completed)) {

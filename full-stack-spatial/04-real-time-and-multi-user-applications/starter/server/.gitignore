@@ -1,0 +1,12 @@
+# This lesson's server is the first in XR Camp to install an npm package
+# (see package.json and the README's "Setup"): node_modules/ is rebuilt by
+# `npm install` on any machine, so it is never committed. No lockfile is
+# committed either — see the README for why a single pinned version in
+# package.json is enough for this course.
+node_modules/
+package-lock.json
+
+# The SQLite database (reports only) and anything server.test.js writes.
+data/
+
+.env
