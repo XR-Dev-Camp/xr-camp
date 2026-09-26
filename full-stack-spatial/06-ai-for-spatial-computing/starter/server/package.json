@@ -1,0 +1,17 @@
+{
+  "name": "fss-06-ai-for-spatial-computing-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The AI-assisted scene tool's server for XR Camp lesson 5.6 (full-stack-spatial). No dependencies: node:http, node:sqlite, node:crypto, and node:test only. Talks to a real AI provider only through fetch().",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

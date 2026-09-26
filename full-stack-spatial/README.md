@@ -21,6 +21,6 @@
 | 3 | [Databases and Spatial Application Data](03-databases-and-spatial-application-data/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 4 | [Real-Time and Multi-User Applications](04-real-time-and-multi-user-applications/README.md) | 17 h · 23 sessions | ✅ Ready |
 | 5 | [Security and Privacy for Spatial Applications](05-security-and-privacy-for-spatial-applications/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
-| 6 | [AI for Spatial Computing](06-ai-for-spatial-computing/README.md) | 14 h · 19 sessions | 🚧 Coming soon |
+| 6 | [AI for Spatial Computing](06-ai-for-spatial-computing/README.md) | 14 h · 19 sessions | ✅ Ready |
 | 7 | [Advanced PWA and Offline Spatial Delivery](07-advanced-pwa-and-offline-spatial-delivery/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
 | 8 | [Phase 5 Capstone - Full-Stack Spatial Application](08-full-stack-spatial-application/README.md) | 25 h · 34 sessions | 🚧 Coming soon |

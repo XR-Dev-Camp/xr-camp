@@ -1,0 +1,201 @@
+/* XR Camp Phase 3: the stylesheet for the Web3D lab and the virtual exhibit.
+   The same tokens as My XR Camp in Phase 2. */
+
+:root {
+  --color-text: #1b1b1f;
+  --color-muted: #4a4a55;
+  --color-primary: #5b2a86;
+  --color-primary-dark: #3f1d5e;
+  --color-focus: #d62f6b;
+  --color-bg: #fdfcf8;
+  --color-surface: #ffffff;
+  --color-band: #efe9f7;
+  --color-line: #c9c4d4;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --radius: 0.5rem;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); line-height: 1.6; color: var(--color-text); background: var(--color-bg); }
+header { background: var(--color-band); border-bottom: 4px solid var(--color-primary); padding: var(--space-3); }
+header p { max-width: 72rem; margin: 0 auto; font-weight: 700; color: var(--color-primary-dark); }
+main { max-width: 72rem; margin: 0 auto; padding: var(--space-3); }
+h1, h2, h3 { color: var(--color-primary-dark); line-height: 1.2; }
+h1 { font-size: clamp(1.8rem, 1.3rem + 2vw, 2.4rem); }
+a { color: var(--color-primary); }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+code { font-size: 0.95em; }
+[hidden] { display: none !important; }
+
+button { font: inherit; padding: var(--space-2) var(--space-3); color: #fff; background: var(--color-primary); border: 2px solid var(--color-primary); border-radius: var(--radius); cursor: pointer; }
+button[aria-pressed="true"] { background: var(--color-surface); color: var(--color-primary-dark); }
+button[aria-pressed="true"]::before { content: "✓ "; }
+select { font: inherit; padding: var(--space-2); border: 2px solid #8a8398; border-radius: var(--radius); background: var(--color-surface); }
+
+/* The lab: the 3D view beside the controls on wide screens, above them on phones. */
+.lab { display: grid; gap: var(--space-4); }
+@media (min-width: 60rem) { .lab { grid-template-columns: minmax(0, 1fr) 24rem; align-items: start; } .view { position: sticky; top: var(--space-3); } }
+.canvas-box { width: 100%; aspect-ratio: 4 / 3; background: #eef4ff; border: 1px solid var(--color-line); border-radius: var(--radius); overflow: hidden; }
+.canvas-box canvas { display: block; width: 100% !important; height: 100% !important; }
+
+.controls fieldset { margin: 0 0 var(--space-3); padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+.controls legend { font-weight: 700; color: var(--color-primary-dark); padding: 0 var(--space-2); }
+.control { display: grid; grid-template-columns: 1fr auto; gap: 0 var(--space-2); align-items: center; margin-bottom: var(--space-2); }
+.control input[type="range"] { grid-column: 1 / -1; width: 100%; accent-color: var(--color-primary); min-height: 1.5rem; }
+.control output { font-variant-numeric: tabular-nums; color: var(--color-muted); }
+.hint { margin: 0 0 var(--space-2); color: var(--color-muted); font-size: 0.95rem; }
+
+.tree, .tree ul { list-style: none; margin: 0; padding-left: 1.25rem; }
+.tree { padding-left: 0; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.95rem; }
+.tree li::before { content: "└ "; color: var(--color-muted); }
+
+.scene-text { padding: var(--space-3); background: var(--color-surface); border-left: 4px solid var(--color-primary); border-radius: var(--radius); }
+
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 36rem; background: var(--color-surface); }
+caption { text-align: left; font-weight: 700; padding-bottom: var(--space-2); }
+th, td { padding: var(--space-2); border-bottom: 1px solid var(--color-line); text-align: left; vertical-align: top; }
+
+.compare-nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-3); padding: 0; list-style: none; }
+
+/* === 04 Three.js Foundations: the exhibit's three.js edition ===
+   Everything below is new for this lesson: the always-present 2D list of
+   the exhibit's contents, the WebGL-unavailable message, the "look around"
+   buttons, and the Stats panel that shows draw calls, triangles, and the
+   geometry/texture counts used to prove disposal works. The tokens and
+   rules above are unchanged from 3.1's concepts lab. */
+
+/* The exhibit's contents, as an accessible list. Not a fallback shown only
+   when 3D fails: it is always here, so the information never lives only in
+   the picture (WCAG 1.3.1). Safari drops list semantics once list-style is
+   none, so role="list" restores them in the HTML. */
+.exhibit-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.exhibit-list li { padding: var(--space-2) var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+.exhibit-list strong { color: var(--color-primary-dark); }
+
+/* Shown only when the page detects there is no WebGL 2. The exhibit list
+   above still works without it. */
+.no-webgl-message { padding: var(--space-3); background: #fff4f0; border: 1px solid #d62f6b; border-radius: var(--radius); color: var(--color-text); }
+
+/* "Turn left" and "Turn right": a keyboard-and-mouse-free route to the same
+   move dragging the view makes. */
+.view-buttons { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0; margin: 0 0 var(--space-2); list-style: none; }
+
+/* The Stats panel: collapsed by default, so it never distracts from the
+   exhibit, but always one keypress away. */
+.stats dl { display: grid; grid-template-columns: 1fr auto; gap: var(--space-2) var(--space-3); margin: var(--space-2) 0; }
+.stats dl div { display: contents; }
+.stats dt { color: var(--color-muted); }
+.stats dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--color-primary-dark); text-align: right; }
+
+/* === Full-Stack Spatial 5.1: Backend and API Foundations ===
+   New for this lesson: the settings form's checkbox/radio groups, the
+   status banner that reports whether the API is reachable, and the
+   inline field-error list a 400 response fills in. Everything above is
+   unchanged from 04's exhibit lab. */
+
+/* Checkbox and radio groups inside a fieldset: one option per row, with
+   room for a visible label next to each control (WCAG 2.5.3: the visible
+   word is also the accessible name). */
+.option-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.option-list label { display: flex; align-items: center; gap: var(--space-2); }
+.option-list input[type="checkbox"], .option-list input[type="radio"] { width: 1.15rem; height: 1.15rem; accent-color: var(--color-primary); }
+
+/* The status banner: an always-present, polite live region (role="status"
+   is set in HTML). Its colour changes with .is-error and .is-offline so
+   sighted learners get the same distinction the wording already gives
+   everyone else. */
+.status-banner { padding: var(--space-2) var(--space-3); border-radius: var(--radius); background: var(--color-band); border: 1px solid var(--color-line); color: var(--color-text); min-height: 1.6em; }
+.status-banner.is-offline { background: #fff4f0; border-color: #d62f6b; }
+.status-banner.is-error { background: #fdecea; border-color: #b3261e; color: #6b1512; }
+
+/* Field errors returned by PUT /api/settings (400 responses): shown next
+   to the form, in text, not only as a colour change (WCAG 1.4.1, 3.3.1). */
+.field-errors { margin: var(--space-2) 0 0; padding-left: 1.25rem; color: #b3261e; }
+.field-errors:empty { display: none; }
+
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* === Full-Stack Spatial 5.2: Authentication and User Accounts ===
+   New for this lesson: the account forms (register/login/recovery), the
+   one-time recovery-code display, the curator note and dashboard, and the
+   privacy/export/delete section. Everything above is unchanged from 5.1's
+   settings lab. */
+
+.account-forms { display: grid; gap: var(--space-3); max-width: 28rem; }
+.account-forms fieldset { margin: 0; }
+
+/* The recovery code: shown once, so it needs to stand out and be easy to
+   select and copy. Monospace keeps similar-looking characters (0/O, 1/l)
+   distinguishable. */
+.recovery-box { padding: var(--space-3); background: #fff8e1; border: 2px solid var(--color-primary); border-radius: var(--radius); }
+.recovery-code { display: block; margin-top: var(--space-2); font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.03em; word-break: break-all; user-select: all; color: var(--color-primary-dark); }
+
+#curator-dashboard, #privacy-section h3 { margin-top: var(--space-3); }
+#curator-dashboard .option-list li { display: block; }
+
+textarea { font: inherit; width: 100%; padding: var(--space-2); border: 2px solid #8a8398; border-radius: var(--radius); resize: vertical; }
+
+#passkeys-section, #learner-notice { margin-top: var(--space-4); padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+#learner-notice { border-color: #b3261e; background: #fdecea; }
+#learner-notice h2 { color: #6b1512; }
+
+/* === Full-Stack Spatial 5.3: Databases and Spatial Application Data ===
+   New for this lesson: the per-exhibit position/rotation form
+   (#transform-controls), the always-present position table, the floating
+   annotation markers scene.js draws over the canvas, and the "my scenes" /
+   "public scenes" lists. Everything above is unchanged from 5.2's account
+   lab. */
+
+#transform-controls { display: grid; gap: var(--space-3); }
+#transform-controls fieldset { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+#transform-controls input[type="number"] { width: 100%; font: inherit; padding: var(--space-2); border: 2px solid #8a8398; border-radius: var(--radius); }
+
+input[type="text"], input[type="password"] { font: inherit; padding: var(--space-2); border: 2px solid #8a8398; border-radius: var(--radius); width: 100%; max-width: 24rem; }
+
+/* Floating annotation markers: positioned in JS (scene.js), over the
+   canvas. Decorative — the accessible copy of the same notes is the
+   #annotation-list <ul> in the HTML, always present regardless of whether
+   these markers land in a sensible place at any given viewport size. */
+.canvas-box { position: relative; }
+.annotation-markers { position: absolute; inset: 0; pointer-events: none; }
+.annotation-marker { position: absolute; transform: translate(-50%, -50%); font-size: 1.25rem; }
+
+#current-scene-owner { font-style: italic; }
+#account-danger-section { margin-top: var(--space-3); }
+
+/* The position/rotation table below the canvas has a min-width (see
+   table-wrap in the shared rules above) so its numbers stay readable. A
+   CSS grid item's default min-width is `auto`, meaning it will not shrink
+   below that table's intrinsic width unless told to — which would widen
+   `.lab`, `.view`, and the whole page at narrow widths instead of letting
+   `.table-wrap`'s own overflow-x: auto handle it. min-width: 0 here is
+   what lets the table scroll inside its own box instead of the page
+   scrolling horizontally. */
+.view, .controls { min-width: 0; }
+
+/* === Full-Stack Spatial 5.6: AI for Spatial Computing ===
+   New for this lesson: the persistent AI-use disclosure banner, the draft
+   description box (with its "data sent" disclosure and warning list), and
+   the plain-language search box and its results. Everything above is
+   unchanged from 5.3's scene lab (minus the account panel, since this
+   lesson has none — see the README). */
+
+#ai-disclosure { margin-bottom: var(--space-4); padding: var(--space-3); background: var(--color-band); border: 1px solid var(--color-primary); border-radius: var(--radius); }
+#ai-disclosure ul { padding-left: 1.25rem; margin: var(--space-2) 0 0; }
+
+/* The AI draft is visually distinct from the saved description above it, so
+   a person always knows which one is only a suggestion (WCAG 1.4.1: the
+   difference is also stated in words, in the surrounding text, not colour
+   alone). */
+#ai-draft-box { margin-top: var(--space-3); padding: var(--space-3); background: #fff8e1; border: 2px dashed var(--color-primary); border-radius: var(--radius); }
+#ai-draft-box textarea { min-height: 4.5rem; }
+#ai-draft-data-sent { white-space: pre-wrap; word-break: break-word; font-size: 0.85rem; padding: var(--space-2); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); max-height: 12rem; overflow: auto; }
+details summary { cursor: pointer; color: var(--color-primary); font-weight: 700; }
+
+#search-section { margin-bottom: var(--space-4); }
+#search-results li { padding: var(--space-2) var(--space-3); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); }
+#search-results li p { margin: var(--space-2) 0 0; }

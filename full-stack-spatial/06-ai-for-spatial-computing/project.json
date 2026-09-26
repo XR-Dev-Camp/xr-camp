@@ -2,7 +2,7 @@
   "id": "fss-06-ai-for-spatial-computing",
   "courseId": "full-stack-spatial",
   "lessonId": "ai-for-spatial-computing-06",
-  "status": "draft",
+  "status": "review",
   "phase": 5,
   "title": {
     "en": "AI for Spatial Computing",
@@ -21,6 +21,10 @@
   },
   "difficulty": "advanced",
   "technologies": [
+    "JavaScript",
+    "Node.js",
+    "SQLite",
+    "Three.js",
     "AI Tooling"
   ],
   "hasCode": true,
@@ -33,6 +37,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }
