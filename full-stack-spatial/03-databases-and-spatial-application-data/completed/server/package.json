@@ -1,0 +1,19 @@
+{
+  "name": "fss-03-databases-and-spatial-application-data-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The scenes and annotations API for XR Camp lesson 5.3 (full-stack-spatial). No dependencies: node:http, node:sqlite, node:crypto and node:test only.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "inspect-db": "node inspect-db.js",
+    "backup": "node backup.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

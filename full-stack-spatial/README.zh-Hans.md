@@ -18,7 +18,7 @@
 | --- | --- | --- | --- |
 | 1 | [Backend and API Foundations](01-backend-and-api-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
 | 2 | [Authentication and User Accounts](02-authentication-and-user-accounts/README.zh-Hans.md) | 19 小时 · 25 次学习 | ✅ 已完成 |
-| 3 | [Databases and Spatial Application Data](03-databases-and-spatial-application-data/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
+| 3 | [Databases and Spatial Application Data](03-databases-and-spatial-application-data/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 4 | [Real-Time and Multi-User Applications](04-real-time-and-multi-user-applications/README.zh-Hans.md) | 17 小时 · 23 次学习 | 🚧 即将推出 |
 | 5 | [Security and Privacy for Spatial Applications](05-security-and-privacy-for-spatial-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
 | 6 | [AI for Spatial Computing](06-ai-for-spatial-computing/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |

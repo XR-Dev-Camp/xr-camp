@@ -1,0 +1,17 @@
+-- TODO 3: write the CREATE TABLE statement for `annotations` — a short note
+-- attached to one exhibit inside one scene. Columns:
+--   id            TEXT PRIMARY KEY
+--   scene_id      TEXT NOT NULL, a foreign key to scenes(id), ON DELETE CASCADE
+--   exhibit_id    TEXT NOT NULL
+--   text          TEXT NOT NULL
+--   created_by    TEXT NOT NULL, a foreign key to users(id), ON DELETE CASCADE
+--   created_at    TEXT NOT NULL
+--
+-- Two foreign keys, two different reasons to cascade — see the README's
+-- "Data lifecycle" section before you write this one: it explains why
+-- created_by is kept separate from scenes.owner_id even though, in this
+-- lesson's rules, they are always the same account.
+-- Then add: CREATE INDEX idx_annotations_scene ON annotations(scene_id);
+--
+-- See completed/server/migrations/004_create_annotations.sql if you get
+-- stuck.

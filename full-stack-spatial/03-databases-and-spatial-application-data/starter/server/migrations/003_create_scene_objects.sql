@@ -1,0 +1,17 @@
+-- TODO 2: write the CREATE TABLE statement for `scene_objects` — where each
+-- exhibit sits inside one saved scene (usually three rows per scene: one
+-- per exhibit_id). Columns:
+--   id            TEXT PRIMARY KEY
+--   scene_id      TEXT NOT NULL, a foreign key to scenes(id), ON DELETE CASCADE
+--   exhibit_id    TEXT NOT NULL (e.g. "clay-pot")
+--   position_x    REAL NOT NULL
+--   position_y    REAL NOT NULL
+--   position_z    REAL NOT NULL
+--   rotation_y    REAL NOT NULL (degrees, around the vertical axis only)
+--
+-- Position and rotation are separate numeric columns on purpose, not one
+-- JSON blob — see the README's "Key code explained" for why. Then add:
+--   CREATE INDEX idx_scene_objects_scene ON scene_objects(scene_id);
+--
+-- See completed/server/migrations/003_create_scene_objects.sql if you get
+-- stuck.

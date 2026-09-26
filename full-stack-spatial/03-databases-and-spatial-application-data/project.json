@@ -2,7 +2,7 @@
   "id": "fss-03-databases-and-spatial-application-data",
   "courseId": "full-stack-spatial",
   "lessonId": "databases-and-spatial-application-data-03",
-  "status": "draft",
+  "status": "review",
   "phase": 5,
   "title": {
     "en": "Databases and Spatial Application Data",
@@ -21,7 +21,10 @@
   },
   "difficulty": "advanced",
   "technologies": [
-    "Node.js"
+    "JavaScript",
+    "Node.js",
+    "SQLite",
+    "Three.js"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -33,6 +36,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

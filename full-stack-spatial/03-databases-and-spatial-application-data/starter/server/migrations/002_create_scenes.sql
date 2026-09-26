@@ -1,0 +1,20 @@
+-- TODO 1: write the CREATE TABLE statement for `scenes` — one row per saved
+-- arrangement of the exhibit. Give it these columns:
+--   id            TEXT PRIMARY KEY
+--   owner_id      TEXT NOT NULL, a foreign key to users(id), ON DELETE CASCADE
+--                 (see the README's "Data lifecycle": deleting a user must
+--                 delete every scene that user owns)
+--   name          TEXT NOT NULL
+--   is_public     INTEGER NOT NULL DEFAULT 0 (SQLite has no boolean type;
+--                 0/1 stands in for false/true)
+--   created_at    TEXT NOT NULL
+--   updated_at    TEXT NOT NULL
+--
+-- Then add two indexes, since every query this API runs filters scenes
+-- either by owner_id (yours) or by is_public (everyone's public scenes):
+--   CREATE INDEX idx_scenes_owner ON scenes(owner_id);
+--   CREATE INDEX idx_scenes_public ON scenes(is_public);
+--
+-- See completed/server/migrations/002_create_scenes.sql if you get stuck,
+-- but try writing the CREATE TABLE yourself first — this is the lesson's
+-- schema-design step, not a typing exercise.

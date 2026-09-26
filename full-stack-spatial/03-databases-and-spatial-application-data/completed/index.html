@@ -3,12 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Databases and Spatial Application Data - XR Camp reference solution</title>
+  <meta name="description" content="A learning prototype for saving user-made 3D scenes and annotations in a real database: create an account, arrange the exhibit, save it, and share it — or keep it private — while a small SQLite-backed API enforces who may read and who may change each row.">
+  <title>Databases and Spatial Application Data - XR Camp</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <!-- three.js, pinned to the version in versions.json (the same import map
+       every lesson uses). -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Full-Stack Spatial · Databases and Spatial Application Data</p></header>
   <main>
-    <h1>Databases and Spatial Application Data</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>Save your own exhibit, exactly as you left it</h1>
+    <p>Course 5.2 gave every learner an account. This lesson gives every account a real database: arrange the clay pot, the basket ring, and the jade stone however you like, save the arrangement as a <strong>scene</strong>, add a short note to any exhibit, and load it back later — from this device or another one. A scene you mark public can be viewed (never changed) by anyone else signed in; a private scene is yours alone. Read <a href="#learner-notice">the notice below</a> before reusing any of this.</p>
+    <noscript><p>This page needs JavaScript to sign in, save scenes, and show the exhibit.</p></noscript>
+
+    <p id="status" class="status-banner" role="status"></p>
+
+    <section id="account-section" aria-labelledby="account-heading">
+      <h2 id="account-heading">Your account</h2>
+
+      <div id="signed-out-view">
+        <div class="account-forms">
+          <form id="register-form">
+            <fieldset>
+              <legend>Create an account</legend>
+              <p class="hint" id="register-hint">No symbol or number is required. A longer password (10 characters or more) matters more than a complicated one.</p>
+              <p>
+                <label for="register-username">Username</label><br>
+                <input type="text" id="register-username" name="username" autocomplete="username" required minlength="3" maxlength="32" pattern="[a-z0-9_\-]+" aria-describedby="username-pattern-hint">
+              </p>
+              <p class="hint" id="username-pattern-hint">3-32 characters: lowercase letters, numbers, "_" or "-".</p>
+              <p>
+                <label for="register-password">Password</label><br>
+                <input type="password" id="register-password" name="password" autocomplete="new-password" required minlength="10" aria-describedby="register-hint">
+              </p>
+              <ul id="register-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Create account</button></p>
+            </fieldset>
+          </form>
+
+          <div id="recovery-code-box" class="recovery-box" hidden>
+            <h3>Save your recovery code now</h3>
+            <p>If you ever forget your password, this code is the only way back into your account. It is shown only this once.</p>
+            <p><output id="recovery-code-output" class="recovery-code"></output></p>
+          </div>
+
+          <form id="login-form">
+            <fieldset>
+              <legend>Sign in</legend>
+              <p>
+                <label for="login-username">Username</label><br>
+                <input type="text" id="login-username" name="username" autocomplete="username" required>
+              </p>
+              <p>
+                <label for="login-password">Password</label><br>
+                <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+              </p>
+              <ul id="login-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Sign in</button></p>
+            </fieldset>
+          </form>
+
+          <p>
+            <button type="button" id="recovery-toggle" aria-expanded="false" aria-controls="recovery-form">Forgotten your password?</button>
+          </p>
+
+          <form id="recovery-form" hidden>
+            <fieldset>
+              <legend>Reset your password with your recovery code</legend>
+              <p>
+                <label for="recover-username">Username</label><br>
+                <input type="text" id="recover-username" required>
+              </p>
+              <p>
+                <label for="recover-code">Recovery code</label><br>
+                <input type="text" id="recover-code" required>
+              </p>
+              <p>
+                <label for="recover-password">New password</label><br>
+                <input type="password" id="recover-password" minlength="10" required>
+              </p>
+              <ul id="recover-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Reset password</button></p>
+            </fieldset>
+          </form>
+
+          <div id="new-recovery-code-box" class="recovery-box" hidden>
+            <h3>Your new recovery code</h3>
+            <p>Your old one no longer works. Save this one instead; it is shown only this once.</p>
+            <p><output id="new-recovery-code-output" class="recovery-code"></output></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="signed-in-view" hidden>
+        <p>Signed in as <strong id="account-username"></strong>.</p>
+        <p class="actions"><button type="button" id="logout-button">Sign out</button></p>
+      </div>
+    </section>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading"><span id="current-scene-heading">Unsaved arrangement</span></h2>
+        <p id="current-scene-owner" class="hint"></p>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the exhibit&hellip;</p>
+
+        <h3>Where everything is</h3>
+        <p class="hint">The same information as the picture, in a table, always here whether or not the 3D view has finished loading (WCAG 1.3.1).</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Position and rotation of every exhibit in this scene</caption>
+            <thead><tr><th scope="col">Exhibit</th><th scope="col">x</th><th scope="col">y</th><th scope="col">z</th><th scope="col">Rotation (°)</th></tr></thead>
+            <tbody id="object-table-body"></tbody>
+          </table>
+        </div>
+
+        <h3>Annotations</h3>
+        <ul id="annotation-list" role="list" class="option-list"></ul>
+
+        <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+      </section>
+
+      <div class="controls" role="region" aria-label="Arrange, save, and annotate your scene">
+        <section id="scene-manager" aria-labelledby="scene-manager-heading" hidden>
+          <h2 id="scene-manager-heading">Arrange and save</h2>
+
+          <form id="transform-form">
+            <div id="transform-controls"></div>
+
+            <p>
+              <label for="scene-name-input">Scene name</label><br>
+              <input type="text" id="scene-name-input" maxlength="60" placeholder="e.g. Close together, jade in front">
+            </p>
+            <p><label><input type="checkbox" id="scene-public-input"> Make this scene public (anyone signed in can view it)</label></p>
+
+            <ul id="scene-form-errors" class="field-errors" role="list"></ul>
+
+            <p class="actions">
+              <button type="button" id="save-scene-button">Save changes</button>
+              <button type="button" id="save-as-new-button">Save as a new scene</button>
+              <button type="button" id="new-scene-button">Start a new arrangement</button>
+              <button type="button" id="delete-scene-button">Delete this scene</button>
+            </p>
+          </form>
+
+          <form id="annotation-form">
+            <fieldset>
+              <legend>Add an annotation</legend>
+              <p>
+                <label for="annotation-exhibit">Exhibit</label><br>
+                <select id="annotation-exhibit">
+                  <option value="clay-pot">Clay pot</option>
+                  <option value="basket-ring">Woven basket ring</option>
+                  <option value="jade-stone">Jade stone</option>
+                </select>
+              </p>
+              <p>
+                <label for="annotation-text">Note</label><br>
+                <input type="text" id="annotation-text" maxlength="280" required>
+              </p>
+              <ul id="annotation-errors" class="field-errors" role="list"></ul>
+              <p class="actions"><button type="submit">Add note</button></p>
+            </fieldset>
+          </form>
+
+          <h3>Your scenes</h3>
+          <ul id="my-scenes-list" role="list" class="option-list"></ul>
+
+          <h3>Public scenes</h3>
+          <p class="hint">Made public by their owners. You can view any of these, but only its owner can change or delete it.</p>
+          <ul id="public-scenes-list" role="list" class="option-list"></ul>
+        </section>
+
+        <section id="account-danger-section" aria-labelledby="account-danger-heading">
+          <h2 id="account-danger-heading">Delete your account</h2>
+          <p>This removes your account, every scene you own, and every annotation you wrote — the database's foreign keys remove them automatically (see the README's "Data lifecycle"). It cannot be undone.</p>
+          <form id="delete-form">
+            <p>
+              <label for="delete-password">Confirm your password</label><br>
+              <input type="password" id="delete-password" required autocomplete="current-password">
+            </p>
+            <ul id="delete-errors" class="field-errors" role="list"></ul>
+            <p class="actions"><button type="submit">Delete my account permanently</button></p>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <section id="learner-notice" aria-labelledby="learner-notice-heading">
+      <h2 id="learner-notice-heading">This is a learning prototype</h2>
+      <p>This project is for learning, and it is deliberately small: one SQLite file, one process, no scheduled backups, and an in-memory session store carried over from Course 5.2. Before any part of this design stores a real person's data, have it reviewed by someone with security and data-protection expertise. Course 5.5 returns to a project like this one to find and fix planted vulnerabilities.</p>
+    </section>
   </main>
 </body>
 </html>
