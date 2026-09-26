@@ -6,12 +6,12 @@
   "phase": 7,
   "title": {
     "en": "Testing, Launch, and Presentation",
-    "es-419": "",
+    "es-419": "Pruebas, lanzamiento, y presentación",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Release the capstone, public repository, case study, and presentation.",
-    "es-419": "",
+    "es-419": "Lanza el proyecto final, el repositorio público, el caso de estudio, y la presentación.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,

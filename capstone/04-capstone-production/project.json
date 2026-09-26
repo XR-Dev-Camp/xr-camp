@@ -6,12 +6,12 @@
   "phase": 7,
   "title": {
     "en": "Capstone Production",
-    "es-419": "",
+    "es-419": "Producción del proyecto final",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build the production application.",
-    "es-419": "",
+    "es-419": "Construye la aplicación de producción.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 1680,

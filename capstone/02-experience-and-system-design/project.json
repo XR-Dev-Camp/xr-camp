@@ -6,12 +6,12 @@
   "phase": 7,
   "title": {
     "en": "Experience and System Design",
-    "es-419": "",
+    "es-419": "Diseño de experiencia y de sistema",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Produce the full product and technical design.",
-    "es-419": "",
+    "es-419": "Produce el diseño de producto y técnico completo.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 600,

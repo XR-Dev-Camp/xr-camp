@@ -6,12 +6,12 @@
   "phase": 7,
   "title": {
     "en": "Capstone Prototype",
-    "es-419": "",
+    "es-419": "Prototipo del proyecto final",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Deliver a tested prototype and design review.",
-    "es-419": "",
+    "es-419": "Entrega un prototipo probado y una revisión de diseño.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,

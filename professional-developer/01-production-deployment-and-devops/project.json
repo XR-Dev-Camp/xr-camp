@@ -6,12 +6,12 @@
   "phase": 6,
   "title": {
     "en": "Production Deployment and DevOps",
-    "es-419": "",
+    "es-419": "Despliegue en producción y DevOps",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Create and document a production release pipeline.",
-    "es-419": "",
+    "es-419": "Crea y documenta un pipeline de lanzamiento a producción.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
