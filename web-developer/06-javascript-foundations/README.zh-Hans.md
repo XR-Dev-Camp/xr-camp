@@ -55,7 +55,7 @@
 │   ├── styles.css       # The site's stylesheet, with explorer styles added
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -336,7 +336,7 @@ try {
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 一个「Clear filters」（清除筛选）按钮。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 用你自己的语言写标签和消息。

@@ -58,7 +58,7 @@ XR Camp 是一所免费学校，面向想要构建未来网络的人：可以在
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a 3D world with 6 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -181,7 +181,7 @@ A-Frame 的下载体积较大，第一次打开页面时约需下载 1.3 MB。�
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 再添加两个形状，并描述它们。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 构建一个来自你自己生活的地方。

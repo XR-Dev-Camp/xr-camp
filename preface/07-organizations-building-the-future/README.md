@@ -46,7 +46,7 @@ The reference solution in [`completed/`](completed/) is Ana's map.
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: the map, with 5 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -165,7 +165,7 @@ Ten cards, one small script, no images: the page loads instantly. Filtering hide
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: find three standards you used today without knowing it.
 2. **[Creative](challenges/challenge-2.md)**: add an organisation from your own region.

@@ -64,7 +64,7 @@ The reference solution is in [`completed/`](completed/). The starter has the pag
 │   ├── js/main.js       # TODOs 10–13
 │   └── 3d-moment.html   # The forecast as 3D bars
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -103,7 +103,7 @@ The reference solution is in [`completed/`](completed/). The starter has the pag
 
 An **API** (Application Programming Interface) is a way for one program to ask another for something. A **web API** is a web address that answers with data instead of a page. Usually the data is **JSON**: the same objects and arrays you know from JavaScript, written as text.
 
-Before writing any code, open the address in TODO 1 in your browser. Read the answer. Firefox shows it as a tree; in other browsers, tick **Pretty-print**. You will find:
+Before writing any code, open the address in TODO 1 in your browser. Read the answer. Firefox shows it as a tree; in Chrome and Edge, tick **Pretty-print**. In Safari, open it in the Network panel of Web Inspector to see it formatted. You will find:
 
 ```json
 "daily": {
@@ -143,7 +143,7 @@ Two things surprise almost everyone:
 - **`fetch` does not fail on "404" or "500".** Those are answers, just unhappy ones. `fetch` only rejects when there is no answer at all: offline, blocked, or cancelled. So always check `response.ok`.
 - **A request can hang for a long time.** `AbortSignal.timeout(8000)` cancels it after eight seconds, so the learner sees an error instead of "Loading…" forever.
 
-Watch the **Network** panel as the page loads: the request, its status (200), its size, and its time.
+Open `3d-moment.html` with the **Network** panel open: it already calls `fetchForecast`, so you can watch the request, its status (200), its size, and its time. The dashboard itself starts fetching once TODO 10 is done.
 
 ### Step 5: the ready state (TODO 6)
 
@@ -188,7 +188,7 @@ Always say where the data came from, and when: "Saved in this browser at 14:05."
 
 ### Step 9: race conditions (TODO 12)
 
-Choose Bogotá, then quickly Chengdu. Two requests are now travelling. If Bogotá's answer is slower, it arrives last and replaces Chengdu's, and the page shows Bogotá under the Chengdu heading. This is a **race condition**, and it is one of the most common bugs in real apps.
+Choose Bogotá, then quickly Chengdu. Two requests are now travelling. If Bogotá's answer is slower, it arrives last and replaces Chengdu's, and the page shows Bogotá's forecast while the city list says Chengdu. This is a **race condition**, and it is one of the most common bugs in real apps.
 
 The fix: number every request, and after every `await`, check you are still the latest:
 
@@ -238,7 +238,7 @@ The camera is fixed (`look-controls` and `wasd-controls` switched off) and nothi
 | --- | --- | --- |
 | The forecast is a real table, with a caption and header cells | 1.3.1 | Screen readers announce each value with its day and column. |
 | Loading, errors, and updates are announced | 4.1.3 | Status messages reach screen-reader users. |
-| Errors say what happened and what to do | 3.3.1 | "You may be offline" and **Try again**, not "Error". |
+| Errors say what happened and what to do | Good practice | "You may be offline" and **Try again**, not "Error". |
 | The driest day is marked in words, not only colour | 1.4.1 | Colour alone is not enough. |
 | The table scrolls inside its own region on narrow screens | 1.4.10 | The page never scrolls sideways. |
 | The scrolling region can be reached with the keyboard | 2.1.1 | Keyboard users can scroll it too. |
@@ -262,9 +262,9 @@ The cache is the biggest win: switching back to a city you have seen is instant 
 
 ## Troubleshooting
 
-**`Failed to fetch` or `NetworkError`.** You are offline, the service is blocked on your network, or you opened the page as a file. Use your local server, and try **Use sample data**.
+**`Failed to fetch` (Chrome), `NetworkError when attempting to fetch resource.` (Firefox), or `Load failed` (Safari).** You are offline, or the service is blocked on your network. Try **Use sample data**.
 
-**Blocked by CORS policy.** The API does not allow requests from other websites. Open-Meteo does allow them; if you switch to another API, check its documentation for "CORS".
+**Blocked by CORS policy.** The API does not allow requests from other websites. Open-Meteo does allow them; if you switch to another API, check its documentation for "CORS". If the page is blank and the Console says something was blocked by CORS policy for `main.js`, you opened the page as a file: use your local server instead.
 
 **The dates are one day off.** You created a `Date` from `"2026-09-28"` without a time. See **Key code explained**.
 
@@ -274,7 +274,7 @@ The cache is the biggest win: switching back to a city you have seen is instant 
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: remember the learner's city, and show "updated 5 minutes ago".
 2. **[Creative](challenges/challenge-2.md)**: a dashboard of public data for your own community.

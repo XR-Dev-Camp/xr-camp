@@ -52,7 +52,7 @@ The reference solution in [`completed/`](completed/) is Ana's tomato plant. You 
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: the three views, with 6 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -159,7 +159,7 @@ The 2D view costs a few kilobytes. The 3D view downloads A-Frame (about 1.3 MB o
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: classify five real products as 2D, 3D, VR, AR, or MR.
 2. **[Creative](challenges/challenge-2.md)**: design an immersive idea for your community, and decide honestly whether it should be immersive.

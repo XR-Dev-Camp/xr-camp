@@ -60,7 +60,7 @@ The reference solution is in [`completed/`](completed/): the repaired page and A
 │   ├── index.html       # The repaired page
 │   ├── audit.html       # Ana's audit report
 │   └── 3d-moment.html   # The repaired 3D scene
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -229,7 +229,7 @@ Accessibility fixes are almost free for performance: real HTML elements are ligh
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: record a keyboard-only walkthrough of your repaired page.
 2. **[Creative](challenges/challenge-2.md)**: add captions and a transcript to a short video about your community.

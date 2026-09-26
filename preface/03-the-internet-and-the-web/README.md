@@ -48,7 +48,7 @@ The reference solution in [`completed/`](completed/) is Ana's diagram. The struc
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a diagram with 9 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -159,7 +159,7 @@ The page has no images, and its CSS and script are inside the HTML file, so it l
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: take apart five real web addresses.
 2. **[Creative](challenges/challenge-2.md)**: trace the undersea cables that bring the internet to your country.

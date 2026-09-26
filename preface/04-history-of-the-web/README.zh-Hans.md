@@ -48,7 +48,7 @@
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a timeline with one milestone per era and 9 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -167,7 +167,7 @@
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 添加你的国家首次接入互联网的里程碑，并附上来源。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 采访一个人，请他讲讲自己第一次上网的经历。

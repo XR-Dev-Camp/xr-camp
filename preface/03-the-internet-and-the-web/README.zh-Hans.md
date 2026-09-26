@@ -48,7 +48,7 @@
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a diagram with 9 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -159,7 +159,7 @@
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 拆解五个真实的网址。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 追踪把互联网带到你的国家的海底光缆。

@@ -29,7 +29,7 @@ function lessonRow(lesson) {
   item.dataset.lessonId = lesson.id;
 
   // A checkbox whose label includes the lesson's title, so each one has a
-  // unique name: "Done: HTML Foundations", not twenty checkboxes called "Done".
+  // unique name: "Done: HTML Foundations", not fifty-eight checkboxes called "Done".
   const id = `done-${lesson.id}`;
   const box = el('input');
   box.type = 'checkbox';

@@ -56,7 +56,7 @@
 ├── project.json         # 课程元数据
 ├── starter/             # 从这里开始 —— 含 11 个 TODO 的骨架
 ├── completed/           # 参考解决方案 —— 最后再打开
-├── challenges/          # 三个可选拓展
+├── challenges/          # 三个挑战：基础挑战为必做
 ├── tests/checklist.md   # 提交前的自检清单
 ├── assets/              # 图片与媒体
 └── screenshots/
@@ -280,7 +280,7 @@
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 新增第二个页面，并把两者互相链接。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 让页面真正属于你：你的社区、你的语言、你的图片。

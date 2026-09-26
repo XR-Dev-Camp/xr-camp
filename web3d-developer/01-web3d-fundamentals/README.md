@@ -66,7 +66,7 @@ The reference solution is in [`completed/`](completed/). The starter has the pag
 │       ├── three.html            # TODO 14
 │       └── aframe.html           # TODO 15
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -248,7 +248,7 @@ This whole lesson is a 3D lesson, so its accessibility is built in rather than a
 | Every control has a visible label, and its value is shown | 1.3.1, 3.3.2 | Everyone knows what each slider does and where it is. |
 | Controls work with the keyboard | 2.1.1 | Sliders, menus, and buttons are standard controls. |
 | The lamp button shows its state with `aria-pressed` | 4.1.2 | Screen readers say "pressed" or "not pressed". |
-| Nothing moves on its own | 2.2.2, 2.3.3 | No motion to stop, and nothing to make anyone dizzy. |
+| Nothing moves on its own | 2.2.2 | No motion to stop, and nothing to make anyone dizzy. |
 | The page never scrolls sideways on a phone | 1.4.10 | The scene sits above the controls on narrow screens. |
 
 ## Performance considerations
@@ -283,7 +283,7 @@ Rendering on demand is the second: a scene that draws 60 times a second keeps th
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: add a fourth object, and a slider that controls its colour's lightness.
 2. **[Creative](challenges/challenge-2.md)**: an object from your own culture, built from primitive shapes, with a description.

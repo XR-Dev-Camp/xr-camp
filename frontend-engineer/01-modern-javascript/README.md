@@ -65,7 +65,7 @@ The reference solution is in [`completed/`](completed/). The starter has the fin
 │   ├── js/format.js, data.js, render.js, main.js   # Begin here: 14 TODOs
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -93,7 +93,7 @@ The reference solution is in [`completed/`](completed/). The starter has the fin
 | 6 | Step 5: Promises, `async`, and `await` | You can explain a Promise |
 | 7 | Step 5, continued (TODO 5) | Data loaded with `fetch` |
 | 8 | Step 6: `reduce` (TODOs 6 and 8) | Lessons grouped and counted |
-| 9 | Step 6, continued: pure functions | Functions you can test in the console |
+| 9 | Step 6, continued: pure functions | Functions you can test with `console.log` after Step 7 |
 | 10 | Step 7: importing (TODO 7) | Modules connected |
 | 11 | Step 8: rendering with `map` (TODOs 9–10) | One lesson on the page |
 | 12 | Step 8, continued (TODO 11) | Every phase on the page |
@@ -158,7 +158,7 @@ export const describeTime = ({ minutes, sessions }) =>
   `${hours(minutes)} hours · ${sessions} sessions`;
 ```
 
-Destructuring in the parameter list shows, at a glance, exactly what a function needs.
+Destructuring in the parameter list shows, at a glance, exactly what a function needs. (The completed version also uses `plural` for both words, so it says "1 hour" and "1 session".)
 
 ### Step 5: Promises, async, and await (TODO 5)
 
@@ -192,7 +192,7 @@ export function totals(lessons) {
 }
 ```
 
-`format.js`'s functions and `totals` are **pure**: the same input always gives the same output, and they change nothing else. Pure functions are the easiest to test (`totals([...])` in the console) and to trust.
+`format.js`'s functions and `totals` are **pure**: the same input always gives the same output, and they change nothing else. Pure functions are the easiest to test and to trust. To test one, log it from `main.js` once you import it in Step 7: `console.log(totals([{ minutes: 90, status: 'ready' }]))`. (Typing `totals(...)` straight into the console does not work: what a module exports is not global.)
 
 ### Step 7: importing (TODO 7)
 
@@ -278,7 +278,7 @@ The course data is about 16 KB, and it is loaded once; filtering redraws from me
 | Opening the page from `file://` | "CORS" errors, and nothing loads | Use a local server |
 | `import { hours } from './format'` | The browser cannot find the file | Include `.js` |
 | Forgetting `export` | `does not provide an export named` | Export what other modules need |
-| Using `await` outside an `async` function | `SyntaxError` | Mark the function `async` |
+| Using `await` inside a function that is not `async` | `SyntaxError` | Mark the function `async` |
 | Not checking `response.ok` | A 404 page is read as data, and `json()` fails | Check, and throw a clear error |
 | One huge `main.js` again | Modules in name only | One job per module |
 
@@ -286,13 +286,13 @@ The course data is about 16 KB, and it is loaded once; filtering redraws from me
 
 **The console says "CORS" or "blocked".** You opened the page from `file://`. Use your local server's address.
 
-**`Failed to resolve module specifier`.** Module paths must start with `./` or `../` (or be a full URL).
+**`Failed to resolve module specifier`** (Chrome's wording; Firefox says the specifier "was a bare specifier"). Module paths must start with `./`, `../`, or `/` (or be a full URL).
 
 **`Unexpected token '<'` when reading JSON.** The server sent an HTML page, usually a 404 page, instead of your data. Check the path.
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: a search box that filters lessons by title.
 2. **[Creative](challenges/challenge-2.md)**: your own data: a map of your study plan or your community's activities.

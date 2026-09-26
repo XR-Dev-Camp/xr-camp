@@ -56,7 +56,7 @@ The reference solution in [`completed/`](completed/) is a community centre page 
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here — a scaffold with 11 TODOs
 ├── completed/           # Reference solution — open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/              # Images and media
 └── screenshots/
@@ -280,7 +280,7 @@ The `title` on the `<iframe>` is what a screen reader announces, just like alt t
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)** — add a second page and link the two together.
 2. **[Creative](challenges/challenge-2.md)** — make the page genuinely yours: your community, your language, your images.

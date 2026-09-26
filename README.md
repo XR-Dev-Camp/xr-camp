@@ -137,7 +137,7 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 - `README` — the lesson guide, in English, Spanish, and Simplified Chinese.
 - `starter/` — where you begin. Copy it and build.
 - `completed/` — the reference solution. Open it only after a real attempt.
-- `challenges/` — three optional extensions: Foundation, Creative, Explorer.
+- `challenges/` — three challenges: Foundation (required), Creative, and Explorer (optional).
 - `tests/checklist.md` — check your work before you share it.
 
 ## Accessible by design

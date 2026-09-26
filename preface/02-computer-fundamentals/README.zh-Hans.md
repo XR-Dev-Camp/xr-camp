@@ -55,7 +55,7 @@
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a setup page with 8 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -237,7 +237,7 @@ xr-camp/
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 两分钟的纯键盘操作练习。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 用你自己的语言制作设置页面和文件夹。

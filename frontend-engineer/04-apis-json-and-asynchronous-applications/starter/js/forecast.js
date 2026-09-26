@@ -15,7 +15,7 @@ export function driestDay(days) {
   return days[0];
 }
 
-// Finished: "Monday 28 September", in the page's language. The date string
+// Finished: "Monday, September 28", in the page's language. The date string
 // has no time, so noon stops time zones moving it to the day before.
 export function dayName(date, locale = document.documentElement.lang) {
   return new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long' })

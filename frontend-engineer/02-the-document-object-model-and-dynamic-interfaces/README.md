@@ -30,7 +30,7 @@ By the end of this project you will be able to:
 
 | Tool | Purpose | Cost |
 | --- | --- | --- |
-| A modern browser, with its developer tools | The Elements panel shows the DOM live | Free |
+| A modern browser, with its developer tools | The Elements panel (called Inspector in Firefox) shows the DOM live | Free |
 | VS Code and a local server | Modules need `http://` | Free |
 | A screen reader | Testing focus and announcements | Free |
 
@@ -38,7 +38,7 @@ By the end of this project you will be able to:
 
 The second part of **My XR Camp**: a **learning dashboard**. Tick each lesson as you finish it, and watch your progress for each phase and overall. A **Next up** card shows the next ready lesson. A **My goals** list lets you add and remove your own learning goals. Everything is saved in this browser, and everything works with the keyboard and a screen reader.
 
-The reference solution is in [`completed/`](completed/). The starter has the page, the styles, the data, and `state.js` finished; `dashboard.js` and `main.js` have ten TODOs. Until TODOs 3 to 8 are done, the console shows errors about missing exports: that is expected.
+The reference solution is in [`completed/`](completed/). The starter has the page, the styles, the data, and `state.js` finished; `dashboard.js` and `main.js` have ten TODOs. Each function in `dashboard.js` starts as a small placeholder, so the page runs while you work: when you reach its TODO, replace the placeholder with your real function.
 
 ## Folder guide
 
@@ -56,7 +56,7 @@ The reference solution is in [`completed/`](completed/). The starter has the pag
 │   ├── js/main.js       # Events and focus: TODOs 1–2, 7, 9–10
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -65,7 +65,7 @@ The reference solution is in [`completed/`](completed/). The starter has the pag
 ## Setup
 
 1. Copy the starter's files into your `my-xr-camp` folder from Course 2.1. The new files are `js/state.js`, `js/dashboard.js`, and the new `index.html` and `styles.css`.
-2. Start your local server, and open the page with its **Elements** panel and **Console** open.
+2. Start your local server, and open the page with its **Elements** panel (called **Inspector** in Firefox) and **Console** open.
 
 ## Walkthrough
 
@@ -78,8 +78,8 @@ The reference solution is in [`completed/`](completed/). The starter has the pag
 | 3 | Step 3: building elements (TODO 3) | Every phase on the page |
 | 4 | Step 3, continued (TODOs 4–5) | Overall progress and Next up |
 | 5 | Step 4: events and bubbling | You can explain delegation |
-| 6 | Step 4, continued (TODO 7) | Ticking lessons works |
-| 7 | Step 5: update only what changed (TODO 6) | Focus stays on the checkbox |
+| 6 | Step 4, continued (TODO 7) | Ticks are saved; overall progress and Next up update |
+| 7 | Step 5: update only what changed (TODO 6) | Each phase's bar updates too, and focus stays on the checkbox |
 | 8 | Step 6: live regions | Every change is announced |
 | 9 | Step 7: a dynamic form (TODOs 8–9) | Adding goals |
 | 10 | Step 8: focus management (TODO 10) | Removing goals, with focus in the right place |
@@ -103,10 +103,10 @@ In the Elements panel, click the arrows to open and close branches. Every elemen
 
 ### Step 2: state
 
-The dashboard's **state** is everything it needs to remember: which lessons are done, and your goals. It lives in one object, in `state.js`, which is also the only module that talks to `localStorage`.
+The dashboard's **state** is everything it needs to remember: which lessons are done, and your goals. It lives in one object, in `state.js`, which is also the only module that talks to `localStorage`. In `state.js`, `read()` builds an object with this shape, filled from what was saved:
 
 ```js
-export const state = { done: new Set(), goals: [] };
+{ done: new Set(), goals: [] }
 ```
 
 A `Set` is a collection with no duplicates, and a fast `has` check: perfect for "is this lesson done?". When the state changes, the page must change to match, and the rest of this lesson is about doing that well.
@@ -203,7 +203,7 @@ Look at how focus is handled: after selecting, focus returns to the redrawn butt
 | Focus stays in a logical place after every change | 2.4.3 | Keyboard and screen-reader users keep their place. |
 | Every checkbox and button has a unique, descriptive name | 2.4.6, 4.1.2 | "Done: HTML Foundations", "Remove goal: …". |
 | Changes are announced | 4.1.3 | Status messages reach screen-reader users. |
-| Progress is shown in words as well as bars | 1.1.1, 1.4.1 | "3 of 9 done (33%)". |
+| Progress is shown in words as well as bars | 1.1.1 | "3 of 9 done (33%)". The words go beyond the minimum, and help everyone. |
 | Everything works with the keyboard | 2.1.1 | Space, Enter, Tab. |
 
 ## Performance considerations
@@ -222,7 +222,7 @@ Updating only what changed is not just better for focus: it is faster. Redrawing
 
 ## Troubleshooting
 
-**`does not provide an export named`.** A TODO in `dashboard.js` is not finished yet, or its function is not exported.
+**`does not provide an export named`** (Chrome and Edge; Firefox says `doesn't provide an export named`, Safari says `Importing binding name '…' is not found`). A function in `dashboard.js` is missing, or not exported: perhaps you deleted a placeholder before writing its TODO. The browser names only one missing export at a time, and while the error is there, nothing on the page runs.
 
 **Ticking a box does nothing.** Check your listener is on `#map`, and that it checks `event.target.type`, not `event.type`.
 
@@ -230,7 +230,7 @@ Updating only what changed is not just better for focus: it is faster. Redrawing
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: a "Show only lessons not done yet" filter that keeps focus sensible.
 2. **[Creative](challenges/challenge-2.md)**: a personal touch: notes on each lesson.
@@ -245,7 +245,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 ## Further reading
 
-- [MDN: Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+- [MDN: Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - [MDN: Event bubbling](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)
 - [MDN: ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [W3C: Developing a keyboard interface (ARIA Authoring Practices)](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/)

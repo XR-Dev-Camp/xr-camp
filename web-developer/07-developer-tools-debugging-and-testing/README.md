@@ -58,7 +58,7 @@ The reference solution in [`completed/`](completed/) is the fixed explorer, and 
 │   ├── index.html, explorer.js, styles.css   # Fixed
 │   ├── bug-reports.md   # Ana's reports
 │   └── 3d-moment.html   # The fixed scene
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -228,7 +228,7 @@ The Network panel also shows how much each file weighs and how long it took. Loo
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: plant five bugs of your own, and swap with a partner.
 2. **[Creative](challenges/challenge-2.md)**: explain one bug, and how you found it, in your own language.

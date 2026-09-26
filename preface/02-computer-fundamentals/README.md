@@ -55,7 +55,7 @@ The reference solution in [`completed/`](completed/) is Ana's setup page.
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a setup page with 8 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -237,7 +237,7 @@ The page is plain HTML and a little CSS: it opens instantly, even from a USB dri
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: a two-minute keyboard-only drill.
 2. **[Creative](challenges/challenge-2.md)**: your setup page and folders in your own language.

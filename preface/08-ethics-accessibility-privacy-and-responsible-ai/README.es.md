@@ -53,7 +53,7 @@ La solución de referencia en [`completed/`](completed/) es el reporte y el comp
 │   ├── index.html       # Begin here: your report, with 7 TODOs
 │   └── shop-demo.html   # The fictional shop you audit
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -201,7 +201,7 @@ La ética también incluye el costo: una página que descarga megabytes de rastr
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: audita un sitio web real que uses.
 2. **[Creativo](challenges/challenge-2.es.md)**: escribe tu compromiso en tu propio idioma y compártelo con alguien.

@@ -52,7 +52,7 @@
 │   ├── index.html       # Begin here: the lab page, with 7 TODOs
 │   └── examples/        # The box in X3D, A-Frame, and three.js
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -171,7 +171,7 @@ VRML 于 **1997年**成为国际标准（VRML97）。你可以在浏览器中漫
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 在三种工具中都把盒子换成球体。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 添加第四个示例：与你在课程 0.1 中构建的世界相同的场景。

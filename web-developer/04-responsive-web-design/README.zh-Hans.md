@@ -57,7 +57,7 @@
 │   ├── centre-480.jpg, centre-960.jpg, centre-1440.jpg   # One picture, three sizes
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -282,7 +282,7 @@ nav ul {
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 一个在小屏幕上会收起为「Menu」（菜单）按钮的导航。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 一份来自三台真实设备的测试记录。

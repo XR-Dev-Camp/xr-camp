@@ -52,7 +52,7 @@ The three examples are already built for you, in `starter/examples/`. You are th
 │   ├── index.html       # Begin here: the lab page, with 7 TODOs
 │   └── examples/        # The box in X3D, A-Frame, and three.js
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -171,7 +171,7 @@ Each example downloads its library the first time: about 1.9 MB of code for thre
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: change the box to a sphere in all three tools.
 2. **[Creative](challenges/challenge-2.md)**: add a fourth example, the same scene as your Course 0.1 world.

@@ -5,7 +5,7 @@ Every release, newest first. Each entry says what changed, for the people who us
 ## 1.1.0 — 2026-10-20
 
 ### Added
-- Two new study tips, from Ana and Lucía (#7, #8).
+- Two new study tips, from Ana and Lucía (#8, #10).
 - A **Pause animation** button on the 3D example (#2).
 
 ### Fixed

@@ -56,7 +56,7 @@ La solución de referencia en [`completed/`](completed/) es la página de un cen
 ├── project.json         # Metadatos de la lección
 ├── starter/             # Empieza aquí — un esqueleto con 11 TODO
 ├── completed/           # Solución de referencia — ábrela al final
-├── challenges/          # Tres extensiones opcionales
+├── challenges/          # Tres desafíos: Fundamento es obligatorio
 ├── tests/checklist.md   # Autorrevisión antes de entregar
 ├── assets/              # Imágenes y medios
 └── screenshots/
@@ -280,7 +280,7 @@ El `title` del `<iframe>` es lo que anuncia un lector de pantalla, igual que el 
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)** — agrega una segunda página y enlaza ambas.
 2. **[Creativo](challenges/challenge-2.es.md)** — haz la página realmente tuya: tu comunidad, tu idioma, tus imágenes.

@@ -53,7 +53,7 @@
 │   ├── index.html       # Begin here: your report, with 7 TODOs
 │   └── shop-demo.html   # The fictional shop you audit
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -201,7 +201,7 @@ AI 系统从数据中学习，而数据反映的是这个世界，也包括世�
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 审查一个你使用的真实网站。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 用你自己的语言写下你的承诺，并与某个人分享。

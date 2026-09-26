@@ -60,7 +60,7 @@
 │   ├── index.html       # The repaired page
 │   ├── audit.html       # Ana's audit report
 │   └── 3d-moment.html   # The repaired 3D scene
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -229,7 +229,7 @@
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 录制一段只用键盘浏览修复好的页面的视频。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 为一段关于你的社区的短视频加上字幕和文字稿。

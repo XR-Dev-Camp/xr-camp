@@ -10,7 +10,7 @@ pull requests in your repository.
 | --- | --- | --- | --- |
 | 1 | Opened issues #1–#6 from `GOOD-FIRST-ISSUES.md`, with labels | My copy | Six issues, each with a clear title |
 | 2 | Fixed the heading typo (#3) in the browser editor, on a branch | My copy, PR #7 | Lucía reviewed and approved; merged |
-| 3 | Reviewed Lucía's contrast fix | Her copy, PR #4 | I suggested checking the link colour too; she did |
+| 3 | Reviewed Lucía's contrast fix | Her copy, PR #7 | I suggested checking the link colour too; she did |
 | 4 | Added my tip; so did Lucía, on another branch | My copy, PRs #8 and #10 | **Merge conflict**: resolved by keeping both tips |
 | 5 | 3D scene description (#1) | My copy, PR #9 | Changes requested, fixed, approved, squash-merged |
 | 6 | Reduced motion and Pause button (#2) | My copy, PR #11 | Merged |

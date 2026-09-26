@@ -53,7 +53,7 @@ The reference solution in [`completed/`](completed/) is Ana's report and pledge.
 │   ├── index.html       # Begin here: your report, with 7 TODOs
 │   └── shop-demo.html   # The fictional shop you audit
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -201,7 +201,7 @@ Ethics includes cost: a page that downloads megabytes of trackers and images cos
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: audit a real website you use.
 2. **[Creative](challenges/challenge-2.md)**: write your pledge in your own language, and share it with someone.

@@ -55,7 +55,7 @@ The reference solution is in [`completed/`](completed/). The starter has the fin
 │   ├── styles.css       # The site's stylesheet, with explorer styles added
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -332,7 +332,7 @@ The explorer draws at most a few dozen cards, so redrawing them all on every key
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: a "Clear filters" button.
 2. **[Creative](challenges/challenge-2.md)**: labels and messages in your own language.

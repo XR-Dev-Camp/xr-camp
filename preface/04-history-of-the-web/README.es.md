@@ -48,7 +48,7 @@ La solución de referencia en [`completed/`](completed/) es la línea de tiempo 
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a timeline with one milestone per era and 9 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -167,7 +167,7 @@ Esta página es solo HTML y un poco de CSS: sin imágenes, sin scripts, sin desc
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: agrega la primera conexión a internet de tu país, con una fuente.
 2. **[Creativo](challenges/challenge-2.es.md)**: entrevista a alguien sobre la primera vez que se conectó a internet.

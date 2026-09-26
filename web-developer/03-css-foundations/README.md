@@ -58,7 +58,7 @@ The reference solution in [`completed/`](completed/) styles the Riverside site's
 │   ├── centre.svg       # A drawing of the centre
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -276,7 +276,7 @@ One stylesheet, cached by the browser after the first page, styles the whole sit
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: a dark theme, by changing only your custom properties.
 2. **[Creative](challenges/challenge-2.md)**: a palette from your own culture or place, with every pair checked.

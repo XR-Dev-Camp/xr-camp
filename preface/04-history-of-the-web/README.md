@@ -48,7 +48,7 @@ The reference solution in [`completed/`](completed/) is Ana's timeline. The styl
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a timeline with one milestone per era and 9 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -167,7 +167,7 @@ This page is only HTML and a little CSS: no images, no scripts, no downloads. It
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: add your country's first internet connection, with a source.
 2. **[Creative](challenges/challenge-2.md)**: interview someone about their first time online.

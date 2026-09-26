@@ -41,7 +41,7 @@ The third part of **My XR Camp**: a **session planner**. Plan study sessions for
 
 The twist: the planner already works. It is in [`starter/old/`](starter/old/), and it is written badly on purpose, the way a lot of real code is: one-letter names, numbers with no names, everything global, HTML glued together in strings, and a hidden security problem. Your job is to **refactor** it into a clean, tested structure, so that it does exactly the same things, and is easy to read, change, and extend.
 
-The reference solution is in [`completed/`](completed/). The starter has the old app (do not edit it), a `behaviour.md` to fill in, and the new files with thirteen TODOs.
+The reference solution is in [`completed/`](completed/). The starter has the old app (do not edit it), a `behaviour.md` to fill in (TODOs 1-2), and the new files with TODOs 3-13.
 
 ## Folder guide
 
@@ -64,7 +64,7 @@ The reference solution is in [`completed/`](completed/). The starter has the old
 │   ├── js/main.js       # TODOs 12–13
 │   └── 3d-moment.html   # A tangled 3D scene to refactor
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -86,7 +86,7 @@ The reference solution is in [`completed/`](completed/). The starter has the old
 | 2 | Step 1: code smells (TODO 2) | Eight smells, with line numbers |
 | 3 | Step 2: plan the architecture | A drawing of the five layers |
 | 4 | Step 3: config (TODO 3) | Every setting in one file |
-| 5 | Step 4: pure functions (TODO 4) | Half of `check.html` passes |
+| 5 | Step 4: pure functions (TODO 4) | `plural` and `describeMinutes` written; the console now names the next missing export |
 | 6 | Step 4, continued (TODO 5) | Every check passes |
 | 7 | Step 5: the store (TODO 6) | Saved sessions load, including old ones |
 | 8 | Step 5, continued (TODOs 7–8) | Actions and subscribe |
@@ -156,7 +156,7 @@ A **pure function** gives the same output for the same input, and changes nothin
 check('1 hour 30 minutes', describeMinutes(90), '1 hour 30 minutes');
 ```
 
-Open it before you write TODO 4: the console says `utils.js` has no such export. Write `plural` and `describeMinutes`, reload, and watch lines turn to PASS. This is how professional teams work: small functions, checked automatically, so a later change that breaks one is caught at once.
+Open it before you write TODO 4: the console says `utils.js` has no such export. Write `plural` and `describeMinutes`, reload, and watch the error change: now it names `bySchedule`. When TODO 5 is done too, every line appears, and should say PASS. This is how professional teams work: small functions, checked automatically, so a later change that breaks one is caught at once.
 
 Notice `describeMinutes(0)` gives "0 minutes", where the old app said "0 hours 0 minutes". That is a **deliberate change**, not an accident: write it in the "Deliberate changes" section of `behaviour.md`.
 
@@ -164,7 +164,7 @@ Notice `describeMinutes(0)` gives "0 minutes", where the old app said "0 hours 0
 
 The **store** holds the state, and it is the only code allowed to change it. Everyone else asks:
 
-- `getSessions()` gives a sorted **copy**. The old app sorted the real array inside its drawing function, which is how `tog(i)` could end up changing the wrong session.
+- `getSessions()` gives a sorted **copy**. The old app sorted the real array inside its drawing function, so the button positions are only correct by coincidence: any change that reorders the array without redrawing would make `tog(i)` change the wrong session.
 - Three **actions**, `addSession`, `toggleSession`, and `removeSession`, are the only ways to change it. Each one ends with `commit()`: save, then tell everyone.
 - `subscribe(listener)` lets other code say "tell me when anything changes".
 
@@ -213,7 +213,7 @@ In Course 2.2 you updated only what changed. Here, the whole list redraws after 
 
 ### Step 9: compare with the behaviour list
 
-Go back to `behaviour.md` and test every line in both planners, side by side. Every behaviour must match, except the deliberate changes you listed. This is the moment a refactor becomes trustworthy.
+Go back to `behaviour.md` and test every line in both planners, side by side. Every behaviour must match, except the deliberate changes you listed. Beyond the "0 minutes" wording and the security fix, `completed/` also makes small, deliberate changes you may notice: it refuses a topic of only spaces, its goal-reached message is worded differently, empty lists say "Nothing here yet.", and buttons and status announcements gained accessibility labels. These are improvements, not bugs, so add them to your own "Deliberate changes" list rather than treating them as mismatches. This is the moment a refactor becomes trustworthy.
 
 Then read your new code as a stranger would. Could someone find where the weekly goal is set in ten seconds? Where sessions are saved? What happens when Delete is pressed?
 
@@ -231,7 +231,7 @@ Then read your new code as a stranger would. Could someone find where the weekly
 
 ## 3D moment
 
-Open [`starter/3d-moment.html`](starter/3d-moment.html): three objects on pedestals, turning slowly. It works, but its script is tangled: the same six lines copied three times, positions typed by hand, one-letter names, and a `setInterval` that runs every 16 milliseconds, even when the tab is hidden.
+Open [`starter/3d-moment.html`](starter/3d-moment.html): three objects on pedestals, turning slowly. It works, but its script is tangled: the same six lines copied three times, positions typed by hand, one-letter names, and a `setInterval` that asks to run every 16 milliseconds, and keeps running even when the tab is hidden (the browser only slows it down).
 
 Now open [`completed/3d-moment.html`](completed/3d-moment.html). The same scene, refactored:
 
@@ -252,11 +252,11 @@ A-Frame calls `tick` once per frame, and only while the scene is running, so the
 | Every button's name includes its session | 2.4.6, 4.1.2 | "Delete: CSS grid", not ten buttons called "Delete". |
 | The visible word starts each button's name | 2.5.3 | Speech users can say "click Delete". |
 | Changes are announced | 4.1.3 | Status messages reach screen-reader users. |
-| The 3D scene can be paused, and respects reduced motion | 2.2.2, 2.3.3 | Movement is never forced on anyone. |
+| The 3D scene can be paused, and respects reduced motion | 2.2.2 | Movement is never forced on anyone. (Respecting reduced motion is good practice beyond WCAG.) |
 
 ## Performance considerations
 
-The old 3D script ran a timer 60 times a second forever, even in a hidden tab, and changed three attributes as text each time. The refactored `turntable` changes a number directly (`object3D.rotation.y`) inside A-Frame's own frame loop, which the browser slows down or stops when the tab is hidden. Clean structure and good performance often arrive together: when each job has one place, it is easier to see what is wasteful.
+The old 3D script ran a timer about 60 times a second, and kept it running forever, even in a hidden tab (where the browser slows it down but never stops it), and changed three attributes as text each time. The refactored `turntable` changes a number directly (`object3D.rotation.y`) inside A-Frame's own frame loop, which the browser slows down or stops when the tab is hidden. Clean structure and good performance often arrive together: when each job has one place, it is easier to see what is wasteful.
 
 Redrawing a whole list is fine for a few dozen items. If a list could grow to thousands, you would go back to updating only what changed (Course 2.2).
 
@@ -279,13 +279,13 @@ Redrawing a whole list is fine for a few dozen items. If a list could grow to th
 
 **My old sessions disappeared.** Check `STORAGE_KEY` is `'xrc_s'`, and that `upgrade` reads `saved.d`, `saved.t`, and `saved.w`.
 
-**`crypto.randomUUID is not a function`.** It only works on secure pages: `https://` or `http://localhost` and `http://127.0.0.1`. Use your local server, not a file opened directly.
+**`crypto.randomUUID is not a function`.** It only works on secure pages: `https://`, or `http://localhost` and `http://127.0.0.1`. If you opened the planner through a network address (like `http://192.168.1.5`), use `localhost` instead.
 
 **The form never appears.** `main.js` stopped before its last line. Look for the first error in the Console.
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: add a feature to the clean version (edit a session's topic) and count how many files you touch.
 2. **[Creative](challenges/challenge-2.md)**: make the planner yours: your own settings, and the days and times in your language.
@@ -308,7 +308,7 @@ Three optional extensions, in [`challenges/`](challenges/):
 
 ## Women to Know
 
-**Estefany Aguilar** is a senior frontend developer and teacher from Medellín, Colombia. She has taught about 20 courses on Platzi, in Spanish, including CSS architecture, design systems, and a professional technical test, and she is a former organiser of CSS Conf Colombia and the MedellínCSS community.
+**Estefany Aguilar** is a senior frontend developer and teacher based in Medellín, Colombia. She has taught about 20 courses on Platzi, in Spanish, including CSS architecture, design systems, and a professional technical test, and she is a former organiser of CSS Conf Colombia, and has run workshops for the MedellínCSS community.
 
 Architecture and design systems are how teams keep code tidy as it grows: the same idea as this lesson's config, store, and components. Learning it in your own language, from someone in your own region, makes it far easier to picture yourself doing it.
 

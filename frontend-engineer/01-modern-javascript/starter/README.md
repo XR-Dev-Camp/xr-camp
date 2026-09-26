@@ -3,7 +3,8 @@
 Begin here.
 
 - `js/format.js`, `js/data.js`, `js/render.js`, and `js/main.js` have fourteen
-  numbered `TODO` comments between them. Work through them in number order.
+  numbered `TODO` comments between them. Follow the order in the session plan in
+  [`../README.md`](../README.md): it does TODO 8 before TODO 7.
 - `index.html`, `styles.css`, and `data/catalog.json` are finished.
 - `3d-moment.html` uses your `data.js`: open it when your modules work.
 

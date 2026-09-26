@@ -7,7 +7,7 @@ A "Show only lessons not done yet" filter that keeps focus sensible.
 ## Task
 
 1. Add a labelled checkbox above the map: "Show only lessons not done yet".
-2. When it is on, hide lessons that are done, using the `hidden` attribute rather than redrawing, so nothing else changes.
+2. When it is on, hide lessons that are done, using the `hidden` attribute rather than redrawing, so nothing else changes. First add `[hidden] { display: none !important; }` to `styles.css`: otherwise `.lesson { display: flex; }` wins, and hidden rows stay visible.
 3. Now tick a lesson while the filter is on: it disappears. Where is focus now? Move it to the next visible checkbox in the same phase, or the phase's heading if none are left (give headings `tabindex="-1"` so they can receive focus from a script).
 4. Announce how many lessons are left in `#status`.
 

@@ -57,7 +57,7 @@ The reference solution is in [`completed/`](completed/). The starter is the fini
 │   ├── centre-480.jpg, centre-960.jpg, centre-1440.jpg   # One picture, three sizes
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -282,7 +282,7 @@ Responsive images are the biggest performance win in this lesson: a phone downlo
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: a navigation that collapses into a "Menu" button on small screens.
 2. **[Creative](challenges/challenge-2.md)**: a device test log from three real devices.

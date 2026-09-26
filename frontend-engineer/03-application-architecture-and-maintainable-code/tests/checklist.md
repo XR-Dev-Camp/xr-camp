@@ -12,7 +12,7 @@ Work through this list before you submit.
 
 ## Structure
 - [ ] Every file's job can be said in one sentence.
-- [ ] No magic numbers: 45, 4, and the storage key appear only in `config.js`.
+- [ ] No magic numbers in the JavaScript: 45, 4, and the storage key appear only in `config.js`.
 - [ ] Only `store.js` changes the sessions or touches `localStorage`.
 - [ ] Components build elements and never change the state.
 - [ ] No `innerHTML` with anything a user typed.

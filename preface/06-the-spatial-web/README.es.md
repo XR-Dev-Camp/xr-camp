@@ -52,7 +52,7 @@ La solución de referencia en [`completed/`](completed/) es la planta de tomate 
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: the three views, with 6 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -159,7 +159,7 @@ La vista 2D pesa unos pocos kilobytes. La vista 3D descarga A-Frame (alrededor d
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: clasifica cinco productos reales como 2D, 3D, VR, AR o MR.
 2. **[Creativo](challenges/challenge-2.es.md)**: diseña una idea inmersiva para tu comunidad y decide con honestidad si debería ser inmersiva.

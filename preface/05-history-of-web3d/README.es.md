@@ -52,7 +52,7 @@ Los tres ejemplos ya están construidos para ti, en `starter/examples/`. Tú ere
 │   ├── index.html       # Begin here: the lab page, with 7 TODOs
 │   └── examples/        # The box in X3D, A-Frame, and three.js
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -171,7 +171,7 @@ Cada ejemplo descarga su biblioteca la primera vez: alrededor de 1.9 MB para thr
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: cambia la caja por una esfera en las tres herramientas.
 2. **[Creativo](challenges/challenge-2.es.md)**: agrega un cuarto ejemplo, la misma escena que tu mundo del Curso 0.1.

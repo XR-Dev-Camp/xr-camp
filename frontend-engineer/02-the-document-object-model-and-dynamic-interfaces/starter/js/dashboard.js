@@ -29,7 +29,7 @@ function lessonRow(lesson) {
   item.dataset.lessonId = lesson.id;
 
   // A checkbox whose label includes the lesson's title, so each one has a
-  // unique name: "Done: HTML Foundations", not twenty checkboxes called "Done".
+  // unique name: "Done: HTML Foundations", not fifty-eight checkboxes called "Done".
   const id = `done-${lesson.id}`;
   const box = el('input');
   box.type = 'checkbox';
@@ -44,19 +44,37 @@ function lessonRow(lesson) {
   return item;
 }
 
+// Each TODO below has a small PLACEHOLDER, so the page runs while you work.
+// When you reach a TODO, replace its placeholder with your real function.
+
 // TODO 3: Export renderPhase(phase, lessons): a <section class="phase"> with
 // data-phase set, an <h2> linked by aria-labelledby, a progress() bar, and a
 // <ul class="lessons" role="list"> of lessonRow items. (Safari drops list
 // semantics when list-style is none, so role="list" puts them back.)
+export function renderPhase(phase, lessons) {
+  return el('section'); // placeholder: replace it
+}
 
 // TODO 6: Export updatePhaseProgress(section, lessons), which replaces ONLY the
 // .progress element inside one section, so the checkbox that was just ticked
 // is not rebuilt and keeps its focus.
+export function updatePhaseProgress(section, lessons) {
+  // placeholder: replace it
+}
 
 // TODO 4: Export renderOverall(target, lessons): one progress() for every lesson.
+export function renderOverall(target, lessons) {
+  // placeholder: replace it
+}
 
 // TODO 5: Export renderNextUp(target, lessons): the first lesson that is ready
 // and not done, with its time; or a message when every ready lesson is done.
+export function renderNextUp(target, lessons) {
+  // placeholder: replace it
+}
 
 // TODO 8: Export goalItem(goal): an <li class="goal"> with data-goal-id, the
 // goal's text, and a Remove button with aria-label="Remove goal: <text>".
+export function goalItem(goal) {
+  return el('li', goal.text); // placeholder: replace it
+}

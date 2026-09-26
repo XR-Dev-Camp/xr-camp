@@ -48,7 +48,7 @@
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: your career page, with 6 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -149,7 +149,7 @@ XR Camp 的学习周期很长，因为它会带你一路走到专业水平。一
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 采访一位从事技术工作的人。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 梳理你所在地区的技术职位。

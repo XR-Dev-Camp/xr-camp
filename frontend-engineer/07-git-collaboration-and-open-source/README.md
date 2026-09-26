@@ -62,7 +62,7 @@ The [`completed/`](completed/) folder shows what Ana's copy looked like at the e
 ├── completed/           # Ana's finished work and example writing
 │   ├── index.html, 3d/index.html   # The fixed pages
 │   ├── CHANGELOG.md, pull-request-example.md, contribution-log.md
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -184,7 +184,7 @@ Make one on purpose, with your partner, in one of your copies:
 >>>>>>> main
 ```
 
-The part above `=======` is one branch; the part below is the other. Decide what the file should say (here: both tips), delete the three marker lines, press **Mark as resolved**, then **Commit merge**. In VS Code, the same markers appear with buttons: **Accept Current**, **Accept Incoming**, **Accept Both**.
+The part above `=======` is one branch; the part below is the other. Decide what the file should say (here: both tips), delete the three marker lines, press **Mark as resolved**, then **Commit merge**. In VS Code, the same markers appear with buttons: **Accept Current Change**, **Accept Incoming Change**, **Accept Both Changes**.
 
 A conflict is not an error, and nothing is broken. It is Git being careful.
 
@@ -233,7 +233,7 @@ Then publish it: **Releases → Draft a new release**, create the tag `v1.1.0`, 
 
 **Conflict markers**: `<<<<<<<` starts the first version, `=======` separates them, `>>>>>>>` ends the second. A file with markers left in it is broken: always delete all three.
 
-**`git tag v1.1.0`** marks the current commit with a version name, if you release from a terminal; GitHub's **Draft a new release** does it for you.
+**`git tag v1.1.0`** marks the current commit with a version name, if you release from a terminal; then `git push origin v1.1.0` sends it to GitHub. GitHub's **Draft a new release** does both for you.
 
 ## Accessibility requirements
 
@@ -268,7 +268,7 @@ The 3D example's looping animations kept running even when nothing needed to mov
 
 **The Resolve conflicts button is greyed out.** The conflict is too complex for the browser editor. Resolve it in VS Code: pull both branches, merge, fix the markers, commit, and push.
 
-**`Fixes #3` did not close the issue.** The PR was merged into a branch that is not the default one, or the keyword is in a commit title rather than the description. Close the issue by hand, and link the PR.
+**`Fixes #3` did not close the issue.** The PR was merged into a branch that is not the default one, or the keyword is in the pull request's title or a comment instead of its description. Close the issue by hand, and link the PR.
 
 **My Pages site did not update after merging.** Wait a few minutes, then reload without the cache (Course 1.8).
 
@@ -276,7 +276,7 @@ The 3D example's looping animations kept running even when nothing needed to mov
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: review three pull requests, and write a short guide to kind reviews.
 2. **[Creative](challenges/challenge-2.md)**: translate the 3D example into your language, through a pull request.

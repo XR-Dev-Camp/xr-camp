@@ -48,7 +48,7 @@ La solución de referencia en [`completed/`](completed/) es el plan de Ana. El t
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: your career page, with 6 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -149,7 +149,7 @@ Solo HTML y CSS: carga al instante. Muchas veces quien recluta lee una página p
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: entrevista a alguien que trabaje en tecnología.
 2. **[Creativo](challenges/challenge-2.es.md)**: haz un mapa de los roles de tecnología en tu propia región.

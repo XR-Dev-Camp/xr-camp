@@ -59,7 +59,7 @@ The reference solution is in [`completed/`](completed/). In your own site, save 
 │   ├── thanks.html      # The page your forms send people to
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -220,7 +220,7 @@ Forms made of plain HTML are fast, work on the oldest phones, and keep working w
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: add a date field and a second menu, correctly labelled.
 2. **[Creative](challenges/challenge-2.md)**: translate your form, including its hints and privacy note.

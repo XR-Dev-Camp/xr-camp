@@ -55,7 +55,7 @@ La solución de referencia está en [`completed/`](completed/). El punto de part
 │   ├── styles.css       # The site's stylesheet, with explorer styles added
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -336,7 +336,7 @@ El explorador dibuja como mucho unas cuantas decenas de tarjetas, así que volve
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: un botón «Clear filters» (borrar filtros).
 2. **[Creativo](challenges/challenge-2.es.md)**: etiquetas y mensajes en tu propio idioma.

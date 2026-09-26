@@ -60,7 +60,7 @@ La solución de referencia está en [`completed/`](completed/): la página repar
 │   ├── index.html       # The repaired page
 │   ├── audit.html       # Ana's audit report
 │   └── 3d-moment.html   # The repaired 3D scene
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -229,7 +229,7 @@ Las correcciones de accesibilidad casi no cuestan nada en rendimiento: los eleme
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: graba un recorrido de tu página reparada usando solo el teclado.
 2. **[Creativo](challenges/challenge-2.es.md)**: agrega subtítulos y una transcripción a un video corto sobre tu comunidad.

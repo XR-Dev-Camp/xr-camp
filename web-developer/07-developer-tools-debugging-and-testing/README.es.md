@@ -58,7 +58,7 @@ La solución de referencia en [`completed/`](completed/) es el explorador correg
 │   ├── index.html, explorer.js, styles.css   # Fixed
 │   ├── bug-reports.md   # Ana's reports
 │   └── 3d-moment.html   # The fixed scene
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -228,7 +228,7 @@ El panel Network también muestra cuánto pesa cada archivo y cuánto tardó. Mi
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: esconde cinco errores tuyos e intercambia con una compañera o un compañero.
 2. **[Creativo](challenges/challenge-2.es.md)**: explica un error, y cómo lo encontraste, en tu propio idioma.

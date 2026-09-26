@@ -84,7 +84,7 @@
 - **Link:** [MDN: HTMLElement.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus)
 - **My prediction, then the Console:** `'focusNext' in HTMLElement.prototype`
   gave `false`. Calling it gave `TypeError: button.focusNext is not a
-  function`.
+  function` (Chrome's wording; Firefox/Safari differ).
 - **Verdict:** **Invented.** It does not exist. It also would not help:
   after Delete, the list is redrawn and the pressed button is gone, which
   is why `main.js` finds the next Delete button itself.

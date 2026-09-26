@@ -58,7 +58,7 @@ Then, in session 3, you will build something just as important: a plan for fitti
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a 3D world with 6 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -181,7 +181,7 @@ A-Frame is a large download the first time the page opens: about 1.3 MB of code,
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: add two more shapes and describe them.
 2. **[Creative](challenges/challenge-2.md)**: build a place from your own life.

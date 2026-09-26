@@ -48,7 +48,7 @@ The reference solution in [`completed/`](completed/) is Ana's plan. Yours will b
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: your career page, with 6 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -149,7 +149,7 @@ Plain HTML and CSS: instant to load. A career page is often read by a recruiter 
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: interview someone who works in technology.
 2. **[Creative](challenges/challenge-2.md)**: map the technology roles in your own region.

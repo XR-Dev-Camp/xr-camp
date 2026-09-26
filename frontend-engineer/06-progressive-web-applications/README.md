@@ -43,7 +43,7 @@ By the end of this project you will be able to:
 
 ## What you will build
 
-The fourth part of **My XR Camp**, again: the **study-week weather dashboard** from Course 2.4, now an **app**. It opens with no internet, on a bus, in a library with bad Wi-Fi, or with no data left this month. It can live on a phone's home screen with its own icon. It tells the truth about old data, offers updates without surprises, and has a **low-data mode** that skips the 1.3 MB 3D library.
+The sixth part of **My XR Camp**: the **study-week weather dashboard** from Course 2.4, now an **app**. It opens with no internet, on a bus, in a library with bad Wi-Fi, or with no data left this month. It can live on a phone's home screen with its own icon. It tells the truth about old data, offers updates without surprises, and has a **low-data mode** that skips the 1.3 MB 3D library.
 
 Nothing about the forecast changes. That is the point of the word **progressive**: the same web page, made better in browsers that support more, and still working in browsers that do not.
 
@@ -70,7 +70,7 @@ The reference solution is in [`completed/`](completed/). The starter is the fini
 │   ├── data/sample-forecast.json, styles.css                   # Finished
 │   └── 3d-moment.html   # The forecast as 3D bars, loaded only when wanted
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -390,7 +390,7 @@ Cache first is only safe with versioned caches. Change `VERSION` whenever you ch
 
 ## Challenge extensions
 
-Three optional extensions, in [`challenges/`](challenges/):
+Three challenge extensions, in [`challenges/`](challenges/). The Foundation challenge is required; the other two are optional:
 
 1. **[Foundation](challenges/challenge-1.md)**: an "Offline" badge, and a version line so you always know which version is running.
 2. **[Creative](challenges/challenge-2.md)**: make the app yours: your own icon, colours, name, and offline page, in your language.

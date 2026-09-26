@@ -58,7 +58,7 @@
 │   ├── centre.svg       # A drawing of the centre
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -278,7 +278,7 @@ body {
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 只修改自定义属性，做出一套深色主题。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 一套来自你自己的文化或家乡的调色板，每一对颜色都经过检查。

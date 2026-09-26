@@ -55,7 +55,7 @@ La solución de referencia en [`completed/`](completed/) es la página de config
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a setup page with 8 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -239,7 +239,7 @@ La página es solo HTML y un poco de CSS: se abre al instante, incluso desde una
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: un ejercicio de dos minutos solo con el teclado.
 2. **[Creativo](challenges/challenge-2.es.md)**: tu página de configuración y tus carpetas en tu propio idioma.

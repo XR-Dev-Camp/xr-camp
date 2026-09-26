@@ -48,7 +48,7 @@ La solución de referencia en [`completed/`](completed/) es el diagrama de Ana. 
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: a diagram with 9 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -159,7 +159,7 @@ La página no tiene imágenes, y su CSS y su script están dentro del archivo HT
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: separa en partes cinco direcciones web reales.
 2. **[Creativo](challenges/challenge-2.es.md)**: sigue el recorrido de los cables submarinos que llevan internet a tu país.

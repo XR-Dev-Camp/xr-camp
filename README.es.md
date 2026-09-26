@@ -137,7 +137,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 - `README` — la guía de la lección, en inglés, español y chino simplificado.
 - `starter/` — donde empiezas. Cópialo y construye.
 - `completed/` — la solución de referencia. Ábrela solo después de intentarlo de verdad.
-- `challenges/` — tres retos opcionales: Fundamento, Creativo, Explorador.
+- `challenges/` — tres retos: Fundamento (obligatorio), Creativo y Explorador (opcionales).
 - `tests/checklist.md` — revisa tu trabajo antes de compartirlo.
 
 ## Accesible desde el diseño

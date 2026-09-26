@@ -23,7 +23,7 @@ function drawAll() {
   goalList.replaceChildren(...state.goals.map(goalItem));
 }
 
-// TODO 1: Before writing code, open the Elements panel and explore the DOM
+// TODO 1: Before writing code, open the Elements panel (Inspector in Firefox) and explore the DOM
 // tree of this page: find #map, #goals, and #status.
 
 // TODO 7: EVENT DELEGATION. Add ONE "change" listener to #map. In it, ignore

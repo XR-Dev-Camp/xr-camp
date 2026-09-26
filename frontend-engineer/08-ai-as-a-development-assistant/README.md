@@ -42,7 +42,7 @@ No account is required by the lesson itself. If you cannot, or do not want to, u
 
 ## What you will build
 
-The fourth part of **My XR Camp**: a documented **AI-assisted code review** of your own planner from Course 2.3.
+Not a new part of **My XR Camp**: a documented **AI-assisted code review** that revisits the third part, your session planner from Course 2.3.
 
 You will ask an AI assistant to explain and review a small piece of your code, and you will check every answer. You write down what you asked, what it said, what you checked, your source, your verdict, and what you learned. At the end, you publish the review as a small, accessible web page, and you keep an **AI-use log** of every time you used an assistant.
 
@@ -99,7 +99,7 @@ The reference solution in [`completed/`](completed/) is Ana's review, with seven
 | 11 | Step 9: publish the review (TODOs 11–12) | The review as a web page |
 | 12 | Step 9, continued (TODO 13) | What you learned, and a page that passes the checklist |
 | 13 | The **3D moment** (TODO 14) | Every three.js claim checked against the docs |
-| 14 | [`tests/checklist.md`](tests/checklist.md), the Foundation challenge, then **Submitting your work** | The fourth part of My XR Camp |
+| 14 | [`tests/checklist.md`](tests/checklist.md), the Foundation challenge, then **Submitting your work** | A reviewed and improved third part of My XR Camp |
 
 ### Step 1: rules first (TODO 1)
 
@@ -122,7 +122,7 @@ There are three kinds. Any of them works for this lesson.
 | Kind | Examples | Good to know |
 | --- | --- | --- |
 | **Hosted, from Western companies** | ChatGPT, Claude, Gemini, Microsoft Copilot | Run on the company's computers. Many are not reachable from mainland China. |
-| **Hosted, from Chinese companies** | Qwen (通义), DeepSeek, Kimi, Doubao (豆包) | Usually reachable from mainland China, and often good in Chinese. Some may be harder to reach from elsewhere. |
+| **Hosted, from Chinese companies** | Qwen (千问, formerly 通义), DeepSeek, Kimi, Doubao (豆包) | Usually reachable from mainland China, and often good in Chinese. Some may be harder to reach from elsewhere. |
 | **Local models**, on your own computer | Ollama or LM Studio, running an open-weight model | Nothing you type leaves your computer, and it works offline once downloaded. Needs a recent computer with plenty of memory; models are often several gigabytes. Smaller models make more mistakes. |
 
 Many offer a free tier; check the current terms, including any minimum age. Which services are reachable, and what they cost, changes often, and differs by country, so check what works where you are, today. Some assistants also work inside your code editor; for this lesson, a chat window is enough, because you want to see and log every question.
@@ -251,7 +251,7 @@ Fill in the table (TODO 11) and the sections (TODO 12). Then finish `review.md` 
 
 **`await import('./js/store.js')` in the Console.** A dynamic import loads a module from the Console. Because the page already loaded the same file, you get the **same** module, with the same state, so you can test the real store.
 
-**`'focusNext' in HTMLElement.prototype`.** Every element's methods live on its prototype. `in` asks "does this name exist anywhere on it?" `false` means no browser you are using has this method, whatever an assistant says.
+**`'focusNext' in HTMLElement.prototype`.** Every element's methods live on its prototype. `in` asks "does this name exist anywhere on it?" `false` means the browser you are using does not have this method, whatever an assistant says. Check MDN to see whether any browser has it.
 
 **`<div class="table-scroll" role="region" aria-labelledby="summary-caption" tabindex="0">`.** `tabindex="0"` lets keyboard users focus the box and scroll it with the arrow keys. `role="region"` with a name tells screen-reader users what they have landed on.
 
@@ -277,12 +277,12 @@ The scene describes itself in text, starts still if you asked your device to red
 | --- | --- | --- |
 | The summary table has a caption and column and row headers | 1.3.1 | The structure is available to screen readers, not only visible. |
 | The table's scrolling box can be focused and is named | 2.1.1, 4.1.2 | Keyboard users can scroll it, and know what it is. |
-| The page never scrolls sideways at 320 CSS pixels; only the table's box may | 1.4.10 | Data tables are the one exception reflow allows. |
+| The page never scrolls sideways at 320 CSS pixels; only the table's box may | 1.4.10 | Data tables are one of the exceptions reflow allows. |
 | Verdicts are words, with colour as a second signal | 1.4.1 | Nobody has to tell green from red. |
 | Quotes in other languages have `lang` | 3.1.2 | Screen readers switch pronunciation. |
-| Headings in order: one `h1`, `h2` sections, `h3` items | 1.3.1, 2.4.6 | People can jump through the review by heading. |
+| Headings in order: one `h1`, `h2` sections, `h3` items | 1.3.1 | People can jump through the review by heading. |
 | The planner's errors are announced | 3.3.1, 4.1.3 | Ana's item 7: the message must reach screen-reader users too. |
-| The 3D scene has a text description, can be paused, and respects reduced motion | 1.1.1, 2.2.2, 2.3.3 | Information and movement are never forced on anyone. |
+| The 3D scene has a text description, can be paused, and respects reduced motion | 1.1.1, 2.2.2 | Information and movement are never forced on anyone. |
 
 ## Performance considerations
 

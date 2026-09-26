@@ -77,7 +77,7 @@ renderer.setAnimationLoop(paused ? null : frame);</code></pre>
       </li>
       <li>
         <p class="ai-says">"Passing <code>null</code> to <code>setAnimationLoop</code> stops the loop. three.js recommends <code>setAnimationLoop</code> instead of calling <code>requestAnimationFrame</code> yourself."</p>
-        <p class="check"><span class="verdict accepted">Correct</span> Both are in the docs for <code>setAnimationLoop</code>. That is how the Pause button on this page works. Source: <a href="https://threejs.org/docs/#WebGLRenderer">three.js docs: WebGLRenderer</a>.</p>
+        <p class="check"><span class="verdict accepted">Correct</span> The docs for <code>setAnimationLoop</code> recommend it over <code>requestAnimationFrame</code>. They no longer say what passing <code>null</code> does, but the Pause button on this page shows it: passing <code>null</code> stops the loop. Source: <a href="https://threejs.org/docs/#WebGLRenderer">three.js docs: WebGLRenderer</a>.</p>
       </li>
     </ol>
 

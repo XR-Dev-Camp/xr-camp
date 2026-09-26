@@ -52,7 +52,7 @@
 ├── project.json         # Lesson metadata
 ├── starter/             # Begin here: the three views, with 6 TODOs
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -159,7 +159,7 @@ AI 正在开始像理解文字和图片一样理解 3D 空间：为看不见的�
 
 ## 拓展挑战
 
-三个可选拓展，位于 [`challenges/`](challenges/)：
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
 
 1. **[基础](challenges/challenge-1.zh-Hans.md)** —— 把五个真实的产品分类为 2D、3D、VR、AR 或 MR。
 2. **[创意](challenges/challenge-2.zh-Hans.md)** —— 为你的社区设计一个沉浸式创意，并诚实地判断它是否真的应该做成沉浸式。

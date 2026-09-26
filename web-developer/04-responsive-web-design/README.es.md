@@ -57,7 +57,7 @@ La solución de referencia está en [`completed/`](completed/). El punto de part
 │   ├── centre-480.jpg, centre-960.jpg, centre-1440.jpg   # One picture, three sizes
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -282,7 +282,7 @@ Las imágenes adaptables son la mayor mejora de rendimiento de esta lección: un
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: una navegación que se pliega en un botón «Menu» en pantallas chicas.
 2. **[Creativo](challenges/challenge-2.es.md)**: un registro de pruebas en tres dispositivos reales.

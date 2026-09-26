@@ -59,7 +59,7 @@ La solución de referencia está en [`completed/`](completed/). En tu propio sit
 │   ├── thanks.html      # The page your forms send people to
 │   └── 3d-moment.html   # This lesson's 3D moment
 ├── completed/           # Reference solution: open this last
-├── challenges/          # Three optional extensions
+├── challenges/          # Three challenges: Foundation is required
 ├── tests/checklist.md   # Self-review before you submit
 ├── assets/
 └── screenshots/
@@ -220,7 +220,7 @@ Los formularios hechos con HTML simple son rápidos, funcionan en los celulares 
 
 ## Retos adicionales
 
-Tres extensiones opcionales, en [`challenges/`](challenges/):
+Tres desafíos de extensión, en [`challenges/`](challenges/). El desafío Fundamento es obligatorio; los otros dos son opcionales:
 
 1. **[Fundamento](challenges/challenge-1.es.md)**: agrega un campo de fecha y un segundo menú, bien etiquetados.
 2. **[Creativo](challenges/challenge-2.es.md)**: traduce tu formulario, incluidas sus pistas y su nota de privacidad.
