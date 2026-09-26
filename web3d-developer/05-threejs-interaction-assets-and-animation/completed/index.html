@@ -3,12 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The exhibit's model explorer: two real, CC-licensed glTF models loaded with GLTFLoader, alongside 3.4's three primitives, with raycasting selection, a loading bar, and each model's own built-in animation.">
   <title>Three.js Interaction, Assets, and Animation - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Web3D · Three.js Interaction, Assets, and Animation</p></header>
   <main>
-    <h1>Three.js Interaction, Assets, and Animation</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>The exhibit's model explorer</h1>
+    <p>The same clay pot, woven basket ring, and jade stone from 3.1-3.4, now joined by two real, CC-licensed glTF models: a fox figure and a Cesium milk truck. Click or tap an item to select it, or use the Select buttons below. Each model plays its own built-in animation once it finishes loading.</p>
+    <noscript><p>This exhibit needs JavaScript and WebGL 2. The list below describes everything in it.</p></noscript>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The exhibit</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D exhibit (WebGL 2 is unavailable). Nothing is
+          broken: the list below describes everything the exhibit contains.
+        </p>
+
+        <p id="loading-status" class="loading-status" role="status"></p>
+        <progress id="loading-bar" class="loading-bar" max="100" value="0" hidden></progress>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the exhibit&hellip;</p>
+
+        <h3>Everything in the exhibit</h3>
+        <p class="hint">This list is not only a fallback: it is the same information as the picture, in words, so it is always here (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Exhibit controls">
+        <fieldset>
+          <legend>1. Look around</legend>
+          <p class="hint">Drag the view with a mouse or a finger. Or focus the exhibit (press Tab) and use the arrow keys. These two buttons do the same as dragging left or right, without a mouse.</p>
+          <ul class="view-buttons" role="list">
+            <li><button type="button" id="turn-left">Turn left</button></li>
+            <li><button type="button" id="turn-right">Turn right</button></li>
+          </ul>
+          <p><button type="button" id="reset-view">Reset view</button></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Select an item</legend>
+          <p class="hint">Click or tap an item in the 3D view, or choose it here. This does exactly the same thing, without a pointer.</p>
+          <ul class="select-buttons" id="select-buttons" role="list"></ul>
+          <p id="selection-info" class="scene-text" aria-live="polite">Nothing is selected yet.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Animation</legend>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p class="hint">The jade stone turns on its own, and each model plays its own built-in animation once it loads. Nothing else moves by itself, and the camera never moves unless you move it.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Memory and performance</legend>
+          <p><button type="button" id="reload">Reload exhibit</button></p>
+          <p class="hint">Disposes every mesh, material, and texture, then loads both models again from scratch. Watch the Geometries and Textures counts below: if disposal works, including for the models' own textures, they return to the same numbers.</p>
+          <details class="stats">
+            <summary>Stats</summary>
+            <dl>
+              <div><dt>Draw calls</dt><dd id="stat-calls">0</dd></div>
+              <div><dt>Triangles</dt><dd id="stat-triangles">0</dd></div>
+              <div><dt>Geometries in memory</dt><dd id="stat-geometries">0</dd></div>
+              <div><dt>Textures in memory</dt><dd id="stat-textures">0</dd></div>
+            </dl>
+            <p class="hint">A draw call is one instruction from the CPU telling the GPU "draw this". Phase 3's performance lesson (3.6) goes much further into reducing them.</p>
+          </details>
+        </fieldset>
+      </div>
+    </div>
+
+    <section aria-labelledby="attribution-heading">
+      <h2 id="attribution-heading">Model attribution</h2>
+      <p class="hint">Both models are official Khronos Group sample assets, used under the licences below. See also <a href="../ATTRIBUTION.md"><code>ATTRIBUTION.md</code></a>.</p>
+      <ul class="attribution-list" id="attribution-list" role="list"></ul>
+    </section>
   </main>
 </body>
 </html>
