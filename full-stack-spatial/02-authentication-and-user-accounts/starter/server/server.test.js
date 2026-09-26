@@ -6,7 +6,7 @@
 // are finished helpers that read the Set-Cookie header from a login
 // response and hand it back so a test can resend it as a Cookie header.
 //
-// TODO 20: every test below already makes its request(s); add the
+// TODO 21: every test below already makes its request(s); add the
 // assertions (assert.equal / assert.deepEqual / assert.ok / assert.match)
 // that check the response is what this lesson's README says it should be.
 // Run `node --test` after each one you finish: a failing assertion tells

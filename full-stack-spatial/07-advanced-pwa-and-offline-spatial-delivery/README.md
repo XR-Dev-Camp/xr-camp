@@ -126,7 +126,7 @@ Before writing anything, open `data/bundles/history-exhibit.manifest.json`. Noti
 
 ### Step 6: The storage panel (TODO 6, TODO 7)
 
-`js/storage-panel.js` wraps two methods on `navigator.storage`: `estimate()`, which reports how many bytes this origin is using and its rough quota, and `persist()`, which asks the browser not to clear this storage automatically under disk pressure. Both are feature-checked first — `estimate()` is broadly supported, but `persist()`'s current MDN support table shows Safari does not implement it, and the browser can refuse the request either way, so `requestPersistence()` always reports what actually happened rather than assuming success.
+`js/storage-panel.js` wraps two methods on `navigator.storage`: `estimate()`, which reports how many bytes this origin is using and its rough quota, and `persist()`, which asks the browser not to clear this storage automatically under disk pressure. Both are feature-checked first — `estimate()` is broadly supported, Safari supports persist() since version 15.2 (Dec 2021), and the browser can refuse the request either way, so `requestPersistence()` always reports what actually happened rather than assuming success.
 
 ### Step 7: Download with progress (TODO 8)
 
@@ -207,7 +207,7 @@ Four small, independent pieces close this lesson out: `main.js`'s `renderStorage
 
 **Downloads show 0% the whole time, then jump to 100%.** `readWithProgress` (TODO 8) has not been finished yet, or the server response is missing a `Content-Length` header — check the Network panel's response headers for the file in question.
 
-**"This browser does not support requesting persistent storage."** Expected on Safari, as of MDN's current support table for `navigator.storage.persist()`. Nothing is broken; the storage is simply not protected from automatic eviction the way it would be elsewhere.
+**"This browser does not support requesting persistent storage."** Safari implements persist() since version 15.2; the browser may decline the request based on its own heuristics. Nothing is broken; the storage is simply not protected from automatic eviction the way it would be elsewhere.
 
 **A cancelled download still shows up in the resume queue.** Check that `startDownload`'s `catch` block distinguishes `error.name === 'AbortError'` from every other error — only a real failure should call `queueForResume`.
 

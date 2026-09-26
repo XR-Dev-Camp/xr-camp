@@ -188,7 +188,6 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 - [MDN: Soft skills for web developers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Soft_skills) 
 - [W3C, Accessibility Requirements for People with Low Vision](https://www.w3.org/TR/low-vision-needs/) 
 - [Gov.uk Service Manual: Discovery](https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works) 
-- [MDN: Understanding your target audience](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Soft_skills) 
 
 ## Women to Know
 

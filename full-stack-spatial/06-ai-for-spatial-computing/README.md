@@ -33,7 +33,7 @@ By the end of this project you will be able to:
 
 | Tool | Purpose | Cost |
 | --- | --- | --- |
-| Node.js 22.5 or later (LTS "24 Sinnamon" recommended) | Runs the server, including the built-in `node:sqlite` module | Free |
+| Node.js 22.5 or later (LTS "24 Krypton" recommended) | Runs the server, including the built-in `node:sqlite` module | Free |
 | A text editor (e.g. VS Code) | Writing the server and client code | Free |
 | A modern browser (Chrome, Firefox, Safari, or Edge) | Running the tool and testing your work | Free |
 | Ollama or LM Studio (optional) | Running a local model on your own machine, for the Explorer challenge | Free |

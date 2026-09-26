@@ -31,7 +31,7 @@ By the end of this project you will be able to:
 
 | Tool | Purpose | Cost |
 | --- | --- | --- |
-| Node.js 22.5 or later (LTS "24 Sinnamon" recommended) | Runs the server, including `node:sqlite` | Free |
+| Node.js 22.5 or later (LTS "24 Krypton" recommended) | Runs the server, including `node:sqlite` | Free |
 | npm (ships with Node.js) | Installs this lesson's one dependency, `ws` | Free |
 | A text editor (e.g. VS Code) | Reading and completing the server and client code | Free |
 | A browser (Chrome, Firefox, Safari, or Edge) | Using the app you build | Free |
@@ -231,7 +231,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 - [OWASP Access Control Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 - [Node.js docs: SQLite](https://nodejs.org/api/sqlite.html)
 - [MDN: WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
-- [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+- [Keep a Changelog](https://keepachangelog.com/)
 
 ## Women to Know
 

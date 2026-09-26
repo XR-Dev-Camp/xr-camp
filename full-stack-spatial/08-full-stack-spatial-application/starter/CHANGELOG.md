@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to this capstone app are recorded here, newest first. Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+All notable changes to this capstone app are recorded here, newest first. Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## 1.0.0
 

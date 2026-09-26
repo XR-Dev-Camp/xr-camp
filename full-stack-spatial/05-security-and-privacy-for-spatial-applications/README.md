@@ -31,7 +31,7 @@ By the end of this project you will be able to:
 
 | Tool | Purpose | Cost |
 | --- | --- | --- |
-| Node.js 22.5 or later (LTS "24 Sinnamon" recommended) | Runs the server | Free |
+| Node.js 22.5 or later (LTS "24 Krypton" recommended) | Runs the server | Free |
 | npm (ships with Node.js) | Installs this lesson's one dependency, `ws`, and runs `npm audit` | Free |
 | A text editor (e.g. VS Code) | Reading and fixing the server and client code | Free |
 | A browser (Chrome, Firefox, Safari, or Edge) | Trying each vulnerability yourself before you fix it | Free |

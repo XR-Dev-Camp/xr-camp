@@ -164,7 +164,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 ## Further reading
 
-- [Keep a Changelog: Releasing](https://keepachangelog.com/en/1.1.0/) 
+- [Keep a Changelog: Releasing](https://keepachangelog.com/) 
 - [MDN: Publishing your website](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) 
 - [W3C WAI: Involving Users in Evaluating Web Accessibility](https://www.w3.org/WAI/test-evaluate/involving-users/) 
 - [Choose a License](https://choosealicense.com/) 

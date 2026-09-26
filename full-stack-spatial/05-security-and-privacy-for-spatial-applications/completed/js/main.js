@@ -193,6 +193,8 @@ async function init() {
   }
 
   const pauseButton = $('pause-toggle');
+  pauseButton.setAttribute('aria-pressed', String(!scene.isAnimating()));
+  pauseButton.textContent = scene.isAnimating() ? 'Pause animation' : 'Resume animation';
   pauseButton.addEventListener('click', () => {
     const on = !scene.isAnimating();
     scene.setAnimating(on);

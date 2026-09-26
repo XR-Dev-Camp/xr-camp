@@ -171,7 +171,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 ## Further reading
 
 - [MDN: Understanding client needs and writing documentation](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines) 
-- [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
+- [Keep a Changelog](https://keepachangelog.com/) 
 - [W3C WAI: WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) 
 - [docs/en/3d-assets-and-versions.md](../../docs/en/3d-assets-and-versions.md) 
 

@@ -39,7 +39,7 @@ By the end of this project you will be able to:
 
 Stage 3 of the Professional Capstone: a **small, working prototype** that proves your Stage 2 design in code, plus a **test log**, and a **design review** record. This is not the finished capstone — it is the smallest slice that proves your riskiest design decisions actually work.
 
-The reference solution in [`completed/`](completed/) is a trimmed-down version of Ana's single gallery room from Stage 2: one exhibit stand built from a three.js primitive, with a scene description, a 2D twin list, keyboard controls, and a Pause button — reusing the accessible-3D-page pattern from `web3d-developer/07-interactive-web3d-experience`. The starter has three planning templates (`prototype-plan.md`, `test-log.md`, `design-review.md`) with 8 TODOs, plus a minimal three.js starter page with its own TODOs to complete.
+The reference solution in [`completed/`](completed/) is a trimmed-down version of Ana's single gallery room from Stage 2: one exhibit stand built from a three.js primitive, with a scene description, a 2D twin list, keyboard controls, and a Pause button — reusing the accessible-3D-page pattern from `web3d-developer/07-interactive-web3d-experience`. The starter has three planning templates (`prototype-plan.md`, `test-log.md`, `design-review.md`) with 7 TODOs, plus a minimal three.js starter page with its own TODOs to complete.
 
 ## Folder guide
 

@@ -31,7 +31,7 @@ By the end of this project you will be able to:
 
 | Tool | Purpose | Cost |
 | --- | --- | --- |
-| Node.js 22.5 or later (LTS "24 Sinnamon" recommended) | Runs the server, including the built-in `node:sqlite` module this lesson uses | Free |
+| Node.js 22.5 or later (LTS "24 Krypton" recommended) | Runs the server, including the built-in `node:sqlite` module this lesson uses | Free |
 | A text editor (e.g. VS Code) | Writing the server and client code | Free |
 | A modern browser (Chrome, Firefox, Safari, or Edge) | Running the exhibit and testing your work | Free |
 | DB Browser for SQLite (optional) | A free, offline graphical way to look inside the `.sqlite` file this lesson creates — this course never requires it, since `node server/inspect-db.js` does the same job from the terminal | Free |

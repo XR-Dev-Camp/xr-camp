@@ -32,7 +32,7 @@ By the end of this project you will be able to:
 
 | Tool | Purpose | Cost |
 | --- | --- | --- |
-| Node.js 22.5 or later (LTS "24 Sinnamon" recommended) | Runs the server | Free |
+| Node.js 22.5 or later (LTS "24 Krypton" recommended) | Runs the server | Free |
 | npm (ships with Node.js) | Installs this lesson's one dependency, `ws` | Free |
 | A text editor (e.g. VS Code) | Writing the server and client code | Free |
 | Two browser windows or tabs (Chrome, Firefox, Safari, or Edge) | Testing the room with more than one member at once — this lesson is not fully testable alone | Free |
@@ -296,7 +296,7 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 - [MDN: Writing WebSocket servers](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
 - [`ws` package documentation](https://github.com/websockets/ws)
 - [AWS Architecture Blog: Exponential Backoff And Jitter](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
-- [OWASP Cheat Sheet Series: WebSocket Security](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html#websockets)
+- [OWASP Cheat Sheet Series: WebSocket Security](https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html)
 
 ## Women to Know
 

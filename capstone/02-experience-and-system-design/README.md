@@ -188,10 +188,9 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 
 ## Further reading
 
-- [MDN: Wireframing and prototyping](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Soft_skills) 
 - [W3C WAI: Planning and Managing Web Accessibility](https://www.w3.org/WAI/planning-and-managing/) 
 - [OWASP: Threat Modeling](https://owasp.org/www-community/Threat_Modeling) 
-- [MDN: Structuring the web with HTML — document outlines](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) 
+- [MDN: Heading hierarchy and semantic structure](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) 
 
 ## Women to Know
 
