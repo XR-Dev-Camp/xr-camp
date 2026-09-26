@@ -1,0 +1,57 @@
+/* Print styles for Ana's CV (Course 6.4).
+   Loaded only when the page is printed or "printed" to PDF:
+   <link rel="stylesheet" href="print.css" media="print">
+   A screen reader or a browser tab never applies this file at all, so it is
+   safe to remove things here that only make sense on paper. */
+
+/* Paper, not a purple website: readable in black and white, and it does not
+   waste a stranger's printer ink on a coloured background. */
+body {
+  background: #fff;
+  color: #000;
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
+header, main { max-width: none; padding: 0; margin: 0 1cm; }
+header { background: none; border-bottom: 1px solid #000; }
+header p { color: #000; }
+
+h1, h2, h3 { color: #000; }
+
+a { color: #000; text-decoration: underline; }
+
+/* Show a link's destination in print: a reader on paper cannot click it. */
+a[href^="http"]::after,
+a[href^="mailto:"]::after {
+  content: " (" attr(href) ")";
+  font-size: 0.85em;
+  font-weight: normal;
+}
+
+/* Nothing on this list of controls is usable on paper, so it does not print. */
+.print-actions,
+nav {
+  display: none;
+}
+
+/* Keep one job's heading and its first line of bullets together, instead of
+   splitting a job across a page break. */
+.timeline-item {
+  break-inside: avoid;
+  border-bottom: none;
+}
+
+.cv-section {
+  break-inside: avoid;
+}
+
+.tag-list li,
+.contact-list li {
+  background: none;
+  border: 1px solid #000;
+}
+
+@page {
+  margin: 1.5cm;
+}

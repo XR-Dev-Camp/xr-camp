@@ -1,0 +1,35 @@
+/* Print styles for your CV (Course 6.4).
+   Loaded only when the page is printed or "printed" to PDF:
+   <link rel="stylesheet" href="print.css" media="print">
+   A screen reader or a browser tab never applies this file at all, so it is
+   safe to remove things here that only make sense on paper. */
+
+/* Paper, not a purple website: readable in black and white, and it does not
+   waste a stranger's printer ink on a coloured background. */
+body {
+  background: #fff;
+  color: #000;
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
+header, main { max-width: none; padding: 0; margin: 0 1cm; }
+header { background: none; border-bottom: 1px solid #000; }
+header p { color: #000; }
+
+h1, h2, h3 { color: #000; }
+
+a { color: #000; text-decoration: underline; }
+
+/* TODO 5: A reader on paper cannot click a link, and a "Download PDF" or
+   "Print this page" button does nothing useful once it is already printed.
+   Add two rules here:
+   1. After every http(s) and mailto link, print its destination in
+      parentheses, in a slightly smaller size, using ::after and the
+      attr(href) function (see MDN's "Generated content" and "attr()"
+      pages — linked from the README's Further reading).
+   2. Hide .print-actions and nav completely on paper (display: none). */
+
+@page {
+  margin: 1.5cm;
+}

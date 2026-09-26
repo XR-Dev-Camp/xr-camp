@@ -3,12 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Career Development and Professional Practice - XR Camp reference solution</title>
+  <meta name="description" content="Ana's accessible CV: a web, 3D, and XR developer available for remote work.">
+  <title>Ana's CV - Career Development and Professional Practice - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Screen and print share one design, but print.css only ever applies
+       when the page is printed or exported to PDF (media="print"). -->
+  <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
+  <header>
+    <p>XR Camp · Web3D</p>
+  </header>
   <main>
-    <h1>Career Development and Professional Practice</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <div class="print-actions">
+      <button type="button" id="print-btn">Print or save as PDF</button>
+    </div>
+
+    <div class="cv-header">
+      <div>
+        <h1>Ana</h1>
+        <p class="cv-role">Web, 3D, and XR developer in training</p>
+      </div>
+    </div>
+
+    <ul class="contact-list" role="list">
+      <li><a href="mailto:ana.builds@example.com">ana.builds@example.com</a></li>
+      <li>Remote, based in a UTC-6 time zone</li>
+      <li><a href="case-study.html">Case study: the virtual cultural exhibit</a></li>
+      <li><a href="../../../web-developer/09-web-developer-portfolio/completed/index.html">Portfolio</a></li>
+    </ul>
+
+    <section class="cv-section" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <p>I build accessible websites, 3D scenes, and small WebXR experiences, and I have shipped a full-stack prototype with a backend, real-time features, and a security review. I care most about work that stays usable without a headset, without a fast connection, and without perfect eyesight or hearing. I am looking for freelance or entry-level remote work, and I am comfortable coordinating across time zones.</p>
+    </section>
+
+    <section class="cv-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <table class="skills-table">
+        <caption class="visually-hidden">Skills by area, with the tools used for each</caption>
+        <thead>
+          <tr>
+            <th scope="col">Area</th>
+            <th scope="col">Tools and concepts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Web</th>
+            <td>Semantic HTML, responsive CSS, accessible forms, vanilla JavaScript</td>
+          </tr>
+          <tr>
+            <th scope="row">3D and XR</th>
+            <td>A-Frame, three.js, WebXR (VR and AR sessions), glTF assets, performance profiling</td>
+          </tr>
+          <tr>
+            <th scope="row">Full-stack</th>
+            <td>Node.js APIs, authentication, WebSockets, SQLite, basic security review</td>
+          </tr>
+          <tr>
+            <th scope="row">Practice</th>
+            <td>Git and GitHub, automated accessibility checks, writing documentation for other learners</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="cv-section" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Projects</h2>
+      <ul class="timeline" role="list">
+        <li class="timeline-item">
+          <h3>The virtual cultural exhibit</h3>
+          <p class="timeline-when">XR Camp, Phases 3-4</p>
+          <p>Built an interactive 3D exhibit with three.js and A-Frame, then made it WebXR-capable: controller and hand input, an AR placement mode, and a desktop and phone fallback that always works without a headset. Optimised it with instancing and level of detail, and audited it against the W3C's XR Accessibility User Requirements.</p>
+        </li>
+        <li class="timeline-item">
+          <h3>My XR Camp learning dashboard</h3>
+          <p class="timeline-when">XR Camp, Phase 2</p>
+          <p>A small app to track progress across this course: a course map, a dashboard with goals, and a session planner, all keyboard-accessible and built without a framework.</p>
+        </li>
+        <li class="timeline-item">
+          <h3>Riverside Community Centre website</h3>
+          <p class="timeline-when">XR Camp, Phase 1</p>
+          <p>An accessible, responsive site for a fictional community organisation, plus a written case study. See it in my <a href="../../../web-developer/09-web-developer-portfolio/completed/index.html">portfolio</a>.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="cv-section" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education and community involvement</h2>
+      <ul class="plan-list" role="list">
+        <li>XR Camp: Web Developer, Frontend Engineer, Web3D Developer, Immersive Developer, and Full-Stack Spatial Developer phases completed; Professional Developer phase in progress.</li>
+        <li>Member of a W3C Community Group (see <a href="../../03-open-source-standards-and-technical-leadership/completed/standards-plan.md">my standards participation plan</a>).</li>
+      </ul>
+    </section>
+
+    <section class="cv-section" aria-labelledby="availability-heading">
+      <h2 id="availability-heading">Availability</h2>
+      <p>I work remotely and keep a written record of any meeting time in UTC, so it converts cleanly for a client anywhere. I am glad to schedule a first call outside my normal daytime hours a few times a month, but I say so plainly rather than promising to always be available.</p>
+      <ul class="tag-list" role="list">
+        <li>Async-friendly</li>
+        <li>Written updates</li>
+        <li>UTC scheduling</li>
+      </ul>
+    </section>
   </main>
+  <script>
+    document.getElementById('print-btn').addEventListener('click', () => window.print());
+  </script>
 </body>
 </html>

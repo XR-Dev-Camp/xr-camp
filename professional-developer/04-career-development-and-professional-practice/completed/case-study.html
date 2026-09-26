@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case study: how Ana planned, built, and tested a virtual cultural exhibit in 3D and WebXR.">
+  <title>Case study: the virtual cultural exhibit - Ana</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+  <header>
+    <p>XR Camp · Web3D</p>
+  </header>
+  <main>
+    <p><a href="index.html">&larr; Back to my CV</a></p>
+    <h1>Case study: the virtual cultural exhibit</h1>
+    <p class="cv-role">A 3D exhibit that also works as a WebXR experience, and still works with no headset at all.</p>
+
+    <section class="cv-section" aria-labelledby="problem-heading">
+      <h2 id="problem-heading">The problem</h2>
+      <p>Most 3D "virtual museum" demos I found online assume a fast connection, a powerful GPU, and a mouse or a headset. That leaves out exactly the learners XR Camp is built for. I wanted to build a small cultural exhibit that a visitor could explore with a keyboard alone, that stayed readable for someone using a screen reader, and that still loaded on a modest laptop.</p>
+    </section>
+
+    <section class="cv-section" aria-labelledby="role-heading">
+      <h2 id="role-heading">My role</h2>
+      <p>I built this alone, across several XR Camp phases, as the ongoing project each lesson added to. I was the developer, the accessibility reviewer, and the person writing the on-page text for every exhibit.</p>
+    </section>
+
+    <section class="cv-section" aria-labelledby="approach-heading">
+      <h2 id="approach-heading">Approach</h2>
+      <ul class="plan-list" role="list">
+        <li><strong>Phase 3 (Web3D Developer):</strong> built the exhibits in three.js with GLTFLoader, keyboard-accessible raycasting for selection, and on-page attribution for every CC0 model.</li>
+        <li><strong>Performance:</strong> measured before optimising, with <code>renderer.info</code> and Chrome's Performance panel, then applied instancing, level of detail, and lazy loading of exhibits the visitor has not reached yet.</li>
+        <li><strong>Phase 4 (Immersive Developer):</strong> added an optional WebXR mode (controllers, hand tracking where supported, and an AR placement mode), with a seated option and a comfort vignette during locomotion.</li>
+        <li><strong>Accessibility throughout:</strong> a text scene description next to every 3D view, a 2D list of every exhibit's information, keyboard routes for each interaction, and a working non-XR fallback, checked against the W3C's XR Accessibility User Requirements (XAUR).</li>
+      </ul>
+    </section>
+
+    <section class="cv-section" aria-labelledby="result-heading">
+      <h2 id="result-heading">Result</h2>
+      <p>A capstone exhibit with several rooms, a working keyboard route through all of them, a scene description a screen reader can read on its own, and a WebXR mode that degrades gracefully on a device with no headset or hand tracking. On my own machine, applying instancing and level of detail cut the exhibit's draw calls by more than half; exact numbers are in the Phase 3 performance-engineering lesson, stated as "on my machine" rather than a general claim.</p>
+    </section>
+
+    <section class="cv-section" aria-labelledby="learned-heading">
+      <h2 id="learned-heading">What I would do differently</h2>
+      <p>I under-estimated how much text a scene description needs before it is actually useful, not just present. Writing one late, after a room's geometry was finished, meant rewriting it twice. Next time I will write the scene description first, as a short 2D outline, and build the 3D room to match it.</p>
+    </section>
+
+    <p><a href="../../../web3d-developer/07-interactive-web3d-experience/completed/index.html">See the Phase 3 capstone exhibit</a> · <a href="../../../immersive-developer/06-immersive-web-experience/completed/index.html">See the Phase 4 WebXR capstone</a></p>
+  </main>
+</body>
+</html>

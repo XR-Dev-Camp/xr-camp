@@ -27,7 +27,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | [3 · Conviértete en desarrolladora Web3D](web3d-developer/README.es.md) | Experiencias 3D interactivas con A-Frame y three.js. | 138 sesiones · unos 8 meses | 7 de 7 |
 | [4 · Conviértete en desarrolladora inmersiva](immersive-developer/README.es.md) | Experiencias de realidad virtual y aumentada que se abren en un visor desde un enlace. | 111 sesiones · unos 6 meses | 6 de 6 |
 | [5 · Conviértete en desarrolladora espacial full-stack](full-stack-spatial/README.es.md) | Aplicaciones 3D multiusuario con cuentas, datos y conexiones en tiempo real. | 166 sesiones · unos 10 meses | 3 de 8 |
-| [6 · Conviértete en desarrolladora profesional](professional-developer/README.es.md) | Despliegues en producción, sitios multilingües y tu propio lugar en el código abierto. | 73 sesiones · unos 4 meses | 3 de 5 |
+| [6 · Conviértete en desarrolladora profesional](professional-developer/README.es.md) | Despliegues en producción, sitios multilingües y tu propio lugar en el código abierto. | 73 sesiones · unos 4 meses | 4 de 5 |
 | [7 · Proyecto final profesional](capstone/README.es.md) | Un proyecto inmersivo completo: investigado, diseñado, construido, probado y lanzado. | 95 sesiones · unos 5 meses | 0 de 5 |
 
 ## Todas las lecciones
@@ -119,7 +119,7 @@ Ocho fases, de tu primer clic a profesional. Cada fase termina con un proyecto q
 | 1 | [Production Deployment and DevOps](professional-developer/01-production-deployment-and-devops/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 2 | [Internationalization and Localization](professional-developer/02-internationalization-and-localization/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
 | 3 | [Open Source, Standards, and Technical Leadership](professional-developer/03-open-source-standards-and-technical-leadership/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
-| 4 | [Career Development and Professional Practice](professional-developer/04-career-development-and-professional-practice/README.es.md) | 12 h · 16 sesiones | 🚧 Próximamente |
+| 4 | [Career Development and Professional Practice](professional-developer/04-career-development-and-professional-practice/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 5 | [Instructor and Mentor Preparation](professional-developer/05-instructor-and-mentor-preparation/README.es.md) | 8 h · 11 sesiones | 🚧 Próximamente |
 
 ### Fase 7 · Proyecto final profesional

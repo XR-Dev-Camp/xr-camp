@@ -2,18 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Career Development and Professional Practice - XR Camp starter</title>
+  <meta name="description" content="My accessible CV.">
+  <title>My CV - Career Development and Professional Practice - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
+  <header>
+    <p>XR Camp · Web3D</p>
+  </header>
   <main>
-    <!-- Add your main heading below. -->
+    <div class="print-actions">
+      <button type="button" id="print-btn">Print or save as PDF</button>
+    </div>
 
-    <!-- Add your project content below. -->
+    <h1>My CV</h1>
+
+    <!-- TODO 1: Build your header and contact section.
+         - Replace the <h1>My CV</h1> above with your name (or the name you
+           want to use professionally), and add one line under it saying
+           what kind of work you do.
+         - A <ul class="contact-list" role="list"> with: an email link
+           (<a href="mailto:...">), how you work (for example "Remote, based
+           in a UTC-x time zone" — never post a home address or phone number
+           in a public CV), and a link to case-study.html.
+         Use a real-looking but made-up email such as yourname@example.com;
+         do not put a real personal email in this shared coursework. -->
+
+    <!-- TODO 2: Add a "Skills" <section aria-labelledby="skills-heading">
+         with a <table class="skills-table">: a <caption>, one <th scope="col">
+         per column ("Area" and "Tools and concepts"), and one <th scope="row">
+         per skill area. List only tools and ideas this course actually taught
+         you; do not list a skill you have not practised. -->
+
+    <!-- TODO 3: Add a "Projects" <section aria-labelledby="experience-heading">
+         with a <ul class="timeline" role="list"> of <li class="timeline-item">
+         entries. Each one needs an <h3>, a <p class="timeline-when"> naming
+         the phase, and one or two sentences on what you built and what you
+         learned. Include at least the virtual cultural exhibit from Phases
+         3-4 and your Phase 1 portfolio; link to work you have already
+         finished rather than re-describing it in full. -->
+
+    <!-- TODO 4: Add an "Education and community involvement" section listing
+         the XR Camp phases you have completed, and an "Availability" section
+         explaining, in your own words, how you work across time zones (see
+         the README's "Remote work across time zones" for what to cover). -->
 
   </main>
+  <script>
+    document.getElementById('print-btn').addEventListener('click', () => window.print());
+  </script>
 </body>
 </html>
