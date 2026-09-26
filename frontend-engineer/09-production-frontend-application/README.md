@@ -296,6 +296,8 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 2. **[Creative](challenges/challenge-2.md)**: make My XR Camp yours: your own icon, a fourth view, or a language none of the drafts cover yet.
 3. **[Explorer](challenges/challenge-3.md)**: add a second 3D encoding of the same progress data (colour, or a second axis) without adding a single new fact to `#scene-description`.
 
+A further optional bonus, beyond the three challenges above and not required for submission: **[automated tests](challenges/bonus-testing.md)** (see ["Going further: automated tests"](#going-further-automated-tests)).
+
 ## Submitting your work
 
 1. Complete every item in [`tests/checklist.md`](tests/checklist.md), including its "3D and XR (manual)" section.
@@ -312,6 +314,32 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 - [W3C: Web App Manifest](https://www.w3.org/TR/appmanifest/)
 - [Semantic Versioning](https://semver.org/)
 - [A-Frame documentation](https://aframe.io/docs/1.8.0/introduction/)
+
+## Going further: automated tests
+
+Optional, not required for this lesson. `check.html` (Step 16) checks `js/utils.js`'s pure functions with plain `assert`-style code and no framework — the right choice for a lesson that must run with nothing installed. A production app usually adds a real test runner once the team, and the number of things that could quietly break, both grow. Two free, widely used tools cover the two kinds of test that matter most:
+
+- **[Vitest](https://vitest.dev/)** runs fast, framework-free unit tests against plain JavaScript modules — a natural fit for `utils.js`, since every function in it is already pure (see the comment at the top of that file).
+- **[Playwright](https://playwright.dev/)** drives a real browser to test a whole user flow end to end: click here, type there, check what appears — the same kind of check Step 17's manual keyboard pass does by hand, made repeatable.
+
+Both are pinned in [`versions.json`](../../versions.json): `vitest@5.0.2` and `@playwright/test@1.63.0`, exactly, no `^` or `~` range.
+
+[`completed/tests/unit/utils.test.js`](completed/tests/unit/utils.test.js) is a Vitest unit test covering `totals()`, `fraction()`, `nextLesson()`, `bySchedule()`, `toDays()`, `driestDay()`, and `isSemver()` — the same functions `check.html` already exercises, now with a real assertion library and a clear pass/fail report:
+
+```js
+import { describe, expect, it } from 'vitest';
+import { fraction } from '../../js/utils.js';
+
+describe('fraction', () => {
+  it('returns 0 instead of dividing by zero', () => {
+    expect(fraction(3, 0)).toBe(0);
+  });
+});
+```
+
+[`completed/tests/e2e/main-flow.spec.js`](completed/tests/e2e/main-flow.spec.js) is a Playwright end-to-end test of the main flow: it focuses the "Planner" navigation link, presses <kbd>Enter</kbd> (never a mouse click) to confirm the view switch works by keyboard, checks that focus lands on `#planner-heading` exactly as TODO 1's `showView()` promises (WCAG 2.4.3), then fills in and submits the planner form and checks the new session appears in the list. Testing the keyboard route, not only the visible result, is what would have caught a regression in Step 1's focus-management code that a mouse-only test would miss entirely.
+
+To try both yourself: `cd completed`, then `npm install`. Run the unit tests with `npm run test:unit` — they need nothing else running. Run the end-to-end test with `npm run test:e2e`, with the course's local server already serving the repository root (see "Setup" above); [`completed/playwright.config.js`](completed/playwright.config.js) points it at `http://127.0.0.1:8766/frontend-engineer/09-production-frontend-application/completed/`. Neither `node_modules/` nor a lockfile is committed to this repository — [`completed/.gitignore`](completed/.gitignore) excludes both, and `npm install` recreates them from `completed/package.json` any time you need them. Delete `node_modules` again once you are done, the same way you would before committing your own project. See the [bonus challenge](challenges/bonus-testing.md) to try extending both suites yourself.
 
 ## Women to Know
 

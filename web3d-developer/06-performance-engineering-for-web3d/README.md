@@ -295,6 +295,8 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 2. **[Creative](challenges/challenge-2.md)**: reskin the hall for your own culture or community.
 3. **[Explorer](challenges/challenge-3.md)**: measure a real KTX2 conversion, or push the merge-versus-instance trade-off further.
 
+Two further optional bonuses, beyond the three challenges above and not required for submission: **[WebGPU and TSL](challenges/bonus-webgpu.md)** (see ["Going further: WebGPU"](#going-further-webgpu)) and **[compressing glTF models](challenges/bonus-gltf-compression.md)** (see ["Going further: compressing glTF models"](#going-further-compressing-gltf-models)).
+
 ## Submitting your work
 
 1. Work through [`tests/checklist.md`](tests/checklist.md) and fix anything unchecked.
@@ -309,6 +311,101 @@ Three challenge extensions, in [`challenges/`](challenges/). The Foundation chal
 - [Khronos Group: KTX File Format](https://www.khronos.org/ktx/) — the texture container this lesson's optional step points to.
 - [Chrome DevTools: Analyze runtime performance](https://developer.chrome.com/docs/devtools/performance/)
 - [three.js documentation: `THREE.LOD`](https://threejs.org/docs/#api/en/objects/LOD)
+
+## Going further: WebGPU
+
+Optional, not required for this lesson. Everything above uses `WebGLRenderer`, the renderer every three.js lesson in this course relies on. three.js also ships `WebGPURenderer`, a newer renderer built around [WebGPU](https://www.w3.org/TR/webgpu/), the W3C's successor to WebGL, plus **TSL** (Three.js Shading Language), a way to write shaders as JavaScript expressions instead of GLSL strings.
+
+The important part for a course that runs on many learners' devices: `WebGPURenderer` falls back to a WebGL 2 backend automatically when a browser does not support WebGPU. You write one scene once; it runs on whichever backend is available, without an `if` statement in your own code.
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+      "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+      "three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.webgpu.min.js",
+      "three/tsl": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.tsl.min.js"
+    }
+  }
+</script>
+```
+
+`WebGPURenderer` is imported from `three/webgpu`, not from `three` itself — three.js keeps it as a separate entry point so a lesson that never uses it never has to load its (larger) code:
+
+```js
+import { WebGPURenderer } from 'three/webgpu';
+
+const renderer = new WebGPURenderer({ antialias: true });
+await renderer.init(); // requests a GPU adapter, or falls back to WebGL 2 if none is available
+```
+
+`renderer.init()` is asynchronous and must resolve before the first `render()` call — this is the one structural difference from the `WebGLRenderer` pattern used everywhere else in this course, where the renderer is ready to use the moment its constructor returns.
+
+A tiny TSL example — a material whose colour is built as an expression tree instead of a shader string:
+
+```js
+import { color, time, positionLocal, mix, sin, uniform } from 'three/tsl';
+import { MeshBasicNodeMaterial } from 'three/webgpu';
+
+const heightFactor = positionLocal.y.add(0.5).clamp(0, 1);
+const material = new MeshBasicNodeMaterial();
+material.colorNode = mix(color(0x5b2a86), color(0xd62f6b), heightFactor)
+  .mul(sin(time.mul(uniform(0.6))).mul(0.15).add(0.85));
+```
+
+Nothing here runs once per frame in your own JavaScript: the whole expression compiles into a shader that the GPU evaluates every pixel, every frame, on its own. `WebGPURenderer` compiles the same node graph to WGSL (WebGPU's shading language) or GLSL, whichever backend is active — the node graph does not change.
+
+Feature detection matters here in a way it usually does not elsewhere in this course: `'gpu' in navigator` only tells you the browser exposes the WebGPU JavaScript API, not that a real adapter and device are available — a browser flag, an outdated GPU driver, or a headless test runner (this lesson's own reference solution is tested in headless Chrome, over software rendering) can expose the API and still fail to obtain one. The only reliable check is trying: call `renderer.init()`, and read which backend actually started, exactly as `completed/webgpu.html` does.
+
+A complete, working example is in [`completed/webgpu.html`](completed/webgpu.html): two cubes, one shaded with the TSL material above, one with an ordinary `MeshBasicMaterial` for comparison, both turning slowly. It carries the same accessibility structure as the main hall — a scene description built from what actually rendered (so it says "WebGL 2 fallback" truthfully when that is what ran), an always-present 2D list, `prefers-reduced-motion` starting the turning paused, and a keyboard-reachable **Pause animation** button. Try it yourself, then see the [bonus challenge](challenges/bonus-webgpu.md).
+
+## Going further: compressing glTF models
+
+Optional, not required for this lesson. This course's models stay under the 5&nbsp;MB budget in [`docs/en/3d-assets-and-versions.md`](../../docs/en/3d-assets-and-versions.md) by being simple, but a real-world glTF/GLB model — especially one with many vertices or large textures — often needs deliberate compression to stay small and fast to load. Three techniques do most of the work, and they combine:
+
+- **Draco** compresses geometry (positions, normals, UVs) by re-encoding it, often shrinking a mesh to a fraction of its original size at the cost of a short decode step when the model loads.
+- **Meshopt** also compresses geometry, with a different trade-off: faster decoding than Draco, usually at a slightly larger file size. Some pipelines use both together — Meshopt for interleaved vertex compression, Draco for the geometry stream — but either alone is a real improvement over neither.
+- **KTX2** (with Basis Universal or UASTC encoding) compresses textures into a format the GPU can decode natively, unlike a `.jpg` or `.png`, which the browser must fully decompress into an uncompressed bitmap before upload. This is the same KTX2 format `js/textures.js` already points to as an optional step earlier in this lesson.
+
+Two free command-line tools apply these without touching your modelling software:
+
+```sh
+# gltf-transform: a general-purpose glTF toolkit (pinned version, exact — do not use ^ or ~)
+npx @gltf-transform/cli@4.5.0 optimize input.glb output.glb --compress draco --texture-compress ktx2
+
+# gltfpack: a smaller, faster, more opinionated alternative, strong at Meshopt compression
+npx gltfpack@1.3.0 -i input.glb -o output.glb -cc
+```
+
+Measure before you trust either one:
+
+```sh
+ls -lh input.glb output.glb   # file size, before and after
+```
+
+Then confirm the result still loads and still looks right — a compressed model that fails to decode, or that looks visibly worse, is not actually an improvement.
+
+Loading a Draco- or Meshopt-compressed model in three.js needs one extra loader step each, using the same `three/addons/` import-map entry every other addon in this course uses:
+
+```js
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/libs/draco/gltf/');
+
+const loader = new GLTFLoader();
+loader.setDRACOLoader(dracoLoader);       // only needed if the model used Draco
+loader.setMeshoptDecoder(MeshoptDecoder); // only needed if the model used Meshopt
+loader.load('output.glb', (gltf) => scene.add(gltf.scene));
+```
+
+Both loaders are safe to register even on a model that used neither technique — each one only does work if the file actually contains that compression's data. `GLTFLoader.js` is already vendored in this repository (`vendor/three/0.186.1/examples/jsm/loaders/GLTFLoader.js`); `DRACOLoader.js` and `meshopt_decoder.module.js` follow the same `three/addons/` path pattern as every other addon this course uses.
+
+No new binary model is added to this repository for this bonus — if you compress a model of your own to try this, keep it under this course's 5&nbsp;MB model budget and credit its source in your own `ATTRIBUTION.md`, exactly as [`docs/en/3d-assets-and-versions.md`](../../docs/en/3d-assets-and-versions.md) requires. See the [bonus challenge](challenges/bonus-gltf-compression.md) to try this yourself.
 
 ## Women to Know
 

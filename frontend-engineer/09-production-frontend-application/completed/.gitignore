@@ -1,0 +1,6 @@
+# Bonus test tooling (see "Going further: automated tests" in the README).
+# Installed packages and lockfiles are never committed to this repository.
+node_modules/
+package-lock.json
+test-results/
+playwright-report/

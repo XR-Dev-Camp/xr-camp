@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bonus example: a WebGPURenderer scene with a tiny TSL node material, falling back to WebGL 2 automatically when WebGPU is unavailable.">
+  <title>WebGPU and TSL bonus - XR Camp reference solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+        "three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.webgpu.min.js",
+        "three/tsl": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.tsl.min.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header><p>XR Camp · Web3D · Performance Engineering · Bonus</p></header>
+  <main>
+    <h1>Bonus: WebGPU and TSL</h1>
+    <p>This optional extra swaps the hall's <code>WebGLRenderer</code> for <code>WebGPURenderer</code> (imported from <code>three/webgpu</code>) and colours one cube with a small shader written in TSL (Three.js Shading Language, imported from <code>three/tsl</code>) instead of a plain material. Read <a href="../README.md#going-further-webgpu">"Going further: WebGPU" in the lesson README</a> for the full explanation. This page is not part of the required lesson.</p>
+    <noscript><p>This page needs JavaScript. The list below describes the scene without it.</p></noscript>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The scene</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D scene (neither WebGPU nor WebGL 2 is
+          available). Nothing is broken: the list below describes the scene in words.
+        </p>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the scene&hellip;</p>
+
+        <h3>What is in the scene (2D fallback)</h3>
+        <p class="hint">This list carries the same information as the picture, in words, so it is always here, whether or not WebGPU or WebGL loads (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" role="list">
+          <li>One cube, coloured by a TSL node material that mixes two colours up its height and brightens with a slow sine wave over time.</li>
+          <li>One plain grey cube beside it, coloured with an ordinary <code>MeshBasicMaterial</code>, for comparison.</li>
+          <li>Both cubes turn slowly on the spot. Neither one moves position, and the camera never moves on its own.</li>
+        </ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Bonus scene controls">
+        <fieldset>
+          <legend>1. Animation</legend>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p class="hint">Both cubes turn slowly on their own; this is the only motion in the scene.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Renderer</legend>
+          <p id="status" role="status">Checking for WebGPU&hellip;</p>
+          <p class="hint"><code>'gpu' in navigator</code> only tells you the browser exposes the API; the status above reports which backend <code>WebGPURenderer</code> actually chose after trying to initialise it, which is the only way to be sure.</p>
+        </fieldset>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { WebGPURenderer, MeshBasicNodeMaterial } from 'three/webgpu';
+    import { color, time, positionLocal, mix, sin, uniform } from 'three/tsl';
+
+    const statusEl = document.getElementById('status');
+    const descriptionEl = document.getElementById('scene-description');
+    const noWebglMessage = document.getElementById('no-webgl-message');
+    const canvasBox = document.getElementById('canvas-box');
+    const pauseButton = document.getElementById('pause-toggle');
+
+    // Feature detection: 'gpu' in navigator only means the API exists, not
+    // that a device or context can actually be obtained (a browser flag or a
+    // headless test runner can expose the API and still fail to get an
+    // adapter). WebGPURenderer's own fallback, tried below, is what decides.
+    const gpuApiPresent = 'gpu' in navigator;
+
+    let paused = window.__reducedMotion; // reduced motion starts paused, same rule as the main hall
+    pauseButton.setAttribute('aria-pressed', String(paused));
+    pauseButton.textContent = paused ? 'Play animation' : 'Pause animation';
+    pauseButton.addEventListener('click', () => {
+      paused = !paused;
+      pauseButton.setAttribute('aria-pressed', String(paused));
+      pauseButton.textContent = paused ? 'Play animation' : 'Pause animation';
+    });
+
+    async function start() {
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xeef4ff);
+
+      const camera = new THREE.PerspectiveCamera(50, 4 / 3, 0.1, 100);
+      camera.position.set(0, 1.2, 4);
+      camera.lookAt(0, 0, 0);
+
+      // The TSL cube: a node material built as a small expression tree
+      // instead of a GLSL/WGSL string. `color(...)` and `mix(...)` blend two
+      // flat colours from bottom to top of the cube (using local Y position,
+      // normalised to a 0-1 range); `sin(time)` brightens the whole thing
+      // slowly, so the same material looks slightly different every second
+      // without any per-frame JavaScript updating it.
+      const heightFactor = positionLocal.y.add(0.5).clamp(0, 1);
+      const baseColor = mix(color(0x5b2a86), color(0xd62f6b), heightFactor);
+      const brightness = sin(time.mul(uniform(0.6))).mul(0.15).add(0.85);
+      const tslMaterial = new MeshBasicNodeMaterial();
+      tslMaterial.colorNode = baseColor.mul(brightness);
+
+      const tslCube = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), tslMaterial);
+      tslCube.position.x = -0.8;
+      scene.add(tslCube);
+
+      // The comparison cube: an ordinary material, so the difference is only
+      // the shading, not the geometry.
+      const plainCube = new THREE.Mesh(
+        new THREE.BoxGeometry(1, 1, 1),
+        new THREE.MeshBasicMaterial({ color: 0x8a8398 }),
+      );
+      plainCube.position.x = 0.8;
+      scene.add(plainCube);
+
+      const renderer = new WebGPURenderer({ antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      const resize = () => {
+        const { clientWidth, clientHeight } = canvasBox;
+        renderer.setSize(clientWidth, clientHeight, false);
+        camera.aspect = clientWidth / clientHeight;
+        camera.updateProjectionMatrix();
+      };
+
+      try {
+        // init() must resolve before the first render: it is where
+        // WebGPURenderer actually requests a GPU adapter/device, or, on
+        // failure, falls back to its WebGL 2 backend automatically.
+        await renderer.init();
+      } catch (error) {
+        noWebglMessage.hidden = false;
+        statusEl.textContent = 'Neither WebGPU nor WebGL 2 could start in this browser. ' + error.message;
+        descriptionEl.textContent = 'The scene could not start. See the 2D fallback list above for what it would have shown.';
+        return;
+      }
+
+      canvasBox.appendChild(renderer.domElement);
+      resize();
+      window.addEventListener('resize', resize);
+
+      const usingWebGPU = gpuApiPresent && renderer.backend?.isWebGPUBackend === true;
+      statusEl.textContent = usingWebGPU
+        ? 'Running on the WebGPU backend.'
+        : 'Running on the automatic WebGL 2 fallback (WebGPU was unavailable or was refused by this browser/test runner).';
+
+      descriptionEl.textContent = usingWebGPU
+        ? 'Two cubes side by side. The left cube is coloured by a WebGPU/TSL node material that blends purple to pink up its height and pulses slightly; the right cube is a plain grey comparison cube. Both turn slowly.'
+        : 'Two cubes side by side, rendered through the WebGL 2 fallback because WebGPU was not available. The left cube still uses the TSL node material (WebGPURenderer runs the same node graph on either backend); the right cube is a plain grey comparison cube. Both turn slowly.';
+
+      function tick() {
+        if (!paused) {
+          tslCube.rotation.y += 0.01;
+          plainCube.rotation.y += 0.01;
+        }
+        renderer.render(scene, camera);
+      }
+      renderer.setAnimationLoop(tick);
+    }
+
+    start().catch((error) => {
+      noWebglMessage.hidden = false;
+      statusEl.textContent = 'This scene could not start: ' + error.message;
+      descriptionEl.textContent = 'The scene could not start. See the 2D fallback list above for what it would have shown.';
+    });
+  </script>
+</body>
+</html>

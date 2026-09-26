@@ -44,6 +44,14 @@ upgrading a library is a deliberate change to `versions.json` (see its
 | `three/0.186.1/examples/jsm/loaders/GLTFLoader.js` | `131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16` |
 | `three/0.186.1/examples/jsm/utils/BufferGeometryUtils.js` | `9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797` |
 | `three/0.186.1/examples/jsm/utils/SkeletonUtils.js` | `b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f` |
+| `three/0.186.1/build/three.webgpu.min.js` | `b5b36e7a1a5f79739cebe21f79da646f8c08006ee0abf863826740a459d896f3` |
+| `three/0.186.1/build/three.tsl.min.js` | `cd1451c5b7a0d835cd73a76c61e3464da7fbeb36501bb0f04e54cdc287794746` |
+
+`three.webgpu.min.js` and `three.tsl.min.js` are pulled in only by the optional
+WebGPU/TSL bonus in `web3d-developer/06-performance-engineering-for-web3d`
+(`completed/webgpu.html`); `three.webgpu.min.js` imports `./three.core.js`
+(already mirrored above) and `three.tsl.min.js` imports the bare specifier
+`three/webgpu`, resolved through that page's own import map.
 
 `XRControllerModelFactory.js` and `XRHandModelFactory.js` are only pulled in
 by lessons that use hand/controller models (`immersive-developer/02-xr-input-and-interaction`);
