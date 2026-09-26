@@ -24,4 +24,4 @@
 | 6 | [Progressive Web Applications](06-progressive-web-applications/README.es.md) | 12 h · 16 sesiones | ✅ Lista |
 | 7 | [Git Collaboration and Open Source](07-git-collaboration-and-open-source/README.es.md) | 9 h · 12 sesiones | ✅ Lista |
 | 8 | [AI as a Development Assistant](08-ai-as-a-development-assistant/README.es.md) | 10 h · 14 sesiones | ✅ Lista |
-| 9 | [Phase 2 Capstone - Production Frontend Application](09-production-frontend-application/README.es.md) | 18 h · 24 sesiones | 🚧 Próximamente |
+| 9 | [Phase 2 Capstone - Production Frontend Application](09-production-frontend-application/README.es.md) | 18 h · 24 sesiones | ✅ Lista |

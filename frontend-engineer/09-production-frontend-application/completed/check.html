@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project check: pure functions - My XR Camp</title>
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    ul.results { list-style: none; padding: 0; }
+    ul.results li { padding: 0.35rem 0; border-bottom: 1px solid var(--color-line); }
+    .pass::before { content: "✓ "; color: var(--color-ready); font-weight: 700; }
+    .fail::before { content: "✗ "; color: var(--color-focus); font-weight: 700; }
+    .fail { color: var(--color-focus); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>Project check: pure functions</h1>
+    <p>
+      This page runs the pure functions in <code>js/utils.js</code> and
+      <code>js/i18n.js</code> against known inputs, with no framework: each
+      check is a plain <code>assert</code>, and the page lists what passed
+      and what did not. Open it after any change to those files, or in
+      Chrome DevTools' Network panel with throttling on, to see it needs no
+      network at all.
+    </p>
+    <p id="summary" role="status"></p>
+    <ul class="results" id="results"></ul>
+  </main>
+
+  <script type="module">
+    import { totals, phaseProgress, fraction, nextLesson, bySchedule, toDays, driestDay, isSemver } from './js/utils.js';
+    import { format, formatPercent } from './js/i18n.js';
+    import { APP_VERSION } from './js/config.js';
+
+    const results = [];
+    function check(name, actual, expected) {
+      const pass = JSON.stringify(actual) === JSON.stringify(expected);
+      results.push({ name, pass, actual, expected });
+    }
+    function ok(name, condition) {
+      results.push({ name, pass: Boolean(condition), actual: condition, expected: true });
+    }
+
+    // --- utils.js ---------------------------------------------------------
+    check('totals() sums minutes and counts ready lessons',
+      totals([{ minutes: 45, status: 'ready' }, { minutes: 60, status: 'coming-soon' }]),
+      { minutes: 105, ready: 1 });
+
+    check('phaseProgress() builds one row per phase',
+      phaseProgress(
+        { phases: [{ phase: 1, title: 'A' }, { phase: 2, title: 'B' }], lessons: [{ id: 'a', phase: 1 }, { id: 'b', phase: 2 }] },
+        new Set(['a']),
+      ),
+      [{ phase: 1, title: 'A', done: 1, total: 1 }, { phase: 2, title: 'B', done: 0, total: 1 }]);
+
+    check('fraction() divides safely, including by zero', [fraction(1, 4), fraction(3, 0)], [0.25, 0]);
+
+    check('nextLesson() finds the first ready, not-done lesson',
+      nextLesson([{ id: 'a', status: 'ready' }, { id: 'b', status: 'ready' }], new Set(['a']))?.id,
+      'b');
+
+    check('bySchedule() sorts Monday before Tuesday',
+      [{ day: 'Tuesday', time: '09:00' }, { day: 'Monday', time: '19:00' }].sort(bySchedule).map((s) => s.day),
+      ['Monday', 'Tuesday']);
+
+    check('toDays() zips the API’s parallel arrays into one object per day',
+      toDays({ daily: { time: ['2026-01-01'], temperature_2m_max: [20], temperature_2m_min: [10], precipitation_probability_max: [30] } }),
+      [{ date: '2026-01-01', max: 20, min: 10, rain: 30 }]);
+
+    check('driestDay() picks the lowest rain chance',
+      driestDay([{ date: 'a', rain: 80 }, { date: 'b', rain: 20 }]).date,
+      'b');
+
+    ok('isSemver() accepts 1.0.0', isSemver('1.0.0'));
+    ok('isSemver() rejects "latest"', !isSemver('latest'));
+    ok('APP_VERSION in config.js is a valid semantic version', isSemver(APP_VERSION));
+
+    // --- i18n.js ------------------------------------------------------------
+    check('format() fills a placeholder', format('Hi {name}', { name: 'Ana' }), 'Hi Ana');
+    check('format() chooses a plural form', format({ one: '{count} lesson', other: '{count} lessons' }, { count: 1 }), '1 lesson');
+    check('format() chooses the "other" plural form', format({ one: '{count} lesson', other: '{count} lessons' }, { count: 3 }), '3 lessons');
+    ok('formatPercent() renders a fraction as a percentage', formatPercent(0.25, 'en').includes('25'));
+
+    // --- sw.js agrees with config.js (semver: see semver.org) --------------
+    const swText = await fetch('sw.js').then((r) => r.text()).catch(() => '');
+    const swVersion = swText.match(/const VERSION = '([^']+)'/)?.[1];
+    check('sw.js VERSION matches js/config.js APP_VERSION', swVersion, APP_VERSION);
+
+    // --- Render --------------------------------------------------------------
+    const list = document.getElementById('results');
+    for (const { name, pass, actual, expected } of results) {
+      const li = document.createElement('li');
+      li.className = pass ? 'pass' : 'fail';
+      li.textContent = pass ? name : `${name} — got ${JSON.stringify(actual)}, expected ${JSON.stringify(expected)}`;
+      list.append(li);
+    }
+    const failed = results.filter((r) => !r.pass).length;
+    document.getElementById('summary').textContent = failed === 0
+      ? `All ${results.length} checks passed.`
+      : `${failed} of ${results.length} checks failed.`;
+  </script>
+</body>
+</html>

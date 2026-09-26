@@ -682,7 +682,7 @@
       "id": "fe-09-production-frontend-application",
       "courseId": "frontend-engineer",
       "lessonId": "production-frontend-application-09",
-      "status": "draft",
+      "status": "review",
       "phase": 2,
       "title": {
         "en": "Phase 2 Capstone - Production Frontend Application",
@@ -696,7 +696,13 @@
       },
       "difficulty": "intermediate",
       "technologies": [
-        "HTML"
+        "JavaScript",
+        "ES Modules",
+        "Web Components",
+        "Web App Manifest",
+        "Service Workers",
+        "Intl",
+        "A-Frame"
       ],
       "hasCode": true,
       "path": "frontend-engineer/09-production-frontend-application"
@@ -731,7 +737,7 @@
       "id": "w3d-02-a-frame-foundations",
       "courseId": "web3d-developer",
       "lessonId": "a-frame-foundations-02",
-      "status": "draft",
+      "status": "review",
       "phase": 3,
       "title": {
         "en": "A-Frame Foundations",

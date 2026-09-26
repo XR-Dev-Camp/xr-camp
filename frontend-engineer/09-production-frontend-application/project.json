@@ -2,7 +2,7 @@
   "id": "fe-09-production-frontend-application",
   "courseId": "frontend-engineer",
   "lessonId": "production-frontend-application-09",
-  "status": "draft",
+  "status": "review",
   "phase": 2,
   "title": {
     "en": "Phase 2 Capstone - Production Frontend Application",
@@ -21,7 +21,13 @@
   },
   "difficulty": "intermediate",
   "technologies": [
-    "HTML"
+    "JavaScript",
+    "ES Modules",
+    "Web Components",
+    "Web App Manifest",
+    "Service Workers",
+    "Intl",
+    "A-Frame"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -38,6 +44,15 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "form-labels",
+    "focus-order",
+    "status-messages",
+    "keyboard-operable",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }

@@ -24,4 +24,4 @@
 | 6 | [Progressive Web Applications](06-progressive-web-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 7 | [Git Collaboration and Open Source](07-git-collaboration-and-open-source/README.zh-Hans.md) | 9 小时 · 12 次学习 | ✅ 已完成 |
 | 8 | [AI as a Development Assistant](08-ai-as-a-development-assistant/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 9 | [Phase 2 Capstone - Production Frontend Application](09-production-frontend-application/README.zh-Hans.md) | 18 小时 · 24 次学习 | 🚧 即将推出 |
+| 9 | [Phase 2 Capstone - Production Frontend Application](09-production-frontend-application/README.zh-Hans.md) | 18 小时 · 24 次学习 | ✅ 已完成 |

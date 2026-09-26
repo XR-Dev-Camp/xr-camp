@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You are offline - My XR Camp</title>
+  <meta name="theme-color" content="#5b2a86">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- The service worker shows this page when you open a page it has not
+       saved and there is no internet. It needs nothing from the network:
+       its only stylesheet is in the app shell. -->
+  <header><p>My XR Camp</p></header>
+  <main>
+    <h1>You are offline</h1>
+    <p>My XR Camp cannot reach the network right now. Pages and data you opened before are still available.</p>
+    <ul role="list">
+      <li><a href="./">Go to your dashboard</a>: your progress, planner, and the last weather forecast you loaded.</li>
+    </ul>
+    <p>When your connection comes back, reload this page, or follow the link above, to try again.</p>
+  </main>
+</body>
+</html>

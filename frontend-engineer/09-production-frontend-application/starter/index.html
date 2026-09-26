@@ -2,18 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Phase 2 Capstone - Production Frontend Application - XR Camp starter</title>
+  <title>My XR Camp - Phase 2 Capstone - XR Camp starter</title>
+  <meta name="description" content="My XR Camp: your course map, dashboard, session planner, and study-week weather, in one small, offline, multilingual app.">
+  <meta name="theme-color" content="#5b2a86">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <!-- Add your main heading below. -->
+  <!-- Every view, form, and control your app needs already lives on this
+       page: config.js, utils.js, i18n.js, the locale files, the stores,
+       services, and components are also already written for you, copied
+       from Courses 2.1 to 2.8 (see the README's "What to copy from which
+       lesson"). The only file with work left in it is js/main.js: eight
+       numbered TODOs wire this markup to those modules. Open it next. -->
 
-    <!-- Add your project content below. -->
+  <!-- WCAG 2.4.1: reach the main content without hearing the whole nav first. -->
+  <a class="skip-link" href="#main" data-i18n="skip.toContent">Skip to content</a>
 
+  <header class="site-header">
+    <p class="site-title" data-i18n="site.title">My XR Camp</p>
+
+    <!-- Simple in-page navigation: five views, one page, no build step. See
+         "Simple in-page navigation" in the README for why a router library
+         would be more than this app needs. -->
+    <nav aria-label="Main">
+      <ul class="tabs" role="list">
+        <li><a href="#dashboard" data-view="dashboard" data-i18n="nav.dashboard">Dashboard</a></li>
+        <li><a href="#course" data-view="course" data-i18n="nav.course">Course map</a></li>
+        <li><a href="#planner" data-view="planner" data-i18n="nav.planner">Planner</a></li>
+        <li><a href="#weather" data-view="weather" data-i18n="nav.weather">Weather</a></li>
+        <li><a href="#app" data-view="app" data-i18n="nav.app">App</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- role="status": announced to screen readers without moving focus
+       (WCAG 4.1.3). Always present in the page; empty and invisible (via
+       :empty in styles.css) until there is something to say. -->
+  <p id="update-message" class="update-banner" role="status">
+    <span id="update-text"></span>
+    <button type="button" id="update-button" hidden data-i18n="update.button">Reload to update</button>
+  </p>
+
+  <main id="main">
+    <section id="dashboard" aria-labelledby="dashboard-heading">
+      <h1 id="dashboard-heading" tabindex="-1" data-i18n="dashboard.heading">Your dashboard</h1>
+      <p data-i18n="dashboard.intro">One page for the whole of Phase 2: what is done, what is next, and how this week is going.</p>
+
+      <div id="dashboard-progress"></div>
+
+      <h2 data-i18n="dashboard.thisWeekHeading">This week</h2>
+      <div id="dashboard-week-summary"></div>
+
+      <h2 id="three-heading" data-i18n="dashboard.threeDHeading">Your progress in 3D</h2>
+      <p id="three-hint">Loads a small 3D library (about 1.3 MB) only when you press this button. It never loads on its own.</p>
+      <p id="three-skip-notice" hidden data-i18n="dashboard.threeDSkip">Data saving is on, so the 3D view is hidden. Turn it off in the App tab to use it.</p>
+      <button type="button" id="three-button" data-i18n="dashboard.threeDButton">See my progress in 3D</button>
+      <div id="three-container" aria-live="polite"></div>
+    </section>
+
+    <section id="course" aria-labelledby="course-heading" hidden>
+      <h1 id="course-heading" tabindex="-1" data-i18n="course.heading">Course map</h1>
+      <p data-i18n="course.intro">Every lesson in every phase. Phase 2, Frontend Engineer, is the one this app is part of.</p>
+      <div id="course-list" class="card-grid" role="list"></div>
+    </section>
+
+    <section id="planner" aria-labelledby="planner-heading" hidden>
+      <h1 id="planner-heading" tabindex="-1" data-i18n="planner.heading">Session planner</h1>
+      <p data-i18n="planner.intro">Plan short, 45-minute sessions across your week. Saved sessions stay on this device.</p>
+
+      <form id="planner-form">
+        <div class="field">
+          <label for="planner-day" data-i18n="planner.dayLabel">Day</label>
+          <select id="planner-day" name="day" required>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="planner-time" data-i18n="planner.timeLabel">Time</label>
+          <input type="time" id="planner-time" name="time" value="19:00" required>
+        </div>
+        <div class="field">
+          <label for="planner-topic" data-i18n="planner.topicLabel">Topic</label>
+          <input type="text" id="planner-topic" name="topic" required>
+        </div>
+        <button type="submit" data-i18n="planner.addButton">Add session</button>
+      </form>
+
+      <p id="planner-error" role="alert"></p>
+
+      <ul id="planner-list" class="session-list" role="list"></ul>
+      <div id="planner-summary"></div>
+    </section>
+
+    <section id="weather" aria-labelledby="weather-heading" hidden>
+      <h1 id="weather-heading" tabindex="-1" data-i18n="weather.heading">Study-week weather</h1>
+      <p data-i18n="weather.intro">A 7-day forecast for cities where XR Camp learners study, so you can pick a good day to walk to a library or a meet-up.</p>
+
+      <div class="field">
+        <label for="weather-city" data-i18n="weather.cityLabel">City</label>
+        <select id="weather-city" name="city"></select>
+      </div>
+
+      <div id="weather-view" aria-live="polite"></div>
+    </section>
+
+    <section id="app" aria-labelledby="app-heading" hidden>
+      <h1 id="app-heading" tabindex="-1" data-i18n="app.heading">About this app</h1>
+      <p id="app-version">Version 1.0.0</p>
+      <p data-i18n="app.intro">My XR Camp 1.0, built across Courses 2.1 to 2.9. It works offline once installed, and never sends your progress anywhere: everything above is saved only in this browser.</p>
+      <ul role="list">
+        <li><a href="CHANGELOG.md" data-i18n="app.changelogLink">What's new (CHANGELOG)</a></li>
+        <li><a href="ai-log.md" data-i18n="app.aiLogLink">How AI was used to build this</a></li>
+      </ul>
+      <p data-i18n="app.sourceHint">This app is a lesson in XR Camp's Frontend Engineer course. The source code is the completed/ folder of this lesson.</p>
+
+      <h2 data-i18n="language.heading">Language</h2>
+      <div class="field">
+        <label for="language-select" data-i18n="language.label">Choose your language</label>
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-Hans">中文（简体）</option>
+        </select>
+      </div>
+      <p id="language-draft-notice" role="status" hidden data-i18n="language.draftNotice">This translation is a short first draft. It has not yet been reviewed by a fluent speaker.</p>
+
+      <h2 data-i18n="lowdata.heading">Data saving</h2>
+      <div class="field field-checkbox">
+        <input type="checkbox" id="low-data-toggle">
+        <label for="low-data-toggle" data-i18n="lowdata.label">Use less data</label>
+      </div>
+      <p data-i18n="lowdata.hint">Hides the 3D view and turns off automatic weather refresh. Your device may have already chosen this for you.</p>
+
+      <h2 data-i18n="install.heading">Install</h2>
+      <p data-i18n="install.hint">Installing adds My XR Camp to your home screen or app list, and lets it open in its own window, offline.</p>
+      <button type="button" id="install-button" hidden data-i18n="install.button">Install app</button>
+      <p id="install-status" role="status"></p>
+
+      <h2 data-i18n="update.heading">Updates</h2>
+      <p id="update-status" role="status" data-i18n="update.upToDate">You have the latest version.</p>
+    </section>
   </main>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

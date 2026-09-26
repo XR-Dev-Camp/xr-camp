@@ -23,8 +23,8 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | --- | --- | --- | --- |
 | [0 · 欢迎来到未来](preface/README.zh-Hans.md) | 你的第一个 3D 世界、一条网络发展时间线，以及一个比较三种 3D 构建方式的实验室。 | 64 次学习 · 约 4 个月 | 9 课中 9 课 |
 | [1 · 成为网页开发者](web-developer/README.zh-Hans.md) | 无障碍、响应式的网站，发布到网上，让世界各地的人都能访问。 | 144 次学习 · 约 8 个月 | 9 课中 9 课 |
-| [2 · 成为前端工程师](frontend-engineer/README.zh-Hans.md) | 可以安装到手机、离线运行并使用实时数据的网页应用。 | 145 次学习 · 约 8 个月 | 9 课中 8 课 |
-| [3 · 成为 Web3D 开发者](web3d-developer/README.zh-Hans.md) | 使用 A-Frame 和 three.js 构建的交互式 3D 体验。 | 138 次学习 · 约 8 个月 | 7 课中 1 课 |
+| [2 · 成为前端工程师](frontend-engineer/README.zh-Hans.md) | 可以安装到手机、离线运行并使用实时数据的网页应用。 | 145 次学习 · 约 8 个月 | 9 课中 9 课 |
+| [3 · 成为 Web3D 开发者](web3d-developer/README.zh-Hans.md) | 使用 A-Frame 和 three.js 构建的交互式 3D 体验。 | 138 次学习 · 约 8 个月 | 7 课中 2 课 |
 | [4 · 成为沉浸式开发者](immersive-developer/README.zh-Hans.md) | 通过一个链接就能在头显中打开的虚拟现实和增强现实体验。 | 111 次学习 · 约 6 个月 | 6 课中 0 课 |
 | [5 · 成为全栈空间开发者](full-stack-spatial/README.zh-Hans.md) | 带有账户、数据和实时连接的多用户 3D 应用。 | 155 次学习 · 约 9 个月 | 8 课中 0 课 |
 | [6 · 成为专业开发者](professional-developer/README.zh-Hans.md) | 生产环境部署、多语言网站，以及你在开源世界中的一席之地。 | 73 次学习 · 约 4 个月 | 5 课中 0 课 |
@@ -74,14 +74,14 @@ XR Camp **完全免费，面向所有人**。它首先为**拉丁美洲和中国
 | 6 | [Progressive Web Applications](frontend-engineer/06-progressive-web-applications/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 7 | [Git Collaboration and Open Source](frontend-engineer/07-git-collaboration-and-open-source/README.zh-Hans.md) | 9 小时 · 12 次学习 | ✅ 已完成 |
 | 8 | [AI as a Development Assistant](frontend-engineer/08-ai-as-a-development-assistant/README.zh-Hans.md) | 10 小时 · 14 次学习 | ✅ 已完成 |
-| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.zh-Hans.md) | 18 小时 · 24 次学习 | 🚧 即将推出 |
+| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.zh-Hans.md) | 18 小时 · 24 次学习 | ✅ 已完成 |
 
 ### 阶段 3 · 成为 Web3D 开发者
 
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
 | 1 | [Web3D Fundamentals](web3d-developer/01-web3d-fundamentals/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
-| 2 | [A-Frame Foundations](web3d-developer/02-a-frame-foundations/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
+| 2 | [A-Frame Foundations](web3d-developer/02-a-frame-foundations/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 3 | [Advanced A-Frame and Interaction](web3d-developer/03-advanced-a-frame-and-interaction/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
 | 4 | [Three.js Foundations](web3d-developer/04-threejs-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | 🚧 即将推出 |
 | 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.zh-Hans.md) | 16 小时 · 22 次学习 | 🚧 即将推出 |

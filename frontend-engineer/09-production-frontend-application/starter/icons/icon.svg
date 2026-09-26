@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="My XR Camp">
+  <rect width="64" height="64" rx="14" fill="#5b2a86"/>
+  <circle cx="46" cy="18" r="6" fill="#fdfcf8"/>
+  <path d="M8 50 L24 22 L34 38 L40 28 L56 50 Z" fill="#fdfcf8"/>
+</svg>

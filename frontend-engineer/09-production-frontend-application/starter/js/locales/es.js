@@ -1,0 +1,136 @@
+// es.js: Spanish (neutral, Latin American) strings.
+//
+// `draft: true` marks this as a short first-pass translation, made without a
+// native Spanish speaker's review. See "Multilingual-ready" in the README.
+// Any key missing here falls back to English (i18n.js): a draft is allowed
+// to be incomplete, and must never crash the page.
+
+export const draft = true;
+
+export default {
+  'site.title': 'Mi XR Camp',
+  'skip.toContent': 'Ir al contenido',
+
+  'nav.dashboard': 'Panel',
+  'nav.course': 'Mapa del curso',
+  'nav.planner': 'Planificador',
+  'nav.weather': 'Clima',
+  'nav.app': 'Aplicación',
+
+  'dashboard.heading': 'Tu panel',
+  'dashboard.intro': 'Una sola página para toda la Fase 2: qué está listo, qué sigue y cómo va esta semana.',
+  'dashboard.colPhase': 'Fase',
+  'dashboard.colDone': 'Hechas',
+  'dashboard.colLessons': 'Lecciones',
+  'dashboard.colPercent': 'Porcentaje',
+  'dashboard.tableCaption': 'Lecciones hechas, por fase',
+  'progress.count': '{done} de {total} lecciones hechas ({percent})',
+  'dashboard.next': 'Siguiente: {title}',
+  'dashboard.allDone': 'Toda lección lista está hecha. Bien hecho.',
+  'dashboard.phaseName': 'Fase {phase}: {title}',
+  'dashboard.thisWeekHeading': 'Esta semana',
+  'dashboard.threeDHeading': 'Tu progreso en 3D',
+  'dashboard.threeDButton': 'Ver mi progreso en 3D',
+  'dashboard.threeDHint': 'Carga una pequeña librería 3D (unos {size} MB) solo al presionar este botón. Nunca se carga sola.',
+  'dashboard.threeDSkip': 'El ahorro de datos está activado, así que la vista 3D está oculta. Desactívalo en la pestaña App para usarla.',
+
+  'course.heading': 'Mapa del curso',
+  'course.intro': 'Cada lección de cada fase. La Fase 2, Ingeniería Frontend, es la fase de esta aplicación.',
+
+  'card.done': 'Hecho',
+  'card.doneLabel': 'Hecho: {title}',
+  'card.hours': { one: '{count} hora', other: '{count} horas' },
+  'card.noTime': 'Horario por anunciar',
+  'card.sessions': { one: '{count} sesión de {minutes} minutos', other: '{count} sesiones de {minutes} minutos' },
+  'card.untitled': 'Lección sin título',
+  'status.ready': 'Lista',
+  'status.coming-soon': 'Próximamente',
+
+  'planner.heading': 'Planificador de sesiones',
+  'planner.intro': 'Planifica sesiones cortas de 45 minutos durante tu semana. Las sesiones guardadas quedan en este dispositivo.',
+  'planner.dayLabel': 'Día',
+  'planner.timeLabel': 'Hora',
+  'planner.topicLabel': 'Tema',
+  'planner.addButton': 'Agregar sesión',
+  'planner.done': 'Hecho',
+  'planner.notDone': 'No hecho',
+  'planner.delete': 'Eliminar',
+  'planner.empty': 'Aún no hay sesiones planificadas. Agrega una abajo.',
+  'planner.summary': { one: '{count} de {goal} sesión semanal hecha ({time}).', other: '{count} de {goal} sesiones semanales hechas ({time}).' },
+  'planner.goalReached': 'Meta semanal alcanzada. Bien hecho.',
+  'planner.buttonLabel': '{action}: {topic}',
+  'planner.sessionLabel': '{day} a las {time}: {topic}',
+
+  'city.mexico-city': 'Ciudad de México',
+  'city.guatemala-city': 'Ciudad de Guatemala',
+  'city.bogota': 'Bogotá',
+  'city.lima': 'Lima',
+  'city.sao-paulo': 'São Paulo',
+  'city.beijing': 'Pekín',
+  'city.chengdu': 'Chengdu',
+
+  'weather.heading': 'Clima de la semana de estudio',
+  'weather.intro': 'Un pronóstico de 7 días para ciudades donde estudian las alumnas de XR Camp, para elegir un buen día para caminar a una biblioteca o encuentro.',
+  'weather.cityLabel': 'Ciudad',
+  'weather.loading': 'Cargando el pronóstico de {place}…',
+  'weather.empty': 'Aún no hay pronóstico disponible para {place}.',
+  'weather.errorHeading': 'No se pudo cargar el pronóstico',
+  'weather.errorHint': 'Revisa tu conexión e inténtalo de nuevo.',
+  'weather.retry': 'Intentar de nuevo',
+  'weather.caption': 'Pronóstico de 7 días para {place}',
+  'weather.day': 'Día',
+  'weather.high': 'Máxima',
+  'weather.low': 'Mínima',
+  'weather.rain': 'Prob. de lluvia',
+  'weather.driest': '{day} parece el día más seco, con {rain} de probabilidad de lluvia.',
+  'weather.driestMark': '{day} (más seco)',
+  'weather.source': 'Datos del clima por Open-Meteo.com, bajo CC BY 4.0.',
+  'weather.sampleSource': 'Datos de muestra. Se muestran porque no se pudo obtener el clima en vivo.',
+
+  'time.hours': { one: '{count} hora', other: '{count} horas' },
+  'time.minutes': { one: '{count} minuto', other: '{count} minutos' },
+  'time.join': ' ',
+
+  'app.heading': 'Acerca de esta aplicación',
+  'app.version': 'Versión {version}',
+  'app.intro': 'Mi XR Camp 1.0, construida a lo largo de los Cursos 2.1 a 2.9. Funciona sin conexión una vez instalada, y nunca envía tu progreso a ningún lado: todo lo anterior se guarda solo en este navegador.',
+  'app.changelogLink': 'Novedades (CHANGELOG)',
+  'app.aiLogLink': 'Cómo se usó la IA para construir esto',
+  'app.sourceHint': 'Esta aplicación es una lección del curso Ingeniería Frontend de XR Camp. El código fuente es la carpeta completed/ de esta lección.',
+
+  'install.heading': 'Instalar',
+  'install.button': 'Instalar aplicación',
+  'install.hint': 'Instalar agrega Mi XR Camp a tu pantalla de inicio o lista de apps, y le permite abrirse en su propia ventana, sin conexión.',
+  'install.dismissed': 'No instalada. Puedes instalarla cuando quieras desde esta página.',
+  'install.done': 'Instalada. Busca Mi XR Camp en tu pantalla de inicio.',
+  'install.unavailable': 'Tu navegador instala esta aplicación desde su propio menú (a menudo "Agregar a pantalla de inicio" o "Instalar app"). Aquí no hay un botón para eso.',
+
+  'update.heading': 'Actualizaciones',
+  'update.ready': 'Hay una nueva versión disponible.',
+  'update.updating': 'Actualizando…',
+  'update.button': 'Recargar para actualizar',
+  'update.upToDate': 'Tienes la última versión.',
+
+  'language.heading': 'Idioma',
+  'language.label': 'Elige tu idioma',
+  'language.draftNotice': 'Esta traducción es un primer borrador breve. Aún no ha sido revisada por una persona hablante nativa. Ver el README.',
+
+  'lowdata.heading': 'Ahorro de datos',
+  'lowdata.label': 'Usar menos datos',
+  'lowdata.hint': 'Oculta la vista 3D y desactiva la actualización automática del clima. Tu dispositivo puede haber elegido esto por ti.',
+
+  'three.button': 'Ver mi progreso en 3D',
+  'three.loading': 'Cargando la librería 3D…',
+  'three.error': 'No se pudo cargar la vista 3D. Aquí está la misma información en una tabla.',
+  'three.errorRetry': 'Intentar de nuevo',
+  'three.canvasLabel': 'Gráfico de barras 3D de lecciones hechas por fase. Sigue una versión en texto.',
+  'three.caption': 'El mismo progreso, en una tabla',
+  'three.descriptionIntro': 'Gráfico de barras 3D con {count} columnas, una por fase. Columnas más altas significan más lecciones hechas.',
+  'three.descriptionBar': '{title}: {done} de {total} lecciones hechas.',
+  'three.reducedMotionNotice': 'El movimiento reducido está activado, así que las columnas aparecen al instante en vez de crecer.',
+
+  'offline.heading': 'Estás sin conexión',
+  'offline.body': 'Mi XR Camp no puede conectarse a la red ahora mismo. Las páginas y datos que ya abriste siguen disponibles.',
+  'offline.retry': 'Intentar de nuevo',
+  'offline.dashboardLink': 'Ir a tu panel',
+};

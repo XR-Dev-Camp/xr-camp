@@ -23,8 +23,8 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | --- | --- | --- | --- |
 | [0 · Welcome to the Future](preface/README.md) | Your first 3D world, a timeline of the web, and a lab comparing three ways to build in 3D. | 64 sessions · about 4 months | 9 of 9 |
 | [1 · Become a Web Developer](web-developer/README.md) | Accessible, responsive websites, published for anyone in the world to visit. | 144 sessions · about 8 months | 9 of 9 |
-| [2 · Become a Frontend Engineer](frontend-engineer/README.md) | Web apps that install on a phone, work offline, and use live data. | 145 sessions · about 8 months | 8 of 9 |
-| [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions · about 8 months | 1 of 7 |
+| [2 · Become a Frontend Engineer](frontend-engineer/README.md) | Web apps that install on a phone, work offline, and use live data. | 145 sessions · about 8 months | 9 of 9 |
+| [3 · Become a Web3D Developer](web3d-developer/README.md) | Interactive 3D experiences with A-Frame and three.js. | 138 sessions · about 8 months | 2 of 7 |
 | [4 · Become an Immersive Developer](immersive-developer/README.md) | Virtual and augmented reality experiences that open in a headset from a link. | 111 sessions · about 6 months | 0 of 6 |
 | [5 · Become a Full-Stack Spatial Developer](full-stack-spatial/README.md) | Multi-user 3D applications with accounts, data, and real-time connections. | 155 sessions · about 9 months | 0 of 8 |
 | [6 · Become a Professional Developer](professional-developer/README.md) | Production deployments, multilingual sites, and your own place in open source. | 73 sessions · about 4 months | 0 of 5 |
@@ -74,14 +74,14 @@ Eight phases, from your first click to professional. Every phase ends with a pro
 | 6 | [Progressive Web Applications](frontend-engineer/06-progressive-web-applications/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 7 | [Git Collaboration and Open Source](frontend-engineer/07-git-collaboration-and-open-source/README.md) | 9 h · 12 sessions | ✅ Ready |
 | 8 | [AI as a Development Assistant](frontend-engineer/08-ai-as-a-development-assistant/README.md) | 10 h · 14 sessions | ✅ Ready |
-| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.md) | 18 h · 24 sessions | 🚧 Coming soon |
+| 9 | [Phase 2 Capstone - Production Frontend Application](frontend-engineer/09-production-frontend-application/README.md) | 18 h · 24 sessions | ✅ Ready |
 
 ### Phase 3 · Become a Web3D Developer
 
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
 | 1 | [Web3D Fundamentals](web3d-developer/01-web3d-fundamentals/README.md) | 14 h · 19 sessions | ✅ Ready |
-| 2 | [A-Frame Foundations](web3d-developer/02-a-frame-foundations/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
+| 2 | [A-Frame Foundations](web3d-developer/02-a-frame-foundations/README.md) | 12 h · 16 sessions | ✅ Ready |
 | 3 | [Advanced A-Frame and Interaction](web3d-developer/03-advanced-a-frame-and-interaction/README.md) | 14 h · 19 sessions | 🚧 Coming soon |
 | 4 | [Three.js Foundations](web3d-developer/04-threejs-foundations/README.md) | 14 h · 19 sessions | 🚧 Coming soon |
 | 5 | [Three.js Interaction, Assets, and Animation](web3d-developer/05-threejs-interaction-assets-and-animation/README.md) | 16 h · 22 sessions | 🚧 Coming soon |
