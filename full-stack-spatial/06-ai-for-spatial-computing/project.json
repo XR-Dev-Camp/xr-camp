@@ -7,12 +7,12 @@
   "title": {
     "en": "AI for Spatial Computing",
     "es-419": "IA para computación espacial",
-    "zh-Hans": ""
+    "zh-Hans": "面向空间计算的人工智能"
   },
   "summary": {
     "en": "Build an AI-assisted spatial tool while documenting human review and safeguards.",
     "es-419": "Construye una herramienta espacial asistida por IA documentando la revisión humana y las salvaguardas.",
-    "zh-Hans": ""
+    "zh-Hans": "构建一个 AI 辅助的空间工具，同时记录人工审核和安全防护措施。"
   },
   "estimatedMinutes": 840,
   "schedule": {

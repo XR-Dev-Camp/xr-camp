@@ -7,12 +7,12 @@
   "title": {
     "en": "Authentication and User Accounts",
     "es-419": "Autenticación y cuentas de usuario",
-    "zh-Hans": ""
+    "zh-Hans": "身份验证与用户账户"
   },
   "summary": {
     "en": "Build a secure learner account and profile prototype.",
     "es-419": "Construye un prototipo seguro de cuenta y perfil para quien aprende.",
-    "zh-Hans": ""
+    "zh-Hans": "构建一个安全的学习者账户与个人资料原型。"
   },
   "estimatedMinutes": 1125,
   "schedule": {

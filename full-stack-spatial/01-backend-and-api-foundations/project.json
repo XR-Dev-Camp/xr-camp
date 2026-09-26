@@ -7,12 +7,12 @@
   "title": {
     "en": "Backend and API Foundations",
     "es-419": "Fundamentos de backend y API",
-    "zh-Hans": ""
+    "zh-Hans": "后端与 API 基础"
   },
   "summary": {
     "en": "Build an API-backed application that saves spatial content or settings.",
     "es-419": "Construye una aplicación respaldada por una API que guarde contenido o configuraciones espaciales.",
-    "zh-Hans": ""
+    "zh-Hans": "构建一个由 API 支撑的应用，用来保存空间内容或设置。"
   },
   "estimatedMinutes": 840,
   "schedule": {

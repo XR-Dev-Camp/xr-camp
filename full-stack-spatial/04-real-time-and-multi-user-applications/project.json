@@ -7,12 +7,12 @@
   "title": {
     "en": "Real-Time and Multi-User Applications",
     "es-419": "Aplicaciones en tiempo real y multiusuario",
-    "zh-Hans": ""
+    "zh-Hans": "实时与多用户应用"
   },
   "summary": {
     "en": "Build a small collaborative 3D world.",
     "es-419": "Construye un pequeño mundo 3D colaborativo.",
-    "zh-Hans": ""
+    "zh-Hans": "构建一个小型协作式 3D 世界。"
   },
   "estimatedMinutes": 1020,
   "schedule": {

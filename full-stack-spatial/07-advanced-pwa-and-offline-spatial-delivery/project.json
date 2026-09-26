@@ -7,12 +7,12 @@
   "title": {
     "en": "Advanced PWA and Offline Spatial Delivery",
     "es-419": "PWA avanzada y entrega espacial sin conexión",
-    "zh-Hans": ""
+    "zh-Hans": "进阶 PWA 与离线空间内容交付"
   },
   "summary": {
     "en": "Make a spatial application installable and functional with intermittent connectivity.",
     "es-419": "Haz que una aplicación espacial sea instalable y funcione con conectividad intermitente.",
-    "zh-Hans": ""
+    "zh-Hans": "让一个空间应用可以安装，并在网络时断时续的情况下依然能够使用。"
   },
   "estimatedMinutes": 600,
   "schedule": {

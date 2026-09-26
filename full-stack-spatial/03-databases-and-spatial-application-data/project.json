@@ -7,12 +7,12 @@
   "title": {
     "en": "Databases and Spatial Application Data",
     "es-419": "Bases de datos y datos de aplicaciones espaciales",
-    "zh-Hans": ""
+    "zh-Hans": "数据库与空间应用数据"
   },
   "summary": {
     "en": "Save and load user-created scenes or annotations.",
     "es-419": "Guarda y carga escenas o anotaciones creadas por la usuaria.",
-    "zh-Hans": ""
+    "zh-Hans": "保存并加载用户创建的场景或注释。"
   },
   "estimatedMinutes": 720,
   "schedule": {

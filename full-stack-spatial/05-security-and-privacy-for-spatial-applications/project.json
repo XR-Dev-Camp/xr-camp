@@ -7,12 +7,12 @@
   "title": {
     "en": "Security and Privacy for Spatial Applications",
     "es-419": "Seguridad y privacidad para aplicaciones espaciales",
-    "zh-Hans": ""
+    "zh-Hans": "空间应用的安全与隐私"
   },
   "summary": {
     "en": "Complete a security and privacy review and remediation sprint.",
     "es-419": "Completa una revisión de seguridad y privacidad y un sprint de remediación.",
-    "zh-Hans": ""
+    "zh-Hans": "完成一次安全与隐私审查，并进行一次修复冲刺。"
   },
   "estimatedMinutes": 720,
   "schedule": {
