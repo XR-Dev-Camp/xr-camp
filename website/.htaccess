@@ -1,0 +1,9 @@
+# XR Camp: always use HTTPS.
+#
+# The choice between www.xrcamp.dev and xrcamp.dev is made in the DreamHost
+# panel, not here (a rule here would fight the panel and loop). Set it to
+# remove "www", so every visitor lands on https://xrcamp.dev/, the address
+# in the pages' canonical tags and sitemap.
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

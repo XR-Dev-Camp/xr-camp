@@ -1,0 +1,5 @@
+# XR Camp: every page may be indexed.
+User-agent: *
+Allow: /
+
+Sitemap: https://xrcamp.dev/sitemap.xml

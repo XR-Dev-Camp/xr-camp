@@ -506,7 +506,15 @@ async function start3D() {
   offerXR();
 }
 
+// Marks the page while the 3D scene is on, so the CSS lays the panels out to
+// frame it. Without the mark (3D off, unavailable, or no JavaScript), the
+// panels use a compact layout with no gaps left for a world that is not there.
+function markScene(on) {
+  document.documentElement.dataset.scene = on ? 'on' : 'off';
+}
+
 function stop3D() {
+  markScene(false);
   sceneEl?.remove();
   sceneEl = null;
   enterVR.hidden = true;
@@ -542,7 +550,7 @@ toggle3d.addEventListener('click', () => {
   toggle3d.setAttribute('aria-pressed', String(on));
   toggleMotion.hidden = !on;
   writePref(on ? 'on' : 'off');
-  if (on) start3D(); else stop3D();
+  if (on) { markScene(true); start3D().catch(() => stop3D()); } else stop3D();
 });
 
 // ---------------------------------------------------------------------------
@@ -555,6 +563,8 @@ if (canDraw3D()) {
   setPaused(state.paused);
   watchSections();
   if (on) {
+    // Mark now, not when the scene arrives, so the layout does not jump later.
+    markScene(true);
     // Let the page finish first: reading comes before decoration.
     const go = () => start3D().catch(() => stop3D());
     if ('requestIdleCallback' in window) requestIdleCallback(go, { timeout: 2000 });

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://xrcamp.dev/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xrcamp.dev/"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://xrcamp.dev/es-419/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xrcamp.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xrcamp.dev/"/>
+  </url>
+  <url>
+    <loc>https://xrcamp.dev/es-419/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xrcamp.dev/"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://xrcamp.dev/es-419/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xrcamp.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xrcamp.dev/"/>
+  </url>
+  <url>
+    <loc>https://xrcamp.dev/zh-hans/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xrcamp.dev/"/>
+    <xhtml:link rel="alternate" hreflang="es-419" href="https://xrcamp.dev/es-419/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xrcamp.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xrcamp.dev/"/>
+  </url>
+</urlset>

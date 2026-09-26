@@ -19,8 +19,24 @@ export function page({ t, lang, all, phases, repo, root }) {
     ? `<li><a href="${root}${s.dir}index.html" aria-current="page" lang="${s.htmlLang}">${esc(s.languageName)}</a></li>`
     : `<li><a href="${root}${s.dir}index.html" lang="${s.htmlLang}" hreflang="${s.htmlLang}">${esc(s.languageName)}</a></li>`).join('\n            ');
 
-  const alternates = Object.values(all).map((s) =>
-    `<link rel="alternate" hreflang="${s.htmlLang}" href="https://xrcamp.dev/${s.dir}">`).join('\n  ');
+  // One address for search engines: https://xrcamp.dev/ (no www).
+  const alternates = [...Object.values(all).map((s) =>
+    `<link rel="alternate" hreflang="${s.htmlLang}" href="https://xrcamp.dev/${s.dir}">`),
+    '<link rel="alternate" hreflang="x-default" href="https://xrcamp.dev/">'].join('\n  ');
+  const pageUrl = `https://xrcamp.dev/${t.dir}`;
+
+  // Structured data: tells search engines this is a free, online course.
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'EducationalOrganization', '@id': 'https://xrcamp.dev/#org', name: 'XR Camp', url: 'https://xrcamp.dev/',
+        logo: 'https://xrcamp.dev/assets/icon.svg', sameAs: [repo] },
+      { '@type': 'Course', name: t.title, description: t.description, url: pageUrl, inLanguage: t.htmlLang,
+        provider: { '@id': 'https://xrcamp.dev/#org' }, isAccessibleForFree: true,
+        offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', category: 'Free' },
+        hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'Online', courseWorkload: 'PT690H' } },
+    ],
+  }).replace(/</g, '\\u003c');
 
   const nav = t.nav.map(([id, label]) => `<li><a href="#${id}">${esc(label)}</a></li>`).join('\n          ');
 
@@ -66,10 +82,20 @@ export function page({ t, lang, all, phases, repo, root }) {
   <meta property="og:title" content="${esc(t.title)}">
   <meta property="og:description" content="${esc(t.description)}">
   <meta property="og:image" content="https://xrcamp.dev/assets/img/code_6.jpg">
+  <meta property="og:url" content="${pageUrl}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XR Camp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${esc(t.title)}">
+  <meta name="twitter:description" content="${esc(t.description)}">
+  <meta name="twitter:image" content="https://xrcamp.dev/assets/img/code_6.jpg">
+  <link rel="canonical" href="${pageUrl}">
   ${alternates}
+  <script type="application/ld+json">${jsonLd}</script>
   <link rel="icon" href="${root}assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${root}assets/site.css">
   <script type="module" src="${root}assets/scene.js"></script>
+  <script type="module" src="${root}assets/menu.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">${esc(t.skip)}</a>
@@ -176,7 +202,7 @@ export function page({ t, lang, all, phases, repo, root }) {
         <h2 id="first-hour-title">${esc(t.firstHourTitle)}</h2>
         <p>${esc(t.firstHour)}</p>
         <figure>
-          <pre><code>&lt;a-box position="-1.5 0.5 -4" color="#5b2a86"&gt;&lt;/a-box&gt;</code></pre>
+          <pre tabindex="0"><code>&lt;a-box position="-1.5 0.5 -4" color="#5b2a86"&gt;&lt;/a-box&gt;</code></pre>
           <figcaption>${esc(t.firstHourCaption)}</figcaption>
         </figure>
       </div>
