@@ -6,12 +6,12 @@
   "phase": 3,
   "title": {
     "en": "Three.js Foundations",
-    "es-419": "",
+    "es-419": "Fundamentos de three.js",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build a clean and optimized Three.js starter application.",
-    "es-419": "",
+    "es-419": "Construye una aplicación starter de three.js limpia y optimizada.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,

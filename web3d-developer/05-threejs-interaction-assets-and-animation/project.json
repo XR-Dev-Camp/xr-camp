@@ -6,12 +6,12 @@
   "phase": 3,
   "title": {
     "en": "Three.js Interaction, Assets, and Animation",
-    "es-419": "",
+    "es-419": "Interacción, recursos y animación en three.js",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build the exhibit's model explorer: load two real, CC-licensed glTF models with GLTFLoader, with raycasting selection, a loading bar, and each model's own built-in animation.",
-    "es-419": "",
+    "es-419": "Construye el explorador de modelos de la exhibición: carga dos modelos glTF reales, con licencia CC, con GLTFLoader, con selección por raycasting, una barra de carga, y la animación propia de cada modelo.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 960,

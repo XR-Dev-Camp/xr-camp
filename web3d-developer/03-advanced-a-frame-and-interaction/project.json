@@ -6,12 +6,12 @@
   "phase": 3,
   "title": {
     "en": "Advanced A-Frame and Interaction",
-    "es-419": "",
+    "es-419": "A-Frame avanzado e interacción",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Build an interactive virtual museum, cultural exhibit, or learning experience.",
-    "es-419": "",
+    "es-419": "Construye un museo virtual interactivo, una exhibición cultural o una experiencia de aprendizaje.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 840,

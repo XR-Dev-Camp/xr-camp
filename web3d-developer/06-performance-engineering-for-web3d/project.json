@@ -6,12 +6,12 @@
   "phase": 3,
   "title": {
     "en": "Performance Engineering for Web3D",
-    "es-419": "",
+    "es-419": "Ingeniería de rendimiento para Web3D",
     "zh-Hans": ""
   },
   "summary": {
     "en": "Optimize a deliberately slow 3D application for mobile use.",
-    "es-419": "",
+    "es-419": "Optimiza una aplicación 3D deliberadamente lenta para uso en móviles.",
     "zh-Hans": ""
   },
   "estimatedMinutes": 720,
