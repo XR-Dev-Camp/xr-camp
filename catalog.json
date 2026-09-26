@@ -1237,7 +1237,7 @@
       "id": "pro-02-internationalization-and-localization",
       "courseId": "professional-developer",
       "lessonId": "internationalization-and-localization-02",
-      "status": "draft",
+      "status": "review",
       "phase": 6,
       "title": {
         "en": "Internationalization and Localization",
@@ -1251,7 +1251,10 @@
       },
       "difficulty": "professional",
       "technologies": [
-        "i18n"
+        "JavaScript",
+        "ES Modules",
+        "Intl",
+        "Three.js"
       ],
       "hasCode": true,
       "path": "professional-developer/02-internationalization-and-localization"

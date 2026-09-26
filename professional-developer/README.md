@@ -17,7 +17,7 @@
 | # | Lesson | Time | Status |
 | --- | --- | --- | --- |
 | 1 | [Production Deployment and DevOps](01-production-deployment-and-devops/README.md) | 12 h · 16 sessions | ✅ Ready |
-| 2 | [Internationalization and Localization](02-internationalization-and-localization/README.md) | 10 h · 14 sessions | 🚧 Coming soon |
+| 2 | [Internationalization and Localization](02-internationalization-and-localization/README.md) | 10 h · 14 sessions | ✅ Ready |
 | 3 | [Open Source, Standards, and Technical Leadership](03-open-source-standards-and-technical-leadership/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 4 | [Career Development and Professional Practice](04-career-development-and-professional-practice/README.md) | 12 h · 16 sessions | 🚧 Coming soon |
 | 5 | [Instructor and Mentor Preparation](05-instructor-and-mentor-preparation/README.md) | 8 h · 11 sessions | 🚧 Coming soon |

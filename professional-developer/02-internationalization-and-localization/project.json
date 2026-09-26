@@ -2,7 +2,7 @@
   "id": "pro-02-internationalization-and-localization",
   "courseId": "professional-developer",
   "lessonId": "internationalization-and-localization-02",
-  "status": "draft",
+  "status": "review",
   "phase": 6,
   "title": {
     "en": "Internationalization and Localization",
@@ -21,7 +21,10 @@
   },
   "difficulty": "professional",
   "technologies": [
-    "i18n"
+    "JavaScript",
+    "ES Modules",
+    "Intl",
+    "Three.js"
   ],
   "hasCode": true,
   "starterPath": "./starter",
@@ -33,6 +36,11 @@
     "viewport",
     "focus-visible",
     "color-contrast",
-    "reduced-motion"
+    "reduced-motion",
+    "scene-description",
+    "keyboard-3d",
+    "reduced-motion-3d",
+    "2d-fallback",
+    "comfort"
   ]
 }
