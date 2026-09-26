@@ -7,12 +7,12 @@
   "title": {
     "en": "Internationalization and Localization",
     "es-419": "Internacionalización y localización",
-    "zh-Hans": ""
+    "zh-Hans": "国际化与本地化"
   },
   "summary": {
     "en": "Release an application in English, Spanish, and Simplified Chinese.",
     "es-419": "Publica una aplicación en inglés, español y chino simplificado.",
-    "zh-Hans": ""
+    "zh-Hans": "用英语、西班牙语和简体中文发布一个应用。"
   },
   "estimatedMinutes": 600,
   "schedule": {

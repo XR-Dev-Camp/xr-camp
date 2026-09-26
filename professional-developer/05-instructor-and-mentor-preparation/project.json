@@ -7,12 +7,12 @@
   "title": {
     "en": "Instructor and Mentor Preparation",
     "es-419": "Preparación para instructoría y mentoría",
-    "zh-Hans": ""
+    "zh-Hans": "讲师与导师准备"
   },
   "summary": {
     "en": "Write a short lesson in the XR Camp format, or a mentor plan, and prepare to contribute it back.",
     "es-419": "Escribe una lección corta en el formato de XR Camp, o un plan de mentoría, y prepárate para contribuirlo de vuelta.",
-    "zh-Hans": ""
+    "zh-Hans": "用 XR Camp 的格式写一节简短的课程，或者写一份导师计划，并为把它贡献回去做好准备。"
   },
   "estimatedMinutes": 480,
   "schedule": {

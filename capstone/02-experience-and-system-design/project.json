@@ -7,12 +7,12 @@
   "title": {
     "en": "Experience and System Design",
     "es-419": "Diseño de experiencia y de sistema",
-    "zh-Hans": ""
+    "zh-Hans": "体验与系统设计"
   },
   "summary": {
     "en": "Produce the full product and technical design.",
     "es-419": "Produce el diseño de producto y técnico completo.",
-    "zh-Hans": ""
+    "zh-Hans": "产出完整的产品设计和技术设计。"
   },
   "estimatedMinutes": 600,
   "schedule": {

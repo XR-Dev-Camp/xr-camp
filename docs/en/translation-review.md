@@ -1,6 +1,6 @@
 # Translation review checklist
 
-The Spanish (`es-419`) and Simplified Chinese (`zh-Hans`) lessons are drafts written with AI assistance. A lesson can move from `review` to `published` only after a native speaker has reviewed it. This file lists the choices the translators were unsure of, so reviewers can start there.
+All 58 lessons now have Spanish (`es-419`) and Simplified Chinese (`zh-Hans`) drafts, written with AI assistance. A lesson can move from `review` to `published` only after a native speaker has reviewed it. This file lists the choices the translators were unsure of, so reviewers can start there.
 
 When you have reviewed a lesson, tick it off below and delete the notes you resolved.
 
@@ -46,6 +46,37 @@ When you have reviewed a lesson, tick it off below and delete the notes you reso
 | 2.7 Git Collaboration | *issue* kept as a loanword (no gloss); *conflicto de fusión*; *revisión de código*; *quien mantiene el proyecto* (maintainer); *release* kept, feminine (*una release*); *aplastar y fusionar* / *rebasar y fusionar* (Squash / Rebase and merge) |
 | 2.8 AI as a Development Assistant | *prompt* kept with gloss *instrucciones para la IA*; *alucinación*; *recuadro* vs *región*; *reacomodo (reflow)*; *firma* (API signature); example prompts left in English |
 | 2.9 Production Frontend Application | Spanish course titles for 2.1–2.8 coined here (check them); *módulo de idioma* (locale module); service worker, router and app shell left in English; *Versionado semántico*; *Proyecto final de la Fase 2* |
+| 3.1 Web3D Fundamentals | Mesh (traducido como "malla" entre paréntesis); Renderer ("renderizador"); "field of view/FOV" como "campo de visión"; "roughness/metalness" como "rugosidad/metalicidad" |
+| 3.2 A-Frame Foundations | "vection" traducido como "vección" (poco usado en español, verificar); "entity-component system" como "sistema de entidades y componentes"; "look-controls"/"wasd-controls" se dejaron sin traducir por ser nombres de componentes |
+| 3.3 Advanced A-Frame and Interaction | "gaze/fuse cursor" traducido como "cursor de mirada/fusión"; "region dinámica" para live region (ya en glosario, confirmar consistencia); "tick()"/"remove()" se dejaron como nombres de métodos sin traducir |
+| 3.4 Three.js Foundations | "draw call" traducido como "llamada de dibujo"; "dispose/disposal" como "liberar/liberación (de memoria)"; "frame-rate independent" como "independiente de la velocidad de cuadros"; nombres de métodos (tick, setAnimationLoop, getDelta) sin traducir |
+| 3.5 Three.js Interaction, Assets, and Animation | "bounding box" como "caja delimitadora"; "normalised device coordinates (NDC)" como "coordenadas de dispositivo normalizadas (NDC)"; "raycasting" se dejó sin traducir (uso técnico establecido); "cross-fade" como "mezclar de forma gradual" |
+| 3.6 Performance Engineering for Web3D | "hysteresis" traducido como "histéresis"; "draw call" sigue como "llamada de dibujo" (consistente con 3.4); "level of detail (LOD)" se dejó como "nivel de detalle" con la sigla LOD sin traducir |
+| 3.7 Phase 3 Capstone: Interactive Web3D Experience | "brief" y "rubric" se dejaron como "brief" y "rúbrica"; "release notes"/"CHANGELOG" como "notas de versión"/CHANGELOG sin traducir el nombre de archivo; "budget" (performance) como "límite" |
+| 1.1 Fundamentos de WebXR | espacio de referencia (reference space); activación transitoria (transient activation); "Enter VR"/"Exit VR" mantenidos en inglés como etiquetas de UI |
+| 1.2 Entrada e interacción en XR | targetRayMode: gaze/tracked-pointer/screen/transient-pointer sin traducir; "far"/"direct" interaction como "a distancia"/"directa"; "grip"/"hit-test"/"dwell-time" mantenidos en inglés como términos técnicos |
+| 1.3 Diseño de UX espacial | world-locked/body-locked/view-locked traducidos como "anclado al mundo/al cuerpo/a la vista"; yaw/pitch/roll mantenidos en inglés entre paréntesis; "rig"/"dolly" sin traducir |
+| 1.4 Accesibilidad y ética en experiencias inmersivas | "W3C Group Note"/"W3C Recommendation" sin traducir (nombres de estatus formal); XAUR sin traducir; "necesidad de usuario" para XAUR user need |
+| 1.5 Audio espacial, medios y presencia | distance models linear/inverse/exponential sin traducir; "cue"/"cuechange" sin traducir (términos de la API TextTrack); PannerNode/AudioContext/AudioListener sin traducir |
+| 1.6 Proyecto final de la Fase 4: Experiencia web inmersiva | "brief"/"rúbrica" (consistente con 3.7); "capstone" traducido como "proyecto final"; testing matrix como "matriz de pruebas" |
+| 5.1 Backend and API Foundations | path traversal (dejado en inglés con gloss "recorrido de rutas"); preflight (gloss "verificación previa") |
+| 5.2 Authentication and User Accounts | bearer token (dejado en inglés con gloss "token portador"); rate limit ("límite de intentos"); scrypt$N$r$p$saltHex$hashHex format kept verbatim |
+| 5.3 Databases and Spatial Application Data | "prepared statements" como "sentencias preparadas"; "junction table" como "tabla de unión"; N+1 queries dejado en inglés/número |
+| 5.4 Real-Time and Multi-User Applications | "exponential backoff with full jitter" traducido con gloss "retroceso exponencial con jitter completo"; "upgrade" (WebSocket) dejado en inglés con gloss "actualización"; sanitize/sanear |
+| 5.5 Security and Privacy for Spatial Applications | STRIDE categories translated with Spanish gloss in parentheses per glossary instruction (Spoofing/suplantación, Tampering/manipulación, Repudiation/repudio, Information disclosure/divulgación de información, Denial of service/denegación de servicio, Elevation of privilege/elevación de privilegios); CSRF/XSS/IDOR/CSP/scrypt/HttpOnly/SameSite kept in English with gloss per task instructions |
+| 5.6 AI for Spatial Computing | "hallucination"/"hallucination check" traducido como "alucinación"/"comprobación de alucinaciones" (término ya establecido en IA en español); "mock provider" como "proveedor simulado"; single-tenant dejado en inglés con gloss |
+| 5.7 Advanced PWA and Offline Spatial Delivery | "scene bundle" como "paquete de escena"; OPFS/Cache API/Background Sync dejados en inglés con gloss; "regional mirror" como "espejo regional" |
+| 5.8 Phase 5 Capstone: Full-Stack Spatial Application | "capstone" traducido como "proyecto final" (consistente con 3.7/1.6); brief/rúbrica sin traducir (consistente); canView dejado como nombre de función sin traducir |
+| 6.1 Production Deployment and DevOps | pipeline (no traducido, de uso común); dry run; runner autoalojado (self-hosted); staging vs. producción |
+| 6.2 Internationalization and Localization | i18n / l10n (no traducidos, siglas de uso común); billboarding; pseudolocalización; tofu boxes -> "cajas de tofu" |
+| 6.3 Open Source, Standards, and Technical Leadership | Community Group / Working Group (no traducidos, nombres propios de W3C); explainer (no traducido); Recommendation Track; decision record -> "registro de decisión" |
+| 6.4 Career Development and Professional Practice | trade-off -> "compromiso (trade-off)"; buffer -> "margen (buffer)"; "not legal advice" -> "esto no es asesoría legal" (mantenido exacto) |
+| 6.5 Instructor and Mentor Preparation | worked example -> "ejemplo resuelto"; mentee (no traducido, de uso común); hub page -> "página central" |
+| 7.1 Capstone Research and Definition | brief (no traducido, de uso común); elevator pitch (no traducido); stakeholder -> "parte interesada" |
+| 7.2 Experience and System Design | wireframe (no traducido); user journey -> "recorrido de usuaria"; scene graph -> "grafo de escena" |
+| 7.3 Capstone Prototype | draw call (no traducido); prototype -> "prototipo"; switch device -> "dispositivo de conmutador (switch)" |
+| 7.4 Capstone Production | changelog -> "registro de cambios"; build checklist -> "lista de verificación de compilación"; build -> "compilación" |
+| 7.5 Testing, Launch, and Presentation | case study -> "caso de estudio"; retrospective -> "retrospectiva"; release checklist -> "lista de verificación de lanzamiento" |
 
 ## Chinese: terms to check
 
@@ -68,6 +99,46 @@ When you have reviewed a lesson, tick it off below and delete the notes you reso
 | 1.7 Developer Tools | 缺陷 vs Bug vs 错误; 缺陷报告; 单步跳过; 代码检查工具 (linter); 无障碍名称; DevTools panel names in English with glosses; Marian Villa's GDE titles |
 | 1.8 Git, GitHub, and Publishing | 仓库 / 提交 / 克隆 / 推送 / 拉取 / 获取; 复刻（fork）; 拉取请求 vs "pull request" / PR; 许可协议; 署名 and **Credits**（致谢）; 知识共享; 开放源代码促进会; 双重身份验证; the added 「也不要用中文」 in step 3 (keep or remove) |
 | 1.9 Web Developer Portfolio | Title 第一阶段结业项目 - Web 开发者作品集 (结业 vs 毕业; Web vs 网页); 案例研究; 3D 展厅 / 展板; 后备方案; 视觉风格; 网络节流; 深蓝绿色、赤陶色、暖沙色; HTML 现行标准; 网页无障碍倡议 (WAI) |
+| 1.1 Modern JavaScript | 回调（callback，沿用英文括注）; live region 译为「实时区域」（与 glossary 一致，但请确认「实时区域」与后续课程一致使用）; committer 译为「提交者」 |
+| 2.1 The Document Object Model and Dynamic Interfaces | 事件委托 (event delegation); 冒泡 (bubbling); 空值合并运算符 (nullish coalescing, ??) |
+| 3.1 Application Architecture and Maintainable Code | 代码异味 (code smell); 重构 (refactor); 魔法数字 (magic number); 死代码 (dead code); 观察者模式；跨站脚本攻击 (cross-site scripting) |
+| 4.1 APIs, JSON, and Asynchronous Applications | 竞态条件 (race condition); 模拟数据 (mock data); 并行数组 (parallel array); 可选链 (optional chaining); 半正矢公式 (haversine formula) |
+| 5.1 Web Components | shadow DOM/shadow root（保留英文术语，未强行意译）; light DOM（保留英文）; part（保留英文，未译作「部件」）; 自定义元素 (custom element); 自定义事件 (custom event); 重新指向 (retarget) |
+| 6.1 Progressive Web Applications | 应用外壳 (app shell); 可遮罩图标 (maskable icon); 过期重验证 (stale-while-revalidate); 安全上下文 (secure context); 不透明响应 (opaque response) |
+| 7.1 Git Collaboration and Open Source | fork（保留英文，未译作「分叉仓库」以外的其他说法）; 上游 (upstream); 语义化版本号 (semantic versioning); 维护者/贡献者 (maintainer/contributor) |
+| 8.1 AI as a Development Assistant | 幻觉 (hallucination); 提示词 (prompt，沿用 glossary 既定译法); 开放权重模型 (open-weight model); 本地模型 (local model) |
+| 9.1 Phase 2 Capstone - Production Frontend Application | 性能预算 (performance budget); 评分标准 (rubric); 生产级 (production); 复数规则 (plural rules); 语义化版本号 (semantic versioning) |
+| 1.0 Web3D Fundamentals | 组（Group，used for both scene-graph "children" grouping and A-Frame concept); 场景图列表 (scene graph list) rendered as UI name |
+| 2.0 A-Frame Foundations | 基本元素标签 (primitive, chose descriptive translation over transliteration); 视动性眩晕 (vection); 字体图集 (font atlas) |
+| 3.0 Advanced A-Frame and Interaction | 注视/凝视选择光标 (gaze/fuse cursor); 位置音频 (positional audio); 射线检测器 (raycaster) |
+| 4.0 Three.js Foundations | 绘制调用 (draw call); 帧率无关 (frame-rate independent); 色调映射 (tone mapping); 释放/dispose 译作「释放（资源）」 |
+| 5.0 Three.js Interaction, Assets, and Animation | 归一化设备坐标 (normalised device coordinates, NDC); 数据贴图 (data texture) vs 颜色贴图 (colour texture); 署名信息 (attribution, chose over "归属") |
+| 6.0 Performance Engineering for Web3D | 滞后 (hysteresis); 细节层次 (level of detail, LOD); 懒加载 (lazy loading/lazy-load) |
+| 7.0 Phase 3 Capstone - Interactive Web3D Experience | 项目说明 (brief); 评分标准 (rubric); 毕业项目 (capstone, consistent with frontend-engineer/09) |
+| 4.1 WebXR Foundations | secure context; reference space; local-floor; transient activation; seated mode; Immersive Web Emulator |
+| 4.2 XR Input and Interaction | target ray mode; grip pose; transient-pointer; hit-test; haptic actuator; dwell-time gaze selection |
+| 4.3 Spatial UX Design | world-locked; body-locked; view-locked; angular size; teleport locomotion; smooth movement vignette; personal-space boundary; design rationale |
+| 4.4 Immersive Accessibility and Ethics | W3C Group Note vs Recommendation; XAUR; forced camera movement; personal-space boundary; informed consent; camera personalization |
+| 4.5 Spatial Audio, Media, and Presence | PositionalAudio; AudioListener; AudioContext suspended/resume; CanvasTexture vs VideoTexture; WebVTT; TextTrack cuechange |
+| 4.6 Phase 4 Capstone: Immersive Web Experience | play-space boundary; testing matrix; release notes/CHANGELOG; camera personalization consent; caption anchored to visitor |
+| 1.1 Backend and API Foundations | path traversal（路径穿越）; preflight（预检）; JSON Lines |
+| 1.2 Authentication and User Accounts | bearer token（持有即生效令牌）; synchronizer-token pattern（同步器令牌模式）; session fixation（会话固定）; timing side channel（时序侧信道） |
+| 1.3 Databases and Spatial Application Data | prepared statement（预处理语句）; junction table（关联表）; N+1 queries（N+1 查询问题） |
+| 1.4 Real-Time and Multi-User Applications | WebSocket upgrade（WebSocket 升级）; exponential backoff with jitter（带抖动的指数退避）; defense in depth（深度防御） |
+| 6.1 Production Deployment and DevOps | CI/CD pipeline 流水线; environment 环境; required reviewers 必需的审核人; release dashboard 发布仪表盘; dry run 演练; staging 预发布环境; rollback 回滚 |
+| 1.5 Security and Privacy for Spatial Applications | STRIDE threat model（STRIDE 威胁模型）; CSRF, XSS, IDOR, CSP, scrypt, HttpOnly, SameSite kept in English with first-use Chinese gloss per instructions; data minimisation（数据最小化） |
+| 6.2 Internationalization and Localization | i18n/l10n 国际化/本地化; script maximization 脚本最大化; pseudo-localization 伪本地化; draft translation 草稿翻译; billboarding 始终朝向相机; font stack 字体栈 |
+| 1.6 AI for Spatial Computing | provider-neutral module（不依赖服务商的模块）; hallucination（AI 幻觉）; de jure/de facto standard（法定/事实标准） |
+| 6.3 Open Source, Standards, and Technical Leadership | Community Group 社区组; Working Group 工作组; explainer 说明文档; CLA 贡献者许可协议; decision record 决策记录; SPDX identifier SPDX 标识符; code of conduct 行为准则 |
+| 6.4 Career Development and Professional Practice | career package 职业材料包; case study 案例分析; not legal advice 这不是法律建议; range plus a buffer 区间加缓冲量; proposal 提案; schema.org structured data schema.org 结构化数据 |
+| 1.7 Advanced PWA and Offline Spatial Delivery | Origin Private File System（源私有文件系统，OPFS）; Background Sync API（后台同步 API）; HTTP range requests（HTTP 范围请求） |
+| 6.5 Instructor and Mentor Preparation | worked example 实例讲解; checkable objectives 可检验的目标; mentor plan 导师计划; cadence 节奏; code of conduct 行为准则; escalation step 升级处理步骤 |
+| 1.8 Phase 5 Capstone - Full-Stack Spatial Application | brief and rubric（任务说明与评分标准，沿用课程惯例译法）; canView（所有权/可见性检查函数名，保留英文） |
+| 7.1 Capstone Research and Definition | capstone brief 毕业设计简报; stakeholder map 利益相关方图谱; scope 范围; mentor approval 导师批准; partner project 合作方项目; elevator pitch 电梯演讲 |
+| 7.2 Experience and System Design | user journey 用户旅程; wireframe 线框图; spatial layout 空间布局; scene graph 场景图; data model 数据模型; API sketch API 草图; security and privacy plan 安全与隐私计划; test plan 测试计划 |
+| 7.3 Capstone Prototype | prototype 原型; test log 测试日志; design review 设计评审; draw call 绘制调用; performance budget 性能预算 |
+| 7.4 Capstone Production | build checklist 构建检查清单; user guide 用户指南; changelog 变更日志; mid-build review 中期构建复查; scope cut 削减范围 |
+| 7.5 Testing, Launch, and Presentation | release checklist 发布检查清单; case study 案例分析; presentation outline 展示大纲; retrospective 复盘; public repository 公开仓库 |
 
 ## Review status
 
@@ -100,3 +171,34 @@ When you have reviewed a lesson, tick it off below and delete the notes you reso
 | 2.7 Git Collaboration and Open Source | [ ] | [ ] |
 | 2.8 AI as a Development Assistant | [ ] | [ ] |
 | 2.9 Production Frontend Application | [ ] | [ ] |
+| 3.1 Web3D Fundamentals | [ ] | [ ] |
+| 3.2 A-Frame Foundations | [ ] | [ ] |
+| 3.3 Advanced A-Frame and Interaction | [ ] | [ ] |
+| 3.4 Three.js Foundations | [ ] | [ ] |
+| 3.5 Three.js Interaction, Assets, and Animation | [ ] | [ ] |
+| 3.6 Performance Engineering for Web3D | [ ] | [ ] |
+| 3.7 Phase 3 Capstone - Interactive Web3D Experience | [ ] | [ ] |
+| 4.1 WebXR Foundations | [ ] | [ ] |
+| 4.2 XR Input and Interaction | [ ] | [ ] |
+| 4.3 Spatial UX Design | [ ] | [ ] |
+| 4.4 Immersive Accessibility and Ethics | [ ] | [ ] |
+| 4.5 Spatial Audio, Media, and Presence | [ ] | [ ] |
+| 4.6 Phase 4 Capstone - Immersive Web Experience | [ ] | [ ] |
+| 5.1 Backend and API Foundations | [ ] | [ ] |
+| 5.2 Authentication and User Accounts | [ ] | [ ] |
+| 5.3 Databases and Spatial Application Data | [ ] | [ ] |
+| 5.4 Real-Time and Multi-User Applications | [ ] | [ ] |
+| 5.5 Security and Privacy for Spatial Applications | [ ] | [ ] |
+| 5.6 AI for Spatial Computing | [ ] | [ ] |
+| 5.7 Advanced PWA and Offline Spatial Delivery | [ ] | [ ] |
+| 5.8 Phase 5 Capstone - Full-Stack Spatial Application | [ ] | [ ] |
+| 6.1 Production Deployment and DevOps | [ ] | [ ] |
+| 6.2 Internationalization and Localization | [ ] | [ ] |
+| 6.3 Open Source, Standards, and Technical Leadership | [ ] | [ ] |
+| 6.4 Career Development and Professional Practice | [ ] | [ ] |
+| 6.5 Instructor and Mentor Preparation | [ ] | [ ] |
+| 7.1 Capstone Research and Definition | [ ] | [ ] |
+| 7.2 Experience and System Design | [ ] | [ ] |
+| 7.3 Capstone Prototype | [ ] | [ ] |
+| 7.4 Capstone Production | [ ] | [ ] |
+| 7.5 Testing, Launch, and Presentation | [ ] | [ ] |

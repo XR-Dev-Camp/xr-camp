@@ -1,85 +1,205 @@
-# Capstone Prototype
+# 毕业设计原型
 
 **Language / Idioma / 语言:** [English](README.md) · [Español](README.es.md) · [简体中文](README.zh-Hans.md)
 
-> <!-- TODO: translate the title, project summary, and all authored body copy. The document structure is final. -->
-
-**课程:** `capstone` · **课时:** `capstone-prototype-03` · **时长:** 约 12 小时 · 16 次学习，每次 45 分钟 · 每周 4 次，约 4 周
+**课程：** `capstone` · **课时：** `capstone-prototype-03` · **时长：** 约 12 小时 · 16 次学习，每次 45 分钟 · 每周 4 次，约 4 周
 
 ---
 
-> Deliver a tested prototype and design review.
+> 交付一个经过测试的原型和一次设计评审。
+
+---
 
 ## 学习目标
 
-_内容待撰写。_
+完成本项目后，你将能够：
+
+1. 用 three.js，为你第二阶段的设计构建一个小型、可运行的技术验证。
+2. 在构建过程中持续记录测试日志，而不是只在最后才记。
+3. 用屏幕阅读器和纯键盘测试你的原型的无障碍性。
+4. 用你在第二阶段设定的性能预算测试你的原型。
+5. 即便翻译还不存在，也要检查你原型对本地化的就绪程度。
+6. 组织一次设计评审，并记录因此发生的改动。
+7. 根据证据，决定哪些内容已经准备好进入第四阶段的生产构建。
 
 ## 先决条件
 
-_内容待撰写。_
+- **第 7.2 阶段：体验与系统设计。** 在开始这个阶段之前，你需要有一份已获批准的数据模型、场景图、空间布局和测试计划。
+- **课程 3.4：Three.js 基础**和**课程 3.6：Web3D 性能工程**。
 
 ## 所需工具
 
-_内容待撰写。_
+| 工具 | 用途 | 费用 |
+| --- | --- | --- |
+| 一个支持 WebGL 2 的现代浏览器 | 运行 three.js 原型 | 免费 |
+| VS Code 和一个本地服务器 | 模块需要 `http://` | 免费 |
+| 一个屏幕阅读器（NVDA、VoiceOver 或类似工具） | 测试原型的无障碍性 | 免费 |
 
 ## 你将构建什么
 
-_内容待撰写。_
+专业毕业设计的第三阶段：一个**小型、可运行的原型**，用代码验证你第二阶段的设计，外加一份**测试日志**和一份**设计评审**记录。这不是最终完成的毕业设计——它是能证明你最有风险的设计决定真的可行的最小切片。
+
+[`completed/`](completed/) 中的参考答案，是 Ana 第二阶段那个单独展厅的精简版本：一个用 three.js 基础图形搭建的展台，带有场景描述、2D 对照列表、键盘控制和一个暂停按钮——复用了 `web3d-developer/07-interactive-web3d-experience` 中的无障碍 3D 页面模式。起始代码有三份规划模板（`prototype-plan.md`、`test-log.md`、`design-review.md`），一共 7 个 TODO，还有一个最小化的 three.js 起始页面，带有自己需要完成的 TODO。
 
 ## 文件夹说明
 
 ```text
 03-capstone-prototype/
 ├── README.md
-├── starter/        # begin here
-├── completed/      # reference solution
-├── challenges/     # foundation · creative · explorer
-├── tests/          # self-review checklist
+├── project.json
+├── starter/
+│   ├── index.html            # A minimal three.js page: 4 TODOs
+│   ├── prototype-plan.md      # TODOs 1–3: what you will prove, and how
+│   ├── test-log.md             # TODOs 4–5: a running log as you test
+│   ├── design-review.md        # TODOs 6–7: the review record
+│   └── rubric.md               # How this stage is assessed
+├── completed/                 # The tiny working prototype: open this last
+├── challenges/                 # Three challenges: Foundation is required
+├── tests/checklist.md
 ├── assets/
 └── screenshots/
 ```
 
 ## 环境配置
 
-_内容待撰写。_
+1. 在开始之前，确认第二阶段的设计文档已获导师批准。
+2. 把 `starter/` 复制到你的毕业设计工作区。
+3. 通过本地服务器打开 `starter/index.html`——在你完成 TODO 之前，看到一个带有控制台消息的空白画布是正常的。
+4. 阅读 [`starter/rubric.md`](starter/rubric.md)。
 
 ## 分步讲解
 
-_内容待撰写。_
+### 规划你的学习节奏
+
+| 节次 | 你要做的事 | 完成后你将拥有 |
+| --- | --- | --- |
+| 1 | 环境配置；重新阅读你第二阶段的场景图 | 一份为最小场景制定的计划，能验证你的设计 |
+| 2 | 第 1 步：原型计划，第一部分（TODO 1-2） | 一份列出这个原型必须验证的最有风险事项的清单 |
+| 3 | 第 1 步，续（TODO 3） | 一个比完整毕业设计更小的原型范围 |
+| 4 | 第 2 步：渲染器、相机和场景（`index.html` 中的 TODO 1） | 一个在浏览器中渲染出来的空 three.js 场景 |
+| 5 | 第 3 步：构建你的基础图形物体（TODO 2） | 你第二阶段的物体在屏幕上可见 |
+| 6 | 第 3 步，续 | 与你空间布局相符的灯光和材质 |
+| 7 | 第 4 步：场景描述和 2D 对照版（TODO 3） | 一份始终可见、与场景一致的文字替代方案 |
+| 8 | 第 5 步：键盘控制（TODO 4） | 每一项 3D 交互都有能用的键盘路径 |
+| 9 | 第 6 步：减少动态效果和暂停按钮 | 动画遵循 `prefers-reduced-motion`，并有一个能用的暂停控件 |
+| 10 | 第 7 步：测试，第一部分——无障碍性（`test-log.md` 中的 TODO 4-5） | 一次屏幕阅读器和键盘走查，已记录 |
+| 11 | 第 7 步，续——性能 | 对照第二阶段的预算，测量绘制调用和三角形数量 |
+| 12 | 第 7 步，续——本地化 | 检查是否有文字被写死在你的数据模型之外 |
+| 13 | 第 8 步：设计评审（TODO 6-7） | 一次评审会议（真实的，或与同学/导师进行），记录在 `design-review.md` 中 |
+| 14 | 根据评审反馈修改原型 | 已完成并记录的改动 |
+| 15 | [`tests/checklist.md`](tests/checklist.md)；请求导师批准 | 一个经过测试、评审的原型 |
+| 16 | 一个拓展挑战，然后是**提交作业** | 一个已获批准的毕业设计原型 |
+
+### 第 1 步：原型计划（TODO 1-3）
+
+打开 [`starter/prototype-plan.md`](starter/prototype-plan.md)。并不是你第二阶段设计的每一部分都需要一个原型：挑出最有风险的两三样东西——那些最有可能失败、或者以后出错代价最高的部分——只计划验证这些。Ana 的计划只验证一件事：一个由基础图形搭建的展品，能否被无障碍地展示、描述和控制，并且控制在预算之内？
+
+### 第 2 步：渲染器、相机和场景（`starter/index.html` 中的 TODO 1）
+
+搭建一个 `THREE.Scene`、一个 `PerspectiveCamera` 和一个 `WebGLRenderer`，和 `web3d-developer/04-threejs-foundations` 中的模式一样。使用本仓库 `versions.json` 中那份确切的固定版本导入映射。
+
+### 第 3 步：你的物体（TODO 2）
+
+用 three.js 的基础图形（`BoxGeometry`、`SphereGeometry` 或类似图形）和一个 `MeshStandardMaterial`，再加上至少一盏灯，构建出你原型计划里指定的物体。保持简单：这一步验证的是你流水线的结构，而不是最终的美术效果。
+
+### 第 4 步：场景描述和 2D 对照版（TODO 3）
+
+添加一个用你场景所用的同一份数据构建的 `<p id="scene-description">`，以及一份始终存在的、包含同样信息的 2D 列表或表格。这两者都不是只在 3D 失败时才显示的后备方案——它们始终都在（WCAG 1.3.1）。
+
+### 第 5 步：键盘控制（TODO 4）
+
+添加按钮（或按键处理函数），让它们做的事情，和鼠标拖拽或点击完全一样：转动视角，或选中物体。每一项 3D 交互都需要一条能用的键盘路径。
+
+### 第 6 步：减少动态效果和暂停按钮
+
+如果有任何动画，在启动它之前先检查 `matchMedia('(prefers-reduced-motion: reduce)')`，并添加一个带 `aria-pressed` 的「暂停动画」按钮，无论这个偏好设置如何都能正常工作。
+
+### 第 7 步：测试（`test-log.md` 中的 TODO 4-5）
+
+打开 [`starter/test-log.md`](starter/test-log.md)，并在测试时保持它开着。记录，并标注日期：你的屏幕阅读器走查、你的纯键盘走查、对照第二阶段预算测量出的绘制调用和三角形数量，以及一项检查——确认没有任何可见文字被写死在你的数据模型之外。
+
+### 第 8 步：设计评审（TODO 6-7）
+
+打开 [`starter/design-review.md`](starter/design-review.md)。把你能运行的原型展示给你的导师或一位同学。记录他们说了什么，以及——这正是学习者容易跳过的部分——你因此做出了什么改动，或者你为什么选择不改。
 
 ## 关键代码解析
 
-_内容待撰写。_
+- **原型。** 能证明一个设计决定可行的最小可运行切片，其范围刻意比最终构建小得多。
+- **`prefers-reduced-motion`。** 浏览器从操作系统的无障碍设置中暴露出来的一个媒体查询；代码在启动任何非用户主动请求的动画之前，都要先检查它。
+- **测试日志。** 一份标注日期的记录，记下你测试了什么、发现了什么，随着测试过程实时记录——而不是事后凭记忆重建。
+- **设计评审。** 一个结构化的时刻，让构建者以外的人来查看这份工作，构建者则记录下结果，包括做出的改动。
+- **绘制调用（Draw call）。** CPU 发给 GPU 的一条指令，让它画出某样东西；数量更少、规模更大的绘制调用，通常比很多个小的更省成本。
+
+## 3D 与 XR 无障碍
+
+`docs/en/xr-accessibility.md` 中的每一条要求，都在这个阶段的原型上以缩小的规模适用：一个用场景同一份数据构建的 `scene-description` 元素、一份包含同样信息的 2D 列表、每一项交互的键盘路径、任何动画开始之前的减少动态效果检查、一个能用的暂停按钮，以及不出现任何访客没有主动要求的相机移动。现在彻底测试这个小型原型，远比在第四阶段更大的生产构建中才发现漏掉的要求要便宜得多。
 
 ## 无障碍要求
 
-_内容待撰写。_
+| 要求 | WCAG 2.2 | 原因 |
+| --- | --- | --- |
+| `#scene-description` 描述了当前场景 | 1.1.1 非文本内容 | 一个看不到画布的人，需要一份等效的内容 |
+| 2D 物体列表始终存在，而不只是在 WebGL 失败时才出现 | 1.3.1 信息与关系 | 信息不应该只存在于一张图片里 |
+| 每一项 3D 交互都有键盘路径 | 2.1.1 键盘 | 没有指针设备的访客，必须能到达同样的功能 |
+| 动画检查 `prefers-reduced-motion`，并提供一个暂停按钮 | 2.2.2 暂停、停止、隐藏 | 如果无法被停止，移动的内容可能会分散某些访客的注意力，甚至造成伤害 |
+| 每个控件的焦点都可见 | 2.4.7 焦点可见 | 键盘用户需要看到自己所在的位置 |
 
 ## 性能注意事项
 
-_内容待撰写。_
+用 `renderer.info` 测量绘制调用和三角形数量，方法和 `web3d-developer/06-performance-engineering-for-web3d` 一样，并与你第二阶段 `test-plan.md` 中的预算做对比。如果一个原型仅凭一个小物体就已经超出预算，这是一个信号，提醒你在第四阶段加入更多内容之前先做简化。
 
 ## 常见错误
 
-_内容待撰写。_
+| 错误 | 会发生什么 | 应该怎么做 |
+| --- | --- | --- |
+| 在测试任何东西之前就先构建完整个场景 | 无障碍性和性能问题被发现得太晚，修复成本很高 | 先测试能运行的最小部分，再逐步添加更多内容 |
+| 因为「这只是个原型」而跳过设计评审 | 设计缺陷会一路带到第四阶段规模大得多的生产构建里 | 把能运行的原型展示给别人看，哪怕只是非正式地看一下，并记录结果 |
+| 把可见文字写死，而不是从数据中读取 | 本地化变成了一次重写，而不是添加翻译 | 像第二阶段规划的那样，从一个小型本地数据文件中读取每一个可见字符串 |
+| 添加动画时没有先检查减少动态效果 | 原型没能通过一项本可以从一开始就内建进去的无障碍检查 | 每一次在任何动画开始之前，都先检查 `prefers-reduced-motion` |
+| 把测试日志当作事后补充的东西 | 测试过程要靠记忆重建，遗漏细节 | 随着测试过程实时记录日期和发现，而不是事后补记 |
 
 ## 故障排查
 
-_内容待撰写。_
+**我的场景渲染出来是黑的。** 检查场景中是否加入了一盏灯——`MeshStandardMaterial` 需要它——以及相机的位置是否落在了你的物体内部。
+
+**减少动态效果检查好像不起作用。** 在 Chrome 开发者工具的「Rendering」面板里，用「Emulate CSS media feature prefers-reduced-motion」控件来测试，而不用改动你操作系统的设置。Firefox 和 Safari 会直接读取操作系统层面的无障碍设置。
+
+**我只有一个物体，绘制调用数量就已经很高了。** 检查你是否在渲染循环内部、每一帧都创建了新的材质或几何体；应该在调用 `renderer.render()` 的循环之外，只创建一次这些对象。
 
 ## 拓展挑战
 
-_内容待撰写。_
+三个拓展挑战，位于 [`challenges/`](challenges/)。基础挑战为必做，另外两个为选做：
+
+1. **[基础](challenges/challenge-1.zh-Hans.md)**：拔掉鼠标（或禁用触控板），对你的原型进行一次完整的纯键盘走查，记录下每一处卡住的地方。
+2. **[创意](challenges/challenge-2.zh-Hans.md)**：为原型加入一处体现你自己语言或社区的细节，并测试它对来自这个社区之外的人是否也能读懂。
+3. **[探索](challenges/challenge-3.zh-Hans.md)**：给你的原型添加第二种不同的物体类型，并在两者都存在的情况下重新测量你的性能预算。
 
 ## 提交作业
 
-_内容待撰写。_
+1. 完成 [`tests/checklist.md`](tests/checklist.md)。
+2. 拍摄你能运行的原型和测试日志中性能数字的截图。
+3. 把你的原型计划、测试日志和设计评审记录保存在你的学习日志和作品集中。等 XR Camp 社区上线后，也在那里分享它们。
+4. 学习日志问题：你的设计评审对你进入这个阶段之前的计划做出了哪些改变？
 
 ## 延伸阅读
 
-_内容待撰写。_
+- [three.js 手册：基础知识](https://threejs.org/manual/#en/fundamentals)（英文）
+- [MDN：`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)（英文）
+- [W3C WAI：评估 Web 无障碍性概览](https://www.w3.org/WAI/test-evaluate/)（英文）
+- [docs/en/xr-accessibility.md](../../docs/en/xr-accessibility.md)（英文）
+
+## 值得认识的女性
+
+Katya Echazarreta 是一位出生于墨西哥瓜达拉哈拉的电气工程师，2018 年至 2021 年间在 NASA 喷气推进实验室工作，参与了五个任务，包括毅力号火星车和欧罗巴快船任务。2022 年 6 月，她作为「太空为人类」组织的公民宇航员，搭乘蓝色起源的 NS-21 亚轨道飞行任务进入太空，成为第一位出生于墨西哥的女性宇航员。
+
+她在喷气推进实验室参与的每一个任务，都依赖于地面测试——先证明一个系统能够运作，才让它离开地球。这正是这个阶段对你的毕业设计的要求：在一个小型原型中、在「地面上」先证明最有风险的部分是可行的，再投入完整的生产构建。
+
+> **编者注：发布前请核实。** 「值得认识的女性」中的人物信息必须以一手资料核实，并在可行时于课程上线前与本人确认。参见 [`docs/en/women-to-know.md`](../../docs/en/women-to-know.md)。
+
+## 标准聚焦
+
+正是 **Khronos 集团的 WebGL 2** 规范，让 three.js 的渲染器能够在每一个现代浏览器中无需插件就运行起来。Khronos 还发布了 glTF——XR Camp 的 Web3D 课程中一直使用的 3D 模型格式；原型阶段正是一个适合尽早确认你的毕业设计将依赖哪些开放标准的好时机。
 
 ## 许可协议
 
 Code: [`LICENSE-CODE`](../../LICENSE-CODE) · Content: [`LICENSE-CONTENT`](../../LICENSE-CONTENT) · [`ATTRIBUTION.md`](./ATTRIBUTION.md)
-

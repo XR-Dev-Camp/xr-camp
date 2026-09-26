@@ -7,12 +7,12 @@
   "title": {
     "en": "Capstone Prototype",
     "es-419": "Prototipo del proyecto final",
-    "zh-Hans": ""
+    "zh-Hans": "毕业设计原型"
   },
   "summary": {
     "en": "Deliver a tested prototype and design review.",
     "es-419": "Entrega un prototipo probado y una revisión de diseño.",
-    "zh-Hans": ""
+    "zh-Hans": "交付一个经过测试的原型和一次设计评审。"
   },
   "estimatedMinutes": 720,
   "schedule": {

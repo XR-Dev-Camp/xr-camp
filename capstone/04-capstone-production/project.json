@@ -7,12 +7,12 @@
   "title": {
     "en": "Capstone Production",
     "es-419": "Producción del proyecto final",
-    "zh-Hans": ""
+    "zh-Hans": "毕业设计生产构建"
   },
   "summary": {
     "en": "Build the production application.",
     "es-419": "Construye la aplicación de producción.",
-    "zh-Hans": ""
+    "zh-Hans": "构建生产级应用。"
   },
   "estimatedMinutes": 1680,
   "schedule": {

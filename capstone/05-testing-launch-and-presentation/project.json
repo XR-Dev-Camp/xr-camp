@@ -7,12 +7,12 @@
   "title": {
     "en": "Testing, Launch, and Presentation",
     "es-419": "Pruebas, lanzamiento, y presentación",
-    "zh-Hans": ""
+    "zh-Hans": "测试、发布与展示"
   },
   "summary": {
     "en": "Release the capstone, public repository, case study, and presentation.",
     "es-419": "Lanza el proyecto final, el repositorio público, el caso de estudio, y la presentación.",
-    "zh-Hans": ""
+    "zh-Hans": "发布毕业设计、公开仓库、案例分析和展示演讲。"
   },
   "estimatedMinutes": 720,
   "schedule": {

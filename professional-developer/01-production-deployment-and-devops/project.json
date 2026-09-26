@@ -7,12 +7,12 @@
   "title": {
     "en": "Production Deployment and DevOps",
     "es-419": "Despliegue en producción y DevOps",
-    "zh-Hans": ""
+    "zh-Hans": "生产部署与 DevOps"
   },
   "summary": {
     "en": "Create and document a production release pipeline.",
     "es-419": "Crea y documenta un pipeline de lanzamiento a producción.",
-    "zh-Hans": ""
+    "zh-Hans": "创建并记录一条生产环境的发布流水线。"
   },
   "estimatedMinutes": 720,
   "schedule": {
