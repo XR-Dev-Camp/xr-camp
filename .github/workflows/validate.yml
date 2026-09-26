@@ -60,6 +60,7 @@ jobs:
             --no-progress --exclude-loopback --max-retries 3 --timeout 30
             --accept 200,202,206,403,429
             --exclude-path docs/en/women-to-know.md
+            --exclude-path vendor
             --exclude 'planalto\.gov\.br|dof\.gob\.mx'
             --exclude-path 'README-(example|template)\.md$'
             '**/*.md'
@@ -91,8 +92,10 @@ jobs:
           # --no-sandbox: GitHub's Ubuntu runners block Chrome's sandbox.
           # SwiftShader: runners have no GPU, and 3D lessons need WebGL to load.
           echo '{ "chromeLaunchConfig": { "args": ["--no-sandbox", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"] }, "timeout": 120000 }' > /tmp/pa11y.json
-          for f in $(find . -path '*/completed/*.html' | sort); do
+          # Every reference page; starter templates nested inside a completed/
+          # folder (6.5's example lesson) are unfinished on purpose, so skip them.
+          for f in $(find . -path '*/completed/*.html' -not -path '*/completed/*/starter/*' -not -path '*/node_modules/*' | sort); do
             echo "--- $f"
-            timeout 180 npx pa11y --config /tmp/pa11y.json --standard WCAG2AA --reporter cli "file://$PWD/${f#./}" || status=1
+            timeout 180 npx pa11y --config /tmp/pa11y.json --standard WCAG2AA --reporter cli "file://$PWD/${f#./}" || { echo "FAILED or timed out: $f"; status=1; }
           done
           exit $status
