@@ -900,7 +900,7 @@
       "id": "imm-02-xr-input-and-interaction",
       "courseId": "immersive-developer",
       "lessonId": "xr-input-and-interaction-02",
-      "status": "draft",
+      "status": "review",
       "phase": 4,
       "title": {
         "en": "XR Input and Interaction",
@@ -914,6 +914,7 @@
       },
       "difficulty": "advanced",
       "technologies": [
+        "three.js",
         "WebXR"
       ],
       "hasCode": true,

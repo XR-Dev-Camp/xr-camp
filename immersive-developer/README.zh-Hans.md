@@ -17,7 +17,7 @@
 | # | 课程 | 时长 | 状态 |
 | --- | --- | --- | --- |
 | 1 | [WebXR Foundations](01-webxr-foundations/README.zh-Hans.md) | 14 小时 · 19 次学习 | ✅ 已完成 |
-| 2 | [XR Input and Interaction](02-xr-input-and-interaction/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
+| 2 | [XR Input and Interaction](02-xr-input-and-interaction/README.zh-Hans.md) | 12 小时 · 16 次学习 | ✅ 已完成 |
 | 3 | [Spatial UX Design](03-spatial-ux-design/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
 | 4 | [Immersive Accessibility and Ethics](04-immersive-accessibility-and-ethics/README.zh-Hans.md) | 12 小时 · 16 次学习 | 🚧 即将推出 |
 | 5 | [Spatial Audio, Media, and Presence](05-spatial-audio-media-and-presence/README.zh-Hans.md) | 10 小时 · 14 次学习 | 🚧 即将推出 |

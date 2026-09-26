@@ -3,12 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>XR Input and Interaction - XR Camp reference solution</title>
+  <meta name="description" content="The WebXR exhibit becomes an interaction lab: controllers, tracked hands, an in-world menu, ray versus direct grab, and AR hit-test placement, each with a full non-XR alternative.">
+  <title>XR interaction lab - XR Camp</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Immersive · XR Input and Interaction</p></header>
   <main>
-    <h1>XR Input and Interaction</h1>
-    <p>Reference solution placeholder. Replace with the completed build.</p>
+    <h1>The exhibit becomes an interaction lab</h1>
+    <p>The same three objects from 4.1: a clay pot, a woven basket ring, and a jade stone. This lesson adds ways to reach into the scene: a floating in-world menu you point at, a jade stone you can pick up directly, tracked-hand support where a device offers it, and a button to place a virtual jade stone onto a real surface with AR. Every one of these has a full alternative below that needs no headset at all.</p>
+    <noscript><p>This lab needs JavaScript and WebGL 2. The list below describes everything in it.</p></noscript>
+
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The lab</h2>
+        <div class="canvas-box" id="canvas-box"></div>
+
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D lab (WebGL 2 is unavailable). Nothing is
+          broken: the list below describes everything it contains.
+        </p>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the lab&hellip;</p>
+
+        <h3>Everything in the lab</h3>
+        <p class="hint">This list is not only a fallback: it is the same information as the picture, in words, so it is always here (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Lab controls">
+        <fieldset>
+          <legend>1. Look around</legend>
+          <p class="hint">Drag the view with a mouse or a finger. Or focus the lab (press Tab) and use the arrow keys. These two buttons do the same as dragging left or right, without a mouse.</p>
+          <ul class="view-buttons" role="list">
+            <li><button type="button" id="turn-left">Turn left</button></li>
+            <li><button type="button" id="turn-right">Turn right</button></li>
+          </ul>
+          <p><button type="button" id="reset-view">Reset view</button></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Animation</legend>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p class="hint">The jade stone turns slowly on its own. Nothing else moves by itself, and the camera never moves unless you move it, on a screen, in a headset, or in AR.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Enter VR: point, press, grab</legend>
+          <p class="hint">In VR, a small floating menu offers the same three actions as the buttons on this page: Pause, Rebuild, and Reset view. Point a controller or a tracked hand at a button and press the trigger, or pinch, to use it. Hold the grip button (or pinch near the jade stone with a hand) to pick it up directly, then release to put it back.</p>
+          <p><button type="button" id="xr-button" hidden>Enter VR</button></p>
+          <p id="xr-status" role="status">Checking whether this browser and device support VR&hellip;</p>
+          <p id="input-status" role="status">No controller or tracked hand is connected yet.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Enter AR: place an object in your room</legend>
+          <p class="hint">If your browser and device support AR with surface detection ("hit-test"), this button lets you place a virtual jade stone onto a real, flat surface such as a table or floor, and see it stay there as you move around it.</p>
+          <p><button type="button" id="ar-button" hidden>Enter AR</button></p>
+          <p id="ar-status" role="status">Checking whether this browser and device support AR placement&hellip;</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Direct grab (2D alternative)</legend>
+          <p class="hint">The keyboard-and-mouse equivalent of holding the grip button near the jade stone in VR: it lifts into your hand, then returns to its pedestal.</p>
+          <p><button type="button" id="lift-stone">Lift jade stone</button></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>6. Placement (2D alternative)</legend>
+          <p class="hint">The keyboard-and-mouse equivalent of AR hit-test placement: places a second jade stone a short distance in front of the camera's starting position, the same idea as placing one on a real table.</p>
+          <p>
+            <button type="button" id="place-stone">Place object (2D)</button>
+            <button type="button" id="remove-stone" disabled>Remove placed object</button>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>7. Memory and performance</legend>
+          <p><button type="button" id="rebuild">Rebuild scene</button></p>
+          <p class="hint">Disposes the exhibit and builds it again. Watch the Geometries and Textures counts below: if disposal works, they return to the same numbers.</p>
+          <details class="stats">
+            <summary>Stats</summary>
+            <dl>
+              <div><dt>Draw calls</dt><dd id="stat-calls">0</dd></div>
+              <div><dt>Triangles</dt><dd id="stat-triangles">0</dd></div>
+              <div><dt>Geometries in memory</dt><dd id="stat-geometries">0</dd></div>
+              <div><dt>Textures in memory</dt><dd id="stat-textures">0</dd></div>
+            </dl>
+          </details>
+        </fieldset>
+      </div>
+    </div>
   </main>
 </body>
 </html>
