@@ -2,7 +2,7 @@
   "id": "imm-05-spatial-audio-media-and-presence",
   "courseId": "immersive-developer",
   "lessonId": "spatial-audio-media-and-presence-05",
-  "status": "draft",
+  "status": "review",
   "phase": 4,
   "title": {
     "en": "Spatial Audio, Media, and Presence",
@@ -21,7 +21,10 @@
   },
   "difficulty": "advanced",
   "technologies": [
-    "WebXR"
+    "WebXR",
+    "three.js",
+    "Web Audio API",
+    "WebVTT"
   ],
   "hasCode": true,
   "starterPath": "./starter",

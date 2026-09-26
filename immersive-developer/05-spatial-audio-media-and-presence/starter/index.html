@@ -2,18 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- This allows the page to scale correctly on mobile devices. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="description" content="The virtual exhibit gains spatial audio, a canvas-driven story screen, and captions with a transcript: three quiet pedestal sounds you can compare distance models for, and a short audio guide you start yourself.">
   <title>Spatial Audio, Media, and Presence - XR Camp starter</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.__reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js",
+        "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.js": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.core.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
+  <header><p>XR Camp · Immersive · Spatial Audio, Media, and Presence</p></header>
   <main>
-    <!-- Add your main heading below. -->
+    <h1>The exhibit gets a voice</h1>
+    <p>The same exhibit from WebXR Foundations (4.1): a clay pot, a woven basket ring, and a jade stone. Each pedestal can now play its own quiet sound, spatial audio that gets louder as you move closer to it. A small screen above the exhibit shows a short audio guide with captions, and the same words are always written out below it, too.</p>
+    <noscript><p>This exhibit needs JavaScript and WebGL 2. The list and transcript below describe everything in it.</p></noscript>
 
-    <!-- Add your project content below. -->
+    <div class="lab">
+      <section class="view" aria-labelledby="view-heading">
+        <h2 id="view-heading">The exhibit</h2>
+        <div class="canvas-box" id="canvas-box"></div>
 
+        <p id="no-webgl-message" class="no-webgl-message" hidden>
+          This browser cannot show the 3D exhibit (WebGL 2 is unavailable). Nothing is
+          broken: the list, audio guide, and transcript below still work fully.
+        </p>
+
+        <h3>Scene description</h3>
+        <p id="scene-description" class="scene-text">Loading the exhibit&hellip;</p>
+
+        <h3>Everything in the exhibit</h3>
+        <p class="hint">This list is not only a fallback: it is the same information as the picture, in words, so it is always here (WCAG 1.3.1).</p>
+        <ul class="exhibit-list" id="exhibit-list" role="list"></ul>
+
+        <h3>Audio guide</h3>
+        <p class="hint">A short, procedurally generated audio guide (see <a href="../ATTRIBUTION.md">ATTRIBUTION.md</a>): it is not a recording of a real narrator, but its captions describe the exhibit. Press play below, or use "Start pedestal sounds" in the controls, which starts both together.</p>
+        <audio id="guide-audio" controls preload="auto">
+          <source src="../assets/guide-track.wav" type="audio/wav">
+          <track id="guide-track" kind="captions" srclang="en" label="English" src="../assets/captions.vtt" default>
+          Your browser cannot play this audio file. The transcript below has the same words.
+        </audio>
+        <p id="caption-text" class="caption-text" role="status">The audio guide has not started yet.</p>
+
+        <h3>Transcript</h3>
+        <p class="hint">The full text of the audio guide, always here, whether or not you have played it (WCAG 1.2.1).</p>
+        <ol class="transcript" id="transcript" role="list"></ol>
+      </section>
+
+      <div class="controls" id="controls" role="region" aria-label="Exhibit controls">
+        <fieldset>
+          <legend>1. Look around</legend>
+          <p class="hint">Drag the view with a mouse or a finger. Or focus the exhibit (press Tab) and use the arrow keys. These two buttons do the same as dragging left or right, without a mouse.</p>
+          <ul class="view-buttons" role="list">
+            <li><button type="button" id="turn-left">Turn left</button></li>
+            <li><button type="button" id="turn-right">Turn right</button></li>
+          </ul>
+          <p><button type="button" id="reset-view">Reset view</button></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Animation</legend>
+          <p><button type="button" id="pause-toggle" aria-pressed="false">Pause animation</button></p>
+          <p class="hint">The jade stone turns slowly, and the story screen keeps changing colour, on their own. Nothing else moves by itself, and the camera never moves unless you move it, on a screen or in a headset.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Enter VR</legend>
+          <p class="hint">If your browser and a VR headset support WebXR, this button appears and lets you view the exhibit at full size. It works seated: nothing asks you to stand, reach high, or turn all the way around.</p>
+          <p><button type="button" id="xr-button" hidden>Enter VR</button></p>
+          <p id="xr-status" role="status">Checking whether this browser and device support VR&hellip;</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Pedestal sounds</legend>
+          <p class="hint">Each of the three pedestals plays its own quiet, looping sound. Nothing plays until you press this button.</p>
+          <p><button type="button" id="sound-toggle" aria-pressed="false" disabled>Loading pedestal sounds&hellip;</button></p>
+          <label for="distance-model">Distance model</label>
+          <select id="distance-model">
+            <option value="inverse" selected>Inverse (the Web Audio API's default)</option>
+            <option value="linear">Linear</option>
+            <option value="exponential">Exponential</option>
+          </select>
+          <p class="hint">Change this while the sounds are playing, and move around the exhibit, to hear how each model makes volume fall off with distance differently.</p>
+        </fieldset>
+      </div>
+    </div>
   </main>
 </body>
 </html>
